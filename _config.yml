@@ -1,0 +1,12 @@
+theme: minima
+
+minima: 
+  skin: solarized
+
+header_pages:
+  - oraa2024.md
+
+  
+plugins:
+  - jekyll-feed
+
