@@ -10,3 +10,5 @@ header_pages:
 plugins:
   - jekyll-feed
 
+title: Açores.net
+description: Repositório de dados sobre os Açores
