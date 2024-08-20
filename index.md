@@ -16,6 +16,21 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 # Notícias
 <ul>
   {% for post in site.posts %}
+    {% unless post.categories contains "alra-scrapper" %}
+
+    <li>
+      <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
+    </li>
+    {% endunless %}
+
+  {% endfor %}
+</ul>
+
+# ALRA (auto)
+<ul>
+{% assign alra_scrapper_posts = site.posts | where: "categories", "alra-scrapper" | sort: "date" | reverse %}
+{% for post in alra_scrapper_posts limit:5 %}
+
     <li>
       <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
     </li>

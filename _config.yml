@@ -5,8 +5,11 @@ minima:
 
 header_pages:
   - oraa2024.md
+  - alra.md
 
   
 plugins:
   - jekyll-feed
 
+title: Açores.net
+description: Repositório de dados sobre os Açores

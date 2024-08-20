@@ -1,0 +1,36 @@
+name: ALRA update
+
+on:
+  schedule:
+    - cron: '45 20 * * *'  # Runs every minute
+
+jobs:
+  append-datetime:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install -r alra_bot/requirements.txt
+
+      - name: Run Python script
+        run: |
+          python -m alra_bot
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          
+      - name: Commit new blog post
+        run: |
+          git add .
+          git commit -m "(auto) Update ALRA"
+          git push origin main
