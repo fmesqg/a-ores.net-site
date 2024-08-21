@@ -37,10 +37,24 @@ _ALRA_INTERNALS = {
             "JUSTIFICADO": 5,
         },
     },
+    "peti": {
+        "internal_db_int": 6,
+        "url_prefixed_to_document": ["Peticao_abaixo", "peticao_abaixo"],
+        "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_peti/40?wformvalida.x=24&wformvalida.y=15&w_legis=XIII&w_numero_peti=&w_numero_peti_fim=&w_d_entrada_peti=&w_d_entrada_peti_fim=&w_assunto_peti=&w_autor_peti=&POPcomissao=&w_d_plena_peti=&w_d_plena_peti_fim=",  # noqa: E501
+    },
     "info": {
         "internal_db_int": 8,
         "url_prefixed_to_document": "Doc_Noticias",
         "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_informacao?wformvalida3.x=10&wformvalida3.y=21&w_legis=XIII&w_d_noticia=&w_d_noticia_fim=&POPnoticiatipo=&POPnoticiaautor=&w_assunto_noticia=",  # noqa: E501
+    },
+    "interven": {
+        "internal_db_int": 9,
+        "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_inter?wformvalida2.x=3&wformvalida2.y=14&w_legis=XIII&w_d_inter=&w_d_inter_fim=&POPintergoverno=&POPinterorador=&POPpartidos=&w_assunto_inter=",  # noqa: E501
+    },
+    "diario": {
+        "internal_db_int": 10,
+        "url_prefixed_to_document": "Diario",
+        "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_diario?wformvalida3.x=15&wformvalida3.y=21&w_legis=XIII&w_tipo=T&w_d_diario=&w_d_diario_fim=&w_numero_diario=&w_sumario_diario=",  # noqa: E501
     },
 }
 
@@ -88,6 +102,9 @@ def fetch_current_state() -> dict:
         "votos": fetch_all_ids("voto"),
         "informacoes": fetch_all_ids("info"),
         "iniciativas": fetch_all_ids("iniciativa"),
+        "intervencoes": fetch_all_ids("interven"),
+        "diarios": fetch_all_ids("diario"),
+        "peticoes": fetch_all_ids("peti"),
     }
 
 
@@ -169,4 +186,7 @@ def fetch_voto(id: int) -> Voto:
 
 
 if __name__ == "__main__":
+    import os.path
+    import sys
+    sys.path.append(os.path.dirname(__file__))
     print(fetch_current_state())

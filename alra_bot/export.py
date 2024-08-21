@@ -82,7 +82,7 @@ class Export:
             rows, headers=table_headers, tablefmt="github"
         )
 
-    def markdown(k, v):
+    def markdown(k, v) -> str:
         match k:
             case "requerimentos":
                 return Export.req_markdown(v)
@@ -93,4 +93,5 @@ class Export:
             case "iniciativas":
                 return Export.ini_markdown(v)
             case _:
-                raise RuntimeError(f"unknown delta: {k}.")
+                # temporary until diarios, peticoes and intervencoes are handled
+                return ""  # raise RuntimeError(f"unknown delta: {k}.")

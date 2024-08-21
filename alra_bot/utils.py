@@ -41,7 +41,14 @@ def compute_delta_ids(prev, current):
     delta_dict.update(
         {
             key: delta
-            for key in ["informacoes", "votos", "iniciativas"]
+            for key in [
+                "informacoes",
+                "votos",
+                "iniciativas",
+                "diarios",
+                "intervencoes",
+                "peticoes",
+            ]
             if (delta := list(set(current[key]).difference(set(prev[key]))))
         }
     )
