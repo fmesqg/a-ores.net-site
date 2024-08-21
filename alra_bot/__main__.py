@@ -1,8 +1,9 @@
-from datetime import datetime
 import os
+from datetime import datetime
+
 from .export import Export
 from .fetch import fetch_current_state
-from .utils import append_state, compute_delta, get_prev_state
+from .utils import append_state, compute_delta_ids, get_prev_state
 
 
 def export_delta(delta: dict[str, object]):
@@ -27,7 +28,7 @@ if __name__ == "__main__":
     temp_curr.pop("datetime")
     temp_prev.pop("datetime")
     if temp_prev != temp_curr:
-        delta = compute_delta(previous_state, current_state)
+        delta = compute_delta_ids(previous_state, current_state)
         append_state(current_state)
         export_delta(delta)
     else:

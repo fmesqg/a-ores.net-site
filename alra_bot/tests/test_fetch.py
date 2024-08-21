@@ -1,10 +1,15 @@
 if __name__ == "__main__":
-    import sys
     import os.path
+    import sys
 
     sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from alra_bot.fetch import fetch_info, fetch_voto, fetch_requerimento, fetch_iniciativa
+from alra_bot.fetch import (
+    _fetch_info_dict,
+    _fetch_iniciativa_dict,
+    _fetch_requerimento_dict,
+    _fetch_voto_dict,
+)
 
 # TODO these tests, as they are, require network connection. Substitute so as o use html
 # (or at least keep an offline version)
@@ -13,6 +18,7 @@ from alra_bot.fetch import fetch_info, fetch_voto, fetch_requerimento, fetch_ini
 def test_fetch_voto():
     expected = {
         "id": 3525,
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/3525",
         "Texto Voto Apresentado": "http://base.alra.pt:82/Doc_Voto/XIIIva1550_24.pdf",
         "Legislatura": "XIII",
         "Nº Entrada": "1550",
@@ -23,13 +29,14 @@ def test_fetch_voto():
         "Anúncio em plenário": "11/07/2024",
         "Resultado": "Aprovado por unanimidade",
     }
-    actual = fetch_voto(3525)
+    actual = _fetch_voto_dict(3525)
     assert expected == actual
 
 
 def test_fetch_requerimento_atempada():
     expected = {
         "id": 8251,
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/8251",
         "Texto Requerimento": "http://base.alra.pt:82/Doc_Req/XIIIreque2.pdf",
         "Legislatura": "XIII",
         "Número": "2",
@@ -44,15 +51,16 @@ def test_fetch_requerimento_atempada():
         "Data da entrada da resposta": "26/03/2024",
         "Anúncio em plenário da resposta": "09/04/2024",
     }
-    actual = fetch_requerimento(8251)
+    actual = _fetch_requerimento_dict(8251)
     assert expected == actual
 
 
 def test_fetch_iniciativa():
     expected = {
         "id": 3625,
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3625",
         "Texto Iniciativa": "http://base.alra.pt:82/iniciativas/iniciativas/XIIIEPjDLR015.pdf",  # noqa: E501
-        "Nota de": "http://base.alra.pt:82/iniciativas/iniciativas/XIIInaPjDLR015.pdf",
+        "Nota de Admissibilidade": "http://base.alra.pt:82/iniciativas/iniciativas/XIIInaPjDLR015.pdf",  # noqa: E501
         "Legislatura": "XIII",
         "Nº entrada Serviço": "1705",
         "Nº Processo": "105",
@@ -67,13 +75,14 @@ def test_fetch_iniciativa():
         "Comissão": "Assuntos Sociais",
         "Data de envio": "05/08/2024",
     }
-    actual = fetch_iniciativa(3625)
+    actual = _fetch_iniciativa_dict(3625)
     assert expected == actual
 
 
 def test_fetch_info():
     expected = {
         "id": 20085,
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/20085",
         "Texto Informação": "http://base.alra.pt:82/Doc_Noticias/NI20085.pdf",
         "Legislatura": "XIII",
         "Data": "16/08/2024",
@@ -81,7 +90,7 @@ def test_fetch_info():
         "Autor": "Presidência da ALRAA",
         "Assunto": "Nota de Pesar da Presidência da ALRAA - Presidente Luís Garcia manifesta profundo pesar pelo falecimento do antigo Presidente da Assembleia Legislativa Álvaro Monjardino",  # noqa: E501
     }
-    actual = fetch_info(20085)
+    actual = _fetch_info_dict(20085)
     assert expected == actual
 
 
@@ -90,3 +99,4 @@ if __name__ == "__main__":
     test_fetch_requerimento_atempada()
     test_fetch_iniciativa()
     test_fetch_info()
+    print("all tests ok.")

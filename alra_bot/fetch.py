@@ -3,10 +3,54 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 
-from .constants import CATEGORIAS_REQUERIMENTOS, INFO_URL, INICIATIVA_URL, VOTO_URL
+from .record import Info, Requerimento, Iniciativa, Voto
+
+_ALRA_INTERNALS = {
+    # 1 - votos
+    # 2 - gov rep
+    # 3 - iniciativas
+    # 4 - requerimentos
+    # 5 - assembleia republica
+    # 6 - petições
+    # 7 - programa gov reg (? unused)
+    # 8 - infos
+    # 9 - intervenções
+    # 10- diários
+    "voto": {
+        "internal_db_int": 1,
+        "url_prefixed_to_document": "Doc_Voto",
+        "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_voto?wformvalida2.x=13&wformvalida2.y=11&w_legis=XIII&w_entrada_voto=&w_entrada_voto_fim=&w_d_entrada_voto=&w_d_entrada_voto_fim=&POPtitulovoto=&w_assunto_voto=&POPpartidos=&w_d_apre_voto=&w_d_apre_voto_fim=&POPresultado=",  # noqa: E501
+    },
+    "iniciativa": {
+        "internal_db_int": 3,
+        "url_prefixed_to_document": "iniciativas/iniciativas",
+        "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_inicia/?wformvalida.x=18&wformvalida.y=23&w_legis=XIII&w_proposta_inicio=&w_proposta_fim=&POPiniciativa=&POPtema=&w_d_abertura_inicio=&w_d_abertura_fim=&w_d_apresenta_inicio=&w_d_apresenta_fim=&w_assunto_iniciativa=&POPautor_inici=&POPurgencia=&POPcomissao=&w_d_comissao_inicio=&w_d_comissao_fim=&w_d_plenario_inicio=&w_d_plenario_fim=&POPresulplena=&w_decreto_plenario=&w_titulo_publicacao=&w_sumario_publicacao=",  # noqa: E501
+    },
+    "requerimento": {
+        "internal_db_int": 4,
+        "url_prefixed_to_document": "Doc_Req",
+        "categories_to_internal_int": {
+            "RESPOSTA ATEMPADA": 1,
+            "NO PRAZO": 2,
+            "RESPOSTA TADIA": 3,
+            "FORA DE PRAZO": 4,
+            "JUSTIFICADO": 5,
+        },
+    },
+    "info": {
+        "internal_db_int": 8,
+        "url_prefixed_to_document": "Doc_Noticias",
+        "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_informacao?wformvalida3.x=10&wformvalida3.y=21&w_legis=XIII&w_d_noticia=&w_d_noticia_fim=&POPnoticiatipo=&POPnoticiaautor=&w_assunto_noticia=",  # noqa: E501
+    },
+}
 
 
-def fetch_item_ids(*, url, num_pesquisa_registo):
+def fetch_all_ids(record_type, url=None):
+    internals = _ALRA_INTERNALS.get(record_type, None)
+    assert internals is not None, record_type
+    num_pesquisa_registo = internals["internal_db_int"]
+    if not url:
+        url = internals["url_all_items"]
     response = requests.get(
         url,
         verify=False,
@@ -19,16 +63,17 @@ def fetch_item_ids(*, url, num_pesquisa_registo):
         if (href := a.get("href"))
         and f"/w_pesquisa_registo/{num_pesquisa_registo}/" in href
     ]
-    # http://base.alra.pt:82/Doc_Noticias/NI20085.pdf
 
 
 def fetch_requerimentos():
     reqs_today = {}
-
-    for i, cat in CATEGORIAS_REQUERIMENTOS.items():
-        reqs_today[cat] = fetch_item_ids(
+    categories_to_internal_int: dict = _ALRA_INTERNALS["requerimento"][
+        "categories_to_internal_int"
+    ]
+    for cat, i in categories_to_internal_int.items():
+        reqs_today[cat] = fetch_all_ids(
+            "requerimento",
             url=f"http://base.alra.pt:82/4DACTION/w_req_prazo_resp/{i}",
-            num_pesquisa_registo=4,
         )
 
     return reqs_today
@@ -40,19 +85,27 @@ def fetch_current_state() -> dict:
             datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M:%S")
         ),
         "requerimentos": fetch_requerimentos(),
-        "votos": fetch_item_ids(url=VOTO_URL, num_pesquisa_registo=1),
-        "informacoes": fetch_item_ids(url=INFO_URL, num_pesquisa_registo=8),
-        "iniciativas": fetch_item_ids(url=INICIATIVA_URL, num_pesquisa_registo=3),
+        "votos": fetch_all_ids("voto"),
+        "informacoes": fetch_all_ids("info"),
+        "iniciativas": fetch_all_ids("iniciativa"),
     }
 
 
-def fetch_by_id(id: int, type: int, url_extra: str):
+def _fetch_data_dict_by_id(record_type: str, id: int):
+    """low-level func that works with the internals of base.alra.pt:82 as of 2024-08-20"""
+    internals = _ALRA_INTERNALS[record_type]
+    internal_db_int, url_extra = (
+        internals["internal_db_int"],
+        internals["url_prefixed_to_document"],
+    )
+    url = f"http://base.alra.pt:82/4DACTION/w_pesquisa_registo/{internal_db_int}/{id}"
     response = requests.get(
-        f"http://base.alra.pt:82/4DACTION/w_pesquisa_registo/{type}/{id}", verify=False
+        url,
+        verify=False,
     )
 
     soup = BeautifulSoup(response.content, "html.parser")
-    data_dict = {"id": id}
+    data_dict = {"id": id, "url": url}
     rows = soup.find_all("tr")
 
     def get_text(cell):
@@ -73,28 +126,46 @@ def fetch_by_id(id: int, type: int, url_extra: str):
             if header and value:
                 data_dict[header] = value
         elif len(cells) == 1 and (link := cells[0].find("a")):
-            words = 2 if type > 1 else 3
-            data_dict[" ".join(link.text.split()[:words])] = (
+            data_dict[link.text.split("-")[0].strip()] = (
                 f"http://base.alra.pt:82/{url_extra}/" + link.get("href").split("/")[-1]
             )
-
     return data_dict
 
 
-def fetch_requerimento(req_id):
-    return fetch_by_id(req_id, 4, "Doc_Req")
+def _fetch_requerimento_dict(id):
+    return _fetch_data_dict_by_id("requerimento", id)
 
 
-def fetch_info(id):
-    return fetch_by_id(id, 8, "Doc_Noticias")
+def _fetch_info_dict(id):
+    return _fetch_data_dict_by_id("info", id)
 
 
-def fetch_voto(id):
-    return fetch_by_id(id, 1, "Doc_Voto")
+def _fetch_voto_dict(id):
+    return _fetch_data_dict_by_id("voto", id)
 
 
-def fetch_iniciativa(id):
-    return fetch_by_id(id, 3, "iniciativas/iniciativas")
+def _fetch_iniciativa_dict(id):
+    return _fetch_data_dict_by_id("iniciativa", id)
+
+
+def fetch_requerimento(id: int) -> Requerimento:
+    data = _fetch_requerimento_dict(id)
+    return Requerimento(data)
+
+
+def fetch_info(id: int) -> Info:
+    data = _fetch_info_dict(id)
+    return Info(data)
+
+
+def fetch_iniciativa(id: int) -> Iniciativa:
+    data = _fetch_iniciativa_dict(id)
+    return Iniciativa(data)
+
+
+def fetch_voto(id: int) -> Voto:
+    data = _fetch_voto_dict(id)
+    return Voto(data)
 
 
 if __name__ == "__main__":

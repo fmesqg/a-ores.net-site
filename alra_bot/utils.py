@@ -19,16 +19,16 @@ def get_prev_state():
     return json.loads(last)
 
 
-def compute_delta(prev, current):  # type: ignore
-    # TODO: iniciativas needs handling like reqs
+def compute_delta_ids(prev, current):
+    # TODO: iniciativas need extra handling too
     today_dict = {
         req_id: cat
-        for cat in CATEGORIAS_REQUERIMENTOS.values()
+        for cat in CATEGORIAS_REQUERIMENTOS
         for req_id in current["requerimentos"][cat]
     }
     prev_dict = {
         req_id: cat
-        for cat in CATEGORIAS_REQUERIMENTOS.values()
+        for cat in CATEGORIAS_REQUERIMENTOS
         for req_id in prev["requerimentos"][cat]
     }
     delta_reqs = [
