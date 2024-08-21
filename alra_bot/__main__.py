@@ -23,13 +23,7 @@ categories: alra-scrapper
 if __name__ == "__main__":
     current_state = fetch_current_state()
     previous_state = get_prev_state()
-    temp_curr = current_state.copy()
-    temp_prev = previous_state.copy()
-    temp_curr.pop("datetime")
-    temp_prev.pop("datetime")
-    if temp_prev != temp_curr:
-        delta = compute_delta_ids(previous_state, current_state)
+    delta = compute_delta_ids(previous_state, current_state)
+    if delta:
         append_state(current_state)
         export_delta(delta)
-    else:
-        print("done")

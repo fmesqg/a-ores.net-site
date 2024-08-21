@@ -3,7 +3,7 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 
-from .record import Info, Requerimento, Iniciativa, Voto
+from .record import Info, Iniciativa, Requerimento, Voto
 
 _ALRA_INTERNALS = {
     # 1 - votos
@@ -21,6 +21,10 @@ _ALRA_INTERNALS = {
         "url_prefixed_to_document": "Doc_Voto",
         "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_voto?wformvalida2.x=13&wformvalida2.y=11&w_legis=XIII&w_entrada_voto=&w_entrada_voto_fim=&w_d_entrada_voto=&w_d_entrada_voto_fim=&POPtitulovoto=&w_assunto_voto=&POPpartidos=&w_d_apre_voto=&w_d_apre_voto_fim=&POPresultado=",  # noqa: E501
     },
+    "audi_gr": {
+        "internal_db_int": 2,
+        "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_audi/2?wformvalida.x=19&wformvalida.y=16&w_legis=XIII&w_numero_audi=&w_numero_audi_fim=&w_entrada_audi=&w_entrada_audi_fim=&w_d_entrada_audi=&w_d_entrada_audi_fim=&w_processo_audi=&POPtitulo=&POPcomissao=&w_assunto_audi=&w_d_envio_audi=&w_d_envio_audi_fim=&w_d_governo_audi=&w_d_governo_audi_fim=&w_d_apre1_audi=&w_d_apre1_audi_fim=&w_d_limite_audi=&w_d_limite_audi_fim=&w_d_resp_audi=&w_d_resp_audi_fim=&w_d_prorro_audi=&w_d_prorro_audi_fim=&w_d_envioar_audi=&w_d_envioar_audi_fim=&w_d_apre2_audi=&w_d_apre2_audi_fim=",  # noqa: E501
+    },
     "iniciativa": {
         "internal_db_int": 3,
         "url_prefixed_to_document": "iniciativas/iniciativas",
@@ -36,6 +40,11 @@ _ALRA_INTERNALS = {
             "FORA DE PRAZO": 4,
             "JUSTIFICADO": 5,
         },
+    },
+    "audi_ar": {
+        "internal_db_int": 5,
+        "url_prefixed_to_document": "Doc_Audi",
+        "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_audi/1%20method=?wformvalida2.x=15&wformvalida2.y=21&w_legis=XIII&w_numero_audi=&w_numero_audi_fim=&w_entrada_audi=&w_entrada_audi_fim=&w_d_entrada_audi=&w_d_entrada_audi_fim=&w_processo_audi=&w_titulo_audi=&POPcomissao=&w_assunto_audi=&w_d_envio_audi=&w_d_envio_audi_fim=&w_d_governo_audi=&w_d_governo_audi_fim=&w_d_apre1_audi=&w_d_apre1_audi_fim=&w_d_limite_audi=&w_d_limite_audi_fim=&w_d_resp_audi=&w_d_resp_audi_fim=&w_d_prorro_audi=&w_d_prorro_audi_fim=&w_d_envioar_audi=&w_d_envioar_audi_fim=&w_d_apre2_audi=&w_d_apre2_audi_fim=",  # noqa: E501
     },
     "peti": {
         "internal_db_int": 6,
@@ -98,13 +107,15 @@ def fetch_current_state() -> dict:
         "datetime": str(
             datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M:%S")
         ),
-        "requerimentos": fetch_requerimentos(),
-        "votos": fetch_all_ids("voto"),
+        "audi_ar": fetch_all_ids("audi_ar"),
+        "audi_gr": fetch_all_ids("audi_gr"),
+        "diarios": fetch_all_ids("diario"),
         "informacoes": fetch_all_ids("info"),
         "iniciativas": fetch_all_ids("iniciativa"),
         "intervencoes": fetch_all_ids("interven"),
-        "diarios": fetch_all_ids("diario"),
         "peticoes": fetch_all_ids("peti"),
+        "requerimentos": fetch_requerimentos(),
+        "votos": fetch_all_ids("voto"),
     }
 
 
@@ -183,10 +194,3 @@ def fetch_iniciativa(id: int) -> Iniciativa:
 def fetch_voto(id: int) -> Voto:
     data = _fetch_voto_dict(id)
     return Voto(data)
-
-
-if __name__ == "__main__":
-    import os.path
-    import sys
-    sys.path.append(os.path.dirname(__file__))
-    print(fetch_current_state())

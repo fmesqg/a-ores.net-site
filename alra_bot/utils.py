@@ -48,6 +48,8 @@ def compute_delta_ids(prev, current):
                 "diarios",
                 "intervencoes",
                 "peticoes",
+                "audi_ar",
+                "audi_gr",
             ]
             if (delta := list(set(current[key]).difference(set(prev[key]))))
         }

@@ -93,5 +93,4 @@ class Export:
             case "iniciativas":
                 return Export.ini_markdown(v)
             case _:
-                # temporary until diarios, peticoes and intervencoes are handled
-                return ""  # raise RuntimeError(f"unknown delta: {k}.")
+                return f"## {k} \n\n #### Novos ids: {v}"
