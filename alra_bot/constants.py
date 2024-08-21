@@ -6,4 +6,4 @@ CATEGORIAS_REQUERIMENTOS = [
     "JUSTIFICADO",
 ]
 
-STATE_FILE = "alra_state.json"
+STATE_FILE = "alra_state.jsonl"
