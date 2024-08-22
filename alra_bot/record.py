@@ -6,7 +6,7 @@ class Record:
         self.data = data
 
     @abstractmethod
-    def export_markdown(self, **kwargs): ...
+    def export_table_row(self, **kwargs): ...
 
 
 class Requerimento(Record):
@@ -29,7 +29,7 @@ class Requerimento(Record):
     }
     """
 
-    def export_markdown(self, *, headers, prev, now):
+    def export_table_row(self, *, headers, prev, now):
         x: dict = self.data
         if len((requerentes := x["Requerente(s)"].split(";"))) > 1:
             x["Requerente(s)"] = requerentes[0] + " ..."
@@ -44,7 +44,7 @@ class Requerimento(Record):
 
 
 class Info(Record):
-    def export_markdown(self, *, headers):
+    def export_table_row(self, *, headers):
         x = self.data
         x["link"] = f"[link]({x['url']})"
         x["Texto Informação"] = (
@@ -52,9 +52,17 @@ class Info(Record):
         )
         return [x.get(header, "") for header in headers]
 
+    def export_markdown(self):
+        x = self.data
+        assunto = x.get('Assunto', x.get('id'))
+        md = f"* [{assunto}]({x['url']})"
+        if doc := x.get("Texto Informação", None):
+            md += f"\n  * [pdf]({doc})"
+        return md
+
 
 class Iniciativa(Record):
-    def export_markdown(self, *, headers):
+    def export_table_row(self, *, headers):
         x = self.data
         x["Nº Processo"] = f"[{x['Nº Processo']}]({x['url']})"
         x["Texto Iniciativa"] = (
@@ -66,7 +74,7 @@ class Iniciativa(Record):
 
 
 class Voto(Record):
-    def export_markdown(self, *, headers):
+    def export_table_row(self, *, headers):
         x = self.data
         x["Nº Entrada"] = f"[{x['Nº Entrada']}]({x['url']})"
         x["Texto Voto Apresentado"] = (
@@ -75,8 +83,8 @@ class Voto(Record):
             else None
         )
         x["Texto Voto Aprovado"] = (
-                f"[Texto Voto Aprovado]({t})"
-                if (t := x.get("Texto Voto Aprovado", None))
-                else None
-            )
+            f"[Texto Voto Aprovado]({t})"
+            if (t := x.get("Texto Voto Aprovado", None))
+            else None
+        )
         return [x.get(header, "") for header in headers]
