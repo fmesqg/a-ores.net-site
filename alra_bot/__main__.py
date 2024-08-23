@@ -6,8 +6,8 @@ from .fetch import fetch_current_state
 from .utils import append_state, compute_delta_ids, get_prev_state
 
 
-def export_delta(delta: dict[str, object]):
-    markdowns = "\n\n".join([Export.markdown(i, delta[i]) for i in delta])
+def write_post(delta: dict[str, object]):
+    markdown = Export.markdown(delta)
     date = str(datetime.now().date())
     page_font_matter = f"""---
 layout: default
@@ -17,7 +17,7 @@ categories: alra-scrapper
 """
     path = os.path.join(os.path.dirname(__file__), "..", "_posts", f"{date}-alra.md")
     with open(path, "w", encoding="utf-8") as f:
-        f.write(page_font_matter + markdowns)
+        f.write(page_font_matter + markdown)
 
 
 if __name__ == "__main__":
@@ -26,4 +26,4 @@ if __name__ == "__main__":
     delta = compute_delta_ids(previous_state, current_state)
     if delta:
         append_state(current_state)
-        export_delta(delta)
+        write_post(delta)

@@ -3,9 +3,9 @@ import datetime
 import requests
 from bs4 import BeautifulSoup
 
-from .record import Info, Iniciativa, Requerimento, Voto
+from .record import Info, Iniciativa, Record, Requerimento, Voto
 
-_ALRA_INTERNALS = {
+_ALRA_INTERNALS: dict[Record, dict] = {
     # 1 - votos
     # 2 - gov rep
     # 3 - iniciativas
@@ -16,7 +16,7 @@ _ALRA_INTERNALS = {
     # 8 - infos
     # 9 - intervenções
     # 10- diários
-    "voto": {
+    Voto: {
         "internal_db_int": 1,
         "url_prefixed_to_document": "Doc_Voto",
         "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_voto?wformvalida2.x=13&wformvalida2.y=11&w_legis=XIII&w_entrada_voto=&w_entrada_voto_fim=&w_d_entrada_voto=&w_d_entrada_voto_fim=&POPtitulovoto=&w_assunto_voto=&POPpartidos=&w_d_apre_voto=&w_d_apre_voto_fim=&POPresultado=",  # noqa: E501
@@ -25,12 +25,12 @@ _ALRA_INTERNALS = {
         "internal_db_int": 2,
         "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_audi/2?wformvalida.x=19&wformvalida.y=16&w_legis=XIII&w_numero_audi=&w_numero_audi_fim=&w_entrada_audi=&w_entrada_audi_fim=&w_d_entrada_audi=&w_d_entrada_audi_fim=&w_processo_audi=&POPtitulo=&POPcomissao=&w_assunto_audi=&w_d_envio_audi=&w_d_envio_audi_fim=&w_d_governo_audi=&w_d_governo_audi_fim=&w_d_apre1_audi=&w_d_apre1_audi_fim=&w_d_limite_audi=&w_d_limite_audi_fim=&w_d_resp_audi=&w_d_resp_audi_fim=&w_d_prorro_audi=&w_d_prorro_audi_fim=&w_d_envioar_audi=&w_d_envioar_audi_fim=&w_d_apre2_audi=&w_d_apre2_audi_fim=",  # noqa: E501
     },
-    "iniciativa": {
+    Iniciativa: {
         "internal_db_int": 3,
         "url_prefixed_to_document": "iniciativas/iniciativas",
         "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_inicia/?wformvalida.x=18&wformvalida.y=23&w_legis=XIII&w_proposta_inicio=&w_proposta_fim=&POPiniciativa=&POPtema=&w_d_abertura_inicio=&w_d_abertura_fim=&w_d_apresenta_inicio=&w_d_apresenta_fim=&w_assunto_iniciativa=&POPautor_inici=&POPurgencia=&POPcomissao=&w_d_comissao_inicio=&w_d_comissao_fim=&w_d_plenario_inicio=&w_d_plenario_fim=&POPresulplena=&w_decreto_plenario=&w_titulo_publicacao=&w_sumario_publicacao=",  # noqa: E501
     },
-    "requerimento": {
+    Requerimento: {
         "internal_db_int": 4,
         "url_prefixed_to_document": "Doc_Req",
         "categories_to_internal_int": {
@@ -51,7 +51,7 @@ _ALRA_INTERNALS = {
         "url_prefixed_to_document": ["Peticao_abaixo", "peticao_abaixo"],
         "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_peti/40?wformvalida.x=24&wformvalida.y=15&w_legis=XIII&w_numero_peti=&w_numero_peti_fim=&w_d_entrada_peti=&w_d_entrada_peti_fim=&w_assunto_peti=&w_autor_peti=&POPcomissao=&w_d_plena_peti=&w_d_plena_peti_fim=",  # noqa: E501
     },
-    "info": {
+    Info: {
         "internal_db_int": 8,
         "url_prefixed_to_document": "Doc_Noticias",
         "url_all_items": "http://base.alra.pt:82/4DACTION/w_recebe_pesquisa_informacao?wformvalida3.x=10&wformvalida3.y=21&w_legis=XIII&w_d_noticia=&w_d_noticia_fim=&POPnoticiatipo=&POPnoticiaautor=&w_assunto_noticia=",  # noqa: E501
@@ -90,12 +90,12 @@ def fetch_all_ids(record_type, url=None):
 
 def fetch_requerimentos():
     reqs_today = {}
-    categories_to_internal_int: dict = _ALRA_INTERNALS["requerimento"][
+    categories_to_internal_int: dict = _ALRA_INTERNALS[Requerimento][
         "categories_to_internal_int"
     ]
     for cat, i in categories_to_internal_int.items():
         reqs_today[cat] = fetch_all_ids(
-            "requerimento",
+            Requerimento,
             url=f"http://base.alra.pt:82/4DACTION/w_req_prazo_resp/{i}",
         )
 
@@ -110,16 +110,16 @@ def fetch_current_state() -> dict:
         "audi_ar": fetch_all_ids("audi_ar"),
         "audi_gr": fetch_all_ids("audi_gr"),
         "diarios": fetch_all_ids("diario"),
-        "informacoes": fetch_all_ids("info"),
-        "iniciativas": fetch_all_ids("iniciativa"),
+        "informacoes": fetch_all_ids(Info),
+        "iniciativas": fetch_all_ids(Iniciativa),
         "intervencoes": fetch_all_ids("interven"),
         "peticoes": fetch_all_ids("peti"),
         "requerimentos": fetch_requerimentos(),
-        "votos": fetch_all_ids("voto"),
+        "votos": fetch_all_ids(Voto),
     }
 
 
-def _fetch_data_dict_by_id(record_type: str, id: int):
+def _fetch_data_dict_by_id(record_type: type, id: int):
     """low-level func that works with the internals of base.alra.pt:82 as of 2024-08-20"""
     internals = _ALRA_INTERNALS[record_type]
     internal_db_int, url_extra = (
@@ -160,37 +160,6 @@ def _fetch_data_dict_by_id(record_type: str, id: int):
     return data_dict
 
 
-def _fetch_requerimento_dict(id):
-    return _fetch_data_dict_by_id("requerimento", id)
-
-
-def _fetch_info_dict(id):
-    return _fetch_data_dict_by_id("info", id)
-
-
-def _fetch_voto_dict(id):
-    return _fetch_data_dict_by_id("voto", id)
-
-
-def _fetch_iniciativa_dict(id):
-    return _fetch_data_dict_by_id("iniciativa", id)
-
-
-def fetch_requerimento(id: int) -> Requerimento:
-    data = _fetch_requerimento_dict(id)
-    return Requerimento(data)
-
-
-def fetch_info(id: int) -> Info:
-    data = _fetch_info_dict(id)
-    return Info(data)
-
-
-def fetch_iniciativa(id: int) -> Iniciativa:
-    data = _fetch_iniciativa_dict(id)
-    return Iniciativa(data)
-
-
-def fetch_voto(id: int) -> Voto:
-    data = _fetch_voto_dict(id)
-    return Voto(data)
+def fetch_record(cls: type, id: int) -> Record:
+    data = _fetch_data_dict_by_id(cls, id)
+    return cls(data)

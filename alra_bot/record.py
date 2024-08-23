@@ -8,6 +8,9 @@ class Record:
     @abstractmethod
     def export_table_row(self, **kwargs): ...
 
+    @abstractmethod
+    def to_markdown(self, **kwargs): ...
+
 
 class Requerimento(Record):
     """_eg_ data:
@@ -42,6 +45,28 @@ class Requerimento(Record):
         )
         return [x.get(header, "") for header in headers]
 
+    def to_markdown(self, *, prev, now):
+        x: dict = self.data
+        assunto = x.get("Assunto", x.get("id"))
+        md = f"* [{assunto}]({x['url']})"
+        status = (
+            "Novo Requerimento"
+            if prev is None
+            else f"Alteração do estado: {prev} → {now}"
+        )
+        md += f"\n  * {status}"
+        if doc_req := x.get("Texto Requerimento", None):
+            md += (
+                f"\n  * [requerimento]({doc_req}) ( data entrada: {x['Data entrada']})"
+            )
+        if doc_resp := x.get("Texto Resposta", None):
+            md += f"\n  * [resposta]({doc_resp}) (data entrada resposta: {x['Data da entrada da resposta']})"  # noqa: 501
+        if len((requerentes := x["Requerente(s)"].split(";"))) > 1:
+            x["Requerente(s)"] = requerentes[0] + ", ..."
+        md += f"\n  * Requerente(s): {x['Requerente(s)']}"
+
+        return md
+
 
 class Info(Record):
     def export_table_row(self, *, headers):
@@ -52,9 +77,10 @@ class Info(Record):
         )
         return [x.get(header, "") for header in headers]
 
-    def export_markdown(self):
+    def to_markdown(self):
         x = self.data
-        assunto = x.get('Assunto', x.get('id'))
+        if not (assunto := x.get("Assunto")):
+            return None
         md = f"* [{assunto}]({x['url']})"
         if doc := x.get("Texto Informação", None):
             md += f"\n  * [pdf]({doc})"
@@ -62,6 +88,25 @@ class Info(Record):
 
 
 class Iniciativa(Record):
+    def to_markdown(self):
+        x = self.data
+        if not (assunto := x.get("Assunto")):
+            return None
+        md = f"* [{assunto}]({x['url']})"
+        if titulo := x.get("Titulo", None):
+            md += f"\n  * {titulo}"
+        if entrada := x.get("Data de entrada", None):
+            md += f"\n  * Dada de entrada: {entrada}"
+        if aut := x.get("Autor do texto inicial", None):
+            md += f"\n  * Autor do texto inicial: {aut}"
+        if tema := x.get("Tema", None):
+            md += f"\n  * Tema: {tema}"
+        if pdf_apresentado := x.get("Texto Iniciativa", None):
+            md += f"\n  * [Texto Iniciativa (pdf)]({pdf_apresentado})"
+        if estado := x.get("Estado", None):
+            md += f"\n  * Resultado: {estado}"
+        return md
+
     def export_table_row(self, *, headers):
         x = self.data
         x["Nº Processo"] = f"[{x['Nº Processo']}]({x['url']})"
@@ -88,3 +133,24 @@ class Voto(Record):
             else None
         )
         return [x.get(header, "") for header in headers]
+
+    def to_markdown(self):
+        x = self.data
+        if not (assunto := x.get("Assunto")):
+            return None
+        md = f"* [{assunto}]({x['url']})"
+        if titulo := x.get("Titulo", None):
+            md += f"\n  * {titulo}"
+        if autores := x.get("Autores", None):
+            md += f"\n  * Autores: {autores}"
+        if resultado := x.get("Resultado", None):
+            md += f"\n  * Resultado: {resultado}"
+        if pdf_apresentado := x.get("Texto Voto Apresentado", None):
+            md += f"\n  * [pdf - voto apresentado]({pdf_apresentado})"
+        if pdf_aprovado := x.get("Texto Voto Aprovado", None):
+            md += f"\n  * [pdf - voto aprovado]({pdf_aprovado})"
+        if video := x.get("Video", None):
+            md += f"\n  * [video]({video})"
+        if entrada := x.get("Data entrada", None):
+            md += f"\n  * Dada de entrada: {entrada}"
+        return md
