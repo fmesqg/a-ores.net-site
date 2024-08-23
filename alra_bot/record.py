@@ -3,7 +3,7 @@ from abc import abstractmethod
 
 class Record:
     def __init__(self, data):
-        self.data = data
+        self._data = data
 
     @abstractmethod
     def export_table_row(self, **kwargs): ...
@@ -13,27 +13,9 @@ class Record:
 
 
 class Requerimento(Record):
-    """_eg_ data:
-    {
-        "id": 8251,
-        "Texto Requerimento": "http://base.alra.pt:82/Doc_Req/XIIIreque2.pdf",
-        "Legislatura": "XIII",
-        "Número": "2",
-        "Data entrada": "29/02/2024",
-        "Processo": "054.09.08",
-        "Requerente(s)": "José Pacheco CH; José Sousa CH",
-        "Assunto": "Falta de escoamento de pescado das Flores",
-        "Data de envio ao G.R.": "06/03/2024",
-        "Anúncio em plenário do requerimento": "13/03/2024",
-        "Texto Resposta": "http://base.alra.pt:82/Doc_Req/XIIIrequeresp2.pdf",
-        "Data da resposta do G.R.": "25/03/2024",
-        "Data da entrada da resposta": "26/03/2024",
-        "Anúncio em plenário da resposta": "09/04/2024",
-    }
-    """
 
     def export_table_row(self, *, headers, prev, now):
-        x: dict = self.data
+        x: dict = self._data
         if len((requerentes := x["Requerente(s)"].split(";"))) > 1:
             x["Requerente(s)"] = requerentes[0] + " ..."
         x["Número"] = f"[{x['Número']}]({x['url']})"
@@ -46,7 +28,7 @@ class Requerimento(Record):
         return [x.get(header, "") for header in headers]
 
     def to_markdown(self, *, prev, now):
-        x: dict = self.data
+        x: dict = self._data
         assunto = x.get("Assunto", x.get("id"))
         md = f"* [{assunto}]({x['url']})"
         status = (
@@ -68,9 +50,90 @@ class Requerimento(Record):
         return md
 
 
+class Diario(Record):
+    def to_markdown(self, **kwargs):
+        x = self._data
+        if not (numero := x.get("Número")):
+            return None
+        md = f"* [{numero}]({x['url']})"
+        if data := x.get("Data", None):
+            md += f"\n  * {data}"
+        if doc_separata := x.get("Texto Separata", None):
+            if sumario := x.get("SSumário", None):
+                md += f"\n  * Sumário: {sumario}"
+            md += f"\n  * [Separata (pdf)]({doc_separata})"
+        if doc_diario := x.get("Texto Diário", None):
+            md += f"\n  * [Diário (pdf)]({doc_diario})"
+        return md
+
+
+class AudiGRep(Record):
+    def to_markdown(self):
+        x = self._data
+        if not (assunto := x.get("Assunto")):
+            return None
+        md = f"* [{assunto}]({x['url']})"
+        if tit := x.get("Titulo", None):
+            md += f"\n  * Titulo: {tit}"
+        if date := x.get("Data entrada", None):
+            md += f"\n  * Data: {date}"
+        return md
+
+
+class AudiARep(Record):
+    def to_markdown(self):
+        # TODO add parecer e texto audição. Fetching is wrong...
+        x = self._data
+        if not (assunto := x.get("Assunto")):
+            return None
+        md = f"* [{assunto}]({x['url']})"
+        if tit := x.get("Titulo", None):
+            md += f"\n  * Titulo: {tit}"
+        if date := x.get("Data entrada", None):
+            md += f"\n  * Data: {date}"
+        if text_audi := x.get("Texto Audição", None):
+            md += f"\n  * [Texto Audição (pdf)]({text_audi})"
+        breakpoint()
+        return md
+
+
+class Interven(Record):
+    def to_markdown(self):
+        x = self._data
+        x = self._data
+        if not (assunto := x.get("Assunto")):
+            return None
+        md = f"* [{assunto}]({x['url']})"
+        if video := x.get("Video", None):
+            md += f"\n  * [video]({video})"
+        if date := x.get("Data", None):
+            md += f"\n  * Data: {date}"
+        return md
+
+
+class Peti(Record):
+    def to_markdown(self):
+        x = self._data
+        x = self._data
+        if not (assunto := x.get("Assunto")):
+            return None
+        md = f"* [{assunto}]({x['url']})"
+        if autor := x.get("Autor", None):
+            md += f"\n  * {autor}"
+        if peti := x.get("Petição", None):
+            md += f"\n  * [Petição (pdf)]({peti})"
+        if date := x.get("Data entrada", None):
+            md += f"\n  * Data: {date}"
+        if estado := x.get("Estado", None):
+            md += f"\n  * Estado: {estado}"
+        if comi := x.get("Comissão", None):
+            md += f"\n  * Comissão: {comi}"
+        return md
+
+
 class Info(Record):
     def export_table_row(self, *, headers):
-        x = self.data
+        x = self._data
         x["link"] = f"[link]({x['url']})"
         x["Texto Informação"] = (
             f"[Informação]({t})" if (t := x.get("Texto Informação", None)) else None
@@ -78,7 +141,7 @@ class Info(Record):
         return [x.get(header, "") for header in headers]
 
     def to_markdown(self):
-        x = self.data
+        x = self._data
         if not (assunto := x.get("Assunto")):
             return None
         md = f"* [{assunto}]({x['url']})"
@@ -89,7 +152,7 @@ class Info(Record):
 
 class Iniciativa(Record):
     def to_markdown(self):
-        x = self.data
+        x = self._data
         if not (assunto := x.get("Assunto")):
             return None
         md = f"* [{assunto}]({x['url']})"
@@ -108,7 +171,7 @@ class Iniciativa(Record):
         return md
 
     def export_table_row(self, *, headers):
-        x = self.data
+        x = self._data
         x["Nº Processo"] = f"[{x['Nº Processo']}]({x['url']})"
         x["Texto Iniciativa"] = (
             f"[Texto Iniciativa]({t})"
@@ -120,7 +183,7 @@ class Iniciativa(Record):
 
 class Voto(Record):
     def export_table_row(self, *, headers):
-        x = self.data
+        x = self._data
         x["Nº Entrada"] = f"[{x['Nº Entrada']}]({x['url']})"
         x["Texto Voto Apresentado"] = (
             f"[Texto Voto Apresentado]({t})"
@@ -135,7 +198,7 @@ class Voto(Record):
         return [x.get(header, "") for header in headers]
 
     def to_markdown(self):
-        x = self.data
+        x = self._data
         if not (assunto := x.get("Assunto")):
             return None
         md = f"* [{assunto}]({x['url']})"

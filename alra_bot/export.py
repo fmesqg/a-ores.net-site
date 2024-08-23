@@ -1,5 +1,15 @@
 from .fetch import fetch_record
-from .record import Info, Iniciativa, Requerimento, Voto
+from .record import (
+    AudiARep,
+    AudiGRep,
+    Diario,
+    Info,
+    Iniciativa,
+    Interven,
+    Peti,
+    Requerimento,
+    Voto,
+)
 
 
 class Export:
@@ -7,14 +17,24 @@ class Export:
         _state_keys_to_simple_types = {
             # "requerimentos": Requerimento,
             "informacoes": Info,
+            "diarios": Diario,
             "votos": Voto,
             "iniciativas": Iniciativa,
+            "intervencoes": Interven,
+            "peticoes": Peti,
+            "audi_gr": AudiGRep,
+            "audi_ar": AudiARep,
         }
         _types_to_print_names = {
+            Diario: "Diários",
+            Interven: "Intervenções",
             Requerimento: "Requerimentos",
             Info: "Informações",
             Voto: "Votos",
             Iniciativa: "Iniciativas",
+            Peti: "Petições",
+            AudiGRep: "Audições - Governo da República",
+            AudiARep: "Audições - Assembleia da República",
         }
 
         def simple_record_markdown(record_type: type, delta_ids):
