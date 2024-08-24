@@ -17,8 +17,9 @@ def retro_fix_posts():
             input_date: datetime = datetime.strptime(
                 current_state["datetime"], "%Y-%m-%d %H:%M:%S"
             )
-            previous_date = input_date - timedelta(days=1)
-            write_post(delta, date=previous_date.strftime("%Y-%m-%d"))
+            day_before = input_date - timedelta(days=1)
+            write_post(delta, date=day_before.strftime("%Y-%m-%d"))
+        previous_state = current_state
 
 
 if __name__ == "__main__":
