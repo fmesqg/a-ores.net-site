@@ -26,13 +26,13 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
   {% endfor %}
 </ul>
 
-# ALRA (auto)
+# ALRA  + JORAA (auto)
 <ul>
 {% assign alra_scrapper_posts = site.posts | where: "categories", "alra-scrapper" | sort: "date" | reverse %}
 {% for post in alra_scrapper_posts limit:5 %}
 
     <li>
-      <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }}</a>
     </li>
   {% endfor %}
 </ul>

@@ -1,15 +1,15 @@
 ---
-title: ALRA
+title: Auto Updates
 layout: default
-permalink: /alra
+permalink: /auto-updates
 ---
-# ALRA - Novidades
+# Novidades da política açoriana
 
 [RSS feed](/alra-rss.xml)
 <ul>
   {% for post in site.posts %}
     {% if post.categories contains "alra-scrapper" %}
-    <li><h2>{{ post.date | date: "%Y-%m-%d"  }}</h2>
+    <li><h1>{{ post.date | date: "%Y-%m-%d"  }}</h1>
        {{ post.content }}
     </li>
     {% endif %}

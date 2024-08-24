@@ -1,15 +1,40 @@
 import json
 import os
+from datetime import datetime, timedelta
 
 from .constants import CATEGORIAS_REQUERIMENTOS, STATE_FILE
+from .export import Export
+from .fetch import fetch_day_joraa
+
+
+def write_post(delta: dict[str, object], date=None):
+    if not date:
+        date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+    markdown = Export.markdown(delta)
+    markdown_jo = (
+        markdown_joraa(joraa_entries)
+        if (joraa_entries := fetch_day_joraa(date))
+        else ""
+    ) + "\n"
+
+    page_font_matter = f"""---
+layout: default
+date: {date}
+categories: alra-scrapper
+title: Update (ALRA + JORAA) - {date}
+---
+"""
+    path = os.path.join(os.path.dirname(__file__), "..", "_posts", f"{date}-alra.md")
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(page_font_matter + markdown + "\n\n" + markdown_jo)
 
 
 def markdown_joraa(entries):
-    start = "# JORAA\n\n"
+    start = "## JORAA\n\n"
     url_entry_base = "https://jo.azores.gov.pt/#/ato/"
 
     def md(entry):
-        header = f"* [{entry['sumario']}]({url_entry_base}{entry['id']})"
+        header = f"* [{entry['sumario'].strip()}]({url_entry_base}{entry['id']})"
         entidades = "\n".join([f"  * {ent}" for ent in entry["entidades"]])
         return header + "\n" + entidades + "\n  * " + entry["descricaoPublicacao"]
 

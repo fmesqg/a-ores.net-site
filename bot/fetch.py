@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from .record import (
     AudiARep,
     AudiGRep,
+    Diario,
     Info,
     Iniciativa,
     Interven,
@@ -13,7 +14,6 @@ from .record import (
     Record,
     Requerimento,
     Voto,
-    Diario,
 )
 
 _ALRA_INTERNALS: dict[Record, dict] = {
@@ -99,12 +99,10 @@ def fetch_all_ids(record_type, url=None):
     ]
 
 
-def fetch_joraa(from_date=None):
-    if from_date is None:
-        from_date = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime(
-            "%Y-%m-%d"
-        )  # yesterday
-    url = f"https://jo.azores.gov.pt/api/public/search/ato?fromDate={from_date}"
+def fetch_day_joraa(date):
+    url = (
+        f"https://jo.azores.gov.pt/api/public/search/ato?fromDate={date}&toDate={date}"
+    )
     response = requests.get(
         url,
     )

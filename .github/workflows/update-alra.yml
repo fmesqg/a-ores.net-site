@@ -19,11 +19,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r alra_bot/requirements.txt
+          pip install -r bot/requirements.txt
 
       - name: Run Python script
         run: |
-          python -m alra_bot
+          python -m bot
       - name: Configure Git
         run: |
           git config --global user.name "github-actions"
@@ -32,5 +32,5 @@ jobs:
       - name: Commit new blog post
         run: |
           git add .
-          git commit -m "(auto) Update ALRA - $(date)"
+          git commit -m "(auto) Update (ALRA + JORAA) - $(date)"
           git push origin main

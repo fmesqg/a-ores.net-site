@@ -38,7 +38,7 @@ class Export:
         }
 
         def simple_record_markdown(record_type: type, delta_ids):
-            return f"## {_types_to_print_names[record_type]}\n\n" + "\n".join(
+            return f"### {_types_to_print_names[record_type]}\n\n" + "\n".join(
                 [
                     md
                     for id in delta_ids
@@ -55,7 +55,7 @@ class Export:
                 for req, prev, now in reqs_wide
                 if (row := req.to_markdown(prev=prev, now=now))
             ]
-            return "## Requerimentos\n\n" + "\n".join(rows)
+            return "### Requerimentos\n\n" + "\n".join(rows)
 
         md = [
             simple_record_markdown(record_type, ids)
@@ -65,4 +65,4 @@ class Export:
         if "requerimentos" in delta:
             md.insert(0, req_markdown(delta["requerimentos"]))
 
-        return "# ALRA\n\n" + "\n\n".join(md)
+        return "## ALRA\n\n" + "\n\n".join(md)

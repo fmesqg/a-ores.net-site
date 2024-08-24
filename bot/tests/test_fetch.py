@@ -4,7 +4,7 @@ if __name__ == "__main__":
 
     sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from alra_bot.fetch import (
+from bot.fetch import (
     _fetch_info_dict,
     _fetch_iniciativa_dict,
     _fetch_requerimento_dict,
