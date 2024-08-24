@@ -1,5 +1,5 @@
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from .export import Export
 from .fetch import fetch_current_state, fetch_joraa
@@ -11,7 +11,8 @@ def write_post(delta: dict[str, object]):
     markdown_jo = (
         markdown_joraa(joraa_entries) if (joraa_entries := fetch_joraa()) else ""
     )
-    date = str(datetime.now().date().strftime("%Y-%m-%d"))
+    date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
+
     page_font_matter = f"""---
 layout: default
 date: {date}
