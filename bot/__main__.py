@@ -14,5 +14,5 @@ if __name__ == "__main__":
     delta = compute_delta_ids(previous_state, current_state)
     if delta:
         append_state(current_state)
-        write_post(delta)
+    write_post(delta)
     # retro_fix_posts()

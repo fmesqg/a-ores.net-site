@@ -10,12 +10,12 @@ from .fetch import fetch_day_joraa
 def write_post(delta: dict[str, object], date=None):
     if not date:
         date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-    markdown = Export.markdown(delta)
+    markdown = Export.markdown(delta) if delta else ""
     markdown_jo = (
         markdown_joraa(joraa_entries)
         if (joraa_entries := fetch_day_joraa(date))
         else ""
-    ) + "\n"
+    )
 
     page_font_matter = f"""---
 layout: default
@@ -24,9 +24,12 @@ categories: alra-scrapper
 title: Update (ALRA + JORAA) - {date}
 ---
 """
-    path = os.path.join(os.path.dirname(__file__), "..", "_posts", f"{date}-alra.md")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(page_font_matter + markdown + "\n\n" + markdown_jo)
+    if post_body := "\n\n".join([i for i in [markdown, markdown_jo] if i]):
+        path = os.path.join(
+            os.path.dirname(__file__), "..", "_posts", f"{date}-alra.md"
+        )
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(page_font_matter + post_body + "\n")
 
 
 def markdown_joraa(entries):
