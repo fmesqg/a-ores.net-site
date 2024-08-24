@@ -99,6 +99,19 @@ def fetch_all_ids(record_type, url=None):
     ]
 
 
+def fetch_joraa(from_date=None):
+    if from_date is None:
+        from_date = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime(
+            "%Y-%m-%d"
+        )  # yesterday
+    url = f"https://jo.azores.gov.pt/api/public/search/ato?fromDate={from_date}"
+    response = requests.get(
+        url,
+    )
+    if (res := response.json())["resultSize"] > 0:
+        return res["list"]
+
+
 def fetch_requerimentos():
     reqs_today = {}
     categories_to_internal_int: dict = _ALRA_INTERNALS[Requerimento][

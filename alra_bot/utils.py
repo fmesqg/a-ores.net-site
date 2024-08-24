@@ -4,6 +4,18 @@ import os
 from .constants import CATEGORIAS_REQUERIMENTOS, STATE_FILE
 
 
+def markdown_joraa(entries):
+    start = "# JORAA\n\n"
+    url_entry_base = "https://jo.azores.gov.pt/#/ato/"
+
+    def md(entry):
+        header = f"* [{entry['sumario']}]({url_entry_base}{entry['id']})"
+        entidades = "\n".join([f"  * {ent}" for ent in entry["entidades"]])
+        return header + "\n" + entidades + "\n  * " + entry["descricaoPublicacao"]
+
+    return start + "\n\n".join([md(entry) for entry in entries])
+
+
 def append_state(state: dict):
     path = os.path.join(os.path.dirname(__file__), STATE_FILE)
     with open(path, mode="a") as f:
