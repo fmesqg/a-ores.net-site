@@ -29,7 +29,17 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           
-      - name: Commit new blog post
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_ENV
+          else
+            echo "has_changes=true" >> $GITHUB_ENV
+          fi
+  
+      - name: Commit and push if there are changes
+        if: env.has_changes == 'true'
         run: |
           git add .
           git commit -m "(auto) Update (ALRA + JORAA) - $(date)"

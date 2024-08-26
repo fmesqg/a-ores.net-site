@@ -192,3 +192,35 @@ def _fetch_data_dict_by_id(record_type: type, id: int):
 def fetch_record(cls: type, id: int) -> Record:
     data = _fetch_data_dict_by_id(cls, id)
     return cls(data)
+
+
+def fetch_contratos_RAA(from_pub_date, to_pub_date=None):
+    url = "https://www.base.gov.pt/Base4/pt/resultados/"
+
+    headers = {
+        "Host": "www.base.gov.pt",
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "text/plain, */*; q=0.01",
+        "Accept-Language": "en-US,en;q=0.5",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "X-Requested-With": "XMLHttpRequest",
+        "Origin": "https://www.base.gov.pt",
+        "DNT": "1",
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-GPC": "1",
+        "Priority": "u=0",
+    }
+    query = f"tipo=0&tipocontrato=0&desdedatapublicacao={from_pub_date}&pais=187&distrito=20&concelho=0"  # PT, RAA, 'todos' = 187, 20, 0 # noqa: 501
+    data = {
+        "type": "search_contratos",
+        "version": "129.0",
+        "query": query,
+        "sort": "-initialContractualPrice",
+        "size": "999",
+    }
+
+    response = requests.post(url, headers=headers, data=data)
+    return response.json()["items"]

@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 from .constants import CATEGORIAS_REQUERIMENTOS, STATE_FILE
 from .export import Export
-from .fetch import fetch_day_joraa
+from .fetch import fetch_day_joraa, fetch_contratos_RAA
 
 
 def write_post(delta: dict[str, object], date=None):
@@ -16,6 +16,11 @@ def write_post(delta: dict[str, object], date=None):
         if (joraa_entries := fetch_day_joraa(date))
         else ""
     )
+    markdown_contratos = (
+        markdown_base(base_entries)
+        if (base_entries := fetch_contratos_RAA(date))
+        else ""
+    )
 
     page_font_matter = f"""---
 layout: default
@@ -24,7 +29,9 @@ categories: alra-scrapper
 title: Update (ALRA + JORAA) - {date}
 ---
 """
-    if post_body := "\n\n".join([i for i in [markdown, markdown_jo] if i]):
+    if post_body := "\n\n".join(
+        [i for i in [markdown, markdown_jo, markdown_contratos] if i]
+    ):
         path = os.path.join(
             os.path.dirname(__file__), "..", "_posts", f"{date}-alra.md"
         )
@@ -42,6 +49,23 @@ def markdown_joraa(entries):
         return header + "\n" + entidades + "\n  * " + entry["descricaoPublicacao"]
 
     return start + "\n\n".join([md(entry) for entry in entries])
+
+
+def markdown_base(entries):
+    start = "## Contratos publicados ontem\n\n"
+    url_entry_base = "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id="
+
+    def md(entry):
+        md = f"* [{entry['objectBriefDescription']}]({url_entry_base}{entry['id']})\n"
+        md += f"  * Preço contratual: {entry['initialContractualPrice']}\n"
+        md += f"  * Adjudicante: {entry['contracting']}\n"
+        md += f"  * Adjudicatário: {entry['contracted']}\n"
+        md += f"  * Tipo de procedimento: {entry['contractingProcedureType']}\n"
+        md += f"  * Data da assinatura: {entry['signingDate']}\n"
+
+        return md
+
+    return start + "".join([md(entry) for entry in entries])
 
 
 def append_state(state: dict):
