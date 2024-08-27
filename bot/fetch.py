@@ -110,6 +110,13 @@ def fetch_day_joraa(date):
         return res["list"]
 
 
+def fetch_joraa_ato(id):
+    base_url = "https://jo.azores.gov.pt/api/public/ato/"
+    return requests.get(
+        base_url + id,
+    )
+
+
 def fetch_requerimentos():
     reqs_today = {}
     categories_to_internal_int: dict = _ALRA_INTERNALS[Requerimento][
@@ -213,7 +220,7 @@ def fetch_contratos_RAA(from_pub_date, to_pub_date=None):
         "Sec-GPC": "1",
         "Priority": "u=0",
     }
-    query = f"tipo=0&tipocontrato=0&desdedatapublicacao={from_pub_date}&pais=187&distrito=20&concelho=0"  # PT, RAA, 'todos' = 187, 20, 0 # noqa: 501
+    query = f"tipo=0&tipocontrato=0&desdedatapublicacao={from_pub_date}&atedatapublicacao={to_pub_date}&pais=187&distrito=20&concelho=0"  # PT, RAA, 'todos' = 187, 20, 0 # noqa: 501
     data = {
         "type": "search_contratos",
         "version": "129.0",
