@@ -8,9 +8,10 @@ from .export import Export
 from .fetch import fetch_day_joraa, fetch_contratos_RAA, fetch_joraa_ato
 
 
-def find_monies(text):
-    pattern1 = r"(\b\d{1,3}(?:\.\d{3}|\ \d{3})*(?:,\d{2})?\s?€)"
-    pattern2 = r"(€\s?\d{1,3}(?:\.\d{3}|\ \d{3})*(?:,\d{2})?)"
+def find_monies(text: str):
+    text = text.replace("&nbsp;", " ")  # great json we get from JORAA...
+    pattern1 = r"(\b\d{1,3}(?:[\.\s]\d{3})*(?:,\d{2})?\s?€)"
+    pattern2 = r"(€\s?\d{1,3}(?:[\.\s]\d{3})*(?:,\d{2})?)"
     return re.findall(pattern1, text) + re.findall(pattern2, text)
 
 
