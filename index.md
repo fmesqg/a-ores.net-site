@@ -13,7 +13,7 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 * [pdf](/assets/pdf/RetratoAçores2023.pdf)
 * [site](https://www.pordata.pt/retratos/2023/retrato+dos+acores-91)
 
-# Notícias
+# Análises/Documentos
 <ul>
   {% for post in site.posts %}
     {% unless post.categories contains "alra-scrapper" %}
@@ -26,7 +26,7 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
   {% endfor %}
 </ul>
 
-# ALRA  + JORAA (auto)
+# [Auto updates (Assembleia Legislativa, Jornal Oficial e BASE)](/auto-updates)
 <ul>
 {% assign alra_scrapper_posts = site.posts | where: "categories", "alra-scrapper" | sort: "date" | reverse %}
 {% for post in alra_scrapper_posts limit:5 %}
