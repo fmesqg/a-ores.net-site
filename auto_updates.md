@@ -7,8 +7,7 @@ permalink: /auto-updates
 
 ## [RSS feed](/alra-rss.xml)
 
-{% for post in site.posts %}
-  {% if post.categories contains "alra-scrapper" %}
+{% for post in site.complete_updates %}
   <p>
   <details>
   <summary>
@@ -17,5 +16,4 @@ permalink: /auto-updates
       {{ post.content }}
   </details>
   </p>
-  {% endif %}
 {% endfor %}

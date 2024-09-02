@@ -4,13 +4,13 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Atualizações Automáticas</title>
-    <link>{{ site.url }}/rss/auto.xml</link>
-    <atom:link href="{{ "/rss/auto.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <title>Atualizações JORA</title>
+    <link>{{ site.url }}/rss/joraa.xml</link>
+    <atom:link href="{{ "/rss/joraa.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for update in site.alra_updates limit:10 %}
+    {% for update in site.joraa_updates limit:10 %}
       <item>
         <title>{{ update.title | xml_escape }}</title>
         <description>{{ update.content | xml_escape }}</description>

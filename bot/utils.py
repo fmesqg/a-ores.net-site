@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 from .constants import CATEGORIAS_REQUERIMENTOS, STATE_FILE
 from .export import Export
-from .fetch import fetch_day_joraa, fetch_contratos_RAA, fetch_joraa_ato
+from .fetch import fetch_contratos_RAA, fetch_day_joraa, fetch_joraa_ato
 
 
 def find_monies(text: str):
@@ -22,33 +22,51 @@ def parse_currency_to_number(currency_str):
     return float(clean_str)
 
 
-def write_post(delta: dict[str, object], date=None):
+def write_update(delta: dict[str, object], date=None):
     if not date:
         date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-    markdown = Export.markdown(delta) if delta else ""
-    markdown_jo = (
+    alra = Export.markdown(delta) if delta else ""
+    joraa = (
         markdown_joraa(joraa_entries)
         if (joraa_entries := fetch_day_joraa(date))
         else ""
     )
-    markdown_contratos = (
+    contratos = (
         markdown_base(base_entries)
         if (base_entries := fetch_contratos_RAA(from_pub_date=date, to_pub_date=date))
         else ""
     )
+    write_post(date, joraa=joraa, alra=alra, contratos=contratos)
+    write_collection(date, alra, title="Atualização (ALRA)", folder="_alra_updates")
+    write_collection(date, joraa, title="Atualização (JORAA)", folder="_joraa_updates")
+    write_collection(
+        date, contratos, title="Atualização (BASE)", folder="_base_updates"
+    )
 
+
+def write_collection(date, update, title, folder):
+    page_font_matter = f"""---
+date: {date}
+title: {title}
+---
+"""
+    if update:
+        path = os.path.join(os.path.dirname(__file__), "..", folder, f"{date}.md")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(page_font_matter + update + "\n")
+
+
+def write_post(date, alra, joraa, contratos):
     page_font_matter = f"""---
 layout: default
 date: {date}
 categories: alra-scrapper
-title: Update (ALRA + JORAA) - {date}
+title: Atualização (ALRA + JORAA + Base)
 ---
 """
-    if post_body := "\n\n".join(
-        [i for i in [markdown, markdown_jo, markdown_contratos] if i]
-    ):
+    if post_body := "\n\n".join([i for i in [alra, joraa, contratos] if i]):
         path = os.path.join(
-            os.path.dirname(__file__), "..", "_posts", f"{date}-alra.md"
+            os.path.dirname(__file__), "..", "_complete_updates", f"{date}.md"
         )
         with open(path, "w", encoding="utf-8") as f:
             f.write(page_font_matter + post_body + "\n")
@@ -92,7 +110,7 @@ def markdown_base(entries):
     url_entry_base = "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id="
 
     def md(entry):
-        md = f"* [{entry['objectBriefDescription']}]({url_entry_base}{entry['id']})\n"
+        md = f"* [{entry['objectBriefDescription'].strip()}]({url_entry_base}{entry['id']})\n"  # noqa: 501
         md += f"  * Preço contratual: {entry['initialContractualPrice']}\n"
         md += f"  * Adjudicante: {entry['contracting']}\n"
         md += f"  * Adjudicatário: {entry['contracted']}\n"

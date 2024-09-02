@@ -26,13 +26,13 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
   {% endfor %}
 </ul>
 
-# [Auto updates (Assembleia Legislativa, Jornal Oficial e BASE)](/auto-updates)
+# [Atualizações automáicas (Assembleia Legislativa, Jornal Oficial e BASE)](/auto-updates)
 <ul>
-{% assign alra_scrapper_posts = site.posts | where: "categories", "alra-scrapper" | sort: "date" | reverse %}
-{% for post in alra_scrapper_posts limit:5 %}
+{% assign full_updates = site.complete_updates | sort: "date" | reverse %}
+{% for update in full_updates limit:5 %}
 
     <li>
-      <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }}</a>
+      <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
     </li>
   {% endfor %}
 </ul>

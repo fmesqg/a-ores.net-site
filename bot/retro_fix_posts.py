@@ -3,7 +3,7 @@ import os
 from datetime import datetime, timedelta
 
 from .constants import STATE_FILE
-from .utils import compute_delta_ids, write_post
+from .utils import compute_delta_ids, write_update
 
 
 def retro_fix_posts():
@@ -13,12 +13,11 @@ def retro_fix_posts():
     previous_state, rest = states[0], states[1:]
     for current_state in rest:
         delta = compute_delta_ids(previous_state, current_state)
-        if delta:
-            input_date: datetime = datetime.strptime(
-                current_state["datetime"], "%Y-%m-%d %H:%M:%S"
-            )
-            day_before = input_date - timedelta(days=1)
-            write_post(delta, date=day_before.strftime("%Y-%m-%d"))
+        input_date: datetime = datetime.strptime(
+            current_state["datetime"], "%Y-%m-%d %H:%M:%S"
+        )
+        day_before = input_date - timedelta(days=1)
+        write_update(delta, date=day_before.strftime("%Y-%m-%d"))
         previous_state = current_state
 
 
