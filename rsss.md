@@ -30,6 +30,14 @@ permalink: /rsss
 </p>
 
 <p class="feed-subscribe">
+    <a href="rss/portal.xml">
+    <svg class="svg-icon orange">
+        <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+    </svg><span>portal.azores.gov.pt feed</span>
+    </a>
+</p>
+
+<p class="feed-subscribe">
     <a href="rss/auto.xml">
     <svg class="svg-icon orange">
         <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>

@@ -36,12 +36,28 @@ def write_update(delta: dict[str, object], date=None):
         if (base_entries := fetch_contratos_RAA(from_pub_date=date, to_pub_date=date))
         else ""
     )
-    write_post(date, joraa=joraa, alra=alra, contratos=contratos)
     write_collection(date, alra, title="Atualização (ALRA)", folder="_alra_updates")
     write_collection(date, joraa, title="Atualização (JORAA)", folder="_joraa_updates")
     write_collection(
         date, contratos, title="Atualização (BASE)", folder="_base_updates"
     )
+    if not (("boletins" in delta) or ("sigica" in delta)):
+        portal = ""
+    else:
+        portal = "## Atualizações em portal.azores.gov.pt\n\n"
+        if a := delta.get("boletins", None):
+            for update in a:
+                portal += f"* [{update}]({update})" + "\n"
+        if a := delta.get("sigica", None):
+            for update in a:
+                portal += f"* [{update}]({update})" + "\n"
+    write_collection(
+        date,
+        portal,
+        title="Atualização (portal.azores.gov.pt)",
+        folder="_portal_updates",
+    )
+    write_post(date, joraa=joraa, alra=alra, contratos=contratos, portal=portal)
 
 
 def write_collection(date, update, title, folder):
@@ -56,7 +72,7 @@ title: {title}
             f.write(page_font_matter + update + "\n")
 
 
-def write_post(date, alra, joraa, contratos):
+def write_post(date, alra, joraa, contratos, portal):
     page_font_matter = f"""---
 layout: default
 date: {date}
@@ -64,7 +80,7 @@ categories: alra-scrapper
 title: Atualização (ALRA + JORAA + Base)
 ---
 """
-    if post_body := "\n\n".join([i for i in [alra, joraa, contratos] if i]):
+    if post_body := "\n\n".join([i for i in [alra, joraa, contratos, portal] if i]):
         path = os.path.join(
             os.path.dirname(__file__), "..", "_complete_updates", f"{date}.md"
         )
@@ -168,6 +184,8 @@ def compute_delta_ids(prev, current):
                 "peticoes",
                 "audi_ar",
                 "audi_gr",
+                "boletins",
+                "sigica",
             ]
             if (delta := list(set(current[key]).difference(set(prev[key]))))
         }

@@ -125,6 +125,22 @@ def fetch_beo_all():
     ]
 
 
+def fetch_sigica_all():
+    url = "https://portal.azores.gov.pt/web/drs/sigica-boletins-informativos-2024"
+    response = requests.get(
+        url,
+    )
+    base_url = "https://portal.azores.gov.pt/web/drs/"
+    soup = BeautifulSoup(response.content, "html.parser")
+    a_tags = soup.find_all("a")
+    return [
+        base_url + href.split("/")[-1]
+        for a in a_tags
+        if (href := a.get("href")) and "/sigica" in href
+    ]
+
+
+# https://portal.azores.gov.pt/web/drs/sigica-junho-2024
 # https://portal.azores.gov.pt/web/drs/sigica-boletins-informativos-2024 # SIGICA 2024
 
 
@@ -163,6 +179,8 @@ def fetch_current_state() -> dict:
         "peticoes": fetch_all_ids(Peti),
         "requerimentos": fetch_requerimentos(),
         "votos": fetch_all_ids(Voto),
+        "boletins": fetch_beo_all(),
+        "sigica": fetch_sigica_all(),
     }
 
 

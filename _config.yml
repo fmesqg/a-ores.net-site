@@ -17,6 +17,7 @@ collections:
   alra_updates:
   joraa_updates:
   base_updates:
+  portal_updates:
   complete_updates:
       output: true 
       permalink: /updates/:path/ # Define custom permalinks
