@@ -29,7 +29,7 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 # [Atualizações automáicas (Assembleia Legislativa, Jornal Oficial e BASE)](/auto-updates)
 <ul>
 {% assign full_updates = site.complete_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:5 %}
+{% for update in full_updates limit:10 %}
 
     <li>
       <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>

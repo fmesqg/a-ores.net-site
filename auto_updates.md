@@ -7,13 +7,13 @@ permalink: /auto-updates
 
 ## [RSS feed](/alra-rss.xml)
 
-{% for post in site.complete_updates %}
-  <p>
+{% assign full_updates = site.complete_updates | sort: "date" | reverse %}
+{% for update in full_updates %}  <p>
   <details>
   <summary>
-  <h2>{{ post.date | date: "%Y-%m-%d"  }}</h2>
+  <h2>{{ update.date | date: "%Y-%m-%d"  }}</h2>
   </summary>
-      {{ post.content }}
+      {{ update.content }}
   </details>
   </p>
 {% endfor %}
