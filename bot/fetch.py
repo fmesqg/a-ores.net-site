@@ -110,6 +110,24 @@ def fetch_day_joraa(date):
         return res["list"]
 
 
+def fetch_beo_all():
+    url = "https://portal.azores.gov.pt/web/drot/beo-boletim-de-execu%C3%A7%C3%A3o-or%C3%A7amental"  # noqa: E501
+    response = requests.get(
+        url,
+    )
+    base_url = "https://portal.azores.gov.pt"
+    soup = BeautifulSoup(response.content, "html.parser")
+    a_tags = soup.find_all("a")
+    return [
+        base_url + "/".join(href.split("/")[:-1])
+        for a in a_tags
+        if (href := a.get("href")) and "/BEO" in href
+    ]
+
+
+# https://portal.azores.gov.pt/web/drs/sigica-boletins-informativos-2024 # SIGICA 2024
+
+
 def fetch_joraa_ato(id):
     base_url = "https://jo.azores.gov.pt/api/public/ato/"
     return requests.get(
