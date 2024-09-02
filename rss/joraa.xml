@@ -15,8 +15,6 @@ layout: null
         <title>{{ update.title | xml_escape }}</title>
         <description>{{ update.content | xml_escape }}</description>
         <pubDate>{{ update.date | date_to_rfc822 }}</pubDate>
-        <link>{{ update.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ update.url | prepend: site.baseurl | prepend: site.url }}</guid>
       </item>
     {% endfor %}
   </channel>
