@@ -93,7 +93,8 @@ def markdown_joraa(entries):
     url_entry_base = "https://jo.azores.gov.pt/#/ato/"
 
     def md(entry):
-        entry_text = fetch_joraa_ato(entry["id"]).json()["considerandos"]
+        entry_text = fetch_joraa_ato(entry["id"]).text
+        # entry_text = fetch_joraa_ato(entry["id"]).json()["considerandos"]
         sum_amounts = sum(
             parse_currency_to_number(amount) for amount in find_monies(entry_text)
         )
