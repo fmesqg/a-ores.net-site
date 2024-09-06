@@ -93,7 +93,6 @@ class AudiARep(Record):
             md += f"\n  * Data: {date}"
         if text_audi := x.get("Texto Audição", None):
             md += f"\n  * [Texto Audição (pdf)]({text_audi})"
-        breakpoint()
         return md
 
 
