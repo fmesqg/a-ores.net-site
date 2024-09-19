@@ -1,4 +1,4 @@
-import datetime
+import functools
 
 import requests
 from bs4 import BeautifulSoup
@@ -79,6 +79,31 @@ _ALRA_INTERNALS: dict[Record, dict] = {
 }
 
 
+class FetchError:
+    def __init__(self, info=None):
+        self.info = info
+
+
+class Blob:
+    def __init__(self, joraa=None, alra=None, base=None, portal=None):
+        self.joraa = joraa
+        self.alra = alra
+        self.base = base
+        self.portal = portal
+
+
+def catch_requests_exceptions(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except requests.exceptions.RequestException as e:
+            return FetchError(e)
+
+    return wrapper
+
+
+@catch_requests_exceptions
 def fetch_all_ids(record_type, url=None):
     internals = _ALRA_INTERNALS.get(record_type, None)
     assert internals is not None, record_type
@@ -99,6 +124,7 @@ def fetch_all_ids(record_type, url=None):
     ]
 
 
+@catch_requests_exceptions
 def fetch_day_joraa(date):
     url = (
         f"https://jo.azores.gov.pt/api/public/search/ato?fromDate={date}&toDate={date}"
@@ -110,6 +136,7 @@ def fetch_day_joraa(date):
         return res["list"]
 
 
+@catch_requests_exceptions
 def fetch_beo_all():
     url = "https://portal.azores.gov.pt/web/drot/beo-boletim-de-execu%C3%A7%C3%A3o-or%C3%A7amental"  # noqa: E501
     response = requests.get(
@@ -125,6 +152,7 @@ def fetch_beo_all():
     ]
 
 
+@catch_requests_exceptions
 def fetch_sigica_all():
     url = "https://portal.azores.gov.pt/web/drs/sigica-boletins-informativos-2024"
     response = requests.get(
@@ -144,6 +172,7 @@ def fetch_sigica_all():
 # https://portal.azores.gov.pt/web/drs/sigica-boletins-informativos-2024 # SIGICA 2024
 
 
+@catch_requests_exceptions
 def fetch_joraa_ato(id):
     base_url = "https://jo.azores.gov.pt/api/public/ato/"
     return requests.get(
@@ -151,6 +180,7 @@ def fetch_joraa_ato(id):
     )
 
 
+@catch_requests_exceptions
 def fetch_requerimentos():
     reqs_today = {}
     categories_to_internal_int: dict = _ALRA_INTERNALS[Requerimento][
@@ -161,15 +191,15 @@ def fetch_requerimentos():
             Requerimento,
             url=f"http://base.alra.pt:82/4DACTION/w_req_prazo_resp/{i}",
         )
-
+    for _, val in reqs_today.items():
+        if isinstance(val, FetchError):
+            return val
     return reqs_today
 
 
+# @catch_requests_exceptions
 def fetch_current_state() -> dict:
     return {
-        "datetime": str(
-            datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%d %H:%M:%S")
-        ),
         "audi_ar": fetch_all_ids(AudiARep),
         "audi_gr": fetch_all_ids(AudiGRep),
         "diarios": fetch_all_ids(Diario),
@@ -232,11 +262,13 @@ def _fetch_data_dict_by_id(record_type: type, id: int):
     return data_dict
 
 
+@catch_requests_exceptions
 def fetch_record(cls: type, id: int) -> Record:
     data = _fetch_data_dict_by_id(cls, id)
     return cls(data)
 
 
+@catch_requests_exceptions
 def fetch_contratos_RAA(from_pub_date, to_pub_date=None):
     url = "https://www.base.gov.pt/Base4/pt/resultados/"
 
@@ -267,3 +299,71 @@ def fetch_contratos_RAA(from_pub_date, to_pub_date=None):
 
     response = requests.post(url, headers=headers, data=data)
     return response.json()["items"]
+
+
+def fetch_all_data(delta, date) -> Blob:
+    _statejsonl_keys_to_simple_types = {
+        # "requerimentos": Requerimento,
+        "informacoes": Info,
+        "diarios": Diario,
+        "votos": Voto,
+        "iniciativas": Iniciativa,
+        "intervencoes": Interven,
+        "peticoes": Peti,
+        "audi_gr": AudiGRep,
+        "audi_ar": AudiARep,
+    }
+
+    alra = {}
+    for k, ids in delta.items():
+        if isinstance(ids, FetchError):
+            alra = ids
+        if isinstance(alra, FetchError):
+            break
+        if record_type := _statejsonl_keys_to_simple_types.get(k):
+            alra[record_type] = []
+            for id in ids:
+                rec = fetch_record(record_type, id)
+                if isinstance(rec, FetchError):
+                    alra = rec
+                    break
+                else:
+                    # breakpoint()
+                    alra[record_type].append(rec)
+    if not isinstance(alra, FetchError):
+        alra[Requerimento] = []
+        if "requerimentos" in delta:
+            if isinstance(delta["requerimentos"], FetchError):
+                alra = delta["requerimentos"]
+            else:
+                for id, prev, now in delta["requerimentos"]:
+                    if isinstance(req := fetch_record(Requerimento, id), FetchError):
+                        alra = req
+                        break
+                    else:
+                        alra[Requerimento].append((req, prev, now))
+
+    items = fetch_day_joraa(date)
+    if not isinstance(items, FetchError):
+        joraa = [fetch_joraa_ato(entry["id"]) for entry in items]
+        for i in joraa:
+            if isinstance(i, FetchError):
+                joraa = FetchError()
+                break
+    else:
+        joraa = items
+    if not (("boletins" in delta) or ("sigica" in delta)):
+        portal = {}
+    elif isinstance(delta.get("boletins"), FetchError) or isinstance(
+        delta.get("sigica"), FetchError
+    ):
+        portal = FetchError()
+    else:
+        portal = delta
+
+    return Blob(
+        alra=alra,
+        joraa=joraa,
+        base=fetch_contratos_RAA(from_pub_date=date, to_pub_date=date),
+        portal=portal,
+    )

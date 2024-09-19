@@ -1,11 +1,10 @@
 import json
 import os
 import re
-from datetime import datetime, timedelta
 
 from .constants import CATEGORIAS_REQUERIMENTOS, STATE_FILE
 from .export import Export
-from .fetch import fetch_contratos_RAA, fetch_day_joraa, fetch_joraa_ato
+from .fetch import Blob, FetchError
 
 
 def find_monies(text: str):
@@ -22,42 +21,42 @@ def parse_currency_to_number(currency_str):
     return float(clean_str)
 
 
-def write_update(delta: dict[str, object], date=None):
-    if not date:
-        date = (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d")
-    alra = Export.markdown(delta) if delta else ""
+def write_update(web_data: Blob, date=None):
+    # portal = web_data.portal
+    alra = (
+        Export.markdown(web_data.alra)
+        if not isinstance(web_data.alra, FetchError)
+        else ""
+    )
     joraa = (
-        markdown_joraa(joraa_entries)
-        if (joraa_entries := fetch_day_joraa(date))
+        markdown_joraa(web_data.joraa)
+        if not isinstance(web_data.joraa, FetchError)
         else ""
     )
-    contratos = (
-        markdown_base(base_entries)
-        if (base_entries := fetch_contratos_RAA(from_pub_date=date, to_pub_date=date))
+    base = (
+        markdown_base(web_data.base)
+        if not isinstance(web_data.base, FetchError)
         else ""
     )
+    portal = (
+        markdown_portal(web_data.portal)
+        if not isinstance(web_data.portal, FetchError)
+        else ""
+    )
+
     write_collection(date, alra, title="Atualização (ALRA)", folder="_alra_updates")
+
     write_collection(date, joraa, title="Atualização (JORAA)", folder="_joraa_updates")
-    write_collection(
-        date, contratos, title="Atualização (BASE)", folder="_base_updates"
-    )
-    if not (("boletins" in delta) or ("sigica" in delta)):
-        portal = ""
-    else:
-        portal = "## Atualizações em portal.azores.gov.pt\n\n"
-        if a := delta.get("boletins", None):
-            for update in a:
-                portal += f"* [{update}]({update})" + "\n"
-        if a := delta.get("sigica", None):
-            for update in a:
-                portal += f"* [{update}]({update})" + "\n"
+
+    write_collection(date, base, title="Atualização (BASE)", folder="_base_updates")
     write_collection(
         date,
         portal,
         title="Atualização (portal.azores.gov.pt)",
         folder="_portal_updates",
     )
-    write_post(date, joraa=joraa, alra=alra, contratos=contratos, portal=portal)
+
+    write_post(date, joraa=joraa, alra=alra, contratos=base, portal=portal)
 
 
 def write_collection(date, update, title, folder):
@@ -93,15 +92,16 @@ def markdown_joraa(entries):
     url_entry_base = "https://jo.azores.gov.pt/#/ato/"
 
     def md(entry):
-        entry_text = fetch_joraa_ato(entry["id"]).text
+        entry_text = entry.text
         # entry_text = fetch_joraa_ato(entry["id"]).json()["considerandos"]
         sum_amounts = sum(
             parse_currency_to_number(amount) for amount in find_monies(entry_text)
         )
+        entry = entry.json()  # TODO clean-up
         header = f"* [{entry['sumario'].strip()}]({url_entry_base}{entry['id']})"
         human_id = f"  * {entry['humanId']}"
         sum_str = f"  * Soma dos montantes: {sum_amounts:,.2f} €"
-        entidades = "\n".join([f"  * {ent}" for ent in entry["entidades"]])
+        entidades = "\n".join([f"  * {ent['nome']}" for ent in entry["entidades"]])
         return (
             sum_amounts,
             entidades,
@@ -119,6 +119,7 @@ def markdown_joraa(entries):
     sorted_entries = sorted(
         [md(entry) for entry in entries], key=lambda tup: (-tup[0], tup[1])
     )
+    breakpoint()
     return start + "\n\n".join([text for pair in sorted_entries if (text := pair[2])])
 
 
@@ -139,10 +140,33 @@ def markdown_base(entries):
     return start + "".join([md(entry) for entry in entries])
 
 
-def append_state(state: dict):
+def markdown_portal(delta):
+    portal = ""
+    if delta:
+        portal = "## Atualizações em portal.azores.gov.pt\n\n"
+        if a := delta.get("boletins", None):
+            for update in a:
+                portal += f"* [{update}]({update})" + "\n"
+        if a := delta.get("sigica", None):
+            for update in a:
+                portal += f"* [{update}]({update})" + "\n"
+    return portal
+
+
+def append_state(state: dict, timestamp):
+    def f(i):
+        if isinstance(i, FetchError):
+            return "fetch_error"
+        return i
+
+    state = {k: f(v) for k, v in state.items()}
+    state.update({"datetime": timestamp})
     path = os.path.join(os.path.dirname(__file__), STATE_FILE)
     with open(path, mode="a") as f:
-        f.write("\n" + json.dumps(state))
+        try:
+            f.write("\n" + json.dumps(state))
+        except Exception:
+            pass
 
 
 def get_prev_state():
@@ -155,40 +179,46 @@ def get_prev_state():
 
 
 def compute_delta_ids(prev, current):
+    # TODO: there should be a common logic for all except sigica and beo... one failure
+    # should make them all fail.
     # TODO: iniciativas need extra handling too
-    today_dict = {
-        req_id: cat
-        for cat in CATEGORIAS_REQUERIMENTOS
-        for req_id in current["requerimentos"][cat]
-    }
-    prev_dict = {
-        req_id: cat
-        for cat in CATEGORIAS_REQUERIMENTOS
-        for req_id in prev["requerimentos"][cat]
-    }
-    delta_reqs = [
-        (id, last_cat, cat)
-        for id, cat in today_dict.items()
-        if (last_cat := prev_dict.get(id, None)) != cat
-    ]
-    delta_dict = {"requerimentos": delta_reqs} if delta_reqs else {}
-
-    delta_dict.update(
-        {
-            key: delta
-            for key in [
-                "informacoes",
-                "votos",
-                "iniciativas",
-                "diarios",
-                "intervencoes",
-                "peticoes",
-                "audi_ar",
-                "audi_gr",
-                "boletins",
-                "sigica",
-            ]
-            if (delta := list(set(current[key]).difference(set(prev[key]))))
+    reqs = current["requerimentos"]
+    if not isinstance(reqs, FetchError):
+        today_dict = {
+            req_id: cat for cat in CATEGORIAS_REQUERIMENTOS for req_id in reqs[cat]
         }
-    )
+        prev_dict = {
+            req_id: cat
+            for cat in CATEGORIAS_REQUERIMENTOS
+            for req_id in prev["requerimentos"][cat]
+        }
+        delta_reqs = [
+            (id, last_cat, cat)
+            for id, cat in today_dict.items()
+            if (last_cat := prev_dict.get(id, None)) != cat
+        ]
+        delta_dict = {"requerimentos": delta_reqs} if delta_reqs else {}
+    else:
+        delta_dict = {"requerimentos": FetchError()}
+
+    deltas = {}
+    for key in [
+        "informacoes",
+        "votos",
+        "iniciativas",
+        "diarios",
+        "intervencoes",
+        "peticoes",
+        "audi_ar",
+        "audi_gr",
+        "boletins",
+        "sigica",
+    ]:
+        if not isinstance(current[key], FetchError):
+            if delta := list(set(current[key]).difference(set(prev[key]))):
+                deltas[key] = delta
+        else:
+            deltas[key] = current[key]  # propagate errors
+
+    delta_dict.update(deltas)
     return delta_dict
