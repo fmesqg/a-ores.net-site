@@ -13,7 +13,7 @@ layout: null
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% assign full_updates = site.base_updates | sort: "date" | reverse %}
     {% for update in full_updates limit:10 %}      <item>
-        <title>{{ update.title | xml_escape }}</title>
+        <title>{{ update.title | xml_escape }} - {{ update.date | date: "%Y-%m-%d" | xml_escape }}</title>
         <description>{{ update.content | xml_escape }}</description>
         <pubDate>{{ update.date | date_to_rfc822 }}</pubDate>
         <guid>base-{{ update.date | date: "%Y-%m-%d" | xml_escape }}</guid>

@@ -11,7 +11,7 @@
     {% assign full_updates = site.complete_updates | sort: "date" | reverse %}
     {% for update in full_updates limit:10 %}
       <item>
-        <title>{{ update.title | xml_escape }}</title>
+        <title>{{ update.title | xml_escape }} - {{ update.date | date: "%Y-%m-%d" | xml_escape }}</title>
         <description>{{ update.content | xml_escape }}</description>
         <guid>complete-{{ update.date | date: "%Y-%m-%d" | xml_escape }}</guid>
         <link>{{ site.url }}/updates/{{update.date | date: "%Y-%m-%d" }}</link>
