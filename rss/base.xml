@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atualizações Base</title>
+    <link>{{ site.url }}/rss/base.xml</link>
+    <description>Atualizações BASE</description>
+    <atom:link href="{{ '/rss/base.xml' | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% assign full_updates = site.base_updates | sort: "date" | reverse %}
+    {% for update in full_updates limit:10 %}      <item>
+        <title>{{ update.title | xml_escape }} - {{ update.date | date: "%Y-%m-%d" | xml_escape }}</title>
+        <description>{{ update.content | xml_escape }}</description>
+        <pubDate>{{ update.date | date_to_rfc822 }}</pubDate>
+        <guid>base-{{ update.date | date: "%Y-%m-%d" | xml_escape }}</guid>
+        <link>{{ site.url }}/updates/{{update.date | date: "%Y-%m-%d" }}</link>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-metadata
+Gemfile.lock
+__pycache__
+venv
+_sass
+.vscode
+**/.venv

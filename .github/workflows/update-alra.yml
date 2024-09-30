@@ -1,0 +1,46 @@
+name: ALRA update
+
+on:
+  schedule:
+    - cron: '00 00 * * *'  # Runs daily at midnight UTC
+
+jobs:
+  append-datetime:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install -r bot/requirements.txt
+
+      - name: Run Python script
+        run: |
+          python -m bot
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_ENV
+          else
+            echo "has_changes=true" >> $GITHUB_ENV
+          fi
+  
+      - name: Commit and push if there are changes
+        if: env.has_changes == 'true'
+        run: |
+          git add .
+          git commit -m "(auto) Update (ALRA + JORAA) - $(date)"
+          git push origin main

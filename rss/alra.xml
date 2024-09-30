@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Atualizações ALRA</title>
+    <description>Atualizações ALRA</description>
+    <link>{{ site.url }}/rss/alra.xml</link>
+    <atom:link href="{{ "/rss/alra.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% assign full_updates = site.alra_updates | sort: "date" | reverse %}
+    {% for update in full_updates limit:20 %}      <item>
+        <title>{{ update.title | xml_escape }} - {{ update.date | date: "%Y-%m-%d" | xml_escape }}</title>
+        <guid>alra-{{ update.date | date: "%Y-%m-%d" | xml_escape }}</guid>
+        <link>{{ site.url }}/updates/{{update.date | date: "%Y-%m-%d" }}</link>
+        <description>{{ update.content | xml_escape }}</description>
+        <pubDate>{{ update.date | date_to_rfc822 }}</pubDate>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

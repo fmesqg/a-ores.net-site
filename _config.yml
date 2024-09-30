@@ -5,8 +5,19 @@ minima:
 
 header_pages:
   - oraa2024.md
-
+  - alra.md
+  - rsss.md
   
 plugins:
   - jekyll-feed
 
+title: Açores.net
+description: Repositório de dados sobre os Açores
+collections:
+  alra_updates:
+  joraa_updates:
+  base_updates:
+  portal_updates:
+  complete_updates:
+      output: true 
+      permalink: /updates/:path/ # Define custom permalinks
