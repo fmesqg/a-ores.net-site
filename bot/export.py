@@ -1,6 +1,7 @@
 from typing import List, Union
 
-from bot.fetch import FetchError
+from bot.classes import FetchError
+
 from .record import (
     AudiARep,
     AudiGRep,
