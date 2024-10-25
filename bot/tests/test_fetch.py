@@ -25,7 +25,7 @@ def test_fetch_voto():
         "Anúncio em plenário": "11/07/2024",
         "Resultado": "Aprovado por unanimidade",
     }
-    actual = fetch_record(Voto, 3525)._data # my god wtf is this
+    actual = fetch_record(Voto, 3525)._data  # my god wtf is this
     assert expected == actual
 
 

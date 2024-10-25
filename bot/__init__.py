@@ -1,2 +1,2 @@
-from .utils import  *
 from .fetch import *
+from .utils import *

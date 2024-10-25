@@ -5,6 +5,8 @@ from datetime import datetime, timedelta
 from .constants import STATE_FILE
 from .utils import compute_delta_ids, write_update
 
+# TODO this is broken now
+
 
 def retro_fix_posts():
     path = os.path.join(os.path.dirname(__file__), STATE_FILE)

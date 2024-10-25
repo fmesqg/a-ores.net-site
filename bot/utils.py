@@ -125,13 +125,11 @@ def markdown_joraa(entries):
     start = "## JORAA\n\n"
     url_entry_base = "https://jo.azores.gov.pt/#/ato/"
 
-    def md(entry):
+    def md(entry: dict):
         entry_text = str(entry)
-        # entry_text = fetch_joraa_ato(entry["id"]).json()["considerandos"]
         sum_amounts = sum(
             parse_currency_to_number(amount) for amount in find_monies(entry_text)
         )
-        # entry = entry.json()  # TODO clean-up
         header = f"* [{entry['sumario'].strip()}]({url_entry_base}{entry['id']})"
         human_id = f"  * {entry['humanId']}"
         sum_str = f"  * Soma dos montantes: {sum_amounts:,.2f} €"
@@ -205,7 +203,6 @@ def append_state(state: State):
 
 
 def get_prev_state() -> State:
-
     path = os.path.join(os.path.dirname(__file__), STATE_FILE)
     with open(path, mode="r") as f:
         last = ""

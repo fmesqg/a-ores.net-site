@@ -1,10 +1,10 @@
+import asyncio
 import functools
 from datetime import date, datetime, timedelta
 
+import aiohttp
 import requests
 from bs4 import BeautifulSoup
-import aiohttp
-import asyncio
 
 from bot.classes import FetchError, WebData
 from bot.state import State
@@ -24,16 +24,6 @@ from .record import (
 )
 
 _ALRA_INTERNALS: dict[Record, dict] = {
-    # 1 - votos
-    # 2 - gov rep
-    # 3 - iniciativas
-    # 4 - requerimentos
-    # 5 - assembleia republica
-    # 6 - petições
-    # 7 - programa gov reg (? unused)
-    # 8 - infos
-    # 9 - intervenções
-    # 10- diários
     Voto: {
         "internal_db_int": 1,
         "url_prefixed_to_document": "Doc_Voto",
