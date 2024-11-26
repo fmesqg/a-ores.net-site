@@ -1,4 +1,7 @@
-from .fetch import fetch_record
+from typing import List, Union
+
+from bot.classes import FetchError
+
 from .record import (
     AudiARep,
     AudiGRep,
@@ -7,24 +10,14 @@ from .record import (
     Iniciativa,
     Interven,
     Peti,
+    Record,
     Requerimento,
     Voto,
 )
 
 
 class Export:
-    def markdown(delta: dict) -> str:
-        _state_keys_to_simple_types = {
-            # "requerimentos": Requerimento,
-            "informacoes": Info,
-            "diarios": Diario,
-            "votos": Voto,
-            "iniciativas": Iniciativa,
-            "intervencoes": Interven,
-            "peticoes": Peti,
-            "audi_gr": AudiGRep,
-            "audi_ar": AudiARep,
-        }
+    def markdown(blob: Union[FetchError, dict]) -> str:
         _types_to_print_names = {
             Diario: "Diários",
             Interven: "Intervenções",
@@ -37,19 +30,13 @@ class Export:
             AudiARep: "Audições - Assembleia da República",
         }
 
-        def simple_record_markdown(record_type: type, delta_ids):
+        def simple_record_markdown(record_type: type, records: List[Record]):
             return f"### {_types_to_print_names[record_type]}\n\n" + "\n".join(
-                [
-                    md
-                    for id in delta_ids
-                    if (md := fetch_record(record_type, id).to_markdown())
-                ]
+                [x.to_markdown() for x in records]
             )
 
-        def req_markdown(delta):
-            reqs_wide = [
-                (fetch_record(Requerimento, id), prev, now) for id, prev, now in delta
-            ]
+        def req_markdown(reqs_wide):
+
             rows = [
                 row
                 for req, prev, now in reqs_wide
@@ -57,12 +44,24 @@ class Export:
             ]
             return "### Requerimentos\n\n" + "\n".join(rows)
 
+        if isinstance(blob, FetchError):
+            return "## ALRA\n\n" + "Sem ligação a `alra.pt`"
         md = [
-            simple_record_markdown(record_type, ids)
-            for k, ids in delta.items()
-            if (record_type := _state_keys_to_simple_types.get(k))
+            simple_record_markdown(k, records)
+            for k, records in blob.items()
+            if k
+            in [
+                Info,
+                Diario,
+                Voto,
+                Iniciativa,
+                Interven,
+                Peti,
+                AudiGRep,
+                AudiARep,
+            ]
         ]
-        if "requerimentos" in delta:
-            md.insert(0, req_markdown(delta["requerimentos"]))
+        if Requerimento in blob:
+            md.insert(0, req_markdown(blob[Requerimento]))
 
         return "## ALRA\n\n" + "\n\n".join(md)

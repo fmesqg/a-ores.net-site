@@ -1,15 +1,11 @@
-if __name__ == "__main__":
-    import os.path
-    import sys
+# if __name__ == "__main__":
+#     import os.path
+#     import sys
 
-    sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
+#     sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from bot.fetch import (
-    _fetch_info_dict,
-    _fetch_iniciativa_dict,
-    _fetch_requerimento_dict,
-    _fetch_voto_dict,
-)
+from bot.fetch import fetch_record
+from bot.record import Info, Iniciativa, Requerimento, Voto
 
 # TODO these tests, as they are, require network connection. Substitute so as o use html
 # (or at least keep an offline version)
@@ -29,7 +25,7 @@ def test_fetch_voto():
         "Anúncio em plenário": "11/07/2024",
         "Resultado": "Aprovado por unanimidade",
     }
-    actual = _fetch_voto_dict(3525)
+    actual = fetch_record(Voto, 3525)._data  # my god wtf is this
     assert expected == actual
 
 
@@ -51,7 +47,7 @@ def test_fetch_requerimento_atempada():
         "Data da entrada da resposta": "26/03/2024",
         "Anúncio em plenário da resposta": "09/04/2024",
     }
-    actual = _fetch_requerimento_dict(8251)
+    actual = fetch_record(Requerimento, 8251)._data
     assert expected == actual
 
 
@@ -75,7 +71,7 @@ def test_fetch_iniciativa():
         "Comissão": "Assuntos Sociais",
         "Data de envio": "05/08/2024",
     }
-    actual = _fetch_iniciativa_dict(3625)
+    actual = fetch_record(Iniciativa, 3625)._data
     assert expected == actual
 
 
@@ -90,7 +86,7 @@ def test_fetch_info():
         "Autor": "Presidência da ALRAA",
         "Assunto": "Nota de Pesar da Presidência da ALRAA - Presidente Luís Garcia manifesta profundo pesar pelo falecimento do antigo Presidente da Assembleia Legislativa Álvaro Monjardino",  # noqa: E501
     }
-    actual = _fetch_info_dict(20085)
+    actual = fetch_record(Info, 20085)._data
     assert expected == actual
 
 
