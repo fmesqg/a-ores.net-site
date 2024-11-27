@@ -26,10 +26,33 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
   {% endfor %}
 </ul>
 
-# [Atualizações automáicas (Assembleia Legislativa, Jornal Oficial e BASE)](/auto-updates)
+# Atualizações automáicas
+## ALRA
 <ul>
-{% assign full_updates = site.complete_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:10 %}
+{% assign full_updates = site.alra_updates | sort: "date" | reverse %}
+{% for update in full_updates limit:20 %}
+
+    <li>
+      <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+## JORAA
+<ul>
+{% assign full_updates = site.joraa_updates | sort: "date" | reverse %}
+{% for update in full_updates limit:20 %}
+
+    <li>
+      <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+## BASE (Açores)
+<ul>
+{% assign full_updates = site.base_updates | sort: "date" | reverse %}
+{% for update in full_updates limit:20 %}
 
     <li>
       <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>

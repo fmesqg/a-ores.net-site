@@ -15,9 +15,12 @@ title: Açores.net
 description: Repositório de dados sobre os Açores
 collections:
   alra_updates:
-  joraa_updates:
-  base_updates:
-  portal_updates:
-  complete_updates:
       output: true 
-      permalink: /updates/:path/ # Define custom permalinks
+      permalink: /alra_updates/:path/
+  joraa_updates:
+      output: true 
+      permalink: /joraa_updates/:path/
+  base_updates:
+      output: true 
+      permalink: /base_updates/:path/
+  portal_updates:

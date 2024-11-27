@@ -90,35 +90,18 @@ def write_update(web_data: WebData):
             folder="_portal_updates",
         )
 
-    # write_post(date, joraa=joraa, alra=alra, contratos=base, portal=portal)
-
 
 def write_collection(date: str, update, title, folder):
     page_font_matter = f"""---
 date: {date}
 title: {title}
+layout: default
 ---
 """
     if update:
         path = os.path.join(os.path.dirname(__file__), "..", folder, f"{date}.md")
         with open(path, "w", encoding="utf-8") as f:
             f.write(page_font_matter + update + "\n")
-
-
-def write_post(date, alra, joraa, contratos, portal):
-    page_font_matter = f"""---
-layout: default
-date: {date}
-categories: alra-scrapper
-title: Atualização (ALRA + JORAA + Base)
----
-"""
-    if post_body := "\n\n".join([i for i in [alra, joraa, contratos, portal] if i]):
-        path = os.path.join(
-            os.path.dirname(__file__), "..", "_complete_updates", f"{date}.md"
-        )
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(page_font_matter + post_body + "\n")
 
 
 def markdown_joraa(entries):
