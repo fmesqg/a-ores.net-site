@@ -285,7 +285,10 @@ def fetch_contratos_RAA(from_pub_date: str, to_pub_date: str = None):
     }
 
     response = requests.post(url, headers=headers, data=data)
-    return response.json()["items"]
+    try:
+        return response.json()["items"]
+    except TypeError as e:
+        raise FetchError("Problem fetching BASE") from e
 
 
 def fetch_alra(delta: dict):
