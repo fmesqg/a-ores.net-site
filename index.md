@@ -18,12 +18,15 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 
 <ul>
   {% for post in site.posts %}
-    {% unless post.categories contains "alra-scrapper" %}
-
+    {% if post.link  %}
+    <li>
+      <a href="{{ post.page }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
+    </li>
+    {% else %}
     <li>
       <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
     </li>
-    {% endunless %}
+    {% endif %}
 
   {% endfor %}
 </ul>
