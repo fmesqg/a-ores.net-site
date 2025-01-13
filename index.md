@@ -33,11 +33,15 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 
 # Atualizações automáicas
 
-## [ALRA](/alra_updates)
+## ALRA
+
+### [Aqui](/alra_updates) para todas as atualizações ALRA (web)
+
+### [Aqui](/rss/alra.xml) ALRA RSS feed
 
 <ul>
 {% assign full_updates = site.alra_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:20 %}
+{% for update in full_updates limit:10 %}
 
     <li>
       <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
@@ -45,11 +49,15 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
   {% endfor %}
 </ul>
 
-## [JORAA](/joraa_updates)
+## JORAA
+
+### [Aqui](/joraa_updates) para todas as atualizações JORAA (web)
+
+### [Aqui](/rss/joraa.xml) JORAA RSS feed
 
 <ul>
 {% assign full_updates = site.joraa_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:20 %}
+{% for update in full_updates limit:10 %}
 
     <li>
       <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
@@ -57,11 +65,31 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
   {% endfor %}
 </ul>
 
-## [BASE (Açores)](/base_updates)
+## BASE (Açores)
+
+### [Aqui](/base_updates) para todas as atualizações BASE (web)
+
+### [Aqui](/rss/base.xml) BASE RSS feed
 
 <ul>
 {% assign full_updates = site.base_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:20 %}
+{% for update in full_updates limit:10 %}
+
+    <li>
+      <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+## Portal (Açores)
+
+### [Aqui](/portal_updates) para todas as atualizações do Portal (web)
+
+### [Aqui](/rss/portal.xml) Portal-GRA RSS feed
+
+<ul>
+{% assign full_updates = site.portal_updates | sort: "date" | reverse %}
+{% for update in full_updates limit:10 %}
 
     <li>
       <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>

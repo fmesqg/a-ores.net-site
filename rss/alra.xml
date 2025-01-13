@@ -15,7 +15,7 @@ layout: null
     {% for update in full_updates limit:20 %}      <item>
         <title>{{ update.title | xml_escape }} - {{ update.date | date: "%Y-%m-%d" | xml_escape }}</title>
         <guid>alra-{{ update.date | date: "%Y-%m-%d" | xml_escape }}</guid>
-        <link>{{ site.url }}/updates/{{update.date | date: "%Y-%m-%d" }}</link>
+        <link>{{ site.url }}/alra_updates/{{update.date | date: "%Y-%m-%d" }}</link>
         <description>{{ update.content | xml_escape }}</description>
         <pubDate>{{ update.date | date_to_rfc822 }}</pubDate>
       </item>

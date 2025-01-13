@@ -17,7 +17,7 @@ layout: null
         <description>{{ update.content | xml_escape }}</description>
         <pubDate>{{ update.date | date_to_rfc822 }}</pubDate>
         <guid>base-{{ update.date | date: "%Y-%m-%d" | xml_escape }}</guid>
-        <link>{{ site.url }}/updates/{{update.date | date: "%Y-%m-%d" }}</link>
+        <link>{{ site.url }}/base_updates/{{update.date | date: "%Y-%m-%d" }}</link>
       </item>
     {% endfor %}
   </channel>
