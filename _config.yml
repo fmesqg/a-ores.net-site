@@ -1,13 +1,12 @@
 theme: minima
 
-minima: 
+minima:
   skin: solarized
 
 header_pages:
-  - oraa2024.md
-  - alra.md
+  - trabalhar.md
   - rsss.md
-  
+
 plugins:
   - jekyll-feed
 
@@ -15,12 +14,15 @@ title: Açores.net
 description: Repositório de dados sobre os Açores
 collections:
   alra_updates:
-      output: true 
-      permalink: /alra_updates/:path/
+    output: true
+    permalink: /alra_updates/:path/
   joraa_updates:
-      output: true 
-      permalink: /joraa_updates/:path/
+    output: true
+    permalink: /joraa_updates/:path/
   base_updates:
-      output: true 
-      permalink: /base_updates/:path/
+    output: true
+    permalink: /base_updates/:path/
+  trabalhar:
+    output: true
+    permalink: /trabalhar/:path/
   portal_updates:

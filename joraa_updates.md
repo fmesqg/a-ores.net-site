@@ -1,5 +1,4 @@
 ---
-title: JORAA Updates
 layout: default
 permalink: /joraa_updates
 ---
