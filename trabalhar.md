@@ -7,6 +7,13 @@ permalink: /trabalhar
 
 {% assign x = site.trabalhar | sort: "date" | reverse %}
 {% for post in x %}
+    {% capture x %}
+      {% if post.link %}
+        {{ post.link }}
+      {% else %}
+        {{ post.url }}
+      {% endif %}
+    {% endcapture %}
 
-* {{ post.date | date: "%Y-%m-%d" }}: [{{ post.title | xml_escape }}]({{ post.link | strip }})
+* {{ post.date | date: "%Y-%m-%d" }}: [{{ post.title | xml_escape }}]({{ x | strip }})
 {% endfor %}
