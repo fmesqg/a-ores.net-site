@@ -7,6 +7,7 @@ layout: null
     <title>Atualizações Base</title>
     <link>{{ site.url }}/rss/base.xml</link>
     <description>Atualizações BASE</description>
+    <icon>{{ site.url }}/favicon.ico</icon>
     <atom:link href="{{ '/rss/base.xml' | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
@@ -15,7 +16,7 @@ layout: null
     {% for update in full_updates limit:10 %}      <item>
         <title>{{ update.title | xml_escape }} - {{ update.date | date: "%Y-%m-%d" | xml_escape }}</title>
         <description>{{ update.content | xml_escape }}</description>
-        <pubDate>{{ update.date | date_to_rfc822 }}</pubDate>
+        <pubDate>{{ update.date | date: "%a, %d %b %Y 23:59:59 +0000" }}</pubDate>
         <guid>base-{{ update.date | date: "%Y-%m-%d" | xml_escape }}</guid>
         <link>{{ site.url }}/base_updates/{{update.date | date: "%Y-%m-%d" }}</link>
       </item>
