@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1" xmlns:feeder="https://nononsenseapps.com/feeder">
+  <head>
+    <title>
+      Feeder
+    </title>
+  </head>
+  <body>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Atualizações ALRA" text="Atualizações ALRA" type="rss" xmlUrl="http://açores.net/rss/alra.xml"/>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Atualizações Base" text="Atualizações Base" type="rss" xmlUrl="http://açores.net/rss/base.xml"/>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Atualizações JORA" text="Atualizações JORA" type="rss" xmlUrl="http://açores.net/rss/joraa.xml"/>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Atualizações portal.azores.gov.pt" text="Atualizações portal.azores.gov.pt" type="rss" xmlUrl="https://açores.net/rss/portal.xml"/>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Açores.net" text="Açores.net" type="rss" xmlUrl="http://açores.net/feed.xml"/>
+    <outline feeder:notify="false" feeder:imageUrl="https://www.esquerda.net/sites/default/files/icoesquerda.ico" feeder:fullTextByDefault="true" feeder:openArticlesWith="" feeder:alternateId="false" title="Esquerda" text="Esquerda" type="rss" xmlUrl="https://www.esquerda.net/rss/geral"/>
+    <outline feeder:notify="false" feeder:imageUrl="https://www.omnycontent.com/d/playlist/35bdb4a8-b7f8-457b-a09c-a8bd009964db/4e3deeb0-0f9e-4822-8039-a8f20105e067/16a26c17-e6b1-4286-9a00-a8f20105e071/image.jpg?t=1532322419&amp;size=Large" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Fumaça" text="Fumaça" type="rss" xmlUrl="https://omny.fm/shows/eapenasfumaca/playlists/podcast.rss"/>
+    <outline feeder:notify="false" feeder:imageUrl="https://media.icij.org/uploads/2022/07/cropped-favicon-32x32-1-32x32.png" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="ICIJ" text="ICIJ" type="rss" xmlUrl="https://www.icij.org/feed/"/>
+    <outline feeder:notify="false" feeder:imageUrl="http://ladroesdebicicletas.blogspot.com/favicon.ico" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Ladrões de Bicicletas" text="Ladrões de Bicicletas" type="rss" xmlUrl="https://ladroesdebicicletas.blogspot.com/feeds/posts/default?alt=rss"/>
+    <outline feeder:notify="false" feeder:imageUrl="http://www.ine.pt/favicon.ico" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Portal do INE - Canal Rss - Publicações" text="Portal do INE - Canal Rss - Publicações" type="rss" xmlUrl="https://www.ine.pt/ine/rssfeed_pub.jsp?lang=PT"/>
+    <feeder:settings>
+      <feeder:setting key="pref_readaloud_detect_lang" value="false"/>
+      <feeder:setting key="pref_max_lines" value="5"/>
+      <feeder:setting key="pref_dark_theme" value="dark"/>
+      <feeder:setting key="prefs_filter_recently_read" value="true"/>
+      <feeder:setting key="pref_body_text_scale" value="1.0"/>
+      <feeder:setting key="pref_added_feeder_news" value="true"/>
+      <feeder:setting key="pref_default_open_item_with" value="0"/>
+      <feeder:setting key="prefs_filter_read" value="true"/>
+    </feeder:settings>
+  </body>
+</opml>

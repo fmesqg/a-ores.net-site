@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1" xmlns:feeder="https://nononsenseapps.com/feeder">
+  <head>
+    <title>
+      Feeder
+    </title>
+  </head>
+  <body>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Atualizações ALRA" text="Atualizações ALRA" type="rss" xmlUrl="http://açores.net/rss/alra.xml"/>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Atualizações Base" text="Atualizações Base" type="rss" xmlUrl="http://açores.net/rss/base.xml"/>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Atualizações JORA" text="Atualizações JORA" type="rss" xmlUrl="http://açores.net/rss/joraa.xml"/>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Atualizações portal.azores.gov.pt" text="Atualizações portal.azores.gov.pt" type="rss" xmlUrl="https://açores.net/rss/portal.xml"/>
+    <outline feeder:notify="false" feeder:fullTextByDefault="false" feeder:openArticlesWith="" feeder:alternateId="false" title="Açores.net" text="Açores.net" type="rss" xmlUrl="http://açores.net/feed.xml"/>
+    <feeder:settings>
+      <feeder:setting key="pref_readaloud_detect_lang" value="false"/>
+      <feeder:setting key="pref_max_lines" value="5"/>
+      <feeder:setting key="pref_dark_theme" value="dark"/>
+      <feeder:setting key="prefs_filter_recently_read" value="true"/>
+      <feeder:setting key="pref_body_text_scale" value="1.0"/>
+      <feeder:setting key="pref_added_feeder_news" value="true"/>
+      <feeder:setting key="pref_default_open_item_with" value="0"/>
+      <feeder:setting key="prefs_filter_read" value="true"/>
+    </feeder:settings>
+  </body>
+</opml>
