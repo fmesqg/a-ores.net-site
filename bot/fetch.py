@@ -319,11 +319,11 @@ def fetch_alra(delta: dict):
                 else:
                     web_data[record_type].append(rec)
     if not isinstance(web_data, FetchError):
-        web_data[Requerimento] = []
         if "requerimentos" in delta:
             if isinstance(delta["requerimentos"], FetchError):
                 web_data = delta["requerimentos"]
             else:
+                web_data[Requerimento] = []
                 for id, prev, now in delta["requerimentos"]:
                     if isinstance(req := fetch_record(Requerimento, id), FetchError):
                         web_data = req

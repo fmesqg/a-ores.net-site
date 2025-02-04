@@ -64,4 +64,6 @@ class Export:
         if Requerimento in blob:
             md.insert(0, req_markdown(blob[Requerimento]))
 
-        return "## ALRA\n\n" + "\n\n".join(md)
+        if md:
+            return "## ALRA\n\n" + "\n\n".join(md)
+        return ""
