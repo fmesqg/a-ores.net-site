@@ -32,7 +32,7 @@ class Export:
 
         def simple_record_markdown(record_type: type, records: List[Record]):
             return f"### {_types_to_print_names[record_type]}\n\n" + "\n".join(
-                [x.to_markdown() for x in records]
+                [md for x in records if (md := x.to_markdown())]
             )
 
         def req_markdown(reqs_wide):
