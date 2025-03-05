@@ -99,7 +99,7 @@ layout: default
 ---
 """
     if update:
-        path = os.path.join(os.path.dirname(__file__), "..", folder, f"{date}.md")
+        path = os.path.join(os.path.dirname(__file__), "..","docs", folder, f"{date}.md")
         with open(path, "w", encoding="utf-8") as f:
             f.write(page_font_matter + update + "\n")
 
