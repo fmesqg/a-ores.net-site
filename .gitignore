@@ -4,6 +4,6 @@ _site
 Gemfile.lock
 __pycache__
 venv
-_sass
+# _sass
 .vscode
 **/.venv
