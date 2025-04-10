@@ -39,12 +39,12 @@ class State:
         if not isinstance(web_data.base, FetchError):
             update_state.last_base_update = YESTERDAY_DATE
         if not isinstance(web_data.portal, FetchError):
-            update_state.data["sigica"] = set(update_state.data["sigica"]).union(
-                web_data.portal.get("sigica")
-            )
-            update_state.data["boletins"] = set(update_state.data["boletins"]).union(
-                web_data.portal.get("boletins")
-            )
+            update_state.data["sigica"] = set(
+                update_state.data["sigica"]
+            ).union(web_data.portal.get("sigica"))
+            update_state.data["boletins"] = set(
+                update_state.data["boletins"]
+            ).union(web_data.portal.get("boletins"))
         if not isinstance(web_data.alra_ids, FetchError):
             update_state.alra_state = web_data.alra_ids
         return update_state

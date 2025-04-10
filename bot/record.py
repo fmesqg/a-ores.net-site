@@ -23,7 +23,9 @@ class Requerimento(Record):
         x["Alteração do Status"] = f"{prev_status} → {now}"
         x["Texto Requerimento"] = f"[Requerimento]({x['Texto Requerimento']})"
         x["Texto Resposta"] = (
-            f"[Resposta]({t})" if (t := x.get("Texto Resposta", None)) else None
+            f"[Resposta]({t})"
+            if (t := x.get("Texto Resposta", None))
+            else None
         )
         return [x.get(header, "") for header in headers]
 
@@ -38,9 +40,7 @@ class Requerimento(Record):
         )
         md += f"\n  * {status}"
         if doc_req := x.get("Texto Requerimento", None):
-            md += (
-                f"\n  * [requerimento]({doc_req}) ( data entrada: {x['Data entrada']})"
-            )
+            md += f"\n  * [requerimento]({doc_req})( data entrada: {x['Data entrada']})"
         if doc_resp := x.get("Texto Resposta", None):
             md += f"\n  * [resposta]({doc_resp}) (data entrada resposta: {x['Data da entrada da resposta']})"  # noqa: 501
         if len((requerentes := x["Requerente(s)"].split(";"))) > 1:
@@ -135,7 +135,9 @@ class Info(Record):
         x = self._data
         x["link"] = f"[link]({x['url']})"
         x["Texto Informação"] = (
-            f"[Informação]({t})" if (t := x.get("Texto Informação", None)) else None
+            f"[Informação]({t})"
+            if (t := x.get("Texto Informação", None))
+            else None
         )
         return [x.get(header, "") for header in headers]
 

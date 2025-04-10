@@ -7,7 +7,9 @@ class FetchError(Exception):
 
 
 class WebData:
-    def __init__(self, joraa=None, alra=None, base=None, portal=None, alra_ids=None):
+    def __init__(
+        self, joraa=None, alra=None, base=None, portal=None, alra_ids=None
+    ):
         self.joraa: dict[date, dict] = joraa
         self.alra = alra
         self.base: dict[date, dict] = base

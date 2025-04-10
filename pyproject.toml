@@ -1,0 +1,23 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+
+[project]
+name = "Acores.net"
+authors = [{ email = "franciscogabriel@duck.com", name = "Francisco Gabriel" }]
+dependencies = ["pandas>=2.2.3", "requests>=2.32.0", "aiohttp", "beautifulsoup4"]
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = ["black", "isort", "pytest"]
+plot = ["seaborn>=0.13.2"]
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+
+[tool.poetry]
+package-mode = false

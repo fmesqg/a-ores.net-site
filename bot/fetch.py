@@ -107,9 +107,7 @@ def fetch_alra_ids(record_type, url=None):
 
 @catch_requests_exceptions
 def fetch_day_joraa(date: str) -> list[dict]:
-    url = (
-        f"https://jo.azores.gov.pt/api/public/search/ato?fromDate={date}&toDate={date}"
-    )
+    url = f"https://jo.azores.gov.pt/api/public/search/ato?fromDate={date}&toDate={date}"
     response = requests.get(
         url,
     )
@@ -162,7 +160,9 @@ async def fetch_joraa_ato(session: aiohttp.ClientSession, id):
         if response.status == 200:
             return await response.json()
         else:
-            raise FetchError(f"Erro ao buscar ato '{id}'\nStatus: {response.status}")
+            raise FetchError(
+                f"Erro ao buscar ato '{id}'\nStatus: {response.status}"
+            )
 
 
 @catch_requests_exceptions
@@ -325,7 +325,9 @@ def fetch_alra(delta: dict):
             else:
                 web_data[Requerimento] = []
                 for id, prev, now in delta["requerimentos"]:
-                    if isinstance(req := fetch_record(Requerimento, id), FetchError):
+                    if isinstance(
+                        req := fetch_record(Requerimento, id), FetchError
+                    ):
                         web_data = req
                         break
                     else:
@@ -354,11 +356,16 @@ def fetch_web_data(prev_state: State) -> WebData:
             for day, daily_items in joraa_dict.items():
                 if isinstance(daily_items, FetchError):
                     return daily_items
-                tasks = [fetch_joraa_ato(session, entry["id"]) for entry in daily_items]
+                tasks = [
+                    fetch_joraa_ato(session, entry["id"])
+                    for entry in daily_items
+                ]
                 results = await asyncio.gather(*tasks, return_exceptions=True)
 
                 joraa[day] = [
-                    result for result in results if not isinstance(result, FetchError)
+                    result
+                    for result in results
+                    if not isinstance(result, FetchError)
                 ]
 
             return joraa
@@ -384,11 +391,13 @@ def fetch_web_data(prev_state: State) -> WebData:
         for i in range(1, (datetime.now().date() - base_last).days)
     ]
     joraa_dict = {
-        day: fetch_day_joraa(date=day.strftime("%Y-%m-%d")) for day in joraa_date_list
+        day: fetch_day_joraa(date=day.strftime("%Y-%m-%d"))
+        for day in joraa_date_list
     }
     base_dict = {
         day: fetch_contratos_RAA(
-            from_pub_date=day.strftime("%Y-%m-%d"), to_pub_date=day.strftime("%Y-%m-%d")
+            from_pub_date=day.strftime("%Y-%m-%d"),
+            to_pub_date=day.strftime("%Y-%m-%d"),
         )
         for day in base_date_list
     }

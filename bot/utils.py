@@ -99,7 +99,9 @@ layout: default
 ---
 """
     if update:
-        path = os.path.join(os.path.dirname(__file__), "..","docs", folder, f"{date}.md")
+        path = os.path.join(
+            os.path.dirname(__file__), "..", "docs", folder, f"{date}.md"
+        )
         with open(path, "w", encoding="utf-8") as f:
             f.write(page_font_matter + update + "\n")
 
@@ -111,12 +113,17 @@ def markdown_joraa(entries):
     def md(entry: dict):
         entry_text = str(entry)
         sum_amounts = sum(
-            parse_currency_to_number(amount) for amount in find_monies(entry_text)
+            parse_currency_to_number(amount)
+            for amount in find_monies(entry_text)
         )
-        header = f"* [{entry['sumario'].strip()}]({url_entry_base}{entry['id']})"
+        header = (
+            f"* [{entry['sumario'].strip()}]({url_entry_base}{entry['id']})"
+        )
         human_id = f"  * {entry['humanId']}"
         sum_str = f"  * Soma dos montantes: {sum_amounts:,.2f} €"
-        entidades = "\n".join([f"  * {ent['nome']}" for ent in entry["entidades"]])
+        entidades = "\n".join(
+            [f"  * {ent['nome']}" for ent in entry["entidades"]]
+        )
         return (
             sum_amounts,
             entidades,
@@ -134,20 +141,26 @@ def markdown_joraa(entries):
     sorted_entries = sorted(
         [md(entry) for entry in entries], key=lambda tup: (-tup[0], tup[1])
     )
-    if body := "\n\n".join([text for pair in sorted_entries if (text := pair[2])]):
+    if body := "\n\n".join(
+        [text for pair in sorted_entries if (text := pair[2])]
+    ):
         return start + body
 
 
 def markdown_base(entries):
     start = "## Contratos publicados ontem\n\n"
-    url_entry_base = "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id="
+    url_entry_base = (
+        "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id="
+    )
 
     def md(entry):
         md = f"* [{entry['objectBriefDescription'].strip()}]({url_entry_base}{entry['id']})\n"  # noqa: 501
         md += f"  * Preço contratual: {entry['initialContractualPrice']}\n"
         md += f"  * Adjudicante: {entry['contracting']}\n"
         md += f"  * Adjudicatário: {entry['contracted']}\n"
-        md += f"  * Tipo de procedimento: {entry['contractingProcedureType']}\n"
+        md += (
+            f"  * Tipo de procedimento: {entry['contractingProcedureType']}\n"
+        )
         md += f"  * Data da assinatura: {entry['signingDate']}\n"
 
         return md
@@ -185,7 +198,10 @@ def append_state(state: State):
             f.write("\n" + json.dumps(state_json))
         except Exception as exc:
             print(exc)
-            f.write("\n" + json.dumps({"datetime": NOW_DATETIME, "error": str(exc)}))
+            f.write(
+                "\n"
+                + json.dumps({"datetime": NOW_DATETIME, "error": str(exc)})
+            )
 
 
 def get_prev_state() -> State:
