@@ -5,10 +5,10 @@ permalink: /
 ---
 Este _site_ pretende promover uma cidadania ativa, através da disponibilização de informação acessível e fidedigna.
 
-## Opinião
+## [Opinião](/blog)
 
 {% assign sorted_items = site.posts | sort: 'date' | reverse %}
-{% for post in sorted_items limit:6 %}
+{% for post in sorted_items limit:10 %}
 {% if post.op %}
 
 * {{ post.date | date: "%Y-%m-%d" }}: [{{ post.title | xml_escape }}]({{ post.url | strip }}) por {{ post.author }}
