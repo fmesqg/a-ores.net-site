@@ -3,7 +3,8 @@ layout: post
 title: "Gaza—um filtro eleitoral necessário"
 date: 2025-04-17
 op: true
-author: Francisco Mesquita
+author: mesquita
+permalink: /blog/mesquita/2025-04-17
 ---
 Ponto prévio óbvio: desde o início dos ataques horrorosos do Hamas, a 7 de outubro de 2023, foram mortos mais de 62 mil palestinianos e mais de mil israelitas. Os ataques deram-se [na sequência de décadas de abusos e ocupação](https://mesquita.xyz/um-ano-genocidio); e o estado de Israel foi criado após os campos de extermínio nazis. Urge encerrar este ciclo de violações dos direitos humanos.
 

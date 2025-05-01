@@ -4,6 +4,7 @@ minima:
   skin: solarized
 
 header_pages:
+  - blog.md
   - trabalhar.md
   - rsss.md
 
@@ -25,4 +26,14 @@ collections:
   trabalhar:
     output: true
     permalink: /trabalhar/:path/
-  portal_updates:
+  portal_updates: ~
+  authors:
+    output: true
+    permalink: /blog/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"

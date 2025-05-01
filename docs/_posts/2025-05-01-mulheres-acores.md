@@ -3,7 +3,9 @@ layout: post
 title: "Não há mulheres nos Açores?"
 date: 2025-05-01
 op: true
-author: Francisco Mesquita
+author: mesquita
+permalink: /blog/mesquita/2025-05-01
+
 ---
 
 Paulo, Francisco, Francisco, Pedro, Hugo, Ricardo, Dinarte, António. São estes os nomes apresentados, pelas oito forças políticas que tiveram mais de 1% nas legislativas de 2024, para os primeiros candidatos à Assembleia da República (AR) pelo círculo Açoriano para as eleições de 18 de maio de 2025. Algo está muito mal, apesar de existirem justificações plausíveis para cada escolha de cabeça de lista.

@@ -3,7 +3,8 @@ layout: post
 title: Eleições livres para mudar de vida
 date: 2025-04-24
 op: true
-author: António Lima
+author: antonio-lima
+
 ---
 
 Menos de um mês após a comemoração dos 50 anos das primeiras eleições livres em Portugal, realizam-se a 18 de maio eleições legislativas. As eleições antecipadas ocorrem por um motivo pouco digno: um primeiro-ministro aproveitou o primeiro pretexto que encontrou para ir para eleições.

@@ -9,7 +9,7 @@ layout: default
       <p>
         <strong>Publicado:</strong> 
         <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {{ page.date | date: date_format }}
+          {{ page.date | date: "%Y-%m-%d" }}
         </time>
         {%- if page.modified_date -%}
         <br>
@@ -24,11 +24,13 @@ layout: default
       {%- if page.author -%}
       <p>
         <strong>Por:</strong>
-        {% for author in page.author %}
+        {% for author_name in page.author %}
+        {% assign author_obj = site.authors | where: "short_name", author_name | first %}
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span>
+            <span class="p-author h-card" itemprop="name">
+              <a href="{{ author_obj.url | relative_url }}">{{ author_obj.name }}</a>
+            </span>
           </span>
-          {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       </p>
       {%- endif -%}

@@ -3,7 +3,9 @@ layout: post
 title: Quando a vida dá limões…
 date: 2025-04-29
 op: true
-author: Pedro Amaral
+author: pedro-amaral
+permalink: /blog/pedro-amaral/2025-04-29
+
 ---
 
 A cada dia que passa torna-se mais evidente o desfile de pavões que se vão agitando na esperança de atrair apoiantes – eu incluído. Aproximam-se as duas semanas de campanha que antecedem a eleição da Assembleia da República dia 18 de maio – 11 para quem votar em mobilidade.

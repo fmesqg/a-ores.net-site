@@ -3,7 +3,8 @@ layout: post
 title: "Não é não: em reservas integrais não se pesca!"
 date: 2025-04-17
 op: true
-author: José Azevedo
+author: jose-azevedo
+permalink: /blog/jose-azevedo/2025-04-17
 ---
 
 

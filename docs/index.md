@@ -8,12 +8,18 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 ## [Opinião](/blog)
 
 {% assign sorted_items = site.posts | sort: 'date' | reverse %}
-{% for post in sorted_items limit:10 %}
+{% for post in sorted_items %}
 {% if post.op %}
+  {% assign author = site.authors | where: "short_name", post.author | first %}
+  {% assign post_date = post.date | date: "%Y-%m-%d" %}
+  {% if author %}
 
-* {{ post.date | date: "%Y-%m-%d" }}: [{{ post.title | xml_escape }}]({{ post.url | strip }}) por {{ post.author }}
-
-{% endif  %}
+* {{ post_date }}: [{{ post.title | xml_escape }}]({{ post.url | strip }}) por [{{ author.name }}]({{ author.url }})
+  {% else %}
+* {{ post_date }}: [{{ post.title | xml_escape }}]({{ post.url | strip }}) por {{ post.author }}
+  {% endif %}
+  
+{% endif %}
 {% endfor %}
 
 ## Retrato dos Açores (PORDATA)
