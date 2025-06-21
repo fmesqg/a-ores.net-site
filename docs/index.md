@@ -8,7 +8,7 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 ## [Opinião](/blog)
 
 {% assign sorted_items = site.posts | sort: 'date' | reverse %}
-{% for post in sorted_items %}
+{% for post in sorted_items limit:10%}
 {% if post.op %}
   {% assign author = site.authors | where: "short_name", post.author | first %}
   {% assign post_date = post.date | date: "%Y-%m-%d" %}
