@@ -241,8 +241,7 @@ def update_rss_feed(articles: list[dict], target_date: str) -> int:
             continue
         item = ET.Element("item")
         ET.SubElement(item, "title").text = _xml_safe(a["title"])
-        ET.SubElement(item, "link").text = a["url"]
-        ET.SubElement(item, "guid", isPermaLink="true").text = a["url"]
+        ET.SubElement(item, "guid", isPermaLink="false").text = a["url"]
         ET.SubElement(item, "pubDate").text = _rss_pubdate(target_date)
         ET.SubElement(item, "category").text = a["section"]
         ET.SubElement(item, "description").text = _xml_safe(

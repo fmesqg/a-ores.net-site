@@ -100,6 +100,8 @@ def test_update_rss_feed_item_fields():
         assert item.find("author").text == "Autor"
         assert item.find("pubDate").text == "Sat, 14 Mar 2026 00:00:00 +0000"
         assert "artigo=200" in item.find("guid").text
+        assert item.find("guid").get("isPermaLink") == "false"
+        assert item.find("link") is None
 
 
 def test_update_rss_feed_deduplicates():
