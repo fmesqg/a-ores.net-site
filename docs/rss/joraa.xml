@@ -13,7 +13,7 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     {% assign full_updates = site.joraa_updates | sort: "date" | reverse %}
-    {% for update in full_updates limit:10 %}      <item>
+    {% for update in full_updates limit:60 %}      <item>
         <title>{{ update.title | xml_escape }} - {{ update.date | date: "%Y-%m-%d" | xml_escape }}</title>
         <description>{{ update.content | xml_escape }}</description>
         <pubDate>{{ update.date | date: "%a, %d %b %Y 23:59:59 +0000" }}</pubDate>
