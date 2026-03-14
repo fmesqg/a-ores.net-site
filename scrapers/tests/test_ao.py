@@ -12,6 +12,7 @@ from scrapers.ao import (
 
 # --- _clean ---
 
+
 def test_clean_normalizes_whitespace():
     assert _clean("foo  bar\t baz") == "foo bar baz"
 
@@ -22,6 +23,7 @@ def test_clean_removes_nbsp():
 
 # --- _xml_safe ---
 
+
 def test_xml_safe_removes_control_chars():
     assert _xml_safe("hello\x07world") == "helloworld"
     assert _xml_safe("foo\x00bar") == "foobar"
@@ -29,7 +31,7 @@ def test_xml_safe_removes_control_chars():
 
 
 def test_xml_safe_keeps_valid_chars():
-    text = "Açores: económico & \"cultural\"\nLinha 2"
+    text = 'Açores: económico & "cultural"\nLinha 2'
     assert _xml_safe(text) == text
 
 
@@ -39,6 +41,7 @@ def test_xml_safe_keeps_tab_and_newline():
 
 
 # --- _rss_pubdate ---
+
 
 def test_rss_pubdate_format():
     result = _rss_pubdate("2026-03-14")
@@ -52,7 +55,10 @@ def test_rss_pubdate_another_day():
 
 # --- update_rss_feed ---
 
-def _make_article(artigo_id, section="politica", title="Título", body="Corpo do artigo."):
+
+def _make_article(
+    artigo_id, section="politica", title="Título", body="Corpo do artigo."
+):
     return {
         "id": artigo_id,
         "title": title,
@@ -84,7 +90,9 @@ def test_update_rss_feed_creates_file():
 
 
 def test_update_rss_feed_item_fields():
-    article = _make_article("200", section="cultura", title="Arte Nova", body="Texto completo.")
+    article = _make_article(
+        "200", section="cultura", title="Arte Nova", body="Texto completo."
+    )
     with tempfile.TemporaryDirectory() as tmpdir:
         feed_path = Path(tmpdir) / "ao.xml"
         with patch("scrapers.ao.RSS_FEED_PATH", feed_path):

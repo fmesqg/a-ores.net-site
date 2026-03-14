@@ -26,7 +26,9 @@ def fetch_categories() -> dict[int, str]:
 
 def fetch_posts(target_date: str) -> list[dict]:
     """Fetch all posts for a given date, paginating if needed."""
-    next_day = (date.fromisoformat(target_date) + timedelta(days=1)).isoformat()
+    next_day = (
+        date.fromisoformat(target_date) + timedelta(days=1)
+    ).isoformat()
     params = {
         "per_page": 100,
         "after": f"{target_date}T00:00:00",
@@ -54,7 +56,11 @@ def fetch_posts(target_date: str) -> list[dict]:
 def _strip_html(html: str) -> str:
     """Remove HTML tags and decode entities."""
     text = re.sub(r"<[^>]+>", "", html)
-    text = text.replace("&nbsp;", " ").replace("&#8217;", "'").replace("&amp;", "&")
+    text = (
+        text.replace("&nbsp;", " ")
+        .replace("&#8217;", "'")
+        .replace("&amp;", "&")
+    )
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -98,7 +104,9 @@ def build_summary(target_date: str, articles: list[dict]) -> str:
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Scrape RTP Açores via WP API")
+    parser = argparse.ArgumentParser(
+        description="Scrape RTP Açores via WP API"
+    )
     parser.add_argument(
         "--date",
         type=str,
@@ -131,8 +139,14 @@ def main():
     json_path = OUTPUT_DIR / f"rtp-{target_date}.json"
     with open(json_path, "w") as f:
         json.dump(
-            {"date": target_date, "source": "rtp-acores", "articles": articles},
-            f, ensure_ascii=False, indent=2,
+            {
+                "date": target_date,
+                "source": "rtp-acores",
+                "articles": articles,
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
         )
     print(f"Wrote {json_path}")
 

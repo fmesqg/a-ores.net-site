@@ -27,8 +27,16 @@ OUTPUT_DIR = Path(__file__).parent / "output"
 RSS_FEED_PATH = Path(__file__).parent.parent / "docs" / "rss" / "ao.xml"
 
 ALL_SECTIONS = [
-    "primeira-hora", "politica", "economia", "local", "sociedade",
-    "9-ilhas", "desporto", "cultura", "pontos-de-vista", "da-europa",
+    "primeira-hora",
+    "politica",
+    "economia",
+    "local",
+    "sociedade",
+    "9-ilhas",
+    "desporto",
+    "cultura",
+    "pontos-de-vista",
+    "da-europa",
 ]
 
 
@@ -80,6 +88,7 @@ def _clean(text: str) -> str:
 
 # --- Phase 1: Print edition structure ---
 
+
 def scrape_section(session: requests.Session, target_date: str, section: str):
     """Scrape article cards from a print edition section page."""
     url = f"{BASE_URL}/pagina/edicao-impressa/{target_date}?seccao={section}"
@@ -113,25 +122,30 @@ def scrape_section(session: requests.Session, target_date: str, section: str):
             pag_match = re.search(r"Pág\.\s*(\d+)", meta_text)
             if pag_match:
                 page_num = pag_match.group(1)
-            author_part = meta_text.split("|")[0].strip() if "|" in meta_text else ""
+            author_part = (
+                meta_text.split("|")[0].strip() if "|" in meta_text else ""
+            )
             if author_part and "Pág" not in author_part:
                 author = author_part
 
-        articles.append({
-            "id": artigo_id,
-            "title": title,
-            "section": section,
-            "page": page_num,
-            "excerpt": excerpt,
-            "author": author,
-            "url": "",
-            "body": "",
-        })
+        articles.append(
+            {
+                "id": artigo_id,
+                "title": title,
+                "section": section,
+                "page": page_num,
+                "excerpt": excerpt,
+                "author": author,
+                "url": "",
+                "body": "",
+            }
+        )
 
     return articles
 
 
 # --- Phase 2: Fetch full body via print edition artigo URL ---
+
 
 def scrape_article(
     session: requests.Session, target_date: str, section: str, artigo_id: str
@@ -173,12 +187,17 @@ def scrape_article(
 
 # --- Output ---
 
+
 def first_sentence(text: str, max_len: int = 200) -> str:
     """Extract first sentence, capped at max_len chars."""
     if not text:
         return ""
     for i, ch in enumerate(text):
-        if ch == "." and i > 20 and (i + 1 >= len(text) or text[i + 1] in " \n"):
+        if (
+            ch == "."
+            and i > 20
+            and (i + 1 >= len(text) or text[i + 1] in " \n")
+        ):
             sentence = text[: i + 1].replace("\n", " ")
             if len(sentence) <= max_len:
                 return sentence
@@ -198,7 +217,9 @@ def build_summary(target_date: str, sections_data: dict) -> str:
             summary = first_sentence(body_text)
             page_ref = f" (p.{a['page']})" if a.get("page") else ""
             author_ref = f" *{a['author']}*" if a.get("author") else ""
-            lines.append(f"- **{a['title']}**{page_ref}{author_ref} — {summary}")
+            lines.append(
+                f"- **{a['title']}**{page_ref}{author_ref} — {summary}"
+            )
     return "\n".join(lines)
 
 
@@ -207,8 +228,20 @@ def _rss_pubdate(date_str: str) -> str:
     dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=UTC)
     # email.utils.formatdate would require an import; roll it manually
     days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+    ]
     return (
         f"{days[dt.weekday()]}, {dt.day:02d} {months[dt.month - 1]}"
         f" {dt.year} 00:00:00 +0000"
@@ -254,7 +287,9 @@ def update_rss_feed(articles: list[dict], target_date: str) -> int:
 
     rss = ET.Element("rss", version="2.0")
     channel = ET.SubElement(rss, "channel")
-    ET.SubElement(channel, "title").text = "Açoriano Oriental — Edição Impressa"
+    ET.SubElement(channel, "title").text = (
+        "Açoriano Oriental — Edição Impressa"
+    )
     ET.SubElement(channel, "link").text = BASE_URL
     ET.SubElement(channel, "description").text = (
         "Edição impressa do Açoriano Oriental"
@@ -287,9 +322,11 @@ def main():
 
     email, password, sections = load_config()
     session = requests.Session()
-    session.headers.update({
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
-    })
+    session.headers.update(
+        {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+        }
+    )
 
     print("Logging in...")
     login(session, email, password)
@@ -305,7 +342,9 @@ def main():
         total_articles += len(articles)
         sections_data[section] = articles
 
-    print(f"\nPhase 1 done: {total_articles} articles across {len(sections)} sections")
+    print(
+        f"\nPhase 1 done: {total_articles} articles across {len(sections)} sections"
+    )
 
     # Deduplicate primeira-hora: remove articles whose title appears in another section
     if "primeira-hora" in sections_data:
@@ -315,12 +354,16 @@ def main():
                 other_titles.update(a["title"] for a in arts)
         before = len(sections_data["primeira-hora"])
         sections_data["primeira-hora"] = [
-            a for a in sections_data["primeira-hora"] if a["title"] not in other_titles
+            a
+            for a in sections_data["primeira-hora"]
+            if a["title"] not in other_titles
         ]
         deduped = before - len(sections_data["primeira-hora"])
         if deduped:
             total_articles -= deduped
-            print(f"Deduped {deduped} primeira-hora articles (kept {len(sections_data['primeira-hora'])})")
+            print(
+                f"Deduped {deduped} primeira-hora articles (kept {len(sections_data['primeira-hora'])})"
+            )
 
     # Phase 2: Fetch full bodies directly via print edition artigo URLs
     print("\nFetching full articles...")
@@ -344,8 +387,14 @@ def main():
     json_path = OUTPUT_DIR / f"{target_date}.json"
     with open(json_path, "w") as f:
         json.dump(
-            {"date": target_date, "edition": "impressa", "articles": all_articles},
-            f, ensure_ascii=False, indent=2,
+            {
+                "date": target_date,
+                "edition": "impressa",
+                "articles": all_articles,
+            },
+            f,
+            ensure_ascii=False,
+            indent=2,
         )
     print(f"Wrote {json_path}")
 
