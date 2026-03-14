@@ -14,7 +14,7 @@ import json
 import re
 import sys
 import xml.etree.ElementTree as ET
-from datetime import date, datetime, timedelta, timezone
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -204,7 +204,7 @@ def build_summary(target_date: str, sections_data: dict) -> str:
 
 def _rss_pubdate(date_str: str) -> str:
     """Convert YYYY-MM-DD to RFC 2822 date string."""
-    dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=UTC)
     # email.utils.formatdate would require an import; roll it manually
     days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",

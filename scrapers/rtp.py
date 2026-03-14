@@ -112,7 +112,7 @@ def main():
     args = parse_args()
     target_date = args.date or (date.today() - timedelta(days=1)).isoformat()
 
-    print(f"Fetching categories...")
+    print("Fetching categories...")
     categories = fetch_categories()
     print(f"  {len(categories)} categories")
 

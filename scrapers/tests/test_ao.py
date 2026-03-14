@@ -3,15 +3,12 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from unittest.mock import patch
 
-import pytest
-
 from scrapers.ao import (
     _clean,
     _rss_pubdate,
     _xml_safe,
     update_rss_feed,
 )
-
 
 # --- _clean ---
 
