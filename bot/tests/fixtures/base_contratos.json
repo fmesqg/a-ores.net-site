@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": 12345,
+      "objectBriefDescription": "Fornecimento de equipamento informático",
+      "initialContractualPrice": "50000.00 €",
+      "contracting": "Câmara Municipal de Ponta Delgada",
+      "contracted": "Tech Azores Lda",
+      "contractingProcedureType": "Ajuste Direto",
+      "signingDate": "2024-08-01"
+    },
+    {
+      "id": 12346,
+      "objectBriefDescription": "Serviços de limpeza",
+      "initialContractualPrice": "12000.00 €",
+      "contracting": "Governo Regional dos Açores",
+      "contracted": "Clean Islands SA",
+      "contractingProcedureType": "Concurso Público",
+      "signingDate": "2024-08-02"
+    }
+  ]
+}

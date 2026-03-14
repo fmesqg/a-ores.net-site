@@ -1,0 +1,19 @@
+{
+  "resultSize": 2,
+  "list": [
+    {
+      "id": "abc123",
+      "sumario": "Resolução do Conselho",
+      "humanId": "RES/2024/001",
+      "descricaoPublicacao": "Série I",
+      "entidades": [{"nome": "Governo Regional"}]
+    },
+    {
+      "id": "def456",
+      "sumario": "Portaria sobre 1.500,00 € de apoio",
+      "humanId": "PORT/2024/002",
+      "descricaoPublicacao": "Série I",
+      "entidades": [{"nome": "Secretaria Regional"}]
+    }
+  ]
+}
