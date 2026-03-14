@@ -25,9 +25,7 @@ def _make_joraa_entry(id="abc123"):
         "sumario": "Autoriza celebração de contrato",
         "textoIntegral": "A" * 600,
         "humanId": "RES/2024/001",
-        "entidades": [
-            {"nome": "Secretaria Regional das Finanças"}
-        ],
+        "entidades": [{"nome": "Secretaria Regional das Finanças"}],
         "descricaoPublicacao": "Série I",
     }
 
@@ -93,8 +91,9 @@ def test_write_daily_json_all_sources():
     )
 
     with tempfile.TemporaryDirectory() as tmpdir:
-        with patch("bot.daily_json._OUTPUT_DIR", tmpdir), patch(
-            "bot.daily_json.YESTERDAY_DATE", day
+        with (
+            patch("bot.daily_json._OUTPUT_DIR", tmpdir),
+            patch("bot.daily_json.YESTERDAY_DATE", day),
         ):
             write_daily_json(web_data)
 
@@ -138,8 +137,9 @@ def test_write_daily_json_with_errors():
     )
 
     with tempfile.TemporaryDirectory() as tmpdir:
-        with patch("bot.daily_json._OUTPUT_DIR", tmpdir), patch(
-            "bot.daily_json.YESTERDAY_DATE", day
+        with (
+            patch("bot.daily_json._OUTPUT_DIR", tmpdir),
+            patch("bot.daily_json.YESTERDAY_DATE", day),
         ):
             write_daily_json(web_data)
 

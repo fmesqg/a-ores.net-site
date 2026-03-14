@@ -19,7 +19,7 @@ class Requerimento(Record):
 
     def export_table_row(self, *, headers, prev, now):
         x: dict = self._data
-        if len((requerentes := x["Requerente(s)"].split(";"))) > 1:
+        if len(requerentes := x["Requerente(s)"].split(";")) > 1:
             x["Requerente(s)"] = requerentes[0] + " ..."
         x["Número"] = f"[{x['Número']}]({x['url']})"
         prev_status = "Não existente" if prev is None else prev
@@ -45,8 +45,8 @@ class Requerimento(Record):
         if doc_req := x.get("Texto Requerimento", None):
             md += f"\n  * [requerimento]({doc_req})( data entrada: {x['Data entrada']})"
         if doc_resp := x.get("Texto Resposta", None):
-            md += f"\n  * [resposta]({doc_resp}) (data entrada resposta: {x['Data da entrada da resposta']})"  # noqa: 501
-        if len((requerentes := x["Requerente(s)"].split(";"))) > 1:
+            md += f"\n  * [resposta]({doc_resp}) (data entrada resposta: {x['Data da entrada da resposta']})"  # noqa: E501
+        if len(requerentes := x["Requerente(s)"].split(";")) > 1:
             x["Requerente(s)"] = requerentes[0] + ", ..."
         md += f"\n  * Requerente(s): {x['Requerente(s)']}"
 
@@ -57,9 +57,7 @@ class Requerimento(Record):
         return {
             "id": x.get("id"),
             "title": x.get("Assunto", x.get("id")),
-            "state_change": (
-                {"from": prev, "to": now} if prev else None
-            ),
+            "state_change": ({"from": prev, "to": now} if prev else None),
             "requesters": x.get("Requerente(s)"),
             "date": x.get("Data entrada"),
             "url": x.get("url"),

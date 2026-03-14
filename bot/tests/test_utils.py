@@ -1,7 +1,7 @@
 import json
 import os
 from datetime import date, datetime
-from unittest.mock import call, patch
+from unittest.mock import patch
 
 from bot.classes import FetchError, WebData
 from bot.state import State
@@ -14,10 +14,8 @@ from bot.utils import (
     markdown_joraa,
     markdown_portal,
     parse_currency_to_number,
-    write_collection,
     write_update,
 )
-
 
 # --- find_monies ---
 
@@ -253,15 +251,15 @@ def test_markdown_portal_empty():
 def test_get_prev_state(tmp_path, state_dict, monkeypatch):
     state_file = tmp_path / "state.jsonl"
     state_file.write_text(
-        json.dumps({"dummy": "first"})
-        + "\n"
-        + json.dumps(state_dict)
+        json.dumps({"dummy": "first"}) + "\n" + json.dumps(state_dict)
     )
     monkeypatch.setattr(
         "bot.utils.os.path.join",
-        lambda *args: str(state_file)
-        if args[-1] == "state.jsonl"
-        else os.path.join(*args),
+        lambda *args: (
+            str(state_file)
+            if args[-1] == "state.jsonl"
+            else os.path.join(*args)
+        ),
     )
     s = get_prev_state()
     assert s.last_joraa_update.year == 2024
@@ -275,9 +273,11 @@ def test_append_state(tmp_path, state_dict, monkeypatch):
     state_file.write_text("")
     monkeypatch.setattr(
         "bot.utils.os.path.join",
-        lambda *args: str(state_file)
-        if args[-1] == "state.jsonl"
-        else os.path.join(*args),
+        lambda *args: (
+            str(state_file)
+            if args[-1] == "state.jsonl"
+            else os.path.join(*args)
+        ),
     )
     fixed_dt = datetime(2024, 8, 20, 12, 0, 0)
     monkeypatch.setattr("bot.utils.NOW_DATETIME", fixed_dt)
@@ -285,7 +285,9 @@ def test_append_state(tmp_path, state_dict, monkeypatch):
     state = State(state_dict)
     append_state(state)
 
-    lines = [l for l in state_file.read_text().splitlines() if l.strip()]
+    lines = [
+        line for line in state_file.read_text().splitlines() if line.strip()
+    ]
     assert len(lines) == 1
     written = json.loads(lines[0])
     assert written["datetime"] == "2024-08-20 12:00:00"
@@ -306,9 +308,11 @@ def test_append_state_appends_not_overwrites(
     state_file.write_text(seed)
     monkeypatch.setattr(
         "bot.utils.os.path.join",
-        lambda *args: str(state_file)
-        if args[-1] == "state.jsonl"
-        else os.path.join(*args),
+        lambda *args: (
+            str(state_file)
+            if args[-1] == "state.jsonl"
+            else os.path.join(*args)
+        ),
     )
     fixed_dt = datetime(2024, 8, 20, 12, 0, 0)
     monkeypatch.setattr("bot.utils.NOW_DATETIME", fixed_dt)
@@ -316,7 +320,9 @@ def test_append_state_appends_not_overwrites(
     state = State(state_dict)
     append_state(state)
 
-    lines = [l for l in state_file.read_text().splitlines() if l.strip()]
+    lines = [
+        line for line in state_file.read_text().splitlines() if line.strip()
+    ]
     assert len(lines) == 2
     assert json.loads(lines[0]) == {"seed": True}
 

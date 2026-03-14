@@ -10,7 +10,7 @@ from .utils import compute_delta_ids, write_update
 
 def retro_fix_posts():
     path = os.path.join(os.path.dirname(__file__), STATE_FILE)
-    with open(path, mode="r") as f:
+    with open(path) as f:
         states = [json.loads(line) for line in f.readlines()]
     previous_state, rest = states[0], states[1:]
     for current_state in rest:

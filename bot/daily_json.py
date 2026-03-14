@@ -36,10 +36,7 @@ _OUTPUT_DIR = os.path.join(
 def _joraa_item(entry: dict) -> dict:
     text_integral = entry.get("textoIntegral", "") or ""
     excerpt = text_integral[:500] if text_integral else ""
-    total = sum(
-        parse_currency_to_number(m)
-        for m in find_monies(str(entry))
-    )
+    total = sum(parse_currency_to_number(m) for m in find_monies(str(entry)))
     entities = [e["nome"] for e in entry.get("entidades", [])]
     return {
         "id": entry.get("id"),
@@ -56,9 +53,7 @@ def _joraa_item(entry: dict) -> dict:
 def _base_item(entry: dict) -> dict:
     return {
         "id": entry.get("id"),
-        "title": (
-            entry.get("objectBriefDescription", "").strip()
-        ),
+        "title": (entry.get("objectBriefDescription", "").strip()),
         "price": entry.get("initialContractualPrice"),
         "buyer": entry.get("contracting"),
         "seller": entry.get("contracted"),
@@ -83,9 +78,7 @@ def _alra_section(alra_data: dict) -> dict:
 
     for cls, key in _ALRA_KEY_MAP.items():
         if cls in alra_data:
-            result[key] = [
-                rec.to_dict() for rec in alra_data[cls]
-            ]
+            result[key] = [rec.to_dict() for rec in alra_data[cls]]
 
     return result
 
@@ -119,15 +112,13 @@ def write_daily_json(web_data: WebData):
 
     # JORAA — keyed by date
     if isinstance(web_data.joraa, FetchError):
-        dates_data.setdefault(
-            str(YESTERDAY_DATE), {}
-        )["joraa"] = {"error": str(web_data.joraa.info)}
+        dates_data.setdefault(str(YESTERDAY_DATE), {})["joraa"] = {
+            "error": str(web_data.joraa.info)
+        }
     else:
         for day, entries in web_data.joraa.items():
             day_str = (
-                day.strftime("%Y-%m-%d")
-                if isinstance(day, date)
-                else str(day)
+                day.strftime("%Y-%m-%d") if isinstance(day, date) else str(day)
             )
             dates_data.setdefault(day_str, {})["joraa"] = [
                 _joraa_item(e) for e in entries
@@ -135,15 +126,13 @@ def write_daily_json(web_data: WebData):
 
     # BASE — keyed by date
     if isinstance(web_data.base, FetchError):
-        dates_data.setdefault(
-            str(YESTERDAY_DATE), {}
-        )["base"] = {"error": str(web_data.base.info)}
+        dates_data.setdefault(str(YESTERDAY_DATE), {})["base"] = {
+            "error": str(web_data.base.info)
+        }
     else:
         for day, entries in web_data.base.items():
             day_str = (
-                day.strftime("%Y-%m-%d")
-                if isinstance(day, date)
-                else str(day)
+                day.strftime("%Y-%m-%d") if isinstance(day, date) else str(day)
             )
             dates_data.setdefault(day_str, {})["base"] = [
                 _base_item(e) for e in entries
@@ -156,8 +145,8 @@ def write_daily_json(web_data: WebData):
             "error": str(web_data.alra.info)
         }
     else:
-        dates_data.setdefault(yesterday_str, {})["alra"] = (
-            _alra_section(web_data.alra)
+        dates_data.setdefault(yesterday_str, {})["alra"] = _alra_section(
+            web_data.alra
         )
 
     # Portal — always yesterday
@@ -166,8 +155,8 @@ def write_daily_json(web_data: WebData):
             "error": str(web_data.portal.info)
         }
     else:
-        dates_data.setdefault(yesterday_str, {})["portal"] = (
-            _portal_section(web_data.portal)
+        dates_data.setdefault(yesterday_str, {})["portal"] = _portal_section(
+            web_data.portal
         )
 
     # Write one JSON file per date

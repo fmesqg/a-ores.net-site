@@ -1,5 +1,3 @@
-from typing import List, Union
-
 from bot.classes import FetchError
 
 from .record import (
@@ -17,7 +15,7 @@ from .record import (
 
 
 class Export:
-    def markdown(blob: Union[FetchError, dict]) -> str:
+    def markdown(blob: FetchError | dict) -> str:
         _types_to_print_names = {
             Diario: "Diários",
             Interven: "Intervenções",
@@ -30,7 +28,7 @@ class Export:
             AudiARep: "Audições - Assembleia da República",
         }
 
-        def simple_record_markdown(record_type: type, records: List[Record]):
+        def simple_record_markdown(record_type: type, records: list[Record]):
             return f"### {_types_to_print_names[record_type]}\n\n" + "\n".join(
                 [md for x in records if (md := x.to_markdown())]
             )

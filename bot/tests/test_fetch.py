@@ -1,5 +1,5 @@
 import asyncio
-from datetime import date, datetime, timedelta
+from datetime import datetime
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
@@ -22,18 +22,12 @@ from bot.fetch import (
     pre_fetch_alra,
 )
 from bot.record import (
-    AudiARep,
-    AudiGRep,
-    Diario,
     Info,
     Iniciativa,
-    Interven,
-    Peti,
     Requerimento,
     Voto,
 )
 from bot.state import State
-
 
 # --- Mocked unit tests ---
 
@@ -122,7 +116,9 @@ class TestFetchRequerimentos:
                 raise requests.exceptions.ConnectionError("fail")
             mock = MagicMock()
             # Return HTML that has requerimento IDs (internal_db_int=4)
-            mock.content = b'<html><a href="/w_pesquisa_registo/4/100">x</a></html>'
+            mock.content = (
+                b'<html><a href="/w_pesquisa_registo/4/100">x</a></html>'
+            )
             return mock
 
         with patch("bot.fetch.requests.get", side_effect=side_effect):
@@ -235,7 +231,9 @@ class TestFetchAlra:
 
 
 class TestFetchPortal:
-    def test_returns_delta(self, portal_beo_html, portal_sigica_html, state_dict):
+    def test_returns_delta(
+        self, portal_beo_html, portal_sigica_html, state_dict
+    ):
         prev = State(state_dict)
 
         def mock_get(url, **kwargs):

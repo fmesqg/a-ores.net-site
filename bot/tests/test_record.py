@@ -10,7 +10,6 @@ from bot.record import (
     Voto,
 )
 
-
 # --- Requerimento ---
 
 
@@ -83,8 +82,16 @@ def test_requerimento_export_table_row():
         "Texto Requerimento": "http://example.com/req.pdf",
     }
     r = Requerimento(data)
-    headers = ["Número", "Requerente(s)", "Alteração do Status", "Texto Requerimento", "Texto Resposta"]
-    row = r.export_table_row(headers=headers, prev="NO PRAZO", now="RESPOSTA ATEMPADA")
+    headers = [
+        "Número",
+        "Requerente(s)",
+        "Alteração do Status",
+        "Texto Requerimento",
+        "Texto Resposta",
+    ]
+    row = r.export_table_row(
+        headers=headers, prev="NO PRAZO", now="RESPOSTA ATEMPADA"
+    )
     assert "[42]" in row[0]
     assert "João CH ..." in row[1]
     assert "NO PRAZO → RESPOSTA ATEMPADA" in row[2]

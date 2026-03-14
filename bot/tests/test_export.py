@@ -1,10 +1,8 @@
 from bot.classes import FetchError
 from bot.export import Export
 from bot.record import (
-    AudiGRep,
     Diario,
     Info,
-    Iniciativa,
     Requerimento,
     Voto,
 )

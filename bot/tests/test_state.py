@@ -27,7 +27,10 @@ def test_get_updated_state_success(state_dict):
         joraa={},
         alra={},
         base={},
-        portal={"boletins": {"http://new-beo"}, "sigica": {"http://new-sigica"}},
+        portal={
+            "boletins": {"http://new-beo"},
+            "sigica": {"http://new-sigica"},
+        },
         alra_ids={"requerimentos": {}, "informacoes": [99]},
     )
     updated = State.get_updated_state(prev, wd)
