@@ -5,13 +5,20 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 [project]
 name = "Acores.net"
 authors = [{ email = "franciscogabriel@duck.com", name = "Francisco Gabriel" }]
-dependencies = ["pandas>=2.2.3", "requests>=2.32.0", "aiohttp", "beautifulsoup4"]
+dependencies = [
+    "pandas>=2.2.3,<3",
+    "requests>=2.32.0,<3",
+    "aiohttp>=3.9,<4",
+    "beautifulsoup4>=4.12,<5",
+]
 version = "0.1.0"
 requires-python = ">=3.11"
 
 [project.optional-dependencies]
-dev = ["black", "isort", "pytest"]
 plot = ["seaborn>=0.13.2"]
+
+[dependency-groups]
+dev = ["black", "isort", "pytest", "ruff", "mypy"]
 
 [tool.black]
 line-length = 79
@@ -22,6 +29,21 @@ profile = "black"
 [tool.pytest.ini_options]
 markers = ["network: tests that require network access"]
 addopts = "-m 'not network'"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+per-file-ignores = {"bot/__init__.py" = ["F403", "E402"]}
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
 
 [tool.poetry]
 package-mode = false
