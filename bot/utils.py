@@ -183,6 +183,16 @@ def markdown_portal(delta):
     return portal
 
 
+def _rotate_state_file(
+    path: str, keep: int = 30, threshold: int = 60
+):
+    with open(path) as f:
+        lines = f.readlines()
+    if len(lines) > threshold:
+        with open(path, "w") as f:
+            f.writelines(lines[-keep:])
+
+
 def append_state(state: State):
     state_json: dict = {
         "datetime": NOW_DATETIME.strftime("%Y-%m-%d %H:%M:%S"),
@@ -196,12 +206,13 @@ def append_state(state: State):
     with open(path, mode="a") as f:
         try:
             f.write("\n" + json.dumps(state_json))
-        except Exception as exc:
+        except (TypeError, ValueError) as exc:
             print(exc)
             f.write(
                 "\n"
                 + json.dumps({"datetime": NOW_DATETIME, "error": str(exc)})
             )
+    _rotate_state_file(path)
 
 
 def get_prev_state() -> State:

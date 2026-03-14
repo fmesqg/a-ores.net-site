@@ -10,6 +10,11 @@ from bot.classes import FetchError, WebData
 from bot.state import State
 from bot.utils import compute_delta_ids
 
+
+def _safe_split_last(text: str, sep: str, default: str = "") -> str:
+    parts = text.split(sep)
+    return parts[-1] if parts else default
+
 from .record import (
     AudiARep,
     AudiGRep,
@@ -90,7 +95,8 @@ def catch_requests_exceptions(func):
 @catch_requests_exceptions
 def fetch_alra_ids(record_type, url=None):
     internals = _ALRA_INTERNALS.get(record_type, None)
-    assert internals is not None, record_type
+    if internals is None:
+        raise FetchError(f"Unknown record type: {record_type}")
     num_pesquisa_registo = internals["internal_db_int"]
     if not url:
         url = internals["url_all_items"]
@@ -98,7 +104,7 @@ def fetch_alra_ids(record_type, url=None):
     soup = BeautifulSoup(response.content, "html.parser")
     a_tags = soup.find_all("a")
     return [
-        int(href.split("/")[-1])
+        int(_safe_split_last(href, "/"))
         for a in a_tags
         if (href := a.get("href"))
         and f"/w_pesquisa_registo/{num_pesquisa_registo}/" in href
@@ -143,7 +149,7 @@ def fetch_sigica_all():
     soup = BeautifulSoup(response.content, "html.parser")
     a_tags = soup.find_all("a")
     return set(
-        base_url + href.split("/")[-1]
+        base_url + _safe_split_last(href, "/")
         for a in a_tags
         if (href := a.get("href")) and "/sigica" in href
     )
@@ -240,7 +246,7 @@ def _fetch_data_dict_by_id(record_type: type, id: int):
             url = (
                 (
                     f"http://base.alra.pt:82/{url_extra}/"
-                    + link.get("href").split("/")[-1]
+                    + _safe_split_last(link.get("href"), "/")
                 )
                 if url_extra
                 else link.get("href")
