@@ -3,8 +3,7 @@
 
 Two-phase approach:
   1. Scrape print edition section pages for structure (title, excerpt, author, page)
-  2. Build a /noticia/ URL index from homepage + category pages, match by slugified
-     title, and fetch full article bodies where available.
+  2. Fetch full article body directly via print edition URL using artigo ID.
 """
 
 from __future__ import annotations
@@ -14,8 +13,8 @@ import configparser
 import json
 import re
 import sys
-import unicodedata
-from datetime import date, timedelta
+import xml.etree.ElementTree as ET
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -25,21 +24,11 @@ from bs4 import BeautifulSoup
 BASE_URL = "https://www.acorianooriental.pt"
 CONFIG_PATH = Path(__file__).parent.parent / ".ao_config"
 OUTPUT_DIR = Path(__file__).parent / "output"
+RSS_FEED_PATH = Path(__file__).parent.parent / "docs" / "rss" / "ao.xml"
 
 ALL_SECTIONS = [
     "primeira-hora", "politica", "economia", "local", "sociedade",
     "9-ilhas", "desporto", "cultura", "pontos-de-vista", "da-europa",
-]
-
-CATEGORY_PAGES = [
-    "/pagina/regional",
-    "/pagina/nacional",
-    "/pagina/economia",
-    "/pagina/politica",
-    "/pagina/sociedade",
-    "/pagina/cultura",
-    "/pagina/desporto",
-    "/pagina/9-ilhas",
 ]
 
 
@@ -87,15 +76,6 @@ def _clean(text: str) -> str:
     """Normalize whitespace and remove &nbsp;."""
     text = text.replace("\xa0", " ").replace("&nbsp;", " ")
     return re.sub(r"\s+", " ", text).strip()
-
-
-def _slugify(text: str) -> str:
-    """NFKD normalize → ASCII → lowercase → hyphens."""
-    text = unicodedata.normalize("NFKD", text)
-    text = text.encode("ascii", "ignore").decode("ascii")
-    text = text.lower()
-    text = re.sub(r"[^a-z0-9]+", "-", text)
-    return text.strip("-")
 
 
 # --- Phase 1: Print edition structure ---
@@ -151,93 +131,40 @@ def scrape_section(session: requests.Session, target_date: str, section: str):
     return articles
 
 
-# --- Phase 2: Resolve full body via /noticia/ ---
+# --- Phase 2: Fetch full body via print edition artigo URL ---
 
-def _collect_noticia_links(soup: BeautifulSoup) -> list[str]:
-    """Extract all /noticia/ paths from a page."""
-    paths = []
-    for a in soup.find_all("a", href=re.compile(r"^/noticia/")):
-        path = urlparse(a["href"]).path
-        if path not in paths:
-            paths.append(path)
-    return paths
-
-
-def build_noticia_index(session: requests.Session) -> dict[str, str]:
-    """Scrape homepage + category pages → {slug: /noticia/path} lookup."""
-    pages_to_scrape = ["/"] + CATEGORY_PAGES
-    slug_to_path: dict[str, str] = {}
-
-    for page in pages_to_scrape:
-        url = f"{BASE_URL}{page}"
-        try:
-            r = session.get(url, timeout=15)
-            soup = BeautifulSoup(r.text, "lxml")
-            for path in _collect_noticia_links(soup):
-                # /noticia/some-slug-here → extract last segment as slug
-                segments = [s for s in path.split("/") if s]
-                if len(segments) >= 2:
-                    slug = segments[-1]
-                    slug_to_path[slug] = path
-        except requests.RequestException:
-            print(f"  Warning: failed to fetch {page}", file=sys.stderr)
-
-    return slug_to_path
-
-
-def _match_article(title: str, index: dict[str, str]) -> str | None:
-    """Try to match a print edition title to a /noticia/ URL slug.
-
-    Strategy: slugify the title and check for substring matches in the index.
-    Noticia slugs often contain the full title plus a numeric suffix.
-    """
-    title_slug = _slugify(title)
-    if not title_slug:
-        return None
-
-    # Exact match
-    if title_slug in index:
-        return index[title_slug]
-
-    # Title slug is contained within an index slug (most common case)
-    for slug, path in index.items():
-        if title_slug in slug:
-            return path
-
-    # Partial match: try with first N words for long titles
-    words = title_slug.split("-")
-    if len(words) >= 4:
-        partial = "-".join(words[:5])
-        for slug, path in index.items():
-            if partial in slug:
-                return path
-
-    return None
-
-
-def scrape_article(session: requests.Session, path: str) -> str:
-    """Fetch full body text from a /noticia/ page."""
-    url = f"{BASE_URL}{path}"
+def scrape_article(
+    session: requests.Session, target_date: str, section: str, artigo_id: str
+) -> str:
+    """Fetch full body text from a print edition artigo page."""
+    url = f"{BASE_URL}/pagina/edicao-impressa/{target_date}?seccao={section}&artigo={artigo_id}"
     try:
         r = session.get(url, timeout=15)
         soup = BeautifulSoup(r.text, "lxml")
 
+        article = soup.find("article", class_="article-preview")
+        if not article:
+            return ""
+
         parts = []
 
-        # Strapline (lead paragraph)
-        strapline = soup.select_one("div.strapline")
-        if strapline:
-            text = _clean(strapline.get_text())
+        # Excerpt (lead paragraph)
+        excerpt_el = article.find("p")
+        if excerpt_el:
+            text = _clean(excerpt_el.get_text())
             if text:
                 parts.append(text)
 
-        # Body paragraphs
-        body = soup.select_one("div.body")
-        if body:
-            for p in body.find_all("p"):
-                text = _clean(p.get_text())
-                if text:
-                    parts.append(text)
+        # Body div contains <br>-separated paragraphs
+        body_div = article.find("div", class_="has-text-grey")
+        if body_div:
+            for p in body_div.find_all("p"):
+                text = _clean(p.get_text("\n"))
+                # Split on <br> newlines into individual paragraphs
+                for chunk in text.split("\n"):
+                    chunk = chunk.strip()
+                    if chunk:
+                        parts.append(chunk)
 
         return "\n\n".join(parts)
     except requests.RequestException:
@@ -273,6 +200,75 @@ def build_summary(target_date: str, sections_data: dict) -> str:
             author_ref = f" *{a['author']}*" if a.get("author") else ""
             lines.append(f"- **{a['title']}**{page_ref}{author_ref} — {summary}")
     return "\n".join(lines)
+
+
+def _rss_pubdate(date_str: str) -> str:
+    """Convert YYYY-MM-DD to RFC 2822 date string."""
+    dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    # email.utils.formatdate would require an import; roll it manually
+    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    return (
+        f"{days[dt.weekday()]}, {dt.day:02d} {months[dt.month - 1]}"
+        f" {dt.year} 00:00:00 +0000"
+    )
+
+
+def _xml_safe(text: str) -> str:
+    """Remove characters that are illegal in XML 1.0."""
+    return re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", "", text)
+
+
+def update_rss_feed(articles: list[dict], target_date: str) -> int:
+    """Append new articles to the RSS feed. Returns count of new items added."""
+    existing_guids: set[str] = set()
+    existing_items: list[ET.Element] = []
+
+    if RSS_FEED_PATH.exists():
+        tree = ET.parse(RSS_FEED_PATH)
+        channel = tree.getroot().find("channel")
+        if channel is not None:
+            for item in channel.findall("item"):
+                guid_el = item.find("guid")
+                if guid_el is not None and guid_el.text:
+                    existing_guids.add(guid_el.text)
+                existing_items.append(item)
+
+    new_items: list[ET.Element] = []
+    for a in articles:
+        if not a.get("url") or a["url"] in existing_guids:
+            continue
+        item = ET.Element("item")
+        ET.SubElement(item, "title").text = _xml_safe(a["title"])
+        ET.SubElement(item, "link").text = a["url"]
+        ET.SubElement(item, "guid", isPermaLink="true").text = a["url"]
+        ET.SubElement(item, "pubDate").text = _rss_pubdate(target_date)
+        ET.SubElement(item, "category").text = a["section"]
+        ET.SubElement(item, "description").text = _xml_safe(
+            a.get("body") or a.get("excerpt", "")
+        )
+        if a.get("author"):
+            ET.SubElement(item, "author").text = _xml_safe(a["author"])
+        new_items.append(item)
+        existing_guids.add(a["url"])
+
+    rss = ET.Element("rss", version="2.0")
+    channel = ET.SubElement(rss, "channel")
+    ET.SubElement(channel, "title").text = "Açoriano Oriental — Edição Impressa"
+    ET.SubElement(channel, "link").text = BASE_URL
+    ET.SubElement(channel, "description").text = (
+        "Edição impressa do Açoriano Oriental"
+    )
+    for item in new_items + existing_items:
+        channel.append(item)
+
+    ET.indent(rss, space="  ")
+    with open(RSS_FEED_PATH, "wb") as f:
+        f.write(b'<?xml version="1.0" encoding="UTF-8"?>\n')
+        ET.ElementTree(rss).write(f, encoding="utf-8", xml_declaration=False)
+
+    return len(new_items)
 
 
 def parse_args():
@@ -327,24 +323,17 @@ def main():
             total_articles -= deduped
             print(f"Deduped {deduped} primeira-hora articles (kept {len(sections_data['primeira-hora'])})")
 
-    # Phase 2: Resolve full bodies via /noticia/
-    print("\nBuilding /noticia/ index...")
-    noticia_index = build_noticia_index(session)
-    print(f"  Indexed {len(noticia_index)} /noticia/ URLs")
-
-    matched = 0
+    # Phase 2: Fetch full bodies directly via print edition artigo URLs
+    print("\nFetching full articles...")
     for section, articles in sections_data.items():
         for article in articles:
-            path = _match_article(article["title"], noticia_index)
-            if path:
-                article["url"] = f"{BASE_URL}{path}"
-                body = scrape_article(session, path)
-                if body:
-                    article["body"] = body
-                    matched += 1
+            artigo_url = f"{BASE_URL}/pagina/edicao-impressa/{target_date}?seccao={section}&artigo={article['id']}"
+            article["url"] = artigo_url
+            body = scrape_article(session, target_date, section, article["id"])
+            if body:
+                article["body"] = body
 
-    match_pct = (matched / total_articles * 100) if total_articles else 0
-    print(f"\nPhase 2 done: {matched}/{total_articles} matched ({match_pct:.0f}%)")
+    print(f"Phase 2 done: fetched {total_articles} articles")
 
     # Write output
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -365,6 +354,9 @@ def main():
     with open(md_path, "w") as f:
         f.write(build_summary(target_date, sections_data))
     print(f"Wrote {md_path}")
+
+    added = update_rss_feed(all_articles, target_date)
+    print(f"RSS: added {added} new items → {RSS_FEED_PATH}")
 
 
 if __name__ == "__main__":

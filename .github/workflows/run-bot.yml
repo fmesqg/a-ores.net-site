@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['bot/**', 'pyproject.toml']
+    paths: ['bot/**', 'scrapers/**', 'pyproject.toml']
   pull_request:
-    paths: ['bot/**', 'pyproject.toml']
+    paths: ['bot/**', 'scrapers/**', 'pyproject.toml']
 
 permissions:
   contents: write
@@ -25,9 +25,9 @@ jobs:
         run: |
           pip install poetry
           poetry install --with dev
-      - run: poetry run ruff check bot/
-      - run: poetry run black --check bot/
-      - run: poetry run pytest bot/tests/ -v
+      - run: poetry run ruff check bot/ scrapers/
+      - run: poetry run black --check bot/ scrapers/
+      - run: poetry run pytest bot/tests/ scrapers/tests/ -v
 
   daily-bot-run:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
@@ -50,6 +50,14 @@ jobs:
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL || 'claude-haiku-4-5-20251001' }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - name: Run AO scraper
+        run: |
+          printf '[credentials]\nemail = %s\npassword = %s\n' \
+            "$AO_EMAIL" "$AO_PASSWORD" > .ao_config
+          poetry run python3 scrapers/ao.py --date "$(date +%Y-%m-%d)"
+        env:
+          AO_EMAIL: ${{ secrets.AO_EMAIL }}
+          AO_PASSWORD: ${{ secrets.AO_PASSWORD }}
       - name: Configure git
         run: |
           git config --global user.name "fmesqg-auto"
