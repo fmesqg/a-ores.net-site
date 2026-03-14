@@ -13,3 +13,6 @@ venv
 .mypy_cache/
 .ruff_cache/
 .pytest_cache/
+.ao_config
+!.ao_config.example
+scrapers/output/

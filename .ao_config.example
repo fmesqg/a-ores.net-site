@@ -1,0 +1,8 @@
+[credentials]
+email = your@email.com
+password = yourpassword
+
+[sections]
+# comma-separated; leave empty or remove lines to include all
+# include = primeira-hora, politica, economia, local, sociedade, 9-ilhas, desporto, cultura, pontos-de-vista, da-europa
+# exclude = pontos-de-vista, desporto
