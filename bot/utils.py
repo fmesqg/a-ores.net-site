@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import re
 
@@ -11,6 +12,8 @@ from .constants import (
 )
 from .export import Export
 from .state import State
+
+logger = logging.getLogger(__name__)
 
 
 def find_monies(text: str):
@@ -154,7 +157,7 @@ def markdown_base(entries):
     )
 
     def md(entry):
-        md = f"* [{entry['objectBriefDescription'].strip()}]({url_entry_base}{entry['id']})\n"  # noqa: 501
+        md = f"* [{entry['objectBriefDescription'].strip()}]({url_entry_base}{entry['id']})\n"  # noqa: E501
         md += f"  * Preço contratual: {entry['initialContractualPrice']}\n"
         md += f"  * Adjudicante: {entry['contracting']}\n"
         md += f"  * Adjudicatário: {entry['contracted']}\n"
@@ -183,9 +186,7 @@ def markdown_portal(delta):
     return portal
 
 
-def _rotate_state_file(
-    path: str, keep: int = 30, threshold: int = 60
-):
+def _rotate_state_file(path: str, keep: int = 30, threshold: int = 60):
     with open(path) as f:
         lines = f.readlines()
     if len(lines) > threshold:
@@ -207,7 +208,7 @@ def append_state(state: State):
         try:
             f.write("\n" + json.dumps(state_json))
         except (TypeError, ValueError) as exc:
-            print(exc)
+            logger.error("State write failed: %s", exc)
             f.write(
                 "\n"
                 + json.dumps({"datetime": NOW_DATETIME, "error": str(exc)})
@@ -217,7 +218,7 @@ def append_state(state: State):
 
 def get_prev_state() -> State:
     path = os.path.join(os.path.dirname(__file__), STATE_FILE)
-    with open(path, mode="r") as f:
+    with open(path) as f:
         last = ""
         for line in f.readlines():
             last = line

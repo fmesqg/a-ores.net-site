@@ -1,5 +1,6 @@
 import asyncio
 import functools
+import logging
 from datetime import date, datetime, timedelta
 
 import aiohttp
@@ -9,11 +10,6 @@ from bs4 import BeautifulSoup
 from bot.classes import FetchError, WebData
 from bot.state import State
 from bot.utils import compute_delta_ids
-
-
-def _safe_split_last(text: str, sep: str, default: str = "") -> str:
-    parts = text.split(sep)
-    return parts[-1] if parts else default
 
 from .record import (
     AudiARep,
@@ -27,6 +23,14 @@ from .record import (
     Requerimento,
     Voto,
 )
+
+logger = logging.getLogger(__name__)
+
+
+def _safe_split_last(text: str, sep: str, default: str = "") -> str:
+    parts = text.split(sep)
+    return parts[-1] if parts else default
+
 
 _ALRA_INTERNALS: dict[Record, dict] = {
     Voto: {
@@ -87,6 +91,7 @@ def catch_requests_exceptions(func):
         try:
             return func(*args, **kwargs)
         except requests.exceptions.RequestException as e:
+            logger.warning("%s failed: %s", func.__name__, e)
             return FetchError(e)
 
     return wrapper
@@ -100,7 +105,7 @@ def fetch_alra_ids(record_type, url=None):
     num_pesquisa_registo = internals["internal_db_int"]
     if not url:
         url = internals["url_all_items"]
-    response = requests.get(url, verify=False, timeout=120)
+    response = requests.get(url, timeout=120)
     soup = BeautifulSoup(response.content, "html.parser")
     a_tags = soup.find_all("a")
     return [
@@ -215,10 +220,7 @@ def _fetch_data_dict_by_id(record_type: type, id: int):
         internals.get("url_prefixed_to_document"),
     )
     url = f"http://base.alra.pt:82/4DACTION/w_pesquisa_registo/{internal_db_int}/{id}"
-    response = requests.get(
-        url,
-        verify=False,
-    )
+    response = requests.get(url, timeout=120)
 
     soup = BeautifulSoup(response.content, "html.parser")
     data_dict = {"id": id, "url": url}
@@ -281,7 +283,7 @@ def fetch_contratos_RAA(from_pub_date: str, to_pub_date: str = None):
         "Sec-GPC": "1",
         "Priority": "u=0",
     }
-    query = f"tipo=0&tipocontrato=0&desdedatapublicacao={from_pub_date}&atedatapublicacao={to_pub_date}&pais=187&distrito=20&concelho=0"  # PT, RAA, 'todos' = 187, 20, 0 # noqa: 501
+    query = f"tipo=0&tipocontrato=0&desdedatapublicacao={from_pub_date}&atedatapublicacao={to_pub_date}&pais=187&distrito=20&concelho=0"  # PT, RAA, 'todos' = 187, 20, 0 # noqa: E501
     data = {
         "type": "search_contratos",
         "version": "129.0",
