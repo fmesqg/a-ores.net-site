@@ -275,6 +275,8 @@ def update_rss_feed(articles: list[dict], target_date: str) -> int:
     for a in articles:
         if not a.get("url") or a["url"] in existing_guids:
             continue
+        if not (a.get("body") or a.get("excerpt")):
+            continue
         item = ET.Element("item")
         ET.SubElement(item, "title").text = _xml_safe(a["title"])
         ET.SubElement(item, "guid", isPermaLink="false").text = a["url"]
