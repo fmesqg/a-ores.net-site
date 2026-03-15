@@ -1,0 +1,57 @@
+{
+  "joraa": [],
+  "base": [
+    {
+      "id": 14100998,
+      "title": "Empreitada de abastecimento de água aos caminhos agrícolas das Canada da Praia e Trichais, POA da Bacia Leiteira do Paul – Ilha Terceira",
+      "price": "115.671,98 €",
+      "buyer": "IROA, S. A.",
+      "seller": "TRANSJET - CONSTRUÇÕES E TRANSPORTES, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "11-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14100998"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9122,
+        "title": "Gestão do Serviço de Hemodiálise e esclarecimentos sobre futura utilização do Hospital Modular",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "10/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9122"
+      },
+      {
+        "id": 9124,
+        "title": "Governo ainda não nomeou Conselho de Administração da Unidade de Saúde de Ilha de São Jorge",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Isabel Teixeira PS, ...",
+        "date": "11/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9124"
+      },
+      {
+        "id": 9126,
+        "title": "Como pode o Governo Regional desconhecer a inexistência de um aparelho de Raio-X no Aeroporto de São Jorge?",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Isabel Teixeira PS, ...",
+        "date": "12/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9126"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-03-14"
+}
