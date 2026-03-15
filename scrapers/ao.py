@@ -26,18 +26,7 @@ CONFIG_PATH = Path(__file__).parent.parent / ".ao_config"
 OUTPUT_DIR = Path(__file__).parent / "output"
 RSS_FEED_PATH = Path(__file__).parent.parent / "docs" / "rss" / "ao.xml"
 
-ALL_SECTIONS = [
-    "primeira-hora",
-    "politica",
-    "economia",
-    "local",
-    "sociedade",
-    "9-ilhas",
-    "desporto",
-    "cultura",
-    "pontos-de-vista",
-    "da-europa",
-]
+DEFAULT_EXCLUDE = ["desporto"]
 
 
 def load_config():
@@ -47,19 +36,33 @@ def load_config():
     password = cfg["credentials"]["password"]
 
     include = []
-    exclude = []
+    exclude = list(DEFAULT_EXCLUDE)
     if cfg.has_section("sections"):
         raw_inc = cfg.get("sections", "include", fallback="")
         raw_exc = cfg.get("sections", "exclude", fallback="")
         if raw_inc.strip():
             include = [s.strip() for s in raw_inc.split(",") if s.strip()]
         if raw_exc.strip():
-            exclude = [s.strip() for s in raw_exc.split(",") if s.strip()]
+            extra = [s.strip() for s in raw_exc.split(",") if s.strip()]
+            exclude = list(dict.fromkeys(exclude + extra))
 
-    if not include:
-        include = list(ALL_SECTIONS)
-    sections = [s for s in include if s not in exclude]
-    return email, password, sections
+    return email, password, include, exclude
+
+
+def discover_sections(session: requests.Session, target_date: str) -> list[str]:
+    """Discover available sections from the edition index page."""
+    url = f"{BASE_URL}/pagina/edicao-impressa/{target_date}"
+    r = session.get(url)
+    soup = BeautifulSoup(r.text, "lxml")
+    seen = set()
+    sections = []
+    for a in soup.find_all("a", href=True):
+        qs = parse_qs(urlparse(a["href"]).query)
+        slug = qs.get("seccao", [None])[0]
+        if slug and slug not in seen:
+            seen.add(slug)
+            sections.append(slug)
+    return sections
 
 
 def login(session: requests.Session, email: str, password: str):
@@ -320,7 +323,7 @@ def main():
     args = parse_args()
     target_date = args.date or (date.today() - timedelta(days=1)).isoformat()
 
-    email, password, sections = load_config()
+    email, password, include, exclude = load_config()
     session = requests.Session()
     session.headers.update(
         {
@@ -330,6 +333,14 @@ def main():
 
     print("Logging in...")
     login(session, email, password)
+
+    print("Discovering sections...")
+    discovered = discover_sections(session, target_date)
+    if include:
+        sections = [s for s in include if s not in exclude]
+    else:
+        sections = [s for s in discovered if s not in exclude]
+    print(f"  Sections: {sections}")
 
     # Phase 1: Print edition structure
     sections_data = {}
