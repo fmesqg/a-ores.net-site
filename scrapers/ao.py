@@ -49,7 +49,9 @@ def load_config():
     return email, password, include, exclude
 
 
-def discover_sections(session: requests.Session, target_date: str) -> list[str]:
+def discover_sections(
+    session: requests.Session, target_date: str
+) -> list[str]:
     """Discover available sections from the edition index page."""
     url = f"{BASE_URL}/pagina/edicao-impressa/{target_date}"
     r = session.get(url)
