@@ -1,0 +1,35 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9128,
+        "title": "Apoios do Estatuto do Jogador Açoriano aos clubes açorianos em competições federadas",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Russell Sousa PS, ...",
+        "date": "12/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9128"
+      },
+      {
+        "id": 9129,
+        "title": "Fim do apoio da \"Palavra Açores\" a clubes e entidades desportivas",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9129"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-03-15"
+}
