@@ -1,0 +1,24 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9140,
+        "title": "Variante à Vila do Porto: exigência de transparência, cumprimento contratual e garantia de segurança para os marienses",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Joana Pombo Tavares PS, ...",
+        "date": "18/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9140"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-03-21"
+}
