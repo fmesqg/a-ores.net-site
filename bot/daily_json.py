@@ -85,9 +85,30 @@ def _alra_section(alra_data: dict) -> dict:
 
 def _portal_section(portal_data: dict) -> dict:
     return {
-        k: sorted(v) if isinstance(v, (set, list)) else list(v)
+        k: sorted(v) if isinstance(v, set | list) else list(v)
         for k, v in portal_data.items()
     }
+
+
+def _fix_c1(v):
+    """Recursively decode C1 control bytes (0x80–0x9F) as Windows-1252."""
+    if isinstance(v, str):
+        out = []
+        for c in v:
+            if "\x80" <= c <= "\x9f":
+                decoded = bytes([ord(c)]).decode(
+                    "windows-1252", errors="ignore"
+                )
+                if decoded:
+                    out.append(decoded)
+            else:
+                out.append(c)
+        return "".join(out)
+    if isinstance(v, list):
+        return [_fix_c1(x) for x in v]
+    if isinstance(v, dict):
+        return {k: _fix_c1(val) for k, val in v.items()}
+    return v
 
 
 def _write_json(day_str: str, data: dict):
@@ -103,7 +124,7 @@ def _write_json(day_str: str, data: dict):
 
     data["date"] = day_str
     with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(_fix_c1(data), f, ensure_ascii=False, indent=2)
 
 
 def write_daily_json(web_data: WebData):
