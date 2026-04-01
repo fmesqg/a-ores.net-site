@@ -23,7 +23,7 @@ python3 scrapers/ao.py --date 2026-03-13    # requires .ao_config
 python3 scrapers/rtp.py --date 2026-03-13   # no auth needed
 
 # Run tests (network-dependent)
-poetry run pytest bot/tests/
+poetry run pytest bot/tests/ scrapers/tests/
 
 # Format code
 poetry run black .
@@ -78,6 +78,7 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 - Requires login. Credentials in `.ao_config` (repo root, gitignored). Template: `.ao_config.example`.
 - Config can filter sections via `include`/`exclude`; defaults to all when empty.
 - Title-to-URL matching uses slugification with exact/substring/partial strategies (~60-80% match rate).
+- RSS feed (`docs/rss/ao.xml`) excludes articles with no body or excerpt.
 
 **`scrapers/rtp.py`** — RTP Açores via WordPress REST API:
 - Single-phase: `GET /wp-json/wp/v2/posts/` with date filtering and `_embed`.
@@ -90,12 +91,16 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 - AO: string IDs, `section` (slug), has `page`/`author` fields
 - RTP: integer IDs, `category` (display name), no `page`/`author`
 
+**`bot/tgbot.py`** — Interactive Telegram bot (not part of the daily pipeline):
+- Handles on-demand slash commands: `/ao`, `/al`, `/jo`, `/base`.
+- Runs as a separate long-lived process, not invoked by `bot/__main__.py`.
+
 ## Key Details
 
 - **State file:** `bot/state.jsonl` is an append-only ledger (~12 MB, committed). Each line is one bot run's full state. Delta computation depends on the last entry.
 - **CI/CD:** `.github/workflows/run-bot.yml` runs daily at 00:00 UTC, commits as `fmesqg-auto` if changes exist. Passes `ANTHROPIC_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` as env vars for the summary step.
 - **Telegram summary:** `summarize.py` sends one daily message to a Telegram channel. Currently covers the 4 government sources only (not news scrapers). Model configurable via `ANTHROPIC_MODEL` env var (default: `claude-haiku-4-5-20251001`).
-- **Code style:** black (line-length 79), isort (black profile), Python >=3.11.
+- **Code style:** black (line-length 79), isort (black profile), Python >=3.11. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.
 - **Tests:** `pytest bot/tests/` runs offline by default. Network-dependent tests are marked `@pytest.mark.network` and skipped unless opted in with `-m network`.
 - **Content language:** Portuguese (Azores region).
 - **RSS feeds:** Existing RSS/Jekyll output must not be affected by summary changes. The Telegram summary is a separate output channel.
