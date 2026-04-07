@@ -1,0 +1,280 @@
+{
+  "joraa": [
+    {
+      "id": "12ba829e-6395-4ec2-8803-11f63f1b5435",
+      "summary": "Apoio financeiro - Associação de Paralisia Cerebral de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 263/2026 de 6 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 65",
+      "total_value": 3300.1,
+      "url": "https://jo.azores.gov.pt/#/ato/12ba829e-6395-4ec2-8803-11f63f1b5435"
+    },
+    {
+      "id": "3d2d31d5-adaa-4fdc-81b5-9e1080b5c46d",
+      "summary": "Apoio financeiro - Associação de Promoção de Emprego Apoiado - Aurora Social.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 264/2026 de 6 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 65",
+      "total_value": 6330.42,
+      "url": "https://jo.azores.gov.pt/#/ato/3d2d31d5-adaa-4fdc-81b5-9e1080b5c46d"
+    },
+    {
+      "id": "d816ad3b-4faf-4a9a-82ff-87d59249606d",
+      "summary": "Apoio financeiro -  Instituto da Segurança Social dos Açores, IPRA.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 262/2026 de 6 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 65",
+      "total_value": 998340.0,
+      "url": "https://jo.azores.gov.pt/#/ato/d816ad3b-4faf-4a9a-82ff-87d59249606d"
+    },
+    {
+      "id": "d05eabc0-f567-47bc-ac62-d2a9f0335dcf",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Vila da Praia da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 266/2026 de 6 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 65",
+      "total_value": 16288.58,
+      "url": "https://jo.azores.gov.pt/#/ato/d05eabc0-f567-47bc-ac62-d2a9f0335dcf"
+    },
+    {
+      "id": "44dc7284-eeca-4de6-88ee-1d4fe52e6da7",
+      "summary": "Apoio financeiro - Centro Social e Paroquial das Furnas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 265/2026 de 6 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 65",
+      "total_value": 42483.56,
+      "url": "https://jo.azores.gov.pt/#/ato/44dc7284-eeca-4de6-88ee-1d4fe52e6da7"
+    },
+    {
+      "id": "a40048d8-c679-4247-aa7c-62755ed702d4",
+      "summary": "Abono para falhas - ES Domingos Rebelo.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 700/2026 de 6 de abril de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 65",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/a40048d8-c679-4247-aa7c-62755ed702d4"
+    },
+    {
+      "id": "0f3197b3-225d-4851-82e4-ba824149d6c7",
+      "summary": "5ª Revisão do Contrato de Cooperação – Valor Investimento, n.º 120/2020 - ADI – Associação de Desenvolvimento Intergeracional.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 72/2026 de 6 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 65",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/0f3197b3-225d-4851-82e4-ba824149d6c7"
+    },
+    {
+      "id": "f251d789-6230-4e39-855d-c233c2eba6a3",
+      "summary": "4.ª Revisão do  Contrato de Cooperação – Valor Investimento n.º 040/2022 - Santa Casa da Misericórdia de Santo António da Lagoa.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 71/2026 de 6 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 65",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/f251d789-6230-4e39-855d-c233c2eba6a3"
+    }
+  ],
+  "base": [
+    {
+      "id": 14446904,
+      "title": "AQUISIÇÃO DE MICROSCÓPIO DE NEUROCIRURGIA E DE SISTEMA DE NEURONAVEGAÇÃO, POR LOTES, NO ÂMBITO DO PLANO DE RECUPERAÇÃO E RESILIÊNCIA, COMPONENTE 1, INVESTIMENTO RE-C01-I11-RAA – MODERNIZAÇÃO E REQUALI...",
+      "price": "832.000,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "AçorMedica Consumo Clinico Hospitalar Lda",
+      "procedure": "Concurso público",
+      "signing_date": "01-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14446904"
+    },
+    {
+      "id": 14443095,
+      "title": "MANUTENÇÃO DA REDE DE MONITORIZAÇÃO DO CICLO HIDROLÓGICO DA REGIÃO AUTÓNOMA DOS AÇORES",
+      "price": "230.040,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "GLOBALEDA - TELECOMUNICAÇÕES E SISTEMAS DE INFORMAÇÃO S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "02-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14443095"
+    },
+    {
+      "id": 14446819,
+      "title": "Aquisição de Serviços de Seguros 2026/2027",
+      "price": "149.999,07 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "MDS, Corretor de Seguros SA",
+      "procedure": "Concurso público",
+      "signing_date": "30-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14446819"
+    },
+    {
+      "id": 14445238,
+      "title": "Obra nº 10/26 - Aquisição de contadores de água fria DN15mm e DN20mm - Ajuste Direto",
+      "price": "67.891,50 €",
+      "buyer": "Serviços Municipalizados de Água e Saneamento de Ponta Delgada",
+      "seller": "AÇORLUX",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14445238"
+    },
+    {
+      "id": 14443828,
+      "title": "Aquisição de um sistema completo para a medição e análise de traços dos gases Radão e Torão (detetores sólidos)",
+      "price": "59.000,00 €",
+      "buyer": "CIVISA - Centro de Informação e Vigilância Sismovulcânica dos Açores",
+      "seller": "RADOSYS ATLANTIC LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14443828"
+    },
+    {
+      "id": 14445294,
+      "title": "Promoção de Atuação de Artistas nas Festas em Honra de Santo António - Santa Cruz - Lagoa",
+      "price": "43.300,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "EnjoySucess - Promoção de Eventos Unipessoal, Lda. ",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14445294"
+    },
+    {
+      "id": 14443280,
+      "title": "MANUTENÇÃO DA REDE DE MONITORIZAÇÃO DO CICLO HIDROLÓGICO DA REGIÃO AUTÓNOMA DOS AÇORES",
+      "price": "37.421,02 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "GLOBALEDA - TELECOMUNICAÇÕES E SISTEMAS DE INFORMAÇÃO S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "06-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14443280"
+    },
+    {
+      "id": 14443932,
+      "title": "Promoção de Atuação de Artistas no Festival Lagoa Bom Porto - Rosário - Lagoa",
+      "price": "36.420,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "EnjoySucess - Promoção de Eventos Unipessoal, Lda. ",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14443932"
+    },
+    {
+      "id": 14446730,
+      "title": "Aquisição de serviços manutenção de espaços verdes no Observatório José Agostinho (Angra Heroísmo) e Observatório Afonso Chaves (Ponta Delgada)",
+      "price": "9.480,00 €",
+      "buyer": "Instituto Português do Mar e da Atmosfera, IP",
+      "seller": "Inventemoções, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "31-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14446730"
+    },
+    {
+      "id": 14447132,
+      "title": "3026001482 - AMN - Aquisição de Serviço de Manutenção da Viatura AP-40-99 DMA",
+      "price": "9.227,57 €",
+      "buyer": "Ministério da Defesa Nacional - Marinha",
+      "seller": "RBM COMERCIO E SERVIÇOS AUTO, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14447132"
+    },
+    {
+      "id": 14444999,
+      "title": "Aquisição de modelos anatómicos e equipamentos didáticos de simulação",
+      "price": "5.337,31 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "bcmedical lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14444999"
+    },
+    {
+      "id": 14441779,
+      "title": "Aquisição de um Carregador Elétrico",
+      "price": "2.357,98 €",
+      "buyer": "Unidade de Saúde da Ilha Graciosa",
+      "seller": "Bilobite Engenharia, Lda.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "02-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14441779"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9170,
+        "title": "Rentabilidade das rotas da Azores Airlines para o exterior dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "06/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9170"
+      },
+      {
+        "id": 9183,
+        "title": "Situação da abertura da estrada Raminho-Serreta, na ilha Terceira",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "10/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9183"
+      },
+      {
+        "id": 9161,
+        "title": "Funcionamento do serviço postal na ilha de São Jorge",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Luís Silveira CDS-PP, ...",
+        "date": "27/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9161"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23168,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 10/04/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23168"
+      },
+      {
+        "id": 23169,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - Luís Silveira destaca importância estratégica da Transversal em São Jorge e reclama rigor na execução da obra",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23169"
+      },
+      {
+        "id": 23170,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Atraso na reconstrução do Centro de Resíduos da Graciosa com impacto ambiental e na qualidade de vida, diz PS/Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23170"
+      },
+      {
+        "id": 23171,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Governo esconde a verdade sobre a SATA e trata o Parlamento como um mero adereço",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23171"
+      },
+      {
+        "id": 23166,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA promove debate sobre o estado da agricultura na Região",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23166"
+      },
+      {
+        "id": 23167,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores saúda reabertura do trilho do Salto do Cabrito",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23167"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-04-06"
+}
