@@ -1,0 +1,57 @@
+{
+  "joraa": [],
+  "base": [
+    {
+      "id": 14496914,
+      "title": "Aquisição de serviços e materiais de publicidade para promoção de eventos para promoção dos Eventos do Coliseu Micaelense, E.M., S.A.,",
+      "price": "74.500,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "Accional - Acções, Promoções e Representações, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14496914"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9186,
+        "title": "Informações sobre o trabalho desenvolvido pela Comissão Técnica de Revisão do Estatuto das Vias Terrestres na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "12/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9186"
+      },
+      {
+        "id": 9187,
+        "title": "Corte de árvores na variante a Capelas II",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "12/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9187"
+      },
+      {
+        "id": 9189,
+        "title": "Acordos de cooperação com as freguesias ao abrigo do regime jurídico de cooperação técnica e financeira",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "12/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9189"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-04-12"
+}
