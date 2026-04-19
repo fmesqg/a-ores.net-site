@@ -1,0 +1,43 @@
+{
+  "joraa": [],
+  "base": [
+    {
+      "id": 14557237,
+      "title": "AQUISIÇÃO DE SEQUENCIADOR GENÉTICO DE DNA",
+      "price": "260.950,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Effer Saúde, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "14-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14557237"
+    },
+    {
+      "id": 14556954,
+      "title": "Locação de Autocarros, incluindo motorista, no âmbito do Programa de Apoio Escolar, do Apoio aos Eventos e Atividades Promovidas pelo Município",
+      "price": "84.993,00 €",
+      "buyer": "Municipio da  Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14556954"
+    },
+    {
+      "id": 14556962,
+      "title": "Locação de Autocarros, incluindo motorista, no âmbito do Programa de Apoio Escolar, do Apoio aos Eventos e Atividades Promovidas pelo Município",
+      "price": "3.495,00 €",
+      "buyer": "Municipio da  Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14556962"
+    }
+  ],
+  "alra": {
+    "error": "HTTPConnectionPool(host='base.alra.pt', port=82): Max retries exceeded with url: /4DACTION/w_recebe_pesquisa_audi/1%20method=?wformvalida2.x=15&wformvalida2.y=21&w_legis=XIII&w_numero_audi=&w_numero_audi_fim=&w_entrada_audi=&w_entrada_audi_fim=&w_d_entrada_audi=&w_d_entrada_audi_fim=&w_processo_audi=&w_titulo_audi=&POPcomissao=&w_assunto_audi=&w_d_envio_audi=&w_d_envio_audi_fim=&w_d_governo_audi=&w_d_governo_audi_fim=&w_d_apre1_audi=&w_d_apre1_audi_fim=&w_d_limite_audi=&w_d_limite_audi_fim=&w_d_resp_audi=&w_d_resp_audi_fim=&w_d_prorro_audi=&w_d_prorro_audi_fim=&w_d_envioar_audi=&w_d_envioar_audi_fim=&w_d_apre2_audi=&w_d_apre2_audi_fim= (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7fc336f65be0>, 'Connection to base.alra.pt timed out. (connect timeout=120)'))"
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-04-18"
+}
