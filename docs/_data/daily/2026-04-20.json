@@ -1,0 +1,511 @@
+{
+  "joraa": [
+    {
+      "id": "4bcbd7ed-4ad4-4abf-8803-ccd5988cac21",
+      "summary": "Contrato-Programa de  Desenvolvimento Desportivo - ATMIP - Regional Nacional.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 140/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 57434.0,
+      "url": "https://jo.azores.gov.pt/#/ato/4bcbd7ed-4ad4-4abf-8803-ccd5988cac21"
+    },
+    {
+      "id": "1fc334c5-8610-4e82-b39c-1caadf7f5ec1",
+      "summary": "Retifica o Extrato de Despacho n.º 91/2026, de 9 de abril, publicado no Jornal Oficial II Série, n.º 68, de 9 de abril de 2026.",
+      "text_excerpt": "",
+      "human_id": "Declaração de Retificação n.º 24/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional da Habitação",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 472.01,
+      "url": "https://jo.azores.gov.pt/#/ato/1fc334c5-8610-4e82-b39c-1caadf7f5ec1"
+    },
+    {
+      "id": "0ce40af2-4328-4211-8ad7-27a9d7a55683",
+      "summary": "Aquisição da prestação de serviços de manutenção de 14 elevadores instalados no Hospital Divino Espírito Santo de Ponta Delgada, EPER (HDES).",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 204/2026 de 20 de abril de 2026",
+      "entity": "Hospital do Divino Espírito Santo de Ponta Delgada, E.P.E.R.",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/0ce40af2-4328-4211-8ad7-27a9d7a55683"
+    },
+    {
+      "id": "fd9dee15-e883-4c39-bbed-a3f64408b7c0",
+      "summary": "Autorização para condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 829/2026 de 20 de abril de 2026",
+      "entity": "Unidade de Saúde da Ilha Terceira",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/fd9dee15-e883-4c39-bbed-a3f64408b7c0"
+    },
+    {
+      "id": "50a0dfe9-e0ef-458c-9fec-ee89510a0d3f",
+      "summary": "2.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - FCC - SF.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 33/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 41464.0,
+      "url": "https://jo.azores.gov.pt/#/ato/50a0dfe9-e0ef-458c-9fec-ee89510a0d3f"
+    },
+    {
+      "id": "229a2336-16a7-420a-8692-f1619dbf8d82",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo - Associação Regional dos Açores de Montanhismo e Escalada.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 141/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 5321.0,
+      "url": "https://jo.azores.gov.pt/#/ato/229a2336-16a7-420a-8692-f1619dbf8d82"
+    },
+    {
+      "id": "a578cc16-4869-4acc-8a79-b80edc76858e",
+      "summary": "Confirma a exceção, para a realização de obras com finalidade exclusivamente agrícola, construção de uma suinicultura, no prédio rústico incluído na Reserva Agrícola Regional, sito à Canada da Parada, freguesia da Feteira, concelho de Angra do Heroísmo.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 830/2026 de 20 de abril de 2026",
+      "entity": "IROA, S.A.",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/a578cc16-4869-4acc-8a79-b80edc76858e"
+    },
+    {
+      "id": "e118b2d5-732d-4664-90e1-c06e7910ff34",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo - ATA - “Centro Regional de Treino dos Açores”.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 142/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 44228.0,
+      "url": "https://jo.azores.gov.pt/#/ato/e118b2d5-732d-4664-90e1-c06e7910ff34"
+    },
+    {
+      "id": "40899395-0d3a-439d-be4d-394bd7e8429b",
+      "summary": "Fornecimento de Consumíveis para Sistema de Neuromonitorização, com colocação gratuita de equipamento, em regime de contra consumo, no Bloco Operatório do Hospital Divino Espírito Santo de Ponta Delgada, EPER.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 205/2026 de 20 de abril de 2026",
+      "entity": "Hospital do Divino Espírito Santo de Ponta Delgada, E.P.E.R.",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/40899395-0d3a-439d-be4d-394bd7e8429b"
+    },
+    {
+      "id": "fb285ae7-b4a3-486e-ad9f-a6d6a3ff4a15",
+      "summary": "Fornecimento de reagentes e outros consumíveis para técnicas de imunohistoquímica, com colocação gratuita de equipamento, em regime de contra consumo, no Laboratório de Anatomia Patológica do Hospital Divino Espírito Santo de Ponta Delgada, EPER.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 206/2026 de 20 de abril de 2026",
+      "entity": "Hospital do Divino Espírito Santo de Ponta Delgada, E.P.E.R.",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/fb285ae7-b4a3-486e-ad9f-a6d6a3ff4a15"
+    },
+    {
+      "id": "7bca5b2d-9682-465d-aff5-8181999eab62",
+      "summary": "3.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - GDCSJ - SM.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 36/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 41831.0,
+      "url": "https://jo.azores.gov.pt/#/ato/7bca5b2d-9682-465d-aff5-8181999eab62"
+    },
+    {
+      "id": "7fac67cd-2cd2-4308-8a62-33871884f8e4",
+      "summary": "3.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - CUS - Campeonato Nacional da Liga Feminina de Basquetebol.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 35/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 217405.0,
+      "url": "https://jo.azores.gov.pt/#/ato/7fac67cd-2cd2-4308-8a62-33871884f8e4"
+    },
+    {
+      "id": "d05dd50a-7f5f-4973-8b62-cc30603b93b0",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo - ATMISM - Regional Nacional.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 143/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 61339.0,
+      "url": "https://jo.azores.gov.pt/#/ato/d05dd50a-7f5f-4973-8b62-cc30603b93b0"
+    },
+    {
+      "id": "64039a4e-1fdc-4232-b46b-c66d39d462a0",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo - ATMIT - Regional Nacional.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 144/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 58606.0,
+      "url": "https://jo.azores.gov.pt/#/ato/64039a4e-1fdc-4232-b46b-c66d39d462a0"
+    },
+    {
+      "id": "48fa4848-1401-424a-be75-831ae971809e",
+      "summary": "Extrato de contrato programa - Atividades de treino e competição no âmbito dos escalões de formação e Coordenador da Formação.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 33/2026 de 20 de abril de 2026",
+      "entity": "Serviço de Desporto da Ilha das Flores",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/48fa4848-1401-424a-be75-831ae971809e"
+    },
+    {
+      "id": "168010c2-1934-4fad-b5a7-79e882a7f234",
+      "summary": "Registo definitivo por averbamento da alteração parcial dos estatutos da UMAR Açores - Associação para a Igualdade e Direitos das Mulheres.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 116/2026 de 20 de abril de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/168010c2-1934-4fad-b5a7-79e882a7f234"
+    },
+    {
+      "id": "a7907e81-6f97-4d91-85cc-27d0850e13b9",
+      "summary": "Acordo de cooperação financeira - Unidade de Saúde da Ilha Terceira.",
+      "text_excerpt": "",
+      "human_id": "Acordo n.º 25/2026 de 20 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 240000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/a7907e81-6f97-4d91-85cc-27d0850e13b9"
+    },
+    {
+      "id": "679f301c-e5f5-424d-be4d-05f9e612fa85",
+      "summary": "Revisão do Contrato de Cooperação - Valor Investimento n.º 033/2025.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 82/2026 de 20 de abril de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/679f301c-e5f5-424d-be4d-05f9e612fa85"
+    },
+    {
+      "id": "6baf3977-7f76-4cb7-a98a-bae4899da1c9",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo de Cooperação - Município de Santa Cruz da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 145/2026 de 20 de abril de 2026",
+      "entity": "Município de Santa Cruz da Graciosa",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/6baf3977-7f76-4cb7-a98a-bae4899da1c9"
+    },
+    {
+      "id": "7f14b36c-b223-4321-a281-b4109421d41e",
+      "summary": "Primeira alteração à Portaria n.º 118/2023, de 29 de dezembro, que aprova o regulamento do programa «Amigo da Natureza».",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 45/2026 de 20 de abril de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial I Série - Número 51",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/7f14b36c-b223-4321-a281-b4109421d41e"
+    },
+    {
+      "id": "9c002fa9-8b92-45f1-a3ef-7640938de6fc",
+      "summary": "Proposta do Regulamento Municipal de Acesso e Atribuição de Habitação em Regime de Renda Apoiada e em Regime de Renda Reduzida.",
+      "text_excerpt": "",
+      "human_id": "Aviso n.º 42/2026 de 20 de abril de 2026",
+      "entity": "Município de Lagoa",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/9c002fa9-8b92-45f1-a3ef-7640938de6fc"
+    },
+    {
+      "id": "edf985a6-ab16-43da-a87b-f00afa739e09",
+      "summary": "2.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - FCC - SM.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 34/2026 de 20 de abril de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 51960.0,
+      "url": "https://jo.azores.gov.pt/#/ato/edf985a6-ab16-43da-a87b-f00afa739e09"
+    },
+    {
+      "id": "7bb2e840-59a5-40dd-b4eb-5fcd08f6a1e1",
+      "summary": "Subdelegação de poderes.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 831/2026 de 20 de abril de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial II Série - Número 75",
+      "total_value": 104897.9,
+      "url": "https://jo.azores.gov.pt/#/ato/7bb2e840-59a5-40dd-b4eb-5fcd08f6a1e1"
+    }
+  ],
+  "base": [
+    {
+      "id": 14561749,
+      "title": "Aquisição de dois equipamentos de balanceamento de carga.",
+      "price": "147.749,88 €",
+      "buyer": "Direção Regional das Comunicações e da Transição Digital",
+      "seller": "Warpcom Services, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "20-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14561749"
+    },
+    {
+      "id": 14563738,
+      "title": "Serviços Médicos no Serviço de Urgência do Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Tamara Muntean",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14563738"
+    },
+    {
+      "id": 14563932,
+      "title": "Serviços Médicos de Ortopedia ao Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "ORTOSCAL - Prestação de serviços médicos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-01-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14563932"
+    },
+    {
+      "id": 14570090,
+      "title": "Serviços Médicos de Otorrinolaringologia ao Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Clínica de Otorrinolaringologia Dr. Pedro Escada, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14570090"
+    },
+    {
+      "id": 14569798,
+      "title": "Serviços Médicos de Ortopedia ao Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "COTAN, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14569798"
+    },
+    {
+      "id": 14568255,
+      "title": "Serviços Médicos de Ortopedia ao Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Antero Moisés dos Santos Ventura",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14568255"
+    },
+    {
+      "id": 14562987,
+      "title": "O contrato tem por objeto a produção e fornecimento integral de serviços de alugueres, som/luz/audiovisuais, comida & bebida e decoração para evento na Estufa do Jardim Botânico José do Canto (18/04/2...",
+      "price": "72.919,53 €",
+      "buyer": "Associação Visit Azores",
+      "seller": "Sílvia Vasconcelos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14562987"
+    },
+    {
+      "id": 14563885,
+      "title": "Aquisição de Equipamentos de Telemonitorização, no âmbito do PRR, Componente 1, Investimento RE-C01-i08-RAA – Hospital Digital – Região Autónoma dos Açores",
+      "price": "64.100,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Hope Care, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14563885"
+    },
+    {
+      "id": 14569821,
+      "title": "Aquisição de Condutas de Drenagem para Instalação no Largo do Bispo, freguesia da Matriz, Horta",
+      "price": "61.160,92 €",
+      "buyer": "Município da Horta",
+      "seller": "Delfim Vargas - Fabrico de Caixilharia, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14569821"
+    },
+    {
+      "id": 14560453,
+      "title": "Fornecimento de refeições escolares 2025/2026",
+      "price": "53.890,20 €",
+      "buyer": "Escola Secundária Ribeira Grande",
+      "seller": "Rescater - Prestação de Serviços, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "01-12-2025",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14560453"
+    },
+    {
+      "id": 14562671,
+      "title": "Aquisição de viatura no âmbito do Acordo Quadro para Aquisição de\nVeículos Ligeiros de Passageiros, Veículos Comerciais, Veículos Tipo 4x4\ne Unidade Móvel de Saúde elétrica- CNCM– AQ/115/2025, promovi...",
+      "price": "34.480,00 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "Toyota Caetano Portugal, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14562671"
+    },
+    {
+      "id": 14567094,
+      "title": "Ajuste direto para aquisição de serviços de manutenção corretiva e adaptativa da das Plataformas de Rastreio ao projeto Hospital Digital",
+      "price": "28.800,00 €",
+      "buyer": "Centro de Oncologia dos Açores Professor Doutor José Conde",
+      "seller": "DATAPOINT – SISTEMAS DE INFORMAÇÃO, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14567094"
+    },
+    {
+      "id": 14563006,
+      "title": "Aquisição de serviços de manutenção e suporte técnico do Sistema de Gestão de Reembolsos",
+      "price": "25.000,00 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "DATAPOINT - SISTEMAS DE INFORMAÇÃO, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14563006"
+    },
+    {
+      "id": 14563118,
+      "title": "Aquisição de Material de Electromedicina e Emergência Médica",
+      "price": "23.086,90 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Dinarte Dâmaso, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14563118"
+    },
+    {
+      "id": 14561197,
+      "title": "Fornecimento de fotocópias para o ano 2026",
+      "price": "11.664,64 €",
+      "buyer": "Escola Secundária Manuel de Arriaga, Horta",
+      "seller": "JHN Jose Henrique Nunes Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14561197"
+    },
+    {
+      "id": 14567512,
+      "title": "Prestação de Serviços de Limpeza no Centro Cultural de Santa Cruz das\nFlores e Edifício Startup Flores – Incubadora de Empresas",
+      "price": "4.347,00 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "Flora Maria Pedro",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14567512"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 23268,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside ao evento de (re) apresentação da obra \"Roteiro de Arquitetura dos Açores: um itinerário crítico\" (vol.II e III), no Arquipélago - Centro de Artes Contemporâneas, ilha de São Miguel",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23268"
+      },
+      {
+        "id": 23269,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Vice-Presidente da Assembleia, Deputado João Vasco Costa, preside em representação de Sua Excelência o Presidente da Assembleia, à segunda Sessão das Conversas da Autonomia: Memória e Futuro, no Auditório do Museu Francisco de Lacerda, na Calheta, ilha de São Jorge.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23269"
+      },
+      {
+        "id": 23270,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside às Comemorações do 33º Aniversário do Comando Operacional dos Açores, na ilha de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23270"
+      },
+      {
+        "id": 23271,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia assiste à Sessão Solene Comemorativa do 52.º Aniversário do 25 de Abril de 1974, na Sala das Sessões da Assembleia da República, em Lisboa.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23271"
+      },
+      {
+        "id": 23273,
+        "title": "Comissão Grupo de Trabalho para analisar, avaliar e propor melhorias no âmbito do dispositivo de segurança interna na RAA. - Convocatória (Dia 30/04/2026, pelas 16:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23273"
+      },
+      {
+        "id": 23275,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Chega Açores congratula nomeação de Susana Goulart Costa para Representante da República",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23275"
+      },
+      {
+        "id": 23276,
+        "title": "Nota de Imprensa da Representação do BE - Bloco critica presidente do Governo e Chega por defenderem que os EUA podem fazer o quiserem nas Lajes \"desde que paguem\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23276"
+      },
+      {
+        "id": 23277,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores rejeita leitura falsa e demagógica do CDS sobre apoio aos agricultores de São Jorge",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23277"
+      },
+      {
+        "id": 23278,
+        "title": "Nota de Imprensa da Presidência da ALRAA - \"A Autonomia não se faz apenas de diplomas e decisões políticas, faz-se de pessoas, de cultura e de identidade\", reconhece o Presidente Luís Garcia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23278"
+      },
+      {
+        "id": 23279,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Sector da Pesca não vai pagar a incompetência do Governo Regional",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23279"
+      },
+      {
+        "id": 23280,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores questiona decisões do Governo no HDES face a estudo que aponta duplicação de custos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23280"
+      },
+      {
+        "id": 23281,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS-PP Açores exige reforço urgente das acessibilidades aéreas e requalificação do aeroporto de São Jorge",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23281"
+      },
+      {
+        "id": 23282,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia recebe, em audiência de apresentação de cumprimentos, o Chefe de Estado-Maior -General das Forças Armadas, General João Cartaxo Alves, na delegação da Assembleia em Ponta Delgada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23282"
+      },
+      {
+        "id": 23283,
+        "title": "Nota Informativa da Presidência da ALRAA - Assembleia Legislativa aprova resolução que atribui 25 Insígnias Honoríficas Açorianas em 2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23283"
+      },
+      {
+        "id": 23284,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/A apela à transparência no financiamento público da tauromaquia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23284"
+      },
+      {
+        "id": 23285,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia visita o Centro de Qualificação dos Açores, IPRA, nas Capelas, ilha de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23285"
+      },
+      {
+        "id": 23286,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Presidente da Assembleia Legislativa recebe Chefe do Estado-Maior-General das Forças Armadas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23286"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3795,
+        "title": "Conta de Gerência da Assembleia Legislativa da Região Autónoma dos Açores referente ao ano de 2025",
+        "author": "Mesa",
+        "topic": "Organização e funcionamento da Assembleia Legislativa",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3795"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3402,
+        "title": "Assegura a majoração das prestações e dos apoios sociais atribuídos pela segurança social aos residentes nas Regiões Autónomas dos Açores e da Madeira, alterando a Lei n.º 4/2007, de 16 de janeiro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3402"
+      },
+      {
+        "id": 3403,
+        "title": "Fixa a margem de lucro da distribuição e comercialização do pescado nacional sujeito a venda em lota",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3403"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-04-20"
+}
