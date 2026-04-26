@@ -1,0 +1,75 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9201,
+        "title": "Plano de Ação para a prevenção de risco de derrames de hidrocarbonetos",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "24/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9201"
+      },
+      {
+        "id": 9204,
+        "title": "Fundação Luso-Americana para o Desenvolvimento - FLAD",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9204"
+      },
+      {
+        "id": 9211,
+        "title": "Solicitação do documento remetido ao Governo da República no âmbito do PTRR",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Sandra Costa Dias PS, ...",
+        "date": "25/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9211"
+      },
+      {
+        "id": 9213,
+        "title": "Comparação dos apoios públicos ao desporto na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9213"
+      },
+      {
+        "id": 9215,
+        "title": "Funcionamento, produção e custos dos observatórios regionais dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9215"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23316,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Revisão da Lei de Finanças Regionais e Mobilidade marcam encontro entre Luís Garcia e António José Seguro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23316"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-04-25"
+}
