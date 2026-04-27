@@ -1,0 +1,46 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9217,
+        "title": "Esquadra da PSP na ilha do Corvo",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9217"
+      },
+      {
+        "id": 9219,
+        "title": "Transporte público de passageiros em São Miguel - situação contratual e risco de interrupção do serviço",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Marlene Damião PS, ...",
+        "date": "27/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9219"
+      },
+      {
+        "id": 9220,
+        "title": "Centro Académico Clínico e articulação entre o Governo Regional e a Universidade dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Sandra Costa Dias PS, ...",
+        "date": "27/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9220"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-04-26"
+}
