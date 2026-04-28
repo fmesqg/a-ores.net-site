@@ -1,0 +1,883 @@
+{
+  "joraa": [
+    {
+      "id": "c9478a12-906b-4f4a-95ee-e1344b3917dd",
+      "summary": "Apoio financeiro - Confraria do Queijo São Jorge.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 328/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 11000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/c9478a12-906b-4f4a-95ee-e1344b3917dd"
+    },
+    {
+      "id": "7087dfc5-fcfa-4182-898f-df318d9627fc",
+      "summary": "Transferência de verba - Fundo Escolar da EBS da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 900/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 2303.5,
+      "url": "https://jo.azores.gov.pt/#/ato/7087dfc5-fcfa-4182-898f-df318d9627fc"
+    },
+    {
+      "id": "2eaa2be4-1296-4b65-b4b0-dd7dca38885a",
+      "summary": "Autoriza o requerente a realizar uma operação de correção populacional da espécie Erica azorica (Urze) e Picconia azorica (Pau-branco), com recurso a arranque ou corte, na sua propriedade de \"Cabeço do Brasil e Bandeiras Rua de Baixo\", sita à freguesia de Bandeiras, concelho de Madalena.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 928/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/2eaa2be4-1296-4b65-b4b0-dd7dca38885a"
+    },
+    {
+      "id": "6d71bb4a-e985-410f-9b07-45a74d8a0376",
+      "summary": "Contrato-Programa celebrado com a Casa do Povo da Ribeirinha.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 153/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 1500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/6d71bb4a-e985-410f-9b07-45a74d8a0376"
+    },
+    {
+      "id": "39abdd37-0a11-4488-a51e-e6a987c32fbc",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 911/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 1290.71,
+      "url": "https://jo.azores.gov.pt/#/ato/39abdd37-0a11-4488-a51e-e6a987c32fbc"
+    },
+    {
+      "id": "cbefc9fb-8141-41ef-98e5-9ffd264d5cd2",
+      "summary": "Extrato de Contratos-Programa de desenvolvimento do programa de Atividades de Treino e Competição, no âmbito dos escalões de formação (ATCEF) e coordenadores de formação (CF) das modalidades bianuais.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 37/2026 de 27 de abril de 2026",
+      "entity": "Serviço de Desporto da Ilha do Faial",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/cbefc9fb-8141-41ef-98e5-9ffd264d5cd2"
+    },
+    {
+      "id": "64d5863f-867b-4684-9df5-e2e0a13bd14d",
+      "summary": "Retifica o Contrato-Programa n.º 131/2026, publicado no Jornal Oficial, II Série, n.º 70, de 13 de abril de 2026.",
+      "text_excerpt": "",
+      "human_id": "Declaração de Retificação n.º 27/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 7734.52,
+      "url": "https://jo.azores.gov.pt/#/ato/64d5863f-867b-4684-9df5-e2e0a13bd14d"
+    },
+    {
+      "id": "0d69fc9a-6da5-4124-a1cb-83dbb397e726",
+      "summary": "Transferência de verba - Fundo Escolar da EBS das Flores.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 901/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 17004.67,
+      "url": "https://jo.azores.gov.pt/#/ato/0d69fc9a-6da5-4124-a1cb-83dbb397e726"
+    },
+    {
+      "id": "dbe832d3-0aa4-477b-8b3a-994103081318",
+      "summary": "Contrato-Programa celebrado com a Sociedade Cultural e Recreativa da Ribeira do Meio.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 156/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 3000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/dbe832d3-0aa4-477b-8b3a-994103081318"
+    },
+    {
+      "id": "33552958-d089-4905-b770-16d3def67f9a",
+      "summary": "Transferência de verba - Fundo Escolar da EBS das Flores.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 902/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 318.0,
+      "url": "https://jo.azores.gov.pt/#/ato/33552958-d089-4905-b770-16d3def67f9a"
+    },
+    {
+      "id": "ad57d0bd-0241-45b4-8459-e2a9714be9d2",
+      "summary": "Contrato-Programa celebrado com a Casa do Povo de São João.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 155/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 7917.25,
+      "url": "https://jo.azores.gov.pt/#/ato/ad57d0bd-0241-45b4-8459-e2a9714be9d2"
+    },
+    {
+      "id": "95df8035-e882-4aed-ae34-2e6f2e2f30c8",
+      "summary": "Contrato-Programa celebrado com a Sociedade Filarmónica Recreio Ribeirense.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 160/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 4050.0,
+      "url": "https://jo.azores.gov.pt/#/ato/95df8035-e882-4aed-ae34-2e6f2e2f30c8"
+    },
+    {
+      "id": "f1d0bcb0-9121-42db-a7e3-8b0c08439b68",
+      "summary": "Transferência de verba - Fundo Escolar da EBS de Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 906/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 2094.97,
+      "url": "https://jo.azores.gov.pt/#/ato/f1d0bcb0-9121-42db-a7e3-8b0c08439b68"
+    },
+    {
+      "id": "688a1c5a-4c62-4946-8df1-a6f6e0360031",
+      "summary": "Apoio Financeiro - Associação Regional de Criadores de Toiros de Tourada à Corda.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 327/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 126000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/688a1c5a-4c62-4946-8df1-a6f6e0360031"
+    },
+    {
+      "id": "1c0d7cfe-82bc-4692-a7d5-9c2adf3b5b0a",
+      "summary": "Correção material dos cursos de água na freguesia da Urzelina.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 926/2026 de 27 de abril de 2026",
+      "entity": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/1c0d7cfe-82bc-4692-a7d5-9c2adf3b5b0a"
+    },
+    {
+      "id": "80a20617-0590-4dec-ae71-63be18cf4f94",
+      "summary": "Subdelegação de poderes.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 927/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 63817.92,
+      "url": "https://jo.azores.gov.pt/#/ato/80a20617-0590-4dec-ae71-63be18cf4f94"
+    },
+    {
+      "id": "ba916156-6840-464b-ad37-ed1a1c1a6822",
+      "summary": "Contrato-Programa celebrado com a Sociedade Filarmónica União Ribeirense.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 161/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 7550.0,
+      "url": "https://jo.azores.gov.pt/#/ato/ba916156-6840-464b-ad37-ed1a1c1a6822"
+    },
+    {
+      "id": "b229cecd-3b65-4684-89e8-a87eb729f8c3",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 919/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 16898.57,
+      "url": "https://jo.azores.gov.pt/#/ato/b229cecd-3b65-4684-89e8-a87eb729f8c3"
+    },
+    {
+      "id": "16002177-a7ad-4084-913a-49cc1a81464c",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 909/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 1891.69,
+      "url": "https://jo.azores.gov.pt/#/ato/16002177-a7ad-4084-913a-49cc1a81464c"
+    },
+    {
+      "id": "ca78aac3-88e4-4423-b0f5-cbc67d1e84b9",
+      "summary": "Contrato-Programa celebrado com a Associação de Criadores de Charolês de Portugal.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 149/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 3150.0,
+      "url": "https://jo.azores.gov.pt/#/ato/ca78aac3-88e4-4423-b0f5-cbc67d1e84b9"
+    },
+    {
+      "id": "a3c022f3-caa1-41d2-94c3-64ce0ea3477b",
+      "summary": "Extrato de Contratos-Programa de desenvolvimento do programa de Atividades de Treino e Competição, no âmbito dos escalões de formação (ATCEF) das modalidades bianuais.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 36/2026 de 27 de abril de 2026",
+      "entity": "Serviço de Desporto da Ilha do Faial",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/a3c022f3-caa1-41d2-94c3-64ce0ea3477b"
+    },
+    {
+      "id": "ce9c3221-dc9e-4c3d-bf5e-2fbddd5877b5",
+      "summary": "Autoriza o requerente a realizar uma operação de correção populacional das espécies Laurus azorica (Louro) e Erica azorica (Urze), com recurso a arranque ou corte, na sua propriedade de “Casinha do Correia / Outeiros”, sita à freguesia e concelho de Lajes do Pico.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 929/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/ce9c3221-dc9e-4c3d-bf5e-2fbddd5877b5"
+    },
+    {
+      "id": "da4b86b4-498e-4988-bab5-04cc5ecaa0b7",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 924/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 1784.17,
+      "url": "https://jo.azores.gov.pt/#/ato/da4b86b4-498e-4988-bab5-04cc5ecaa0b7"
+    },
+    {
+      "id": "0863ea4b-a7b6-41fa-accb-2b2a000a5df9",
+      "summary": "Contrato-Programa celebrado com a Casa do Povo das Ribeiras.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 154/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 8346.89,
+      "url": "https://jo.azores.gov.pt/#/ato/0863ea4b-a7b6-41fa-accb-2b2a000a5df9"
+    },
+    {
+      "id": "75e13f06-2d70-4aa7-a2bb-e4fab61b6dc3",
+      "summary": "Transferência de verba - Fundo Escolar da EBS Mouzinho da Silveira.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 907/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 619.99,
+      "url": "https://jo.azores.gov.pt/#/ato/75e13f06-2d70-4aa7-a2bb-e4fab61b6dc3"
+    },
+    {
+      "id": "7b96f420-b3e3-486a-b52c-66cd18d52175",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 916/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 167269.49,
+      "url": "https://jo.azores.gov.pt/#/ato/7b96f420-b3e3-486a-b52c-66cd18d52175"
+    },
+    {
+      "id": "4f7f7ebf-2727-4934-b3e3-aa8270b6335f",
+      "summary": "Contrato-Programa celebrado entre a Secretaria Regional da Juventude, Habitação e Emprego e a Associação Novo Ser.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 38/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 6000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/4f7f7ebf-2727-4934-b3e3-aa8270b6335f"
+    },
+    {
+      "id": "bba5e98b-74a5-4631-abdf-6df490e510bc",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 922/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 4830.0,
+      "url": "https://jo.azores.gov.pt/#/ato/bba5e98b-74a5-4631-abdf-6df490e510bc"
+    },
+    {
+      "id": "83518541-4481-459c-a923-9335bae2e037",
+      "summary": "Designação dos representantes na Comissão de gestão integrada de pragas roedores.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 891/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/83518541-4481-459c-a923-9335bae2e037"
+    },
+    {
+      "id": "b8603476-4d82-431f-9958-e9c3042dd6fc",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 920/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 1126.41,
+      "url": "https://jo.azores.gov.pt/#/ato/b8603476-4d82-431f-9958-e9c3042dd6fc"
+    },
+    {
+      "id": "771b7e8e-d3bb-4654-bc18-5d19cb5acf1f",
+      "summary": "Atualiza a tabela de medicina física e reabilitação.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 892/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/771b7e8e-d3bb-4654-bc18-5d19cb5acf1f"
+    },
+    {
+      "id": "5a587f39-54c2-49b2-aa8e-a2502afb5ce2",
+      "summary": "Transferência de verba - Fundo Escolar da EBS da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 899/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 966.0,
+      "url": "https://jo.azores.gov.pt/#/ato/5a587f39-54c2-49b2-aa8e-a2502afb5ce2"
+    },
+    {
+      "id": "96c89d9c-d9a6-4660-a2a6-a0e30d6b0789",
+      "summary": "Transferência de verba - Fundo Escolar da EBS de Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 904/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 2897.97,
+      "url": "https://jo.azores.gov.pt/#/ato/96c89d9c-d9a6-4660-a2a6-a0e30d6b0789"
+    },
+    {
+      "id": "e0e8a7fa-7fb8-4e6c-b925-cf0513cebecd",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 925/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 1458.28,
+      "url": "https://jo.azores.gov.pt/#/ato/e0e8a7fa-7fb8-4e6c-b925-cf0513cebecd"
+    },
+    {
+      "id": "32781d66-1ea9-414c-8637-90ea76b440e5",
+      "summary": "Contrato-Programa celebrado com a Associação Musical e Cultural da Piedade.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 150/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 3217.5,
+      "url": "https://jo.azores.gov.pt/#/ato/32781d66-1ea9-414c-8637-90ea76b440e5"
+    },
+    {
+      "id": "ef1abc10-3111-407c-a41f-68b60b10e515",
+      "summary": "Contrato-Programa celebrado com a Sociedade Cultural e Recreativa da Ribeira do Meio.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 157/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 30000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/ef1abc10-3111-407c-a41f-68b60b10e515"
+    },
+    {
+      "id": "798763c0-5ca4-40ca-8a3e-259cac4c517c",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 915/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 718438.36,
+      "url": "https://jo.azores.gov.pt/#/ato/798763c0-5ca4-40ca-8a3e-259cac4c517c"
+    },
+    {
+      "id": "b9e3bff9-22d2-4085-9a05-a52d5b3940b3",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 921/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 23880.58,
+      "url": "https://jo.azores.gov.pt/#/ato/b9e3bff9-22d2-4085-9a05-a52d5b3940b3"
+    },
+    {
+      "id": "908d26c6-f111-4134-b6cf-774ded5745ff",
+      "summary": "Transferência de verba - Fundo Escolar da EBI de Angra do Heroísmo.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 896/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 1706.6,
+      "url": "https://jo.azores.gov.pt/#/ato/908d26c6-f111-4134-b6cf-774ded5745ff"
+    },
+    {
+      "id": "a940edf8-fded-48bd-9a9f-e7e09b4590cc",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 918/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 202772.73,
+      "url": "https://jo.azores.gov.pt/#/ato/a940edf8-fded-48bd-9a9f-e7e09b4590cc"
+    },
+    {
+      "id": "0e1c5509-940a-4a60-8000-80d36fcf7fcb",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 893/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 319349.53,
+      "url": "https://jo.azores.gov.pt/#/ato/0e1c5509-940a-4a60-8000-80d36fcf7fcb"
+    },
+    {
+      "id": "3252101b-b0f9-4148-a764-e39a917354ed",
+      "summary": "Contrato-Programa celebrado com a Associação Ponta da Ilha Equestre.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 151/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 1268.73,
+      "url": "https://jo.azores.gov.pt/#/ato/3252101b-b0f9-4148-a764-e39a917354ed"
+    },
+    {
+      "id": "6ee8e358-2fcf-4994-86f2-93675f04953b",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 914/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 14430.36,
+      "url": "https://jo.azores.gov.pt/#/ato/6ee8e358-2fcf-4994-86f2-93675f04953b"
+    },
+    {
+      "id": "e4b9e6ff-433c-4b2c-8fbd-fbd9622bbd9f",
+      "summary": "Aquisição de serviços de recolha de resíduos de embalagens primárias e secundárias urbanas de plástico para reciclagem.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 214/2026 de 27 de abril de 2026",
+      "entity": "Musami - Operações Municipais do Ambiente, EIM, SA",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 174259.8,
+      "url": "https://jo.azores.gov.pt/#/ato/e4b9e6ff-433c-4b2c-8fbd-fbd9622bbd9f"
+    },
+    {
+      "id": "d649d613-cede-469d-8078-84bbee2ae94b",
+      "summary": "Contrato-Programa celebrado com a Casa do Povo da Piedade.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 152/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 6327.93,
+      "url": "https://jo.azores.gov.pt/#/ato/d649d613-cede-469d-8078-84bbee2ae94b"
+    },
+    {
+      "id": "e7c602a6-edb8-45c3-a351-e7663574129c",
+      "summary": "Transferência de verba - Fundo Escolar da EBI da Horta.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 895/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 434.01,
+      "url": "https://jo.azores.gov.pt/#/ato/e7c602a6-edb8-45c3-a351-e7663574129c"
+    },
+    {
+      "id": "49057b83-c43c-457f-8a2b-6b5a60c33ed4",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 912/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 90366.1,
+      "url": "https://jo.azores.gov.pt/#/ato/49057b83-c43c-457f-8a2b-6b5a60c33ed4"
+    },
+    {
+      "id": "00dc65fe-9337-4ece-a93f-7436981816cd",
+      "summary": "Contrato-Programa celebrado com a Sociedade Filarmónica Lira Fraternal Calhetense.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 159/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 3475.0,
+      "url": "https://jo.azores.gov.pt/#/ato/00dc65fe-9337-4ece-a93f-7436981816cd"
+    },
+    {
+      "id": "32519c98-ad7a-4e41-98ba-3b4249990734",
+      "summary": "Apoio financeiro - Associação Cultural dos Enófilos da Ilha Terceira (ACEITE).",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 326/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 4600.0,
+      "url": "https://jo.azores.gov.pt/#/ato/32519c98-ad7a-4e41-98ba-3b4249990734"
+    },
+    {
+      "id": "98756ff8-b3d1-4d85-b2aa-39ed03098a53",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 917/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 10040.13,
+      "url": "https://jo.azores.gov.pt/#/ato/98756ff8-b3d1-4d85-b2aa-39ed03098a53"
+    },
+    {
+      "id": "be6a9986-faaa-483f-9edd-26d0886b84a5",
+      "summary": "Transferência de verba - Fundo Escolar da EBI do Topo.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 897/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 475.91,
+      "url": "https://jo.azores.gov.pt/#/ato/be6a9986-faaa-483f-9edd-26d0886b84a5"
+    },
+    {
+      "id": "28f7d9c7-7b72-4f52-ab83-d7a6ff906ee1",
+      "summary": "Transferência de verba - Fundo Escolar da EBS da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 898/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 51685.41,
+      "url": "https://jo.azores.gov.pt/#/ato/28f7d9c7-7b72-4f52-ab83-d7a6ff906ee1"
+    },
+    {
+      "id": "53796372-cddf-422f-8a62-197b2637c3de",
+      "summary": "Contrato-Programa celebrado com a Sociedade Filarmónica Liberdade Lajense.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 158/2026 de 27 de abril de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 8660.0,
+      "url": "https://jo.azores.gov.pt/#/ato/53796372-cddf-422f-8a62-197b2637c3de"
+    },
+    {
+      "id": "6beb698b-9703-49f6-8540-32cca2f9d0e7",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 913/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 23793305.15,
+      "url": "https://jo.azores.gov.pt/#/ato/6beb698b-9703-49f6-8540-32cca2f9d0e7"
+    },
+    {
+      "id": "896d480b-4a58-446a-ad8a-8e9aa22dce08",
+      "summary": "Transferência de verba - Fundo Escolar da EBS Mouzinho da Silveira.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 908/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 82.19,
+      "url": "https://jo.azores.gov.pt/#/ato/896d480b-4a58-446a-ad8a-8e9aa22dce08"
+    },
+    {
+      "id": "4a519201-33ad-4b3b-a55e-96202e4888ac",
+      "summary": "Transferência de verba - Fundo Escolar da EBS das Flores.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 903/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 688.26,
+      "url": "https://jo.azores.gov.pt/#/ato/4a519201-33ad-4b3b-a55e-96202e4888ac"
+    },
+    {
+      "id": "bb070776-fb77-4ab3-9c0e-959295e0ee73",
+      "summary": "Transferência de verba - Fundo Escolar da EBS de Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 905/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 42294.24,
+      "url": "https://jo.azores.gov.pt/#/ato/bb070776-fb77-4ab3-9c0e-959295e0ee73"
+    },
+    {
+      "id": "58d6b7a9-af17-4ddb-b956-129adb75433e",
+      "summary": "Transferência de verba -  Fundo Escolar da EBS das Velas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 894/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 966.0,
+      "url": "https://jo.azores.gov.pt/#/ato/58d6b7a9-af17-4ddb-b956-129adb75433e"
+    },
+    {
+      "id": "ce778eed-6cb7-4428-9e96-30fc579c662c",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 923/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 8671.73,
+      "url": "https://jo.azores.gov.pt/#/ato/ce778eed-6cb7-4428-9e96-30fc579c662c"
+    },
+    {
+      "id": "09f2a863-fddc-4104-a3da-fba476ec1993",
+      "summary": "Autoriza o requerente a realizar uma operação de correção populacional das espécies Laurus azorica (Louro) e Picconia azorica (Pau-branco), com recurso a arranque ou corte, na sua propriedade denominada de “Canto”, sita à freguesia de Santa Luzia, concelho de São Roque do Pico.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 930/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/09f2a863-fddc-4104-a3da-fba476ec1993"
+    },
+    {
+      "id": "1807a1c7-2101-4ebb-83d1-6fedd07ec53a",
+      "summary": "Transferência de verbas - Fundos Escolares das Unidades Orgânicas indicadas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 910/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 80",
+      "total_value": 53244.92,
+      "url": "https://jo.azores.gov.pt/#/ato/1807a1c7-2101-4ebb-83d1-6fedd07ec53a"
+    },
+    {
+      "id": "180c6515-f35c-4fbb-ba71-b79ddaeabcb4",
+      "summary": "Define o apoio na aquisição de projetos de arquitetura e especialidades para a construção de habitação permanente.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 48-A/2026 de 27 de abril de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial I Série - Número 54, Suplemento",
+      "total_value": 10000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/180c6515-f35c-4fbb-ba71-b79ddaeabcb4"
+    }
+  ],
+  "base": [
+    {
+      "id": 14654560,
+      "title": "Aquisição da Prestação de Serviços de Manutenção, para o triénio de 2026 a 2028, para os Equipamentos da Life Technologies existentes no Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "113.887,94 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "Life Technologies Europe BV",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14654560"
+    },
+    {
+      "id": 14647341,
+      "title": "Aquisição de serviços conceção, desenvolvimento, implementação e manutenção da Plataforma WebGIS – Observatório Digital da Ocupação e Uso do Solo EUNICoast",
+      "price": "100.000,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Olha Infinito Unipessoal Lda.",
+      "procedure": "Contratação excluída II",
+      "signing_date": "24-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14647341"
+    },
+    {
+      "id": 14649619,
+      "title": "Aquisição dos serviços de vigilância e segurança preventiva do parque de estacionamento, do jardim e do edifício da delegação da ALRAA na ilha de São Miguel, sita à Rua José Maria Raposo do Amaral, n....",
+      "price": "93.535,56 €",
+      "buyer": "Assembleia Legislativa da Região Autónoma dos Açores",
+      "seller": "COPS - Companhia Operacional de Segurança, Unipessoal, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "07-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14649619"
+    },
+    {
+      "id": 14661007,
+      "title": "Aquisição  de um sistema de Espectrometria de Absorção Atómica para a análise do teor de elementos principais, secundários e em traço em águas naturais, ou sistema de resolução equivalente, financiada...",
+      "price": "47.350,00 €",
+      "buyer": "Fundação Gaspar Frutuoso, FP",
+      "seller": "UNICAM SISTEMAS ANALITICOS, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14661007"
+    },
+    {
+      "id": 14663125,
+      "title": "Prestação de serviços de assistência técnica ao funcionamento das estações de tratamento de águas residuais dos matadouros da Rede Regional de Abate",
+      "price": "42.480,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "KLINGER Portugal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14663125"
+    },
+    {
+      "id": 14647628,
+      "title": "Prestação de serviços de elaboração do projeto para a construção da ETAR do novo Matadouro de São Jorge.",
+      "price": "30.000,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Alicontrol - Tecnologia e Controlo de Alimentos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14647628"
+    },
+    {
+      "id": 14649257,
+      "title": "SERVIÇOS DE MANUTENÇÃO E SUPORTE DAS PLATAFORMAS E APLICAÇÕES INFORMÁTICAS DA SECRETARIA REGIONAL DO AMBIENTE E AÇÃO CLIMÁTICA",
+      "price": "26.086,50 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "WORKTIM - TECNOLOGIAS DE INFORMAÇÃO UNIPESSOAL, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14649257"
+    },
+    {
+      "id": 14661376,
+      "title": "Aquisição de uma Câmara hiperespectral VNIR, no âmbito do financiamento aprovado com a referência UID/PRR2/00153/2025 através de fundos europeus do PRR inscritos no orçamento da FCT.",
+      "price": "25.500,00 €",
+      "buyer": "Fundação Gaspar Frutuoso, FP",
+      "seller": "MRA INSTRUMENTAÇÃO, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14661376"
+    },
+    {
+      "id": 14647520,
+      "title": "Aquisição de serviços de apoio à implementação do plano de trabalhos da UAc, no âmbito do projeto EUNICoast",
+      "price": "8.994,90 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Dalila Maria Benevides Massa",
+      "procedure": "Contratação excluída II",
+      "signing_date": "20-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14647520"
+    },
+    {
+      "id": 14647411,
+      "title": "Aquisição de uma pintura a acrílico do VI Reitor",
+      "price": "8.000,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Carlos de Amaral Carreiro",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14647411"
+    },
+    {
+      "id": 14653863,
+      "title": "Aquisição de transporte e alojamentos referentes a deslocações em serviço público, do Gabinete de Estratégia, Planeamento e Avaliação Culturais (GEPAC)",
+      "price": "543,92 €",
+      "buyer": "Gabinete de Estratégia, Planeamento e Avaliação Culturais",
+      "seller": "SMILE - VIAGENS E TURISMO, UNIPESSOAL, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "23-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14653863"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9220,
+        "title": "Centro Académico Clínico e articulação entre o Governo Regional e a Universidade dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Sandra Costa Dias PS, ...",
+        "date": "27/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9220"
+      },
+      {
+        "id": 9222,
+        "title": "Equidade no transporte de utentes da Ilha de São Jorge para o Hospital da Horta",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Isabel Teixeira PS, ...",
+        "date": "27/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9222"
+      },
+      {
+        "id": 9234,
+        "title": "Governo esconde informação sobre apoios agrícolas e desrespeita associações, agricultores e o Parlamento",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "02/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9234"
+      },
+      {
+        "id": 9250,
+        "title": "Esclarecimentos sobre a execução do Plano Estratégico da Política Agrícola Comum (PEPAC) nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "10/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9250"
+      },
+      {
+        "id": 9002,
+        "title": "Ausência de nomeação de um Conselho de Administração para a Unidade de Saúde de Ilha de São Jorge está a prejudicar a gestão dos cuidados de saúde",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Isabel Teixeira PS, ...",
+        "date": "27/10/2025",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9002"
+      },
+      {
+        "id": 9124,
+        "title": "Governo ainda não nomeou Conselho de Administração da Unidade de Saúde de Ilha de São Jorge",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Isabel Teixeira PS, ...",
+        "date": "11/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9124"
+      },
+      {
+        "id": 9152,
+        "title": "Governo incapaz de nomear novo Vogal para o Conselho de Administração da Unidade de Saúde de Ilha de Santa Maria",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Joana Pombo Tavares PS, ...",
+        "date": "20/02/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9152"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23317,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores alerta para atrasos que comprometem transição energética e penalizam famílias e empresas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23317"
+      },
+      {
+        "id": 23318,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende igualdade no acesso ao sistema de depósito e reembolso de embalagens de bebidas em todas as ilhas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23318"
+      },
+      {
+        "id": 23319,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Melhorias na exportação de gado vivo dependem de entendimento no transporte marítimo",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23319"
+      },
+      {
+        "id": 23320,
+        "title": "Nota Informativa da Presidência da ALRAA - Exposição \"50 Anos da Autonomia Constitucional dos Açores - uma conquista coletiva\" inaugurada a 30 de abril no Museu do Parlamento",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23320"
+      },
+      {
+        "id": 23321,
+        "title": "Nota de Imprensa da Presidência da ALRAA - \"A Autonomia constrói-se todos os dias. Com decisões e com participação, por isso, participem!\": Luís Garcia apela aos jovens",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23321"
+      },
+      {
+        "id": 23322,
+        "title": "Comissão de Economia - Convocatória (Dia 30/04/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23322"
+      },
+      {
+        "id": 23323,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Negócios tradicionais e autênticos devem ser aposta da economia dos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23323"
+      },
+      {
+        "id": 23324,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Encerramento das Termas da Ferraria ao fim de 16 anos deve-se à inércia e ao desmazelo do Governo Regional, diz PS/Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23324"
+      },
+      {
+        "id": 23325,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Final Regional da VIII Edição do Desafio Kahoot-Cultura Geral dos Açores, na sede da Assembleia.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23325"
+      },
+      {
+        "id": 23326,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Inauguração da Exposição dos 50 anos da Autonomia Constitucional dos Açores - Uma conquista coletiva, no Museu do Parlamento.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23326"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3796,
+        "title": "Pela criação do Complexo Habitacional SINAGA, em Ponta Delgada",
+        "author": "PS",
+        "topic": "Habitação e equipamentos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3796"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-04-27"
+}
