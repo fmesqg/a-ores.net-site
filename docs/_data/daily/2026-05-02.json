@@ -1,0 +1,24 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9229,
+        "title": "Adequação da oferta formativa às necessidades do mercado de trabalho na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "01/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9229"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-05-02"
+}
