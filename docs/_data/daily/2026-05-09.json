@@ -1,0 +1,106 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9247,
+        "title": "Decreto regulamentar de execução do orçamento continua por publicar ao fim de três meses",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Carlos Silva PS, ...",
+        "date": "10/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9247"
+      },
+      {
+        "id": 9258,
+        "title": "Condições de operacionalidade da pista do Aeroporto da Horta",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Inês Sá PS, ...",
+        "date": "21/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9258"
+      },
+      {
+        "id": 9261,
+        "title": "Limitações operacionais no Aeroporto da Horta e exigência de intervenção urgente da ANA/VINCI",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "21/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9261"
+      },
+      {
+        "id": 9265,
+        "title": "Requalificação das valências de infância da Santa Casa da Misericórdia das Velas",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Luís Silveira CDS-PP, ...",
+        "date": "23/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9265"
+      },
+      {
+        "id": 9278,
+        "title": "Nova aerogare da Ilha Graciosa tem falta de conectividade móvel, internet e ausência de funcionamento do bar",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "28/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9278"
+      },
+      {
+        "id": 9215,
+        "title": "Funcionamento, produção e custos dos observatórios regionais dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9215"
+      },
+      {
+        "id": 9217,
+        "title": "Esquadra da PSP na ilha do Corvo",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9217"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23407,
+        "title": "Interpelação ao Governo Regional sobre \"Setor das Pescas na Região Autónoma dos Açores\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23407"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3802,
+        "title": "Terceira alteração ao Decreto Legislativo Regional n.º 22/2023/A, de 15 de junho, que define as regras de contagem do tempo de serviço dos trabalhadores das carreiras de enfermagem para efeitos de progressão na respetiva carreira e de transição para a categoria de enfermeiro especialista",
+        "author": "BE - Bloco de Esquerda",
+        "topic": "Saúde",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3802"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-05-09"
+}
