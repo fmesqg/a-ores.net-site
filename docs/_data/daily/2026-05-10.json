@@ -1,0 +1,77 @@
+{
+  "joraa": [],
+  "base": [
+    {
+      "id": 14807069,
+      "title": "serviços médicos de anestesiologia ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Andrómeda Gloriosa - Serviços de Saúde, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14807069"
+    },
+    {
+      "id": 14807064,
+      "title": "Aquisição e 3 Equipamentos de Saúde Oral – Estação de trabalho completa",
+      "price": "59.505,00 €",
+      "buyer": "Unidade de Saúde da Ilha Terceira",
+      "seller": "UTRADE – IMPORTAÇÃO, EXPORTAÇÃO E COMÉRCIO DE MATERIAL DENTÁRIO, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "15-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14807064"
+    },
+    {
+      "id": 14806816,
+      "title": "Prestação de serviço médico (especialista) para a realização de Juntas Médicas",
+      "price": "13.350,00 €",
+      "buyer": "Unidade de Saúde da Ilha Terceira",
+      "seller": "Maria de Castro Horta Lopes",
+      "procedure": "Concurso público",
+      "signing_date": "15-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14806816"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9239,
+        "title": "Inércia e atraso na reconstrução do Centro de Processamento de Resíduos da Ilha Graciosa",
+        "state_change": {
+          "from": "RESPOSTA TADIA",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "06/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9239"
+      },
+      {
+        "id": 9248,
+        "title": "Reservas quanto ao impacto do despacho n.º 611/2026 na indústria tabaqueira dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "10/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9248"
+      },
+      {
+        "id": 9251,
+        "title": "Proliferação da alga invasora Rugulopteryx okamurae na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Luís Silveira CDS-PP, ...",
+        "date": "10/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9251"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-05-10"
+}
