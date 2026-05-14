@@ -1,0 +1,680 @@
+{
+  "joraa": [
+    {
+      "id": "f7bc6743-dd12-4984-b9a7-4a76d26b3227",
+      "summary": "Apoio financeiro - Clube Independente Atletismo Ilha Azul.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 125/2026 de 13 de maio de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 136.8,
+      "url": "https://jo.azores.gov.pt/#/ato/f7bc6743-dd12-4984-b9a7-4a76d26b3227"
+    },
+    {
+      "id": "9b122b0c-1ad1-44f1-9584-26e38f4d434c",
+      "summary": "Apoio financeiro.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1062/2026 de 13 de maio de 2026",
+      "entity": "Entidade Reguladora dos Serviços de Águas e Resíduos dos Açores",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/9b122b0c-1ad1-44f1-9584-26e38f4d434c"
+    },
+    {
+      "id": "b2b9d5b5-2098-41a9-8a0c-16156e4ccc65",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo - “Pauleta Azores Soccer Cup”.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 185/2026 de 13 de maio de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 349.8,
+      "url": "https://jo.azores.gov.pt/#/ato/b2b9d5b5-2098-41a9-8a0c-16156e4ccc65"
+    },
+    {
+      "id": "aba54af7-e79d-4791-8d61-3050781242d5",
+      "summary": "Apoio financeiro - Lar Luís Soares de Sousa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 380/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 38928.39,
+      "url": "https://jo.azores.gov.pt/#/ato/aba54af7-e79d-4791-8d61-3050781242d5"
+    },
+    {
+      "id": "552ffd94-25a8-416c-8eaa-c3c076934cd1",
+      "summary": "Delegação competências.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1056/2026 de 13 de maio de 2026",
+      "entity": "Direção Regional do Desenvolvimento Rural",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/552ffd94-25a8-416c-8eaa-c3c076934cd1"
+    },
+    {
+      "id": "2d97d757-1b13-4ce8-ab9a-634852c7b1ea",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia de Angra do Heroísmo.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 385/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 448847.74,
+      "url": "https://jo.azores.gov.pt/#/ato/2d97d757-1b13-4ce8-ab9a-634852c7b1ea"
+    },
+    {
+      "id": "e6d4b9a6-72ee-4f67-a952-9d0bdd704832",
+      "summary": "Confirma a exceção, para a realização de obras com finalidade exclusivamente agrícola, construção de um armazém agrícola, no prédio urbano incluído na Reserva Agrícola Regional, prédio sito Entre Lombas, freguesia de Pedro Miguel, concelho da Horta.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1057/2026 de 13 de maio de 2026",
+      "entity": "IROA, S.A.",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/e6d4b9a6-72ee-4f67-a952-9d0bdd704832"
+    },
+    {
+      "id": "0de71803-6841-4f64-8d00-470a10325bd6",
+      "summary": "Apoio financeiro - Clube Karaté - Do - Shotokan de Angra do Heroísmo.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 126/2026 de 13 de maio de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 22.8,
+      "url": "https://jo.azores.gov.pt/#/ato/0de71803-6841-4f64-8d00-470a10325bd6"
+    },
+    {
+      "id": "1ed39ba8-69cd-4f05-9b10-52f669a92ecc",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia do Divino Espírito Santo da Maia.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 389/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 173260.92,
+      "url": "https://jo.azores.gov.pt/#/ato/1ed39ba8-69cd-4f05-9b10-52f669a92ecc"
+    },
+    {
+      "id": "83a7ab77-8a5e-47c6-9c63-93841257a8e6",
+      "summary": "Autorização para condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1055/2026 de 13 de maio de 2026",
+      "entity": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/83a7ab77-8a5e-47c6-9c63-93841257a8e6"
+    },
+    {
+      "id": "5a432087-62d1-4bf5-87c4-e989fe1a6da0",
+      "summary": "Obra n.º 11/21 - 11ª Fase - Infraestruturas de Saneamento Básico nas ruas do Egito, de São João de Deus, Senhora da Rosa e no Largo da Cerveja - Fajã de Baixo.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 234/2026 de 13 de maio de 2026",
+      "entity": "Serviços Municipalizados de Água e Saneamento ",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 1907465.24,
+      "url": "https://jo.azores.gov.pt/#/ato/5a432087-62d1-4bf5-87c4-e989fe1a6da0"
+    },
+    {
+      "id": "b2ec9fd8-6dc4-437c-a20a-18e553470656",
+      "summary": "Confirma a exceção, para a realização de obras com finalidade exclusivamente agrícola, construção de um armazém para arrumo de máquinas agrícolas, no prédio rústico incluído na Reserva Agrícola Regional, sito à Canada da Fita, freguesia de Santa Cruz, concelho de Lagoa.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1058/2026 de 13 de maio de 2026",
+      "entity": "IROA, S.A.",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/b2ec9fd8-6dc4-437c-a20a-18e553470656"
+    },
+    {
+      "id": "28a535c6-8734-4055-89da-b46ce9ccc8eb",
+      "summary": "Autorização para condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1061/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/28a535c6-8734-4055-89da-b46ce9ccc8eb"
+    },
+    {
+      "id": "054b7d5b-3e76-4385-8a8f-b7e727fa3e51",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia de Angra do Heroísmo.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 384/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 273603.24,
+      "url": "https://jo.azores.gov.pt/#/ato/054b7d5b-3e76-4385-8a8f-b7e727fa3e51"
+    },
+    {
+      "id": "64b25116-a8d0-4986-9309-0c404ec68bf7",
+      "summary": "Aprova a delimitação de unidade de execução, localizada na Rua Eduíno Jesus, freguesia de Arrifes, concelho de Ponta Delgada.",
+      "text_excerpt": "",
+      "human_id": "Edital n.º 7/2026 de 13 de maio de 2026",
+      "entity": "Município de Ponta Delgada",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/64b25116-a8d0-4986-9309-0c404ec68bf7"
+    },
+    {
+      "id": "aa8cc74f-bc2a-4c66-999a-c710cdd9b70f",
+      "summary": "Apoios financeiros – Municípios – Conselhos de Ilha.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 379/2026 de 13 de maio de 2026",
+      "entity": "Direção Regional da Cooperação com o Poder Local",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 1670.79,
+      "url": "https://jo.azores.gov.pt/#/ato/aa8cc74f-bc2a-4c66-999a-c710cdd9b70f"
+    },
+    {
+      "id": "16363c11-f8eb-44e9-aa08-c3c9a5c63786",
+      "summary": "Contrato Programa de Desenvolvimento Desportivo - GDC - Associação.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 186/2026 de 13 de maio de 2026",
+      "entity": "Município de Ponta Delgada",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 50000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/16363c11-f8eb-44e9-aa08-c3c9a5c63786"
+    },
+    {
+      "id": "841b83a0-f777-44d9-834a-5abe1469dcf7",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia de São Roque do Pico.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 388/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 5292.0,
+      "url": "https://jo.azores.gov.pt/#/ato/841b83a0-f777-44d9-834a-5abe1469dcf7"
+    },
+    {
+      "id": "888bf3da-68df-48db-9dd9-540ac11631c7",
+      "summary": "Extrato de Contrato-Programa do projeto Escolinhas do Desporto - Ano Escolar 2025/2026.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 43/2026 de 13 de maio de 2026",
+      "entity": "Serviço de Desporto da Ilha do Faial",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/888bf3da-68df-48db-9dd9-540ac11631c7"
+    },
+    {
+      "id": "8ebf0715-5b59-463d-8156-bb6e9fb85802",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Vila da Praia da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 382/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 762.62,
+      "url": "https://jo.azores.gov.pt/#/ato/8ebf0715-5b59-463d-8156-bb6e9fb85802"
+    },
+    {
+      "id": "178e0e4e-60cf-4973-95c6-449a9d3aa8f1",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia das Lajes das Flores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 383/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 84472.3,
+      "url": "https://jo.azores.gov.pt/#/ato/178e0e4e-60cf-4973-95c6-449a9d3aa8f1"
+    },
+    {
+      "id": "b3a68ab9-618c-48d2-bed3-adb5e0dce81a",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia de Santo António da Lagoa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 386/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 7882.23,
+      "url": "https://jo.azores.gov.pt/#/ato/b3a68ab9-618c-48d2-bed3-adb5e0dce81a"
+    },
+    {
+      "id": "6c748f1e-4386-46db-b0c3-386668e4ffda",
+      "summary": "Empreitada de beneficiação da cobertura do Centro de Saúde da Povoação.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 232/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional do Turismo, Mobilidade e Infraestruturas",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/6c748f1e-4386-46db-b0c3-386668e4ffda"
+    },
+    {
+      "id": "46a5a8ce-03ad-4052-b424-fdbe30d1010d",
+      "summary": "Transferências de remuneração de eleitos locais das freguesias.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1052/2026 de 13 de maio de 2026",
+      "entity": "Direção Regional da Cooperação com o Poder Local",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/46a5a8ce-03ad-4052-b424-fdbe30d1010d"
+    },
+    {
+      "id": "1b9b804a-516d-4d15-ba3c-6848cf408ca3",
+      "summary": "Acordo de cooperação financeira entre a Secretaria Regional da Saúde e Segurança Social e Associação dos Amigos da Pediatria da Ilha Terceira.",
+      "text_excerpt": "",
+      "human_id": "Acordo n.º 33/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 2277.4,
+      "url": "https://jo.azores.gov.pt/#/ato/1b9b804a-516d-4d15-ba3c-6848cf408ca3"
+    },
+    {
+      "id": "a52003fb-5bd7-4fcb-b7a6-874bda7ec9f1",
+      "summary": "Contrato de Cooperação – Valor Eventual n.º 004/2026 - Associação de Paralisia Cerebral de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 90/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 1783.8,
+      "url": "https://jo.azores.gov.pt/#/ato/a52003fb-5bd7-4fcb-b7a6-874bda7ec9f1"
+    },
+    {
+      "id": "84621ce2-d913-4541-90ec-8164700ec774",
+      "summary": "Aquisição de Serviços Maritimos de Tripulação e Gestão de Tripulação para Lancha de Pilotos nos Portos da Praia da Vitória e Angra do Heroísmo.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 237/2026 de 13 de maio de 2026",
+      "entity": "Portos dos Açores, S.A.",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/84621ce2-d913-4541-90ec-8164700ec774"
+    },
+    {
+      "id": "6098123e-39cb-4902-8137-c724fbdb3886",
+      "summary": "Confirma a exceção, para a realização de obras com finalidade exclusivamente agrícola, construção de um parque de alimentação e silo, no prédio rústico incluído na Reserva Agrícola Regional, sito ao Charco da Madeira, freguesia da Fajã de Cima, concelho de Ponta Delgada.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1060/2026 de 13 de maio de 2026",
+      "entity": "IROA, S.A.",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/6098123e-39cb-4902-8137-c724fbdb3886"
+    },
+    {
+      "id": "7e7c4c53-6808-4fe4-b9bf-1c7977eaee97",
+      "summary": "Apoio financeiro - PRR.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1054/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 222457.05,
+      "url": "https://jo.azores.gov.pt/#/ato/7e7c4c53-6808-4fe4-b9bf-1c7977eaee97"
+    },
+    {
+      "id": "e5587fed-fc22-4912-9587-7d52cd6fb8ae",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Madalena do Pico.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 381/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 720.94,
+      "url": "https://jo.azores.gov.pt/#/ato/e5587fed-fc22-4912-9587-7d52cd6fb8ae"
+    },
+    {
+      "id": "658fe848-da17-4c9b-bdb8-173b3798a605",
+      "summary": "Aquisição de bens e serviços diversos, por lotes, para o Serviço Municipal de Recolha de Resíduos Urbanos.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 235/2026 de 13 de maio de 2026",
+      "entity": "Município de São Roque do Pico",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/658fe848-da17-4c9b-bdb8-173b3798a605"
+    },
+    {
+      "id": "5af96240-088b-4cb0-88ee-9377aba7fa8f",
+      "summary": "Aquisição de cavaletes e berços para embarcações, para o Porto da Horta, Ilha do Faial e Porto de Ponta Delgada, Ilha de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 236/2026 de 13 de maio de 2026",
+      "entity": "Portos dos Açores, S.A.",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5af96240-088b-4cb0-88ee-9377aba7fa8f"
+    },
+    {
+      "id": "37c63a57-53af-4289-b2e2-5a40f5afd52b",
+      "summary": "Prestação de Serviços de Seguro de Saúde Grupo à Portos dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 238/2026 de 13 de maio de 2026",
+      "entity": "Portos dos Açores, S.A.",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/37c63a57-53af-4289-b2e2-5a40f5afd52b"
+    },
+    {
+      "id": "eab1d91a-9d49-4388-b2bf-a2b0ab960813",
+      "summary": "Confirma a exceção, para a realização de obras com finalidade exclusivamente agrícola, construção de um complexo de ordenha e anexos, no prédio rústico incluído na Reserva Agrícola Regional, sito ao Paúl das Vacas, freguesia das Fontinhas, concelho da Praia da Vitória.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1059/2026 de 13 de maio de 2026",
+      "entity": "IROA, S.A.",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/eab1d91a-9d49-4388-b2bf-a2b0ab960813"
+    },
+    {
+      "id": "78a0e557-82c5-4d50-a7d9-19bc53c122cc",
+      "summary": "Apoios financeiros.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1063/2026 de 13 de maio de 2026",
+      "entity": "Entidade Reguladora dos Serviços de Águas e Resíduos dos Açores",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/78a0e557-82c5-4d50-a7d9-19bc53c122cc"
+    },
+    {
+      "id": "778e9a9e-f7f1-4e36-9d9d-992cd62d8915",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia de São Roque do Pico.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 387/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 263378.85,
+      "url": "https://jo.azores.gov.pt/#/ato/778e9a9e-f7f1-4e36-9d9d-992cd62d8915"
+    },
+    {
+      "id": "4ad81187-f817-4081-9006-e2c265d71aab",
+      "summary": "Empreitada de \"Recuperação de Moradia Unifamiliar sita à Rua Padre Agostinho Inácio Machado, 90, Freguesia de Santa Cruz, Concelho da Lagoa, Ilha de São Miguel”.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 233/2026 de 13 de maio de 2026",
+      "entity": "Direção Regional da Habitação",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 75000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/4ad81187-f817-4081-9006-e2c265d71aab"
+    },
+    {
+      "id": "bae29cc2-d068-49eb-aba8-5008e7510077",
+      "summary": "Altera o Anúncio n.º 221/2026, de 30 de abril, publicado no Jornal Oficial, II Série, n.º 83, de 30 de abril de 2026.",
+      "text_excerpt": "",
+      "human_id": "Retificação de Anúncio n.º 39/2026 de 13 de maio de 2026",
+      "entity": "Município de Ponta Delgada",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 38354.34,
+      "url": "https://jo.azores.gov.pt/#/ato/bae29cc2-d068-49eb-aba8-5008e7510077"
+    },
+    {
+      "id": "19646959-0741-476d-9e99-55b5749d958a",
+      "summary": "Apoio financeiro - PRR.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1053/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 91",
+      "total_value": 30657.48,
+      "url": "https://jo.azores.gov.pt/#/ato/19646959-0741-476d-9e99-55b5749d958a"
+    },
+    {
+      "id": "326af869-f683-4826-971b-d2dc940bf505",
+      "summary": "Alteração Orçamental.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1063-A/2026 de 13 de maio de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 91, Suplemento",
+      "total_value": 1200000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/326af869-f683-4826-971b-d2dc940bf505"
+    },
+    {
+      "id": "c34746fa-db2d-4ced-a330-cef640829e10",
+      "summary": "Recomenda ao Governo Regional dos Açores a criação do Centro Académico Clínico dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Resolução da Assembleia Legislativa da Região Autónoma dos Açores n.º 20/2026/A de 13 de maio de 2026",
+      "entity": "Assembleia Legislativa da Região Autónoma dos Açores",
+      "publication": "Jornal Oficial I Série - Número 62",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/c34746fa-db2d-4ced-a330-cef640829e10"
+    },
+    {
+      "id": "91accd0a-d1b8-40b5-b2a4-bd4d3746ee4d",
+      "summary": "Recomenda ao Governo Regional dos Açores a implementação de salas de consumo assistido de drogas.",
+      "text_excerpt": "",
+      "human_id": "Resolução da Assembleia Legislativa da Região Autónoma dos Açores n.º 19/2026/A de 13 de maio de 2026",
+      "entity": "Assembleia Legislativa da Região Autónoma dos Açores",
+      "publication": "Jornal Oficial I Série - Número 62",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/91accd0a-d1b8-40b5-b2a4-bd4d3746ee4d"
+    }
+  ],
+  "base": [
+    {
+      "id": 14846403,
+      "title": "Contratação para assegurar a concretização dos espetáculos musicais a realizarem-se nas festividades Cais Agosto 2026 (29 de julho a 2 de agosto de 2026), nomeadamente contratação dos artistas, logíst...",
+      "price": "234.500,00 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "SÓ FESTAS, UNIPESSOAL LDA - Anim. Turistica, Prod. Eventos e Rest., Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14846403"
+    },
+    {
+      "id": 14842293,
+      "title": "Aquisição de serviços de limpeza e manutenção das zonas balneares e orla costeira",
+      "price": "75.240,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Alternativa - Associação Contra Dependências",
+      "procedure": "Concurso público",
+      "signing_date": "12-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14842293"
+    },
+    {
+      "id": 14847172,
+      "title": "Prestação de Serviços de Assessoria Jurídica à Portos dos Açores, SA",
+      "price": "74.500,00 €",
+      "buyer": "Portos dos Açores, SA",
+      "seller": "SRS Legal",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14847172"
+    },
+    {
+      "id": 14848519,
+      "title": "Aquisição de serviços de auditoria aos hospitais E.P.E.R. da RAA",
+      "price": "74.300,00 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "Upton, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14848519"
+    },
+    {
+      "id": 14842487,
+      "title": "Aquisição de serviços externos complementares aos serviços internos de segurança e saúde no trabalho, em observância do disposto na Lei nº102/2009, de 10 de setembro, na sua atual redação, a decorrer ...",
+      "price": "51.584,00 €",
+      "buyer": "Autoridade Tributária e Aduaneira",
+      "seller": "MEDINOVA, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14842487"
+    },
+    {
+      "id": 14843240,
+      "title": "Prestação de Serviços de Fiscalização Técnica e Coordenação de Segurança em obra da Empreitada \" Ampliação do Edifício da Escola EB/JI de Guadalupe.",
+      "price": "35.205,00 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "5 DIMENSÕES - CONSULTORES DE ENGENHARIA, LDA",
+      "procedure": "Consulta Prévia",
+      "signing_date": "07-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14843240"
+    },
+    {
+      "id": 14846499,
+      "title": "Empreitada de Pintura das Piscinas Municipais",
+      "price": "33.215,40 €",
+      "buyer": "Municipio da  Ribeira Grande",
+      "seller": "CardosoCores - Decorações, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14846499"
+    },
+    {
+      "id": 14848400,
+      "title": "AQUISIÇÃO DE UM CONTENTOR FECHADO ESTANQUE AMPLIROLL",
+      "price": "13.830,00 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "SOPINAL-Indústria de Equipamentos e Contentores, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "12-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14848400"
+    },
+    {
+      "id": 14849482,
+      "title": "AQUISIÇÃO DE SERVIÇOS PARA INVENTÁRIO MUNICIPAL DO ARVOREDO E ELABORAÇÃO DO REGULAMENTO MUNICIPAL DA GESTÃO DO ARVOREDO",
+      "price": "12.805,00 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "XZ Consultores S.A.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14849482"
+    },
+    {
+      "id": 14843213,
+      "title": "PRESTAÇÃO DE SERVIÇOS PARA O EXERCÍCIO DE FUNÇÕES PÚBLICAS, NA MODALIDADE DE AVENÇA – CASA DA MONTANHA, ILHA DO PICO",
+      "price": "12.016,62 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "JOÃO PEDRO BAPTISTA COSTA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14843213"
+    },
+    {
+      "id": 14843463,
+      "title": "aquisição de serviços para a limpeza das instalações de serviços da Direção Regional do Turismo",
+      "price": "7.380,00 €",
+      "buyer": "Direção Regional do Turismo",
+      "seller": "Paulo Soares Sociedade Unipessoal, Lda ¿ Açortécnica",
+      "procedure": "Concurso público",
+      "signing_date": "30-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14843463"
+    },
+    {
+      "id": 14843513,
+      "title": "Aquisição de Bens, por Lotes, para o Fornecimento de Equipamento Básico",
+      "price": "3.465,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Planeta Vertical Lda ",
+      "procedure": "Concurso público",
+      "signing_date": "06-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14843513"
+    },
+    {
+      "id": 14843632,
+      "title": "Aquisição de Bens, por Lotes, para o Fornecimento de Equipamento Básico",
+      "price": "3.230,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Planeta Vertical Lda ",
+      "procedure": "Concurso público",
+      "signing_date": "05-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14843632"
+    },
+    {
+      "id": 14843495,
+      "title": "Aquisição de Bens, por Lotes, para o Fornecimento de Equipamento Básico",
+      "price": "1.180,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Planeta Vertical Lda ",
+      "procedure": "Concurso público",
+      "signing_date": "06-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14843495"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9096,
+        "title": "Informações sobre cobrança e destinos das receitas da ecotaxa marítima",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Marlene Damião PS, ...",
+        "date": "23/01/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9096"
+      },
+      {
+        "id": 9213,
+        "title": "Comparação dos apoios públicos ao desporto na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9213"
+      },
+      {
+        "id": 9248,
+        "title": "Reservas quanto ao impacto do despacho n.º 611/2026 na indústria tabaqueira dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "10/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9248"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23424,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores considera que FLAD pode ter papel mais ativo na modernização empresarial da Região",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23424"
+      },
+      {
+        "id": 23425,
+        "title": "Nota de Imprensa da Representação do BE - Governo da coligação está mais preocupado com guerra interna do que com a resolução dos problemas das pessoas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23425"
+      },
+      {
+        "id": 23426,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Presidente da ALRAA felicita jovens açorianos participantes na Sessão Nacional do Parlamento dos Jovens",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23426"
+      },
+      {
+        "id": 23427,
+        "title": "Nota de Imprensa da Presidência da ALRAA - \"O próximo ciclo da Autonomia tem de ser de conhecimento e de crescimento económico sustentável\", defende o Presidente do Parlamento açoriano",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23427"
+      },
+      {
+        "id": 23428,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD valoriza investimentos de manutenção e requalificação na rede escolar da Terceira",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23428"
+      },
+      {
+        "id": 23429,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Requalificação da via Vitorino Nemésio continua sem avançar.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23429"
+      },
+      {
+        "id": 23430,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Filhos de pais que trabalham continuam a ser deixados para trás nas creches.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23430"
+      },
+      {
+        "id": 23420,
+        "title": "Nota de Imprensa da Representação do BE - PSD, CDS e CH impedem audição no parlamento da reitora da Universidade sobre Centro Académico Clínico",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23420"
+      },
+      {
+        "id": 23421,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - FLAD recusa-se a prestar esclarecimentos ao Parlamento dos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23421"
+      },
+      {
+        "id": 23422,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Após visita à Prolacto - IL defende mudança de paradigma no setor leiteiro açoriano.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23422"
+      },
+      {
+        "id": 23423,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Governo Regional admite ignorar a segurança da ilha do Corvo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23423"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 2982,
+        "number": "86",
+        "date": "15/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/2982"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3408,
+        "title": "Alteração à Lei de Organização e Processo do Tribunal de Contas, aprovada pela Lei n.º 98/97, de 26 de agostoAlteração à Lei de Organização e Processo do Tribunal de Contas, aprovada pela Lei n.º 98/97, de 26 de agosto",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3408"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-05-13"
+}
