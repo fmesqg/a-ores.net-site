@@ -1,0 +1,305 @@
+{
+  "joraa": [
+    {
+      "id": "532880ea-337d-4c45-b7d7-6cdd9fd1ded4",
+      "summary": "Acordo de cooperação financeira entre a Secretaria Regional da Saúde e Segurança Social e a Alternativa - Associação Contra as Dependências.",
+      "text_excerpt": "",
+      "human_id": "Acordo n.º 34/2026 de 15 de maio de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 93",
+      "total_value": 30100.0,
+      "url": "https://jo.azores.gov.pt/#/ato/532880ea-337d-4c45-b7d7-6cdd9fd1ded4"
+    },
+    {
+      "id": "9a68f1ed-3bfd-453a-9eb0-148f7c63dae5",
+      "summary": "Programa de habitação - Casa renovada, Casa habitada.",
+      "text_excerpt": "",
+      "human_id": "Declaração de Retificação n.º 30/2026 de 15 de maio de 2026",
+      "entity": "Direção Regional da Habitação",
+      "publication": "Jornal Oficial II Série - Número 93",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/9a68f1ed-3bfd-453a-9eb0-148f7c63dae5"
+    },
+    {
+      "id": "a7cce629-f333-46ea-b063-e2cc0ea1b909",
+      "summary": "Procede à primeira alteração à Portaria n.º 68/2018, de 21 de junho, que aprova o regulamento de acesso ao interior da Caldeira do Faial.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 53/2026 de 15 de maio de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial I Série - Número 63",
+      "total_value": 4.0,
+      "url": "https://jo.azores.gov.pt/#/ato/a7cce629-f333-46ea-b063-e2cc0ea1b909"
+    },
+    {
+      "id": "fa6c8c6d-8d07-417d-b04e-3a71e246b72e",
+      "summary": "Apoio financeiro - A.E.S.A., Associação Empresarial para a Sustentabilidade dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1069/2026 de 15 de maio de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 93",
+      "total_value": 3000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/fa6c8c6d-8d07-417d-b04e-3a71e246b72e"
+    },
+    {
+      "id": "c571c34c-0c02-4119-be54-689818db6e7a",
+      "summary": "Apoios financeiros.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 391/2026 de 15 de maio de 2026",
+      "entity": "Vice-Presidência do Governo Regional",
+      "publication": "Jornal Oficial II Série - Número 93",
+      "total_value": 900.0,
+      "url": "https://jo.azores.gov.pt/#/ato/c571c34c-0c02-4119-be54-689818db6e7a"
+    }
+  ],
+  "base": [
+    {
+      "id": 14879783,
+      "title": "EMPREITADA DE CONSTRUÇÃO DA ETAR DO NOVO MATADOURO DE SÃO JORGE",
+      "price": "674.800,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "KLINGER Portugal Lda",
+      "procedure": "Concurso público",
+      "signing_date": "15-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14879783"
+    },
+    {
+      "id": 14872886,
+      "title": "Aquisição de licenças SQL Server Enterprise e Windows Server Datacenter",
+      "price": "99.401,92 €",
+      "buyer": "Direção Regional das Comunicações e da Transição Digital",
+      "seller": "CRAYON SOFTWARE LICENSING, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "15-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14872886"
+    },
+    {
+      "id": 14869132,
+      "title": "Aquisição de serviços de agência de viagens para a Universidade dos Açores",
+      "price": "74.400,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Viagens El Corte Inglés",
+      "procedure": "Consulta Prévia",
+      "signing_date": "15-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14869132"
+    },
+    {
+      "id": 14878887,
+      "title": "O presente contrato tem por objeto cedência de espaços e fornecimento de equipamentos e serviços técnicos para o “DRV Annual Conference” (16 e 17/04/2026), incluindo auditório, salas, LED wall, som/lu...",
+      "price": "71.747,34 €",
+      "buyer": "Associação Visit Azores",
+      "seller": "Teatro Micaelense - Centro Cultural e de Congressos, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14878887"
+    },
+    {
+      "id": 14872319,
+      "title": "FORNECIMENTO DE CÓPIAS PARA TRIÉNIO 2026 - 2028 na EBS de Povoação",
+      "price": "55.500,00 €",
+      "buyer": "Escola Básica e Secundária da Povoação",
+      "seller": "Copipélago, Serviços - Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14872319"
+    },
+    {
+      "id": 14875569,
+      "title": "Aquisição de Máquina de Lavagem e Desinfeção de Endoscópios no Âmbito do Plano de Recuperação e Resiliência, Componente 1, Investimento C01-i11-RAA -Modernização e Requalificação do Serviço Regional d...",
+      "price": "54.500,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "ECODANUSA, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14875569"
+    },
+    {
+      "id": 14872452,
+      "title": "Aquisição de serviços de organização e realização de espetáculo musical no âmbito das Grandes Festas do Divino Espírito Santo 2026",
+      "price": "51.750,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "SÓ FESTAS, UNIPESSOAL LDA - Anim. Turistica, Prod. Eventos e Rest., Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14872452"
+    },
+    {
+      "id": 14880761,
+      "title": "Aquisição de viaturas",
+      "price": "39.000,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Dionísio Carreiro de Almeida, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14880761"
+    },
+    {
+      "id": 14876469,
+      "title": "Ajuste Direto para Prestação de Serviços de Deslocação dos Beneficiários do Cartão Municipal do Idoso ao Santuário de Fátima",
+      "price": "27.032,00 €",
+      "buyer": "Município de Nordeste",
+      "seller": " Melo, Lda, Viagens e Turismo",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14876469"
+    },
+    {
+      "id": 14880788,
+      "title": "Aquisição de viaturas",
+      "price": "19.430,78 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Sotermaquinas - Sociedade Terceirense de Máquinas e Acessórios, SA",
+      "procedure": "Concurso público",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14880788"
+    },
+    {
+      "id": 14870175,
+      "title": "Recolha de monos e monstros e limpeza de contentores e áreas envolventes, na área da Freguesia da Matriz",
+      "price": "15.805,00 €",
+      "buyer": "Freguesia de Matriz",
+      "seller": "Nelson António Ribeiro de Oliveira",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14870175"
+    },
+    {
+      "id": 14866429,
+      "title": "Aquisição de Serviços de Organização de Eventos para a 17ª Conferência Internacional Current Research Information Systems (CRIS2026)",
+      "price": "14.400,00 €",
+      "buyer": "Fundação para a Ciência e a Tecnologia, IP",
+      "seller": "The Brand Concept, Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14866429"
+    },
+    {
+      "id": 14881110,
+      "title": "Aquisição do Seguro de Acidentes Pessoais - Escolar Grupo – Alunos",
+      "price": "13.859,34 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "ZURICH - Insurance Europe AG - Sucursal em Portugal",
+      "procedure": "Consulta Prévia",
+      "signing_date": "15-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14881110"
+    },
+    {
+      "id": 14876782,
+      "title": "Ajuste Direto para Aquisição Prestação de Serviço de Live Streaming, para o ano 2026",
+      "price": "7.896,94 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "Silvergrey - Produções Audiovisuais, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14876782"
+    },
+    {
+      "id": 14877593,
+      "title": "Prestação de Serviços de Catering para os Beberetes dos Eventos da Festa da Flor e das Festas da Cidade, para o ano 2026",
+      "price": "6.816,64 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Cláudia dos Anjos Vieira Lopes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14877593"
+    },
+    {
+      "id": 14877297,
+      "title": "Prestação de Serviços de Catering para os Beberetes dos Eventos da Festa da Flor e das Festas da Cidade, para o ano 2026",
+      "price": "3.401,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Cláudia dos Anjos Vieira Lopes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14877297"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 23457,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia assiste ao XXXVI Encontro de Coros da Ilha Terceira, no Centro Cultural e de Congressos de Angra do Herioismo, ilha Terceira.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23457"
+      },
+      {
+        "id": 23458,
+        "title": "Nota de Imprensa da Presidência da ALRAA - 50 anos da Autonomia: \"Álvaro Monjardino foi um dos grandes arquitetos do pensamento autonómico açoriano\", reconhece o Presidente da Assembleia Legislativa",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23458"
+      },
+      {
+        "id": 23441,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS-PP solicita ponto de situação de obras em instituições sociais de São Jorge.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23441"
+      },
+      {
+        "id": 23442,
+        "title": "Nota de Imprensa da Representação do BE - Bloco denuncia bloqueio à negociação coletiva na EDA e inação da Direção de Serviços do Trabalho.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23442"
+      },
+      {
+        "id": 23443,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA destaca descida do tabagismo entre jovens açorianos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23443"
+      },
+      {
+        "id": 23444,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Após visita oficial à Lagoa - IL defende descentralização de competências da Região para as Autarquias.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23444"
+      },
+      {
+        "id": 23445,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca abertura de concurso para requalificação do Centro de Saúde da Povoação.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23445"
+      },
+      {
+        "id": 23446,
+        "title": "Nota de Imprensa da Presidência da ALRAA - \"A preocupação crescente com fenómenos como o tráfico de droga ou a cibercriminalidade exigem investimento e capacidade de antecipação\", defende o Presidente do Parlamento açoriano",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23446"
+      },
+      {
+        "id": 23447,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à inauguração da mostra bibliográfica \"50 Anos da Autonomia Constitucional dos Açores: Leituras para a sua compreensão\", na Biblioteca Pública e Arquivo Regional João José da Graça, na ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23447"
+      },
+      {
+        "id": 23448,
+        "title": "Nota Informativa da Presidência da ALRAA - ALRAA apresenta estratégia de transição digital e projeto de IA fiável em conferência internacional no Brasil",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23448"
+      },
+      {
+        "id": 23449,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige transparência no processo de privatização da Azores Airlines.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23449"
+      },
+      {
+        "id": 23450,
+        "title": "Nota de Imprensa da Representação do BE - Bem-estar animal: Bloco quer reconhecimento legal das Famílias de Acolhimento e licenciamento obrigatório para canis de caçadores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23450"
+      },
+      {
+        "id": 23451,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Deputado da IL/Açores, Pedro Ferreira, reúne com Administração do Hospital da Horta - lha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23451"
+      },
+      {
+        "id": 23453,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PSD - PSD/Açores quer reforçar apoio a crianças e jovens com perturbações do desenvolvimento.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23453"
+      },
+      {
+        "id": 23454,
+        "title": "Nota de Agenda do Grupo Parlamentar do PS - O deputado do GPPS/Açores e Presidente da Juventude Socialista Açores, Russell Sousa, reúne-se com a direção da Associação de Estudantes da Escola Secundária Manuel Arriaga.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23454"
+      },
+      {
+        "id": 23455,
+        "title": "Subcomissão de Política Geral - Convocatória (Dia 20/05/2026, pelas 14:30 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23455"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-05-15"
+}
