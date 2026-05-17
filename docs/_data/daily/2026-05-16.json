@@ -1,0 +1,66 @@
+{
+  "joraa": [],
+  "base": [
+    {
+      "id": 14885124,
+      "title": "serviços médicos de obstetrícia/ginecologia e de imagiologia ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Codorniz & Oliveira, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=14885124"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9266,
+        "title": "Reservas Estratégicas de Combustíveis da RAA",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Pedro Ferreira IL",
+        "date": "23/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9266"
+      },
+      {
+        "id": 9271,
+        "title": "Atrasos que travam a transição energética",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Russell Sousa PS, ...",
+        "date": "24/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9271"
+      },
+      {
+        "id": 9179,
+        "title": "Ponto de situação dos lançamentos suborbitais na ilha de Santa Maria e  respetivos estudos de impacto ambiental e estudo económico-financeiro",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "09/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9179"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3803,
+        "title": "Primeira alteração ao Decreto Legislativo Regional n.º 13/2019/A, de 6 de junho",
+        "author": "PSD, CDS-PP e PPM",
+        "topic": "Administração pública regional",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3803"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-05-16"
+}
