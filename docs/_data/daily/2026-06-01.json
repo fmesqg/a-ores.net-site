@@ -1,0 +1,605 @@
+{
+  "joraa": [
+    {
+      "id": "58eaf76f-8d83-4a8e-b33b-c313a6effd20",
+      "summary": "Cessação de apoio à contratação.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1192/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/58eaf76f-8d83-4a8e-b33b-c313a6effd20"
+    },
+    {
+      "id": "1b45ac61-eeef-4cec-8dd6-d02bfeee75a4",
+      "summary": "Revogação de apoio - Programa Casa renovada, casa habitada.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 135/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional da Habitação",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 21361.18,
+      "url": "https://jo.azores.gov.pt/#/ato/1b45ac61-eeef-4cec-8dd6-d02bfeee75a4"
+    },
+    {
+      "id": "2a0b6890-6b04-4787-aa16-955e82be87db",
+      "summary": "Revoga parcialmente o Despacho n.º 117/2024, de 23 de janeiro, publicado no Jornal Oficial, II Série, n.º 16, 23 de janeiro de 2024.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1199/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 41411.11,
+      "url": "https://jo.azores.gov.pt/#/ato/2a0b6890-6b04-4787-aa16-955e82be87db"
+    },
+    {
+      "id": "b704dce4-d705-4aa7-9c53-4dbad15e6334",
+      "summary": "Apoio financeiro - Casa dos Açores de Lisboa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 438/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional dos Assuntos Parlamentares e Comunidades",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 9900.0,
+      "url": "https://jo.azores.gov.pt/#/ato/b704dce4-d705-4aa7-9c53-4dbad15e6334"
+    },
+    {
+      "id": "2b4a0631-d76f-4aba-8a33-85e956b13b34",
+      "summary": "Obra n.º 03/26 - Ligação da Câmara de Derivação do Lourenço Viveiros à Canada das Criações - Santo António.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 263/2026 de 1 de junho de 2026",
+      "entity": "Serviços Municipalizados de Água e Saneamento ",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 320557.04,
+      "url": "https://jo.azores.gov.pt/#/ato/2b4a0631-d76f-4aba-8a33-85e956b13b34"
+    },
+    {
+      "id": "5bf1d2fb-12c7-4b44-821e-cab3add9e909",
+      "summary": "Retifica o Despacho n.º 1176/2026, de 29 de maio, publicado no Jornal Oficial, II Série, n.º 102, de 29 de maio de 2026.",
+      "text_excerpt": "",
+      "human_id": "Declaração de Retificação n.º 33/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional da Educação e Administração Educativa",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5bf1d2fb-12c7-4b44-821e-cab3add9e909"
+    },
+    {
+      "id": "736422a5-cf88-46d1-8316-2298946dea46",
+      "summary": "Cessação de apoio à contratação.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1193/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/736422a5-cf88-46d1-8316-2298946dea46"
+    },
+    {
+      "id": "eeeabe61-2c76-49b2-be2c-0c84aad8d149",
+      "summary": "Cessação de apoio à contratação.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1196/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/eeeabe61-2c76-49b2-be2c-0c84aad8d149"
+    },
+    {
+      "id": "505b3bfe-54ea-463c-8891-b0d6305fbb39",
+      "summary": "Atribuição de verbas - Hospital Divino Espírito Santo de Ponta Delgada.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 440/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 5000000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/505b3bfe-54ea-463c-8891-b0d6305fbb39"
+    },
+    {
+      "id": "96a95372-d99c-43ad-b40f-b47eb063c50a",
+      "summary": "Cessação de apoio à contratação.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1194/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/96a95372-d99c-43ad-b40f-b47eb063c50a"
+    },
+    {
+      "id": "990ca4dc-169f-480c-905d-403c0e03d9f1",
+      "summary": "Revoga o Despacho n.º 384/2026, de 3 de março, publicado no Jornal Oficial, II Série, n.º 42, de 3 de março de 2026.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1198/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 79692.0,
+      "url": "https://jo.azores.gov.pt/#/ato/990ca4dc-169f-480c-905d-403c0e03d9f1"
+    },
+    {
+      "id": "5051f92c-3511-4529-b736-dce0f2d0fc8f",
+      "summary": "Subdelegação de competências.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1187/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional do Turismo, Mobilidade e Infraestruturas",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 5266800.0,
+      "url": "https://jo.azores.gov.pt/#/ato/5051f92c-3511-4529-b736-dce0f2d0fc8f"
+    },
+    {
+      "id": "46d9d38b-8ad1-4c3a-8bbc-4669c65b5025",
+      "summary": "Apoio financeiro - Associação de Pescadores da Ilha do Corvo.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 444/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional do Mar e das Pescas",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 44451.46,
+      "url": "https://jo.azores.gov.pt/#/ato/46d9d38b-8ad1-4c3a-8bbc-4669c65b5025"
+    },
+    {
+      "id": "8ecf1f48-e4a2-4cfa-bbb3-302f0c9f5fe6",
+      "summary": "Apoio financeiro - Associação de Pescadores da Ilha do Corvo.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 445/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional do Mar e das Pescas",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 4300.0,
+      "url": "https://jo.azores.gov.pt/#/ato/8ecf1f48-e4a2-4cfa-bbb3-302f0c9f5fe6"
+    },
+    {
+      "id": "6c0956a6-bb0e-4b38-bb7c-88fe9d516ebb",
+      "summary": "Obra n.º 04/26 - Substituição da rede de distribuição de água na rua do Rosário de Baixo - Santo António.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 264/2026 de 1 de junho de 2026",
+      "entity": "Serviços Municipalizados de Água e Saneamento ",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 299977.04,
+      "url": "https://jo.azores.gov.pt/#/ato/6c0956a6-bb0e-4b38-bb7c-88fe9d516ebb"
+    },
+    {
+      "id": "f73b247e-8cd0-4a42-9002-0354fb33063e",
+      "summary": "Revoga parcialmente o Despacho n.º 2629/2021, de 15 de novembro, publicado no Jornal Oficial, II Série, n.º  226, de 15 de novembro de 2021.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1203/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 33562.97,
+      "url": "https://jo.azores.gov.pt/#/ato/f73b247e-8cd0-4a42-9002-0354fb33063e"
+    },
+    {
+      "id": "df4bb899-2088-45a1-aab1-e34d64a33484",
+      "summary": "Revoga parcialmente o Despacho n.º 694/2026, de 2 de abril, publicado no Jornal Oficial, II Série, n.º 64, de 2 de abril de 2026.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1204/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 17500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/df4bb899-2088-45a1-aab1-e34d64a33484"
+    },
+    {
+      "id": "03abc5f2-3173-465f-b49d-8db56fac1f84",
+      "summary": "Cessação de apoio à contratação.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1190/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/03abc5f2-3173-465f-b49d-8db56fac1f84"
+    },
+    {
+      "id": "eaf1796a-949f-47f4-8d4d-4a760138909d",
+      "summary": "Atribuição de verbas -  Hospital da Horta.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 439/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 226000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/eaf1796a-949f-47f4-8d4d-4a760138909d"
+    },
+    {
+      "id": "b02a6e3e-af46-4178-b97f-b19af40c7a97",
+      "summary": "Acordo de cooperação financeira entre a Secretaria Regional da Saúde e Segurança Social e a Associação de Dadores de Sangue da Ilha Terceira.",
+      "text_excerpt": "",
+      "human_id": "Acordo n.º 41/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 33429.61,
+      "url": "https://jo.azores.gov.pt/#/ato/b02a6e3e-af46-4178-b97f-b19af40c7a97"
+    },
+    {
+      "id": "f0026698-1c0e-4427-8b86-30a0caa61728",
+      "summary": "Apoio financeiro - CPE-PREMIUM.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1188/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 3000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/f0026698-1c0e-4427-8b86-30a0caa61728"
+    },
+    {
+      "id": "98acdb7e-354e-4630-9f15-d8fa7b87e17e",
+      "summary": "Autoriza a concessão de um aval à Lotaçor - Serviço de Lotas dos Açores, S.A..",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 66/2026 de 1 de junho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 69",
+      "total_value": 7300000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/98acdb7e-354e-4630-9f15-d8fa7b87e17e"
+    },
+    {
+      "id": "bbb25fe5-d6eb-438a-89e7-eec01e6c2cd6",
+      "summary": "Atribuição de verbas - Unidade de Saúde Ilha de São Jorge - Programa Cheque-dentista.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 441/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 3060.0,
+      "url": "https://jo.azores.gov.pt/#/ato/bbb25fe5-d6eb-438a-89e7-eec01e6c2cd6"
+    },
+    {
+      "id": "31614ca8-c56f-4e59-a47a-894680f5265d",
+      "summary": "Cessação de apoio à contratação.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1191/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/31614ca8-c56f-4e59-a47a-894680f5265d"
+    },
+    {
+      "id": "1f465a9a-a220-441d-b1cf-ff95c5359375",
+      "summary": "Altera a Portaria n.º 20/2023, de 14 de março, alterada pelas Portarias n.º 86/2023, de 6 de outubro, e n.º 65/2024, de 2 de agosto, que estabelece as normas de aplicação da Intervenção E.12.1 - Zonas Afetadas por Condicionantes Específicas (MAAZD), do domínio E.12 - Apoio às Zonas com Condicionantes Naturais, do eixo E - Desenvolvimento Rural do PEPAC Portugal, na Região Autónoma dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 59/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial I Série - Número 69",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/1f465a9a-a220-441d-b1cf-ff95c5359375"
+    },
+    {
+      "id": "d0af9282-c130-4ebd-9f0e-429212d4016f",
+      "summary": "Revoga parcialmente o Despacho n.º 255/2023, de 16 de fevereiro, publicado no Jornal Oficial, II Série, n.º 34, de 16 de fevereiro de 2023.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1202/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 61286.17999999999,
+      "url": "https://jo.azores.gov.pt/#/ato/d0af9282-c130-4ebd-9f0e-429212d4016f"
+    },
+    {
+      "id": "5b104776-f585-46aa-be8e-704bc52192c6",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 051/2026 - Santa Casa da Misericórdia das Lajes do Pico.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 114/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 4850.33,
+      "url": "https://jo.azores.gov.pt/#/ato/5b104776-f585-46aa-be8e-704bc52192c6"
+    },
+    {
+      "id": "3ba2f8bc-322a-4224-80bc-6e91cb19c0e7",
+      "summary": "Regulamento de Apoio Individuos / Familias da Junta de Freguesia de São Pedro Vila Franca do Campo.",
+      "text_excerpt": "",
+      "human_id": "Regulamento n.º 20/2026 de 1 de junho de 2026",
+      "entity": "Junta de Freguesia de São Pedro, Vila Franca do Campo",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/3ba2f8bc-322a-4224-80bc-6e91cb19c0e7"
+    },
+    {
+      "id": "d3d1a097-52fb-4992-9699-f45cc9666b19",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 012/2026 - Centro Social e Paroquial das Cinco Ribeiras.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 113/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 3203.37,
+      "url": "https://jo.azores.gov.pt/#/ato/d3d1a097-52fb-4992-9699-f45cc9666b19"
+    },
+    {
+      "id": "7b8a8545-4b2e-435b-8343-3cf3c2bff407",
+      "summary": "Prorrogação do prazo de candidaturas medida Estagiar U.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1197/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/7b8a8545-4b2e-435b-8343-3cf3c2bff407"
+    },
+    {
+      "id": "3e9ed476-696b-4ebc-88fb-a45d4d3d5fe5",
+      "summary": "Atribuição de verbas - Unidade de Saúde Ilha de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 443/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 77300.0,
+      "url": "https://jo.azores.gov.pt/#/ato/3e9ed476-696b-4ebc-88fb-a45d4d3d5fe5"
+    },
+    {
+      "id": "c72377f0-3d5e-4076-a0f2-720b9f906390",
+      "summary": "Determina a resolução de Contrato de Gestão de Apoios.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 134/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional da Habitação",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 97711.98,
+      "url": "https://jo.azores.gov.pt/#/ato/c72377f0-3d5e-4076-a0f2-720b9f906390"
+    },
+    {
+      "id": "d8e4397e-3cd5-4286-8c9a-fec0a128fb2a",
+      "summary": "Revoga parcialmente o Despacho n.º 2031/2023, de 6 de novembro, publicado no Jornal Oficial, II Série, n.º  213, 6 de novembro de 2023.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1200/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 39941.03,
+      "url": "https://jo.azores.gov.pt/#/ato/d8e4397e-3cd5-4286-8c9a-fec0a128fb2a"
+    },
+    {
+      "id": "04138b26-8601-4b14-8efd-75a2b2a5088b",
+      "summary": "Regulamento de Utilização da Viatura Elétrica de 9 Lugares da Junta de Freguesia de São Pedro Vila Franca do Campo.",
+      "text_excerpt": "",
+      "human_id": "Regulamento n.º 21/2026 de 1 de junho de 2026",
+      "entity": "Junta de Freguesia de São Pedro, Vila Franca do Campo",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/04138b26-8601-4b14-8efd-75a2b2a5088b"
+    },
+    {
+      "id": "ae088082-e2da-4d0e-99cc-6b40597724ff",
+      "summary": "Primeira Correção Material à Planta de Síntese do Plano de Ordenamento da Orla Costeira da Ilha de Santa Maria, publicado pelo Decreto Regulamentar Regional n.º 15/2008/A, de 25 de junho.",
+      "text_excerpt": "",
+      "human_id": "Declaração n.º 3/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/ae088082-e2da-4d0e-99cc-6b40597724ff"
+    },
+    {
+      "id": "d969a087-2e7c-4bfb-91bf-a70683785842",
+      "summary": "Apoios financeiros no âmbito do Programa de Contratação de Pessoas com Deficiência e Incapacidades.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1189/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 139876.03,
+      "url": "https://jo.azores.gov.pt/#/ato/d969a087-2e7c-4bfb-91bf-a70683785842"
+    },
+    {
+      "id": "556b61ce-ed82-4e9d-8c2f-1252dc1fd6da",
+      "summary": "Atribuição de verbas - Unidade de Saúde Ilha de São Miguel - Programa Cheque-dentista.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 442/2026 de 1 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 81842.0,
+      "url": "https://jo.azores.gov.pt/#/ato/556b61ce-ed82-4e9d-8c2f-1252dc1fd6da"
+    },
+    {
+      "id": "dffcece1-6f72-47de-af06-a630d990bcb9",
+      "summary": "Regulamento do Orçamento Participativo da Junta de Freguesia de São Pedro Vila Franca do Campo.",
+      "text_excerpt": "",
+      "human_id": "Regulamento n.º 22/2026 de 1 de junho de 2026",
+      "entity": "Junta de Freguesia de São Pedro, Vila Franca do Campo",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/dffcece1-6f72-47de-af06-a630d990bcb9"
+    },
+    {
+      "id": "e609ee80-97ff-4986-a78f-342fdf816e69",
+      "summary": "Revoga parcialmente o Despacho n.º 2110/2022, de 3 de outubro, publicado em Jornal Oficial, II Série, n.º 109, de 3 de outubro de 2022.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1201/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": 54574.59,
+      "url": "https://jo.azores.gov.pt/#/ato/e609ee80-97ff-4986-a78f-342fdf816e69"
+    },
+    {
+      "id": "ae9dc935-bb5a-4353-8537-3c95b761cb69",
+      "summary": "Cessação de apoio à contratação.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1195/2026 de 1 de junho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 103",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/ae9dc935-bb5a-4353-8537-3c95b761cb69"
+    }
+  ],
+  "base": [
+    {
+      "id": 15051288,
+      "title": "Fornecimento de Materiais de Construção Civil",
+      "price": "257.958,78 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Costa Pereira & Filhos. Ldª",
+      "procedure": "Concurso público",
+      "signing_date": "27-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15051288"
+    },
+    {
+      "id": 15047508,
+      "title": "Aquisição de Uma Viatura de Recolha de Resíduos Elétrica",
+      "price": "178.500,00 €",
+      "buyer": "Município de Velas",
+      "seller": "Soma - Environmental Solutions, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "26-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15047508"
+    },
+    {
+      "id": 15050160,
+      "title": "O Contrato tem como objeto a higiene e limpeza das instalações da Direção Regional do Ambiente e Ação Climática, sitas na Rua Cônsul Dabney - Colónia Alemã, 9901-014 Horta e das instalações do Banco d...",
+      "price": "78.300,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "27-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15050160"
+    },
+    {
+      "id": 15050179,
+      "title": "Aquisição de serviços de conceção, produção, organização e execução integral do evento “Noites da Juventude - São João da Vila 2026”",
+      "price": "74.900,00 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "Jason Sousa Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15050179"
+    },
+    {
+      "id": 15051479,
+      "title": "Aquisição de serviços para execução dos trabalhos prévios previstos no relatório da proposta orientadora para a intervenção e requalificação da fábrica do álcool",
+      "price": "72.549,00 €",
+      "buyer": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "seller": "Monteiro, Resendes & Sousa - Arquitetos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15051479"
+    },
+    {
+      "id": 15055514,
+      "title": "aquisição serviços espetáculo FESTIVALzim",
+      "price": "45.000,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "Plutão Camaleão - Associação Cultural",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15055514"
+    },
+    {
+      "id": 15054563,
+      "title": "Aquisição de licenciamento para solução de análise de malware e phishing (Sandbox)",
+      "price": "41.006,25 €",
+      "buyer": "Direção Regional das Comunicações e da Transição Digital",
+      "seller": "MEO - Serviços de Comunicações e Multimédia, S.A",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15054563"
+    },
+    {
+      "id": 15054895,
+      "title": "O contrato tem por objeto a aquisição de serviços de alojamento, sala de reunião e refeições \"staff\" no âmbito do congresso DRV, conforme reserva/proposta 7928238.",
+      "price": "38.848,96 €",
+      "buyer": "Associação Visit Azores",
+      "seller": "Vila Galé - Sociedade de Empreendimentos Turísticos, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15054895"
+    },
+    {
+      "id": 15055452,
+      "title": "SERVIÇOS DE IMPRESSÃO PARA O EVENTO CAPITAL PORTUGUESA DA CULTURA 2026 – PDL 26",
+      "price": "27.504,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "NOVA GRAFICA, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15055452"
+    },
+    {
+      "id": 15055464,
+      "title": "SERVIÇOS DE GESTÃO DE PROJETOS PARA ÁREA FINANCEIRA PARA O EVENTO CAPITAL PORTUGUESA DA CULTURA 2026 – PDL 26",
+      "price": "21.000,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "Raquel Sousa Lima Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15055464"
+    },
+    {
+      "id": 15050778,
+      "title": "Aquisição de serviços de Elaboração da Revisão do Plano Diretor Municipal da Praia da Vitória",
+      "price": "18.000,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "QUATERNAIRE PORTUGAL – CONSULTORIA PARA O DESENVOLVIMENTO, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15050778"
+    },
+    {
+      "id": 15055061,
+      "title": "Aquisição torre Pico do Jardim",
+      "price": "10.000,00 €",
+      "buyer": "Rádio e Televisão de Portugal, SA",
+      "seller": "NOS ",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15055061"
+    },
+    {
+      "id": 15055329,
+      "title": "Deslocação aos Açores (Terceira e Ponta Delgada) para realizar auditoria de 24 a 29 de maio - 2 inspetoras",
+      "price": "1.614,56 €",
+      "buyer": "Inspeção-Geral de Finanças",
+      "seller": "Viagens Abreu, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15055329"
+    },
+    {
+      "id": 15055388,
+      "title": "Deslocação aos Açores (Alojamento em Ponta Delgada) para realizar auditoria de 27 a 29 de maio - 2 inspetoras",
+      "price": "544,02 €",
+      "buyer": "Inspeção-Geral de Finanças",
+      "seller": "SMILE - VIAGENS E TURISMO, UNIPESSOAL, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15055388"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 23584,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 08/06/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23584"
+      },
+      {
+        "id": 23585,
+        "title": "Comissão de Economia - Convocatória (Dia 09/06/2026, pelas 10:30 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23585"
+      },
+      {
+        "id": 23576,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Execução do investimento público nos Açores tem de ser divulgada",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23576"
+      },
+      {
+        "id": 23577,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Cancelamento: Jornadas Parlamentares do PSD/Açores - São Jorge",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23577"
+      },
+      {
+        "id": 23578,
+        "title": "Nota Informativa da Representação Parlamentar da IL - Nuno Barata reassume funções como Deputado da IL/Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23578"
+      },
+      {
+        "id": 23579,
+        "title": "Nota de Imprensa da Representação do BE - Bloco exige explicações do Governo perante razia na atribuição de apoios à Cultura e defende reforço da dotação financeira",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23579"
+      },
+      {
+        "id": 23580,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Em causa Editorial do jornal \"Diário Insular\": IL quer saber se existiram avaliações que previam mortes em caso de erupção na Terceira",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23580"
+      },
+      {
+        "id": 23581,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores alerta para exclusão de projetos culturais e injustiças do novo modelo de apoios",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23581"
+      },
+      {
+        "id": 23582,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores exige solução para falhas nos transportes marítimos que estão a prejudicar produtores de Santa Maria",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23582"
+      },
+      {
+        "id": 23583,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia toma parte na Solene Eucaristia e na Procissão da Solenidade do Corpo e Sangue de Cristo, na cidade da Horta, ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23583"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-06-01"
+}
