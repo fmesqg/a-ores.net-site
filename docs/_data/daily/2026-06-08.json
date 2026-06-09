@@ -1,0 +1,529 @@
+{
+  "joraa": [
+    {
+      "id": "0f3596a5-54be-4d95-8ee4-7c6a56e08d79",
+      "summary": "Apoios financeiros – Concessão de incentivos no âmbito do sistema de incentivos à produção de energia a partir de fontes renováveis (PROENERGIA).",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1245/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/0f3596a5-54be-4d95-8ee4-7c6a56e08d79"
+    },
+    {
+      "id": "760fda59-2079-4155-a115-a09f081bf645",
+      "summary": "Autorização de condução de veículos oficiais.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1240/2026 de 8 de junho de 2026",
+      "entity": "Instituto de Alimentação e Mercados Agrícolas, I. P. R. A.",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/760fda59-2079-4155-a115-a09f081bf645"
+    },
+    {
+      "id": "43f0fef9-ade8-4c15-9d9f-245a3cce68d1",
+      "summary": "Declara a utilidade pública, com caráter de urgência, da expropriação da parcela de terreno n.º 01 e direitos a ela inerentes, por necessária à execução da obra de “Promoção das condições de acessibilidade, mobilidade e segurança rodoviária – Ligação entre a Via Vitorino Nemésio e Circular de Angra, na ilha Terceira”.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 70/2026 de 8 de junho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 71",
+      "total_value": 1340.0,
+      "url": "https://jo.azores.gov.pt/#/ato/43f0fef9-ade8-4c15-9d9f-245a3cce68d1"
+    },
+    {
+      "id": "f54b8a3f-542e-423d-b936-3a2c5f47ee9b",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 054/2026 - Santa Casa da Misericórdia de Santo António da Lagoa - Açores.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 125/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 4812.4,
+      "url": "https://jo.azores.gov.pt/#/ato/f54b8a3f-542e-423d-b936-3a2c5f47ee9b"
+    },
+    {
+      "id": "f8111942-7802-4fcc-9e23-baf6ca1a068d",
+      "summary": "Apoio financeiro - Fundação Gaspar Frutuoso.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 480/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 2998.07,
+      "url": "https://jo.azores.gov.pt/#/ato/f8111942-7802-4fcc-9e23-baf6ca1a068d"
+    },
+    {
+      "id": "9b34579f-628a-49a6-9e1d-9014a2017138",
+      "summary": "Apoios financeiros no âmbito do Plano de Recuperação e Resiliência - SOLENERGE.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1243/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/9b34579f-628a-49a6-9e1d-9014a2017138"
+    },
+    {
+      "id": "72ec0f0a-c77c-4a2c-9e99-19f39df69284",
+      "summary": "Apoio financeiro - Universidade dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 481/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 3000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/72ec0f0a-c77c-4a2c-9e99-19f39df69284"
+    },
+    {
+      "id": "a434c85d-a9a9-41ff-ac28-e32bbf2515c8",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 015/2026 - Santa Casa da Misericórdia das Lages (Flores).",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 121/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 6096.0,
+      "url": "https://jo.azores.gov.pt/#/ato/a434c85d-a9a9-41ff-ac28-e32bbf2515c8"
+    },
+    {
+      "id": "e18d3861-c7c3-4ee9-a37e-3fa8e85e76cb",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 028/2026 - Centro Social de Idosos de S. Francisco Xavier do Raminho.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 122/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 4845.95,
+      "url": "https://jo.azores.gov.pt/#/ato/e18d3861-c7c3-4ee9-a37e-3fa8e85e76cb"
+    },
+    {
+      "id": "d9f84d1d-7d16-4206-96c1-13577b9965b8",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 050/2026 - Obra do Padre Américo nos Açores.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 124/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 2958.0,
+      "url": "https://jo.azores.gov.pt/#/ato/d9f84d1d-7d16-4206-96c1-13577b9965b8"
+    },
+    {
+      "id": "e3ecaf9d-3ac5-44cd-9820-26ea6b693969",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 029/2026 -  Centro Social e Paroquial de São Mateus da Calheta.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 123/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 450.0,
+      "url": "https://jo.azores.gov.pt/#/ato/e3ecaf9d-3ac5-44cd-9820-26ea6b693969"
+    },
+    {
+      "id": "2e7a311d-df20-4b85-842c-1a3e8b5bb8c4",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 063/2026 - Casa do Povo de Porto Judeu.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 126/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 2233.0,
+      "url": "https://jo.azores.gov.pt/#/ato/2e7a311d-df20-4b85-842c-1a3e8b5bb8c4"
+    },
+    {
+      "id": "dcfdc4a2-0db2-44e4-82a6-0c2d57a8c969",
+      "summary": "Apoios financeiros no âmbito do Plano de Recuperação e Resiliência - SOLENERGE.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1244/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/dcfdc4a2-0db2-44e4-82a6-0c2d57a8c969"
+    },
+    {
+      "id": "4d10d246-e400-4143-a407-2017255b92ef",
+      "summary": "Apoios financeiros – Concessão de incentivos no âmbito do sistema de incentivos à produção de energia a partir de fontes renováveis (PROENERGIA).",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1246/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/4d10d246-e400-4143-a407-2017255b92ef"
+    },
+    {
+      "id": "664b4da2-af82-4802-b9a2-1b90efdf5373",
+      "summary": "Subdelegação de competências.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1239/2026 de 8 de junho de 2026",
+      "entity": "Serviço Florestal e de Ordenamento do Território do Faial",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/664b4da2-af82-4802-b9a2-1b90efdf5373"
+    },
+    {
+      "id": "9480dfaf-0216-4f28-aefc-b9b35d0f8b0f",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 071/2026 - Casa do Povo dos Biscoitos.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 127/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 4621.87,
+      "url": "https://jo.azores.gov.pt/#/ato/9480dfaf-0216-4f28-aefc-b9b35d0f8b0f"
+    },
+    {
+      "id": "96453478-a938-473e-af7d-d8c3c07c6b79",
+      "summary": "Extrato de Contrato Programa - Grupo Desportivo Mocidade Praiense - Açores Ativos.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 50/2026 de 8 de junho de 2026",
+      "entity": "Serviço de Desporto da Ilha da Graciosa",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 7500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/96453478-a938-473e-af7d-d8c3c07c6b79"
+    },
+    {
+      "id": "39a37b24-2dfb-4162-aef8-7009e92fb5bc",
+      "summary": "Aprova a contratação pela Região Autónoma dos Açores de um financiamento.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 68/2026 de 8 de junho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 71",
+      "total_value": 671000000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/39a37b24-2dfb-4162-aef8-7009e92fb5bc"
+    },
+    {
+      "id": "8fa10da3-01d7-4bcc-94fa-5961cf18a5ad",
+      "summary": "Apoios financeiros no âmbito do Plano de Recuperação e Resiliência - SOLENERGE.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1241/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/8fa10da3-01d7-4bcc-94fa-5961cf18a5ad"
+    },
+    {
+      "id": "7109da83-1edb-4860-8389-530c12e70425",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 072/2026 - Casa do Povo dos Biscoitos.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 128/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 4637.68,
+      "url": "https://jo.azores.gov.pt/#/ato/7109da83-1edb-4860-8389-530c12e70425"
+    },
+    {
+      "id": "f70e7451-bc58-4ff7-81fd-12ef5fcb7ce2",
+      "summary": "Alteração à licença de produção de energia elétrica não vinculada ao serviço público, atribuída à Quadrante Pacífico, Lda., Central Fotovoltaica da Canada do Mato de Cima, sita em Caminho da Furna, freguesia do Pico da Pedra, concelho da Ribeira Grande, ilha de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 142/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/f70e7451-bc58-4ff7-81fd-12ef5fcb7ce2"
+    },
+    {
+      "id": "73fe0ca6-5743-463f-a156-49d5ba8b837e",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 005/2026 - Santa Casa da Misericórdia do Nordeste.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 120/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 6115.25,
+      "url": "https://jo.azores.gov.pt/#/ato/73fe0ca6-5743-463f-a156-49d5ba8b837e"
+    },
+    {
+      "id": "5db9df39-1f16-4de1-9902-549808c1d8e7",
+      "summary": "Designação de Coordenador de Zona.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1238/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5db9df39-1f16-4de1-9902-549808c1d8e7"
+    },
+    {
+      "id": "cc015cbf-e1a1-4da4-abab-122c5b7106b8",
+      "summary": "Apoio financeiro - Escola Secundária Jerónimo Emiliano de Andrade.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 479/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 314.0,
+      "url": "https://jo.azores.gov.pt/#/ato/cc015cbf-e1a1-4da4-abab-122c5b7106b8"
+    },
+    {
+      "id": "b18e565e-5464-4d6d-b39f-4fb46427c346",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 073/2026 - Casa do Povo dos Biscoitos.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 129/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 5568.0,
+      "url": "https://jo.azores.gov.pt/#/ato/b18e565e-5464-4d6d-b39f-4fb46427c346"
+    },
+    {
+      "id": "5a094651-bc89-4fd8-b46e-f002a192e20c",
+      "summary": "Revisão do Contrato de Cooperação – Valor Investimento n.º 062/2025 - Santa Casa da Misericórdia da Vila de São Sebastião.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 130/2026 de 8 de junho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5a094651-bc89-4fd8-b46e-f002a192e20c"
+    },
+    {
+      "id": "8b216695-17ca-4ffb-8950-d6082fe6e422",
+      "summary": "Apoio financeiro - Escola Secundária Jerónimo Emiliano de Andrade.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 478/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": 750.0,
+      "url": "https://jo.azores.gov.pt/#/ato/8b216695-17ca-4ffb-8950-d6082fe6e422"
+    },
+    {
+      "id": "97b61cc8-d019-4496-b47c-167de0a937fe",
+      "summary": "Apoios financeiros no âmbito do Plano de Recuperação e Resiliência - SOLENERGE.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1242/2026 de 8 de junho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 107",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/97b61cc8-d019-4496-b47c-167de0a937fe"
+    },
+    {
+      "id": "46be07a8-e388-45d6-9285-3c4b4a9a7637",
+      "summary": "Autoriza a despesa e toma a decisão de contratar a aquisição, no ano de 2026, mediante abertura de concurso público, por lotes, com publicidade internacional, de manuais digitais e bens conexos para os alunos das unidades orgânicas do sistema educativo regional.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 69/2026 de 8 de junho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 71",
+      "total_value": 4926899.97,
+      "url": "https://jo.azores.gov.pt/#/ato/46be07a8-e388-45d6-9285-3c4b4a9a7637"
+    }
+  ],
+  "base": [
+    {
+      "id": 15090403,
+      "title": "Obra nº 14/26 - Aquisição de um limpa fossas com retoma do móvel 5",
+      "price": "109.411,09 €",
+      "buyer": "Serviços Municipalizados de Água e Saneamento de Ponta Delgada",
+      "seller": "Dionísio Carreiro de Almeida, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "01-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15090403"
+    },
+    {
+      "id": 15089145,
+      "title": "O presente Contrato tem como objeto a manutenção, assistência técnica e reparação dos veículos da frota da Secretaria Regional do Ambiente e Ação Climática na ilha Terceira, identificados no Anexo I d...",
+      "price": "83.000,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "TERAUTO - SOCIEDADE TERCEIRENSE DE AUTOMÓVEIS, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "22-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15089145"
+    },
+    {
+      "id": 15089384,
+      "title": "O presente Contrato tem como objeto a prestação de serviços de higiene e limpeza do Serviço de Ambiente e Ação Climática da Terceira, sito na Rua do Galo, n.º 118, Angra do Heroísmo.",
+      "price": "71.928,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "05-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15089384"
+    },
+    {
+      "id": 15089099,
+      "title": "Aquisição de serviços de aluguer, montagem e desmointagem de cozinhas para a XXV Feira de Gastronomia das Festas da Praia 2026",
+      "price": "55.000,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "José Tomás da Cunha &amp; Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15089099"
+    },
+    {
+      "id": 15089842,
+      "title": "Fornecimento e serviços de aplicação de herbicidas em vias municipais até dezembro de 2026 - Santa Cruz",
+      "price": "42.000,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "Amor Perfeito",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15089842"
+    },
+    {
+      "id": 15089283,
+      "title": "O presente Contrato tem como objeto a prestação de serviços de higiene e limpeza das instalações da Secretaria Regional do Ambiente e Ação Climática, sitas na Avenida Antero de Quental, n.º 9 C - 3º A...",
+      "price": "25.776,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "05-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15089283"
+    },
+    {
+      "id": 15089527,
+      "title": "O presente Contrato tem como objeto a prestação de serviços de higiene e limpeza das instalações do Serviço de Ambiente e Ação Climática da ilha das Flores, sito na Rua João Augusto Silveira 9960-443 ...",
+      "price": "23.544,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "05-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15089527"
+    },
+    {
+      "id": 15090577,
+      "title": "aquisição de um ecógrafo portátil Vetus E7 e de uma sonda Mindray C11-3s",
+      "price": "18.180,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Kercus Cientific, S.L.",
+      "procedure": "Contratação excluída II",
+      "signing_date": "05-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15090577"
+    },
+    {
+      "id": 15092172,
+      "title": "Ajuste Direto destinado à venda, que incluí o corte, de 2 (dois) lotes de madeira, predominantemente da espécie Cryptoméria japonica, e à adjudicação da prestação de serviços para execução, imediata e...",
+      "price": "15.663,50 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "Agostinho Coelho & Filhos Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15092172"
+    },
+    {
+      "id": 15091705,
+      "title": "AQUISIÇÃO PARA FORNECIMENTO DE 2 ELETROBOMBAS PARA SISTEMA INTEGRADO DE ABASTECIMENTO DE ÁGUA NO POA ZONA CENTRAL DA ILHA DE SÃO MIGUEL. Aquisição de  de 2 eletrobombas com 3KW de potência cada, com a...",
+      "price": "12.991,00 €",
+      "buyer": "IROA, S. A.",
+      "seller": "Harker Azores Lda,",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15091705"
+    },
+    {
+      "id": 15089616,
+      "title": "aquisição de Sistema de Medição Fishmetrics, conforme especificado na fatura proforma PF C/2, datada de 2026/05/18",
+      "price": "5.200,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Fishmetrics, Lda",
+      "procedure": "Contratação excluída II",
+      "signing_date": "05-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15089616"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9307,
+        "title": "Recusa da EDA - Eletricidade dos Açores, S.A. em reconhecer o SIEAP - Sindicato das Indústrias, Energia, Serviços e Águas de Portugal e bloqueio aos mecanismos legais de resolução de conflito coletivo",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "14/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9307"
+      },
+      {
+        "id": 9349,
+        "title": "Qualidade, critérios de abertura e adequação ao mercado dos cursos profissionais na Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "05/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9349"
+      },
+      {
+        "id": 9350,
+        "title": "Substituição dos cabos submarinos adiada para depois de 2030 coloca os Açores em risco",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "05/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9350"
+      },
+      {
+        "id": 9171,
+        "title": "Hastear de bandeiras não oficiais em edifícios públicos",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "06/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9171"
+      },
+      {
+        "id": 9236,
+        "title": "Teatro Micaelense: declarações da Presidente do Conselho de Administração sobre financiamento, sustentabilidade e modelo de gestão",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Sandra Costa Dias PS, ...",
+        "date": "06/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9236"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23616,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA reúne em Jornadas Parlamentares dando destaque aos terceirenses.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23616"
+      },
+      {
+        "id": 23617,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA agenda debate de urgência para saber ponto de situação do PRR nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23617"
+      },
+      {
+        "id": 23618,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 12/06/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23618"
+      },
+      {
+        "id": 23619,
+        "title": "Nota de Imprensa da Representação do BE - Governo esconde dados sobre a formação do preço dos combustíveis e não cumpre redução do ISP aprovada no parlamento.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23619"
+      },
+      {
+        "id": 23620,
+        "title": "Nota de Agenda da Representação Parlamentar da IL - Esta terça-feira, em Angra do Heroísmo - Deputado IL Nuno Barata reúne com Alpendre - Grupo de Teatro .",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23620"
+      },
+      {
+        "id": 23610,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores denuncia falta de resposta do Governo da República para visita e recolha de informações sobre processo de descontaminação das zonas afetadas na Base das Lajes.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23610"
+      },
+      {
+        "id": 23611,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA questiona \"Caça ao Empresário\" e exige esclarecimentos sobre inspeções da IRAE nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23611"
+      },
+      {
+        "id": 23612,
+        "title": "Nota de Imprensa da Representação do BE - Bloco quer que o Parlamento dos Açores diga não ao pacote laboral.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23612"
+      },
+      {
+        "id": 23613,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Agricultores açorianos voltam a ser excluídos de apoios da República.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23613"
+      },
+      {
+        "id": 23614,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Porto dos Carneiros afundado em algas revela falhanço da Lotaçor e silêncio do Governo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23614"
+      },
+      {
+        "id": 23615,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Aumento do consumo de álcool entre os jovens exige respostas imediatas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23615"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 2989,
+        "number": "87",
+        "date": "16/04/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/2989"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-06-08"
+}
