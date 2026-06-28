@@ -1,0 +1,46 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9324,
+        "title": "Políticas de apoio e incentivo à fixação de jovens nos Açores - avaliação, execução e resultados reais",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Hélia Cardoso CH, ...",
+        "date": "27/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9324"
+      },
+      {
+        "id": 9326,
+        "title": "Atrasos nos pagamentos à Associação Humanitária de Bombeiros Voluntários de Ponta Delgada",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "28/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9326"
+      },
+      {
+        "id": 9329,
+        "title": "Estudo de avaliação do impacto da RAMPA e desenvolvimento de mecanismos de compensação (2)",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "28/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9329"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-06-27"
+}
