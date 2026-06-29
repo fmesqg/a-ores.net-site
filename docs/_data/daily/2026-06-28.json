@@ -1,0 +1,40 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9332,
+        "title": "Qualificação profissional, programas de emprego, estágios profissionais e políticas de apoio à contratação na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Inês Sá PS, ...",
+        "date": "28/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9332"
+      }
+    ],
+    "votos": [
+      {
+        "id": 3953,
+        "title": "Pelo Męs do Orgulho LGBT+",
+        "authors": "PAN",
+        "result": "Aprovado por maioria",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/3953"
+      },
+      {
+        "id": 3955,
+        "title": "Pelo desrespeito institucional demonstrado para com a Assembleia Legislativa da Regiăo Autónoma dos Açores nas Cerimónias do 10 de Junho de 2026",
+        "authors": "CH",
+        "result": "Rejeitado por maioria",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/3955"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-06-28"
+}
