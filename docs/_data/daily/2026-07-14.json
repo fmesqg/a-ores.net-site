@@ -1,0 +1,781 @@
+{
+  "joraa": [
+    {
+      "id": "aa217461-5e6e-46f9-b7cf-4294b6efc99a",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Quarto pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1637/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 522.75,
+      "url": "https://jo.azores.gov.pt/#/ato/aa217461-5e6e-46f9-b7cf-4294b6efc99a"
+    },
+    {
+      "id": "b7b30f5e-a08c-4a8d-a09e-ff9019cd6f68",
+      "summary": "Lista de pagamentos agroindústrias no âmbito do Aviso n.º 10/C05-i05-RAA/2022.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 188/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/b7b30f5e-a08c-4a8d-a09e-ff9019cd6f68"
+    },
+    {
+      "id": "505e05d8-e88e-48f7-be61-b9ec6bf21e13",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha Graciosa - Primeiro pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1643/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 4511.21,
+      "url": "https://jo.azores.gov.pt/#/ato/505e05d8-e88e-48f7-be61-b9ec6bf21e13"
+    },
+    {
+      "id": "7665d232-e9cc-43af-a884-40e61a08628d",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Quarto pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1636/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 147.45,
+      "url": "https://jo.azores.gov.pt/#/ato/7665d232-e9cc-43af-a884-40e61a08628d"
+    },
+    {
+      "id": "abeb8e73-2685-44fb-8731-3e72519c8196",
+      "summary": "Delegação de competências.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1627/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Turismo, Mobilidade e Infraestruturas",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/abeb8e73-2685-44fb-8731-3e72519c8196"
+    },
+    {
+      "id": "0d7ae09b-6628-4140-bff8-d788dc51f870",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia das Lajes das Flores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 672/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 3877.63,
+      "url": "https://jo.azores.gov.pt/#/ato/0d7ae09b-6628-4140-bff8-d788dc51f870"
+    },
+    {
+      "id": "1dff07b8-6fec-4abb-b6d9-157a9aa39d9e",
+      "summary": "4.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - USFC - SM.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 80/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/1dff07b8-6fec-4abb-b6d9-157a9aa39d9e"
+    },
+    {
+      "id": "4c9f5a3f-78a8-4ec8-926a-3f23982c6ce5",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Décimo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1632/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 1312.5,
+      "url": "https://jo.azores.gov.pt/#/ato/4c9f5a3f-78a8-4ec8-926a-3f23982c6ce5"
+    },
+    {
+      "id": "0def1dbb-0670-4b31-8752-1075c42fcd15",
+      "summary": "Subdelegação de poderes.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1624/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 41632.7,
+      "url": "https://jo.azores.gov.pt/#/ato/0def1dbb-0670-4b31-8752-1075c42fcd15"
+    },
+    {
+      "id": "5262c5b2-8b4b-4d34-8c0e-acc576e9565b",
+      "summary": "Apoios financeiros no âmbito do Plano de Recuperação e Resiliência - SOLENERGE.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1628/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5262c5b2-8b4b-4d34-8c0e-acc576e9565b"
+    },
+    {
+      "id": "ec03623f-37cf-4959-9e37-7c72479c3c7f",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Quinto pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1638/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 450.98,
+      "url": "https://jo.azores.gov.pt/#/ato/ec03623f-37cf-4959-9e37-7c72479c3c7f"
+    },
+    {
+      "id": "945552bc-f990-454a-bf4a-d1f8fa3737f1",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha Graciosa - Terceiro pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1644/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 48.0,
+      "url": "https://jo.azores.gov.pt/#/ato/945552bc-f990-454a-bf4a-d1f8fa3737f1"
+    },
+    {
+      "id": "2020a93b-2b43-4071-9bfd-6924afeae80e",
+      "summary": "Empreitada de beneficiação do Caminho do Carregadouro.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 329/2026 de 14 de julho de 2026",
+      "entity": "IROA, S.A.",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 360000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/2020a93b-2b43-4071-9bfd-6924afeae80e"
+    },
+    {
+      "id": "d4097c20-05e0-43aa-8ad9-4e6fc289732d",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Sétimo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1641/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 165.0,
+      "url": "https://jo.azores.gov.pt/#/ato/d4097c20-05e0-43aa-8ad9-4e6fc289732d"
+    },
+    {
+      "id": "6c107d4f-7fcf-46c7-b3a2-29745b4f0a02",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Sétimo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1639/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 692.0,
+      "url": "https://jo.azores.gov.pt/#/ato/6c107d4f-7fcf-46c7-b3a2-29745b4f0a02"
+    },
+    {
+      "id": "6611da2d-4e1e-4734-b058-cd355c1b2ea5",
+      "summary": "Subdelegação de poderes.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1625/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 35000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/6611da2d-4e1e-4734-b058-cd355c1b2ea5"
+    },
+    {
+      "id": "75b60045-ecf9-4cd8-adb7-f0d10fb86379",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Sexto pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1642/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 105.0,
+      "url": "https://jo.azores.gov.pt/#/ato/75b60045-ecf9-4cd8-adb7-f0d10fb86379"
+    },
+    {
+      "id": "06574c36-1bf9-41f2-b7a9-36c5812173da",
+      "summary": "Extrato de Contrato-Programa - UAAA - FFADNP.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 111/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 1173.4,
+      "url": "https://jo.azores.gov.pt/#/ato/06574c36-1bf9-41f2-b7a9-36c5812173da"
+    },
+    {
+      "id": "acd128b9-197f-43c1-9bb4-3e525016fcf4",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Nono pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1634/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 207.25,
+      "url": "https://jo.azores.gov.pt/#/ato/acd128b9-197f-43c1-9bb4-3e525016fcf4"
+    },
+    {
+      "id": "73e0bef8-4035-4803-9398-b2e0c54e86ba",
+      "summary": "1.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - Associação Regional dos Açores de Montanhismo e Escalada - AR.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 77/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 19012.5,
+      "url": "https://jo.azores.gov.pt/#/ato/73e0bef8-4035-4803-9398-b2e0c54e86ba"
+    },
+    {
+      "id": "08a4ccdf-cdae-4f0b-bb3a-4e74f81bbedd",
+      "summary": "Apoio financeiro - Casa do Povo de Arrifes.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 670/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 37215.65,
+      "url": "https://jo.azores.gov.pt/#/ato/08a4ccdf-cdae-4f0b-bb3a-4e74f81bbedd"
+    },
+    {
+      "id": "cbf5804f-831e-4525-a84b-53fbc5a69723",
+      "summary": "Apoio financeiro destinado à manutenção da paisagem tradicional da cultura da vinha em currais na ilha do Pico - Décimo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1631/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 1485.2,
+      "url": "https://jo.azores.gov.pt/#/ato/cbf5804f-831e-4525-a84b-53fbc5a69723"
+    },
+    {
+      "id": "501d6393-0d80-44c2-b881-0c88393c5aa1",
+      "summary": "Atribui à Equiambi – Equipamentos, Serviço e Gestão Ambientais, Sociedade Unipessoal, Lda. uma compensação financeira no âmbito do transporte inter-ilhas de refugo dos Centros de Processamento de Resíduos de São Jorge e Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1646/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 25870.83,
+      "url": "https://jo.azores.gov.pt/#/ato/501d6393-0d80-44c2-b881-0c88393c5aa1"
+    },
+    {
+      "id": "53c24acd-2af5-4623-b7a1-bb6d1970a274",
+      "summary": "1.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - AVISMA - Atividade Local.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 78/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/53c24acd-2af5-4623-b7a1-bb6d1970a274"
+    },
+    {
+      "id": "95cd49a5-9ef6-4695-ac56-3b8e971ddab0",
+      "summary": "Comparticipação financeira - União Sebastianense Futebol Clube.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 187/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/95cd49a5-9ef6-4695-ac56-3b8e971ddab0"
+    },
+    {
+      "id": "c62e2817-990d-4490-8889-bfb3fa796fb5",
+      "summary": "1.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - AAIT - AL.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 75/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/c62e2817-990d-4490-8889-bfb3fa796fb5"
+    },
+    {
+      "id": "8ff502b7-a476-4456-90ab-62941ce64f6b",
+      "summary": "Lista de pagamentos agroindústrias no âmbito do Aviso n.º 11/C05-i05-RAA/2022.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 189/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/8ff502b7-a476-4456-90ab-62941ce64f6b"
+    },
+    {
+      "id": "f0a7c682-715e-4381-b352-ceed83665fd4",
+      "summary": "Alteração dos n.º 1 e 2 do Despacho n.º 1422/2025, de 27 de junho, na redação dada pelo Despacho n.º 211/2026, de 6 de fevereiro.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1626/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Turismo, Mobilidade e Infraestruturas",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/f0a7c682-715e-4381-b352-ceed83665fd4"
+    },
+    {
+      "id": "8e1488ed-bca2-4c7f-8ff4-4a59460ac921",
+      "summary": "Extrato de Contrato-Programa - AJAA - AFFADNP.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 108/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 6536.0,
+      "url": "https://jo.azores.gov.pt/#/ato/8e1488ed-bca2-4c7f-8ff4-4a59460ac921"
+    },
+    {
+      "id": "1bd8d469-c5f7-42b2-a74d-f051ef22c6ff",
+      "summary": "Apoio financeiro - Associação Humanitária dos Bombeiros Voluntários da Madalena do Pico.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1630/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 54000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/1bd8d469-c5f7-42b2-a74d-f051ef22c6ff"
+    },
+    {
+      "id": "ba03dee5-43a0-414a-b027-c78ffc94a127",
+      "summary": "1.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - AKA - Atividade Local.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 76/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/ba03dee5-43a0-414a-b027-c78ffc94a127"
+    },
+    {
+      "id": "25c3b385-1e11-42ea-a0f0-533c93591d90",
+      "summary": "Comparticipação financeira - SCL.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 186/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 775.0,
+      "url": "https://jo.azores.gov.pt/#/ato/25c3b385-1e11-42ea-a0f0-533c93591d90"
+    },
+    {
+      "id": "b8b477bc-6db6-4941-a205-20a6efb0022e",
+      "summary": "Apoio financeiro - Associações de Proteção Animal.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 673/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 10.0,
+      "url": "https://jo.azores.gov.pt/#/ato/b8b477bc-6db6-4941-a205-20a6efb0022e"
+    },
+    {
+      "id": "8ce922f4-9f36-40f1-a0a9-3958b461b397",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Nono pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1633/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 904.45,
+      "url": "https://jo.azores.gov.pt/#/ato/8ce922f4-9f36-40f1-a0a9-3958b461b397"
+    },
+    {
+      "id": "97e58d68-1622-46d6-ab11-9addabc3be8c",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Oitavo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1635/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 465.0,
+      "url": "https://jo.azores.gov.pt/#/ato/97e58d68-1622-46d6-ab11-9addabc3be8c"
+    },
+    {
+      "id": "95140c33-ffca-4065-9fa6-24f365bf1ee8",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Vila de Santa Cruz das Flores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 671/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 18245.43,
+      "url": "https://jo.azores.gov.pt/#/ato/95140c33-ffca-4065-9fa6-24f365bf1ee8"
+    },
+    {
+      "id": "29d0d4eb-e07c-408d-a7eb-cf147b273f09",
+      "summary": "Extrato de Contrato-Programa - ARVA - FFADNP.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 109/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 2776.0,
+      "url": "https://jo.azores.gov.pt/#/ato/29d0d4eb-e07c-408d-a7eb-cf147b273f09"
+    },
+    {
+      "id": "709ae722-bb35-4a30-bd64-7ce6f09325bc",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Sétimo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1640/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 2410.95,
+      "url": "https://jo.azores.gov.pt/#/ato/709ae722-bb35-4a30-bd64-7ce6f09325bc"
+    },
+    {
+      "id": "2a641425-f13a-4fb7-a440-66535dbaabbe",
+      "summary": "Extrato de Contrato-Programa - Associação de Atletismo da Ilha Terceira - FFADNP.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 110/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 3437.0,
+      "url": "https://jo.azores.gov.pt/#/ato/2a641425-f13a-4fb7-a440-66535dbaabbe"
+    },
+    {
+      "id": "d7e46dd3-744a-419c-8409-338bc126b841",
+      "summary": "Atribui à Resiaçores - Gestão de Resíduos dos Açores, Lda. uma compensação financeira no âmbito do transporte inter-ilhas de refugo dos Centros de Processamento de Resíduos do Corvo, Flores, Faial e Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1647/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 91310.31,
+      "url": "https://jo.azores.gov.pt/#/ato/d7e46dd3-744a-419c-8409-338bc126b841"
+    },
+    {
+      "id": "84e7e23c-410d-4241-90a7-bc62ab3b0438",
+      "summary": "Licença de produção de energia elétrica não vinculada ao serviço público, atribuída à EDA Renováveis, S.A., Aproveitamento Hidroelétrico do Canário, freguesia de Furnas, concelho da Povoação, ilha de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 190/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/84e7e23c-410d-4241-90a7-bc62ab3b0438"
+    },
+    {
+      "id": "0ae406bc-2574-4c42-b8bd-c483b26ea69e",
+      "summary": "Aquisição de 44,460 toneladas (quarenta e quatro toneladas e quatrocentos e sessenta quilogramas) de rodenticida.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 328/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional da Agricultura, Veterinária e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 400000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/0ae406bc-2574-4c42-b8bd-c483b26ea69e"
+    },
+    {
+      "id": "2d0da11d-a3fe-4646-bade-b3bb3d5cf8e3",
+      "summary": "Apoio financeiro - Comparticipação a Associações de Proteção Animal, na aquisição de produtos de uso veterinário ou de serviços médico -veterinários realizados na Região, relacionados com o resgate, reabilitação e cuidado de animais.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 674/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 2115.04,
+      "url": "https://jo.azores.gov.pt/#/ato/2d0da11d-a3fe-4646-bade-b3bb3d5cf8e3"
+    },
+    {
+      "id": "14372c58-59be-47bd-88af-19c831554986",
+      "summary": "Apoio financeiro - ADI - Associação de Desenvolvimento Intergeracional.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 669/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 98453.94,
+      "url": "https://jo.azores.gov.pt/#/ato/14372c58-59be-47bd-88af-19c831554986"
+    },
+    {
+      "id": "ffb38fe4-5fb2-408c-9c82-9b8b932d640d",
+      "summary": "Apoios financeiros no âmbito do Plano de Recuperação e Resiliência - SOLENERGE.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1629/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/ffb38fe4-5fb2-408c-9c82-9b8b932d640d"
+    },
+    {
+      "id": "d479370b-60da-422f-8d5b-2945e726d793",
+      "summary": "Comparticipação financeira - Fundo Escolar da Escola Básica e Secundária da Madalena.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 185/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 3461.25,
+      "url": "https://jo.azores.gov.pt/#/ato/d479370b-60da-422f-8d5b-2945e726d793"
+    },
+    {
+      "id": "36f01294-665a-4239-b2c7-cca3a5c98175",
+      "summary": "Aquisição, por lotes, da prestação de serviços de manutenção preventiva de centrífugas, equipamentos de frio, estufas, câmaras de segurança biológica, incubadoras e banhos, pelo prazo de 3 (três) anos, para o Hospital Divino Espírito Santo de Ponta Delgada, EPER.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 327/2026 de 14 de julho de 2026",
+      "entity": "Hospital do Divino Espírito Santo de Ponta Delgada, E.P.E.R.",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/36f01294-665a-4239-b2c7-cca3a5c98175"
+    },
+    {
+      "id": "cb56d976-d404-4ce3-be9f-65641c562c46",
+      "summary": "Retifica o Contrato-Programa n.º 183/2026, publicado no Jornal Oficial, II série, n.º 87, de 26 de maio de 2026.",
+      "text_excerpt": "",
+      "human_id": "Declaração de Retificação n.º 52/2026 de 14 de julho de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/cb56d976-d404-4ce3-be9f-65641c562c46"
+    },
+    {
+      "id": "0e9b6a53-f03f-4d1a-9473-0143085391e7",
+      "summary": "2.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - AFC.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 79/2026 de 14 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/0e9b6a53-f03f-4d1a-9473-0143085391e7"
+    },
+    {
+      "id": "a28e43e0-1782-4d4b-b114-0ae49b5bcc18",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha Terceira - Segundo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1645/2026 de 14 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 132",
+      "total_value": 496.32,
+      "url": "https://jo.azores.gov.pt/#/ato/a28e43e0-1782-4d4b-b114-0ae49b5bcc18"
+    }
+  ],
+  "base": [
+    {
+      "id": 15281232,
+      "title": "Prestação de Serviços de Manutenção e Assistência Técnica da Aplicação PatienCare na UCI e Bloco",
+      "price": "137.388,17 €",
+      "buyer": "HOSPITAL DE SANTO ESPÍRITO DA ILHA TERCEIRA, EPER",
+      "seller": "B-Simple Sistemas de Informação,Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15281232"
+    },
+    {
+      "id": 15281239,
+      "title": "Serviços Médicos no Serviço de Urgência do Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Castro Amorim - Consultório Médico, Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15281239"
+    },
+    {
+      "id": 15282732,
+      "title": "Aquisição de Mobiliário Urbano para Parque Infantil do Concelho",
+      "price": "70.590,25 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "ERGOPARK, LDA",
+      "procedure": "Consulta Prévia",
+      "signing_date": "14-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15282732"
+    },
+    {
+      "id": 15279692,
+      "title": "Prestação de Serviços de Seguros do Segmento Não Vida",
+      "price": "56.809,18 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "Generali Seguros, S.A.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "13-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15279692"
+    },
+    {
+      "id": 15283589,
+      "title": "Fornecimento e Montagem de uma Pérgola na Esplanada do Complexo Municipal de Piscinas",
+      "price": "55.032,25 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Ergopark, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15283589"
+    },
+    {
+      "id": 15283772,
+      "title": "Aquisição de Serviços de Paginação, Arranjo Gráfico e Impressão de Livros para os Volumes V e VI, no Âmbito da Apresentação Completa da Obra Etnologia dos Açores de Francisco Carreiro da Costa",
+      "price": "46.990,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Nova Gráfica, Ldª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15283772"
+    },
+    {
+      "id": 15283722,
+      "title": "Fornecimento e Montagem de dois Parques Infantis",
+      "price": "45.999,20 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Ergopark, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15283722"
+    },
+    {
+      "id": 15279829,
+      "title": "Aquisição de Estudo da nova Rede do Serviço Urbano de Transportes Coletivos de Angra do Heroísmo e Apoio Técnico e Financeiro ao Concurso",
+      "price": "36.000,00 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "Trenmo Engenharia, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15279829"
+    },
+    {
+      "id": 15283674,
+      "title": "Fornecimento de Carne Destinada às Pensões e Sopas do Império de São Pedro\"",
+      "price": "32.579,42 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Sicosta - Sociedade Industrial de Carnes, Ldª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15283674"
+    },
+    {
+      "id": 15282102,
+      "title": "Aquisição de serviços assessoria técnica à revisão da recomendação tarifária da ERSARA",
+      "price": "19.850,00 €",
+      "buyer": "Entidade Reguladora dos Serviços de Águas e Resíduos dos Açores",
+      "seller": "RPG, Regulation, Performance and Governance, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15282102"
+    },
+    {
+      "id": 15283168,
+      "title": "Eletrificação de Recintos e Espaços das Festas de Santo António, do Festival Lagoa Bom Porto - Festa em Honra de S. Pedro Goncalves Telmo, do Império de S. Pedro e da Festa Branca do Convento - Lote 1",
+      "price": "10.000,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Vigiluz - Instalações Elétricas e Comércio SU, Ldª ",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15283168"
+    },
+    {
+      "id": 15283125,
+      "title": "Eletrificação de Recintos e Espaços das Festas de Santo António, do Festival Lagoa Bom Porto - Festa em Honra de S. Pedro Goncalves Telmo, do Império de S. Pedro e da Festa Branca do Convento - Lote 1",
+      "price": "7.500,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Vigiluz - Instalações Elétricas e Comércio, SU, Ldª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15283125"
+    },
+    {
+      "id": 15280191,
+      "title": "Banco Apoio para arrecadação receita Segurança Social através sistema de pagamento pela rede Multibanco - Ajuste Direto 1 mês",
+      "price": "7.275,95 €",
+      "buyer": "Instituto da Segurança Social dos Açores, IP R. A.",
+      "seller": "Banco Comercial Português S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15280191"
+    },
+    {
+      "id": 15280435,
+      "title": "Aquisição de serviços para a realização do espetáculo Faial a Uma Só Voz, no âmbito das comemorações do dia da cidade 2026",
+      "price": "3.000,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Marés – Associação Cultural",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15280435"
+    },
+    {
+      "id": 15281271,
+      "title": "Aquisição de serviços de artista para a realização de três concertos da temporada musical 2026",
+      "price": "983,33 €",
+      "buyer": "Município da Horta",
+      "seller": "Olga Gorobets",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15281271"
+    },
+    {
+      "id": 15281134,
+      "title": "Aquisição de Artista para a Realização de um Concerto da Temporada Musical 2026",
+      "price": "350,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Maria Elena Biasini",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15281134"
+    },
+    {
+      "id": 15280830,
+      "title": "Aquisição de Artista para a Realização de um Concerto da Temporada Musical 2026",
+      "price": "170,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Nuno Eduardo Garcia de Abrunhosa Mendes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15280830"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9377,
+        "title": "Futuro do troço de Santo António da Variante às Capelas",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "23/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9377"
+      },
+      {
+        "id": 9393,
+        "title": "Estratégia de promoção turística dos Açores aos sinais de desaceleração da procura turística",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9393"
+      },
+      {
+        "id": 9412,
+        "title": "Atrasos no Programa Nascer+",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "09/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9412"
+      },
+      {
+        "id": 9414,
+        "title": "Financiamento público de estudo científico pelo Fundo Regional de Ciência e Tecnologia",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9414"
+      },
+      {
+        "id": 9415,
+        "title": "Dados sobre fibromialgia na Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9415"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23863,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 22/07/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23863"
+      },
+      {
+        "id": 23864,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS/Açores realiza Jornadas Parlamentares em São Jorge dedicadas às Acessibilidades",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23864"
+      },
+      {
+        "id": 23865,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores realça consulta pública do Bote Baleeiro para Inventário Nacional do Património",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23865"
+      },
+      {
+        "id": 23866,
+        "title": "Comissão de Economia - Convocatória (Dia 17/07/2026, pelas 15:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23866"
+      },
+      {
+        "id": 23867,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer conhecer dados sobre fibromialgia nos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23867"
+      },
+      {
+        "id": 23868,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Vice-Presidente da Assembleia, Deputado João Vasco Costa, recebe em representação de Sua Excelência o Presidente da Assembleia, o Comissário Europeu para as Pescas e Oceanos, Costas Kadis, na sede da Assembleia.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23868"
+      },
+      {
+        "id": 23869,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia marca presença na Sessão Solene Comemorativa do 50.º aniversário da Autonomia da Região Autónoma da Madeira, na sede do Parlamento Madeirense.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23869"
+      },
+      {
+        "id": 23870,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia é recebido em audiência de apresentação de cumprimentos, pela Presidente da Assembleia Legislativa da Região Autónoma da Madeira, na sede do Parlamento Madeirense.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23870"
+      },
+      {
+        "id": 23871,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia reúne com a Presidente da Companhia de Teatro Cães do Mar, Ana Brum, na livraria-café \"Lar Doce Livro\", em Angra do Heroísmo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23871"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-07-14"
+}
