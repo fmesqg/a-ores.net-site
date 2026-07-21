@@ -1,0 +1,653 @@
+{
+  "joraa": [
+    {
+      "id": "6cc4d45d-520b-4f28-8261-fd12d5dce134",
+      "summary": "Extrato de Contrato-Programa - Fábrica da Igreja Paroquial da Freguesia de Santa Cruz das Flores.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 122/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/6cc4d45d-520b-4f28-8261-fd12d5dce134"
+    },
+    {
+      "id": "f002df91-961e-40f7-b2a1-976fd563722e",
+      "summary": "Extrato de Contrato-Programa de Desenvolvimento Artístico, Educativo e Cultural - Lions Clube Flores Pérola do Ocidente.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 124/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/f002df91-961e-40f7-b2a1-976fd563722e"
+    },
+    {
+      "id": "700b5180-3b56-4411-819a-9b96fa277201",
+      "summary": "Autorização de condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 20/2026 de 20 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/700b5180-3b56-4411-819a-9b96fa277201"
+    },
+    {
+      "id": "7d3bce42-c915-4804-a822-43869ee35cf3",
+      "summary": "1.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - Associação de Voleibol de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 121/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/7d3bce42-c915-4804-a822-43869ee35cf3"
+    },
+    {
+      "id": "7b68ea9b-be32-41fa-82af-d16c355a30e1",
+      "summary": "Anula a publicação do Extrato de Contrato-Programa n.º 112/2026, de 17 de Julho, publicado no Jornal Oficial, II Série, n.º 135, 17 de julho de 2026.",
+      "text_excerpt": "",
+      "human_id": "Anulação n.º 15/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/7b68ea9b-be32-41fa-82af-d16c355a30e1"
+    },
+    {
+      "id": "f8b542e9-77fb-48f5-b18b-e91b5e72d56f",
+      "summary": "Extrato de Contrato-Programa de Desenvolvimento Cultural - A Jangada - Grupo de Teatro.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 125/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 6000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/f8b542e9-77fb-48f5-b18b-e91b5e72d56f"
+    },
+    {
+      "id": "9cf86160-5aa5-4368-91f1-9f6df405330e",
+      "summary": "Transferência de verba para o Centro de Qualificação dos Açores, IPRA.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 685/2026 de 20 de julho de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 200000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/9cf86160-5aa5-4368-91f1-9f6df405330e"
+    },
+    {
+      "id": "1f29a665-6154-41d2-bb40-6c1ed9636c14",
+      "summary": "Programa de Apoio à Revitalização das Lojas nos Centros Urbanos – LOJA+.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1678/2026 de 20 de julho de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 7220.59,
+      "url": "https://jo.azores.gov.pt/#/ato/1f29a665-6154-41d2-bb40-6c1ed9636c14"
+    },
+    {
+      "id": "1cc19a63-5524-4e78-bd64-a8bdf808d783",
+      "summary": "Declara de utilidade pública a “Associação de Artes Circenses dos Açores – 9’ Circos”.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1677/2026 de 20 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/1cc19a63-5524-4e78-bd64-a8bdf808d783"
+    },
+    {
+      "id": "83d2f78f-4ad9-458e-b2b9-3e184194aa52",
+      "summary": "Extrato de Contrato-Programa de Desenvolvimento Desportivo - Grupo Desportivo Os Minhocas.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 128/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 11000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/83d2f78f-4ad9-458e-b2b9-3e184194aa52"
+    },
+    {
+      "id": "541f2e2a-54c3-4425-b90d-ea57b5a1b8ba",
+      "summary": "Contrato de atribuição de apoio financeiro - Carla Patrícia Viveiros Pontes Xavier.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 318/2026 de 20 de julho de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 1152.0,
+      "url": "https://jo.azores.gov.pt/#/ato/541f2e2a-54c3-4425-b90d-ea57b5a1b8ba"
+    },
+    {
+      "id": "3eba1719-956c-4d91-9b0b-64ebb59911f3",
+      "summary": "Apoios financeiros no âmbito do Plano de Recuperação e Resiliência - SOLENERGE.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1679/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/3eba1719-956c-4d91-9b0b-64ebb59911f3"
+    },
+    {
+      "id": "15dbde75-b95b-4277-ae43-fdbf886d4509",
+      "summary": "Concurso Público Urgente para Adjudicação de Seguros de Acidentes Pessoais.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 339/2026 de 20 de julho de 2026",
+      "entity": "Município de Ribeira Grande",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/15dbde75-b95b-4277-ae43-fdbf886d4509"
+    },
+    {
+      "id": "78b1f945-86af-4507-ac99-89cfbd9a110c",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha do Faial - Décimo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1683/2026 de 20 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 2954.6,
+      "url": "https://jo.azores.gov.pt/#/ato/78b1f945-86af-4507-ac99-89cfbd9a110c"
+    },
+    {
+      "id": "20479887-1232-4018-a694-4c8e65c201f1",
+      "summary": "Autorização de condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 18/2026 de 20 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/20479887-1232-4018-a694-4c8e65c201f1"
+    },
+    {
+      "id": "0e46dc9c-b053-448b-ad63-da851f192cc5",
+      "summary": "Atribuição de apoios financeiros - Juventude.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1681/2026 de 20 de julho de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 170325.39,
+      "url": "https://jo.azores.gov.pt/#/ato/0e46dc9c-b053-448b-ad63-da851f192cc5"
+    },
+    {
+      "id": "cf150248-ab38-4760-80d3-5808e1d01cd7",
+      "summary": "Extrato de Contrato-Programa - Associação de Jovens das Flores.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 121/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 2500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/cf150248-ab38-4760-80d3-5808e1d01cd7"
+    },
+    {
+      "id": "d8ef1029-8ec8-4c73-b543-043333a87a23",
+      "summary": "CCT entre a Câmara do Comércio e Indústria de Ponta Delgada e o SINDESCOM - Sindicato dos Profissionais de Escritório, Comércio, Indústria, Turismo, Serviços e Correlativos da Região Autónoma dos Açores (Setor de Comércio e Indústria de Transformação de Carnes e Exploração Avícolas) – Comissão Paritária.",
+      "text_excerpt": "",
+      "human_id": "Convenção Coletiva de Trabalho n.º 23/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/d8ef1029-8ec8-4c73-b543-043333a87a23"
+    },
+    {
+      "id": "0efc7105-b6aa-4f85-a919-1a33048c637e",
+      "summary": "Extrato de Contrato-Programa - Irmandade do Divino Espírito Santo do Monte de Santa Cruz.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 123/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 2500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/0efc7105-b6aa-4f85-a919-1a33048c637e"
+    },
+    {
+      "id": "19ea0110-4b9f-463d-b703-8bbc24674d74",
+      "summary": "Aquisição de Betão Pronto C20/25.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 338/2026 de 20 de julho de 2026",
+      "entity": "Município de Ponta Delgada",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/19ea0110-4b9f-463d-b703-8bbc24674d74"
+    },
+    {
+      "id": "afde6114-e6ca-4676-9bbc-31ed40694324",
+      "summary": "Apoios financeiros - Programa de Apoio à Restauração e Hotelaria para a Aquisição de Produtos Açorianos.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 208/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional do Empreendedorismo e Competitividade",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/afde6114-e6ca-4676-9bbc-31ed40694324"
+    },
+    {
+      "id": "2edbcb66-987f-4df3-ac56-8615912e3847",
+      "summary": "1.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - Associação de Basquetebol de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 120/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/2edbcb66-987f-4df3-ac56-8615912e3847"
+    },
+    {
+      "id": "1dbaa3bf-6eca-4cfb-b085-eda956b0a1ec",
+      "summary": "Autoriza a Secretária Regional do Turismo, Mobilidade e Infraestruturas a aprovar, por portaria, uma redução de 50% das tarifas previstas nos artigos 11.º, 17.º, 20.º, 29.º e 34.º da Portaria n.º 29/2024, de 27 de maio.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 92/2026 de 20 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 90",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/1dbaa3bf-6eca-4cfb-b085-eda956b0a1ec"
+    },
+    {
+      "id": "8edda626-9233-481e-bdf9-a4c24eac85d7",
+      "summary": "Autoriza a celebração de um contrato programa entre a Região Autónoma dos Açores e a Associação NONAGON – Associação Parque de Ciência e Tecnologia de São Miguel.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 90/2026 de 20 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 90",
+      "total_value": 492000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/8edda626-9233-481e-bdf9-a4c24eac85d7"
+    },
+    {
+      "id": "5558274e-4608-428a-8773-a72d44400bd6",
+      "summary": "Apoios financeiros no âmbito do Plano de Recuperação e Resiliência - SOLENERGE.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1680/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional da Energia",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5558274e-4608-428a-8773-a72d44400bd6"
+    },
+    {
+      "id": "18fd2392-9511-4e33-b78d-bd2e69af8ad7",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 077/2026 - Centro de Bem Estar Jacinto Ferreira Cabido.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 192/2026 de 20 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 859.56,
+      "url": "https://jo.azores.gov.pt/#/ato/18fd2392-9511-4e33-b78d-bd2e69af8ad7"
+    },
+    {
+      "id": "7510dc4e-9e81-441a-904d-f022400f4fbf",
+      "summary": "Extrato de Contrato-Programa de Desenvolvimento Desportivo - Associação de Voleibol da Ilha das Flores.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 126/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 2500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/7510dc4e-9e81-441a-904d-f022400f4fbf"
+    },
+    {
+      "id": "31f2fdcd-9b93-4bcb-8488-9a641c1d9b34",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Nono pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1682/2026 de 20 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 122.5,
+      "url": "https://jo.azores.gov.pt/#/ato/31f2fdcd-9b93-4bcb-8488-9a641c1d9b34"
+    },
+    {
+      "id": "333542cc-0c54-47cf-a944-4872368d2a28",
+      "summary": "Contrato de atribuição de apoio financeiro - Bárbara Mariana Sousa Cabral.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 317/2026 de 20 de julho de 2026",
+      "entity": "Município de Lajes do Pico",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 3187.5,
+      "url": "https://jo.azores.gov.pt/#/ato/333542cc-0c54-47cf-a944-4872368d2a28"
+    },
+    {
+      "id": "b1a88a2b-3bcd-4069-80b9-eead5b16b81d",
+      "summary": "Extrato de Contrato-Programa - Agrupamento de Escuteiros 691.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 120/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 3000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/b1a88a2b-3bcd-4069-80b9-eead5b16b81d"
+    },
+    {
+      "id": "033311b1-3a53-43aa-b4fa-b185484d3e1c",
+      "summary": "Alteração dos Estatutos da Associação Humanitária de Bombeiros Voluntários da Ilha Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Aviso n.º 78/2026 de 20 de julho de 2026",
+      "entity": "Empresas/Associações/Fundações/Casas do Povo",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/033311b1-3a53-43aa-b4fa-b185484d3e1c"
+    },
+    {
+      "id": "1dbf897f-3ddd-492f-ab5b-e4bf81c582af",
+      "summary": "Apoios financeiros - Programa de Apoio ao Acesso aos Mercados.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 209/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional do Empreendedorismo e Competitividade",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/1dbf897f-3ddd-492f-ab5b-e4bf81c582af"
+    },
+    {
+      "id": "721c5102-43ff-4fd9-8a4d-0fb184b851c4",
+      "summary": "1.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - Associação Açoreana Karaté Do e Disciplinas Associadas - AR.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 119/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/721c5102-43ff-4fd9-8a4d-0fb184b851c4"
+    },
+    {
+      "id": "8f0b9a16-8d02-487d-850d-bda4ba35521c",
+      "summary": "Autorização de condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 21/2026 de 20 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/8f0b9a16-8d02-487d-850d-bda4ba35521c"
+    },
+    {
+      "id": "5c8092cb-9f0d-418a-86cb-d936195654c3",
+      "summary": "Extrato de Contrato-Programa de Desenvolvimento Desportivo - Clube Desportivo Escolar das Flores.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 127/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 6000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/5c8092cb-9f0d-418a-86cb-d936195654c3"
+    },
+    {
+      "id": "408195fa-fb1f-4cbe-8795-cccf7619bb25",
+      "summary": "Autoriza a realização de despesa e a abertura de um concurso público com publicidade internacional no Jornal Oficial da União Europeia, com vista à celebração de um contrato de aquisição de um veículo com meios elevatórios para socorro e assistência.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 91/2026 de 20 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 90",
+      "total_value": 1299850.0,
+      "url": "https://jo.azores.gov.pt/#/ato/408195fa-fb1f-4cbe-8795-cccf7619bb25"
+    },
+    {
+      "id": "5e846010-43f4-4c2a-93dc-a09378eb60b4",
+      "summary": "Contrato-Programa - Associação de Basquetebol de São Miguel - FFADNP.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 118/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 9729.5,
+      "url": "https://jo.azores.gov.pt/#/ato/5e846010-43f4-4c2a-93dc-a09378eb60b4"
+    },
+    {
+      "id": "5bd09a8b-2777-4fa1-bd65-7652620fe530",
+      "summary": "Autorização de condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 19/2026 de 20 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5bd09a8b-2777-4fa1-bd65-7652620fe530"
+    },
+    {
+      "id": "940e3517-650c-401b-a54a-07674d82ca79",
+      "summary": "Contrato-Programa - Associação de Natação da Região Açores - FFADNP.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 119/2026 de 20 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 6020.0,
+      "url": "https://jo.azores.gov.pt/#/ato/940e3517-650c-401b-a54a-07674d82ca79"
+    },
+    {
+      "id": "cd18de05-3c26-4f5d-9357-d26f69fa2c7d",
+      "summary": "Autorização de condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 22/2026 de 20 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/cd18de05-3c26-4f5d-9357-d26f69fa2c7d"
+    },
+    {
+      "id": "bc463d52-9122-48d2-a34e-d81a513e8a1a",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha e São Jorge - Quarto pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1684/2026 de 20 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 165.0,
+      "url": "https://jo.azores.gov.pt/#/ato/bc463d52-9122-48d2-a34e-d81a513e8a1a"
+    },
+    {
+      "id": "e27c1af5-4058-4aea-bb67-a85d18ba4490",
+      "summary": "Autorização de condução de viaturas oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 23/2026 de 20 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/e27c1af5-4058-4aea-bb67-a85d18ba4490"
+    },
+    {
+      "id": "b1bd0129-5419-4b7a-bfe2-42226204deb0",
+      "summary": "Extrato de Contrato-Programa de Desenvolvimento Educativo e Social - Associação de Pais e Encarregados de Educação EBS Flores.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 129/2026 de 20 de julho de 2026",
+      "entity": "Município de Santa Cruz das Flores",
+      "publication": "Jornal Oficial II Série - Número 136",
+      "total_value": 2500.0,
+      "url": "https://jo.azores.gov.pt/#/ato/b1bd0129-5419-4b7a-bfe2-42226204deb0"
+    }
+  ],
+  "base": [
+    {
+      "id": 15312047,
+      "title": "Fornecimento de pessoal médico para os serviços de atendimento permanente (SAP) da Unidade de Saúde da Ilha do Pico - 2026",
+      "price": "215.460,00 €",
+      "buyer": "Unidade de Saúde da Ilha do Pico",
+      "seller": "Precise Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "22-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15312047"
+    },
+    {
+      "id": 15311986,
+      "title": "Aquisição e instalação de vinte e sete equipamentos de climatização nas instalações da DRQPE.",
+      "price": "38.237,91 €",
+      "buyer": "Direção Regional de Qualificação Profissional e Emprego",
+      "seller": "FACIL INOVA, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15311986"
+    },
+    {
+      "id": 15310528,
+      "title": "Ajuste Direto n.º 10/SRAAC/2026 para a celebração de contrato de aquisição de serviços para a realização do projeto de conceção da rede de monitorização quantitativa automática das águas subterrâneas ...",
+      "price": "23.850,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "ECOSERVIÇOS – GROUP, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15310528"
+    },
+    {
+      "id": 15312666,
+      "title": "Aquisição de 510 horas de serviços médicos por especialista em Medicina Geral e Familiar.",
+      "price": "17.085,00 €",
+      "buyer": "Unidade de Saúde da Ilha Terceira",
+      "seller": "Maria Folgado Barata Diniz Gomes",
+      "procedure": "Concurso público",
+      "signing_date": "06-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15312666"
+    },
+    {
+      "id": 15310438,
+      "title": "CONCESSÃO DE UTILIZAÇÃO E EXPLORAÇÃO DE DOIS CAMPOS DE PADEL - MUNICIPIO DA MADALENA DO PICO",
+      "price": "13.200,00 €",
+      "buyer": "Município da Madalena",
+      "seller": "Atlantic Padel Management Lda",
+      "procedure": "Concurso público",
+      "signing_date": "16-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15310438"
+    },
+    {
+      "id": 15311349,
+      "title": "3026005375 - AMN - Fornecimento de Combustível em Posto Marítimo - CPPD",
+      "price": "12.931,03 €",
+      "buyer": "Ministério da Defesa Nacional - Marinha",
+      "seller": "J. H. Ornelas &amp; CA., Sucessor, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15311349"
+    },
+    {
+      "id": 15311022,
+      "title": "Prestação de serviços para transporte marítimo de contentores no âmbito das comemorações do Dia de Portugal, de Camões e das Comunidades Portuguesas.",
+      "price": "10.551,80 €",
+      "buyer": "Secretaria-Geral da Presidência da República",
+      "seller": "Transinsular Transportes Marítimos Insulares S.A",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15311022"
+    },
+    {
+      "id": 15312667,
+      "title": "Aquisição do atordoador elétrico de alta frequência (insensibilizador de suínos) para o Matadouro da ilha de São Miguel",
+      "price": "7.814,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "BLASAU, SL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15312667"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9380,
+        "title": "Concessão de mais um aval do Governo Regional à LOTAÇOR - Serviço de Lotas dos Açores, S.A.",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "23/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9380"
+      },
+      {
+        "id": 9389,
+        "title": "Prestação de contas dos Institutos Públicos Regionais não integrados no SPER",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9389"
+      },
+      {
+        "id": 9395,
+        "title": "Estrada Regional Raminho - Serreta: estado final da empreitada e reposição do coberto vegetal",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "29/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9395"
+      },
+      {
+        "id": 9400,
+        "title": "Pedido de envio do estudo sobre o rejuvenescimento da Administração Pública",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Sandra Costa Dias PS, ...",
+        "date": "30/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9400"
+      },
+      {
+        "id": 9402,
+        "title": "Quebra de Receita Fiscal nos Impostos Especiais sobre o Consumo (Tabaco e Álcool) e Financiamento de Políticas de Saúde em 2026",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "30/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9402"
+      },
+      {
+        "id": 9423,
+        "title": "Financiamento pelo Governo da República de 85% das obras de reparação, reorganização e redimensionamento do Hospital do Divino Espírito Santo",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "20/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9423"
+      },
+      {
+        "id": 9424,
+        "title": "Celebração de contratos ARAAL e Acordos de Cooperação com as Juntas de Freguesia em 2025 e 2026",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "20/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9424"
+      },
+      {
+        "id": 9338,
+        "title": "Avaliação dos riscos associados à crise sismo-vulcânica de Santa Bárbara, condicionamento da estrada do raminho e eventual existência de cenários de evacuação com previsão de vítimas mortais",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "01/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9338"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23894,
+        "title": "Nota de Informativa da Presidência da ALRAA - Assembleia Legislativa participa no Encontro de Secretários-Gerais dos Parlamentos portugueses",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23894"
+      },
+      {
+        "id": 23895,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Costas Kadis nos Açores: Vice-Presidente do Parlamento defende maior atenção da Europa às especificidades da pesca açoriana",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23895"
+      },
+      {
+        "id": 23896,
+        "title": "Nota de Imprensa da Representação do BE - Nova lei eleitoral para o parlamento dos Açores reforça paridade de género e garante voto secreto em braille.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23896"
+      },
+      {
+        "id": 23897,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores quer conhecer critérios e grau de cumprimento dos contratos do Governo com municípios e juntas de freguesia.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23897"
+      },
+      {
+        "id": 23898,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Financiamento das obras do Hospital de Ponta Delgada deixa dúvidas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23898"
+      },
+      {
+        "id": 23899,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS/Açores lamenta falta de acompanhamento em visita à Aerogare de São Jorge e exige investimento urgente na infraestrutura.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23899"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 2995,
+        "number": "91",
+        "date": "22/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/2995"
+      },
+      {
+        "id": 2997,
+        "number": "90",
+        "date": "21/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/2997"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-07-20"
+}
