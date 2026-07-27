@@ -1,0 +1,46 @@
+{
+  "joraa": [],
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9384,
+        "title": "Execução do Estatuto do Dador de Sangue e Evolução da Dádiva de Sangue na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "25/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9384"
+      },
+      {
+        "id": 9385,
+        "title": "Gestão, ocupação e disponibilização do parque habitacional público da Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "25/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9385"
+      },
+      {
+        "id": 9386,
+        "title": "Avaliação das medidas do plano de ação assente nas conclusões e recomendações do projeto Despertar",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "25/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9386"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-07-26"
+}
