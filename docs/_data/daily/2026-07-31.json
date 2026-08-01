@@ -1,0 +1,212 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15425641,
+      "title": "Aquisição serviços Higiene e Limpeza em todo o território nacional, máximo 33 meses, de 1/4/2026 a 31/12/2028, nas instalações dos organismos MAgriM.",
+      "price": "547.995,31 €",
+      "buyer": "Instituto Português do Mar e da Atmosfera, IP",
+      "seller": "SAMSIC PORTUGAL - Facility Serviçes, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15425641"
+    },
+    {
+      "id": 15420870,
+      "title": "Aquisição de serviços de produção, promoção e realização do PDL WHITE OCEAN 2026, que decorrá no dia 1 de agosto de 2026, que se realizará no Centro Histórico de Ponta Delgada, no perímetro de atuação...",
+      "price": "250.500,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "Fábrica de Espetáculos – Promoção e Realização de Espetáculos Unipessoal Lda",
+      "procedure": "Concurso público",
+      "signing_date": "24-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15420870"
+    },
+    {
+      "id": 15420854,
+      "title": "quisição de fotocoagulador laser multispot, no âmbito do plano de recuperação e resiliência, dimensão resiliência, componente 01, investimento RE-C01-i11-RAA-Modernização e Requalificação do Serviço R...",
+      "price": "45.900,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "PM EQUIPAMENTOS E SERVIÇOS, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15420854"
+    },
+    {
+      "id": 15425667,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE CONSULTORIA CONTABILÍSTICA",
+      "price": "45.000,01 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Oliveira, Branco  Associados SROC, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15425667"
+    },
+    {
+      "id": 15425587,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE CONSULTORIA CONTABILÍSTICA",
+      "price": "40.500,01 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Oliveira, Branco & Associados SROC, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15425587"
+    },
+    {
+      "id": 15425525,
+      "title": "EMPREITADA DE CONSTRUÇÃO DE PARQUE MATILHA",
+      "price": "39.397,63 €",
+      "buyer": "Câmara Municipal de Angra do Heroísmo",
+      "seller": "D. COSTA - Unipessoal, Ldª.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15425525"
+    },
+    {
+      "id": 15425644,
+      "title": "Aquisição de Deck de Pinho Tratado e Respetiva Instalação em Diversas Zonas Balneares da Ilha do Faial, no Concelho da Horta",
+      "price": "34.940,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Biquadrada Açores lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15425644"
+    },
+    {
+      "id": 15422201,
+      "title": "3026006194 - AMN - Empreitada de melhoramentos no Farol do Arnel",
+      "price": "29.304,65 €",
+      "buyer": "Ministério da Defesa Nacional - Marinha",
+      "seller": "Construção Civil de José Viveiros e Filho LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15422201"
+    },
+    {
+      "id": 15420580,
+      "title": "AQUISIÇÃO DE DISPOSITIVOS PARA PROCEDIMENTOS EVAR E EMBOLIZAÇÃO",
+      "price": "16.400,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Medtronic Portugal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15420580"
+    },
+    {
+      "id": 15425750,
+      "title": "Prestação de serviços de apoio jurídico - área do direito público, na especialidade do direito administrativo",
+      "price": "16.200,00 €",
+      "buyer": "Associação de Municípios da Ilha do Pico",
+      "seller": "MSAF - Morais Sarmento, Almeida Farinha &amp; Associados - Sociedade de Advogados",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15425750"
+    },
+    {
+      "id": 15425526,
+      "title": "Aquisição de Postes de Iluminação para o Jardim dos Pauis e para o Complexo Desportivo de Santa Cruz",
+      "price": "11.986,00 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "CASA ARAÚJO, DE ARAÚJO E MENDES, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15425526"
+    },
+    {
+      "id": 15425814,
+      "title": "Aquisição de Serviços de Assessoria Jurídica (julho e agosto 2026)",
+      "price": "9.000,00 €",
+      "buyer": "Associação Visit Azores",
+      "seller": "NBR - Nuno Bettencourt Raposo, Adv. & Associado, Soc. Multidisciplinar, SP, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15425814"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9448,
+        "title": "Estado da rede pública de carregamento de veículos elétricos na Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "Marlene Damião PS, ...",
+        "date": "31/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9448"
+      },
+      {
+        "id": 9450,
+        "title": "Tecnopolo MARTEC - modelo de gestão e estratégia de funcionamento",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "31/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9450"
+      },
+      {
+        "id": 9452,
+        "title": "Medidas para garantir a permanência na Região de trabalhadores imigrantes com contrato de trabalho",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9452"
+      },
+      {
+        "id": 9403,
+        "title": "Estudo técnico de Deloitte sobre a venda, extinção, cessão ou integração de entidades do setor público empresarial regional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "30/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9403"
+      },
+      {
+        "id": 9404,
+        "title": "Estado dos stocks de lapa nos Açores e medidas de gestão e fiscalização",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "30/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9404"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23960,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Açores não podem ser uma porta de entrada da migração para a Europa.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23960"
+      },
+      {
+        "id": 23961,
+        "title": "Nota de Imprensa da Presidência da ALRAA - No 6.º aniversário da Escola do Mar, Luís Garcia enaltece complementaridade das instituições ligadas ao cluster do Mar",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23961"
+      },
+      {
+        "id": 23958,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores realça importância do novo Centro de Saúde da Ribeira Grande.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23958"
+      },
+      {
+        "id": 23959,
+        "title": "Nota de Imprensa da Representação do BE - Bloco quer saber qual é a estratégia do Governo Regional para o Tecnopolo MARTEC.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23959"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3001,
+        "number": "92",
+        "date": "16/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3001"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-07-31"
+}
