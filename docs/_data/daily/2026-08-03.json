@@ -1,0 +1,171 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15427256,
+      "title": "AQUISIÇÃO DE ENZALUTAMIDA 40 MG COMP, AO ABRIGO DO AQ/2023/491 DOS SPMS",
+      "price": "234.511,20 €",
+      "buyer": "HOSPITAL DE SANTO ESPÍRITO DA ILHA TERCEIRA, EPER",
+      "seller": "ASTELLAS FARMA, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15427256"
+    },
+    {
+      "id": 15427387,
+      "title": "AQUISIÇÃO DE DOLUTEGRAVIR 50 MG COMP, AO ABRIGO DO AQ/2024/900 DOS SPMS",
+      "price": "205.180,89 €",
+      "buyer": "HOSPITAL DE SANTO ESPÍRITO DA ILHA TERCEIRA, EPER",
+      "seller": "VIIVHIV HEALTHCARE, UNIPESSOAL. LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15427387"
+    },
+    {
+      "id": 15427922,
+      "title": "Empreitada de instalação de painéis fotovoltaicos na EBI dos Arrifes, ilha de São Miguel, Açores",
+      "price": "148.840,00 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "SEGMA - Serviços de Engenharia, Gestão e Manutenção, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15427922"
+    },
+    {
+      "id": 15428804,
+      "title": "ELABORAÇÃO DOS PROJETOS PARA A REQUALIFICAÇÃO DOS SISTEMAS DE AMARRAÇÃO DO TERMINAL MARÍTIMO DE PASSAGEIROS JOÃO QUARESMA - PORTO DA MADALENA - ILHA DO PICO",
+      "price": "59.000,00 €",
+      "buyer": "PORTOS DOS AÇORES, SA",
+      "seller": "MSW - Estudos e Projectos de Obras Marítimas, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15428804"
+    },
+    {
+      "id": 15427414,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE CONSULTORIA CONTABILÍSTICA",
+      "price": "58.500,01 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Oliveira, Branco & Associados SROC, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15427414"
+    },
+    {
+      "id": 15429071,
+      "title": "Aquisição de serviços de manutenção dos equipamentos das estações elevatórias",
+      "price": "39.999,50 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "Harker Azores Lda,",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15429071"
+    },
+    {
+      "id": 15428455,
+      "title": "AQUISIÇÃO DE CARRINHA ELÉTRICA DE 8 LUGARES",
+      "price": "38.793,25 €",
+      "buyer": "Município da Madalena",
+      "seller": "TERAUTO - SOCIEDADE TERCEIRENSE DE AUTOMÓVEIS, LDA.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15428455"
+    },
+    {
+      "id": 15427038,
+      "title": "Aquisição de Estações Meteorológicas de Leitura Automática (EMA´s) e etiquetas RFID+ QRCode para identificação das  armadilhas",
+      "price": "30.440,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "JSIO, LDA",
+      "procedure": "Contratação excluída II",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15427038"
+    },
+    {
+      "id": 15427829,
+      "title": "AQUISIÇÃO DE SISTEMA AUTOMÁTICO DE EXTINÇÃO DE INCÊNDIO DE GRUAS PARA GRUA DO PORTO DE PRAIA DA VITÓRIA",
+      "price": "24.966,00 €",
+      "buyer": "PORTOS DOS AÇORES, SA",
+      "seller": "Electrolaranjo, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15427829"
+    },
+    {
+      "id": 15429911,
+      "title": "Aquisição de serviços com vista à criação e desenvolvimento de site institucional do Ivv Açores, IPRA",
+      "price": "21.500,00 €",
+      "buyer": "Instituto da Vinha e do Vinho dos Açores, IPRA",
+      "seller": "LMO - Zona de Ideias",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15429911"
+    },
+    {
+      "id": 15427930,
+      "title": "Aquisição de serviços de elaboração de Relatório Financeiro BIOTECH VENTURE",
+      "price": "8.994,90 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Henrique Samuel Oliveira Carreiro",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15427930"
+    },
+    {
+      "id": 15429423,
+      "title": "Aquisição de material FOSS para manutenção e reparação de equipamentos laboratoriais do SERCLA de São Miguel",
+      "price": "8.810,53 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "FOSS IBÉRIA, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15429423"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9454,
+        "title": "Esclarecimentos adicionais sobre o futuro modelo de prestação de cuidados no âmbito dos tratamentos de substituição opiácea na ilha de São Miguel",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "03/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9454"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23962,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia toma parte na festa em Honra do Senhor Bom Jesus Milagroso, em São Mateus, ilha do Pico.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23962"
+      },
+      {
+        "id": 23964,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Presidente Luís Garcia destaca espírito açoriano e defende preservação da memória da Regata da Autonomia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23964"
+      },
+      {
+        "id": 23965,
+        "title": "Nota de Imprensa da Representação do BE - Bloco exige esclarecimentos urgentes sobre o futuro da distribuição de metadona em São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23965"
+      },
+      {
+        "id": 23966,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA Açores quer esclarecimentos sobre a segurança dos trilhos da Região.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23966"
+      },
+      {
+        "id": 23967,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige esclarecimentos sobre casal de idosos que passou a noite no aeroporto após cancelamento de voo da SATA.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23967"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-03"
+}
