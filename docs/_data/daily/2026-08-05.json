@@ -1,0 +1,887 @@
+{
+  "joraa": [
+    {
+      "id": "a5dec698-7652-44b7-99b1-ce3d4dff891b",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Vila da Praia da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 852/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 7774.57,
+      "url": "https://jo.azores.gov.pt/#/ato/a5dec698-7652-44b7-99b1-ce3d4dff891b"
+    },
+    {
+      "id": "dc4baa08-f921-455a-abc6-46dba2a24f83",
+      "summary": "Apoio financeiro - Unidades orgânicas",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 826/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 90158.93,
+      "url": "https://jo.azores.gov.pt/#/ato/dc4baa08-f921-455a-abc6-46dba2a24f83"
+    },
+    {
+      "id": "a51b5156-6d8e-4483-ad5c-19d1e9a2026b",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 834/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 958.07,
+      "url": "https://jo.azores.gov.pt/#/ato/a51b5156-6d8e-4483-ad5c-19d1e9a2026b"
+    },
+    {
+      "id": "e601268c-4f03-4edb-9908-9080d21715ed",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 843/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 6915.72,
+      "url": "https://jo.azores.gov.pt/#/ato/e601268c-4f03-4edb-9908-9080d21715ed"
+    },
+    {
+      "id": "faa7fdfa-1388-4827-a8db-6e542083d74f",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia das Lajes das Flores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 854/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 2455.7,
+      "url": "https://jo.azores.gov.pt/#/ato/faa7fdfa-1388-4827-a8db-6e542083d74f"
+    },
+    {
+      "id": "79fd8b5d-7c21-4e6b-91bc-dca666b45f1e",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 832/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 621.93,
+      "url": "https://jo.azores.gov.pt/#/ato/79fd8b5d-7c21-4e6b-91bc-dca666b45f1e"
+    },
+    {
+      "id": "0203f452-8bb1-487d-91be-1205e8999d57",
+      "summary": "Autorização para condução de viaturas oficiais do Serviço de Desenvolvimento Agrário da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1841/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/0203f452-8bb1-487d-91be-1205e8999d57"
+    },
+    {
+      "id": "e5e43ce5-3d65-47a6-a692-dfbaeabfa672",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 842/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 23661037.62,
+      "url": "https://jo.azores.gov.pt/#/ato/e5e43ce5-3d65-47a6-a692-dfbaeabfa672"
+    },
+    {
+      "id": "9e500141-6847-4743-8c3a-5013d27a0f0e",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 833/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 6852.57,
+      "url": "https://jo.azores.gov.pt/#/ato/9e500141-6847-4743-8c3a-5013d27a0f0e"
+    },
+    {
+      "id": "a79370b5-d69e-4e15-9d7b-ac56a2c95e3c",
+      "summary": "Apoio financeiro - Escola Básica e Secundária Mouzinho da Silveira.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 825/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1056.06,
+      "url": "https://jo.azores.gov.pt/#/ato/a79370b5-d69e-4e15-9d7b-ac56a2c95e3c"
+    },
+    {
+      "id": "0899673a-390d-4bef-ad62-3a10764427d8",
+      "summary": "Apoio financeiro - Escola Básica e Secundária de Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 820/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 66.44,
+      "url": "https://jo.azores.gov.pt/#/ato/0899673a-390d-4bef-ad62-3a10764427d8"
+    },
+    {
+      "id": "526871af-b4c3-4186-869a-8efc1bd1f683",
+      "summary": "Aprova a Declaração de Impacte Ambiental (DIA) favorável condicionada relativa ao procedimento de Avaliação de Impacte Ambiental concernente ao empreendimento turístico denominado de “Seara Ecolodge & SPA”, a implantar na freguesia das Sete Cidades, concelho de Ponta Delgada, na ilha de São Miguel e avaliado em fase de Estudo Prévio.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1843/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/526871af-b4c3-4186-869a-8efc1bd1f683"
+    },
+    {
+      "id": "c337ea41-9bcd-46fa-b300-f403903842be",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 837/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 499.82,
+      "url": "https://jo.azores.gov.pt/#/ato/c337ea41-9bcd-46fa-b300-f403903842be"
+    },
+    {
+      "id": "8509b0d7-31e1-4af9-9f11-91ff8fd8fbb4",
+      "summary": "Apoio financeiro - Escola Básica e Secundária da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 815/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 966.0,
+      "url": "https://jo.azores.gov.pt/#/ato/8509b0d7-31e1-4af9-9f11-91ff8fd8fbb4"
+    },
+    {
+      "id": "f8d1b47c-f583-49e8-8636-13ce35cbd3fe",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 844/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 17782.61,
+      "url": "https://jo.azores.gov.pt/#/ato/f8d1b47c-f583-49e8-8636-13ce35cbd3fe"
+    },
+    {
+      "id": "f9d032ee-af70-48dc-910b-eed5e653fa80",
+      "summary": "Apoio financeiro - Escola Básica e Secundária das Flores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 818/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1650.56,
+      "url": "https://jo.azores.gov.pt/#/ato/f9d032ee-af70-48dc-910b-eed5e653fa80"
+    },
+    {
+      "id": "686c8932-430e-4413-99b2-35a453091abb",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia de São Roque do Pico.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 855/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 6452.05,
+      "url": "https://jo.azores.gov.pt/#/ato/686c8932-430e-4413-99b2-35a453091abb"
+    },
+    {
+      "id": "7369b46a-a0e1-46e6-b3f0-b8e78dac2f55",
+      "summary": "1.º Aditamento ao Contrato-Programa de Desenvolvimento Desportivo - AGIA-AR.",
+      "text_excerpt": "",
+      "human_id": "Aditamento n.º 128/2026 de 5 de agosto de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/7369b46a-a0e1-46e6-b3f0-b8e78dac2f55"
+    },
+    {
+      "id": "b66eb3d8-a157-4f50-a6e5-6ce51932e8df",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 836/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 3126.0,
+      "url": "https://jo.azores.gov.pt/#/ato/b66eb3d8-a157-4f50-a6e5-6ce51932e8df"
+    },
+    {
+      "id": "e309d7e2-3fd6-43ee-a97d-c8d5e3e3fb7a",
+      "summary": "Empreitada de Remodelação e Ampliação do Hotel Sete Cidades.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 371/2026 de 5 de agosto de 2026",
+      "entity": "Empresas/Associações/Fundações/Casas do Povo",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 25650000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/e309d7e2-3fd6-43ee-a97d-c8d5e3e3fb7a"
+    },
+    {
+      "id": "e46f288b-44b3-420c-aa93-5f7031053003",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 841/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 10090.71,
+      "url": "https://jo.azores.gov.pt/#/ato/e46f288b-44b3-420c-aa93-5f7031053003"
+    },
+    {
+      "id": "3a13998b-0c3a-4d55-b533-7e0a82361fe5",
+      "summary": "Apoio financeiro - AIPA – Associação dos Imigrantes nos Açores, destinado a financiar a realização do Curso de Português Língua de Acolhimento, na ilha do Pico.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1839/2026 de 5 de agosto de 2026",
+      "entity": "Direção Regional das Comunidades",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1875.0,
+      "url": "https://jo.azores.gov.pt/#/ato/3a13998b-0c3a-4d55-b533-7e0a82361fe5"
+    },
+    {
+      "id": "722fb88a-b95b-473b-bd26-f63653fe4ae8",
+      "summary": "Apoio financeiro - Lar Luís Soares de Sousa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 849/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 3694.6,
+      "url": "https://jo.azores.gov.pt/#/ato/722fb88a-b95b-473b-bd26-f63653fe4ae8"
+    },
+    {
+      "id": "65145afc-6dc8-49c7-97b4-ce530343a761",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 831/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 8906.37,
+      "url": "https://jo.azores.gov.pt/#/ato/65145afc-6dc8-49c7-97b4-ce530343a761"
+    },
+    {
+      "id": "75aaa294-3ce1-4557-b80b-1808ea8de0eb",
+      "summary": "Apoio financeiro - Escola Básica e Secundária das Velas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 819/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 966.0,
+      "url": "https://jo.azores.gov.pt/#/ato/75aaa294-3ce1-4557-b80b-1808ea8de0eb"
+    },
+    {
+      "id": "481382a2-1a22-4591-bd50-09d606208e3a",
+      "summary": "Apoio financeiro - CRESAÇOR – Cooperativa Regional de Economia Solidária - destinado a financiar a realização de um curso de Português Língua de Acolhimento, turma horário laboral 1.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1840/2026 de 5 de agosto de 2026",
+      "entity": "Direção Regional das Comunidades",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1875.0,
+      "url": "https://jo.azores.gov.pt/#/ato/481382a2-1a22-4591-bd50-09d606208e3a"
+    },
+    {
+      "id": "27fb9a59-748b-4552-bdb8-c84551de0080",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Vila de Santa Cruz da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 853/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 2689.24,
+      "url": "https://jo.azores.gov.pt/#/ato/27fb9a59-748b-4552-bdb8-c84551de0080"
+    },
+    {
+      "id": "e205da8e-70ce-4baa-a92b-0927327d3b61",
+      "summary": "Apoio financeiro – Escola Secundária Vitorino Nemésio.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 847/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 166.78,
+      "url": "https://jo.azores.gov.pt/#/ato/e205da8e-70ce-4baa-a92b-0927327d3b61"
+    },
+    {
+      "id": "b4db3445-0ec7-4624-83cb-0c189f175b83",
+      "summary": "Comparticipação financeira - Fundo Escolar da Escola Secundária Jerónimo Emiliano de Andrade.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 231/2026 de 5 de agosto de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 4095.5,
+      "url": "https://jo.azores.gov.pt/#/ato/b4db3445-0ec7-4624-83cb-0c189f175b83"
+    },
+    {
+      "id": "36a6e1ee-8ef2-4cd9-9ee4-a86bc9c5f2d9",
+      "summary": "Locação com montagem e desmontagem de equipamento lúdico infantil no âmbito das festas de Natal 2026.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 370/2026 de 5 de agosto de 2026",
+      "entity": "Município de Ponta Delgada",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 111036.0,
+      "url": "https://jo.azores.gov.pt/#/ato/36a6e1ee-8ef2-4cd9-9ee4-a86bc9c5f2d9"
+    },
+    {
+      "id": "b5b1e7d5-fbb0-42c1-a1e2-d3038f122f1d",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo - AFPC.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 340/2026 de 5 de agosto de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 11075.0,
+      "url": "https://jo.azores.gov.pt/#/ato/b5b1e7d5-fbb0-42c1-a1e2-d3038f122f1d"
+    },
+    {
+      "id": "d0356083-4592-4a6e-bd99-b1f8bf436631",
+      "summary": "Apoio financeiro - Escola Básica e Secundária de Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 822/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 30.42,
+      "url": "https://jo.azores.gov.pt/#/ato/d0356083-4592-4a6e-bd99-b1f8bf436631"
+    },
+    {
+      "id": "d72bf338-2e6b-4ae2-8c80-90c6e312b940",
+      "summary": "Apoio financeiro - Escola Básica e Secundária de Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 823/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 2898.0,
+      "url": "https://jo.azores.gov.pt/#/ato/d72bf338-2e6b-4ae2-8c80-90c6e312b940"
+    },
+    {
+      "id": "d4b2296c-c4e9-4383-a521-3229b68fc5ad",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 839/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 6658.24,
+      "url": "https://jo.azores.gov.pt/#/ato/d4b2296c-c4e9-4383-a521-3229b68fc5ad"
+    },
+    {
+      "id": "bf18a357-fb97-46ef-90f1-f5be4d7b88aa",
+      "summary": "Apoio financeiro - Escola Básica e Secundária da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 816/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 14292.89,
+      "url": "https://jo.azores.gov.pt/#/ato/bf18a357-fb97-46ef-90f1-f5be4d7b88aa"
+    },
+    {
+      "id": "2bcf4916-9362-403e-8600-319d1abfc924",
+      "summary": "Apoio financeiro - Escola Básica e Integrada de Angra do Heroísmo.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 812/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1803.2,
+      "url": "https://jo.azores.gov.pt/#/ato/2bcf4916-9362-403e-8600-319d1abfc924"
+    },
+    {
+      "id": "f51988ba-eec1-491e-86ce-2c43879869d0",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Madalena do Pico.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 851/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 80.0,
+      "url": "https://jo.azores.gov.pt/#/ato/f51988ba-eec1-491e-86ce-2c43879869d0"
+    },
+    {
+      "id": "03390aed-9cac-4c0f-9134-698fe042aa9b",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Madalena do Pico.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 850/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 3425.41,
+      "url": "https://jo.azores.gov.pt/#/ato/03390aed-9cac-4c0f-9134-698fe042aa9b"
+    },
+    {
+      "id": "37f1e1a8-a96e-4107-afcc-4a7416f7da23",
+      "summary": "Apoio financeiro – Escola Básica e Secundária das Velas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 845/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1609.67,
+      "url": "https://jo.azores.gov.pt/#/ato/37f1e1a8-a96e-4107-afcc-4a7416f7da23"
+    },
+    {
+      "id": "b735019c-dae1-4c03-b1bc-f25d1fb01ffd",
+      "summary": "Altera a Portaria n.º 22/2023, de 23 de março, que estabelece as normas de aplicação das medidas relativas aos pagamentos concedidos diretamente aos agricultores ao abrigo do programa POSEI Portugal na Região Autónoma dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 90/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial I Série - Número 99",
+      "total_value": 2008.5,
+      "url": "https://jo.azores.gov.pt/#/ato/b735019c-dae1-4c03-b1bc-f25d1fb01ffd"
+    },
+    {
+      "id": "abb33c34-e894-4fe2-8a92-a31817b22b26",
+      "summary": "Apoio financeiro - Escola Básica e Secundária de Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 821/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 3614.68,
+      "url": "https://jo.azores.gov.pt/#/ato/abb33c34-e894-4fe2-8a92-a31817b22b26"
+    },
+    {
+      "id": "3dab5488-6ca8-4cad-b05a-eca81afafe24",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 829/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1226.14,
+      "url": "https://jo.azores.gov.pt/#/ato/3dab5488-6ca8-4cad-b05a-eca81afafe24"
+    },
+    {
+      "id": "e37c4f6c-a28f-4529-862b-130e0e362bb3",
+      "summary": "Apoio financeiro - Escola Básica e Secundária das Flores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 817/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 12875.63,
+      "url": "https://jo.azores.gov.pt/#/ato/e37c4f6c-a28f-4529-862b-130e0e362bb3"
+    },
+    {
+      "id": "161cd885-9b73-4d14-8116-c19021f74d11",
+      "summary": "Aquisição de licenciamento Microsoft, no âmbito do Plano de Recuperação e Resiliência, Dimensão Resiliência, Componente 01, Investimento RE-C01-i08-RAA – Hospital Digital.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 369/2026 de 5 de agosto de 2026",
+      "entity": "Hospital de Santo Espírito da Ilha Terceira, E.P.E.R.",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/161cd885-9b73-4d14-8116-c19021f74d11"
+    },
+    {
+      "id": "3a17f0f6-1ec5-4e7c-8287-118c31403ea3",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 828/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 2454.59,
+      "url": "https://jo.azores.gov.pt/#/ato/3a17f0f6-1ec5-4e7c-8287-118c31403ea3"
+    },
+    {
+      "id": "4595bf8a-ec1d-41ca-8653-c439c0494ffd",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 830/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1485.39,
+      "url": "https://jo.azores.gov.pt/#/ato/4595bf8a-ec1d-41ca-8653-c439c0494ffd"
+    },
+    {
+      "id": "40dfeef3-8339-4871-9e40-f146a6b2a1af",
+      "summary": "Apoio financeiro -  AIPA – Associação dos Imigrantes nos Açores, destinado a financiar a realização do Curso de Português Língua de Acolhimento, na ilha Terceira.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1838/2026 de 5 de agosto de 2026",
+      "entity": "Direção Regional das Comunidades",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1875.0,
+      "url": "https://jo.azores.gov.pt/#/ato/40dfeef3-8339-4871-9e40-f146a6b2a1af"
+    },
+    {
+      "id": "0817d032-56b0-474b-a40f-f4fb10d4b52b",
+      "summary": "Apoio financeiro - ADI - Associação de Desenvolvimento Intergeracional.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 848/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 49902.59,
+      "url": "https://jo.azores.gov.pt/#/ato/0817d032-56b0-474b-a40f-f4fb10d4b52b"
+    },
+    {
+      "id": "004e59e5-0deb-45a2-ad82-ebd37431a27e",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 827/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1036.72,
+      "url": "https://jo.azores.gov.pt/#/ato/004e59e5-0deb-45a2-ad82-ebd37431a27e"
+    },
+    {
+      "id": "4ff6faf8-ac0a-4888-89a7-6f06c62e518d",
+      "summary": "Apoio financeiro - Escola Básica e Secundária da Calheta.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 813/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 1615.0,
+      "url": "https://jo.azores.gov.pt/#/ato/4ff6faf8-ac0a-4888-89a7-6f06c62e518d"
+    },
+    {
+      "id": "cfa2eabc-c835-4958-9c60-0dd7b2fdef24",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 838/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 4830.0,
+      "url": "https://jo.azores.gov.pt/#/ato/cfa2eabc-c835-4958-9c60-0dd7b2fdef24"
+    },
+    {
+      "id": "8a18c3ee-c060-46f0-9034-4d9f3bcb1381",
+      "summary": "Aquisição de Bens Móveis.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 372/2026 de 5 de agosto de 2026",
+      "entity": "Santa Casa da Misericórdia do Divino Espírito Santo da Maia",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 507728.94999999995,
+      "url": "https://jo.azores.gov.pt/#/ato/8a18c3ee-c060-46f0-9034-4d9f3bcb1381"
+    },
+    {
+      "id": "5e2a64ce-5453-48d8-a9b7-cbcb51f58eb4",
+      "summary": "Apoio financeiro - Escola Básica e Integrada da Horta.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 811/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 3851.89,
+      "url": "https://jo.azores.gov.pt/#/ato/5e2a64ce-5453-48d8-a9b7-cbcb51f58eb4"
+    },
+    {
+      "id": "df457b66-5602-4396-b0ce-af9b4f0964a2",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 840/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 775.99,
+      "url": "https://jo.azores.gov.pt/#/ato/df457b66-5602-4396-b0ce-af9b4f0964a2"
+    },
+    {
+      "id": "63f657b6-c13e-4d1c-9a95-abc1e78247c5",
+      "summary": "Apoio financeiro - Escola Básica e Secundária da Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 814/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 4020.0,
+      "url": "https://jo.azores.gov.pt/#/ato/63f657b6-c13e-4d1c-9a95-abc1e78247c5"
+    },
+    {
+      "id": "c3d69f86-c0d6-4418-ab4d-de22dbea8cec",
+      "summary": "Apoio financeiro no âmbito do Mercado Social de Emprego - Medida INCLUIR.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1842/2026 de 5 de agosto de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 41574.01,
+      "url": "https://jo.azores.gov.pt/#/ato/c3d69f86-c0d6-4418-ab4d-de22dbea8cec"
+    },
+    {
+      "id": "42a42542-5014-444d-a03d-20e18fd689f6",
+      "summary": "Apoio financeiro - Escola Básica e Secundária de Velas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 824/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 5308.47,
+      "url": "https://jo.azores.gov.pt/#/ato/42a42542-5014-444d-a03d-20e18fd689f6"
+    },
+    {
+      "id": "2e63c27e-343f-4dc5-8893-80f37a6532d8",
+      "summary": "Apoio financeiro – Escola Básica e Secundária Mouzinho da Silveira.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 846/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 543.16,
+      "url": "https://jo.azores.gov.pt/#/ato/2e63c27e-343f-4dc5-8893-80f37a6532d8"
+    },
+    {
+      "id": "af9f78a8-fd95-4b14-9d59-d23dad749af1",
+      "summary": "Apoio financeiro - Unidades orgânicas.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 835/2026 de 5 de agosto de 2026",
+      "entity": "Secretaria Regional da Educação, Cultura e Desporto",
+      "publication": "Jornal Oficial II Série - Número 148",
+      "total_value": 697.3,
+      "url": "https://jo.azores.gov.pt/#/ato/af9f78a8-fd95-4b14-9d59-d23dad749af1"
+    },
+    {
+      "id": "de16d201-d097-4bcb-9222-2ce234a62cee",
+      "summary": "Plano de Gestão das Áreas Terrestres do Parque Natural da Ilha de Santa Maria.",
+      "text_excerpt": "",
+      "human_id": "Decreto Regulamentar Regional n.º 17/2026/A de 5 de agosto de 2026",
+      "entity": "Governo Regional",
+      "publication": "Jornal Oficial I Série - Número 100",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/de16d201-d097-4bcb-9222-2ce234a62cee"
+    },
+    {
+      "id": "5c4e9571-1fb1-4890-bee5-bfdfab5b2adb",
+      "summary": "Plano de Gestão das Áreas Terrestres do Parque Natural da Ilha do Corvo",
+      "text_excerpt": "",
+      "human_id": "Decreto Regulamentar Regional n.º 15/2026/A de 5 de agosto de 2026",
+      "entity": "Governo Regional",
+      "publication": "Jornal Oficial I Série - Número 100",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5c4e9571-1fb1-4890-bee5-bfdfab5b2adb"
+    },
+    {
+      "id": "c07c68e9-5c79-47a6-88d0-8727153508e1",
+      "summary": "Plano de Gestão das Áreas Terrestres do Parque Natural da Ilha Graciosa.",
+      "text_excerpt": "",
+      "human_id": "Decreto Regulamentar Regional n.º 14/2026/A de 5 de agosto de 2026",
+      "entity": "Governo Regional",
+      "publication": "Jornal Oficial I Série - Número 100",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/c07c68e9-5c79-47a6-88d0-8727153508e1"
+    },
+    {
+      "id": "e97b08d2-56e7-404c-8f9c-045ae685e75a",
+      "summary": "Plano de Gestão das Áreas Terrestres do Parque Natural da Ilha de São Jorge.",
+      "text_excerpt": "",
+      "human_id": "Decreto Regulamentar Regional n.º 18/2026/A de 5 de agosto de 2026",
+      "entity": "Governo Regional",
+      "publication": "Jornal Oficial I Série - Número 100",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/e97b08d2-56e7-404c-8f9c-045ae685e75a"
+    },
+    {
+      "id": "a3e13fd0-8f0b-4d83-ae4b-0a38f4598052",
+      "summary": "Plano de Gestão das Áreas Terrestres do Parque Natural da Ilha das Flores.",
+      "text_excerpt": "",
+      "human_id": "Decreto Regulamentar Regional n.º 16/2026/A de 5 de agosto de 2026",
+      "entity": "Governo Regional",
+      "publication": "Jornal Oficial I Série - Número 100",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/a3e13fd0-8f0b-4d83-ae4b-0a38f4598052"
+    },
+    {
+      "id": "05a18ee2-1a82-4a77-9d25-a3efdde50541",
+      "summary": "Plano de Gestão das Áreas Terrestres do Parque Natural da Terceira.",
+      "text_excerpt": "",
+      "human_id": "Decreto Regulamentar Regional n.º 13/2026/A de 5 de agosto de 2026",
+      "entity": "Governo Regional",
+      "publication": "Jornal Oficial I Série - Número 100",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/05a18ee2-1a82-4a77-9d25-a3efdde50541"
+    }
+  ],
+  "base": [
+    {
+      "id": 15458555,
+      "title": "EMPREITADA DE FORNECIMENTO E MONTAGEM DE PAINEL DE TRANSFORMADOR\n60/30 KV (P608) NA SUBESTAÇÃO DE PONTA GARÇA, CONCELHO DE VILA FRANCA,\nILHA DE SÃO MIGUEL",
+      "price": "478.970,26 €",
+      "buyer": "EDA - ELECTRICIDADE DOS AÇORES, S.A.",
+      "seller": "SOTÉCNICA - Sociedade Electrotécnica, S.A.,",
+      "procedure": "Consulta Prévia",
+      "signing_date": "29-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15458555"
+    },
+    {
+      "id": 15455910,
+      "title": "AQUISIÇÃO DE BIÓPSIA PROSTÁTICA 2026",
+      "price": "146.000,00 €",
+      "buyer": "Hospital da Horta, EPER",
+      "seller": "Teprel - Equipamentos Médicos SA",
+      "procedure": "Concurso público",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15455910"
+    },
+    {
+      "id": 15456046,
+      "title": "Concurso Público: Aquisição e Implementação de uma Rede de Comunicação Digital de Emergência",
+      "price": "99.587,90 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "GLOBALEDA - Telecomunicações e Sistemas de Informação, SA",
+      "procedure": "Concurso público",
+      "signing_date": "10-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15456046"
+    },
+    {
+      "id": 15458348,
+      "title": "Aquisição de serviços de comunicação e marketing estratégico no âmbito da atração de profissionais de saúde para a Região Autónoma dos Açores",
+      "price": "74.370,00 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "Hunt Global Marketing, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15458348"
+    },
+    {
+      "id": 15457015,
+      "title": "SERVIÇOS DE VIAGENS E ALOJAMENTOS PARA O ANO DE 2026, PARA A SECRETARIA REGIONAL DO AMBIENTE E AÇÃO CLIMÁTICA",
+      "price": "53.448,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "ATLÂNTIDA – VIAGENS E TURISMO, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "23-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15457015"
+    },
+    {
+      "id": 15456669,
+      "title": "AQUISIÇÃO DE EQUIPAMENTOS DE MONITORIZAÇÃO DA FLORESTA – RESISTÓGRAFO E TOMÓGRAFO 3D FLORESTAL E RESPETIVA FORMAÇÃO, NO ÂMBITO DO PROJETO ACORES2030 – FEDER-01959700 – CONSERVAÇÃO E VALORIZAÇÃO DA FLO...",
+      "price": "42.437,47 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "TerraGes, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15456669"
+    },
+    {
+      "id": 15455802,
+      "title": "Prestação de serviços de Limpeza no edifício sede da Direção Regional dos Recursos Florestais e Ordenamento Territorial e Serviço Florestal e de Ordenamento do Território de Ponta Delgada.",
+      "price": "39.780,00 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "Silabavançada, Açores, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15455802"
+    },
+    {
+      "id": 15455005,
+      "title": "AQUISIÇÃO DE EQUIPAMENTO PARA MONDA TÉRMICA A VAPOR",
+      "price": "25.600,00 €",
+      "buyer": "Município da Madalena",
+      "seller": "FÊNIX AMBIENTE - EQUIPAMENTOS E CONSULTADORIA, UNIPESSOAL LDA",
+      "procedure": "Consulta Prévia",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15455005"
+    },
+    {
+      "id": 15459120,
+      "title": "Aquisição de 120 contentores MGB de 770 litros para recolha de resíduos urbanos, ao abrigo do Acordo-Quadro CNCM AQ/69/2023",
+      "price": "21.162,00 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "ESTÚDIO D1 - SOLUÇÕES DE MANUTENÇÃO E EQUIPAMENTO PARA RESÍDUOS, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "30-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15459120"
+    },
+    {
+      "id": 15457025,
+      "title": "Empreitada de manutenção corretiva em infraestruturas elétricas na Ilha de São Miguel. Manutenção de postos de transformação (PTs) tipo B, redes de distribuição de energia elétrica em baixa tensão.",
+      "price": "19.978,50 €",
+      "buyer": "IROA, S. A.",
+      "seller": "ORDEC - OBRAS REGIONAIS DE ELECTRICIDADE E CONSTRUÇÃO CIVIL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15457025"
+    },
+    {
+      "id": 15458830,
+      "title": "Aquisição de serviços de produção técnica, direção técnica e operação técnica dos espetáculos a realizar no palco do festival ocidental - Santa Cruz das Flores 2026",
+      "price": "17.240,00 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "Renascer Som AF, unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15458830"
+    },
+    {
+      "id": 15457024,
+      "title": "3026005683-AMN - Aquisição Serviço Manutenção Inspeção Postos Transformação",
+      "price": "11.880,00 €",
+      "buyer": "Superintendência do Material - Direção de Infraestruturas",
+      "seller": "SEGMA - Serviços de Engenharia, Gestão e Manutenção, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15457024"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9456,
+        "title": "Realização de trilhos não homologados na Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "03/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9456"
+      },
+      {
+        "id": 9457,
+        "title": "Situação de um casal de idosos que passou a noite no aeroporto João Paulo II, após cancelamento de voo da Sata Air Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "03/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9457"
+      },
+      {
+        "id": 9458,
+        "title": "Utilização de recursos públicos na apresentação de uma queixa-crime pelo Governo Regional e contratação de serviços jurídicos externos",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "04/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9458"
+      },
+      {
+        "id": 9460,
+        "title": "Dimensão e custos da estrutura pública ligada às pescas nos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "04/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9460"
+      },
+      {
+        "id": 9462,
+        "title": "Controlo e sustentabilidade da dívida pública da Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "05/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9462"
+      },
+      {
+        "id": 9464,
+        "title": "Resposta do Sistema Educativo Regional às irregularidades dos exames nacionais de 2026",
+        "state_change": null,
+        "requesters": "Marlene Damião PS, ...",
+        "date": "05/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9464"
+      },
+      {
+        "id": 9352,
+        "title": "Ações inspetivas da IRAE e de outras entidades fiscalizadoras junto de estabelecimentos de restauração e bebidas na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "05/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9352"
+      },
+      {
+        "id": 9404,
+        "title": "Estado dos stocks de lapa nos Açores e medidas de gestão e fiscalização",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "30/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9404"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23968,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - Deputado do CDS-PP destaca investimento habitacional no Loteamento dos Casteletes e defende reforço da oferta de habitação em São Jorge.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23968"
+      },
+      {
+        "id": 23969,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA Açores quer esclarecimentos sobre mais de 12 mil euros gastos pelo Governo Regional num processo que acabou arquivado.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23969"
+      },
+      {
+        "id": 23970,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA Açores exige transparência total nos custos públicos do sector das pescas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23970"
+      },
+      {
+        "id": 23971,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca modernização do transporte público rodoviário em São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23971"
+      },
+      {
+        "id": 23972,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Chega Açores quer saber que medidas estão a ser preparadas para controlar a Dívida Pública Regional.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23972"
+      },
+      {
+        "id": 23974,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA congratula-se com reabertura da secção destacada dos Bombeiros do Topo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23974"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-05"
+}

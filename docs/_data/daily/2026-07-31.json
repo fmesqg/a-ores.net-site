@@ -1,7 +1,586 @@
 {
-  "joraa": {
-    "error": "Expecting value: line 1 column 1 (char 0)"
-  },
+  "joraa": [
+    {
+      "id": "4ed5b69c-9a2d-4d80-b9ba-940d555fceae",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Quarto pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1787/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 236.85,
+      "url": "https://jo.azores.gov.pt/#/ato/4ed5b69c-9a2d-4d80-b9ba-940d555fceae"
+    },
+    {
+      "id": "8527115f-6ce7-415b-ae71-c846ce5dbe6a",
+      "summary": "Programas de apoio à habitação - aquisição de habitação própria.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 227/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional da Habitação",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 17408.0,
+      "url": "https://jo.azores.gov.pt/#/ato/8527115f-6ce7-415b-ae71-c846ce5dbe6a"
+    },
+    {
+      "id": "1c801654-a9d2-49f2-bd49-a19229d97381",
+      "summary": "Transferência de verba - Katherine Louise Resendes Silva.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1784/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 3480.0,
+      "url": "https://jo.azores.gov.pt/#/ato/1c801654-a9d2-49f2-bd49-a19229d97381"
+    },
+    {
+      "id": "21a8ad46-785d-4492-93d8-9a69500398e7",
+      "summary": "Retifica o Contrato n.º 222/2026 de 28 de julho, publicado no Jornal Oficial, II Série, n.º 142, de 28 de julho de 2026.",
+      "text_excerpt": "",
+      "human_id": "Declaração de Retificação n.º 58/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/21a8ad46-785d-4492-93d8-9a69500398e7"
+    },
+    {
+      "id": "6a872ddd-92f2-43b6-bd5b-8bdf4b0e7425",
+      "summary": "Subdelegação de competências.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1783/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 260000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/6a872ddd-92f2-43b6-bd5b-8bdf4b0e7425"
+    },
+    {
+      "id": "27850a94-0239-454a-8dda-0e6d0f9488bc",
+      "summary": "Apoios financeiros no âmbito da medida QUALIFICA.Superior - Aviso N.º 12/C06-i05/2023 –Pós-Graduações.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1786/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/27850a94-0239-454a-8dda-0e6d0f9488bc"
+    },
+    {
+      "id": "66868188-36fb-4988-83d0-1e52af4b0ab4",
+      "summary": "AE entre a AZORES ON ROUTE, Lda e o SITACEHTT/Açores - Sindicato dos Trabalhadores das Indústrias Transformadoras, Alimentação, Bebidas e Similares, Comércio, Escritórios e Serviços, Hotelaria e Turismo, Transportes e Outros Serviços dos Açores – Alteração Salarial e Outras.",
+      "text_excerpt": "",
+      "human_id": "Convenção Coletiva de Trabalho n.º 24/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/66868188-36fb-4988-83d0-1e52af4b0ab4"
+    },
+    {
+      "id": "80bc2f58-ff6b-4e3d-a0f2-af4b6ffdef6e",
+      "summary": "Programas de apoio à habitação - Aquisição de habitação própria.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 226/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional da Habitação",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 27918.6,
+      "url": "https://jo.azores.gov.pt/#/ato/80bc2f58-ff6b-4e3d-a0f2-af4b6ffdef6e"
+    },
+    {
+      "id": "01a6e8ba-0e90-4cf1-a999-8e8c4aa68dc2",
+      "summary": "Apoio financeiro - Fundação Gaspar Frutuoso.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 786/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 18965.51,
+      "url": "https://jo.azores.gov.pt/#/ato/01a6e8ba-0e90-4cf1-a999-8e8c4aa68dc2"
+    },
+    {
+      "id": "23e49fec-ca6a-43fc-aa82-6f0d56d4ccc5",
+      "summary": "Autorização de Condução de Viaturas Oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 27/2026 de 31 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/23e49fec-ca6a-43fc-aa82-6f0d56d4ccc5"
+    },
+    {
+      "id": "e5343b4a-f69e-4596-81ef-a6049ad2d699",
+      "summary": "Apoio financeiro - Associação RAEGE Açores - Rede Atlântica de Estações Geodinâmicas e Espaciais.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 784/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 13528.15,
+      "url": "https://jo.azores.gov.pt/#/ato/e5343b4a-f69e-4596-81ef-a6049ad2d699"
+    },
+    {
+      "id": "05310cb8-de26-453f-a1fb-dd6906ca017e",
+      "summary": "Contrato Programa celebrado entre a Secretaria Regional da Juventude, Habitação e Emprego e a Associação para o Desenvolvimento da ilha de São Jorge.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Contrato-Programa n.º 132/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 40000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/05310cb8-de26-453f-a1fb-dd6906ca017e"
+    },
+    {
+      "id": "c1f1c1da-8bfc-40fc-87ee-1552a6b7453a",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo - AASB- AR.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 337/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 10200.0,
+      "url": "https://jo.azores.gov.pt/#/ato/c1f1c1da-8bfc-40fc-87ee-1552a6b7453a"
+    },
+    {
+      "id": "b0ca9158-5539-42eb-8d59-1c8418dab77e",
+      "summary": "AE entre a MOBI AZORES - Mobilidade e Turismo, Lda. e o SITACEHTT/Açores - Sindicato dos Trabalhadores das Indústrias Transformadoras, Alimentação, Bebidas e Similares, Comércio, Escritórios e Serviços, Hotelaria e Turismo, Transportes e Outros Serviços dos Açores - Alteração Salarial e Outras.",
+      "text_excerpt": "",
+      "human_id": "Convenção Coletiva de Trabalho n.º 25/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/b0ca9158-5539-42eb-8d59-1c8418dab77e"
+    },
+    {
+      "id": "f7101b1a-3df4-4586-94e7-53f649391b38",
+      "summary": "Apoio financeiro - Centro de Oncologia dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 785/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 8398.67,
+      "url": "https://jo.azores.gov.pt/#/ato/f7101b1a-3df4-4586-94e7-53f649391b38"
+    },
+    {
+      "id": "a837aaad-b652-4877-9b12-ef9b191da030",
+      "summary": "Apoio financeiro - Southeastern Massachusetts SER-Jobs for Progress.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 791/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional dos Assuntos Parlamentares e Comunidades",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 2589.0,
+      "url": "https://jo.azores.gov.pt/#/ato/a837aaad-b652-4877-9b12-ef9b191da030"
+    },
+    {
+      "id": "029e357c-4dfb-4d03-812b-c3501f01733e",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha Terceira - Quinto pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1790/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 1478.1,
+      "url": "https://jo.azores.gov.pt/#/ato/029e357c-4dfb-4d03-812b-c3501f01733e"
+    },
+    {
+      "id": "8d667fbc-6135-4352-b8fb-cd3a447e0848",
+      "summary": "AE entre a União de Transportes dos Carvalhos, Lda e o Sindicato dos Profissionais dos Transportes, Turismo e Outros Serviços da Horta – Alteração Salarial e Outras e Texto Consolidado.",
+      "text_excerpt": "",
+      "human_id": "Convenção Coletiva de Trabalho n.º 26/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/8d667fbc-6135-4352-b8fb-cd3a447e0848"
+    },
+    {
+      "id": "c8d1db03-3943-41e9-883f-2270981fde13",
+      "summary": "Apoio financeiro - Fundo Escolar da Escola Básica e Integrada do Topo.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 225/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 466.5,
+      "url": "https://jo.azores.gov.pt/#/ato/c8d1db03-3943-41e9-883f-2270981fde13"
+    },
+    {
+      "id": "9eb14523-5a6a-418a-8a1b-6b3ba173cf76",
+      "summary": "Autorização de Condução de Viaturas Oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 29/2026 de 31 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/9eb14523-5a6a-418a-8a1b-6b3ba173cf76"
+    },
+    {
+      "id": "d72308bf-4d97-46ce-8caf-8473dca09b5a",
+      "summary": "Aplicação, aos desembarques de exemplares das espécies atum bonito (Katsuwonus pelamis), atum voador (Thunnus alalunga) e atum albacora (Thunnus albacares), efetuados no entreposto frigorífico de Vila do Porto, as medidas previstas no n.º 7 da Portaria n.º 88/2026, de 30 de julho.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1785/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional do Mar e das Pescas",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/d72308bf-4d97-46ce-8caf-8473dca09b5a"
+    },
+    {
+      "id": "c9042fa4-4e37-4160-9407-587c47218f76",
+      "summary": "Nomeação.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 224/2026 de 31 de julho de 2026",
+      "entity": "Assembleia Legislativa da Região Autónoma dos Açores",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/c9042fa4-4e37-4160-9407-587c47218f76"
+    },
+    {
+      "id": "63244315-02e7-429a-8cc1-163a354ea963",
+      "summary": "Procedimento concursal comum para constituição de relação jurídica de emprego público por tempo indeterminado para ocupação de um posto de trabalho para assistente técnico para a UOPU - Unidade de Obras Particulares e Urbanismo.",
+      "text_excerpt": "",
+      "human_id": "Aviso n.º 93/2026 de 31 de julho de 2026",
+      "entity": "Município de Calheta",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/63244315-02e7-429a-8cc1-163a354ea963"
+    },
+    {
+      "id": "74ce9bb5-2a68-4902-973b-1d4fc0d8b921",
+      "summary": "Transferência financeira - Instituto de Financiamento da Agricultura e Pescas, IP..",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 794/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional do Mar e das Pescas",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 15252.16,
+      "url": "https://jo.azores.gov.pt/#/ato/74ce9bb5-2a68-4902-973b-1d4fc0d8b921"
+    },
+    {
+      "id": "88fa9059-3d36-42ff-94f4-b7b9d1fe099f",
+      "summary": "Procedimento concursal comum para constituição de relação jurídica de emprego público por tempo indeterminado para ocupação de um posto de trabalho para a carreira de técnico superior para a Unidade de Ambiente e Ordenamento Territorial.",
+      "text_excerpt": "",
+      "human_id": "Aviso n.º 92/2026 de 31 de julho de 2026",
+      "entity": "Município de Calheta",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/88fa9059-3d36-42ff-94f4-b7b9d1fe099f"
+    },
+    {
+      "id": "69fb8115-d130-4dd6-8dd9-1b0aa99e27bd",
+      "summary": "Empreitada de execução de obras de reabilitação de quatro imóveis, no âmbito do programa 1.º Direito.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 363/2026 de 31 de julho de 2026",
+      "entity": "Município de Vila do Porto",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 1186239.6,
+      "url": "https://jo.azores.gov.pt/#/ato/69fb8115-d130-4dd6-8dd9-1b0aa99e27bd"
+    },
+    {
+      "id": "a069d771-2ca8-4745-9261-4d0d19290845",
+      "summary": "Exoneração.",
+      "text_excerpt": "",
+      "human_id": "Extrato de Despacho n.º 223/2026 de 31 de julho de 2026",
+      "entity": "Assembleia Legislativa da Região Autónoma dos Açores",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/a069d771-2ca8-4745-9261-4d0d19290845"
+    },
+    {
+      "id": "0b0ecd10-9a89-4edd-99b1-57907bb5f332",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha de São Jorge - Sétimo pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1788/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 5684.8,
+      "url": "https://jo.azores.gov.pt/#/ato/0b0ecd10-9a89-4edd-99b1-57907bb5f332"
+    },
+    {
+      "id": "28e57d74-1918-4dec-ac42-64c749288b84",
+      "summary": "Aquisição de serviços de limpeza do edifício-sede da Secretaria Regional da Agricultura e Alimentação.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 361/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Agricultura e Alimentação",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/28e57d74-1918-4dec-ac42-64c749288b84"
+    },
+    {
+      "id": "ff8fc5a1-b8e4-4239-ac7e-24131e51f345",
+      "summary": "Empreitada de obras públicas de requalificação da escola EB1/JI do Aeroporto.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 364/2026 de 31 de julho de 2026",
+      "entity": "Município de Vila do Porto",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 1380000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/ff8fc5a1-b8e4-4239-ac7e-24131e51f345"
+    },
+    {
+      "id": "5457dfce-a2a8-4064-b877-d2c3b97cccaa",
+      "summary": "Autorização de Condução de Viaturas Oficiais.",
+      "text_excerpt": "",
+      "human_id": "Deliberação n.º 28/2026 de 31 de julho de 2026",
+      "entity": "Instituto da Segurança Social dos Açores, I.P.R.A.",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/5457dfce-a2a8-4064-b877-d2c3b97cccaa"
+    },
+    {
+      "id": "0e2cb911-57df-4624-8359-4ebe29c34925",
+      "summary": "Transferência financeira - Instituto de Financiamento da Agricultura e Pescas, IP..",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 793/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional do Mar e das Pescas",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 3742.98,
+      "url": "https://jo.azores.gov.pt/#/ato/0e2cb911-57df-4624-8359-4ebe29c34925"
+    },
+    {
+      "id": "44bdf461-4b18-43b7-805d-686e236a9541",
+      "summary": "Contrato-Programa de Desenvolvimento Desportivo - AGA.",
+      "text_excerpt": "",
+      "human_id": "Contrato-Programa n.º 338/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional do Desporto",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 5150.0,
+      "url": "https://jo.azores.gov.pt/#/ato/44bdf461-4b18-43b7-805d-686e236a9541"
+    },
+    {
+      "id": "1709ea56-467a-4a7f-9f9e-266f96ab0e85",
+      "summary": "Apoio financeiro para a manutenção da produção da cultura da vinha na ilha Terceira - Primeiro pagamento.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1789/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional do Ambiente e Ação Climática",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 186.75,
+      "url": "https://jo.azores.gov.pt/#/ato/1709ea56-467a-4a7f-9f9e-266f96ab0e85"
+    },
+    {
+      "id": "ac6d3384-6438-4cf6-ba79-7e6a82cb3bc7",
+      "summary": "Retifica o Contrato n.º 219/2026 de 28 de julho, publicado no Jornal Oficial, II Série, n.º 142 de 28 de julho de 2026.",
+      "text_excerpt": "",
+      "human_id": "Declaração de Retificação n.º 57/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/ac6d3384-6438-4cf6-ba79-7e6a82cb3bc7"
+    },
+    {
+      "id": "d76e70cb-f86d-4a60-9e92-ac44a10629b4",
+      "summary": "Apoio financeiro - IMAR – Instituto do Mar.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 789/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 20775.55,
+      "url": "https://jo.azores.gov.pt/#/ato/d76e70cb-f86d-4a60-9e92-ac44a10629b4"
+    },
+    {
+      "id": "cb358fec-877f-4770-8b50-ac7d7c5fc0c3",
+      "summary": "Procedimento concursal comum para constituição de relação jurídica de emprego público por tempo indeterminado para ocupação de dois postos de trabalho para a carreira de técnicos superiores para o Gabinete de Apoio ao Executivo.",
+      "text_excerpt": "",
+      "human_id": "Aviso n.º 91/2026 de 31 de julho de 2026",
+      "entity": "Município de Calheta",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/cb358fec-877f-4770-8b50-ac7d7c5fc0c3"
+    },
+    {
+      "id": "3d0d1b43-3e70-404a-9d11-4bb931075ce8",
+      "summary": "Designa o representante para outorga na escritura de contrato de compra e venda.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1780/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/3d0d1b43-3e70-404a-9d11-4bb931075ce8"
+    },
+    {
+      "id": "2884c55c-b789-4b3c-a403-117ac0ddf35a",
+      "summary": "Discussão Pública da 2.ª Revisão do Plano Diretor Municipal de Vila do Porto.",
+      "text_excerpt": "",
+      "human_id": "Edital n.º 13/2026 de 31 de julho de 2026",
+      "entity": "Município de Vila do Porto",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/2884c55c-b789-4b3c-a403-117ac0ddf35a"
+    },
+    {
+      "id": "76e2f6de-9993-421f-9bc0-70bd3d4b68ad",
+      "summary": "Contrato de Cooperação – Valor Investimento n.º 104/2026  - Irmandade da Santa Casa da Misericórdia dos Altares.",
+      "text_excerpt": "",
+      "human_id": "Contrato n.º 226/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 2280.38,
+      "url": "https://jo.azores.gov.pt/#/ato/76e2f6de-9993-421f-9bc0-70bd3d4b68ad"
+    },
+    {
+      "id": "05cc6314-c86e-45aa-8674-6de1805d8346",
+      "summary": "Rede Regional de Cuidados Continuados Integrados - Alteração do número de camas.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1782/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/05cc6314-c86e-45aa-8674-6de1805d8346"
+    },
+    {
+      "id": "7dd3b67e-fded-4a09-916d-123cf7ab8ba7",
+      "summary": "Apoio financeiro - Fundação Gaspar Frutuoso.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 787/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 17869.27,
+      "url": "https://jo.azores.gov.pt/#/ato/7dd3b67e-fded-4a09-916d-123cf7ab8ba7"
+    },
+    {
+      "id": "523a52a0-aa40-4c96-bbec-67cffa07c2a4",
+      "summary": "Apoio financeiro - Centro Comunitário Working Women.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 790/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional dos Assuntos Parlamentares e Comunidades",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 2825.0,
+      "url": "https://jo.azores.gov.pt/#/ato/523a52a0-aa40-4c96-bbec-67cffa07c2a4"
+    },
+    {
+      "id": "a0805505-1a92-4b3f-a0fc-5d6ef61e8727",
+      "summary": "Apoio financeiro - Fundação Gaspar Frutuoso.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 788/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional da Ciência, Inovação e Desenvolvimento",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 17990.82,
+      "url": "https://jo.azores.gov.pt/#/ato/a0805505-1a92-4b3f-a0fc-5d6ef61e8727"
+    },
+    {
+      "id": "68de6cc3-f536-46f5-bef0-b477ef15c863",
+      "summary": "Portaria de extensão do acordo coletivo de trabalho celebrado entre o Hospital do Divino Espírito Santo de Ponta Delgada, E.P.E.R., o Hospital de Santo Espírito da Ilha Terceira, E.P.E.R., o Hospital da Horta, E.P.E.R. e o Sindicato dos Trabalhadores da Administração Pública e de Entidades com Fins Públicos (SINTAP/Açores), aplicável aos trabalhadores que desenvolvem funções correspondentes à carreira especial da Função Pública de Técnico Auxiliar de Saúde, vinculados por contrato individual de trabalho a entidades prestadoras de cuidados de saúde com natureza empresarial pública, integrados no Serviço Regional de Saúde dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Portaria de Extensão n.º 20/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional de Qualificação Profissional e Emprego",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/68de6cc3-f536-46f5-bef0-b477ef15c863"
+    },
+    {
+      "id": "5fc400ef-4bf3-47a5-9b21-1aa3abbc6891",
+      "summary": "Apoio financeiro - Santa Casa da Misericórdia da Madalena do Pico.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 792/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional da Saúde e Segurança Social",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": 11032.01,
+      "url": "https://jo.azores.gov.pt/#/ato/5fc400ef-4bf3-47a5-9b21-1aa3abbc6891"
+    },
+    {
+      "id": "4c3557ca-2e07-443a-a033-29a472eeaffd",
+      "summary": "Designa o representante para outorga da escritura da Adenda ao Contrato relativo às obrigações de construção e de exploração de imóveis relevantes para o desenvolvimento do Turismo na Região Autónoma dos Açores, a celebrar com ASTA - Atlântida Sociedade de Turismo e Animação, S.A..",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1779/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/4c3557ca-2e07-443a-a033-29a472eeaffd"
+    },
+    {
+      "id": "17022756-d5a8-4283-aea6-e0d8221afdbb",
+      "summary": "Empreitada de pintura termoplástica a quente - Ilha do Pico - Ano 2026.",
+      "text_excerpt": "",
+      "human_id": "Anúncio n.º 362/2026 de 31 de julho de 2026",
+      "entity": "Direção Regional das Obras Públicas",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/17022756-d5a8-4283-aea6-e0d8221afdbb"
+    },
+    {
+      "id": "cabe6d58-353b-4b55-b379-a9298e8d583b",
+      "summary": "Procedimento de recrutamento para preenchimento de um posto de trabalho na categoria de assistente de medicina intensiva da carreira médica da área hospitalar.",
+      "text_excerpt": "",
+      "human_id": "Aviso n.º 90/2026 de 31 de julho de 2026",
+      "entity": "Hospital do Divino Espírito Santo de Ponta Delgada, E.P.E.R.",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/cabe6d58-353b-4b55-b379-a9298e8d583b"
+    },
+    {
+      "id": "8f195026-3a66-492b-a7dd-d548460f8b5b",
+      "summary": "Designa o representante para outorgar escritura de constituição de direito de superfície.",
+      "text_excerpt": "",
+      "human_id": "Despacho n.º 1781/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "publication": "Jornal Oficial II Série - Número 145",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/8f195026-3a66-492b-a7dd-d548460f8b5b"
+    },
+    {
+      "id": "e5d6b254-efa3-4f54-9950-f81e503bd6f3",
+      "summary": "Autoriza a realização da despesa e a abertura de um concurso público, por lotes, com vista à celebração de contratos de aquisição de serviços de vigilância e segurança privada, abrangendo diversas instalações.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 94/2026 de 31 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 97",
+      "total_value": 3660000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/e5d6b254-efa3-4f54-9950-f81e503bd6f3"
+    },
+    {
+      "id": "49c3695a-2c20-4f2d-8093-4e6e30e80701",
+      "summary": "Fixar em 3.050.000,00 € (três milhões e cinquenta mil euros) o limite máximo global das comparticipações financeiras a atribuir no ano 2026 para contratos-programa que se enquadrem no artigo 2.º do Decreto Legislativo Regional n.º 30/2006/A, de 8 de agosto.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 99/2026 de 31 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 97",
+      "total_value": 6100000.0,
+      "url": "https://jo.azores.gov.pt/#/ato/49c3695a-2c20-4f2d-8093-4e6e30e80701"
+    },
+    {
+      "id": "1a6f9913-1157-480d-9f61-b018b28f6a18",
+      "summary": "Altera os números 1, 3 e 5 da Resolução do Conselho do Governo n.º 29/2026, de 3 de março. (Autoriza, para o ano de 2026, a concessão de subsídios e outras formas de apoio a ações e projetos de caráter económico, pela Secretaria Regional da Juventude, Habitação e Emprego, destinados ao financiamento de atividades, ações, projetos ou iniciativas que contribuam para o funcionamento, modernização ou melhoria das atividades de ensino e formação das escolas profissionais privadas da Região Autónoma dos Açores.).",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 95/2026 de 31 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 97",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/1a6f9913-1157-480d-9f61-b018b28f6a18"
+    },
+    {
+      "id": "f3b25655-aa18-4c72-b12e-28653ff39f17",
+      "summary": "Autoriza a segunda alteração ao contrato-programa celebrado, a 14 de novembro de 2024, entre a Secretaria Regional do Ambiente e Ação Climática e a Universidade dos Açores.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 98/2026 de 31 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 97",
+      "total_value": 252569.28,
+      "url": "https://jo.azores.gov.pt/#/ato/f3b25655-aa18-4c72-b12e-28653ff39f17"
+    },
+    {
+      "id": "0c647747-5c11-4103-8930-bf091555e51c",
+      "summary": "Aprova o caderno de encargos no qual se estabelecem os termos e as condições da negociação particular para a alienação de ações representativas da totalidade do capital social da SATA Handling, S.A..",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 97/2026 de 31 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 97",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/0c647747-5c11-4103-8930-bf091555e51c"
+    },
+    {
+      "id": "60c4284d-b0fd-453b-8785-3a9435ccacbf",
+      "summary": "Aprova as candidaturas, relativas ao ano de 2025, transitadas para o ano de 2026 ao abrigo do disposto no n.º 1 do artigo 29.º do Decreto Legislativo Regional n.º 6/2027/A, de 8 de agosto, na sua redação atual, previstas na Resolução do Conselho do Governo n.º 94/2025, de 3 de julho. ( Candidaturas não selecionadas e não aprovadas, no ano de 2025, no âmbito do regime jurídico da cooperação técnica e financeira entre a administração regional autónoma e as freguesias e associações de freguesias da Região Autónoma dos Açores.).",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 96/2026 de 31 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 97",
+      "total_value": 15947340.46,
+      "url": "https://jo.azores.gov.pt/#/ato/60c4284d-b0fd-453b-8785-3a9435ccacbf"
+    },
+    {
+      "id": "c21f3ffa-8407-4290-ae5c-1e0715d09e2e",
+      "summary": "Fixa os tamanhos mínimos de referência de conservação e os períodos de defeso para espécies, relativo à conservação dos recursos haliêuticos e à proteção dos ecossistemas marinhos através de medidas técnicas. Revoga a Portaria n.º 74/2015, de 15 de junho e o Despacho Normativo n.º 23/2015, de 22 de junho.",
+      "text_excerpt": "",
+      "human_id": "Portaria n.º 89/2026 de 31 de julho de 2026",
+      "entity": "Secretaria Regional do Mar e das Pescas",
+      "publication": "Jornal Oficial I Série - Número 97",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/c21f3ffa-8407-4290-ae5c-1e0715d09e2e"
+    },
+    {
+      "id": "ce5e032e-c7d8-4c21-b56b-03111eb6167b",
+      "summary": "Governo resolve determinar que a Portos dos Açores, S.A., promova a separação progressiva entre as funções de autoridade portuária e as atividades de natureza operacional, asseguradas por operadores económicos.",
+      "text_excerpt": "",
+      "human_id": "Resolução do Conselho do Governo n.º 100/2026 de 31 de julho de 2026",
+      "entity": "Presidência do Governo",
+      "publication": "Jornal Oficial I Série - Número 97",
+      "total_value": null,
+      "url": "https://jo.azores.gov.pt/#/ato/ce5e032e-c7d8-4c21-b56b-03111eb6167b"
+    }
+  ],
   "base": [
     {
       "id": 15425641,
