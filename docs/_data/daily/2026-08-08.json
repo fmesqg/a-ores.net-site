@@ -1,0 +1,26 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 2 column 13 (char 13)"
+  },
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9410,
+        "title": "Situação da população de lapas na ilha das Flores e continuidade da monitorização científica",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "08/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9410"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-08"
+}
