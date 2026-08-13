@@ -1,0 +1,184 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15482751,
+      "title": "AQUISIÇÃO DE TRÊS TRATORES DE TERMINAL ELÉTRICOS, COM ADAPTAÇÃO PARA REBOCAR ATRELADOS TIPO “SLIPWAYTRAILER” PARA EMBARCAÇÕES ATÉ SETENTA TONELADAS DE PESO, PARA OS PORTOS DE PONTA DELGADA, ANGRA DO H...",
+      "price": "897.300,00 €",
+      "buyer": "Portos dos Açores, SA",
+      "seller": "Resitul, Equipamentos Serviços e Tecnologias Ambientais, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15482751"
+    },
+    {
+      "id": 15480448,
+      "title": "O presente procedimento tem por objeto a constituição de direito de superfície sobre lotes do domínio privado municipal integrados no Parque Empresarial do Mistério da Silveira, sito na freguesia de S...",
+      "price": "144.192,00 €",
+      "buyer": "Município das Lajes do Pico",
+      "seller": "RTM Lacticínios do Pico, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15480448"
+    },
+    {
+      "id": 15481004,
+      "title": "O presente procedimento tem por objeto a constituição de direito de superfície sobre lotes do domínio privado municipal integrados no Parque Empresarial do Mistério da Silveira, sito na freguesia de S...",
+      "price": "102.144,00 €",
+      "buyer": "Município das Lajes do Pico",
+      "seller": "Pedro Tomás Neves Unipessoal Lda",
+      "procedure": "Concurso público",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15481004"
+    },
+    {
+      "id": 15481071,
+      "title": "aquisição de serviços de manutenção evolutiva do PS.APR",
+      "price": "74.900,00 €",
+      "buyer": "Direção Regional das Comunicações e da Transição Digital",
+      "seller": "Ask Blue, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15481071"
+    },
+    {
+      "id": 15482188,
+      "title": "Aquisição de serviços de logística, imagem e gestão cultural dos palcos secundários da Semana do Mar 2026",
+      "price": "74.850,00 €",
+      "buyer": "Município da Horta",
+      "seller": "URBHORTA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15482188"
+    },
+    {
+      "id": 15481009,
+      "title": "Aquisição da prestação de serviços para parceria técnico-científica e participação do Hospital Divino Espírito Santo de Ponta Delgada, EPER., na 7.ª Edição do Projeto H-INNOVA: Health Innovation Hub.",
+      "price": "70.000,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "PREMIVALOR ESTUDOS INVESTIMENTOS E PARTICIPAÇÕES LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15481009"
+    },
+    {
+      "id": 15482334,
+      "title": "Empreitada de Pinturas na Escola EB1/JI Eng. José Cordeiro, Arrifes (Lote 3)",
+      "price": "61.977,98 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Almério & Cordeiro, Ca Lda",
+      "procedure": "Concurso público",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15482334"
+    },
+    {
+      "id": 15482929,
+      "title": "Ajuste Direto para aquisição de serviços de desenvolvimento de solução de integração entre a plataforma Nextbitt e o sistema Globalcare",
+      "price": "35.925,00 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "GLINTT-HEALTHCARE SOLUTIONS,S.A(CPCHS)",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15482929"
+    },
+    {
+      "id": 15480847,
+      "title": "Aquisição de Serviços de Criação, Conceção, Direção Técnica e Execução do Cortejo de Abertura das Sanjoaninas 2026",
+      "price": "20.000,00 €",
+      "buyer": "Câmara Municipal de Angra do Heroísmo",
+      "seller": "Filipe Valadão",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15480847"
+    },
+    {
+      "id": 15482877,
+      "title": "Aquisição de Serviços de Realização do Concerto da Artista Áurea - Comemorações do Aniversário da Cidade de Angra do Heroísmo",
+      "price": "17.790,00 €",
+      "buyer": "Câmara Municipal de Angra do Heroísmo",
+      "seller": "Andamento Vivo Produções Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15482877"
+    },
+    {
+      "id": 15482366,
+      "title": "Empreitada de pintura do interior do 1.º andar do edifício designado por \"Casa dos Magistrados\", freguesia da Matriz, concelho da Horta",
+      "price": "14.026,44 €",
+      "buyer": "Município da Horta",
+      "seller": "Açores Verdejantes - Pinturas Soc. Unipessoal, Ltdª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15482366"
+    },
+    {
+      "id": 15480420,
+      "title": "O presente procedimento tem por objeto a constituição de direito de superfície sobre lotes do domínio privado municipal integrados no Parque Empresarial do Mistério da Silveira, sito na freguesia de S...",
+      "price": "4.806,40 €",
+      "buyer": "Município das Lajes do Pico",
+      "seller": "Biquadrada Açores lda",
+      "procedure": "Concurso público",
+      "signing_date": "30-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15480420"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9433,
+        "title": "Programas de incentivo à transição energética",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "23/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9433"
+      },
+      {
+        "id": 9439,
+        "title": "Atraso na entrada em funcionamento do novo Parque Eólico de Ilha Santa Maria",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "João Vasco Costa PS, ...",
+        "date": "27/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9439"
+      },
+      {
+        "id": 9478,
+        "title": "Lista de espera para colocação em lares de idosos, critérios de priorização, articulação com o programa \"Novos Idosos\"",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "11/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9478"
+      },
+      {
+        "id": 9329,
+        "title": "Estudo de avaliação do impacto da RAMPA e desenvolvimento de mecanismos de compensação (2)",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "28/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9329"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23986,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - \"Se queremos Turismo, temos de apostar na promoção do Destino Açores\".",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23986"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-12"
+}
