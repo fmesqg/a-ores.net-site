@@ -1,0 +1,281 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15494272,
+      "title": "AQUISIÇÃO DE MANUAIS DIGITAIS E BENS CONEXOS",
+      "price": "759.578,40 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Porto Editora, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15494272"
+    },
+    {
+      "id": 15491123,
+      "title": "AQUISIÇÃO DE MANUAIS DIGITAIS E BENS CONEXOS",
+      "price": "732.215,84 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Porto Editora, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15491123"
+    },
+    {
+      "id": 15494000,
+      "title": "AQUISIÇÃO DE MANUAIS DIGITAIS E BENS CONEXOS",
+      "price": "724.479,40 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Porto Editora, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15494000"
+    },
+    {
+      "id": 15494141,
+      "title": "AQUISIÇÃO DE MANUAIS DIGITAIS E BENS CONEXOS",
+      "price": "680.887,57 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Porto Editora, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15494141"
+    },
+    {
+      "id": 15486423,
+      "title": "FORNECIMENTO DE ÓLEOS LUBRIFICANTES PARA AS CENTRAIS TERMOELÉTRICAS DA EDA",
+      "price": "661.409,46 €",
+      "buyer": "EDA - Electricidade dos Açores, SA",
+      "seller": "Galp Açores, Unipessoal Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15486423"
+    },
+    {
+      "id": 15494508,
+      "title": "AQUISIÇÃO DE MANUAIS DIGITAIS E BENS CONEXOS",
+      "price": "565.319,04 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Porto Editora, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15494508"
+    },
+    {
+      "id": 15490467,
+      "title": "AQUISIÇÃO DE MANUAIS DIGITAIS E BENS CONEXOS",
+      "price": "560.055,10 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Porto Editora, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15490467"
+    },
+    {
+      "id": 15490796,
+      "title": "AQUISIÇÃO DE MANUAIS DIGITAIS E BENS CONEXOS",
+      "price": "511.795,77 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Porto Editora, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15490796"
+    },
+    {
+      "id": 15494628,
+      "title": "AQUISIÇÃO DE MANUAIS DIGITAIS E BENS CONEXOS",
+      "price": "367.945,62 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Porto Editora, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15494628"
+    },
+    {
+      "id": 15495539,
+      "title": "Licenciamento de Software e Modernização do Parque de Impressão, por lotes, no âmbito do Plano de Recuperação e Resiliência, Componente 1, Investimento RE-C01-i08-RAA - Hospital Digital da Região Autó...",
+      "price": "103.682,56 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "RIS 2048 - Sistemas Informáticos e Comunicações S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15495539"
+    },
+    {
+      "id": 15487176,
+      "title": "Aquisição de serviços de licenciamento e de suporte ao ERP Primavera",
+      "price": "94.513,76 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "Primavera - Business Software Solutions, S.A",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15487176"
+    },
+    {
+      "id": 15495655,
+      "title": "PRC/11/2017 - Fornecimento de reagentes e consumíveis para testes laboratoriais de imunologia, com colocação de equipamentos",
+      "price": "50.527,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Jorge",
+      "seller": "FARMAÇOR - Comércio de Produtos Químico-Farmacêuticos dos Açores, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15495655"
+    },
+    {
+      "id": 15495704,
+      "title": "Empreitada de Construção de um anexo de apoio ao Pavilhão dos Fenais da Ajuda",
+      "price": "49.589,25 €",
+      "buyer": "Municipio da  Ribeira Grande",
+      "seller": "João Luís Correia & Filhas, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "07-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15495704"
+    },
+    {
+      "id": 15484811,
+      "title": "Aquisição de serviços de confeção de vestuário para os desfiles integrados nas Festas da Praia 2026",
+      "price": "48.301,33 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "SANTA CASA DA MISERICÓRDIA DA PRAIA DA VITÓRIA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15484811"
+    },
+    {
+      "id": 15494624,
+      "title": "Aquisição de Equipamento de Urodinâmica para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "40.434,76 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Filsat - Equipamentos Médico Científicos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15494624"
+    },
+    {
+      "id": 15494239,
+      "title": "Restauro da Zona Húmida do Belojardim",
+      "price": "35.371,88 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "Ananias Contente e Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15494239"
+    },
+    {
+      "id": 15495761,
+      "title": "Aquisição de serviços de atualização dos instrumentos da política local de habitação",
+      "price": "34.500,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Sociedade Portuguesa de Inovação - Consultadoria Empresarial e Fomento da Inovação, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15495761"
+    },
+    {
+      "id": 15485482,
+      "title": "Aquisição de balanças, por lotes, para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "30.652,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "DINARTE DAMASO & FILHOS, Unipessoal Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15485482"
+    },
+    {
+      "id": 15490486,
+      "title": "Aquisição de sistema de armazenamento (Storage) para servidor de gravação CCTV",
+      "price": "27.791,20 €",
+      "buyer": "Câmara Municipal de Ponta Delgada",
+      "seller": "MEO - Serviços de Comunicações e Multimédia, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15490486"
+    },
+    {
+      "id": 15493296,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "23.650,00 €",
+      "buyer": "USI Santa Maria",
+      "seller": "MERCK SHARP & DOHME, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "25-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15493296"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9442,
+        "title": "Falta de manutenção das estradas regionais da ilha Terceira e atrasos na pavimentação das denominadas \"sobras de estradas\"",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Marco Martins PS, ...",
+        "date": "29/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9442"
+      },
+      {
+        "id": 9480,
+        "title": "Impacto económico, turístico e promocional do desporto motorizado nos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9480"
+      },
+      {
+        "id": 9481,
+        "title": "Novo tarifário dos transportes públicos em São Miguel",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9481"
+      },
+      {
+        "id": 9415,
+        "title": "Dados sobre fibromialgia na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9415"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23987,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA questiona Governo Regional sobre impacto económico e turístico do desporto motorizado nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23987"
+      },
+      {
+        "id": 23988,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA defende regime de segurança social que dê mais protecção aos pescadores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23988"
+      },
+      {
+        "id": 23989,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA defende criação de grande mercado agrícola em São Miguel para valorizar produtores e comerciantes locais.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23989"
+      },
+      {
+        "id": 23990,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores realça investimento de 17 milhões de euros no Hospital da Horta.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23990"
+      },
+      {
+        "id": 23991,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA Açores exige transparência no novo tarifário dos transportes públicos de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23991"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-13"
+}
