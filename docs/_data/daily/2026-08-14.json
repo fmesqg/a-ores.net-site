@@ -1,0 +1,239 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15496614,
+      "title": "Ajuste Direto para a \"Aquisição de serviços para a contratação de artistas e produção do evento \"Semana do Mar 2026\".",
+      "price": "388.539,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Xmood, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15496614"
+    },
+    {
+      "id": 15497371,
+      "title": "Empreitada de Execução do Saneamento Básico na Rua Alexandre José Moniz ¿ Calhetas",
+      "price": "174.900,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Tecnovia Açores, Sociedade de Empreitadas, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "11-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497371"
+    },
+    {
+      "id": 15498522,
+      "title": "serviços médicos de ortopedia ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "RNADIRG LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15498522"
+    },
+    {
+      "id": 15499507,
+      "title": "serviços médicos de ortopedia ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Sérgio Ogando Oliveira - Serviços médicos Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15499507"
+    },
+    {
+      "id": 15496644,
+      "title": "Empreitada de Trabalhos no Mercado Municipal da Ribeira Grande",
+      "price": "66.600,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "João Vieira &amp; Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15496644"
+    },
+    {
+      "id": 15497396,
+      "title": "PRC/12/2026 - Aquisição de reagentes, em regime de contra consumo, na área de Química Clínica, com colocação de equipamentos nos dois Centros de Saúde da Unidade de Saúde de Ilha de São Jorge",
+      "price": "66.524,36 €",
+      "buyer": "Unidade de Saúde da Ilha de São Jorge",
+      "seller": "DINARTE DAMASO & FILHOS, Unipessoal Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497396"
+    },
+    {
+      "id": 15499664,
+      "title": "Aquisição de serviços de planeamento, coordenação e fiscalização na execução da empreitada de construção de 12 habitações do empreendimento do Monte da Guia, sito a Santa Bárbara, freguesia das Angúst...",
+      "price": "48.729,60 €",
+      "buyer": "Município da Horta",
+      "seller": "COSTA POIM – FISCALIZAÇÃO, ESTUDOS E PROJETOS DE ENGENHARIA, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15499664"
+    },
+    {
+      "id": 15498315,
+      "title": "serviços médicos de oncologia ao HSEIT, EPER",
+      "price": "25.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Maria Teresa Marques Condessa da Palma Martins e Silva Marques",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15498315"
+    },
+    {
+      "id": 15496489,
+      "title": "AQUISIÇÃO DE EQUIPAMENTOS PARA A REDE DE ABASTECIMENTO DE ÁGUA DAS LAJES DO PICO NO ÂMBITO DO PROJETO DE GESTÃO SUSTENTÁVEL DE ÁGUA",
+      "price": "22.223,91 €",
+      "buyer": "Município das Lajes do Pico",
+      "seller": "Turbomáquinas de José Ortiz",
+      "procedure": "Concurso público",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15496489"
+    },
+    {
+      "id": 15497061,
+      "title": "PRC/14/2026 - Aquisição de reagentes, em regime de contra-consumo, na área de Hemóstase, com colocação de equipamentos nos dois Centros de Saúde, da Unidade de Saúde da Ilha de São Jorge.",
+      "price": "21.516,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Jorge",
+      "seller": "FARMAÇOR - Comércio de Produtos Químico-Farmacêuticos dos Açores, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497061"
+    },
+    {
+      "id": 15496346,
+      "title": "Aquisição de serviços de transportes de contentores para a XXV Feira de Gastronomia, integrada nas Festas da Praia 2026",
+      "price": "19.600,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "LOGISLINK - TERMINAL LOGISTICA, LDA *",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15496346"
+    },
+    {
+      "id": 15497256,
+      "title": "RC/13/2026 - Aquisição de reagentes, em regime de contra consumo, na área de Hematologia, com colocação de equipamentos nos dois Centros de Saúde da Unidade de Saúde de Ilha de São Jorge",
+      "price": "14.882,40 €",
+      "buyer": "Unidade de Saúde da Ilha de São Jorge",
+      "seller": "Horiba ABX - Sucursal Portuguesa",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497256"
+    },
+    {
+      "id": 15497317,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "8.875,10 €",
+      "buyer": "USI Santa Maria",
+      "seller": "GLAXOSMITHKLINE - PRODUTOS FARMACÊUTICOS, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "25-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497317"
+    },
+    {
+      "id": 15497186,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "959,00 €",
+      "buyer": "USI Santa Maria",
+      "seller": "GLAXOSMITHKLINE - PRODUTOS FARMACÊUTICOS, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "15-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497186"
+    },
+    {
+      "id": 15497267,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "808,00 €",
+      "buyer": "USI Santa Maria",
+      "seller": "SANOFI - PRODUTOS FARMACÊUTICOS, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "20-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497267"
+    },
+    {
+      "id": 15497868,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "446,80 €",
+      "buyer": "USI Santa Maria",
+      "seller": "SANOFI - PRODUTOS FARMACÊUTICOS, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497868"
+    },
+    {
+      "id": 15497991,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "55,02 €",
+      "buyer": "USI Santa Maria",
+      "seller": "SANOFI - PRODUTOS FARMACÊUTICOS, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15497991"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9440,
+        "title": "Estado de degradação da Mata do Café",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "28/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9440"
+      },
+      {
+        "id": 9448,
+        "title": "Estado da rede pública de carregamento de veículos elétricos na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Marlene Damião PS, ...",
+        "date": "31/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9448"
+      },
+      {
+        "id": 9483,
+        "title": "Situação financeira, gestão e eventual demissão do Presidente do Conselho de Administração da LOTAÇOR",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "14/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9483"
+      },
+      {
+        "id": 9410,
+        "title": "Situação da população de lapas na ilha das Flores e continuidade da monitorização científica",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "08/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9410"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23992,
+        "title": "Nota de Agenda do Grupo Parlamentar do PS - Os deputados do Grupo Parlamentar do Partido Socialista Açores reúnem com a Delegação da Associação da Hotelaria, Restauração e Similares de Portugal (AHRESP) nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23992"
+      },
+      {
+        "id": 23993,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige esclarecimentos sobre situação financeira da Lotaçor e eventual demissão do presidente.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23993"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-14"
+}
