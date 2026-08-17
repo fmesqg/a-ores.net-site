@@ -1,0 +1,37 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9419,
+        "title": "Inventário atualizado e remoção de amianto em edifícios públicos da Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "15/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9419"
+      },
+      {
+        "id": 9421,
+        "title": "Custos com deslocação de profissionais de saúde nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Carlos Silva PS, ...",
+        "date": "17/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9421"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-16"
+}
