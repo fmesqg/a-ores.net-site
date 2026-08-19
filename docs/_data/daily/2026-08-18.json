@@ -1,0 +1,276 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15509817,
+      "title": "AQUISIÇÃO DE COMBUSTÍVEIS PARA AS VIATURAS E MÁQUINAS AGRÍCOLAS DA SECRETARIA REGIONAL DO AMBIENTE E AÇÃO CLIMÁTICA",
+      "price": "263.794,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "GALP AÇORES, UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15509817"
+    },
+    {
+      "id": 15510221,
+      "title": "Aquisição de serviços de consultoria, desenvolvimento e implementação de solução no âmbito da reorganização clínica do Serviço Regional de Saúde baseada no modelo de valor em saúde (Value-Based Health...",
+      "price": "74.931,00 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "Vision for Value, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510221"
+    },
+    {
+      "id": 15511136,
+      "title": "Aquisição de serviços médicos no SAC do CSL e na UBU do CSRG, CSFVC, CSP e CSN – janeiro de 2026",
+      "price": "63.840,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Precise Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15511136"
+    },
+    {
+      "id": 15509740,
+      "title": "Aquisição de prestação de conceção, desenvolvimento e implementação do site institucional do município de São Roque do Pico.",
+      "price": "58.550,00 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "Visualforma - Tecnologias de Informação, S.A.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15509740"
+    },
+    {
+      "id": 15510254,
+      "title": "Aquisição de produtos para tratamento de água e kits de reparação de bombas Grundfos para todos os Matadouros da Rede Regional de Abate para o ano 2026",
+      "price": "29.882,26 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Watercare - Tratamento de Águas, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510254"
+    },
+    {
+      "id": 15510243,
+      "title": "Aquisição de grupos eletrobombas para a estação elevatória de lamas finais da ETARAH",
+      "price": "21.934,56 €",
+      "buyer": "Câmara Municipal de Angra do Heroísmo",
+      "seller": "João paulino, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510243"
+    },
+    {
+      "id": 15511474,
+      "title": "Aquisição de Combustíveis (12000 litros de gasóleo rodoviário e 1200 litros de gasolina sem chumbo de 95 octanas)",
+      "price": "20.465,64 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "J. H. Ornelas & ., Ca., Suc., Lda",
+      "procedure": "Concurso público",
+      "signing_date": "17-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15511474"
+    },
+    {
+      "id": 15510959,
+      "title": "Aquisição de serviços médicos no SAU do CSPDL– janeiro de 2026",
+      "price": "20.160,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Morecare",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510959"
+    },
+    {
+      "id": 15511322,
+      "title": "Aquisição de 100 sacos de cama e 150 colchões para o Serviço Municipal de Proteção Civil de Santa Cruz da Graciosa",
+      "price": "15.435,50 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "Protilis Portugal, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "02-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15511322"
+    },
+    {
+      "id": 15510445,
+      "title": "Aquisição de serviços médicos no SAC CSPDL – janeiro de 2026",
+      "price": "10.080,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Diego Iván Estrella Goenaga",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510445"
+    },
+    {
+      "id": 15510678,
+      "title": "Aquisição de serviços médicos na UBU do CSRG – janeiro de 2026",
+      "price": "10.080,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Yamilé Hernández Arango",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510678"
+    },
+    {
+      "id": 15510778,
+      "title": "Aquisição de serviços médicos na UBU do CSRG – janeiro de 2026",
+      "price": "10.080,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Pedro René Cruz Alquier",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510778"
+    },
+    {
+      "id": 15510066,
+      "title": "Aquisição de serviços médicos no SAC CSPDL – janeiro de 2026",
+      "price": "10.080,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Yolanda del Carmen Cardona Samson",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510066"
+    },
+    {
+      "id": 15510459,
+      "title": "aquisição do ESTUDO DE VIABILIDADE DE CENTRAL DE BIODIGESTÃO",
+      "price": "9.800,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Biogás Canarias S.L.",
+      "procedure": "Contratação excluída II",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15510459"
+    },
+    {
+      "id": 15509998,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "4.940,00 €",
+      "buyer": "USI Santa Maria",
+      "seller": "Nanques Farma - Soc. Com. Produtos Químicos e Farmacêuticos Lda.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15509998"
+    },
+    {
+      "id": 15511213,
+      "title": "Aquisição de serviços médicos na Unidade de Cuidados Continuados Integrados do Centro de Saúde de Vila Franca do Campo – janeiro de 2026",
+      "price": "1.280,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Braz & Eusébio - Atividades Médicas Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15511213"
+    },
+    {
+      "id": 15511272,
+      "title": "Aquisição de serviços médicos na Unidade de Cuidados Continuados Integrados do Centro de Saúde de Vila Franca do Campo – janeiro de 2026",
+      "price": "1.280,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Rômulo Fernandes Augusto, Unipessoal. Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15511272"
+    },
+    {
+      "id": 15509860,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "1.044,80 €",
+      "buyer": "USI Santa Maria",
+      "seller": "SANOFI - PRODUTOS FARMACÊUTICOS, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15509860"
+    },
+    {
+      "id": 15509785,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "776,50 €",
+      "buyer": "USI Santa Maria",
+      "seller": "SANOFI - PRODUTOS FARMACÊUTICOS, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15509785"
+    },
+    {
+      "id": 15509800,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "774,75 €",
+      "buyer": "USI Santa Maria",
+      "seller": "Nanques Farma - Soc. Com. Produtos Químicos e Farmacêuticos Lda.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15509800"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9436,
+        "title": "Inoperacionalidade de equipamentos no Entreposto Frigorífico da Madalena expõe incapacidade de resposta da Lotaçor ao setor das pescas",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Mário Tomé PS, ...",
+        "date": "27/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9436"
+      },
+      {
+        "id": 9464,
+        "title": "Resposta do Sistema Educativo Regional às irregularidades dos exames nacionais de 2026",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Marlene Damião PS, ...",
+        "date": "05/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9464"
+      },
+      {
+        "id": 9487,
+        "title": "Alegado acesso indevido a dados pessoais de deputados, membros do gabinete e respetivos familiares",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "18/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9487"
+      },
+      {
+        "id": 9106,
+        "title": "Incumprimento do Governo Regional nos pagamentos do transporte escolar - impacto em alunos, famílias e empresas",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "29/01/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9106"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23996,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores exige rápida implementação do fundo de rotas para garantir mais ligações aéreas e preços mais baixos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23996"
+      },
+      {
+        "id": 23997,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige investigação a alegados acessos a dados de deputados, membros do gabinete e familiares.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23997"
+      }
+    ],
+    "audi_gr": [
+      {
+        "id": 3433,
+        "title": "Assegura a execução e garante o cumprimento, na ordem jurídica interna, das obrigações recorrentes do regulamento (UE) 2023/1805, relativo à utilização de combustíveis renováveis e hipocarbónicos no transporte marítimo - MAGRIM - (Reg. DL 266/XXV/2026)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/2/3433"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-18"
+}
