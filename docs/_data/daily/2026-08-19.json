@@ -1,0 +1,105 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15511913,
+      "title": "Empreitada de Substituição de Unidade de Produção Térmica e Beneficiação da Infraestrutura AVAC",
+      "price": "139.632,91 €",
+      "buyer": "Unidade de Saúde da Ilha Graciosa",
+      "seller": "FIT- Fabrico e Instalações Técnicas, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15511913"
+    },
+    {
+      "id": 15512007,
+      "title": "Aquisição de Ecógrafo de Ginecologia – Obstetrícia, no âmbito do Plano de Recuperação e Resiliência, componente 1, investimento RE-C01-i11-RAA Modernização e Requalificação do Serviço Regional de Saúd...",
+      "price": "74.960,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "CANON MEDICAL SYSTEMS, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15512007"
+    },
+    {
+      "id": 15514190,
+      "title": "Fornecimento de 16.000 litros de gasóleo rodoviário",
+      "price": "22.576,00 €",
+      "buyer": "Município da Horta",
+      "seller": "GALP AÇORES, UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15514190"
+    },
+    {
+      "id": 15512845,
+      "title": "FORNECIMENTO DE EQUIPAMENTO PARA A ETAR DA ILHA DO CORVO (COM SERVIÇOS TÉCNICOS DE MONTAGEM)",
+      "price": "20.696,00 €",
+      "buyer": "Município do Corvo",
+      "seller": "TEK BOX - Water Engineering, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15512845"
+    },
+    {
+      "id": 15512859,
+      "title": "Prestação de Serviços de Técnico Superior de Diagnóstico e Terapêutica na Área de Fisioterapia, na Modalidade de Avença",
+      "price": "17.957,04 €",
+      "buyer": "Unidade de Saúde da Ilha Graciosa",
+      "seller": "Ana Rita Silveira Machado da Costa",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15512859"
+    },
+    {
+      "id": 15513495,
+      "title": "Aquisição de material elétrico",
+      "price": "5.886,95 €",
+      "buyer": "Câmara Municipal de Ponta Delgada",
+      "seller": "Rolear - Automatizações, Estudos e Representações, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15513495"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9403,
+        "title": "Estudo técnico de Deloitte sobre a venda, extinção, cessão ou integração de entidades do setor público empresarial regional",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "30/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9403"
+      },
+      {
+        "id": 9423,
+        "title": "Financiamento pelo Governo da República de 85% das obras de reparação, reorganização e redimensionamento do Hospital do Divino Espírito Santo",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "20/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9423"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 23998,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende salvaguarda da sustentabilidade das associações de bombeiros perante fim dos protocolos com a ANA Aeroportos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23998"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-19"
+}
