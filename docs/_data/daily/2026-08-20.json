@@ -1,0 +1,106 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15517364,
+      "title": "Ajuste Direto n.º 29/SRAAC/2026 para a celebração de contrato de “aquisição de serviços para o desenvolvimento de modelo de qualidade da água e dispersão de poluentes para águas costeiras prioritárias...",
+      "price": "74.200,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "Simbiente Açores – Engenharia e Gestão Ambiental, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15517364"
+    },
+    {
+      "id": 15517622,
+      "title": "Prestação de Serviços de Seguros",
+      "price": "66.043,24 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "LUSITANIA-COMPANHIA DE SEGUROS, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15517622"
+    },
+    {
+      "id": 15517749,
+      "title": "\"Pavimentação de Vala na Zona do Termo - Lagoa\"",
+      "price": "49.494,75 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "AR. Casanova - Construção Civil Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15517749"
+    },
+    {
+      "id": 15514862,
+      "title": "Aquisição de ótica 3D 30º, tabuleiro aramado para ótica e cabo de luz de fibra ótica, no âmbito do Plano de Recuperação e Resiliência, componente 1, Investimento RE-CO1-i11-RAA: Modernização e Requali...",
+      "price": "35.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "TEPREL - EQUIPAMENTOS MÉDICOS, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15514862"
+    },
+    {
+      "id": 15515080,
+      "title": "Aquisição de Serviços de Auditoria para Certificação Legal de Contas da Gerência da Unidade de Saúde da Ilha Graciosa no Âmbito do Sistema de Normalização Contabilística para as Administrações Pública...",
+      "price": "24.000,00 €",
+      "buyer": "Unidade de Saúde da Ilha Graciosa",
+      "seller": "Oliveira, Reis & Associados, SROC, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15515080"
+    },
+    {
+      "id": 15517772,
+      "title": "Ajuste direto \"Fornecimento de uma moto de água com atrelado\"",
+      "price": "19.150,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "TECNINAUTICA-Emanuel Nuno Garcia Oliveira Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15517772"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24000,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA alerta que lavoura está à beira do precipício financeiro.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24000"
+      },
+      {
+        "id": 24001,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia recebe, em audiência de apresentação de cumprimentos, o Presidente do Conselho Diretivo do Instituto da Vinha e do Vinho dos Açores, Cláudio Lopes, na sede da Assembleia.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24001"
+      },
+      {
+        "id": 24003,
+        "title": "Nota Informativa da Presidência da ALRAA - Anfiteatro da ALRAA acolhe Festa do Cinema ao Ar Livre a 25 de agosto",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24003"
+      },
+      {
+        "id": 24004,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - HSEIT. Nova Unidade de Hemodinâmica reforça capacidade de resposta cardiovascular na Terceira.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24004"
+      },
+      {
+        "id": 24005,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco protesta contra exclusão de cientistas da recepção do novo navio de investigação.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24005"
+      },
+      {
+        "id": 23999,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - Hemodinâmica na Terceira concretiza uma reivindicação antiga defendida pelo CDS.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/23999"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-20"
+}
