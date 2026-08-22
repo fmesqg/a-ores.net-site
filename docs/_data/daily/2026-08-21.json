@@ -1,0 +1,288 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15519449,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "444.570,15 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "GLAXOSMITHKLINE - PROD. FARMACEUTICOS",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "22-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519449"
+    },
+    {
+      "id": 15518971,
+      "title": "AQUISIÇÃO DA PRESTAÇÃO DE SERVIÇOS DE UPGRADE POR SUBSITUIÇÃO DE COMPONENTES DO SISTEMA HIPERBÁRICO HAUX STARMED 2200 DA UNIDADE DE MEDICINA HIPERBÁRICA E SUBAQUÁTICA DO HOSPITAL DIVINO ESPÍRITO SANTO...",
+      "price": "168.102,38 €",
+      "buyer": "Hospital Divino Espiríto Santo de Ponta Delgada, EPER",
+      "seller": "INDUMA - MÁQUINAS INDUSTRIAIS LIMITADA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15518971"
+    },
+    {
+      "id": 15520227,
+      "title": "Obra nº 03/26 - Ligação da Câmara de Derivação do Lourenço Viveiros à Canada das Criações - Santo António",
+      "price": "124.801,52 €",
+      "buyer": "Serviços Municipalizados de Água e Saneamento de Ponta Delgada",
+      "seller": "ALBANO VIEIRA, SA",
+      "procedure": "Concurso público",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15520227"
+    },
+    {
+      "id": 15520002,
+      "title": "Obra n.º 04/26 - Substituição da rede de distribuição de água na rua do Rosário de Baixo - Santo António",
+      "price": "109.769,44 €",
+      "buyer": "Serviços Municipalizados de Água e Saneamento de Ponta Delgada",
+      "seller": "AR. Casanova - Construção Civil Lda",
+      "procedure": "Concurso público",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15520002"
+    },
+    {
+      "id": 15519555,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "94.297,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "CENCORA 3PL PORTUGAL, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519555"
+    },
+    {
+      "id": 15519597,
+      "title": "Empreitada de Reparação e Pinturas da Escola da Ribeira Funda",
+      "price": "52.493,82 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "JOÃO MEDEIROS SERPA,LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519597"
+    },
+    {
+      "id": 15519507,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "30.260,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "BLUEPHARMA GENÉRICOS",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519507"
+    },
+    {
+      "id": 15520569,
+      "title": "Aquisição de serviços de “Assessoria jurídica especializada para acompanhamento da execução do contrato de concessão do serviço público de transporte regular rodoviário coletivo de passageiros na ilha...",
+      "price": "30.000,00 €",
+      "buyer": "Fundo Regional dos Transportes Terrestres, IP R. A.",
+      "seller": "Sérvulo & Associados - Sociedade de Advogados, RL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15520569"
+    },
+    {
+      "id": 15519565,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "24.582,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "ROCHE FARMACÊUTICA QUIMICA, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519565"
+    },
+    {
+      "id": 15519584,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "16.858,90 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "Laboratório Medinfar, Produtos Farmacêuticos, SA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519584"
+    },
+    {
+      "id": 15519472,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "954,81 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "BOEHRINGER INGELHEIM PORTUGAL, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519472"
+    },
+    {
+      "id": 15519422,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "774,97 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "LABESFAL - LABORATÓRIOS ALMIRO, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519422"
+    },
+    {
+      "id": 15519570,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "754,80 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "PLS PHARMA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519570"
+    },
+    {
+      "id": 15520382,
+      "title": "26AS00008116 - Deslocação ao Arquipélago dos Açores – São Miguel – Ponta Delgada e Ribeira Grande – 13 e 14 de agosto de 2026",
+      "price": "673,52 €",
+      "buyer": "Instituto de Gestão Financeira e Equipamentos da Justiça, IP",
+      "seller": "SMILE - VIAGENS E TURISMO, UNIPESSOAL, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "13-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15520382"
+    },
+    {
+      "id": 15519370,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "619,81 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "MYLAN, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519370"
+    },
+    {
+      "id": 15519558,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "382,81 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "ORIONFIN UNIPESSOAL LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519558"
+    },
+    {
+      "id": 15519549,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "254,78 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "Generis Farmacêutica, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "08-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519549"
+    },
+    {
+      "id": 15519579,
+      "title": "Fornecimento de Medicamentos do aparelho respiratório na área da saúde, celebrado pelos serviços partilhados do ministério da saúde n.º 2024/899.",
+      "price": "78,66 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "FARMOZ",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15519579"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9430,
+        "title": "Funcionamento do novo equipamento de ressonância magnética do Hospital da Horta",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Inês Sá PS, ...",
+        "date": "22/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9430"
+      },
+      {
+        "id": 9489,
+        "title": "Bombeiros deixam de assegurar o serviço nos aeroportos da Região concessionados à ANA/VINCI",
+        "state_change": null,
+        "requesters": "Inês Sá PS, ...",
+        "date": "19/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9489"
+      },
+      {
+        "id": 9490,
+        "title": "Atrasos no transporte marítimo de mercadorias para Santa Maria e garantia de um serviço público regular, fiável e previsível",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "20/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9490"
+      },
+      {
+        "id": 9370,
+        "title": "Situação da prestação de cuidados de saúde na ilha Graciosa",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "22/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9370"
+      },
+      {
+        "id": 9426,
+        "title": "Bolsa do Cuidador Educacional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "20/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9426"
+      },
+      {
+        "id": 9429,
+        "title": "Quebra de Receita Fiscal nos Impostos Especiais sobre o Consumo (Tabaco e Álcool) e Financiamento de Políticas de Saúde em 2026 II",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "21/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9429"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24006,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Falta de habitação não pode ser responsável pela desertificação do Nordeste.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24006"
+      },
+      {
+        "id": 24007,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside ao Dia da Freguesia da Feteira, na ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24007"
+      },
+      {
+        "id": 24008,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à cerimónia de inauguração da 2.ª fase da Variante à Cidade da Horta, na ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24008"
+      },
+      {
+        "id": 24009,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/Açores apela às autoridades para investigarem queda e morte de touro no Carapacho.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24009"
+      },
+      {
+        "id": 24010,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores saúda lançamento do concurso para reabilitação da Escola Secundária das Flores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24010"
+      },
+      {
+        "id": 24011,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores realça segundo trimestre consecutivo de crescimento real dos salários na Região.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24011"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-21"
+}
