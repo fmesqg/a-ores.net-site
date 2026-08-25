@@ -27,6 +27,9 @@ collections:
     output: true
     permalink: /trabalhar/:path/
   portal_updates: ~
+  ao:
+    output: true
+    permalink: /ao/:path/
   authors:
     output: true
     permalink: /blog/:path/
@@ -37,3 +40,8 @@ defaults:
       type: "authors"
     values:
       layout: "author"
+  - scope:
+      path: ""
+      type: "ao"
+    values:
+      noindex: true

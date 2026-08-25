@@ -42,7 +42,7 @@ Standalone scrapers for Azorean news sources. Output goes to `scrapers/output/`.
 
 ```bash
 # AO print edition (requires .ao_config with credentials)
-python3 scrapers/ao.py --date 2026-03-13
+python3 -m scrapers.ao --date 2026-03-13
 
 # RTP Açores (no auth needed)
 python3 scrapers/rtp.py --date 2026-03-13

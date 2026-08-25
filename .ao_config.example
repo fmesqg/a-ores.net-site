@@ -3,6 +3,7 @@ email = your@email.com
 password = yourpassword
 
 [sections]
-# comma-separated; leave empty or remove lines to include all
+# comma-separated; leave empty or remove lines to include all sections
+# (the default: nothing is excluded)
 # include = primeira-hora, politica, economia, local, sociedade, 9-ilhas, desporto, cultura, pontos-de-vista, da-europa
 # exclude = pontos-de-vista, desporto

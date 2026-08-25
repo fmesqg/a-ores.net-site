@@ -13,20 +13,23 @@ import configparser
 import json
 import re
 import sys
-import xml.etree.ElementTree as ET
-from datetime import UTC, date, datetime, timedelta
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 import requests
 from bs4 import BeautifulSoup
 
+from scrapers import ao_pages
+
 BASE_URL = "https://www.acorianooriental.pt"
 CONFIG_PATH = Path(__file__).parent.parent / ".ao_config"
 OUTPUT_DIR = Path(__file__).parent / "output"
 RSS_FEED_PATH = Path(__file__).parent.parent / "docs" / "rss" / "ao.xml"
 
-DEFAULT_EXCLUDE = ["desporto"]
+# Every section is scraped by default; narrow it via [sections] in
+# .ao_config if you ever want to.
+DEFAULT_EXCLUDE: list[str] = []
 
 
 def load_config():
@@ -215,7 +218,7 @@ def build_summary(target_date: str, sections_data: dict) -> str:
     for section, articles in sections_data.items():
         if not articles:
             continue
-        label = section.replace("-", " ").title()
+        label = ao_pages.section_label(section)
         lines.append(f"\n## {label}\n")
         for a in articles:
             body_text = a.get("body") or a.get("excerpt", "")
@@ -226,90 +229,6 @@ def build_summary(target_date: str, sections_data: dict) -> str:
                 f"- **{a['title']}**{page_ref}{author_ref} — {summary}"
             )
     return "\n".join(lines)
-
-
-def _rss_pubdate(date_str: str) -> str:
-    """Convert YYYY-MM-DD to RFC 2822 date string."""
-    dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=UTC)
-    # email.utils.formatdate would require an import; roll it manually
-    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-    months = [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-    ]
-    return (
-        f"{days[dt.weekday()]}, {dt.day:02d} {months[dt.month - 1]}"
-        f" {dt.year} 00:00:00 +0000"
-    )
-
-
-def _xml_safe(text: str) -> str:
-    """Remove characters that are illegal in XML 1.0."""
-    return re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]", "", text)
-
-
-def update_rss_feed(articles: list[dict], target_date: str) -> int:
-    """Append new articles to the RSS feed. Returns count of new items added."""
-    existing_guids: set[str] = set()
-    existing_items: list[ET.Element] = []
-
-    if RSS_FEED_PATH.exists():
-        tree = ET.parse(RSS_FEED_PATH)
-        channel = tree.getroot().find("channel")
-        if channel is not None:
-            for item in channel.findall("item"):
-                guid_el = item.find("guid")
-                if guid_el is not None and guid_el.text:
-                    existing_guids.add(guid_el.text)
-                existing_items.append(item)
-
-    new_items: list[ET.Element] = []
-    for a in articles:
-        if not a.get("url") or a["url"] in existing_guids:
-            continue
-        if not (a.get("body") or a.get("excerpt")):
-            continue
-        item = ET.Element("item")
-        ET.SubElement(item, "title").text = _xml_safe(a["title"])
-        ET.SubElement(item, "guid", isPermaLink="false").text = a["url"]
-        ET.SubElement(item, "pubDate").text = _rss_pubdate(target_date)
-        ET.SubElement(item, "category").text = a["section"]
-        ET.SubElement(item, "description").text = _xml_safe(
-            a.get("body") or a.get("excerpt", "")
-        )
-        if a.get("author"):
-            ET.SubElement(item, "author").text = _xml_safe(a["author"])
-        new_items.append(item)
-        existing_guids.add(a["url"])
-
-    rss = ET.Element("rss", version="2.0")
-    channel = ET.SubElement(rss, "channel")
-    ET.SubElement(channel, "title").text = (
-        "Açoriano Oriental — Edição Impressa"
-    )
-    ET.SubElement(channel, "link").text = BASE_URL
-    ET.SubElement(channel, "description").text = (
-        "Edição impressa do Açoriano Oriental"
-    )
-    for item in new_items + existing_items:
-        channel.append(item)
-
-    ET.indent(rss, space="  ")
-    with open(RSS_FEED_PATH, "wb") as f:
-        f.write(b'<?xml version="1.0" encoding="UTF-8"?>\n')
-        ET.ElementTree(rss).write(f, encoding="utf-8", xml_declaration=False)
-
-    return len(new_items)
 
 
 def parse_args():
@@ -418,8 +337,13 @@ def main():
         f.write(build_summary(target_date, sections_data))
     print(f"Wrote {md_path}")
 
-    added = update_rss_feed(all_articles, target_date)
-    print(f"RSS: added {added} new items → {RSS_FEED_PATH}")
+    entries = ao_pages.build_entries(sections_data, target_date)
+    ao_pages.write_article_pages(entries, target_date)
+    day_page = ao_pages.write_day_page(entries, target_date)
+    print(f"Wrote {len(entries)} article pages + {day_page}")
+
+    total = ao_pages.write_daily_feed(entries, target_date, RSS_FEED_PATH)
+    print(f"RSS: {total} day items → {RSS_FEED_PATH}")
 
 
 if __name__ == "__main__":

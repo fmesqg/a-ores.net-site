@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      {{ page.section_label }}
+      {%- if page.page %} · p.{{ page.page }}{% endif -%}
+      {%- if page.author %} · {{ page.author }}{% endif %}
+      · <a href="{{ page.day_url | relative_url }}">{{ page.edition }}</a>
+    </p>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-meta">
+    <p>
+      {%- if page.prev_url %}<a href="{{ page.prev_url | relative_url }}">← anterior</a> · {% endif -%}
+      <a href="{{ page.day_url | relative_url }}">edição de {{ page.edition }}</a>
+      {%- if page.next_url %} · <a href="{{ page.next_url | relative_url }}">seguinte →</a>{% endif -%}
+    </p>
+    {%- if page.source_url %}
+    <p><a href="{{ page.source_url }}">Original no Açoriano Oriental</a></p>
+    {%- endif %}
+  </footer>
+
+</article>

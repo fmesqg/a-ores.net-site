@@ -54,7 +54,7 @@ jobs:
         run: |
           printf '[credentials]\nemail = %s\npassword = %s\n' \
             "$AO_EMAIL" "$AO_PASSWORD" > .ao_config
-          poetry run python3 scrapers/ao.py --date "$(date +%Y-%m-%d)"
+          poetry run python3 -m scrapers.ao --date "$(date +%Y-%m-%d)"
         env:
           AO_EMAIL: ${{ secrets.AO_EMAIL }}
           AO_PASSWORD: ${{ secrets.AO_PASSWORD }}
