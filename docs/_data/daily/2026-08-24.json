@@ -1,0 +1,218 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15522826,
+      "title": "EMPREITADA DE CONSTRUÇÃO DO NOVO EDIFÍCIO MULTIUSOS DO PORTO DA HORTA, ILHA DO FAIAL",
+      "price": "2.824.491,64 €",
+      "buyer": "Portos dos Açores, SA",
+      "seller": "AFAVIAS - Engenharia e Construções Açores, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15522826"
+    },
+    {
+      "id": 15521367,
+      "title": "Ajuste Direto, critério material, para a aquisição da Prestação de Serviços de Exames de Medicina Nuclear – PET para o Hospital Divino Espírito Santo de Ponta Delgada, EPER.",
+      "price": "124.400,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "Dr. Campos Costa - Consultório de Tomografia Computorizada, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15521367"
+    },
+    {
+      "id": 15523363,
+      "title": "Serviços Médicos de Otorrinolaringologia ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Ferreira Gapo, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15523363"
+    },
+    {
+      "id": 15523436,
+      "title": "Ajuste Direto Aquisição de serviços de elaboração dos projectos necessários à Ampliação, Requalificação e Construção da Creche, Jardim de infância e CATL da SCMPV",
+      "price": "67.913,00 €",
+      "buyer": "Santa Casa Misericórdia Vila Praia Vitória",
+      "seller": "Filipa Bettencourt Arquitetos",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15523436"
+    },
+    {
+      "id": 15523170,
+      "title": "AQUISIÇÃO E INSTALAÇÃO DE UM POSTO DE TRANSFORMAÇÃO DE 400 KVA/15 KV, A AFETAR À ESTRUTURA RESIDENCIAL PARA IDOSOS E CENTRO DE DIA",
+      "price": "43.240,00 €",
+      "buyer": "Santa Casa da Misericórdia de São Roque do Pico",
+      "seller": "SEGMA - Serviços de Engenharia, Gestão e Manutenção, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15523170"
+    },
+    {
+      "id": 15523451,
+      "title": "Aquisição de Veículo com Chassis Tracção Traseira e Cabine Dupla",
+      "price": "38.490,00 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "ANTERO REGO - AUTO ILHA VERDE,LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15523451"
+    },
+    {
+      "id": 15523324,
+      "title": "Serviços Médicos do Serviço de Endocrinologia do Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "35.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Daniela Filipa Santos de Paiva Dias",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15523324"
+    },
+    {
+      "id": 15522295,
+      "title": "Aquisição de Serviços de Aluguer de Sanitários Móveis e respetiva Limpeza Bidiária - Sanjoaninas 2026",
+      "price": "27.165,00 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "Ambienter",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15522295"
+    },
+    {
+      "id": 15522861,
+      "title": "Ajuste Direto para Prestação de Serviços em Ciência Experimental a Implementar nas Escolas do Ensino Básico do Concelho de Nordeste",
+      "price": "11.208,00 €",
+      "buyer": "Câmara Municipal de Nordeste",
+      "seller": "SOCIEDADE AFONSO CHAVES – ASSOCIAÇÃO DE ESTUDOS AÇOREANOS",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15522861"
+    },
+    {
+      "id": 15521608,
+      "title": "aquisição de materiais de construção",
+      "price": "9.200,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Mariano Brum Gouveia & Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15521608"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9446,
+        "title": "Rede de Centros de Atividades de Tempos Livres (CATL) nos Açores e falta de vagas para famílias açorianas",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "29/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9446"
+      },
+      {
+        "id": 9487,
+        "title": "Alegado acesso indevido a dados pessoais de deputados, membros do gabinete e respetivos familiares",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "18/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9487"
+      },
+      {
+        "id": 9492,
+        "title": "Habitação no Nordeste e terreno na freguesia da Salga",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "21/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9492"
+      },
+      {
+        "id": 9494,
+        "title": "Segurança e acessibilidade à Ribeira dos Caldeirões",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "21/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9494"
+      },
+      {
+        "id": 9368,
+        "title": "Centro de Dia da Vila Nova encerrado",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "22/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9368"
+      },
+      {
+        "id": 9378,
+        "title": "Modelo de funcionamento do Serviço de Suporte Imediato de Vida (SIV) naRegião Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "23/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9378"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24012,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige que nenhum açoriano seja prejudicado no reembolso das passagens aéreas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24012"
+      },
+      {
+        "id": 24013,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco questiona governo sobre atrasos no transporte marítimo em Santa Maria que afetaram logística do Maré de Agosto",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24013"
+      },
+      {
+        "id": 24014,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca investimentos do Governo Regional na Graciosa.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24014"
+      },
+      {
+        "id": 24015,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Problemas na acessibilidade à Ribeira dos Caldeirões têm de ser resolvidos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24015"
+      },
+      {
+        "id": 24016,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer saber quando avança a segunda fase da ligação Furnas-Povoação.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24016"
+      },
+      {
+        "id": 24017,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer esclarecer porque não são pagas rendas sociais: Falta de dinheiro ou falta de vontade?",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24017"
+      },
+      {
+        "id": 24018,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Bons resultados nos exames nacionais confirmam rumo certo da Educação nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24018"
+      },
+      {
+        "id": 24019,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Queda do desemprego acentua dinamismo económico dos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24019"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-24"
+}
