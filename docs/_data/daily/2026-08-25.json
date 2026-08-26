@@ -1,0 +1,326 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15529108,
+      "title": "Aq. serviços de organização e realização de espetáculo musical no âmbito do encerramento das noites de verão 2026",
+      "price": "30.716,80 €",
+      "buyer": "Câmara Municipal de Ponta Delgada",
+      "seller": "Filarmónica Lira Nossa Senhora da Estrela",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15529108"
+    },
+    {
+      "id": 15524239,
+      "title": "Serviços de Enfermagem ao Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Rodrigo Faria da Silva",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15524239"
+    },
+    {
+      "id": 15532913,
+      "title": "Serviços de Enfermagem ao Hospital de Santo Espírito da Ilha Terceira, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Bruna Alexandra Machado Barros",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15532913"
+    },
+    {
+      "id": 15529873,
+      "title": "\"Modelos Mecanísticos de distribuição de corais de profundidade, no âmbito do projeto \"BIOPROTECT\"",
+      "price": "24.343,44 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Maria Rakka",
+      "procedure": "Contratação excluída II",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15529873"
+    },
+    {
+      "id": 15524830,
+      "title": "Aquisição de baloiços inclusivos para a Região Autónoma dos Açores - “Brincar é para todos”, no âmbito do Orçamento Participativo, através da Direção Regional Para a Promoção da Igualdade e Inclusão S...",
+      "price": "23.055,30 €",
+      "buyer": "Direção Regional para a Promoção da Igualdade e Inclusão Social",
+      "seller": "Escritório Digital - Representações, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15524830"
+    },
+    {
+      "id": 15527010,
+      "title": "AQUISIÇÃO DE VEÍCULO LIGEIRO ELÉTRICO",
+      "price": "19.832,72 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "Sotermáquinas SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15527010"
+    },
+    {
+      "id": 15532606,
+      "title": "Contratação de um serviço de reparação auto de uma viatura Toyota Optimo.",
+      "price": "15.060,00 €",
+      "buyer": "Estado-Maior do Exército",
+      "seller": "ANDRE MANUEL MEDEIROS CABRAL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15532606"
+    },
+    {
+      "id": 15532820,
+      "title": "Aquisição de serviços de limpeza e higiene para as instalações da Unidade de Apoio, QG/ZMA, Gabinete de Atendimento ao Público, blocos habitacionais do PM42, PM56, PM20 e PM49, no período de 01 de jul...",
+      "price": "10.980,00 €",
+      "buyer": "Estado-Maior do Exército",
+      "seller": "AçorMédica, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "03-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15532820"
+    },
+    {
+      "id": 15530202,
+      "title": "compra de armadilhas para térmitas",
+      "price": "7.979,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Entomopraxis",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15530202"
+    },
+    {
+      "id": 15532942,
+      "title": "Aquisição de 100 cadeiras de madeira",
+      "price": "6.675,00 €",
+      "buyer": "Estado-Maior do Exército",
+      "seller": "MobiOffice",
+      "procedure": "Consulta Prévia",
+      "signing_date": "25-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15532942"
+    },
+    {
+      "id": 15531623,
+      "title": "Aquisição de Equipamento de Ar Condicionado",
+      "price": "5.560,00 €",
+      "buyer": "Estado-Maior do Exército",
+      "seller": "ANTICICLONE - Instalações Técnicas, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15531623"
+    },
+    {
+      "id": 15532426,
+      "title": "Contratação de um serviço de transporte de viaturas entre a ilha de São Miguel e a ilha Terceira",
+      "price": "5.086,21 €",
+      "buyer": "Estado-Maior do Exército",
+      "seller": "Abreu Carga e Trânsitos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15532426"
+    },
+    {
+      "id": 15527489,
+      "title": "2026/0426 - Convite à apresentação de propostas ao abrigo do(s) acordo(s)-quadro 963/2024 (Vacinas, tuberculinas e produtos para imunização) para aquisição de vacinas contra a gripe.",
+      "price": "3.192,00 €",
+      "buyer": "Unidade de Saúde da Ilha de Santa Maria",
+      "seller": "GLAXOSMITHKLINE - PROD. FARMACEUTICOS",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "30-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15527489"
+    },
+    {
+      "id": 15532943,
+      "title": "Prestação de Serviços de Assessoria Técnica nas Áreas de Educação e Cultura",
+      "price": "2.865,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Filipa Pacheco Cordeiro",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15532943"
+    },
+    {
+      "id": 15527096,
+      "title": "2026/0427 - Convite à apresentação de propostas ao abrigo do(s) acordo(s)-quadro 963/2024 (Vacinas, tuberculinas e produtos para imunização) para aquisição de vacinas contra a gripe",
+      "price": "2.750,00 €",
+      "buyer": "Unidade de Saúde da Ilha de Santa Maria",
+      "seller": "Sanofi - Produtos Farmacêuticos, Lda",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "19-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15527096"
+    },
+    {
+      "id": 15527599,
+      "title": "2026/0426 - Convite à apresentação de propostas ao abrigo do(s) acordo(s)-quadro 963/2024 (Vacinas, tuberculinas e produtos para imunização) para aquisição de vacinas contra a gripe.",
+      "price": "1.397,64 €",
+      "buyer": "Unidade de Saúde da Ilha de Santa Maria",
+      "seller": "Sanofi - Produtos Farmacêuticos, Lda",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "30-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15527599"
+    },
+    {
+      "id": 15527685,
+      "title": "2026/0426 - Convite à apresentação de propostas ao abrigo do(s) acordo(s)-quadro 963/2024 (Vacinas, tuberculinas e produtos para imunização) para aquisição de vacinas contra a gripe.",
+      "price": "1.276,80 €",
+      "buyer": "Unidade de Saúde da Ilha de Santa Maria",
+      "seller": "MYLAN, LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "30-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15527685"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9457,
+        "title": "Situação de um casal de idosos que passou a noite no aeroporto João Paulo II, após cancelamento de voo da Sata Air Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "03/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9457"
+      },
+      {
+        "id": 9469,
+        "title": "Participação da comunidade científica na receção e utilização do navio de investigação Azores Ocean",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "07/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9469"
+      },
+      {
+        "id": 9471,
+        "title": "Mortandade de pombos e divulgação de informação à população",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "07/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9471"
+      },
+      {
+        "id": 9473,
+        "title": "Seis meses depois, continuam por conhecer conclusões técnicas sobre derrocada nas Pontas Negras, freguesia das Ribeiras",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Mário Tomé PS, ...",
+        "date": "10/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9473"
+      },
+      {
+        "id": 9474,
+        "title": "Transferência das verbas destinadas a compensar os sobrecustos suportados pelos agricultores açorianos e pagamento dos rateios do POSEI",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "10/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9474"
+      },
+      {
+        "id": 9496,
+        "title": "Falhas na Plataforma de reembolso no subsídio social de mobilidade prejudicam os açorianos",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9496"
+      },
+      {
+        "id": 9498,
+        "title": "Segunda fase da ligação Furnas-Povoação",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9498"
+      },
+      {
+        "id": 9500,
+        "title": "Melhoria da ligação rodoviária Ponta Delgada-Mosteiros",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9500"
+      },
+      {
+        "id": 9502,
+        "title": "Rendas Sociais em atraso - esclarecimentos adicionais",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9502"
+      },
+      {
+        "id": 9504,
+        "title": "Estratégia do Governo Regional para o Turismo dos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9504"
+      },
+      {
+        "id": 9506,
+        "title": "Transporte escolar na ilha de São Miguel no ano letivo 2026/2027",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "25/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9506"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24020,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Melhoria da ligação rodoviária entre Ponta Delgada e Mosteiros sempre vai avançar?",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24020"
+      },
+      {
+        "id": 24021,
+        "title": "Nota Informativa da Presidência da ALRAA - ALRAA promove programa comemorativo dos 50 anos da Autonomia entre 2 e 4 de setembro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24021"
+      },
+      {
+        "id": 24022,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores realça investimento de 14,9 milhões de euros na Variante à Horta.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24022"
+      },
+      {
+        "id": 24023,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 02/09/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24023"
+      },
+      {
+        "id": 24024,
+        "title": "Comissão de Política Geral - Convocatória (Dia 02/09/2026, pelas 14:30 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24024"
+      },
+      {
+        "id": 24025,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco quer garantias por parte do Governo de que todos os alunos terão transporte escolar assegurado no início do ano letivo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24025"
+      },
+      {
+        "id": 24026,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Falta de manutenção nas escolas prejudica toda a comunidade escolar.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24026"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-25"
+}
