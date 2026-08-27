@@ -1,0 +1,204 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15536375,
+      "title": "Aquisição de peças para manutenção de prensas hidráulicas",
+      "price": "64.109,33 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "Harker Azores Lda,",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15536375"
+    },
+    {
+      "id": 15534689,
+      "title": "Aquisição de equipamentos de recreio infantil para o Parque Florestal da Caldeira - Ilha Graciosa",
+      "price": "26.944,31 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "Ergopark, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15534689"
+    },
+    {
+      "id": 15535246,
+      "title": "Serviços Médicos de Anestesiologia ao HSEIT, EPER.",
+      "price": "20.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Refúgio Criativo - Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15535246"
+    },
+    {
+      "id": 15535866,
+      "title": "Aquisição de serviços do grupo de etnografia e folclore AJA Baile para a realização de espetáculo musical na Semana do Mar 2026",
+      "price": "2.500,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Grupo de etnografia e folclore AJA Baile",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15535866"
+    },
+    {
+      "id": 15536152,
+      "title": "Aquisição de serviços da Tuna e Grupo Folclórico Juvenil dos Flamengos para a realização de espetáculo musical na Semana do Mar 2026",
+      "price": "1.750,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Tuna e Grupo Folclórico Juvenil dos Flamengos",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15536152"
+    },
+    {
+      "id": 15536388,
+      "title": "Aquisição de serviços do Grupo Folclórico e Etnográfico de Pedro Miguel para a Realização de Espetáculo Musical na Semana do Mar 2026",
+      "price": "1.700,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Grupo Folclórico e Etnográfico de Pedro Miguel",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15536388"
+    },
+    {
+      "id": 15536335,
+      "title": "Aquisição de serviços de artistas com João Souto Ávila para a Realização de Espetáculo Musical na Semana do Mar 2026",
+      "price": "1.200,00 €",
+      "buyer": "Município da Horta",
+      "seller": "João Souto Ávila",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15536335"
+    },
+    {
+      "id": 15534474,
+      "title": "Aquisição de serviços do grupo folclórico do Salão para a realização de espetáculo musical na Semana do Mar 2026",
+      "price": "950,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Grupo Folclórico do Salão",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15534474"
+    },
+    {
+      "id": 15536041,
+      "title": "Aquisição de serviços de artistas com Uta Higgs para a realização de espetáculo musical na Semana do Mar 2026",
+      "price": "700,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Uta Ricarda Higgs",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15536041"
+    },
+    {
+      "id": 15536246,
+      "title": "Aquisição de serviços do grupo Horácio Gomes Band para a realização de espetáculo musical na Semana do Mar 2026",
+      "price": "300,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Horácio dos Santos Bolacha Gomes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15536246"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9508,
+        "title": "Preços das passagens aéreas entre os Açores e o Continente",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "25/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9508"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24032,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - É o dinheiro dos açorianos que está a financiar o preço elevado das passagens aéreas da TAP e da SATA?",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24032"
+      },
+      {
+        "id": 24033,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Mobilidade eléctrica dos açorianos precisa de condições práticas para ser eficiente.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24033"
+      },
+      {
+        "id": 24034,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na conferência \"Relações Transatlânticas e o Papel dos Açores\", no Terceira Mar Hotel, em Angra do Heroísmo, ilha Terceira.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24034"
+      },
+      {
+        "id": 24035,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na Eucaristia Solene e Procissão em honra de Nossa Senhora de Lurdes, na freguesia da Feteira, ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24035"
+      },
+      {
+        "id": 24036,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA preocupado com implementação do Cheque Dentista.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24036"
+      },
+      {
+        "id": 24037,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - Açores ficam mais próximos dos Estados Unidos - Uma boa notícia para a Terceira e para as ilhas do Grupo Central.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24037"
+      },
+      {
+        "id": 24027,
+        "title": "Nota de Imprensa da Presidência da ALRAA - \"Desenvolver uma freguesia e um município é desenvolver os Açores\": Luís Garcia destaca papel do poder local na Autonomia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24027"
+      },
+      {
+        "id": 24028,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA questiona sobre estratégia para o futuro do Turismo dos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24028"
+      },
+      {
+        "id": 24029,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Crescimento do TERINOV reforça aposta do Governo dos Açores na economia do conhecimento.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24029"
+      },
+      {
+        "id": 24030,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco quer mais esclarecimentos sobre aparecimento anormal de aves mortas e se a hipótese de envenenamento está excluída.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24030"
+      },
+      {
+        "id": 24031,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Inaugurada há 3 meses, mas ainda fechada IL questiona Governo Regional sobre infraestrutura de apoio ao porto de pescas de São Mateus.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24031"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3004,
+        "number": "93",
+        "date": "17/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3004"
+      },
+      {
+        "id": 3006,
+        "number": "94",
+        "date": "07/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3006"
+      }
+    ],
+    "peticoes": [
+      {
+        "id": 1047,
+        "title": "Propôr melhorias na segurança do aeródromo da ilha Graciosa",
+        "author": "Pedro Louro",
+        "state": "Em processo de admissão",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/6/1047"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-26"
+}
