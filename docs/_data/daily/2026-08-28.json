@@ -1,0 +1,111 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15550135,
+      "title": "AQUISIÇÃO DE SERVIÇOS PARA MONITORIZAÇÃO EM DESCONTÍNUO DE EFLUENTES GASOSOS E CALIBRAÇÃO/VERIFICAÇÃO",
+      "price": "112.385,00 €",
+      "buyer": "Musami - Operações Municipais do Ambiente, EIM",
+      "seller": "INEGI - Instituto de Engenharia Mecânica e Gestão Industrial",
+      "procedure": "Concurso público",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15550135"
+    },
+    {
+      "id": 15548900,
+      "title": "Fornecimento contínuo de cimento a granel para a Central de Valorização Energética da Ilha de São Miguel",
+      "price": "90.996,86 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "Vulcânica- Distribuição e Logistíca, Comercialização de Derivados de Petróleo, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15548900"
+    },
+    {
+      "id": 15544705,
+      "title": "Aquisição de Fardamentos para Laboração para todos os matadouros da Rede Regional de Abate para o ano 2026",
+      "price": "36.819,99 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Insular - Fardas, Têxtil e Segurança no Trabalho, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15544705"
+    },
+    {
+      "id": 15546205,
+      "title": "AJUSTE DIRETO COM CONVITE A VÁRIAS ENTIDADES N.º 3/2026 – FORNECIMENTO DE EMBALAGENS DE LEITE PARA O ANO LETIVO 2026/2027. O contrato tem por objeto o fornecimento de Leite Escolar para a Escola Básic...",
+      "price": "24.077,56 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "Lactaçores - União das Cooperativas de Lacticínios dos Açores, UCRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15546205"
+    },
+    {
+      "id": 15547306,
+      "title": "Aquisição de Serviços de Consultoria de Certificação de Conformidade do Controlo de Produção em Fábrica",
+      "price": "18.224,00 €",
+      "buyer": "Musami - Operações Municipais do Ambiente, EIM",
+      "seller": "Itecons - Instituto de Investigação e Desenvolvimento Tecnológico para a Construção, Energia, Ambiente e Sustentabilidade",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15547306"
+    },
+    {
+      "id": 15544959,
+      "title": "Ajuste Direto Prestação de Serviços na Modalidade de Avença para um Técnico Superior na área Jurídica",
+      "price": "18.000,00 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "Manuel José Sousa Arruda Couto",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15544959"
+    },
+    {
+      "id": 15547653,
+      "title": "AJUSTE DIRETO COM CONVITE A VÁRIAS ENTIDADES N.º 4/2026 - AQUISIÇÃO DE MANUAIS ESCOLARES PARA O ANO LETIVO 2026/2027. O contrato tem por objeto a aquisição de manuais escolares para Escola Básica e Se...",
+      "price": "16.141,84 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "Adriano G. Figueiredo (Herd.) & Cia, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15547653"
+    },
+    {
+      "id": 15548055,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE JURÍDICOS NO ÂMBITO DA ATIVIDADE DA InUAc - INCUBADORA DE EMPRESAS DA UNIVERSIDADE DOS AÇORES",
+      "price": "6.000,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "ANDERSEN TAX & LEGAL IBERIA SLP - SUCURSAL EM PORTUGAL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15548055"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24048,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA questiona Governo sobre constituição de turmas da Escola das Lajes das Flores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24048"
+      },
+      {
+        "id": 24046,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer saber quanto custou a RYANAIR  aos Açores e o que falhou nas negociações.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24046"
+      },
+      {
+        "id": 24047,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Saúde é \"prioridade constante\" do Governo de José Manuel Bolieiro.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24047"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-28"
+}
