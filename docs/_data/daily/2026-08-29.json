@@ -1,0 +1,37 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9444,
+        "title": "Autorização para concessão de novos avales à Sata e alteração do capital próprio da Sata Air Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Carlos Silva PS, ...",
+        "date": "29/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9444"
+      },
+      {
+        "id": 9445,
+        "title": "Esclarecimentos sobre a concessão de aval à SATA Holding, S.A. (Resolução do Conselho do Governo n.º 93/2026)",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "29/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9445"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-29"
+}
