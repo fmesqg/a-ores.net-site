@@ -1,0 +1,37 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9450,
+        "title": "Tecnopolo MARTEC - modelo de gestão e estratégia de funcionamento",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "31/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9450"
+      },
+      {
+        "id": 9452,
+        "title": "Medidas para garantir a permanência na Região de trabalhadores imigrantes com contrato de trabalho",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9452"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-30"
+}
