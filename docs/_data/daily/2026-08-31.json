@@ -1,0 +1,332 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15553326,
+      "title": "Empreitada de Repavimentação de um Troço da Rua da Saúde, Arrifes (Lote 2)",
+      "price": "189.237,55 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Marques, SA",
+      "procedure": "Concurso público",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15553326"
+    },
+    {
+      "id": 15558834,
+      "title": "Aquisição de consumíveis para enfardadora de resíduos",
+      "price": "44.920,00 €",
+      "buyer": "Musami - Operações Municipais do Ambiente, EIM",
+      "seller": "Agritractores, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "31-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15558834"
+    },
+    {
+      "id": 15558928,
+      "title": "Serviços de Enfermagem ao HSEIT, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Catarina Silveira Carvalho",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15558928"
+    },
+    {
+      "id": 15556584,
+      "title": "Serviços de Enfermagem ao HSEIT, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Catarina Silveira Carvalho",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15556584"
+    },
+    {
+      "id": 15565169,
+      "title": "Serviços de Enfermagem ao HSEIT, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Beatriz Pinto Mendonça",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15565169"
+    },
+    {
+      "id": 15564510,
+      "title": "Serviços de Enfermagem ao HSEIT, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Beatriz de Fátima Azevedo Reis",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15564510"
+    },
+    {
+      "id": 15563707,
+      "title": "Serviços de Enfermagem ao HSEIT, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Mafalda Francisca da Silva Ourique",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15563707"
+    },
+    {
+      "id": 15552999,
+      "title": "Empreitada de Pavimentação – Conclusão das Obras do Loteamento 45/2006 L-LOTE – Rua Dr.ª Maria Joana Pereira, São Pedro (Lote 1)",
+      "price": "29.748,99 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Marques, SA",
+      "procedure": "Concurso público",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15552999"
+    },
+    {
+      "id": 15553790,
+      "title": "Aquisição de serviços SMS MYSaúde",
+      "price": "29.700,00 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "MEO-Serviços de Comunicações e Multimédia, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15553790"
+    },
+    {
+      "id": 15559323,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "11.434,99 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "B. Braun Medical, Unipessoal, Lda",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15559323"
+    },
+    {
+      "id": 15562799,
+      "title": "Aquisição e instalação dos postos de carregamento veículos elétricos, inclui fixação na parede",
+      "price": "7.910,00 €",
+      "buyer": "Unidade de Saúde da Ilha do Faial",
+      "seller": "SEGMA - Serviços de Engenharia, Gestão e Manutenção, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15562799"
+    },
+    {
+      "id": 15565376,
+      "title": "aquisição de toneres para as impressoras Xerox",
+      "price": "6.107,90 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Beltrão coelho Açores, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "26-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15565376"
+    },
+    {
+      "id": 15565285,
+      "title": "Prestação de Serviços de Pintor",
+      "price": "3.660,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "José Manuel Figueira Paulino",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15565285"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9438,
+        "title": "Extração de bagacina na Mata das Feiticeiras e construção do novo Estabelecimento Prisional de Ponta Delgada",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "27/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9438"
+      },
+      {
+        "id": 9454,
+        "title": "Esclarecimentos adicionais sobre o futuro modelo de prestação de cuidados no âmbito dos tratamentos de substituição opiácea na ilha de São Miguel",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "03/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9454"
+      },
+      {
+        "id": 9481,
+        "title": "Novo tarifário dos transportes públicos em São Miguel",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9481"
+      },
+      {
+        "id": 9510,
+        "title": "Mortandade de pombos e divulgação de informação à população II",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "26/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9510"
+      },
+      {
+        "id": 9511,
+        "title": "Infraestruturas de apoio à atividade piscatória no Porto de São Mateus da Calheta permanecem sem utilização",
+        "state_change": null,
+        "requesters": "Nuno Barata IL",
+        "date": "26/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9511"
+      },
+      {
+        "id": 9512,
+        "title": "Rede de carregamento elétrico e atividade TVDE nos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9512"
+      },
+      {
+        "id": 9513,
+        "title": "Saída da Ryanair dos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9513"
+      },
+      {
+        "id": 9514,
+        "title": "Internamentos no Hospital do Divino Espírito Santo",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9514"
+      },
+      {
+        "id": 9515,
+        "title": "Utilização de canhões sonoros para dispersão de aves em Santa Luzia, Pico",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9515"
+      },
+      {
+        "id": 9517,
+        "title": "Constituição de turmas na Escola Básica 1,2/JI de Lajes das Flores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9517"
+      },
+      {
+        "id": 9519,
+        "title": "Falta de docentes e mecanismos de mobilidade na Ilha das Flores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9519"
+      },
+      {
+        "id": 9520,
+        "title": "Estacionamento de viaturas e aeronaves no Aeroporto da Graciosa após a entrada em funcionamento da nova aerogare",
+        "state_change": null,
+        "requesters": "José Ávila PS, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9520"
+      },
+      {
+        "id": 9521,
+        "title": "Ter médico de família atribuído não significa ter consulta",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9521"
+      },
+      {
+        "id": 9522,
+        "title": "Abertura da linha PEPAC de apoio à agro-indústria prazos, condições e dotação orçamental",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9522"
+      },
+      {
+        "id": 9523,
+        "title": "Instalação da Google no Tecnoparque da Lagoa",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9523"
+      },
+      {
+        "id": 9355,
+        "title": "Agravamento da dependência alcoólica entre jovens açorianos e avaliação da eficácia das políticas regionais de prevenção",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "08/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9355"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24049,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige intervenção do Governo Regional junto da República no reembolso das passagens aéreas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24049"
+      },
+      {
+        "id": 24050,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer respostas para idosos com alta clínica que continuam internados por falta de apoio social",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24050"
+      },
+      {
+        "id": 24051,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige saber quantos açorianos têm médico de família e quantos conseguem ter consulta",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24051"
+      },
+      {
+        "id": 24053,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA Açores exige que Governo cumpra o que foi aprovado e baixe o ISP",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24053"
+      },
+      {
+        "id": 24054,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA questiona quantos docentes do quadro da ilha estão a trabalhar fora",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24054"
+      },
+      {
+        "id": 24055,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - \"Nova aerogare da Graciosa deve ser acompanhada pelo aumento da capacidade de estacionamento\", considera PS/Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24055"
+      },
+      {
+        "id": 24056,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Abandono e falta de manutenção do Porto das Poças dão péssima imagem das Flores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24056"
+      }
+    ],
+    "peticoes": [
+      {
+        "id": 1048,
+        "title": "Pela Garantia de uma Resposta Educativa Adequada no 1.ºCiclo da EB 1,2/JI de Lajes das Flores",
+        "author": "Marta Soares",
+        "state": "Em processo de admissão",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/6/1048"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-08-31"
+}
