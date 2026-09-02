@@ -1,0 +1,212 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15567389,
+      "title": "Aquisição, instalação, assistência e manutenção do Sistema de BackOffice integrado para os Cinemómetros da PSP, correspondente aos anos de 2026 e 2027.",
+      "price": "444.501,50 €",
+      "buyer": "Polícia de Segurança Pública",
+      "seller": "Codeware - Consultoria, Desenvolvimento e Software, SA",
+      "procedure": "Concurso público",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15567389"
+    },
+    {
+      "id": 15566277,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "59.721,32 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Generis Farmacêutica, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15566277"
+    },
+    {
+      "id": 15569086,
+      "title": "Serviços de Contabilidade da Escola Profissional (MEP), com a correspondente responsabilidade técnica pelas áreas contabilística e fiscal",
+      "price": "58.500,00 €",
+      "buyer": "Santa Casa da Misericórdia de Ponta Delgada",
+      "seller": "Teves & Carreiro, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15569086"
+    },
+    {
+      "id": 15568203,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "43.644,12 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "CENCORA 3PL PORTUGAL, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15568203"
+    },
+    {
+      "id": 15567508,
+      "title": "Aquisição de serviços de manutenção evolutiva, assistência técnica, licenciamento adicional e parametrização da solução SISQUAL WFM, para o Hospital Divino Espírito Santo de Ponta Delgada, EPER, para ...",
+      "price": "34.944,50 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "SISQUAL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15567508"
+    },
+    {
+      "id": 15568993,
+      "title": "Prestação de Serviços de Elaboração do Projeto para a Empreitada de Reabilitação do Caminho do Pescador e Edifícios Envolventes",
+      "price": "27.985,00 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "Arquiangra - Arquitectura e Engenharia, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15568993"
+    },
+    {
+      "id": 15566795,
+      "title": "Leasiing de um OptaDas Interrogator para ser utilizado no cabo submarino de fibra ótica que ligas as ilhas do Faial e são jorge",
+      "price": "21.250,00 €",
+      "buyer": "IMAR-Instituto do Mar",
+      "seller": "Alcatel Submarine Networks",
+      "procedure": "Contratação excluída II",
+      "signing_date": "11-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15566795"
+    },
+    {
+      "id": 15569061,
+      "title": "PRESTAÇÃO DE SERVIÇOS NA ÁREA DA COMUNICAÇÃO E IMAGEM, APOIO À ORGANIZAÇÃO DE EVENTOS E OUTROS SERVIÇOS, DO MUNICÍPIO DE SANTA CRUZ DA GRACIOSA",
+      "price": "18.000,00 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "Sixty Two Square",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15569061"
+    },
+    {
+      "id": 15568238,
+      "title": "CONCEÇÃO DE CAMPANHA AMBIENTAL NO ÂMBITO DO PROJETO \"OLH´Ó VIDRO!\"",
+      "price": "16.866,00 €",
+      "buyer": "Câmara Municipal da Madalena",
+      "seller": "Comunicar Atitude, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "20-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15568238"
+    },
+    {
+      "id": 15568957,
+      "title": "Aquisição de serviços de limpeza de entulho no Cerrado da Silva - Ribeira das Tainhas",
+      "price": "16.800,00 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "FERREIRA & M.F.C. SANTOS – CONSTRUÇÃO CIVIL E TRANSPORTES, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15568957"
+    },
+    {
+      "id": 15566381,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "6.645,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "HIKMA FARMACÊUTICA (PORTUGAL), S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15566381"
+    },
+    {
+      "id": 15566438,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "5.142,67 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Sandoz Farmacêutica, Lda. ",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15566438"
+    },
+    {
+      "id": 15567601,
+      "title": "Aquisição de serviços - Elaboração do Projeto de Beneficiação da rede de drenagem do bar da Praia de Água D´Alto",
+      "price": "3.850,00 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "TECNICOUTO, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15567601"
+    },
+    {
+      "id": 15567344,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "2.017,81 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "BLUEPHARMA GENÉRICOS",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15567344"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24064,
+        "title": "Comissão de Economia - Convocatória (Dia 02/09/2026, pelas 11:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24064"
+      },
+      {
+        "id": 24057,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Abandono e falta de manutenção do Porto das Poças dão péssima imagem das Flores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24057"
+      },
+      {
+        "id": 24058,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco preocupado com impacto do consumo energético do futuro centro de dados da Google.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24058"
+      },
+      {
+        "id": 24059,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 02/09/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24059"
+      },
+      {
+        "id": 24060,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores subscreve iniciativa para reforçar cobertura da rede móvel nas vias terrestres.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24060"
+      },
+      {
+        "id": 24061,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - Luís Silveira assume liderança do Grupo Parlamentar do CDS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24061"
+      },
+      {
+        "id": 24062,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA Açores junta deputados e autarcas para aproximar a política regional dos problemas locais.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24062"
+      },
+      {
+        "id": 24063,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA denuncia incerteza nos apoios à Agro-Indústria dos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24063"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3844,
+        "title": "Procede à criação do Serviço Regional de Estatística dos Açores, IPRA",
+        "author": "Governo",
+        "topic": "Administração pública regional",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3844"
+      },
+      {
+        "id": 3845,
+        "title": "Reforço da cobertura de rede móvel nas vias terrestres regionais dos Açores",
+        "author": "PSD; CDS-PP; PPM",
+        "topic": "Comunicações",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3845"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-01"
+}
