@@ -1,0 +1,123 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15569983,
+      "title": "AQUISIÇÃO DE DARATUMUMAB 120 mg/ml Sol Inj Fr 15 ml SC, AO ABRIGO DO AQ/2023/491 DOS SPMS",
+      "price": "387.455,67 €",
+      "buyer": "HOSPITAL DE SANTO ESPÍRITO DA ILHA TERCEIRA, EPER",
+      "seller": "OLIVEIRA LEITAO & PENA, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15569983"
+    },
+    {
+      "id": 15571902,
+      "title": "Prestação de serviços de higiene e limpeza para as instalações da Câmara Municipal da Praia da Vitória",
+      "price": "49.998,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "Gonçalves, Faria &amp; Alves, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15571902"
+    },
+    {
+      "id": 15569865,
+      "title": "Serviço de Alojamento",
+      "price": "43.341,88 €",
+      "buyer": "Secretaria-Geral da Presidência da República",
+      "seller": "TOPATLANTICO - Viagens e Turismo, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "31-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15569865"
+    },
+    {
+      "id": 15570923,
+      "title": "Serviços de Enfermagem ao HSEIT, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Tatiana Câmara de Oliveira",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15570923"
+    },
+    {
+      "id": 15570967,
+      "title": "Aquisição de um limpa bermas para a Direção Regional das Obras Públicas - Região Autónoma dos Açores",
+      "price": "29.990,00 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "Agritractores, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15570967"
+    },
+    {
+      "id": 15569258,
+      "title": "Aquisição de marcas acústicas à empresa Nautilus Oceanica no âmbito do projecto EMBRC",
+      "price": "25.294,00 €",
+      "buyer": "IMAR-Instituto do Mar",
+      "seller": "Nautilus Oceanica, S. L.",
+      "procedure": "Contratação excluída II",
+      "signing_date": "20-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15569258"
+    },
+    {
+      "id": 15573573,
+      "title": "AQUISIÇÃO DE PNEUS, PRESTAÇÃO DE SERVIÇOS DE REPARAÇÃO DE PNEUS E SERVIÇOS CONEXOS",
+      "price": "11.525,70 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "Pneus São Miguel, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15573573"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24065,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Governo alega que não pode baixar o ISP mas não explica porquê e continua a esconder detalhes do preço dos combustíveis.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24065"
+      },
+      {
+        "id": 24066,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Unidade de Saúde da Ilha Graciosa com cargos dirigentes por preencher.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24066"
+      },
+      {
+        "id": 24067,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Governo vai inaugurar estrada sem pagar aos donos dos terrenos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24067"
+      },
+      {
+        "id": 24068,
+        "title": "Comissão de Economia - Convocatória (Dia 07/09/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24068"
+      },
+      {
+        "id": 24069,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia recebe Sua Excelência o Presidente da Assembleia da República no Terminal Marítimo de Passageiros, na Horta.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24069"
+      },
+      {
+        "id": 24070,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia acompanha Sua Excelência o Presidente da Assembleia da República numa visita ao Hospital da Horta, EPER, na ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24070"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3434,
+        "title": "Estabelece a equiparação da retribuição mínima mensal garantida dos trabalhadores da administração pública central e de instituições e institutos dependentes do Estado que desempenhem funções nas Regiões Autónomas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3434"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-02"
+}
