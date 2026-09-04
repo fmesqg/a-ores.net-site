@@ -1,0 +1,266 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15576048,
+      "title": "Protocolo de teleassistência com a Cruz Vermelha Portuguesa para prestar assistência humanitária e social, em especial às pessoas mais vulneráveis, prevenindo e reparando o sofrimento e contribuindo p...",
+      "price": "103.500,00 €",
+      "buyer": "Direção Regional para a Promoção da Igualdade e Inclusão Social",
+      "seller": "Cruz Vermelha Portuguesa",
+      "procedure": "Contratação excluída II",
+      "signing_date": "06-02-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15576048"
+    },
+    {
+      "id": 15574562,
+      "title": "AQUISIÇÃO DE MADEIRA DE PINHO TRATADA E TORNEADA E RESPETIVOS ACESSÓRIOS PARA A COLOCAÇÃO DE GUARDA CORPOS COM CORRIMÃO NO TRILHO PR01SJO ENTRE A FAJÃ DOS CUBRES E A FAJÃ DA CALDEIRA DE SANTO CRISTO\"",
+      "price": "74.738,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "AGROGANÇA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15574562"
+    },
+    {
+      "id": 15576849,
+      "title": "Aquisição de serviços de assessoria jurídica",
+      "price": "73.640,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Lopes, Amaral, Guimarães & Associados, Sociedade de Advogados, RL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15576849"
+    },
+    {
+      "id": 15575303,
+      "title": "Concurso Público para Aquisição de Material Informático para os Serviços Camarários, por Lotes",
+      "price": "62.881,76 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "MEO - Serviços de Comunicações e Multimédia, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "10-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15575303"
+    },
+    {
+      "id": 15577852,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "59.200,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "MYLAN, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15577852"
+    },
+    {
+      "id": 15577895,
+      "title": "Pº 413/26 AQUISIÇÃO DE SERVIÇOS DE JARDINAGEM E DE MANUTENÇÃO DE PLANTAS DE INTERIOR PARA OS EDIFÍCIOS DA NAV PORTUGAL, E.P.E.",
+      "price": "56.700,00 €",
+      "buyer": "NAV Portugal E.P.E.",
+      "seller": "Amadeu & Amadeu Jardinagem e Madeiras, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15577895"
+    },
+    {
+      "id": 15574477,
+      "title": "Prestação de Serviços de Manutenção ao Sistema de Informação PACS",
+      "price": "55.182,90 €",
+      "buyer": "HOSPITAL DE SANTO ESPÍRITO DA ILHA TERCEIRA, EPER",
+      "seller": "ART CES - UNIPESSOAL, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15574477"
+    },
+    {
+      "id": 15575162,
+      "title": "Prestação de serviços de assistência e suporte à aplicação ByMe",
+      "price": "46.909,00 €",
+      "buyer": "HOSPITAL DE SANTO ESPÍRITO DA ILHA TERCEIRA, EPER",
+      "seller": "BYME - INFORMATION TECHNOLOGY LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15575162"
+    },
+    {
+      "id": 15577673,
+      "title": "Pº 003/26 AQUISIÇÃO DE SERVIÇOS DE DESMATAÇÃO DAS ÁREAS ADJACENTES ÀS ESTAÇÕES DA NAV PORTUGAL, E.P.E.",
+      "price": "35.949,96 €",
+      "buyer": "NAV Portugal E.P.E.",
+      "seller": "Amadeu & Amadeu Jardinagem e Madeiras, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15577673"
+    },
+    {
+      "id": 15577879,
+      "title": "Aquisição de bens - Fornecimento de Material Informático (computadores portáteis)",
+      "price": "34.099,50 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "Beltrão coelho Açores, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15577879"
+    },
+    {
+      "id": 15577612,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "27.206,85 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Overpharma, Lda",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15577612"
+    },
+    {
+      "id": 15577820,
+      "title": "Aquisição de serviços de manutenção dos Campos de Jogos Mãe de Deus, Meio Moio e Ponta Garça e da Capela da Luz Eterna",
+      "price": "21.700,00 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "António José dos Santos Ferreira",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15577820"
+    },
+    {
+      "id": 15577009,
+      "title": "Aquisição de Serviços de Comunicações Móveis de Dados, em fornecimento faseado.",
+      "price": "20.898,00 €",
+      "buyer": "Lotaçor - Serviço de Lotas dos Açores, SA",
+      "seller": "MEO - Serviços de Comunicações e Multimédia, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15577009"
+    },
+    {
+      "id": 15575006,
+      "title": "PRESTAÇÃO DE SERVIÇOS DE REVISÃO DO REGIME JURÍDICO DOS INSTRUMENTOS DE GESTÃO TERRITORIAL",
+      "price": "19.200,00 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "NRB - Nuno Bettencourt Raposo, Advogados & Associados, Sociedade Multidisciplinar, SP, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15575006"
+    },
+    {
+      "id": 15574397,
+      "title": "Aquisição, por lotes, de equipamentos para a cozinha do Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "18.892,25 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Carlos Nunes &amp; Irmãos - Frio Ind. e Comercial, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15574397"
+    },
+    {
+      "id": 15574389,
+      "title": "Aquisição, por lotes, de equipamentos para a cozinha do Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "17.197,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Açorotel, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15574389"
+    },
+    {
+      "id": 15575336,
+      "title": "AQUISIÇÃO DE EQUIPAMENTO INFORMÁTICO PARA SERVIÇOS E PROJETOS DA DIREÇÃO REGIONAL DO AMBIENTE E AÇÃO CLIMÁTICA - 3 lotes",
+      "price": "16.970,50 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "J.H. Ornelas & Cª. SUC., LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15575336"
+    },
+    {
+      "id": 15575316,
+      "title": "Concurso Público para Aquisição de Material Informático para os Serviços Camarários, por Lotes",
+      "price": "14.984,21 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "MEO - Serviços de Comunicações e Multimédia, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "10-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15575316"
+    },
+    {
+      "id": 15575340,
+      "title": "AQUISIÇÃO DE EQUIPAMENTO INFORMÁTICO PARA SERVIÇOS E PROJETOS DA DIREÇÃO REGIONAL DO AMBIENTE E AÇÃO CLIMÁTICA - 3 lotes",
+      "price": "13.992,10 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "J.H. Ornelas & Cª. SUC., LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15575340"
+    },
+    {
+      "id": 15575331,
+      "title": "AQUISIÇÃO DE EQUIPAMENTO INFORMÁTICO PARA SERVIÇOS E PROJETOS DA DIREÇÃO REGIONAL DO AMBIENTE E AÇÃO CLIMÁTICA - 3 lotes",
+      "price": "12.131,62 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "J.H. Ornelas & Cª. SUC., LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15575331"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9525,
+        "title": "Discussão pública e intervenção na Baía de Porto Pim",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "01/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9525"
+      },
+      {
+        "id": 9526,
+        "title": "Situação da rola-turca (Streptopelia decaocto) nos Açores e medidas de controlo populacional implementadas",
+        "state_change": null,
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "01/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9526"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24072,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Painéis solares instalados e pagos continuam parados à espera do Governo para produzirem para a rede.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24072"
+      },
+      {
+        "id": 24073,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Comemorações dos 50 anos arrancam no Parlamento com homenagem aos primeiros deputados da Autonomia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24073"
+      },
+      {
+        "id": 24074,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Degradação das infraestruturas de apoio à pesca em Vila Franca do Campo exige intervenção urgente, alerta PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24074"
+      },
+      {
+        "id": 24071,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Execução do PRR Açores - Nuno Barata (IL) desmonta \"sucesso estatístico\" do Governo Regional.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24071"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3435,
+        "title": "Pela majoração do financiamento da Universidade da Madeira e da Universidade dos Açores e acesso a apoios europeus, através da alteração à Lei n.º 37/2003, de 22 de agosto, que estabelece as bases do financiamento do ensino superior",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3435"
+      },
+      {
+        "id": 3436,
+        "title": "Assegura a priorização do transporte e abastecimento de medicamentos às Regiões Autónomas, alterando o regime jurídico dos medicamentos de uso humano",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3436"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-03"
+}
