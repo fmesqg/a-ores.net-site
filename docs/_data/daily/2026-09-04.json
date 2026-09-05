@@ -1,0 +1,352 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15581155,
+      "title": "serviços de enfermagem ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Sandra Patrícia Ribeiro Silva",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15581155"
+    },
+    {
+      "id": 15578804,
+      "title": "serviços médicos de pedopsiquiatria ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "HUGO ROMÃO & BARBARA ROMÃO, SERVIÇOS MÉDICOS, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15578804"
+    },
+    {
+      "id": 15584134,
+      "title": "Aquisição de serviços de Assessoria Fiscal e Implementação da Metodologia de Dedução do IVA",
+      "price": "74.280,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Forvis Mazars Advisory, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15584134"
+    },
+    {
+      "id": 15581506,
+      "title": "Empreitada de Reabilitação da Escola de Santa Bárbara ¿ Edifício, Balneários e Espaços Exteriores",
+      "price": "59.690,00 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "Dinis Alberto Teixeira Rego",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15581506"
+    },
+    {
+      "id": 15578660,
+      "title": "Prestação de serviços para a elaboração do projeto de execução da Empreitada de Reabilitação das Instalações Desportivas da Escola Secundária Jerónimo Emiliano de Andrade, Angra do Heroísmo, ilha Terc...",
+      "price": "51.000,01 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "Entreplanos, Gabinete de Arquitectura Urbanismo e Design, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15578660"
+    },
+    {
+      "id": 15582584,
+      "title": "serviços médicos de estomatologia ao HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Caderno Exímio, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15582584"
+    },
+    {
+      "id": 15581304,
+      "title": "Revisão do Projeto da Esquadra da PSP da Ribeira Grande",
+      "price": "25.000,00 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "BUILDPRINT - SERVIÇOS DE ENGENHARIA E CONSULTORIA, UNIPESSOAL, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15581304"
+    },
+    {
+      "id": 15579272,
+      "title": "serviços médicos de hemato-oncologia ao HSEIT, EPER",
+      "price": "25.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Gisela Cristiana de Oliveira Ferreira",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15579272"
+    },
+    {
+      "id": 15579385,
+      "title": "Pº 674/26 SERVIÇOS FISCALIZAÇÃO EMPREITADAS REMODELAÇÃO PARQUE HABITACIONAL FASE 6 E SUBSTITUIÇÃO REDE INCÊNDIOS CCO SANTA MARIA",
+      "price": "12.916,67 €",
+      "buyer": "NAV Portugal E.P.E.",
+      "seller": "V.H.M. Açores Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15579385"
+    },
+    {
+      "id": 15581559,
+      "title": "Aquisição de serviços de artistas com Emanuel Filipe Silveira da Silva para a Realização de Espetáculo Musical na Semana do Mar 2026",
+      "price": "750,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Emanuel Filipe Silveira da Silva",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15581559"
+    },
+    {
+      "id": 15581240,
+      "title": "Aquisição de Serviço de Artistas - Grupo Folclórico da Santa Casa da Misericórdia da Horta, para a Realização de Espetáculo Musical na Semana do Mar 2026",
+      "price": "500,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Santa Casa da Misericórdia da Horta",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15581240"
+    },
+    {
+      "id": 15583500,
+      "title": "Aquisição de serviços do grupo de música Capelinhos, para a realização de espetáculo musical na Semana do Mar 2026",
+      "price": "350,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Grupo de Música Capelinhos",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15583500"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9456,
+        "title": "Realização de trilhos não homologados na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "03/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9456"
+      },
+      {
+        "id": 9458,
+        "title": "Utilização de recursos públicos na apresentação de uma queixa-crime pelo Governo Regional e contratação de serviços jurídicos externos",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "04/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9458"
+      },
+      {
+        "id": 9460,
+        "title": "Dimensão e custos da estrutura pública ligada às pescas nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "04/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9460"
+      },
+      {
+        "id": 9462,
+        "title": "Controlo e sustentabilidade da dívida pública da Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "05/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9462"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24075,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco questiona Governo e Autarquia sobre encerramento do Jardim de Infância do Teatro Novo, nas Capelas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24075"
+      },
+      {
+        "id": 24076,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores solicita dados detalhados sobre execução do PRR na Região.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24076"
+      },
+      {
+        "id": 24077,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Autonomia foi uma conquista do povo açoriano e pertence ao povo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24077"
+      },
+      {
+        "id": 24078,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende novas respostas para os próximos 50 anos da Autonomia e mantém disponibilidade para entendimentos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24078"
+      },
+      {
+        "id": 24079,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - 50 anos da Autonomia - Nuno Barata (IL) adverte que \"Região excessivamente endividada perde liberdade e capacidade de decidir o seu próprio destino\".",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24079"
+      },
+      {
+        "id": 24080,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - República ainda trata a autonomia dos Açores com desrespeito.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24080"
+      },
+      {
+        "id": 24081,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Nos 50 anos da Autonomia, Luís Garcia apela à articulação entre Parlamento e Governo para garantir a governabilidade dos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24081"
+      },
+      {
+        "id": 24082,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores aponta falhas do Estado em matérias essenciais para a Região.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24082"
+      },
+      {
+        "id": 24083,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS/Açores celebra 50 anos de Autonomia e destaca o seu papel na construção da Região.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24083"
+      },
+      {
+        "id": 24084,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco assume o compromisso de cuidar da Democracia e da Autonomia que demoraram séculos a conquistar.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24084"
+      },
+      {
+        "id": 24085,
+        "title": "Discurso do Presidente da ALRAA, Luís Garcia - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24085"
+      },
+      {
+        "id": 24087,
+        "title": "Convocatória - Período Legislativo de Setembro de 2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24087"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3520,
+        "title": "Intervenção do Deputado João Mendonça do PPM - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3520"
+      },
+      {
+        "id": 3521,
+        "title": "Intervenção do Deputado Carlos Silva do PS - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3521"
+      },
+      {
+        "id": 3522,
+        "title": "Intervenção do Deputado Pedro Ferreira da IL - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3522"
+      },
+      {
+        "id": 3505,
+        "title": "Intervenção do Deputado Pedro Neves do PAN - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3505"
+      },
+      {
+        "id": 3506,
+        "title": "Intervenção do Deputado Nuno Barata da IL - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3506"
+      },
+      {
+        "id": 3507,
+        "title": "Intervenção do Deputado António Lima do BE - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3507"
+      },
+      {
+        "id": 3508,
+        "title": "Intervenção do Deputado João Mendonça do PPM - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3508"
+      },
+      {
+        "id": 3509,
+        "title": "Intervenção do Deputado Pedro Pinto do CDS-PP - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3509"
+      },
+      {
+        "id": 3510,
+        "title": "Intervenção do Deputado José Pacheco do CH - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3510"
+      },
+      {
+        "id": 3511,
+        "title": "Intervenção do Deputado Berto Messias do PS - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3511"
+      },
+      {
+        "id": 3512,
+        "title": "Intervenção do Deputado João Bruto da Costa do PSD - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3512"
+      },
+      {
+        "id": 3513,
+        "title": "Intervenção do Presidente do Governo Regional dos Açores, José Manuel Bolieiro - Sessão Solene Evocativa dos 50 Anos da Autonomia.",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3513"
+      },
+      {
+        "id": 3514,
+        "title": "Intervenção do Deputado Pedro Neves do PAN - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3514"
+      },
+      {
+        "id": 3515,
+        "title": "Intervenção do Deputado António Lima do BE - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3515"
+      },
+      {
+        "id": 3516,
+        "title": "Intervenção do Presidente do Governo Regional dos Açores, José Manuel Bolieiro - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3516"
+      },
+      {
+        "id": 3517,
+        "title": "Intervenção do Deputado José Pacheco do CH - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3517"
+      },
+      {
+        "id": 3518,
+        "title": "Intervenção do Deputado João Bruto da Costa do PSD - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3518"
+      },
+      {
+        "id": 3519,
+        "title": "Intervenção do Deputado Pedro Pinto do CDS-PP - Sessão Solene do Dia da Região Autónoma dos Açores 2025.",
+        "date": "25/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3519"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-04"
+}
