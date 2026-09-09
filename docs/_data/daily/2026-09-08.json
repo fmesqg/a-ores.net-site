@@ -1,0 +1,308 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15591819,
+      "title": "Aquisição de serviços de varredura manual",
+      "price": "682.020,00 €",
+      "buyer": "Câmara Municipal de Ponta Delgada",
+      "seller": "UNIPELAGO REPRESENTAÇOES, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "07-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15591819"
+    },
+    {
+      "id": 15593077,
+      "title": "EMPREITADA DE BENEFICIAÇÃO DO CAMINHO DO CARREGADOURO, CONCELHO DA MADALENA, ILHA DO PICO. A empreitada visa a beneficiação do pavimento da via, para melhorar o acesso às explorações agrícolas localiz...",
+      "price": "177.500,00 €",
+      "buyer": "IROA, S. A.",
+      "seller": "Tecnovia Açores - Sociedade de Empreitadas SA",
+      "procedure": "Concurso público",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15593077"
+    },
+    {
+      "id": 15592035,
+      "title": "Aquisição de Prestação de Serviços de Gestão e Dinamização da Lab Invest – Incubadora de Empresas das Lajes do Pico",
+      "price": "36.000,00 €",
+      "buyer": "Município das Lajes do Pico",
+      "seller": "Azoresx Unipessoal, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15592035"
+    },
+    {
+      "id": 15594752,
+      "title": "Aquisição de Leite Escolar para o Ano 2026/2027 do ensino Pré-Escolar e 1º Ciclo do Ensino Básico",
+      "price": "32.801,50 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "Lactaçores - União das Cooperativas de Lacticínios dos Açores, UCRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15594752"
+    },
+    {
+      "id": 15594620,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE UTILIZAÇÃO DE TRABALHO TEMPORÁRIO PARA A TRIAGEM DE RESÍDUOS DE PAPEL, CARTÃO E PLÁSTICO",
+      "price": "19.736,64 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "Timing People - Empresa de Trabalho Temporário Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15594620"
+    },
+    {
+      "id": 15594588,
+      "title": "Aquisição de equipamento universal com 6 funções e sistema de aspiração para o setor da carpintaria",
+      "price": "16.800,00 €",
+      "buyer": "SMAS Câmara Municipal de Ponta Delgada",
+      "seller": "Electroxi - Máquinas e Ferramentas, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15594588"
+    },
+    {
+      "id": 15593006,
+      "title": "Modernização do Sistema de Continuidade de Energia (UPS)",
+      "price": "13.200,00 €",
+      "buyer": "SMAS Câmara Municipal de Ponta Delgada",
+      "seller": "SEGMA - Serviços de Engenharia, Gestão e Manutenção, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15593006"
+    },
+    {
+      "id": 15593833,
+      "title": "Aquisição de serviços do grupo de Chamarritas roda cheia do Faial, para a realização de espetáculo musical na Semana do Mar 2026",
+      "price": "625,00 €",
+      "buyer": "Município da Horta",
+      "seller": "grupo de Chamarritas roda cheia do Faial",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15593833"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9458,
+        "title": "Utilização de recursos públicos na apresentação de uma queixa-crime pelo Governo Regional e contratação de serviços jurídicos externos",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "04/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9458"
+      },
+      {
+        "id": 9462,
+        "title": "Controlo e sustentabilidade da dívida pública da Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "05/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9462"
+      },
+      {
+        "id": 9480,
+        "title": "Impacto económico, turístico e promocional do desporto motorizado nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9480"
+      },
+      {
+        "id": 9522,
+        "title": "Abertura da linha PEPAC de apoio à agro-indústria prazos, condições e dotação orçamental",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9522"
+      },
+      {
+        "id": 9528,
+        "title": "Unidade de Saúde da Ilha Graciosa com cargos dirigentes por preencher",
+        "state_change": null,
+        "requesters": "José Ávila PS, ...",
+        "date": "02/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9528"
+      },
+      {
+        "id": 9529,
+        "title": "Expropriações por pagar na obra de ligação entre a Via Vitorino Nemésio e a circular de Angra do Heroísmo",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "02/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9529"
+      },
+      {
+        "id": 9530,
+        "title": "Casa dos Professores da ilha do Corvo",
+        "state_change": null,
+        "requesters": "João Mendonça PPM",
+        "date": "02/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9530"
+      },
+      {
+        "id": 9531,
+        "title": "Projetos SOLENERGE aprovados e pagos pelo PRR sem ligação à rede por falta de autorização da Direção Regional da Energia",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9531"
+      },
+      {
+        "id": 9532,
+        "title": "Degradação das infraestruturas de apoio à pesca em Vila Franca do Campo exige intervenção urgente",
+        "state_change": null,
+        "requesters": "Gualberto Rita PS, ...",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9532"
+      },
+      {
+        "id": 9533,
+        "title": "Execução financeira, física e material do PRR-Açores, reprogramação de investimentos e avaliação dos resultados alcançados",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9533"
+      },
+      {
+        "id": 9534,
+        "title": "Encerramento do Jardim de Infância do Teatro Novo (EBJI de Capelas)",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9534"
+      },
+      {
+        "id": 9535,
+        "title": "Rede de carregamento elétrico degradada e sem resposta adequada",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "07/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9535"
+      },
+      {
+        "id": 9536,
+        "title": "Governo omite informação essencial sobre o Quadro Plurianual de Programação Orçamental 2027-2030",
+        "state_change": null,
+        "requesters": "Carlos Silva PS, ...",
+        "date": "07/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9536"
+      },
+      {
+        "id": 9537,
+        "title": "Resultados do programa jovens talentos regionais e estatuto de alto rendimento nacional",
+        "state_change": null,
+        "requesters": "Nuno Barata IL",
+        "date": "07/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9537"
+      },
+      {
+        "id": 9419,
+        "title": "Inventário atualizado e remoção de amianto em edifícios públicos da Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "15/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9419"
+      },
+      {
+        "id": 9426,
+        "title": "Bolsa do Cuidador Educacional",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "20/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9426"
+      },
+      {
+        "id": 9444,
+        "title": "Autorização para concessão de novos avales à Sata e alteração do capital próprio da Sata Air Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Carlos Silva PS, ...",
+        "date": "29/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9444"
+      },
+      {
+        "id": 9445,
+        "title": "Esclarecimentos sobre a concessão de aval à SATA Holding, S.A. (Resolução do Conselho do Governo n.º 93/2026)",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "29/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9445"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24100,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA Açores diz que não há desculpas para falta de investimento em 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24100"
+      },
+      {
+        "id": 24101,
+        "title": "Debate de urgência sobre a \"Situação da agricultura açoriana e aumento dos custos de contexto do setor primário\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24101"
+      },
+      {
+        "id": 24103,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige transparência no processo de privatização da Azores Airlines.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24103"
+      },
+      {
+        "id": 24104,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco exige esclarecimentos sobre situação crítica na Unidade de Neonatologia do Hospital de Ponta Delgada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24104"
+      },
+      {
+        "id": 24105,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores defende reforço do investimento na Saúde e Habitação no Orçamento para 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24105"
+      },
+      {
+        "id": 24106,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA agenda debate de urgência sobre estado da educação nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24106"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3437,
+        "title": "Reforma da Lei de Bases da Proteção Civil",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3437"
+      },
+      {
+        "id": 3438,
+        "title": "Operacionaliza o Conselho para a Ação Climática, alterando a Lei n.º 43/2023, de 14 de agosto",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3438"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-08"
+}
