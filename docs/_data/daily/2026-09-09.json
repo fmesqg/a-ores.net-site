@@ -1,0 +1,185 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15595927,
+      "title": "Empreitada de Construção e Beneficiação do Caminho do PECA, no P.O.A. da Zona Central da Ilha de São Miguel. Empreitada de obras públicas para a execução de trabalhos de pavimentação do Caminho do PEC...",
+      "price": "582.656,55 €",
+      "buyer": "IROA, S. A.",
+      "seller": "Almério & Cordeiro, Ca Lda",
+      "procedure": "Concurso público",
+      "signing_date": "31-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15595927"
+    },
+    {
+      "id": 15596159,
+      "title": "AQUISIÇÃO DE IBRUTINIB 420 MG COMP., AO ABRIGO DO AQ/2023/491 DOS SPMS",
+      "price": "104.444,61 €",
+      "buyer": "HOSPITAL DE SANTO ESPÍRITO DA ILHA TERCEIRA, EPER",
+      "seller": "OLIVEIRA LEITAO & PENA, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15596159"
+    },
+    {
+      "id": 15598273,
+      "title": "Serviços de transporte de estudantes universitários (SHUTTLE) 2026/2027",
+      "price": "56.000,00 €",
+      "buyer": "Câmara Municipal de Ponta Delgada",
+      "seller": "Auto Viação Micaelense, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15598273"
+    },
+    {
+      "id": 15599771,
+      "title": "Pavimentação da Canada do Pico - Porto Martins",
+      "price": "51.847,80 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "Leite &amp; Madureira, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15599771"
+    },
+    {
+      "id": 15597855,
+      "title": "Aquisição de Apólice de Seguro de Vida Grupo",
+      "price": "30.408,39 €",
+      "buyer": "Porto de Aveiro",
+      "seller": "Fidelidade – Companhia de Seguros, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "05-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15597855"
+    },
+    {
+      "id": 15595545,
+      "title": "Aquisição de serviços de organização, realização e gestão do programa de animação natalícia infantil - Casa do Pai Natal, Pai Natal & C.ª",
+      "price": "27.305,39 €",
+      "buyer": "Câmara Municipal de Ponta Delgada",
+      "seller": "Solidaried'arte - Associação para a Integração pela Arte e Cultura",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15595545"
+    },
+    {
+      "id": 15599802,
+      "title": "Fornecimento de sandes diversas",
+      "price": "1.809,50 €",
+      "buyer": "Escola Básica do 2.º e 3.º Ciclos e Secundário Padre Manuel Azevedo da Cunha",
+      "seller": "Panificação e Comércio do Vale Frio, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15599802"
+    },
+    {
+      "id": 15600154,
+      "title": "Fornecimento pastelaria variada - doces / salgados para o bufete da Escola Básica e Secundária da Calheta",
+      "price": "1.422,90 €",
+      "buyer": "Escola Básica do 2.º e 3.º Ciclos e Secundário Padre Manuel Azevedo da Cunha",
+      "seller": "Panificação e Comércio do Vale Frio, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15600154"
+    },
+    {
+      "id": 15595481,
+      "title": "Aquisição de serviços da Sociedade Filarmónica Nova Artista Flamenguense para a Realização de Espetáculo Musical na Semana do Mar 2026",
+      "price": "1.350,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Sociedade Filarmónica Nova Artista Flamenguense",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15595481"
+    },
+    {
+      "id": 15600142,
+      "title": "Fornecimento de baguetes de atum pasta de frango e panados no forno para o bufete da Escola Básica e Secundária da Calheta",
+      "price": "960,80 €",
+      "buyer": "Escola Básica do 2.º e 3.º Ciclos e Secundário Padre Manuel Azevedo da Cunha",
+      "seller": "Panificação e Comércio do Vale Frio, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15600142"
+    },
+    {
+      "id": 15597162,
+      "title": "Fornecimento de bens alimentícios para o bufete da Escola Básica e Secundária da Calheta",
+      "price": "959,62 €",
+      "buyer": "Escola Básica do 2.º e 3.º Ciclos e Secundário Padre Manuel Azevedo da Cunha",
+      "seller": "Climaco Ferreira da Cunha & Filhos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15597162"
+    },
+    {
+      "id": 15600082,
+      "title": "Fornecimento croissants (queijo, fiambre e mistos) para o bufete da Escola Básica e Secundária da Calheta",
+      "price": "867,00 €",
+      "buyer": "Escola Básica do 2.º e 3.º Ciclos e Secundário Padre Manuel Azevedo da Cunha",
+      "seller": "Panificação e Comércio do Vale Frio, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15600082"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9539,
+        "title": "Privatização da Azores Airlines - Transparência exige divulgação dos candidatos",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "08/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9539"
+      },
+      {
+        "id": 9540,
+        "title": "Limitações de capacidade na Unidade de Neonatologia do Hospital Modular de Ponta Delgada",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "08/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9540"
+      },
+      {
+        "id": 9349,
+        "title": "Qualidade, critérios de abertura e adequação ao mercado dos cursos profissionais na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "05/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9349"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24107,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS aponta Saúde, Habitação, Envelhecimento e Custo de Vida como prioridades para o Plano e Orçamento de 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24107"
+      },
+      {
+        "id": 24108,
+        "title": "Debate de urgência sobre \"O estado da educação nos Açores no contexto atual\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24108"
+      },
+      {
+        "id": 24110,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco alerta para grande quantidade de resíduos abandonados na zona da praia do Monte Verde.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24110"
+      },
+      {
+        "id": 24111,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/Açores questiona eficácia de apoios ao resgate de equídeos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24111"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-09"
+}
