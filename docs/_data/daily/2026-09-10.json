@@ -1,0 +1,194 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15603564,
+      "title": "Renovação e conservação de telhado de fibrocimento.",
+      "price": "81.927,50 €",
+      "buyer": "Obra Social Madre Maria Clara Açores",
+      "seller": "Ivo Sequeira Lima, Unipessoal",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15603564"
+    },
+    {
+      "id": 15601498,
+      "title": "Aquisição de serviços de gestão e manutenção de maquinaria e equipamentos integrados nas instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Faial, de São Miguel e da Terceira",
+      "price": "80.500,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "FIT- Fabrico e Instalações Técnicas, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15601498"
+    },
+    {
+      "id": 15601336,
+      "title": "Aquisição e implementação de uma solução de Gestão Hospitalar de Armazém e Farmácia para o Hospital do Divino Espírito Santo de Ponta Delgada, EPER, abrangendo as áreas de concursos, compras, gestão d...",
+      "price": "74.500,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "Serviços Técnicos de Informática, Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15601336"
+    },
+    {
+      "id": 15601373,
+      "title": "Responsabilidade técnica pela exploração do posto de transformação, instalações de utilização e grupo gerador de emergência e respetiva manutenção preventiva, dos matadouros das ilhas do Faial, Flores...",
+      "price": "68.332,26 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "SEGMA - Serviços de Engenharia, Gestão e Manutenção, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15601373"
+    },
+    {
+      "id": 15601568,
+      "title": "Aquisição de serviços de gestão e manutenção de maquinaria e equipamentos integrados nas instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Faial, de São Miguel e da Terceira",
+      "price": "63.400,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "FIT- Fabrico e Instalações Técnicas, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15601568"
+    },
+    {
+      "id": 15601712,
+      "title": "Ajuste direto n.º 15/2026 - Aquisição de refeições escolares2026/2027 - setembro a dezembro",
+      "price": "40.896,30 €",
+      "buyer": "Escola Básica Integrada de Água de Pau",
+      "seller": "Rescater - Prestação de Serviços, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15601712"
+    },
+    {
+      "id": 15601318,
+      "title": "Aquisição de serviços de instalações elétricas de energia, rede telefónica e rede de comunicações TCP/IP, para adaptação do Bloco B1 - Piso 4 (Bloco de Partos) e Bloco D2 - Piso 3 (Medicina IV), a áre...",
+      "price": "35.338,86 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "ORDEC - OBRAS REGIONAIS DE ELECTRICIDADE E CONSTRUÇÃO CIVIL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15601318"
+    },
+    {
+      "id": 15602686,
+      "title": "Aquisição, instalação e colocação em funcionamento de equipamentos de climatização nas instalações da SJHE",
+      "price": "32.582,69 €",
+      "buyer": "Secretaria Regional da Juventude, Habitação e Emprego",
+      "seller": "Conforto - Maria Andrade e Raul Silva, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15602686"
+    },
+    {
+      "id": 15602986,
+      "title": "Aq.serviços de org. e realização do projeto \"O Rapaz da Montanha\" de Rodrigo Leão da PDL26 - Capital Portuguesa da Cultura",
+      "price": "32.000,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Uguro Musica, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15602986"
+    },
+    {
+      "id": 15601667,
+      "title": "Fornecimento e Montagem de Plataforma Elevatória de Escada Curva Interior",
+      "price": "21.634,62 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "LEVITA, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15601667"
+    },
+    {
+      "id": 15601791,
+      "title": "Reparação e Manutenção do Móvel 8",
+      "price": "17.164,01 €",
+      "buyer": "SMAS Câmara Municipal de Ponta Delgada",
+      "seller": "VECOAÇORES- Veículos Comerciais dos Açores, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15601791"
+    },
+    {
+      "id": 15603285,
+      "title": "Aquisição de serviços para conceção e desenvolvimento de campanhas de promoção de literacia em saúde",
+      "price": "13.680,00 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "Media 9 Bradcast and Events Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15603285"
+    },
+    {
+      "id": 15602330,
+      "title": "Aquisição de Serviços de Telerradiologia para o ano de 2026",
+      "price": "11.800,00 €",
+      "buyer": "Unidade de Saúde da Ilha Graciosa",
+      "seller": "IMI - Imagens Médicas Integradas, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15602330"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9542,
+        "title": "Apoios à proteção e resgate de equídeos",
+        "state_change": null,
+        "requesters": "Pedro Neves PAN",
+        "date": "08/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9542"
+      },
+      {
+        "id": 9543,
+        "title": "Deposição de resíduos e vestígios de estruturas na Praia do Monte Verde após o MEO Monte Verde 2026",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "09/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9543"
+      },
+      {
+        "id": 9544,
+        "title": "Incumprimento do serviço de frio na carga aérea de pescado com origem e destino na ilha Graciosa",
+        "state_change": null,
+        "requesters": "José Ávila PS, ...",
+        "date": "09/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9544"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24112,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Jovens Talentos Regionais - Nuno Barata (IL) questiona se Governo Regional sabe medir resultados do dinheiro público que investe.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24112"
+      },
+      {
+        "id": 24113,
+        "title": "Nota de Agenda do Grupo Parlamentar do PS - PS/Açores alerta que resultados do PISA confirmam desafios persistentes na educação nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24113"
+      },
+      {
+        "id": 24114,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 11/09/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24114"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3439,
+        "title": "Cria o Regime Nacional de Compensação dos Sobrecustos do Transporte Marítimo de Mercadorias entre o continente e as Regiões Autónomas da Madeira e dos Açores e nas ligações interilhas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3439"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-10"
+}
