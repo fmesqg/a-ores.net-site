@@ -1,0 +1,218 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15608572,
+      "title": "SERVIÇOS DE MANUTENÇÃO À CENTRAL DE TRATAMENTO DE ÁGUA NOS SERVIÇOS DE HEMODIALISE 2026-2027",
+      "price": "146.422,29 €",
+      "buyer": "HOSPITAL DA HORTA, EPER",
+      "seller": "Vantive, Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608572"
+    },
+    {
+      "id": 15608066,
+      "title": "SERVIÇOS DE MANUTENÇÃO E ASSISTÊNCIA TÉCNICA DO SOFTWARE GHAF DA ST+I 2026",
+      "price": "55.950,00 €",
+      "buyer": "HOSPITAL DA HORTA, EPER",
+      "seller": "Serviços Técnicos de Informática, Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608066"
+    },
+    {
+      "id": 15608387,
+      "title": "SERVIÇOS DE MANUTENÇÃO E ASSISTÊNCIA TÉCNICA DE EQUIPAMENTOS BBRAUN 2026 -2028",
+      "price": "44.203,32 €",
+      "buyer": "Hospital da Horta, EPER",
+      "seller": "JOSÉ HORÁCIO DO REGO SOUSA LDA - MEDIFARMA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608387"
+    },
+    {
+      "id": 15608287,
+      "title": "Fornecimento de reagentes da WERFEN para 2026",
+      "price": "42.096,92 €",
+      "buyer": "HOSPITAL DA HORTA, EPER",
+      "seller": "WERFEN PORTUGAL, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608287"
+    },
+    {
+      "id": 15608102,
+      "title": "I-24125/2026 - Empreitada de Fornecimento e Instalação de um Sistema Semafórico para o cruzamento da Canada João Caminho com a ER1, no Porto Judeu.",
+      "price": "30.800,50 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "E. Engenharia - Sistemas e Tecnologias de Informação, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608102"
+    },
+    {
+      "id": 15608615,
+      "title": "MANUTENÇÃO E ASSISTENCIA TÉCNICA DE DIVERSOS EQUIPAMENTOS - SPECULUM 2026, 2027 e 2028",
+      "price": "28.504,86 €",
+      "buyer": "HOSPITAL DA HORTA, EPER",
+      "seller": "Speculum Artigos Medicos S.A",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608615"
+    },
+    {
+      "id": 15606983,
+      "title": "Consulta Prévia para Fornecimento de Material para Apoio à Construção de um Novo Espaço para o Ano Letivo 2026/2027 da Escola Profissional de Nordeste",
+      "price": "24.995,91 €",
+      "buyer": "Município de Nordeste",
+      "seller": "José de Simas Moniz & Filhos, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15606983"
+    },
+    {
+      "id": 15608198,
+      "title": "SERVIÇOS DE MANUTENÇÃO E ASSISTÊNCIA TÉCNICA DE VENTILADORES MAQUET SERVO-i PARA O ANO DE 2026",
+      "price": "22.402,08 €",
+      "buyer": "HOSPITAL DA HORTA, EPER",
+      "seller": "Getinge Group Portugal",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608198"
+    },
+    {
+      "id": 15608324,
+      "title": "aquisição de uma estação sísmica digital de banda larga e respetivo pacote de acessórios necessários à instalação/ligação",
+      "price": "17.204,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "MRA INSTRUMENTAÇÃO, S.A.",
+      "procedure": "Contratação excluída II",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608324"
+    },
+    {
+      "id": 15607590,
+      "title": "PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO, PARA O TRIÉNIO DE 2026 A 2028, PARA O EQUIPAMENTO CUSA EXCEL 8, SN. U5D EXISTENTE NO HOSPITAL DIVINO ESPÍRITO SANTO DE PONTA DELGADA, EPER.",
+      "price": "16.950,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "SOCIME II – PRODUTOS MÉDICOS, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15607590"
+    },
+    {
+      "id": 15608123,
+      "title": "SERVIÇOS DE MANUTENÇÃO E ASSISTÊNCIA TÉCNICA DO SISTEMA APLICACIONAL HER – GESTÃO DE RISCO 2026",
+      "price": "13.779,96 €",
+      "buyer": "HOSPITAL DA HORTA, EPER",
+      "seller": "RISI  EXPERT SOFWARE SOLUTIONS LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608123"
+    },
+    {
+      "id": 15608020,
+      "title": "SERVIÇOS DE MANUTENÇÃO E ASSISTÊNCIA TÉCNICA DOS SISTEMAS APLICACIONAIS DA B-SIMPLE 2026",
+      "price": "11.282,00 €",
+      "buyer": "HOSPITAL DA HORTA, EPER",
+      "seller": "B-Simple Sistemas de Informação,Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608020"
+    },
+    {
+      "id": 15608434,
+      "title": "FORNECIMENTO CONTÍNUO DE GÉNEROS DE PANIFICAÇÃO PARA A BA4",
+      "price": "4.089,16 €",
+      "buyer": "Estado Maior da Força Aérea",
+      "seller": "MARIO VALADAO, UNIPESSOAL,LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15608434"
+    },
+    {
+      "id": 15607256,
+      "title": "Concurso Público para Aquisição de Material Informático para os Serviços Camarários, por Lotes",
+      "price": "2.150,00 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "TOPTONER - Rec. e Comercialização Consumiveis Inf., Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15607256"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9478,
+        "title": "Lista de espera para colocação em lares de idosos, critérios de priorização, articulação com o programa \"Novos Idosos\"",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "11/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9478"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24115,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na Solene Eucaristia e Procissão em honra de Nossa Senhora da Luz, na freguesia dos Flamengos, ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24115"
+      },
+      {
+        "id": 24116,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia recebe em audiência, o Presidente da Secção Regional da Ordem dos Arquitetos, na sede da Assembleia.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24116"
+      },
+      {
+        "id": 24117,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Agricultura da Terceira vive uma situação de asfixia económica.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24117"
+      },
+      {
+        "id": 24118,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo Regional falhou prazo do estudo sobre custos das respostas sociais e mantém indefinição sobre financiamento das IPSS para 2027, afirma PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24118"
+      },
+      {
+        "id": 24119,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Início do ano letivo nos Açores marcado por escolas degradadas e com falta de professores e funcionários.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24119"
+      },
+      {
+        "id": 24120,
+        "title": "Comissão Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 15/09/2026, pelas 14:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24120"
+      },
+      {
+        "id": 24121,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 16/09/2026, pelas 14:30 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24121"
+      },
+      {
+        "id": 24122,
+        "title": "Relatório a que se refere o artigo 103.º do Regimento da ALRAA - Ante-Período Legislativo de Setembro de 2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24122"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3846,
+        "title": "Orçamento da Assembleia Legislativa da Região Autónoma dos Açores para o ano de 2027",
+        "author": "Mesa",
+        "topic": "Organização e funcionamento da Assembleia Legislativa",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3846"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-11"
+}
