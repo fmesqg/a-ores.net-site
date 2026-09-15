@@ -1,0 +1,139 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15610808,
+      "title": "Prestação de Serviços de Consultoria Especializada para Apoio à Governação, Organização de Processos, Gestão Contratual, Articulação Funcional e Capacitação do Serviço de Informática e Reforço da Cibe...",
+      "price": "74.655,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "Cloudsymbiosis Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15610808"
+    },
+    {
+      "id": 15615001,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE ELABORAÇÃO DO PROJETO DO HOSPITAL MÉDICO-VETERINÁRIO\nDA UNIVERSIDADE DOS AÇORES",
+      "price": "71.800,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Luís Almeida e Sousa - Arquitectos, Ld.ª",
+      "procedure": "Consulta Prévia",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15615001"
+    },
+    {
+      "id": 15614138,
+      "title": "Aquisição de serviços para o espetácuo Piromusical da Passagem de ano 2026/2027",
+      "price": "50.000,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Macedos Pirotecnia Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15614138"
+    },
+    {
+      "id": 15613341,
+      "title": "Aquisição de Serviços de Levantamento e Custódia de Documentação de Arquivo dos Centros de Saúde para a USISM - anos 2026 a 2028",
+      "price": "17.335,50 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "EAD-Empresa de Arquivo de Documentação, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15613341"
+    },
+    {
+      "id": 15615100,
+      "title": "Ajuste Direto n.º 6/2026 em função de critérios materiais  - Transporte em Regime de Carreira Pública de setembro a 31 de dezembro 2026",
+      "price": "16.778,33 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15615100"
+    },
+    {
+      "id": 15611841,
+      "title": "EMPREITADA DE REPARAÇÃO DO EDIFÍCIO DO BANCO DE SEMENTES DOS AÇORES",
+      "price": "12.411,66 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "MONTE CARNEIRO - CONSTRUÇÕES, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15611841"
+    },
+    {
+      "id": 15611091,
+      "title": "Aquisição de Apólice de Seguro de Vida Grupo",
+      "price": "12.128,52 €",
+      "buyer": "APFF - Administração do Porto da Figueira da Foz, SA",
+      "seller": "Fidelidade – Companhia de Seguros, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "05-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15611091"
+    },
+    {
+      "id": 15611419,
+      "title": "Refeições para os participantes no Curso de Verão para jovens americanos de descendência açoriana",
+      "price": "6.082,05 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Serviços de Ação Social da Universidade dos Açores",
+      "procedure": "Contratação excluída II",
+      "signing_date": "13-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15611419"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9483,
+        "title": "Situação financeira, gestão e eventual demissão do Presidente do Conselho de Administração da LOTAÇOR",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "14/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9483"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24129,
+        "title": "Relatório a que se refere o artigo 103.º do Regimento da ALRAA - Ante-Período Legislativo de Setembro de 2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24129"
+      },
+      {
+        "id": 24123,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA denuncia \"caos\" nos transportes públicos em São Miguel e pede correção imediata do serviço",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24123"
+      },
+      {
+        "id": 24124,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores considera urgente avançar com a 2.ª fase da intervenção na orla costeira das Calhetas, na Ribeira Grande",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24124"
+      },
+      {
+        "id": 24125,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco questiona Governo sobre falhas no transporte público de passageiros na ilha de São Miguel que tem novo operador",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24125"
+      },
+      {
+        "id": 24126,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores defende construção de uma nova Escola Básica Integrada da Lagoa com ginásio",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24126"
+      },
+      {
+        "id": 24127,
+        "title": "Relatório a que se refere o artigo 103.º do Regimento da ALRAA - Ante-Período Legislativo de Setembro 2026- Comissão de Política Geral",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24127"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-14"
+}
