@@ -1,0 +1,346 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15620085,
+      "title": "Serviços de segurança e vigilância nas instalações das Residências Universitárias de Ponta Delgada, Angra do Heroísmo e Horta",
+      "price": "955.000,00 €",
+      "buyer": "Serviços de Ação Social da Universidade dos Açores",
+      "seller": "PROTECÇÃO TOTAL - SEGURANÇA PRIVADA S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "07-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15620085"
+    },
+    {
+      "id": 15616709,
+      "title": "O presente Contrato tem como objeto a prestação de serviços de higiene e limpeza das seguintes instalações: \na)\tCasa Dabney - serviços e museu, sitos no Monte da Guia, s/n, 9900 Horta, na ilha do Faia...",
+      "price": "129.708,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "03-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15616709"
+    },
+    {
+      "id": 15621667,
+      "title": "Fornecimento de uma Embarcação",
+      "price": "77.900,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Azores Sub, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15621667"
+    },
+    {
+      "id": 15619893,
+      "title": "Aquisição de bens móveis",
+      "price": "33.749,21 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "DINARTE DAMASO & FILHOS, Unipessoal Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15619893"
+    },
+    {
+      "id": 15620094,
+      "title": "Aquisição de bens móveis",
+      "price": "33.725,86 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "DINARTE DAMASO & FILHOS, Unipessoal Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15620094"
+    },
+    {
+      "id": 15622086,
+      "title": "Serviços de Enfermagem ao HSEIT, EPER.",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Lara Alexandra Martins Leonardo",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15622086"
+    },
+    {
+      "id": 15621048,
+      "title": "Aquisição de serviços de renovação de licenças para disponibilização de plataforma integradora de gestão no âmbito das smartcities e respetiva manutenção",
+      "price": "25.000,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "NOS - Comunicações S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15621048"
+    },
+    {
+      "id": 15621428,
+      "title": "Aquisição de bens móveis",
+      "price": "23.926,32 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "MobiOffice",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15621428"
+    },
+    {
+      "id": 15621089,
+      "title": "Aquisição de serviços de integração de software PPAP e GAP no ERP Sigma",
+      "price": "20.000,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "MEDIDATA ESPUBLICO, UNIPESSOAL, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15621089"
+    },
+    {
+      "id": 15619931,
+      "title": "Aquisição de bens móveis",
+      "price": "16.378,20 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "DINARTE DAMASO & FILHOS, Unipessoal Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15619931"
+    },
+    {
+      "id": 15618869,
+      "title": "Aquisição de serviços de alojamento para marchas e grupos de artistas participantes na Semana do Mar 2026",
+      "price": "13.150,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Sociedade Filarmónica Artista Faialense",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15618869"
+    },
+    {
+      "id": 15620271,
+      "title": "Aquisição de bens móveis",
+      "price": "9.684,53 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "DINARTE DAMASO & FILHOS, Unipessoal Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15620271"
+    },
+    {
+      "id": 15619071,
+      "title": "Aquisição de bens móveis",
+      "price": "6.778,00 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "Jacinto Ferreira Correia e Filhos, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15619071"
+    },
+    {
+      "id": 15621466,
+      "title": "Aquisição de bens móveis",
+      "price": "4.881,71 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "MobiOffice",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15621466"
+    },
+    {
+      "id": 15619291,
+      "title": "Aquisição de bens móveis",
+      "price": "3.225,21 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "Adapt4you",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15619291"
+    },
+    {
+      "id": 15618846,
+      "title": "Aquisição de bens móveis",
+      "price": "2.994,93 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "Jacinto Ferreira Correia e Filhos, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15618846"
+    },
+    {
+      "id": 15619210,
+      "title": "Aquisição de bens móveis",
+      "price": "2.973,54 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "Jacinto Ferreira Correia e Filhos, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15619210"
+    },
+    {
+      "id": 15618975,
+      "title": "Aquisição de bens móveis",
+      "price": "2.219,00 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "Jacinto Ferreira Correia e Filhos, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15618975"
+    },
+    {
+      "id": 15619269,
+      "title": "Aquisição de bens móveis",
+      "price": "1.684,00 €",
+      "buyer": "Santa Casa Misericórdia Divino Espírito Santo da Maia",
+      "seller": "Jacinto Ferreira Correia e Filhos, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15619269"
+    },
+    {
+      "id": 15617976,
+      "title": "Aquisição de serviços da Sociedade Filarmónica Artista Faialense para a Realização de Espetáculo Musical na Semana do Mar 2026",
+      "price": "1.675,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Sociedade Filarmónica Artista Faialense",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15617976"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9546,
+        "title": "Segunda fase da proteção da orla costeira das Calhetas-Ribeira Grande",
+        "state_change": null,
+        "requesters": "Carlos Silva PS, ...",
+        "date": "11/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9546"
+      },
+      {
+        "id": 9547,
+        "title": "Falhas no funcionamento do novo modelo de transporte público rodoviário na ilha de São Miguel",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "14/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9547"
+      },
+      {
+        "id": 9548,
+        "title": "Taxa de juro de mora aplicada à dívida de 26 milhões de euros dos hospitais públicos à EDA",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9548"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24130,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - EDA com 8,9 milhões de perdas na compra de fuelóleo ao grupo Bensaude em 2025: Bloco quer ouvir ERSE e EDA no parlamento",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24130"
+      },
+      {
+        "id": 24131,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Grupo Parlamentar do PS/Açores elege nova Direção focada nos problemas dos Açorianos e na apresentação de soluções",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24131"
+      },
+      {
+        "id": 24132,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA apresenta queixa na autoridade da concorrência devido aos preços das passagens aéreas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24132"
+      },
+      {
+        "id": 24133,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Aumento das dificuldades dos agricultores açorianos exige respostas concretas do Governo Regional, defende PS/Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24133"
+      },
+      {
+        "id": 24134,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Cerimónia de Homenagem a Membros, Reconhecimento da Dedicação de Colaboradores e Receção de Novos Membros da Ordem dos Engenheiros Técnicos, em Ponta Delgada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24134"
+      },
+      {
+        "id": 24136,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores desafia Governo Regional a demonstrar influência junto da República e garantir os 23 milhões em dívida aos agricultores açorianos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24136"
+      },
+      {
+        "id": 24137,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca medidas de apoio do Governo Regional aos agricultores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24137"
+      },
+      {
+        "id": 24138,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Agricultura quer receber a tempo e horas para fazer face aos desafios do sector",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24138"
+      },
+      {
+        "id": 24139,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS defende apoios céleres para agricultores e pescadores e exige \"justiça territorial\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24139"
+      },
+      {
+        "id": 24140,
+        "title": "Comissão Grupo de Trabalho para analisar, avaliar e propor melhorias no âmbito do dispositivo de segurança interna na RAA - Convocatória (Dia 22/09/2026, pelas 09:30 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24140"
+      },
+      {
+        "id": 24141,
+        "title": "Comissão Política Geral - Convocatória (Dia 24/09/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24141"
+      },
+      {
+        "id": 24143,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco acusa Governo de abdicar da Autonomia e limitar-se a ficar à espera da República para apoiar agricultores e pescadores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24143"
+      },
+      {
+        "id": 24144,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Recrutamento e selecção da Administração Pública tem de ser efetivamente por mérito",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24144"
+      },
+      {
+        "id": 24145,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende acesso à Administração Pública Regional mais justo e transparente e assente no mérito profissional",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24145"
+      },
+      {
+        "id": 24146,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA desafia aprovação na República da proposta de capitação do IVA para não se perder investimento",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24146"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3847,
+        "title": "Primeira alteração ao Decreto Legislativo Regional n.º 18/2025/A, de 14 de julho de 2025, que cria o cheque-dentista",
+        "author": "CH",
+        "topic": "Saúde",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3847"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3523,
+        "title": "Intervenção da Deputada Patrícia Miranda do PS  - Apresentação do Debate de urgência sobre Debate de urgência sobre “A situação da agricultura açoriana e aumento dos custos de contexto do setor primário”.",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3523"
+      },
+      {
+        "id": 3524,
+        "title": "Intervenção do Deputado Francisco Gaspar do PSD - Apresentação em Plenário do Projeto de Resolução n.º 108/XIII – “Reforço da cobertura de rede móvel nas vias terrestres regionais dos Açores”.",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3524"
+      },
+      {
+        "id": 3525,
+        "title": "Intervenção do Deputado José Ávila do PS - Apresentação em plenário do Projeto de Decreto Legislativo Regional n.º 73/XIII – “Cria a Comissão de Recrutamento e Seleção para a Administração Pública Regional dos Açores (CReSAPRA), procedendo à reforma dos procedimentos de recrutamento e seleção para a Administração Regional Autónoma e Setor Público Empresarial da Região Autónoma dos Açores” (PSD/PS/CDS-PP/IL/PPM).",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3525"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-15"
+}
