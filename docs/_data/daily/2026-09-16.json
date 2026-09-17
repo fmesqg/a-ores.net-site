@@ -1,0 +1,287 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15625306,
+      "title": "Pº 416/26 EMPREITADA DE INFRAESTRUTURAS PARA A ESTAÇÃO EGNOS V3 NA ILHA DAS FLORES, AÇORES",
+      "price": "1.249.791,14 €",
+      "buyer": "NAV Portugal E.P.E.",
+      "seller": "TELCABO-TELECOMUNIC.ELECTRIC., SA",
+      "procedure": "Consulta Prévia",
+      "signing_date": "20-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15625306"
+    },
+    {
+      "id": 15625914,
+      "title": "AQUISIÇÃO DE BENS PARA A BENEFICIAÇÃO E PAVIMENTAÇÃO DO CAMINHO RURAL DE PICOS PENEDO – QUADRO COMUNITÁRIO DE APOIO – INTERVENÇÃO E.5.2 DO PEPAC CP/6/2026/DRRFOT",
+      "price": "52.943,05 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "Fábrica de Blocos Teodoro, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15625914"
+    },
+    {
+      "id": 15624487,
+      "title": "SERVIÇOS PARA A PRODUÇÃO DE CONTEÚDOS MULTIMÉDIA NO ÂMBITO DO PROJETO SIARAM – SENTIR E INTERPRETAR O AMBIENTE DOS AÇORES",
+      "price": "49.320,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "PAULO HENRIQUE GOMES DA SILVA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15624487"
+    },
+    {
+      "id": 15625295,
+      "title": "Aquisição de serviços de transporte em regime de carreira pública nas localidades a indicar pela entidade adjudicante, nos percursos para a escola e a partir da escola.",
+      "price": "28.291,26 €",
+      "buyer": "Escola Básica Integrada de Canto da Maia",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15625295"
+    },
+    {
+      "id": 15626027,
+      "title": "Aquisição de Portas e Janelas para o Museu da Lomba",
+      "price": "16.472,00 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "Manuel Martins dos Santos, Lda ",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15626027"
+    },
+    {
+      "id": 15623629,
+      "title": "Prestação de Serviços de Fiscalização e de Coordenação da Segurança, Higiene e Saúde no Trabalho da Empreitada de Reabilitação e Reconversão de Edifício Municipal Devoluto, sito na Rua de Santa Luzia,...",
+      "price": "14.950,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Engº Tavares Vieira, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15623629"
+    },
+    {
+      "id": 15624249,
+      "title": "Elaboração de Certificado Energético para os Edifícios Multifamiliares, sitos à Rua Padre Joaquim, São José - 24 Fogos (Lote 1)",
+      "price": "5.500,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Haiane Madeira - Consultoria e Projectos de Engenharia, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15624249"
+    },
+    {
+      "id": 15624267,
+      "title": "Elaboração de Certificado Energético para os Edifícios Multifamiliares sitos ao Calço da Má Cara, São Sebastião - 12 Fogos (Lote 2)",
+      "price": "3.420,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Nuno Rafael Fernandes, Unip. Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15624267"
+    },
+    {
+      "id": 15624308,
+      "title": "Elaboração de Certificado Energético para o Edifício Unifamiliar sito ao n.º 10 da Rua Major Tomás Ivens Jácome Correia, Ginetes - 1 Fogo (Lote 4)",
+      "price": "325,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Nuno Rafael Fernandes, Unip. Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15624308"
+    },
+    {
+      "id": 15624286,
+      "title": "Elaboração de Certificado Energético para o Edifício Unifamiliar, sito ao n.º 39C da 1.ª Rua de Santa Clara, Freguesia de Santa Clara - 1 Fogo (Lote 3)",
+      "price": "325,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Nuno Rafael Fernandes, Unip. Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15624286"
+    },
+    {
+      "id": 15624418,
+      "title": "SERV PA_25TN1082",
+      "price": "168,08 €",
+      "buyer": "Estado Maior da Força Aérea",
+      "seller": "COSMOS VIAGENS E TURISMO, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15624418"
+    },
+    {
+      "id": 15624519,
+      "title": "SERV PA - 139TN26",
+      "price": "168,08 €",
+      "buyer": "Estado Maior da Força Aérea",
+      "seller": "COSMOS VIAGENS E TURISMO, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15624519"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9550,
+        "title": "Aplicação das receitas da ecotaxa marítima",
+        "state_change": null,
+        "requesters": "Marlene Damião PS, ...",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9550"
+      },
+      {
+        "id": 9485,
+        "title": "Comunicação e natureza dos lançamentos de foguetões na Malbusca",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "17/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9485"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24160,
+        "title": "Comissão de Economia - Convocatória (Dia 25/09/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24160"
+      },
+      {
+        "id": 24161,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS defende que apoio à pessoa com deficiência deve evoluir de forma a promover mais autonomia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24161"
+      },
+      {
+        "id": 24162,
+        "title": "Convocatória - Período Legislativo de Outubro de 2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24162"
+      },
+      {
+        "id": 24147,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende o reforço da proteção e do bem-estar dos animais de companhia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24147"
+      },
+      {
+        "id": 24148,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - Aprovado por unanimidade pacote de medidas do PAN/Açores para o bem-estar animal",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24148"
+      },
+      {
+        "id": 24149,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Animais de companhia merecem mais proteção e bem-estar",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24149"
+      },
+      {
+        "id": 24150,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Nova comissão de recrutamento trará mais transparência e justiça à administração pública",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24150"
+      },
+      {
+        "id": 24151,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Oposição finge ignorar evidências de progresso na Educação nos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24151"
+      },
+      {
+        "id": 24152,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Começaram as aulas, mas mantêm-se os problemas na educação",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24152"
+      },
+      {
+        "id": 24153,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS/Açores defende que as gerações não se educam ao ritmo das legislaturas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24153"
+      },
+      {
+        "id": 24154,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Transportes públicos falham nos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24154"
+      },
+      {
+        "id": 24155,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Falta de professores e falhas no transporte escolar causam problemas no arranque do ano letivo",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24155"
+      },
+      {
+        "id": 24156,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo sem respostas perante os problemas nos transportes públicos em São Miguel",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24156"
+      },
+      {
+        "id": 24157,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige respostas concretas para problemas da educação nos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24157"
+      },
+      {
+        "id": 24158,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores reafirma disponibilidade para estabelecer um Pacto Social pela Educação nos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24158"
+      },
+      {
+        "id": 24159,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 25/09/2026, pelas 09:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24159"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3849,
+        "title": "Recomenda ao Governo Regional dos Açores a suspensão temporária da atribuição de novas licenças de operador de TVDE e a avaliação das necessidades de mobilidade em cada ilha",
+        "author": "CH",
+        "topic": "Transportes",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3849"
+      },
+      {
+        "id": 3850,
+        "title": "Cria o complemento Regional de Alojamento Estudantil",
+        "author": "PS",
+        "topic": "Educação",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3850"
+      },
+      {
+        "id": 3851,
+        "title": "Assegura o acesso do Município do Corvo aos programas, apoios e benefícios públicos destinados às freguesias, procedendo à décima alteração e à republicação da Lei n.º 75/2013, de 12 de setembro",
+        "author": "PPM",
+        "topic": "Administração pública regional e local",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3851"
+      },
+      {
+        "id": 3852,
+        "title": "Segunda alteração ao Decreto Regulamentar Regional n.º 24/2024/A, de 24 de dezembro, que regulamenta o Regime Jurídico de Apoios a Atividades Culturais",
+        "author": "BE - Bloco de Esquerda; BE - Bloco de Esquerda",
+        "topic": "/Cultura",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3852"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3528,
+        "title": "Intervenção da Deputada Olivéria Santos do CH - Apresentação do Debate de urgência sobre “O estado da educação nos Açores no contexto atual” (CH).",
+        "date": "16/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3528"
+      },
+      {
+        "id": 3526,
+        "title": "Intervenção do Secretário Regional das Finanças, Planeamento e Administração Pública, Duarte Freitas - Apresentação da Proposta de Decreto Legislativo Regional n.º 39/XIII – “Aprova o Quadro plurianual de programação orçamental para o período de 2027 a 2030” (GRA).",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3526"
+      },
+      {
+        "id": 3527,
+        "title": "Intervenção do Deputado Pedro Neves do PAN - Apresentação em plenário do Projeto de Resolução n.º 64/XIII – “Reforço da proteção e bem-estar do animal de companhia” (PAN).",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3527"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-16"
+}
