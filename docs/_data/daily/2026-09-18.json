@@ -1,0 +1,176 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15634278,
+      "title": "SERVIÇOS DE MONITORIZAÇÃO DA RADIOATIVIDADE NOS SOLOS DA REGIÃO AUTÓNOMA DOS AÇORES",
+      "price": "49.900,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "SÉRGIO SECO UNIPESSOAL, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15634278"
+    },
+    {
+      "id": 15634990,
+      "title": "Aquisição de Roupa Hospitalar, por lotes, para um prazo de 3 (três) anos, para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "24.640,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Moléculalinhada, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15634990"
+    },
+    {
+      "id": 15634976,
+      "title": "Aquisição, por lotes, de cinco Câmaras de Segurança Biológica (CSB) para a Unidade de Genética e Biologia Molecular do Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "16.542,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Moléculalinhada, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15634976"
+    },
+    {
+      "id": 15634680,
+      "title": "Ajuste Direto nº 10 - aquisição de serviços regulares especializados de transportes coletivo - lote nº 1 ,2,3,4,5,6,9",
+      "price": "4.906,80 €",
+      "buyer": "Escola Básica Integrada de Angra do Heroísmo",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15634680"
+    },
+    {
+      "id": 15636241,
+      "title": "Ajuste Direto nº 10 - aquisição de serviços regulares especializados de transportes coletivo - lote nº 1 ,2,3,4,5,6,9",
+      "price": "1.671,48 €",
+      "buyer": "Escola Básica Integrada de Angra do Heroísmo",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15636241"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24180,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores aponta reconversão de explorações como oportunidade para a sustentabilidade agrícola de São Jorge",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24180"
+      },
+      {
+        "id": 24181,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 23/09/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24181"
+      },
+      {
+        "id": 24182,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores realça reforço do apoio à promoção estratégica do Queijo de São Jorge DOP",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24182"
+      },
+      {
+        "id": 24183,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Melhorado acesso dos açorianos ao cheque-dentista",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24183"
+      },
+      {
+        "id": 24184,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca medidas de apoio às pescas e critica oposição por falta de propostas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24184"
+      },
+      {
+        "id": 24185,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Parlamento aprova voto de congratulação pelo cumprimento do PRR.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24185"
+      }
+    ],
+    "votos": [
+      {
+        "id": 4003,
+        "title": "Pela exclusăo da comunidade científica do Faial da cerimónia oficial de receçăo do Navio de Investigaçăo «Azores Ocean»",
+        "authors": "BE",
+        "result": "Aprovado por maioria",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4003"
+      },
+      {
+        "id": 4004,
+        "title": "25 anos de serviço de Carlos Melo",
+        "authors": "PS",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4004"
+      },
+      {
+        "id": 4005,
+        "title": "Pelo 50.ş Aniversário do Grupo Folclórico de Cantares e Balhados da Relva",
+        "authors": "PS",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4005"
+      },
+      {
+        "id": 4006,
+        "title": "150 anos do Lar Luís Soares de Sousa",
+        "authors": "PSD",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4006"
+      },
+      {
+        "id": 4007,
+        "title": "75.ş Aniversário Casa do Gaiato - Obra do Padre Américo nos Açores",
+        "authors": "PSD",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4007"
+      },
+      {
+        "id": 4008,
+        "title": "A Luís Godinho pelo reconhecimento nacional e internacional da sua trajetória artística e cultural",
+        "authors": "PSD",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4008"
+      },
+      {
+        "id": 4009,
+        "title": "25 Anos do Clube Náutico de Santa Cruz",
+        "authors": "PSD",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4009"
+      },
+      {
+        "id": 4010,
+        "title": "Pelo cumprimento dos marcos e metas do Plano de Recuperaçăo e Resilięncia e pelos resultados alcançados para famílias e empresas dos Açores",
+        "authors": "PSD",
+        "result": "Aprovado por maioria",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4010"
+      },
+      {
+        "id": 4011,
+        "title": "«First Date» de Luís Filipe Borges, distinguido com Troféu de Prata Internacional Tourism Film Festival África (ITFFA)",
+        "authors": "PSD",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4011"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3534,
+        "title": "Intervenção da Deputada Hélia Cardoso do CH  -  Apresentação em Plenário do Projeto de Decreto Legislativo Regional nº 74/XIII – “Primeira alteração ao Decreto Legislativo Regional n.º 18/2025/A, de 14 de julho de 2025, que cria o cheque-dentista” (CH).",
+        "date": "17/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3534"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3440,
+        "title": "Reforça a proteção dos produtores e impede a destruição de valor na cadeia agroalimentar, procedendo à sétima alteração ao Decreto-Lei n.º 166/2013, de 27 de dezembro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3440"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-18"
+}
