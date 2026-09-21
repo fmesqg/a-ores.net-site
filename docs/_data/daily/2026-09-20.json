@@ -1,0 +1,44 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9489,
+        "title": "Bombeiros deixam de assegurar o serviço nos aeroportos da Região concessionados à ANA/VINCI",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Inês Sá PS, ...",
+        "date": "19/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9489"
+      },
+      {
+        "id": 9490,
+        "title": "Atrasos no transporte marítimo de mercadorias para Santa Maria e garantia de um serviço público regular, fiável e previsível",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "20/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9490"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24186,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Luís Garcia defende um novo ciclo da Autonomia, com uma economia mais forte, baseada no conhecimento e na inovação",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24186"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-20"
+}
