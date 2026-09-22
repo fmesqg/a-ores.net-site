@@ -1,0 +1,281 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15640462,
+      "title": "Aquisição de Contadores Bidirecionais e Totalizados com Funções de Telecontagem da EDA – ELECTRICIDADE DOS AÇORES",
+      "price": "625.271,00 €",
+      "buyer": "EDA - Electricidade dos Açores, SA",
+      "seller": "ISKRAEMECO BENELUX NV.,",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15640462"
+    },
+    {
+      "id": 15638124,
+      "title": "EOP reparações diversas na Esquadra de Vila Franca Campo",
+      "price": "357.285,13 €",
+      "buyer": "Polícia de Segurança Pública",
+      "seller": "Caetano & Medeiros Sociedade de Construção Imobiliária Lda",
+      "procedure": "Concurso público",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15638124"
+    },
+    {
+      "id": 15644318,
+      "title": "Objeto principal é a aquisição de serviços para o desenvolvimento, implementação e operacionalização de uma campanha turística integrada para época baixa, na Região Autónoma dos Açores, nomeadamente i...",
+      "price": "64.000,00 €",
+      "buyer": "Câmara do Comércio e Indústria de Angra do Heroísmo",
+      "seller": "New Tour – Azores, S.A",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15644318"
+    },
+    {
+      "id": 15643989,
+      "title": "AJUSTE DIRETO PARA AQUISIÇÃO REFEIÇÕES - SETEMBRO A DEZEMBRO DE 2026",
+      "price": "47.832,56 €",
+      "buyer": "Escola Básica e Secundária de São Roque do Pico",
+      "seller": "Paulo Soares Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15643989"
+    },
+    {
+      "id": 15642235,
+      "title": "Serviços de Técnicos Auxiliares de Saúde do Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "price": "45.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "António Manuel da Costa Silva",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15642235"
+    },
+    {
+      "id": 15637877,
+      "title": "Aquisição de Roupa Hospitalar, por lotes, para um prazo de 3 (três) anos, para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "31.000,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Traçados &amp; Silhuetas, Unipessoal, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15637877"
+    },
+    {
+      "id": 15642389,
+      "title": "Aquisição de gás hélio para sistemas de radiossondagem de Lisboa, Lajes e Funchal",
+      "price": "19.585,45 €",
+      "buyer": "Instituto Português do Mar e da Atmosfera, IP",
+      "seller": "SOCIEDADE PORTUGUESA DO AR LÍQUIDO ",
+      "procedure": "Consulta Prévia",
+      "signing_date": "07-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15642389"
+    },
+    {
+      "id": 15637764,
+      "title": "Aquisição dos serviços de revisão legal de contas, para certificação legal das contas da ALRAA",
+      "price": "18.000,00 €",
+      "buyer": "Assembleia Legislativa da Região Autónoma dos Açores",
+      "seller": "R. Cordeiro & Associado, SROC, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15637764"
+    },
+    {
+      "id": 15637317,
+      "title": "AJUSTE DIRECTO CONTRATO DE PRESTAÇÃO DE SERVIÇOS PARA AUDITOR EXTERNO DO MUNICÍPIO",
+      "price": "12.500,00 €",
+      "buyer": "Município da Povoação",
+      "seller": "Velosa, Silva, Marques e Trabulo, SROC",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15637317"
+    },
+    {
+      "id": 15642193,
+      "title": "Apoio técnico-logístico às atividades de campo e de laboratório previstas no WP2",
+      "price": "7.750,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Ana Mafalda da Silva e Sousa",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15642193"
+    },
+    {
+      "id": 15643977,
+      "title": "Ajuste Direto nº 10 - aquisição de serviços regulares especializados de transportes coletivo - lote nº 1 ,2,3,4,5,6,9",
+      "price": "5.544,00 €",
+      "buyer": "Escola Básica Integrada de Angra do Heroísmo",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15643977"
+    },
+    {
+      "id": 15645154,
+      "title": "Ajuste Direto nº 10 - aquisição de serviços regulares especializados de transportes coletivo - lote nº 1 ,2,3,4,5,6,9",
+      "price": "2.520,36 €",
+      "buyer": "Escola Básica Integrada de Angra do Heroísmo",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15645154"
+    },
+    {
+      "id": 15644815,
+      "title": "Ajuste Direto nº 10 - aquisição de serviços regulares especializados de transportes coletivo - lote nº 1 ,2,3,4,5,6,9",
+      "price": "2.380,00 €",
+      "buyer": "Escola Básica Integrada de Angra do Heroísmo",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15644815"
+    },
+    {
+      "id": 15644461,
+      "title": "Ajuste Direto nº 10 - aquisição de serviços regulares especializados de transportes coletivo - lote nº 1 ,2,3,4,5,6,9",
+      "price": "800,64 €",
+      "buyer": "Escola Básica Integrada de Angra do Heroísmo",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15644461"
+    },
+    {
+      "id": 15644683,
+      "title": "Ajuste Direto nº 10 - aquisição de serviços regulares especializados de transportes coletivo - lote nº 1 ,2,3,4,5,6,9",
+      "price": "300,00 €",
+      "buyer": "Escola Básica Integrada de Angra do Heroísmo",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15644683"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9552,
+        "title": "Estudo sobre o impacto dos manuais digitais no sistema educativo regional",
+        "state_change": null,
+        "requesters": "José Eduardo PS, ...",
+        "date": "17/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9552"
+      },
+      {
+        "id": 9553,
+        "title": "Execução do PEPAC nos Açores",
+        "state_change": null,
+        "requesters": "Russell Sousa PS, ...",
+        "date": "18/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9553"
+      },
+      {
+        "id": 9555,
+        "title": "Pescadores Graciosenses sem gelo a partir de hoje",
+        "state_change": null,
+        "requesters": "José Ávila PS, ...",
+        "date": "17/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9555"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24187,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Parlamento vai analisar proposta do CHEGA para suspender temporariamente licenças de TVDE nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24187"
+      },
+      {
+        "id": 24188,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 23/09/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24188"
+      },
+      {
+        "id": 24189,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 23/09/2026, pelas 10:00 horas) - 2.ª alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24189"
+      }
+    ],
+    "votos": [
+      {
+        "id": 4013,
+        "title": "Ŕ atleta Irina Rodrigues pela conquista da Medalha de Ouro nos Jogos do Mediterrâneo Taranto 2026",
+        "authors": "CH",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4013"
+      },
+      {
+        "id": 4014,
+        "title": "Ao nadador Carlos Pedrosa, pela conquista de dois títulos de Campeăo Europeu de Masters",
+        "authors": "CH",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4014"
+      },
+      {
+        "id": 4016,
+        "title": "Aos atletas Marta Magalhăes e Martim Sousa pela conquista do título de campeőes nacionais de Ténis de Praia em pares mistos",
+        "authors": "CH",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4016"
+      },
+      {
+        "id": 4017,
+        "title": "Ao atleta Nuno Virgílio, pela conquista do título de Campeăo Nacional de Parapente 2026",
+        "authors": "CH",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4017"
+      },
+      {
+        "id": 4018,
+        "title": "Pelo falecimento de Jorge Barros",
+        "authors": "PPM",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4018"
+      },
+      {
+        "id": 4019,
+        "title": "Pelo falecimento do Juiz Conselheiro Manuel Tomé Soares Gomes",
+        "authors": "PSD",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4019"
+      },
+      {
+        "id": 4021,
+        "title": "Pelo falecimento do Juiz Conselheiro Manuel Tomé Soares Gomes",
+        "authors": "PS",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4021"
+      },
+      {
+        "id": 4024,
+        "title": "Pelo falecimento de José da Cunha Bettencourt",
+        "authors": "PSD",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4024"
+      },
+      {
+        "id": 4026,
+        "title": "Pelo falecimento do Padre Abílio de Morais",
+        "authors": "PS",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4026"
+      }
+    ],
+    "peticoes": [
+      {
+        "id": 1049,
+        "title": "Criação de um apoio plurianual institucional e financeiro",
+        "author": "Filipe Emanuel Alvernaz de Melo Amaral",
+        "state": "Em processo de admissão",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/6/1049"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-21"
+}
