@@ -1,0 +1,137 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15650077,
+      "title": "Aquisição de Serviços de Transportes em Regime de Carreira Pública",
+      "price": "99.965,20 €",
+      "buyer": "Escola Básica e Secundária de Santa Maria",
+      "seller": "EASYAZORES, UNIPESSOAL, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15650077"
+    },
+    {
+      "id": 15650477,
+      "title": "Aquisição de serviços Microsoft Unified, no âmbito de apoio técnico especializado à caracterização, reforço da segurança e modernização do ambiente Microsoft do Hospital Divino Espírito Santo de Ponta...",
+      "price": "35.820,41 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "CLARANET PORTUGAL, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15650477"
+    },
+    {
+      "id": 15647853,
+      "title": "Aquisição de mobiliário urbano, nomeadamente bancos, papeleiras e floreiras",
+      "price": "33.796,25 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "Bricantel - Comércio de Material Eléctrico de Bragança, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15647853"
+    },
+    {
+      "id": 15649551,
+      "title": "Aquisição de dois servidores de armazenamento centralizado NAS (Network-Attached Storage) e de uma workstation, ou equivalente, destinados a integrar a infraestrutura informática do OKEANOS - Institut...",
+      "price": "23.266,55 €",
+      "buyer": "Fundação Gaspar Frutuoso, FP",
+      "seller": "PCDIGA, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15649551"
+    },
+    {
+      "id": 15652490,
+      "title": "AQUISIÇÃO DE MATERIAL DE REALOJAMENTO PARA O SERVIÇO MUNICIPAL DE PROTEÇÃO CIVIL DE SANTA CRUZ DA GRACIOSA",
+      "price": "5.717,50 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "Clamix - Comércio de Vestuário, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "19-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15652490"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24192,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo regional não cumpre legislação do Sistema Elétrico Regional, denuncia PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24192"
+      },
+      {
+        "id": 24193,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - IL denuncia atrasos nos pagamentos do Loja+ -  Nuno Barata exige saber quanto o Governo deve aos empresários.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24193"
+      },
+      {
+        "id": 24190,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS pede intervenção urgente do Governo Regionalpara corrigir situação das famílias da Creche de Santo Antão.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24190"
+      },
+      {
+        "id": 24191,
+        "title": "Nota Informativa da Presidência da ALRAA - Assembleia Legislativa participa no LegisTech Forum 2026 em Washington",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24191"
+      }
+    ],
+    "votos": [
+      {
+        "id": 4028,
+        "title": "Pelo falecimento de José da Cunha Bettencourt",
+        "authors": "PS",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4028"
+      },
+      {
+        "id": 4029,
+        "title": "Pelo falecimento do Juiz Conselheiro Manuel Tomé Soares Gomes",
+        "authors": "CDS-PP • PPM • BE • IL • PAN",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4029"
+      },
+      {
+        "id": 4030,
+        "title": "Pelo falecimento de Fernando Menezes",
+        "authors": "PSD • PS • CH • CDS-PP • PPM • BE • IL • PAN",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4030"
+      },
+      {
+        "id": 4031,
+        "title": "Pelo falecimento de Barney Frank",
+        "authors": "PSD • PS",
+        "result": "Aprovado por unanimidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/1/4031"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3853,
+        "title": "Primeira alteração ao Decreto Legislativo Regional n.º 24/2022/A, de 20 de outubro, que adapta o Estatuto do Antigo Combatente à Região Autónoma dos Açores",
+        "author": "PSD; CDS-PP",
+        "topic": "Solidariedade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3853"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3441,
+        "title": "Estabelece o regime jurídico do associativismo jovem",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3441"
+      },
+      {
+        "id": 3442,
+        "title": "Altera a Lei n.º 151/2015, de 11 de setembro e a Lei de Enquadramento Orçamental, aprovada em anexo à mesma Lei n.º 151/2015, de 11 de setembro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3442"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-22"
+}
