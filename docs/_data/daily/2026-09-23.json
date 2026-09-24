@@ -1,0 +1,231 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15657015,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE MANOBRADORES DE EQUIPAMENTOS PORTUÁRIOS PARA O PORTO DE PRAIA DA VITÓRIA",
+      "price": "74.600,00 €",
+      "buyer": "Portos dos Açores, SA",
+      "seller": "OPERTERCEIRA - Sociedade de Operações Portuárias da Praia da Vitória, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15657015"
+    },
+    {
+      "id": 15658706,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE MANOBRADORES DE EQUIPAMENTOS PORTUÁRIOS PARA O PORTO DE PONTA DELGADA",
+      "price": "74.600,00 €",
+      "buyer": "Portos dos Açores, SA",
+      "seller": "OPERPDL, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15658706"
+    },
+    {
+      "id": 15659128,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE MANOBRADORES DE EQUIPAMENTOS PORTUÁRIOS PARA O PORTO DA HORTA.",
+      "price": "74.600,00 €",
+      "buyer": "Portos dos Açores, SA",
+      "seller": "OPERTRI, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15659128"
+    },
+    {
+      "id": 15659682,
+      "title": "\"AQUISIÇÃO DE SERVIÇOS PARA VALIDAÇÃO, ADAPTAÇÃO E ELABORAÇÃO DE CONTEÚDOS E FERRAMENTAS DIDÁTICAS, NO ÂMBITO DO PROJETO MAC-IDAFE_2CAP (Rede de Escolas pela Ação Climática da Macaronésia\"",
+      "price": "42.500,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "3 DRIVERS - ENGENHARIA, INOVAÇÃO E AMBIENTE, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15659682"
+    },
+    {
+      "id": 15659846,
+      "title": "Aquisição de serviços de manutenção Leica para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "37.641,72 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Leica Microsistemas Instrumentos de Precisão SU,Ld",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15659846"
+    },
+    {
+      "id": 15659902,
+      "title": "Aquisição de serviços de integração de software CUSP, PPAP e GAP com a plataforma municipal Wire Maze Cityfy",
+      "price": "30.000,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Wire - Maze - Sistema de informação, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15659902"
+    },
+    {
+      "id": 15657043,
+      "title": "Prestação de Serviços de Atualização e Manutenção da Página Web Institucional do Município da Ribeira Grande",
+      "price": "21.226,21 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Wire - Maze - Sistema de informação, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15657043"
+    },
+    {
+      "id": 15660203,
+      "title": "Prestação de serviços na área da Comunicação e Imagem, apoio à organização de eventos e outros serviços, do Município de Santa Cruz da Graciosa",
+      "price": "18.000,00 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "Sixty Two Square",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15660203"
+    },
+    {
+      "id": 15660142,
+      "title": "Prestação de serviços de limpeza nas lojas da RIAC, sitas nas Ilhas de São Miguel, Pico, Terceira e Flores",
+      "price": "17.656,94 €",
+      "buyer": "Agência para a Modernização Administrativa e Qualidade do Serviço ao Cidadão - RIAC",
+      "seller": "SAMSIC PORTUGAL - FACILITY SERVICES, S.A .",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15660142"
+    },
+    {
+      "id": 15657013,
+      "title": "Aquisição de Material de Escritório",
+      "price": "17.083,56 €",
+      "buyer": "Agência para a Modernização Administrativa e Qualidade do Serviço ao Cidadão - RIAC",
+      "seller": "Escritório Digital, representações, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15657013"
+    },
+    {
+      "id": 15657038,
+      "title": "Serviço desinfestação geral e desratização controlo integrado de roedores em todo o edifício da sede da RIAC.",
+      "price": "800,00 €",
+      "buyer": "Agência para a Modernização Administrativa e Qualidade do Serviço ao Cidadão - RIAC",
+      "seller": "Cota Nunes  Silva",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15657038"
+    },
+    {
+      "id": 15657022,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE GRUPO DE DANÇA PARA A REALIZAÇÃO DE ESPETÁCULO NA SEMANA DO MAR 2026",
+      "price": "214,66 €",
+      "buyer": "Município da Horta",
+      "seller": "CORPUSEVEN HEALTH CLUB UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15657022"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9494,
+        "title": "Segurança e acessibilidade à Ribeira dos Caldeirões",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "21/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9494"
+      },
+      {
+        "id": 9558,
+        "title": "Evolução do consumo de gasóleo agrícola",
+        "state_change": null,
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "18/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9558"
+      },
+      {
+        "id": 9559,
+        "title": "Centro Social e Paroquial de Santo Antão - Creche, enquadramento das respostas sociais e conclusão do novo Centro Intergeracional",
+        "state_change": null,
+        "requesters": "Luís Silveira CDS-PP, ...",
+        "date": "21/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9559"
+      },
+      {
+        "id": 9492,
+        "title": "Habitação no Nordeste e terreno na freguesia da Salga",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "21/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9492"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24194,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia apresenta cumprimentos à Senhora Presidente da Câmara Municipal de Santa Cruz das Flores, nos Paços do Concelho.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24194"
+      },
+      {
+        "id": 24195,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia visita a Associação Humanitária dos Bombeiros Voluntários de Santa Cruz das Flores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24195"
+      },
+      {
+        "id": 24196,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Agência Fitch destaca 219 milhões deixados nas famílias e empresas açorianas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24196"
+      },
+      {
+        "id": 24197,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo regional falha entrega de relatório de avaliação sobre atividade de TVDE nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24197"
+      },
+      {
+        "id": 24198,
+        "title": "Comissão de Economia - Convocatória (Dia 25/09/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24198"
+      },
+      {
+        "id": 24199,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na receção a Sua Excelência a Embaixadora da Grécia em Portugal, Konstantina Kamitsi, a convite do Cônsul Honorário da Grécia nos Açores, António Costa Santos, na residência deste em Ponta Delgada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24199"
+      },
+      {
+        "id": 24200,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa nas comemorações do Dia Nacional da Sustentabilidade, com o lançamento do Portal da Sustentabilidade da Assembleia Legislativa da Região Autónoma dos Açores que inlcuirá a plantação de uma árvore Prunus Azorica, nos jardins da sede do parlamento.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24200"
+      },
+      {
+        "id": 24201,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia reúne com Helder Pereira, um dos fundadores do projeto Sleep HAIbeat - Gabinete de Fisiologia Clínica, na Incumbadora de Empresas em Santa Cruz. das Flores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24201"
+      },
+      {
+        "id": 24202,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco quer saber que empresas apresentaram propostas para a privatização da SATA e aponta falta de transparência.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24202"
+      },
+      {
+        "id": 24203,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Agravamento do défice dos Açores para 305,5 milhões contradiz narrativa de \"solidez financeira\" do Governo Regional, afirma PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24203"
+      },
+      {
+        "id": 24204,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores saúda compromissos assumidos pelo Governo para a Graciosa.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24204"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-23"
+}
