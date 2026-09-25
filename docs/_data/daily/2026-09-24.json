@@ -1,0 +1,400 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15663540,
+      "title": "Aquisição de Viaturas Ligeiras para as Ilhas de São Miguel, Terceira, Graciosa, São Jorge, Pico, Faial e Flores",
+      "price": "258.308,16 €",
+      "buyer": "Lotaçor - Serviço de Lotas dos Açores, SA",
+      "seller": "Sotermáquinas SA",
+      "procedure": "Concurso público",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15663540"
+    },
+    {
+      "id": 15663345,
+      "title": "serviços médicos de imagiologia ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Elisabette Alves Ultrassonografia Médica, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15663345"
+    },
+    {
+      "id": 15664563,
+      "title": "AQUISIÇÃO DE LICENÇA DE MANUTENÇÃO DE TODAS AS COMPONENTES DO SOFTWARE GNSS SPIDER",
+      "price": "56.700,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "LEICA GEOSYSTEMS, LDA., SIST. GEODESIA E TOPOGRAFIA S.U.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664563"
+    },
+    {
+      "id": 15667384,
+      "title": "Serviços de consultoria no âmbito da preparação dos Instrumentos de Planeamento da Região Autónoma dos Açores para 2027.",
+      "price": "50.000,00 €",
+      "buyer": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "seller": "Ernst & Young, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15667384"
+    },
+    {
+      "id": 15666426,
+      "title": "Ajuste Direto n.º 2/2026/RI - Carreira Pública",
+      "price": "43.434,08 €",
+      "buyer": "Escola Básica Integrada de Roberto Ivens",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15666426"
+    },
+    {
+      "id": 15668256,
+      "title": "AQUISIÇÃO DE SERVIÇOS PARA ESPETÁCULO MUSICAL\n“ROUPA NOVA”",
+      "price": "40.000,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "Full Service Eventos & Locações Ltda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15668256"
+    },
+    {
+      "id": 15664415,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "38.052,74 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Sá Limpa – Facility Services, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664415"
+    },
+    {
+      "id": 15664437,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "32.042,88 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664437"
+    },
+    {
+      "id": 15667260,
+      "title": "Serviço de manutenção, suporte técnico e evolução da aplicação RIAC E-Platform, Assistência Local nas Lojas de Atendimento, Assessoria ao ERP Primavera e Regime de continuidade PRIMAVERA.",
+      "price": "26.356,00 €",
+      "buyer": "Agência para a Modernização Administrativa e Qualidade do Serviço ao Cidadão - RIAC",
+      "seller": "WEBA - Gestão e tecnologias de informação, lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15667260"
+    },
+    {
+      "id": 15664427,
+      "title": "Fornecimento de Manuais Escolares para o ano letivo de 2026/2027, à Escola Básica Integrada Canto da Maia.",
+      "price": "25.878,09 €",
+      "buyer": "Escola Básica Integrada de Canto da Maia",
+      "seller": "plano a papelaria",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664427"
+    },
+    {
+      "id": 15664397,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "25.368,49 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Sá Limpa – Facility Services, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664397"
+    },
+    {
+      "id": 15663719,
+      "title": "Aquisição de Viaturas Ligeiras para as Ilhas de São Miguel, Terceira, Graciosa, São Jorge, Pico, Faial e Flores",
+      "price": "21.932,10 €",
+      "buyer": "Lotaçor - Serviço de Lotas dos Açores, SA",
+      "seller": "Sotermáquinas SA",
+      "procedure": "Concurso público",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15663719"
+    },
+    {
+      "id": 15668242,
+      "title": "AQUISIÇÃO DE SERVIÇOS PARA ESPETÁCULO MUSICAL\n\"BAIÃO DE OXIGÉNIO\"",
+      "price": "21.500,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "B. Produções Arte e Espectáculo Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15668242"
+    },
+    {
+      "id": 15664430,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "21.361,68 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664430"
+    },
+    {
+      "id": 15664457,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "21.361,68 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664457"
+    },
+    {
+      "id": 15664423,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "21.361,68 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664423"
+    },
+    {
+      "id": 15663983,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "16.848,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15663983"
+    },
+    {
+      "id": 15664176,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "16.021,44 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664176"
+    },
+    {
+      "id": 15664360,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "12.684,25 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Sá Limpa – Facility Services, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664360"
+    },
+    {
+      "id": 15664409,
+      "title": "Aquisição de serviços de limpeza e higienização de centros de atividades de tempos livres (ATL)",
+      "price": "12.684,25 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Sá Limpa – Facility Services, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15664409"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9561,
+        "title": "Regulamentação do Sistema Elétrico dos Açores - incumprimento do prazo legal",
+        "state_change": null,
+        "requesters": "Russell Sousa PS, ...",
+        "date": "22/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9561"
+      },
+      {
+        "id": 9562,
+        "title": "Atrasos no pagamento dos apoios atribuídos no âmbito do Programa Loja+",
+        "state_change": null,
+        "requesters": "Nuno Barata IL",
+        "date": "22/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9562"
+      },
+      {
+        "id": 9563,
+        "title": "Incapacidade temporária para o trabalho na Região Autónoma dos Açores - organização, acompanhamento, verificação e articulação dos sistemas",
+        "state_change": null,
+        "requesters": "João Mendonça PPM",
+        "date": "23/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9563"
+      },
+      {
+        "id": 9564,
+        "title": "Avaliação do regime jurídico da atividade TVDE na Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "Marlene Damião PS, ...",
+        "date": "23/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9564"
+      },
+      {
+        "id": 9565,
+        "title": "Necessidades de recrutamento de enfermeiros e Técnicos Auxiliares de Saúde nos hospitais do Serviço Regional de Saúde",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "23/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9565"
+      },
+      {
+        "id": 9566,
+        "title": "Processo de privatização da SATA Internacional - Azores Airlines",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "24/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9566"
+      },
+      {
+        "id": 9567,
+        "title": "Impacto, na Região Autónoma dos Açores, da redução do IRS anunciada pelo Governo da República",
+        "state_change": null,
+        "requesters": "Sandra Costa Dias PS, ...",
+        "date": "24/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9567"
+      },
+      {
+        "id": 9496,
+        "title": "Falhas na Plataforma de reembolso no subsídio social de mobilidade prejudicam os açorianos",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9496"
+      },
+      {
+        "id": 9498,
+        "title": "Segunda fase da ligação Furnas-Povoação",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9498"
+      },
+      {
+        "id": 9500,
+        "title": "Melhoria da ligação rodoviária Ponta Delgada-Mosteiros",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9500"
+      },
+      {
+        "id": 9502,
+        "title": "Rendas Sociais em atraso - esclarecimentos adicionais",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9502"
+      },
+      {
+        "id": 9504,
+        "title": "Estratégia do Governo Regional para o Turismo dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9504"
+      },
+      {
+        "id": 9506,
+        "title": "Transporte escolar na ilha de São Miguel no ano letivo 2026/2027",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "25/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9506"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24205,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Açorianos exigem saber quem são as empresas que concorrem à privatização da Azores Airlines.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24205"
+      },
+      {
+        "id": 24206,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 29/09/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24206"
+      },
+      {
+        "id": 24207,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 29/09/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24207"
+      },
+      {
+        "id": 24208,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - Bem-estar animal reúne PAN/A e autarquia da Ribeira Grande.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24208"
+      },
+      {
+        "id": 24209,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Reação ao Governo sobre TVDE: Governo Regional não pode substituir prazo previsto na lei para avaliação dos TVDE.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24209"
+      },
+      {
+        "id": 24210,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo deve milhões de euros do programa SOLENERGE a empresas açorianas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24210"
+      },
+      {
+        "id": 24211,
+        "title": "Comissão de Economia - Convocatória (Dia 30/09/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24211"
+      },
+      {
+        "id": 24212,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na Eucaristia Solene e Solene Procissão em honra do Padroeiro São Mateus Apóstolo e Evangelista, na freguesia da Ribeirinha, ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24212"
+      },
+      {
+        "id": 24213,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia assiste ao jogo do Campeonato da Europa Sub-21 2027, entre a Seleção Nacional Sub-21 e a sua congénere de Gibraltar, a convite da Federação Portuguesa de Futebol, no Estádio de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24213"
+      },
+      {
+        "id": 24214,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Sessão de Abertura do 7.º aniversário da Ordem dos Fisioterapeutas, no Anfitiatro VIII da Universidade dos Açores, ilha de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24214"
+      },
+      {
+        "id": 24215,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia promove a apresentação pública da obra \"Autonomia dos Açores -  50 Anos de História\", no Auditório do Centro Cultural de Vila Franca do Campo, na ilha de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24215"
+      },
+      {
+        "id": 24216,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia apresenta cumprimentos à Senhora Presidente da Câmara Municipal de Vila Franca do Campo, nos Paços do Concelho, ilha de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24216"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-24"
+}
