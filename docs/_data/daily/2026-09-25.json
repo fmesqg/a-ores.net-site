@@ -1,0 +1,296 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15678145,
+      "title": "Empreitada de Conservação, Alteração e Ampliação do Centro de Ciência Viva da SIBIL – Criação do Centro de Investigação e Ciências do Mar – Casa do Cientista III",
+      "price": "299.688,99 €",
+      "buyer": "Município das Lajes do Pico",
+      "seller": "Ivo Sequeira Lima, Unipessoal",
+      "procedure": "Concurso público",
+      "signing_date": "25-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15678145"
+    },
+    {
+      "id": 15675937,
+      "title": "Aquisição de Transportes Escolares em carreira pública para o ano escolar de 2026-2027",
+      "price": "251.925,97 €",
+      "buyer": "Escola Secundária Antero de Quental",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15675937"
+    },
+    {
+      "id": 15675512,
+      "title": "O presente contrato tem por objeto o fornecimento contínuo na quantidade estimada de 62.000 (sessenta e oito mil) litros de gasóleo rodoviário simples e 3.500 (três mil e quinhentos) litros de gasolin...",
+      "price": "103.264,50 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "GALP AÇORES, UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "24-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15675512"
+    },
+    {
+      "id": 15678672,
+      "title": "AJUSTE DIRETO N.º 6/EBSTB/2026 EM FUNÇÃO DE CRITÉRIOS MATERIAIS COM CONVITE A APENAS UMA ENTIDADE - AQUISIÇÃO DE SERVIÇOS DE TRANSPORTE EM REGIME DE CARREIRA PÚBLICA PARA A ESCOLA BÁSICA E SECUNDÁRIA ...",
+      "price": "54.420,84 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "MOBI AZORES - MOBILIDADE E TURISMO, lDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15678672"
+    },
+    {
+      "id": 15678857,
+      "title": "Aq.serviços de org. e realização do projeto \"A Garota Não\" da PDL26 - Capital Portuguesa da Cultura",
+      "price": "43.630,00 €",
+      "buyer": "Câmara Municipal de Ponta Delgada",
+      "seller": "DIFERENTES RITMOS, PRODUTORES ASSOCIADOS DE ESPECTÁCULOS E EVENTOS, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15678857"
+    },
+    {
+      "id": 15676514,
+      "title": "O presente Contrato tem como objeto a prestação do serviço de aluguer de maquinaria externa para a ilha de São Miguel, concelhos de Vila Franca do Campo, Lagoa, Ribeira Grande e Ponta Delgada, para li...",
+      "price": "40.586,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "ALMÉRIO E CORDEIRO Cª. LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15676514"
+    },
+    {
+      "id": 15676446,
+      "title": "Prestação de serviços de transporte aéreo e de alojamento",
+      "price": "38.040,50 €",
+      "buyer": "Secretaria Regional dos Assuntos Parlamentares e Comunidades",
+      "seller": "ZENITRAVEL - VIAGENS E TURISMO",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15676446"
+    },
+    {
+      "id": 15676649,
+      "title": "O presente Contrato tem como objeto a prestação do serviço de aluguer de maquinaria externa para a ilha do Pico, para limpeza de bacias de retenção, reperfilamentos de cursos de água e apoio de emergê...",
+      "price": "34.500,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "BLOCOLAJES-SOCIEDADE DE CONSTRUÇOES E INVESTIMENTOS, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15676649"
+    },
+    {
+      "id": 15676502,
+      "title": "O presente Contrato tem como objeto a prestação do serviço de aluguer de maquinaria externa para a ilha de São Miguel, concelhos de Povoação e Nordeste, para limpeza de bacias de retenção, reperfilame...",
+      "price": "34.469,16 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "ALMÉRIO E CORDEIRO Cª. LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15676502"
+    },
+    {
+      "id": 15673667,
+      "title": "Aquisição de plataforma elevatória incluindo montagem da mesma e desmontagem da existente com transporte a vazadouro autorizado.",
+      "price": "34.443,00 €",
+      "buyer": "Instituto dos Registos e do Notariado, IP",
+      "seller": "Alartécnica, Limitada",
+      "procedure": "Consulta Prévia",
+      "signing_date": "25-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15673667"
+    },
+    {
+      "id": 15679125,
+      "title": "AQUISIÇÃO DE MOBILIÁRIO ESCOLAR PARA A EB1/JI DE FENAIS DA LUZ, INTEGRADA NA EBI DE CAPELAS, ILHA DE SÃO MIGUEL, AÇORES",
+      "price": "30.704,36 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Mobioffice, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15679125"
+    },
+    {
+      "id": 15670556,
+      "title": "Fornecimento de 200 M3 de Betão C16/20",
+      "price": "21.000,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Tecnovia Açores, Sociedade de Empreitadas, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15670556"
+    },
+    {
+      "id": 15679486,
+      "title": "REQUALIFICAÇÃO DO PARQUE INFANTIL DAS ESCOLAS PRIMÁRIAS DE SANTA CRUZ, LUZ E SÃO MATEUS (PRAIA)",
+      "price": "15.183,34 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "ERGOPARK, LDA",
+      "procedure": "Consulta Prévia",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15679486"
+    },
+    {
+      "id": 15676463,
+      "title": "AJUSTE DIRETO - AQUISIÇÃO DE SERVIÇOS REGULARES ESPECIALIZADOS DE TRANSPORTES COLETIVOS - ANO LETIVO 2026-2027",
+      "price": "10.786,68 €",
+      "buyer": "Escola Secundária Antero de Quental",
+      "seller": "Os Bambinos- Transportes Personalizados Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15676463"
+    },
+    {
+      "id": 15678876,
+      "title": "Aquisição de Serviços especializados de Transporte Coletivo- Setembro e Outubro de 2026",
+      "price": "8.215,00 €",
+      "buyer": "Escola Secundária Manuel de Arriaga, Horta",
+      "seller": "Farias, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15678876"
+    },
+    {
+      "id": 15678935,
+      "title": "Aquisição de Serviços especializados de Transporte Coletivo- Setembro e Outubro de 2026",
+      "price": "8.215,00 €",
+      "buyer": "Escola Secundária Manuel de Arriaga, Horta",
+      "seller": "Farias, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15678935"
+    },
+    {
+      "id": 15678960,
+      "title": "Aquisição de Serviços especializados de Transporte Coletivo- Setembro e Outubro de 2026",
+      "price": "8.215,00 €",
+      "buyer": "Escola Secundária Manuel de Arriaga, Horta",
+      "seller": "Farias, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15678960"
+    },
+    {
+      "id": 15678998,
+      "title": "Aquisição de Serviços especializados de Transporte Coletivo- Setembro e Outubro de 2026",
+      "price": "8.215,00 €",
+      "buyer": "Escola Secundária Manuel de Arriaga, Horta",
+      "seller": "Farias, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15678998"
+    },
+    {
+      "id": 15676498,
+      "title": "AJUSTE DIRETO - AQUISIÇÃO DE SERVIÇOS REGULARES ESPECIALIZADOS DE TRANSPORTES COLETIVOS - ANO LETIVO 2026-2027",
+      "price": "7.470,00 €",
+      "buyer": "Escola Secundária Antero de Quental",
+      "seller": "Detalhalecrim, Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15676498"
+    },
+    {
+      "id": 15676496,
+      "title": "AJUSTE DIRETO - AQUISIÇÃO DE SERVIÇOS REGULARES ESPECIALIZADOS DE TRANSPORTES COLETIVOS - ANO LETIVO 2026-2027",
+      "price": "5.252,24 €",
+      "buyer": "Escola Secundária Antero de Quental",
+      "seller": "Detalhalecrim, Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15676496"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9569,
+        "title": "Pagamentos em atraso no âmbito do SOLENERGE",
+        "state_change": null,
+        "requesters": "Russell Sousa PS, ...",
+        "date": "24/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9569"
+      },
+      {
+        "id": 9508,
+        "title": "Preços das passagens aéreas entre os Açores e o Continente",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "25/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9508"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24217,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA chama ministro da agricultura à comissão para explicar porque não foram pagos os 23 milhões de euros aos agricultores açorianos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24217"
+      },
+      {
+        "id": 24218,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Luís Garcia em visita às Flores: \"A Autonomia permitiu construir uma Proteção Civil robusta e geradora de confiança\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24218"
+      },
+      {
+        "id": 24219,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores exige aplicação justa das compensações aos pescadores afetados pela implementação das áreas marinhas protegidas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24219"
+      },
+      {
+        "id": 24220,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores questiona Governo Regional sobre custos e modelo de operação do novo navio de investigação científica.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24220"
+      },
+      {
+        "id": 24221,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS/Açores congratula-se com avanço para recuperar a Espalamaca e devolvê-la ao mar.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24221"
+      },
+      {
+        "id": 24222,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 01/10/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24222"
+      },
+      {
+        "id": 24223,
+        "title": "Comissão Política Geral - Convocatória (Dia 01/10/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24223"
+      }
+    ],
+    "audi_gr": [
+      {
+        "id": 3443,
+        "title": "f",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/2/3443"
+      },
+      {
+        "id": 3444,
+        "title": "f",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/2/3444"
+      },
+      {
+        "id": 3445,
+        "title": "Altera o Decreto-Lei n.º 93/2018, de 13 de novembro, que estabelece o regime jurídico da náutica de recreio - MAGRIM - (Reg. DL 314/XXV/2026)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/2/3445"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3446,
+        "title": "Reforça e uniformiza o quadro de comando dos corpos de bombeiros profissionais - Altera o DL 106 n.º 106/2002",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3446"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-25"
+}
