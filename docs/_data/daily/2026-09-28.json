@@ -1,0 +1,240 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15694268,
+      "title": "Fornecimento de reagentes e consumíveis para técnicas de imunohistoquímica, com colocação gratuita de equipamento, em regime de contra consumo, no Laboratório de Anatomia Patológica do Hospital Divino...",
+      "price": "318.312,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "Leica Microsistemas Instrumentos de Precisão SU,Ld",
+      "procedure": "Concurso público",
+      "signing_date": "28-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15694268"
+    },
+    {
+      "id": 15696069,
+      "title": "Fornecimento de 216.000 litros de Gasóleo Rodoviário",
+      "price": "310.653,36 €",
+      "buyer": "Município da Horta",
+      "seller": "GALP AÇORES, UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15696069"
+    },
+    {
+      "id": 15690778,
+      "title": "AQUISIÇÃO DE UM PORTAL DIGITAL INTEGRADO AZORESFLOW - PLATAFORMA DE MONITORIZAÇÃO E AVALIAÇÃO DO PGRH-AÇORES 2022-2027",
+      "price": "53.650,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "CHIMP – COMUNICAÇÃO ESPECIALIZADA, UNIPESSOAL, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15690778"
+    },
+    {
+      "id": 15680497,
+      "title": "Transporte em regime de carreira pública",
+      "price": "48.849,90 €",
+      "buyer": "Escola Básica do 2.º e 3.º Ciclos e Secundário Padre Manuel Azevedo da Cunha",
+      "seller": "Rumo à Natureza, Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15680497"
+    },
+    {
+      "id": 15696072,
+      "title": "aquisição de equipamentos de microscopia",
+      "price": "15.840,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "FILSAT Equipamentos Médico-Científicos, Lda. ",
+      "procedure": "Consulta Prévia",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15696072"
+    },
+    {
+      "id": 15687247,
+      "title": "Aquisição de 7.500L de Gasóleo",
+      "price": "12.187,50 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "JOAO GERMANO DE DEUS E FILHO, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15687247"
+    },
+    {
+      "id": 15696029,
+      "title": "Aquisição de material de limpeza, produtos de higiene e consumíveis destinados ao funcionamento da Fundação de Ensino Profissional da Praia da Vitória, pelo período de 12 meses, de acordo com as espec...",
+      "price": "8.744,60 €",
+      "buyer": "Fundação de Ensino Profissional da Praia da Vitória",
+      "seller": "EQUIPRAIA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15696029"
+    },
+    {
+      "id": 15695856,
+      "title": "Aquisição de bens alimentares congelados destinados ao funcionamento do serviço de refeições da Escola Profissional da Praia da Vitória, pelo período de 12 meses, de acordo com as especificações e qua...",
+      "price": "6.027,24 €",
+      "buyer": "Fundação de Ensino Profissional da Praia da Vitória",
+      "seller": "Peixefrio",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15695856"
+    },
+    {
+      "id": 15695748,
+      "title": "Prestação de Serviços de Nadador Salvador para o Complexo Municipal de Piscinas",
+      "price": "3.477,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Nuno Claudio de Sousa Botelho",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15695748"
+    },
+    {
+      "id": 15696516,
+      "title": "Aquisição de bens alimentares, incluindo produtos de mercearia, pastelaria e confeitaria, condimentos, molhos e especiarias, bebidas, laticínios e consumíveis para serviço de refeições, destinados ao ...",
+      "price": "1.184,90 €",
+      "buyer": "Fundação de Ensino Profissional da Praia da Vitória",
+      "seller": "EQUIPRAIA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15696516"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9496,
+        "title": "Falhas na Plataforma de reembolso no subsídio social de mobilidade prejudicam os açorianos",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9496"
+      },
+      {
+        "id": 9498,
+        "title": "Segunda fase da ligação Furnas-Povoação",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9498"
+      },
+      {
+        "id": 9500,
+        "title": "Melhoria da ligação rodoviária Ponta Delgada-Mosteiros",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9500"
+      },
+      {
+        "id": 9571,
+        "title": "Valores mensais do Imposto sobre os Produtos Petrolíferos e Energéticos aplicado na Região Autónoma dos Açores em 2026",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "27/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9571"
+      },
+      {
+        "id": 9572,
+        "title": "Procedimentos perante aves vivas com sintomas compatíveis com Doença de Newcastle",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "25/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9572"
+      },
+      {
+        "id": 9573,
+        "title": "Custos de manutenção associados ao navio Azores Ocean",
+        "state_change": null,
+        "requesters": "José Ávila PS, ...",
+        "date": "25/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9573"
+      },
+      {
+        "id": 9392,
+        "title": "Recusa de acesso a dados de saúde para investigação sobre a incidência de doenças oncológicas no concelho da Praia da Vitória e ausência de estudo epidemiológico junto à Base das Lajes",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "26/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9392"
+      },
+      {
+        "id": 9485,
+        "title": "Comunicação e natureza dos lançamentos de foguetões na Malbusca",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "17/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9485"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24224,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Governo esquece-se da Escola Luísa Constantina há cinco anos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24224"
+      },
+      {
+        "id": 24225,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo Regional mantém Centro de Apoio ao Desportista da Ilha de São Miguel encerrado desde 2020.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24225"
+      },
+      {
+        "id": 24226,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco de Esquerda exige esclarecimentos sobre encerramento do bar do Terminal Marítimo da Horta.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24226"
+      },
+      {
+        "id": 24227,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores quer saber quanto o Governo Regional lucra com o aumento dos preços dos combustíveis.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24227"
+      },
+      {
+        "id": 24228,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na cerimónia solene da Homenagem Percursos promovida pela Associação Seniores de São Miguel, na Igreja do Colégio em Ponta Delgada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24228"
+      },
+      {
+        "id": 24229,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia assiste ao espetáculo \"Povo que agarra o vento com as mãos\", no Teatro Maicaelenese, ilha de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24229"
+      },
+      {
+        "id": 24230,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Ribeira Grande. PSD/Açores destaca lançamento de concurso para novo Centro de Saúde.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24230"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3010,
+        "number": "40/Separata",
+        "date": "29/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3010"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-28"
+}
