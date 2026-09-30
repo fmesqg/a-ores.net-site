@@ -1,0 +1,150 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15709242,
+      "title": "Empreitada Beneficiação da Iluminação Envolvente do Largo Conselheiro Hintze Ribeiro – Matriz",
+      "price": "140.265,06 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Volt &amp; Meio Engenharia e Montagens Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15709242"
+    },
+    {
+      "id": 15710344,
+      "title": "Aquisição de Refeições Escolares Completas e ligeiras de 22 de setembro a 21 outubro de 2026",
+      "price": "35.506,80 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "RESCATER - PRESTAÇÃO DE SERVIÇOS, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15710344"
+    },
+    {
+      "id": 15706686,
+      "title": "Ajuste Direto n.º 3/2026/RI - Leite Escolar",
+      "price": "19.998,90 €",
+      "buyer": "Escola Básica Integrada de Roberto Ivens",
+      "seller": "Lactaçores - União das Cooperativas de Lacticínios dos Açores, UCRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15706686"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9504,
+        "title": "Estratégia do Governo Regional para o Turismo dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9504"
+      },
+      {
+        "id": 9508,
+        "title": "Preços das passagens aéreas entre os Açores e o Continente",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "25/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9508"
+      },
+      {
+        "id": 9511,
+        "title": "Infraestruturas de apoio à atividade piscatória no Porto de São Mateus da Calheta permanecem sem utilização",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "26/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9511"
+      },
+      {
+        "id": 9512,
+        "title": "Rede de carregamento elétrico e atividade TVDE nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9512"
+      },
+      {
+        "id": 9575,
+        "title": "Centro de Apoio ao Desportista da Ilha de São Miguel - Governo prometeu, mas o Centro continua fechado",
+        "state_change": null,
+        "requesters": "Russell Sousa PS, ...",
+        "date": "25/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9575"
+      },
+      {
+        "id": 9576,
+        "title": "Encerramento do bar do Terminal Marítimo da Horta e reposição do serviço aos passageiros",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "28/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9576"
+      },
+      {
+        "id": 9578,
+        "title": "Impacto económico, social e turístico decorrente do encerramento da operação da Ryanair nos Açores e plano de mitigação de emergência para o setor",
+        "state_change": null,
+        "requesters": "Luís Vieira Leal PS, ...",
+        "date": "29/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9578"
+      },
+      {
+        "id": 9579,
+        "title": "Equipamentos de cirurgia robótica do Serviço Regional de Saúde",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "29/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9579"
+      },
+      {
+        "id": 9506,
+        "title": "Transporte escolar na ilha de São Miguel no ano letivo 2026/2027",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "25/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9506"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24232,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/Açores expõe caso do Bairro do Lameirinho à Provedora da Justiça.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24232"
+      },
+      {
+        "id": 24233,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Açorianos aguardam mais de um ano por Juntas Médicas para aceder a Atestados Médicos de Incapacidade.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24233"
+      },
+      {
+        "id": 24231,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - “Como é que é possível que o Governo Regional anuncie uma campanha promocional para o Inverno IATA a um mês do seu início?”, questiona PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24231"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-09-29"
+}
