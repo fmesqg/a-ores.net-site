@@ -1,0 +1,483 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15722731,
+      "title": "Concurso Público n.º 1/2026/EBSF - Aquisição de Refeições Escolares para o ano letivo 2026/2027, com inicio em 01/10/2026",
+      "price": "138.408,00 €",
+      "buyer": "Escola Básica e Secundária das Flores",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação S.A",
+      "procedure": "Concurso público",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15722731"
+    },
+    {
+      "id": 15722727,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE TRANSPORTE EM REGIME DE CARREIRA PÚBLICA",
+      "price": "74.595,65 €",
+      "buyer": "Escola Secundária Vitorino Nemésio, Praia da Vitória",
+      "seller": "MOBI AZORES - MOBILIDADE E TURISMO, lDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15722727"
+    },
+    {
+      "id": 15718687,
+      "title": "O presente Contrato tem como objeto a prestação do serviço de aluguer de maquinaria externa para a ilha de São Jorge, para limpeza de bacias de retenção, reperfilamentos de cursos de água e apoio de e...",
+      "price": "66.240,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "TUFO OU PEDRA UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15718687"
+    },
+    {
+      "id": 15717466,
+      "title": "Aquisição Protetores Timpânicos Descartáveis para Termómetro com colocação do respetivo equipamento para o Hospital Divino Espírito Santo de Ponta Delgada, EPER.",
+      "price": "58.800,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "MEDICINÁLIA CORMÉDICA - MCMEDICAL, LIMITADA",
+      "procedure": "Concurso público",
+      "signing_date": "22-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15717466"
+    },
+    {
+      "id": 15717955,
+      "title": "Aquisição de serviços de gestão e manutenção de maquinaria e equipamentos integrados nas instalações desportivas geridas pelo Serviço de Desporto da Ilha do Faial",
+      "price": "57.290,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "FIT – Fabrico e Instalações Técnicas, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15717955"
+    },
+    {
+      "id": 15718987,
+      "title": "Aquisição de prestação de serviços de manutenção do sistema de transporte de amostras clínicas e medicamentos, instalado no Hospital Divino Espírito Santo de Ponta Delgada, EPER., para o triénio de 20...",
+      "price": "25.290,00 €",
+      "buyer": "Hospital Divino Espírito Santo de Ponta Delgada EPER",
+      "seller": "J. J. L. - Instalações Elétricas, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15718987"
+    },
+    {
+      "id": 15718982,
+      "title": "Prestação de serviços de manutenção/assistência técnica de 13 equipamentos multifuncionais da Direção Regional de Qualificação Profissional e Emprego, incluindo o fornecimento de consumíveis, com exce...",
+      "price": "21.830,08 €",
+      "buyer": "Direção Regional de Qualificação Profissional e Emprego",
+      "seller": "Escritório Digital, representações, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15718982"
+    },
+    {
+      "id": 15720022,
+      "title": "AD 19/2026 Aquisição de serviços de transporte de água",
+      "price": "20.000,00 €",
+      "buyer": "Município de Calheta - São Jorge",
+      "seller": "Associação Humanitária de Bombeiros Voluntários da Calheta",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15720022"
+    },
+    {
+      "id": 15718946,
+      "title": "Ajuste Direto por Lotes n.º 1/2026-EBSF - Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica e Secundária das Flores",
+      "price": "18.509,75 €",
+      "buyer": "Escola Básica e Secundária das Flores",
+      "seller": "UTC-União de Transportes dos Carvalhos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15718946"
+    },
+    {
+      "id": 15718993,
+      "title": "Ajuste Direto por Lotes n.º 1/2026-EBSF - Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica e Secundária das Flores",
+      "price": "14.302,75 €",
+      "buyer": "Escola Básica e Secundária das Flores",
+      "seller": "Sílvio Alberto Mateus Medina",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15718993"
+    },
+    {
+      "id": 15719006,
+      "title": "Ajuste Direto por Lotes n.º 1/2026-EBSF - Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica e Secundária das Flores",
+      "price": "14.302,75 €",
+      "buyer": "Escola Básica e Secundária das Flores",
+      "seller": "UTC-União de Transportes dos Carvalhos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15719006"
+    },
+    {
+      "id": 15718912,
+      "title": "Ajuste Direto por Lotes n.º 1/2026-EBSF - Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica e Secundária das Flores",
+      "price": "12.619,25 €",
+      "buyer": "Escola Básica e Secundária das Flores",
+      "seller": "Sílvio Alberto Mateus Medina",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15718912"
+    },
+    {
+      "id": 15718556,
+      "title": "AQUISIÇÃO DE EQUIPAMENTO DE REDE E INFRAESTRUTURA PARA INCUBADORA DE EMPRESAS - STARTUP PICO",
+      "price": "11.461,36 €",
+      "buyer": "Município da Madalena",
+      "seller": "Allbs Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15718556"
+    },
+    {
+      "id": 15722379,
+      "title": "Aquisição de equipamentos por ajuste direto para apetrechamento da Creche \"O Regaço\" da Santa Casa da Misericórdia de Ponta Delgada",
+      "price": "8.636,66 €",
+      "buyer": "Santa Casa da Misericórdia de Ponta Delgada",
+      "seller": "Jacinto Ferreira Correia e Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15722379"
+    },
+    {
+      "id": 15721383,
+      "title": "aquisição de selos/marcas de salubridade das aves para o matadouro da ilha São Miguel para o ano de 2026",
+      "price": "7.937,46 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Fernando Emanuel Fernandes de Azevedo-Trading Unip, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15721383"
+    },
+    {
+      "id": 15722820,
+      "title": "Aquisição de equipamentos por ajuste direto para apetrechamento da Creche \"O Regaço\" da Santa Casa da Misericórdia de Ponta Delgada",
+      "price": "7.358,58 €",
+      "buyer": "Santa Casa da Misericórdia de Ponta Delgada",
+      "seller": "Jacinto Ferreira Correia e Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15722820"
+    },
+    {
+      "id": 15722583,
+      "title": "Aquisição de equipamentos por ajuste direto para apetrechamento da Creche \"O Regaço\" da Santa Casa da Misericórdia de Ponta Delgada",
+      "price": "5.459,57 €",
+      "buyer": "Santa Casa da Misericórdia de Ponta Delgada",
+      "seller": "Mobioffice, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15722583"
+    },
+    {
+      "id": 15724088,
+      "title": "AQUISIÇÃO DE PNEUS, PRESTAÇÃO DE SERVIÇOS DE REPARAÇÃO DE PNEUS E SERVIÇOS CONEXOS",
+      "price": "5.142,06 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "Pneus São Miguel, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15724088"
+    },
+    {
+      "id": 15722883,
+      "title": "Aquisição de equipamentos por ajuste direto para apetrechamento da Creche \"O Regaço\" da Santa Casa da Misericórdia de Ponta Delgada",
+      "price": "1.293,75 €",
+      "buyer": "Santa Casa da Misericórdia de Ponta Delgada",
+      "seller": "EUROMOTAS - António Rodrigues Mota &amp; Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15722883"
+    },
+    {
+      "id": 15722073,
+      "title": "Aquisição de equipamentos por ajuste direto para apetrechamento da Creche \"O Regaço\" da Santa Casa da Misericórdia de Ponta Delgada",
+      "price": "546,74 €",
+      "buyer": "Santa Casa da Misericórdia de Ponta Delgada",
+      "seller": "EUROMOTAS - António Rodrigues Mota &amp; Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15722073"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9581,
+        "title": "Atrasos na certificação do grau de incapacidade através do Atestado Médico de Incapacidade Multiuso",
+        "state_change": null,
+        "requesters": "Cristina Calisto PS, ...",
+        "date": "29/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9581"
+      },
+      {
+        "id": 9582,
+        "title": "Disponibilidade de manuais escolares em suporte físico para empréstimo nas unidades orgânicas do Sistema Educativo Regional",
+        "state_change": null,
+        "requesters": "Inês Sá PS, ...",
+        "date": "30/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9582"
+      },
+      {
+        "id": 9583,
+        "title": "Execução do Plano e situação financeira a 30 de setembro de 2026",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "30/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9583"
+      },
+      {
+        "id": 9584,
+        "title": "Alargamento da Rua dos Moinhos na freguesia de Fajã de Cima - Ponta Delgada",
+        "state_change": null,
+        "requesters": "Cristina Calisto PS, ...",
+        "date": "30/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9584"
+      },
+      {
+        "id": 9585,
+        "title": "Fundo de Desenvolvimento de Rotas Aéreas dos Açores",
+        "state_change": null,
+        "requesters": "Carlos Silva PS, ...",
+        "date": "30/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9585"
+      },
+      {
+        "id": 9510,
+        "title": "Mortandade de pombos e divulgação de informação à população II",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "26/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9510"
+      },
+      {
+        "id": 9513,
+        "title": "Saída da Ryanair dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9513"
+      },
+      {
+        "id": 9514,
+        "title": "Internamentos Sociais no Hospital do Divino Espírito Santo",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9514"
+      },
+      {
+        "id": 9515,
+        "title": "Utilização de canhões sonoros para dispersão de aves em Santa Luzia, Pico",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9515"
+      },
+      {
+        "id": 9517,
+        "title": "Constituição de turmas na Escola Básica 1,2/JI de Lajes das Flores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9517"
+      },
+      {
+        "id": 9519,
+        "title": "Falta de docentes e mecanismos de mobilidade na Ilha das Flores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9519"
+      },
+      {
+        "id": 9520,
+        "title": "Estacionamento de viaturas e aeronaves no Aeroporto da Graciosa após a entrada em funcionamento da nova aerogare",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9520"
+      },
+      {
+        "id": 9521,
+        "title": "Ter médico de família atribuído não significa ter consulta",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9521"
+      },
+      {
+        "id": 9523,
+        "title": "Instalação da Google no Tecnoparque da Lagoa",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9523"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24234,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Futuro da ilha das Flores depende do que se fizer hoje para atrair e fixar população.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24234"
+      },
+      {
+        "id": 24235,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo deve assegurar o empréstimo de manuais escolares nas escolas da Região.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24235"
+      },
+      {
+        "id": 24236,
+        "title": "Nota de Imprensa da Presidência da ALRAA - \"Os próximos 50 anos de Autonomia dispensam pessimismos e triunfalismos exagerados\", defende Luís Garcia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24236"
+      },
+      {
+        "id": 24237,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Deputados do PSD/Açores reúnem em jornadas parlamentares em São Jorge.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24237"
+      },
+      {
+        "id": 24238,
+        "title": "Comissão Política Geral - Convocatória (Dia 01/10/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24238"
+      },
+      {
+        "id": 24239,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores avança com proposta para apoiar custos de alojamento dos estudantes deslocados.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24239"
+      },
+      {
+        "id": 24240,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Falta aos Açores um plano habitacional concreto para fazer face à urgência das necessidades.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24240"
+      },
+      {
+        "id": 24241,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na cerimónia de Assunção de Comando e Batismo do Navio de Investigação Azores Ocean, no Terminal Marítimo da Horta, ilha do Faial",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24241"
+      },
+      {
+        "id": 24242,
+        "title": "Sobre o pedido de autorização e levantamento de impedimento legal para que o deputado Carlos Henrique Lopes Rodrigues, possa prestar depoimento, na qualidade de testemunha, no âmbito do  Processo Ação Administrativa 7/19.4BEPDL",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24242"
+      },
+      {
+        "id": 24243,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia apresenta cumprimentos ao Presidente da Assembleia Legislativa de Santa Catarina, Julio Garcia, em Florianópolis, Brasil.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24243"
+      },
+      {
+        "id": 24244,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia apresenta cumprimentos a Topázio Neto, Perfeito de Florianópolis, Brasil.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24244"
+      },
+      {
+        "id": 24245,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia visita a Casa dos Açores de Santa Catarina, Florianópolis, Brasil.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24245"
+      },
+      {
+        "id": 24246,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembeia visita ao Instituto Histórico e Geográfico de Santa Catarina (IHGSC) e a Academia Catarinense de Letras (ACL), Florianópolis, Brasil.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24246"
+      },
+      {
+        "id": 24247,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia visita a Casa dos Açores do Rio Grande do Sul, Brasil.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24247"
+      },
+      {
+        "id": 24248,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia apresenta cumprimentos ao Presidente da Assembleia Legislativa do Rio Grande do Sul, deputado Sergio Peres, Brasil.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24248"
+      },
+      {
+        "id": 24249,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia apresenta cumprimentos ao Prefeito da Cidade de Gravataí, Luiz Zaffalon, Rio Grande do Sul, Brasil.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24249"
+      },
+      {
+        "id": 24250,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia apresenta cumprimentos a Sua Excelência o Presidente da República do Uruguai, Yamandú Orsi, no Palácio Presidencial, em Montevidéu.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24250"
+      },
+      {
+        "id": 24251,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na XXVIII Assembleia Geral do Conselho Mundial das Casas dos Açores, no Uruguai.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24251"
+      },
+      {
+        "id": 24252,
+        "title": null,
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24252"
+      },
+      {
+        "id": 24253,
+        "title": "Relatório do Encontro Parlamentar Açores-Canárias - Pontes Atlânticas para a sustentabilidade. De 30 de junho a 6 de julho de 2026 -São Miguel, Pico e Faial",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24253"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3012,
+        "number": "96",
+        "date": "09/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3012"
+      },
+      {
+        "id": 3015,
+        "number": "97",
+        "date": "10/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3015"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3448,
+        "title": "Alarga os Protocolos de Acesso do Conselho das Finanças Públicas aos dados regionais e torna obrigatória a audição para o Conselho Superior",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3448"
+      },
+      {
+        "id": 3447,
+        "title": "Quinta alteração à Lei n.º 54/2005, de 15 de novembro, que estabelece a titularidade dos recursos hídricos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3447"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-01"
+}
