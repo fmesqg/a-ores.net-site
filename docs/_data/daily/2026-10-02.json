@@ -1,0 +1,202 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15728140,
+      "title": "Aquisição de contentores e papeleiras para receção de resíduos urbanos (RU), repartida pelos seguintes lotes:\n- Lote 1 - 200 unidades de contentores, de volume aproximado de 770 litros, tipo \"MGB 800\"...",
+      "price": "85.760,05 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "Ecoground - Soluções Ambientais, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15728140"
+    },
+    {
+      "id": 15727653,
+      "title": "Empreitada de Requalificação do Reservatório do Sistema de Abastecimento de Água da Ajuda da Bretanha – Perímetro de Ordenamento Agrário da Bacia Leiteira de Ponta Delgada – Ilha de São Miguel. A empr...",
+      "price": "29.955,00 €",
+      "buyer": "IROA, S. A.",
+      "seller": "João Luís Correia & Filhas, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15727653"
+    },
+    {
+      "id": 15728045,
+      "title": "Aquisição de serviços de limpeza e higienização de sanitários públicos municipais",
+      "price": "29.592,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15728045"
+    },
+    {
+      "id": 15728054,
+      "title": "Aquisição de serviços de limpeza e higienização de sanitários públicos municipais",
+      "price": "29.592,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15728054"
+    },
+    {
+      "id": 15728070,
+      "title": "Aquisição de serviços de limpeza e higienização de sanitários públicos municipais",
+      "price": "29.592,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15728070"
+    },
+    {
+      "id": 15728076,
+      "title": "Aquisição de serviços de limpeza e higienização de sanitários públicos municipais",
+      "price": "29.592,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15728076"
+    },
+    {
+      "id": 15728111,
+      "title": "Aquisição de serviços de limpeza e higienização de sanitários públicos municipais",
+      "price": "29.592,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "ARQUILIMPA - LIMPEZA PROFISSIONAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15728111"
+    },
+    {
+      "id": 15725474,
+      "title": "Aquisição de contentores e papeleiras para receção de resíduos urbanos (RU), repartida pelos seguintes lotes:\n- Lote 1 - 200 unidades de contentores, de volume aproximado de 770 litros, tipo \"MGB 800\"...",
+      "price": "4.664,00 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "EQUIPRAIA",
+      "procedure": "Concurso público",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15725474"
+    },
+    {
+      "id": 15725400,
+      "title": "Ajuste Direto para Aquisição da Plataforma SAD Web",
+      "price": "3.219,00 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "Associação de Informática da Região Centro (AIRC)",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15725400"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9587,
+        "title": "Corvo continua sem fisioterapia apesar do Governo Regional ter anunciado a sua reposição para junho passado",
+        "state_change": null,
+        "requesters": "Lubélio Mendonça PS, ...",
+        "date": "01/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9587"
+      },
+      {
+        "id": 9588,
+        "title": "Concurso público para a reabilitação da Escola Básica e Secundária das Flores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "01/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9588"
+      },
+      {
+        "id": 9589,
+        "title": "Contratação de estudos e prestações de serviços a entidades sediadas fora da Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "Sandra Costa Dias PS, ...",
+        "date": "01/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9589"
+      },
+      {
+        "id": 9590,
+        "title": "Ponto de situação da execução do troço de Santo António da Variante às Capelas",
+        "state_change": null,
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "01/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9590"
+      },
+      {
+        "id": 9592,
+        "title": "Ocupação de vagas no Programa \"Novos Idosos\"",
+        "state_change": null,
+        "requesters": "Cristina Calisto PS, ...",
+        "date": "02/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9592"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24256,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco propõe que ex-trabalhadores da Base reformados no \"downsizing\" recebam verbas que foram injustamente cortadas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24256"
+      },
+      {
+        "id": 24257,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo Regional não divulga custos das deslocações de profissionais de saúde nos Açores, denuncia PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24257"
+      },
+      {
+        "id": 24258,
+        "title": "Nota Informativa da Presidência da ALRAA - Presidente da Assembleia Legislativa participa na XXVIII Assembleia Geral do Conselho Mundial das Casas dos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24258"
+      },
+      {
+        "id": 24259,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer saber quando avança a reabilitação da Escola das Flores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24259"
+      },
+      {
+        "id": 24260,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco demonstra que Governo Regional tem margem para baixar imposto sobre os combustíveis como já fez no passado.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24260"
+      },
+      {
+        "id": 24261,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores realiza Jornadas Parlamentares nas Lajes das Flores para contactos com instituições e debate público sobre despovoamento e desenvolvimento social e económico.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24261"
+      },
+      {
+        "id": 24262,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 12/10/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24262"
+      },
+      {
+        "id": 24254,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - Dia Mundial do Animal motiva visita do PAN/A ao Canil de São Roque do Pico e Associação ACANIL.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24254"
+      },
+      {
+        "id": 24255,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Governo de Bolieiro sem soluções para o Porto da Horta passados seis anos de governação.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24255"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3854,
+        "title": "Compromisso dos Açores com a proteção do Mar dos Sargaços e a conservação da biodiversidade em Alto-Mar no âmbito do Acordo BBNJ",
+        "author": "PAN",
+        "topic": "Ambiente",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3854"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-02"
+}
