@@ -1,0 +1,165 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15734810,
+      "title": "O Contrato a celebrar aplica-se à Prestação dos Serviços de Prevenção de Acidentes e Incidentes, Salvamento e Luta Contra Incêndios no Aeródromo da Ilha do Pico pela Associação Humanitária dos Bombeir...",
+      "price": "10.506.700,00 €",
+      "buyer": "SATA - Gestão de Aeródromos, SA",
+      "seller": "Associação Humanitária de Bombeiros Voluntários da Madalena",
+      "procedure": "Contratação excluída II",
+      "signing_date": "01-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15734810"
+    },
+    {
+      "id": 15732162,
+      "title": "Aquisição de serviços de transporte em regime de Carreira Pública ano escolar de 2026/2027",
+      "price": "112.486,40 €",
+      "buyer": "Escola Básica e Secundária das Lajes do Pico",
+      "seller": "União de Transportes dos Carvalhos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15732162"
+    },
+    {
+      "id": 15731802,
+      "title": "Aquisição de Serviços de Prática Médica de 1 de novembro de 2026 a 31 de outubro de 2027",
+      "price": "84.240,00 €",
+      "buyer": "Unidade de Saúde da Ilha Graciosa",
+      "seller": "Maria de Castro Horta Lopes",
+      "procedure": "Contratação excluída II",
+      "signing_date": "06-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15731802"
+    },
+    {
+      "id": 15734091,
+      "title": "3026004345 - AMN - Aquisição de serviço de desinfestação edifícios AMN",
+      "price": "79.924,12 €",
+      "buyer": "MARINHA - Direção de Abastecimento",
+      "seller": "Anticimex Portugal Lda",
+      "procedure": "Concurso público",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15734091"
+    },
+    {
+      "id": 15734829,
+      "title": "AQUISIÇÃO DE PALCOS PARA O MUNICÍPIO DE SANTA CRUZ DA GRACIOSA",
+      "price": "55.977,89 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "Excellentvanguard - Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15734829"
+    },
+    {
+      "id": 15732037,
+      "title": "acquisition of the DanioVision system",
+      "price": "29.626,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "NOLDUS BV",
+      "procedure": "Contratação excluída II",
+      "signing_date": "05-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15732037"
+    },
+    {
+      "id": 15734234,
+      "title": "Empreitada de Construção de Parque de Estacionamento",
+      "price": "24.395,74 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "AR. Casanova - Construção Civil Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15734234"
+    },
+    {
+      "id": 15733123,
+      "title": "3026009876 - AMN - Aquisição de serviço apoio de alimentação a militares",
+      "price": "7.209,00 €",
+      "buyer": "Ministério da Defesa Nacional - Marinha",
+      "seller": "Estado-Maior do Exército",
+      "procedure": "Contratação excluída II",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15733123"
+    },
+    {
+      "id": 15731851,
+      "title": "Aquisição de contentores e papeleiras para receção de resíduos urbanos (RU), repartida pelos seguintes lotes:\n- Lote 1 - 200 unidades de contentores, de volume aproximado de 770 litros, tipo \"MGB 800\"...",
+      "price": "3.900,00 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "Resopre - Soluções Urbanas, Sa",
+      "procedure": "Concurso público",
+      "signing_date": "06-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15731851"
+    },
+    {
+      "id": 15734592,
+      "title": "AQUISIÇÃO DE 50 CAMAS DE CAMPISMO PARA O SERVIÇO MUNICIPAL DE PROTEÇÃO CIVIL DE SANTA CRUZ DA GRACIOSA",
+      "price": "3.649,50 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "Protilis Portugal, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15734592"
+    },
+    {
+      "id": 15731544,
+      "title": "Prestação de Serviços de Assessoria Técnica de Atividades Aquáticas no Aquafit Health & Fitness Club",
+      "price": "1.960,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Adolfo Alexandre Duarte Baixinho",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15731544"
+    },
+    {
+      "id": 15731755,
+      "title": "Ajuste Direto destinado à venda, que inclui o corte e reflorestação de 1 (um) lote de madeira predominantemente da espécie Cryptomeria japonica, numa área total de 3,1908 hectares, no Perímetro Flores...",
+      "price": "22,00 €",
+      "buyer": "Direção Regional dos Recursos Florestais e Ordenamento Territorial",
+      "seller": "Hugo Miguel Veiga de Oliveira",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15731755"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24264,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco considera inaceitável a discriminação de alunos no acesso aos manuais digitais e quer explicações do Governo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24264"
+      },
+      {
+        "id": 24265,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/Açores quer reforçar protecção do Alto-Mar e do Mar dos Sargaços.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24265"
+      },
+      {
+        "id": 24266,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco preocupado com impacto da eventual desativação do navio \"Arquipélago\" nos projetos científicos da comunidade regional.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24266"
+      },
+      {
+        "id": 24263,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores quer saber quanto tem sido gasto pelo Governo em estudos e serviços de consultadoria contratados fora da Região.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24263"
+      }
+    ],
+    "peticoes": [
+      {
+        "id": 1050,
+        "title": "Pela salvaguarda da mobilidade aérea e do futuro económico dos Açores",
+        "author": "Jaime de Lima Araujo Pacheco",
+        "state": "Em processo de admissão",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/6/1050"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-06"
+}
