@@ -1,0 +1,174 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15738972,
+      "title": "Aquisição de serviços de apoio logístico às operações do Serviço Municipal de Proteção Civil",
+      "price": "74.990,00 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "Associação Humanitária dos Bombeiros Voluntários de Vila Franca do Campo",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15738972"
+    },
+    {
+      "id": 15739010,
+      "title": "Aquisição de serviços de consultoria técnica para implementação da estratégia e plano de comunicação do Governo Regional dos Açores",
+      "price": "60.196,00 €",
+      "buyer": "Secretaria-Geral da Presidência",
+      "seller": "NORMA AÇORES, Soc. de Estudos e Apoio ao Desev. Regional S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15739010"
+    },
+    {
+      "id": 15739092,
+      "title": "serviços de TAS ao HSEIT, EPER",
+      "price": "45.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Dolores Vieira Faria",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15739092"
+    },
+    {
+      "id": 15737558,
+      "title": "acquisition of hydrophones system",
+      "price": "39.650,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "RTSYS - Underwater Acoustics & Drones, SAS",
+      "procedure": "Contratação excluída II",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15737558"
+    },
+    {
+      "id": 15737559,
+      "title": "Ajuste Direto Por Lotes Nº 2/2026  - Aquisição de Serviços Regulares Especializados de Transporte Coletivo 2026/2027",
+      "price": "30.140,75 €",
+      "buyer": "Escola Básica Integrada da Lagoa",
+      "seller": "Os Bambinos- Transportes Personalizados Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15737559"
+    },
+    {
+      "id": 15739046,
+      "title": "Aquisição de Serviços de Passagens - Fornecimento continuo",
+      "price": "30.000,00 €",
+      "buyer": "Fundação de Ensino Profissional da Praia da Vitória",
+      "seller": "Agência de Viagem Teles",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15739046"
+    },
+    {
+      "id": 15739121,
+      "title": "Empreitada de Reabilitação do Campo de Jogos da Escola EB1/JI de Santa Bárbara (Ribeira Grande)",
+      "price": "24.992,00 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "Ferraworks, Materiais de Construção, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15739121"
+    },
+    {
+      "id": 15737628,
+      "title": "fornecimento pelo cocontratante de 3948 refeições completas e 5103 refeições ligeiras, no refeitório da escola sede, bem como a confeção, transporte e fornecimento nas escolas do 1.º ciclo",
+      "price": "17.726,52 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15737628"
+    },
+    {
+      "id": 15737631,
+      "title": "AJUSTE DIRETO EM FUNÇÃO DE CRITÉRIO MATERIAL COM CONVITE A APENAS UMA ENTIDADE – AQUISIÇÃO DE SERVIÇOS DE TRANSPORTE EM REGIME DE CARREIRA PÚBLICA PARA A ESCOLA BÁSICA INTEGRADA DE LAGOA",
+      "price": "15.400,86 €",
+      "buyer": "Escola Básica Integrada da Lagoa",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15737631"
+    },
+    {
+      "id": 15737608,
+      "title": "Ajuste Direto Por Lotes Nº 2/2026  - Aquisição de Serviços Regulares Especializados de Transporte Coletivo 2026/2027",
+      "price": "8.208,04 €",
+      "buyer": "Escola Básica Integrada da Lagoa",
+      "seller": "Adriano Alberto da Silva Nunes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15737608"
+    },
+    {
+      "id": 15738125,
+      "title": "Prestação de serviços de reparação das viaturas: Opel Combo 23-QS-12, Nissan Patrol 22-89-JC e Mitsubishi L200 42-IM-19 para o Serviço de Classificação do Leite de São Miguel.",
+      "price": "5.296,36 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Auto WM Serviços Auto Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15738125"
+    }
+  ],
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24267,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca ação de promoção do Queijo de São Jorge em 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24267"
+      },
+      {
+        "id": 24268,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende mais habitação, melhores acessibilidades e reforço dos cuidados de saúde para fixar população nas Lajes das Flores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24268"
+      },
+      {
+        "id": 24269,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA defende estruturas como TERINOV para apoio à economia privada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24269"
+      },
+      {
+        "id": 24270,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Luís Garcia em Santa Catarina: \"Celebrar os 50 anos da nossa Autonomia é também celebrar os Açores para além das nossas ilhas\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24270"
+      },
+      {
+        "id": 24271,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/A questiona Governo sobre implementação da Rede de Desporto Jovem Inclusivo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24271"
+      },
+      {
+        "id": 24272,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco quer saber qual o ponto de situação do projeto de salvaguarda do Solar das Necessidades",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24272"
+      },
+      {
+        "id": 24273,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer saber quantos idosos vivem abaixo do salário minimo regional.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24273"
+      },
+      {
+        "id": 24274,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores realça \"pujança e visão de futuro\" da ilha de São Jorge.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24274"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3017,
+        "number": "98",
+        "date": "04/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3017"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-07"
+}
