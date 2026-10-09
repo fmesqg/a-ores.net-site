@@ -1,0 +1,388 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15740176,
+      "title": "Aquisição de Prestação de Serviços de Higienização e Limpeza, para a Unidade de Saúde de Ilha do Pico, nos Centros de Saúde da Madalena, São Roque e Lajes do Pico – 12 meses (2026/2027)",
+      "price": "187.968,96 €",
+      "buyer": "Unidade de Saúde da Ilha do Pico",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15740176"
+    },
+    {
+      "id": 15740829,
+      "title": "Aquisição de serviço de transportes em regime de carreira pública para EBS da Madalena",
+      "price": "101.752,73 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "UTC",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15740829"
+    },
+    {
+      "id": 15741864,
+      "title": "CONTRATAÇÃO EXCLUIDA N.º 3/DGRDN-MDN/2026 PARA AQUISIÇÃO DE SERVIÇOS DE SUPORTE AO CENTRO DE OPERAÇÕES ESPACIAIS, NO ÂMBITO DO PROGRAMA SPACE SURVEILLANCE AND TRACKING (SST), À ASSOCIAÇÃO PCTTER PARA ...",
+      "price": "91.800,00 €",
+      "buyer": "Direção-Geral de Armamento e Património da Defesa Nacional",
+      "seller": "PCTTER - Associação Parque de Ciência e Tecnologia da Ilha Terceira",
+      "procedure": "Contratação excluída II",
+      "signing_date": "06-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15741864"
+    },
+    {
+      "id": 15743943,
+      "title": "PLATAFORMA SUBTERRÂNEA COM SISTEMA DE ELEVAÇÃO HIDRÁULICO NO ÂMBITO DA CANDIDATURA \"MADALENA RECICLA +\"",
+      "price": "65.800,00 €",
+      "buyer": "Município da Madalena",
+      "seller": "Ambi L, Unipessoal, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15743943"
+    },
+    {
+      "id": 15740050,
+      "title": "Aquisição de veículo ligeiro de mercadorias, tipo pick- up de caixa aberta",
+      "price": "37.417,67 €",
+      "buyer": "Câmara Municipal de Angra do Heroísmo",
+      "seller": "Loureiro Almeida & Filhos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15740050"
+    },
+    {
+      "id": 15739976,
+      "title": "Aquisição de Refeições Escolares 2026/2027",
+      "price": "34.690,20 €",
+      "buyer": "Escola Básica e Secundária Mouzinho da Silveira",
+      "seller": "Santa Casa da Misericórdia do Corvo",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15739976"
+    },
+    {
+      "id": 15740362,
+      "title": "PROCESSO Nº 11/2026 - PEDIDO DE AUTORIZAÇÃO PARA INICIAR PROCEDIMENTO DE AJUSTE DIRETO COM VISTA À AQUISIÇÃO DE MEIOS DE CULTURA E SUPLEMENTOS.",
+      "price": "23.015,07 €",
+      "buyer": "Direção Regional da Agricultura, Veterinária e Alimentação",
+      "seller": "Labkit - Soluções para Laboratório, Lda. ",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15740362"
+    },
+    {
+      "id": 15740289,
+      "title": "Serviços de Auditoria para a Certificação Legal de Contas",
+      "price": "17.200,00 €",
+      "buyer": "Unidade de Saúde da Ilha do Pico",
+      "seller": "UHY Oliveira, Branco & Associados, SROC",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15740289"
+    },
+    {
+      "id": 15740734,
+      "title": "Prestação de serviços para o transporte de octabines para os matadouros de Santa Maria, Graciosa, Faial, Pico e Flores",
+      "price": "10.600,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Bentrans Carga e Transitários SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15740734"
+    },
+    {
+      "id": 15740817,
+      "title": "AQUISIÇÃO DE SISTEMA DE CONTROLO E GESTÃO DE ASSIDUIDADE",
+      "price": "5.860,78 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Idonic, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15740817"
+    },
+    {
+      "id": 15744245,
+      "title": "AQUISIÇÃO DE SERVIÇOS - ASSISTÊNCIA, RECEÇÃO E LIMPEZA DO PAVILHÃO DESPORTIVO PARA O PERÍODO DE OUTUBRO DE 2026 A JUNHO DE 2027.",
+      "price": "3.000,00 €",
+      "buyer": "Escola Básica e Secundária de Velas",
+      "seller": "Lina Patrícia Freitas da Silveira",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15744245"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9528,
+        "title": "Unidade de Saúde da Ilha Graciosa com cargos dirigentes por preencher",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "02/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9528"
+      },
+      {
+        "id": 9529,
+        "title": "Expropriações por pagar na obra de ligação entre a Via Vitorino Nemésio e a circular de Angra do Heroísmo",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "02/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9529"
+      },
+      {
+        "id": 9530,
+        "title": "Casa dos Professores da ilha do Corvo",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "João Mendonça PPM",
+        "date": "02/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9530"
+      },
+      {
+        "id": 9532,
+        "title": "Degradação das infraestruturas de apoio à pesca em Vila Franca do Campo exige intervenção urgente",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Gualberto Rita PS, ...",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9532"
+      },
+      {
+        "id": 9535,
+        "title": "Rede de carregamento elétrico degradada e sem resposta adequada",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "07/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9535"
+      },
+      {
+        "id": 9542,
+        "title": "Apoios à proteção e resgate de equídeos",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "08/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9542"
+      },
+      {
+        "id": 9544,
+        "title": "Incumprimento do serviço de frio na carga aérea de pescado com origem e destino na ilha Graciosa",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "09/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9544"
+      },
+      {
+        "id": 9548,
+        "title": "Taxa de juro de mora aplicada à dívida de 26 milhões de euros dos hospitais públicos à EDA",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9548"
+      },
+      {
+        "id": 9555,
+        "title": "Pescadores Graciosenses sem gelo a partir de hoje",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "17/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9555"
+      },
+      {
+        "id": 9564,
+        "title": "Avaliação do regime jurídico da atividade TVDE na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Marlene Damião PS, ...",
+        "date": "23/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9564"
+      },
+      {
+        "id": 9581,
+        "title": "Atrasos na certificação do grau de incapacidade através do Atestado Médico de Incapacidade Multiuso",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Cristina Calisto PS, ...",
+        "date": "29/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9581"
+      },
+      {
+        "id": 9594,
+        "title": "Falhas na disponibilização de licenças para manuais digitais e discriminação de alunos no acesso aos recursos pedagógicos",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "06/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9594"
+      },
+      {
+        "id": 9595,
+        "title": "Acesso da comunidade científica regional ao NI «Azores Ocean», continuidade da investigação marinha e futuro do NI «Arquipélago»",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "06/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9595"
+      },
+      {
+        "id": 9597,
+        "title": "Rede de Desporto Jovem Incluso",
+        "state_change": null,
+        "requesters": "Pedro Neves PAN",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9597"
+      },
+      {
+        "id": 9598,
+        "title": "Preservação do Imóvel de Interesse Público da Quinta das Necessidades II",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9598"
+      },
+      {
+        "id": 9599,
+        "title": "Idosos com rendimentos abaixo do salário mínimo regional",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9599"
+      },
+      {
+        "id": 9600,
+        "title": "Resultados e metas da política regional de prevenção e combates àsdependências",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9600"
+      },
+      {
+        "id": 9520,
+        "title": "Estacionamento de viaturas e aeronaves no Aeroporto da Graciosa após a entrada em funcionamento da nova aerogare",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9520"
+      },
+      {
+        "id": 9531,
+        "title": "Projetos SOLENERGE aprovados e pagos pelo PRR sem ligação à rede por falta de autorização da Direção Regional da Energia",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9531"
+      },
+      {
+        "id": 9533,
+        "title": "Execução financeira, física e material do PRR-Açores, reprogramação de investimentos e avaliação dos resultados alcançados",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9533"
+      },
+      {
+        "id": 9534,
+        "title": "Encerramento do Jardim de Infância do Teatro Novo (EBJI de Capelas)",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9534"
+      },
+      {
+        "id": 9536,
+        "title": "Governo omite informação essencial sobre o Quadro Plurianual de Programação Orçamental 2027-2030",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Carlos Silva PS, ...",
+        "date": "07/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9536"
+      },
+      {
+        "id": 9537,
+        "title": "Resultados do programa jovens talentos regionais e estatuto de alto rendimento nacional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "07/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9537"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24275,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores exige ligações marítimas regulares para garantir abastecimento e exportação nas Flores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24275"
+      },
+      {
+        "id": 24276,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Não basta gastar milhões no combate às dependências é preciso haver resultados.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24276"
+      },
+      {
+        "id": 24277,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Criar condições para fixar jovens nas Flores é essencial para combater o despovoamento, defende PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24277"
+      },
+      {
+        "id": 24278,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Teletrabalho na Administração Pública Regional: Quem controla?",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24278"
+      },
+      {
+        "id": 24279,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco quer saber quando serão regularizados os apoios à cultura que estão em atraso e como será o RJAAC em 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24279"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-08"
+}
