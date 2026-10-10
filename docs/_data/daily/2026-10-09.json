@@ -1,0 +1,290 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15749315,
+      "title": "Empreitada de Beneficiação do Caminho Agrícola CP7 - Canada dos Tinchais, no Perímetro de Ordenamento Agrário da Bacia Leiteira do Paúl, Ilha Terceira. A intervenção consiste na beneficiação e pavimen...",
+      "price": "367.000,00 €",
+      "buyer": "IROA, S. A.",
+      "seller": "Tecnovia Açores, Sociedade de Empreitadas, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749315"
+    },
+    {
+      "id": 15746983,
+      "title": "CONCURSO PÚBLICO Nº 1/2026/EBSTB - FORNECIMENTO DE REFEIÇÕES ESCOLARES PARA A ESCOLA BÁSICA E SECUNDÁRIA TOMÁS DE BORBA E SUAS EB1/JI´S - DE 10 DE SETEMBRO A 30 DE NOVEMBRO DE 2026. O contrato tem por...",
+      "price": "73.330,00 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15746983"
+    },
+    {
+      "id": 15751214,
+      "title": "Locação de Equipamentos Multifunções de Impressão, cópia e digitalização, incluindo serviços conexos",
+      "price": "69.060,60 €",
+      "buyer": "Lotaçor - Serviço de Lotas dos Açores, SA",
+      "seller": "J.H. Ornelas & Cª. SUC., LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15751214"
+    },
+    {
+      "id": 15748132,
+      "title": "Computadores",
+      "price": "46.775,00 €",
+      "buyer": "Instituto da Segurança Social dos Açores, IPRA",
+      "seller": "DIGIBÉRIA INFORMATION TECHNOLOGIES, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15748132"
+    },
+    {
+      "id": 15749706,
+      "title": "LOTE 5 - CIRCUITO N.º 5 - FREGUESIA DAS CINCO RIBEIRAS/EB1/JI DE SÃO BARTOLOMEU E CIRCUITO INVERSO. O contrato tem por objeto o fornecimento de transportes escolares –  LOTE 5 - CIRCUITO N.º 5 - FREGU...",
+      "price": "42.200,34 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749706"
+    },
+    {
+      "id": 15748019,
+      "title": "LOTE 1 - TRANSPORTE FREGUESIA DE DOZE RIBEIRAS (CASA) /EB1/JI DE DOZE RIBEIRAS/FREGUESIA DE DOZE RIBEIRAS (CASA). O contrato tem por objeto o fornecimento de transportes escolares – Lote 1 – Circuito ...",
+      "price": "30.780,00 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "Luísa Maria dos Santos Mendes",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15748019"
+    },
+    {
+      "id": 15749290,
+      "title": "Aquisição de serviços de manutenção e assistência técnica de veículos policiais multimarca, da PSP do Comando Regional dos Açores (Angra do Heroísmo/São Jorge), para o 2.º semestre de 2026 e anos de 2...",
+      "price": "22.500,00 €",
+      "buyer": "Polícia de Segurança Pública",
+      "seller": "VELAS-AUTO COMERCIO DE VEICULOS, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749290"
+    },
+    {
+      "id": 15748366,
+      "title": "LOTE 2 – CIRCUITO N.º 2 -  ALUNOS COM NECESSIDADES EDUCATIVAS ESPECIAIS  CASA/ESCOLA E VICE-VERSA. O contrato tem por objeto o fornecimento de transportes escolares – Circuito n.º 2 – Alunos com Neces...",
+      "price": "20.119,86 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15748366"
+    },
+    {
+      "id": 15749672,
+      "title": "SERVIÇOS DE MANUTENÇÃO DOS EQUIPAMENTOS HIDRÁULICOS, ESTAÇÕES DE TRATAMENTO DE ÁGUAS RESIDUAIS E RESERVATÓRIOS, AFETOS AO CENTRO DE INTERPRETAÇÃO AMBIENTAL DAS FURNAS, ILHA DE SÃO MIGUEL",
+      "price": "18.803,58 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "SOUSA & GARCÊS, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749672"
+    },
+    {
+      "id": 15751107,
+      "title": "Aquisição de serviços de acolhimento, Curso de Português e programa cultural dos estagiários do programa Eurodisseia 2026.",
+      "price": "17.270,20 €",
+      "buyer": "Direção Regional de Qualificação Profissional e Emprego",
+      "seller": "Universidade dos Açores",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15751107"
+    },
+    {
+      "id": 15751328,
+      "title": "Aquisição de limpa bermas",
+      "price": "14.990,00 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "Vestia Santos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15751328"
+    },
+    {
+      "id": 15749733,
+      "title": "LOTE 6 - CIRCUITO N.º 6 - FREGUESIA DA SERRETA/EB1/JI DE SÃO MATEUS E CIRCUITO INVERSO. O contrato tem por objeto o fornecimento de transportes escolares –  LOTE 6 - CIRCUITO N.º 6 - FREGUESIA DA SERR...",
+      "price": "13.830,48 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749733"
+    },
+    {
+      "id": 15749689,
+      "title": "LOTE 4 – CIRCUITO N.º 4 - FREGUESIA DE SANTA BÁRBARA (CASA) /EB1/JI DE SANTA BÁRBARA/FREGUESIA DE SANTA BÁRBARA (CASA). O contrato tem por objeto o fornecimento de transportes LOTE 4 - CIRCUITO N.º 4 ...",
+      "price": "11.479,23 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749689"
+    },
+    {
+      "id": 15749583,
+      "title": "PRESTAÇÃO DE SERVIÇOS PARA AUDITOR EXTERNO DE CONTAS DO MUNICIPIO DA MADALENA",
+      "price": "9.816,96 €",
+      "buyer": "Município da Madalena",
+      "seller": "Velosa, Silva, Marques e Trabulo, SROC",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749583"
+    },
+    {
+      "id": 15748578,
+      "title": "LOTE 3 - TRANSPORTE FREGUESIA DE POSTO SANTO (CASA) /EB1/JI DE POSTO SANTO/FREGUESIA DE POSTO SANTO (CASA). O contrato tem por objeto o fornecimento de transportes escolares – LOTE 3 – CIRCUITO N.º 3 ...",
+      "price": "9.661,50 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "Centro Comunitário de Posto Santo",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15748578"
+    },
+    {
+      "id": 15749894,
+      "title": "LOTE 11 - CIRCUITO N.º 11 - TRANSPORTE DE ALUNOS IDA E VOLTA, NO ÂMBITO DAS AULAS DE PSICOMOTRICIDADE EM MEIO AQUÁTICO - TERÇAS FEIRAS. O contrato tem por objeto o fornecimento de transportes escolare...",
+      "price": "8.460,21 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749894"
+    },
+    {
+      "id": 15749785,
+      "title": "LOTE 10 - CIRCUITO N.º 10 - TRANSPORTE DE ALUNOS IDA E VOLTA, NO ÂMBITO DAS AULAS DE EQUITAÇÃO ADAPTADA, NO CENTRO EQUESTRE QUINTA DO MALHINHA - QUARTAS FEIRAS. O contrato tem por objeto o forneciment...",
+      "price": "8.200,00 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749785"
+    },
+    {
+      "id": 15752983,
+      "title": "Aquisição de contentores e papeleiras para receção de resíduos urbanos (RU), repartida pelos seguintes lotes:\n- Lote 1 - 200 unidades de contentores, de volume aproximado de 770 litros, tipo \"MGB 800\"...",
+      "price": "8.100,00 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "Ambi L, Unipessoal, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15752983"
+    },
+    {
+      "id": 15749758,
+      "title": "LOTE 9 - CIRCUITO N.º 9 - TRANSPORTE DE ALUNOS IDA E VOLTA, NO ÂMBITO DAS AULAS DE EQUITAÇÃO ADAPTADA, NO CENTRO EQUESTRE QUINTA DO MALHINHA - TERÇAS FEIRAS. O contrato tem por objeto o fornecimento d...",
+      "price": "7.949,95 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "VADIVAN AZORES – TRANSPORTE E TURISMO UNIPESSOAL LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15749758"
+    },
+    {
+      "id": 15748404,
+      "title": "Telefones tecnologia VOIP",
+      "price": "5.509,53 €",
+      "buyer": "Instituto da Segurança Social dos Açores, IPRA",
+      "seller": "MEO - Serviços de Comunicações e Multimédia, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "16-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15748404"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9539,
+        "title": "Privatização da Azores Airlines - Transparência exige divulgação dos candidatos",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "08/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9539"
+      },
+      {
+        "id": 9540,
+        "title": "Limitações de capacidade na Unidade de Neonatologia do Hospital Modular de Ponta Delgada",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "08/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9540"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24289,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 13/10/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24289"
+      },
+      {
+        "id": 24290,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Luís Garcia propõe rede transatlântica de intercâmbio: \"Açores são uma terra de oportunidades também para os jovens açor-descendentes\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24290"
+      },
+      {
+        "id": 24280,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Polícias sem meios nos Açores: O que tem feito o Governo Regional?",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24280"
+      },
+      {
+        "id": 24281,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige soluções de habitação para quem trabalha.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24281"
+      },
+      {
+        "id": 24282,
+        "title": "Nota de Imprensa da Representação Parlamentar do PPM - Iniciativa do PPM garante ao Corvo, pela primeira vez, financiamento do Fundo de Financiamento das Freguesias.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24282"
+      },
+      {
+        "id": 24283,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Nova unidade de azoto líquido continua por cumprir.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24283"
+      },
+      {
+        "id": 24284,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Via Vitorino Nemésio: CHEGA quer obras, não mais remendos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24284"
+      },
+      {
+        "id": 24285,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco questiona Governo Regional sobre discriminação dos professores dos Açores no pagamento da classificação de exames.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24285"
+      },
+      {
+        "id": 24286,
+        "title": "Comissão de Economia - Convocatória (Dia 13/10/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24286"
+      },
+      {
+        "id": 24287,
+        "title": "Comissão Política Geral - Convocatória (Dia 15/10/2026, pelas 15:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24287"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-09"
+}
