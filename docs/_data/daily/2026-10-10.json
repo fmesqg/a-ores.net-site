@@ -1,0 +1,77 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15755308,
+      "title": "Aquisição de serviços médicos de neurocirurgia ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Rui Rato & Rita Rato, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15755308"
+    },
+    {
+      "id": 15755309,
+      "title": "Aquisição de serviços médicos de oncologia ao HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Joana Rita de Sousa Póvoa",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15755309"
+    },
+    {
+      "id": 15755304,
+      "title": "Serviços de enfermagem ao HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Mariana Duarte Melo",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15755304"
+    },
+    {
+      "id": 15755305,
+      "title": "serviços de enfermagem ao HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Mónica Vanessa Costa Silva",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15755305"
+    },
+    {
+      "id": 15755306,
+      "title": "serviços de enfermagem ao HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Catarina da Silva Pires",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15755306"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9543,
+        "title": "Deposição de resíduos e vestígios de estruturas na Praia do Monte Verde após o MEO Monte Verde 2026",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "09/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9543"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-10"
+}
