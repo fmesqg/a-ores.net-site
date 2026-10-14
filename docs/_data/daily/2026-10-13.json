@@ -1,0 +1,374 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15764664,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE OPERAÇÃO DO CENTRO DE OPERAÇÕES ESPACIAIS, NO ÂMBITO DO PROGRAMA SPACE SURVEILLANCE AND TRACKING (SST) NOS ANOS DE 2026 A 2028",
+      "price": "735.000,00 €",
+      "buyer": "Direção-Geral de Armamento e Património da Defesa Nacional",
+      "seller": "RICARDO, DOMINGOS & BERGANO, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "06-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15764664"
+    },
+    {
+      "id": 15762915,
+      "title": "Fornecimento de 18150 refeições completas e 58650 refeições ligeiras para a EBI de\nCapelas, ano letivo 2026/2027.",
+      "price": "139.524,00 €",
+      "buyer": "Escola Básica Integrada de Capelas, Ponta Delgada",
+      "seller": "UNISELF - Sociedade de Restaurantes Públicos e Privados S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "11-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15762915"
+    },
+    {
+      "id": 15764049,
+      "title": "Serviços de manutenção de sistemas semafóricos instalados no concelho de Ponta Delgada",
+      "price": "102.773,10 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "E. Engenharia - Sistemas e Tecnologias de Informação, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "13-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15764049"
+    },
+    {
+      "id": 15762405,
+      "title": "Requalificação do parque infantil da Escola Básica e Secundária Tomás de Borba, Angra do Heroísmo, ilha Terceira",
+      "price": "92.068,82 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "Construtora Ideal da Terceira, Sa",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15762405"
+    },
+    {
+      "id": 15762363,
+      "title": "Aquisição de Camas e Colchões Hospitalares",
+      "price": "73.815,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Hospimédica LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15762363"
+    },
+    {
+      "id": 15764387,
+      "title": "Aquisição de Inertes",
+      "price": "73.100,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Britovale, Comércio e Indústria Materiais Construção, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15764387"
+    },
+    {
+      "id": 15762488,
+      "title": "Consulta Prévia para Aluguer de Máquina Giratória, Equipada com Balde com Operador/ Manobrador",
+      "price": "72.000,00 €",
+      "buyer": "Município de Nordeste",
+      "seller": "José de Simas Moniz & Filhos, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15762488"
+    },
+    {
+      "id": 15762601,
+      "title": "Consulta Prévia para Prestação de Serviços de Elaboração da 2.ª Revisão do Plano Diretor Municipal (PDM) do Nordeste",
+      "price": "70.000,00 €",
+      "buyer": "Município de Nordeste",
+      "seller": "Quaternaire Portugal - Consultoria para o Desenvolvimento, SA.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15762601"
+    },
+    {
+      "id": 15763098,
+      "title": "PRC/71/2026 - Contrato de aquisição de serviços de auditoria para certificação legal de contas da gerência da Unidade de Saúde da Ilha de São Jorge, no âmbito do Sistema de Normalização Contabilística...",
+      "price": "57.600,00 €",
+      "buyer": "Unidade de Saúde de Ilha de São Jorge",
+      "seller": "Oliveira, Reis & Associados, SROC, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15763098"
+    },
+    {
+      "id": 15763721,
+      "title": "aquisição do equipamento de cromatografia líquida ÄKTA pure 25 L e respetivos acessórios, licenças de software e instalação",
+      "price": "47.054,70 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "CYTIVA EUROPE GMBH SUC. EM PORTUGAL",
+      "procedure": "Contratação excluída II",
+      "signing_date": "13-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15763721"
+    },
+    {
+      "id": 15763938,
+      "title": "O presente Contrato tem como objeto a prestação do serviço de aluguer de maquinaria externa para a ilha da Terceira, para limpeza de bacias de retenção, reperfilamentos de cursos de água e apoio de em...",
+      "price": "41.050,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "NELSON ANANIAS CONTENTE UNIPESSOAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15763938"
+    },
+    {
+      "id": 15762294,
+      "title": "AQUISIÇÃO DE QUIOSQUES DE MADEIRA TRATADA PARA UTILIZAÇÃO PELOS SERVIÇOS DO MUNICIPIO DA HORTA, ILHA DO FAIAL",
+      "price": "30.000,00 €",
+      "buyer": "Município da Horta",
+      "seller": "TPE Açores Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15762294"
+    },
+    {
+      "id": 15762027,
+      "title": "contratação de serviços de consultoria jurídica para a RAEGE-Az",
+      "price": "25.740,00 €",
+      "buyer": "Associação RAEGE Açores - Rede Atlântica de Estações Geodinâmicas e Espaciais",
+      "seller": "Manuel Pereira Leite, Pedro Nascimento Cabral, Ricardo Nascimento Cabral, Nuno Goulart Almeida, Paula Tavares &amp; Associados-Sociedade de Advogados, SPRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "31-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15762027"
+    },
+    {
+      "id": 15763919,
+      "title": "PRC/34/2024 - Aquisição de prestação de serviços de auditoria para certificação legal de contas da gerência da Unidade de Saúde da Ilha de São Jorge, no âmbito do Sistema de Normalização Contabilístic...",
+      "price": "24.000,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Jorge",
+      "seller": "Oliveira, Reis & Associados, SROC, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-07-2024",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15763919"
+    },
+    {
+      "id": 15763854,
+      "title": "O presente Contrato tem como objeto a prestação do serviço de aluguer de maquinaria externa para a ilha do Faial, para reperfilamentos de cursos de água e apoio de emergência.",
+      "price": "19.900,00 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "RAFAEL MEDEIROS UNIPESSOAL, LDA.",
+      "procedure": "Concurso público",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15763854"
+    },
+    {
+      "id": 15765674,
+      "title": "aquisição de homogeneizador refrigerado de microtubos, no âmbito da operação PT-OPENSCREEN/CBA – Plataforma Regional de Descoberta de Moléculas (ACORES2030-FEDER-03425600)",
+      "price": "13.965,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Bioportugal",
+      "procedure": "Contratação excluída II",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15765674"
+    },
+    {
+      "id": 15764176,
+      "title": "Prestação de serviços de consultas médicas aos estudantes do polo de Ponta Delgada",
+      "price": "11.550,00 €",
+      "buyer": "Serviços de Ação Social da Universidade dos Açores",
+      "seller": "Rui Miguel Jorge Fontes ",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15764176"
+    },
+    {
+      "id": 15765041,
+      "title": "Prestação de Serviços de Assessoria Técnica de Atividades Aquáticas no Aquafit Health & Fitness Club",
+      "price": "1.960,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Carolina Roque Costa Matos",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15765041"
+    },
+    {
+      "id": 15765128,
+      "title": "Prestação de Serviços de Assessoria Técnica de Atividades Aquáticas no Aquafit Health & Fitness Club",
+      "price": "1.820,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Manuel Almeida Medeiros Vieira",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15765128"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9553,
+        "title": "Execução do PEPAC nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Russell Sousa PS, ...",
+        "date": "18/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9553"
+      },
+      {
+        "id": 9558,
+        "title": "Evolução do consumo de gasóleo agrícola",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "18/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9558"
+      },
+      {
+        "id": 9561,
+        "title": "Regulamentação do Sistema Elétrico dos Açores - incumprimento do prazo legal",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Russell Sousa PS, ...",
+        "date": "22/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9561"
+      },
+      {
+        "id": 9569,
+        "title": "Pagamentos em atraso no âmbito do SOLENERGE",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Russell Sousa PS, ...",
+        "date": "24/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9569"
+      },
+      {
+        "id": 9571,
+        "title": "Valores mensais do Imposto sobre os Produtos Petrolíferos e Energéticos aplicado na Região Autónoma dos Açores em 2026",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "24/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9571"
+      },
+      {
+        "id": 9576,
+        "title": "Encerramento do bar do Terminal Marítimo da Horta e reposição do serviço aos passageiros",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "28/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9576"
+      },
+      {
+        "id": 9615,
+        "title": "Medidas para combater o aumento do custo de vida nos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9615"
+      },
+      {
+        "id": 9616,
+        "title": "Cais Multiusos do Porto da Praia da Vitória",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9616"
+      },
+      {
+        "id": 9617,
+        "title": "Projeto-Piloto Semana de Quatro Dias na Administração Pública Regional",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9617"
+      },
+      {
+        "id": 9618,
+        "title": "Transportes marítimo de mercadorias falha novamente aos corvinos",
+        "state_change": null,
+        "requesters": "Lubélio Mendonça PS, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9618"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24299,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Topo. Bombeiros de São Jorge com mais uma tripulação para servir a população 24 horas por dia.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24299"
+      },
+      {
+        "id": 24300,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige relatório sobre semana de quatro dias e questiona manutenção das 32 horas de trabalho.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24300"
+      },
+      {
+        "id": 24301,
+        "title": "Debate de urgência sobre \"Saúde Financeira dos Hospitais da Região e as suas implicações no Serviço Regional de Saúde\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24301"
+      },
+      {
+        "id": 24302,
+        "title": "Interpelação ao Governo Regional sobre a Crise da Habitação",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24302"
+      },
+      {
+        "id": 24303,
+        "title": "Debate de Urgência sobre \"Políticas Públicas de Incentivo ao Turismo\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24303"
+      },
+      {
+        "id": 24305,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige medidas concretas para travar o aumento do custo de vida.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24305"
+      },
+      {
+        "id": 24306,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/A insiste na profissionalização e financiamento dos bombeiros.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24306"
+      },
+      {
+        "id": 24307,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 19/10/2026, pelas 11:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24307"
+      },
+      {
+        "id": 24309,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Esclarecimento - Proposta do Bloco que retira obrigação de utilização de coleira refere-se aos cães que estão nos Centros de Recolha Oficial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24309"
+      },
+      {
+        "id": 24310,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa na Gala Anual de Liderança e Prémios 2026 da PALCUS - Portuguese American Leadership Council of the United States, no Coliseu Micaelense, ilha de São Miguel",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24310"
+      },
+      {
+        "id": 24311,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Sessão de Abertura da Celebração do I.º Dia Regional do Arquiteto Açores 2026, no Arquipélago - Centro de Artes Contemporâneas, ilha de São Miguel",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24311"
+      },
+      {
+        "id": 24312,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia participa no jantar integrado no Seminário Internacional promovido pela EURORAI - European Organization of Regional Audit Institutions, a convite do Tribunal de Contas de Portugal - Secção Regional dos Açores, no Grand Hotel Açores Atlântico, ilha de São Miguel",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24312"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3019,
+        "number": "100",
+        "date": "16/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3019"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-13"
+}
