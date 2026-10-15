@@ -1,0 +1,290 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15772108,
+      "title": "AQUISIÇÃO DE SERVIÇOS MARITIMOS DE TRIPULAÇÃO E GESTÃO DE TRIPULAÇÃO PARA LANCHA DE PILOTOS NOS PORTOS DA PRAIA DA VITÓRIA E ANGRA DO HEROÍSMO",
+      "price": "360.000,00 €",
+      "buyer": "Portos dos Açores, SA",
+      "seller": "S&C - Gestão de Navios e Tripulações, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15772108"
+    },
+    {
+      "id": 15768862,
+      "title": "AQUISIÇÃO DE DATA CENTER",
+      "price": "239.430,00 €",
+      "buyer": "Lotaçor - Serviço de Lotas dos Açores, SA",
+      "seller": "WEBA - Gestão e tecnologias de informação, lda.",
+      "procedure": "Concurso público",
+      "signing_date": "13-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15768862"
+    },
+    {
+      "id": 15767753,
+      "title": "Aquisição de 44,460 toneladas (quarenta e quatro toneladas e quatrocentos e sessenta quilogramas) de rodenticida",
+      "price": "150.719,40 €",
+      "buyer": "Direção Regional da Agricultura, Veterinária e Alimentação",
+      "seller": "NOVAGRIL LISCAMPO, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "08-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15767753"
+    },
+    {
+      "id": 15768940,
+      "title": "ACOMPANHAMENTO DOS PARÂMETROS GEOQUÍMICOS E GEOFÍSICOS NO INTERIOR DA FURNA DO ENXOFRE, ILHA GRACIOSA, COM VISTA À EMISSÃO DE ALERTAS",
+      "price": "74.951,44 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "CIVISA – CENTRO DE INFORMAÇÃO E VIGILÂNCIA SISMOVULCÂNICA DOS AÇORES",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15768940"
+    },
+    {
+      "id": 15772054,
+      "title": "Aquisição de 36.923 litros de gasóleo para a Direção Regional das Obras Públicas, Região Autónoma dos Açores",
+      "price": "57.599,88 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "J.H. Ornelas & Cª. SUC., LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15772054"
+    },
+    {
+      "id": 15772255,
+      "title": "Aquisição de Projetor de Cinema Laser para o Centro Cultural da Ilha Graciosa",
+      "price": "42.500,00 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "Dcinema Unipessoal Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "11-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15772255"
+    },
+    {
+      "id": 15768820,
+      "title": "Projeto para reabilitação da adutora da nascente do Espigão",
+      "price": "33.250,00 €",
+      "buyer": "Nordeste Ativo, EM, SA",
+      "seller": "NORAQUA, Consultores de Engenharia, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "26-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15768820"
+    },
+    {
+      "id": 15767448,
+      "title": "Aquisição de Serviços de Fiscalização e Coordenação de Segurança em Obra da Empreitada de Reabilitação da Escola das Cinco Ribeiras",
+      "price": "26.752,00 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "Costa Poim - Fiscalização, Estudos e Projetos de Engenharia Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15767448"
+    },
+    {
+      "id": 15772171,
+      "title": "aquisição prevista de 88 944 (oitenta e oito mil, novecentos e quarenta e quatro) embalagens de 200 ml de leite meio-gordo, não concentrado nem adicionado de açúcar ou de outros edulcorantes, tratado ...",
+      "price": "26.340,63 €",
+      "buyer": "Escola Básica Integrada de Canto da Maia",
+      "seller": "Lactaçores - União das Cooperativas de Lacticínios dos Açores, UCRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15772171"
+    },
+    {
+      "id": 15770500,
+      "title": "FORNECIMENTO CONTÍNUO DE PEIXE PARA A BA4 – LOTE A1",
+      "price": "17.706,87 €",
+      "buyer": "Estado Maior da Força Aérea",
+      "seller": "Frimário",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15770500"
+    },
+    {
+      "id": 15768916,
+      "title": "Prestação de Serviços de Assessoria Técnica, Fiscalização e Coordenação de Segurança e Saúde da Empreitada de Construção do Centro de Interpretação Ambiental do Algar do Carvão, Angra do Heroísmo, ilh...",
+      "price": "15.730,18 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "BUILDPRINT - SERVIÇOS DE ENGENHARIA E CONSULTORIA, UNIPESSOAL, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15768916"
+    },
+    {
+      "id": 15768272,
+      "title": "Aquisição de bens alimentares – carnes e seus derivados, destinados ao funcionamento do serviço de refeições da Escola Profissional da Praia da Vitória, pelo período de 12 meses, de acordo com as espe...",
+      "price": "12.248,42 €",
+      "buyer": "Fundação de Ensino Profissional da Praia da Vitória",
+      "seller": "Sicosta - Sociedade Industrial de Carnes, Ldª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15768272"
+    },
+    {
+      "id": 15772231,
+      "title": "FORNECIMENTO DE EMBALAGENS DE LEITE PARA ANO LETIVO 2026/2027",
+      "price": "6.188,67 €",
+      "buyer": "Escola Básica Integrada do Nordeste",
+      "seller": "Lactaçores - União das Cooperativas de Lacticínios dos Açores, UCRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "08-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15772231"
+    },
+    {
+      "id": 15769053,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "1.202,50 €",
+      "buyer": "USI Santa Maria",
+      "seller": "JM FARMACEUTICA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15769053"
+    },
+    {
+      "id": 15767035,
+      "title": "Sem. Transportes Marítimos: Impacto na Economia Açoriana | Convite-29/01 a 01/02-Rita Candeias  - Ilha terceira",
+      "price": "364,84 €",
+      "buyer": "Instituto da Mobilidade e dos Transportes, IP",
+      "seller": "SMILE - VIAGENS E TURISMO, UNIPESSOAL, LDA\t\t",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "29-01-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15767035"
+    },
+    {
+      "id": 15769026,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "301,20 €",
+      "buyer": "USI Santa Maria",
+      "seller": "MERCK SHARP DOHME",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "18-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15769026"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9620,
+        "title": "Beneficiários do Complemento Regional de Pensão e Complemento Regional ao Abono de Família",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9620"
+      },
+      {
+        "id": 9621,
+        "title": "Dados sobre habitação",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9621"
+      },
+      {
+        "id": 9622,
+        "title": "Dados sobre remuneração complementar, derrama regional, IRS, Taxa Adicional de Solidariedade e ISP",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9622"
+      },
+      {
+        "id": 9623,
+        "title": "Deslocações oficiais do Secretário Regional dos Assuntos Parlamentares e Comunidades e do Diretor Regional das Comunidades",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9623"
+      },
+      {
+        "id": 9624,
+        "title": "Estudo do Instituto da Segurança Social dos Açores sobre os Custos das Respostas Sociais",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9624"
+      },
+      {
+        "id": 9625,
+        "title": "Serviços Jurídicos relacionados com o Hospital do Divino Espírito Santo e o Hospital Modular",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9625"
+      },
+      {
+        "id": 9626,
+        "title": "Cativações orçamentais na Região Autónoma dos Açores desde 2024",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9626"
+      },
+      {
+        "id": 9434,
+        "title": "Elevada taxa de cesarianas nos Açores II",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "23/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9434"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24313,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA  exige esclarecimentos sobre viagens às comunidades e que resultados implicam para os Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24313"
+      },
+      {
+        "id": 24314,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige saber quantos milhões o Governo Regional tem bloqueado nos orçamentos dos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24314"
+      },
+      {
+        "id": 24315,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores acusa Governos de Bolieiro e Montenegro de colocarem em risco salários e futuro das IPSS e Misericórdias dos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24315"
+      },
+      {
+        "id": 24316,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Quando será concluído estudo que pode garantir mais financiamento às IPSS?",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24316"
+      },
+      {
+        "id": 24317,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco poupa 6 milhões de euros ao erário público com redução de taxa de juros pagos à EDA.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24317"
+      },
+      {
+        "id": 24318,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia marca presença no \"Encontro Comemorativo dos 46 anos do Estatuto Político-Administrativo da Região Autónoma dos Açores\", no Palácio da Conceição, em Ponta Delgada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24318"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3021,
+        "number": "102",
+        "date": "18/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3021"
+      }
+    ],
+    "audi_gr": [
+      {
+        "id": 3449,
+        "title": "Assegura a execução do Regulamento (UE) 2023/988 - relativo à segurança geral dos produtos - MECT - (Reg DL 386/XXV/2026)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/2/3449"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-14"
+}
