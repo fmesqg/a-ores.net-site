@@ -1,0 +1,499 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15792659,
+      "title": "Aquisição de Viaturas – 26IMO001",
+      "price": "78.500,00 €",
+      "buyer": "EDA - ELECTRICIDADE DOS AÇORES, S.A.",
+      "seller": "Workx4Pros - Soluções Especiais, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15792659"
+    },
+    {
+      "id": 15790772,
+      "title": "Concurso Público para Aluguer de Camião Cisterna, incluindo Motorista, para o ano de 2027",
+      "price": "78.000,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "JPN - Desentupimento de Fossas e Esgotos, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15790772"
+    },
+    {
+      "id": 15791203,
+      "title": "aquisição de 10 521 (dez mil, quinhentos e vinte e uma) refeições completas e 13 996,00 (treze mil, novecentos e noventa e seis) refeições ligeiras no decurso do ano letivo de 2026/2027",
+      "price": "77.964,06 €",
+      "buyer": "Escola Básica do 2.º e 3.º Ciclos e Secundário Padre Manuel Azevedo da Cunha",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "19-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15791203"
+    },
+    {
+      "id": 15793027,
+      "title": "serviços médicos de obstetrícia/ginecologia pelo HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Verdade Incontestável, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15793027"
+    },
+    {
+      "id": 15794045,
+      "title": "serviços médicos de imagiologia pelo HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "AFV - Serviços Médicos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15794045"
+    },
+    {
+      "id": 15793622,
+      "title": "Construção de trilho designado  Percurso Pedestre à Poça",
+      "price": "58.900,00 €",
+      "buyer": "Freguesia da Ribeirinha",
+      "seller": "Construções Hugo Soares",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-05-2025",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15793622"
+    },
+    {
+      "id": 15794042,
+      "title": "serviços médicos de dermatologia pelo HSEIT, EPER",
+      "price": "50.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Clínica Dr. Henrique Catarino, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15794042"
+    },
+    {
+      "id": 15794039,
+      "title": "serviços médicos de estomatologia pelo HSEIT, EPER",
+      "price": "35.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "HEALTHCARE, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15794039"
+    },
+    {
+      "id": 15791605,
+      "title": "Ajuste Direto N.º 6 Aquisição de Serviços de Transporte em Regime de Carreira Pública 2026/2027",
+      "price": "34.538,51 €",
+      "buyer": "Escola Básica e Secundária Armando Côrtes-Rodrigues",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15791605"
+    },
+    {
+      "id": 15791709,
+      "title": "Aquisição de Viaturas – 26IMO001",
+      "price": "30.500,00 €",
+      "buyer": "EDA - ELECTRICIDADE DOS AÇORES, S.A.",
+      "seller": "Workx4Pros - Soluções Especiais, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15791709"
+    },
+    {
+      "id": 15793619,
+      "title": "serviços de enfermagem pelo HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Maria Isabel Nunes Pereira",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15793619"
+    },
+    {
+      "id": 15793659,
+      "title": "serviços de enfermagem pelo HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Doriana Meneses Andrade",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15793659"
+    },
+    {
+      "id": 15793601,
+      "title": "serviços de enfermagem pelo HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Juliana Coelho Melo",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15793601"
+    },
+    {
+      "id": 15792414,
+      "title": "Aquisição de Viaturas – 26IMO001",
+      "price": "25.500,00 €",
+      "buyer": "EDA - ELECTRICIDADE DOS AÇORES, S.A.",
+      "seller": "Workx4Pros - Soluções Especiais, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15792414"
+    },
+    {
+      "id": 15790786,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE MANUTENÇÃO DAS ZONAS VERDES EM PARQUES DE ESTACIONAMENTO",
+      "price": "23.999,76 €",
+      "buyer": "Câmara Municipal de Angra do Heroísmo",
+      "seller": "João Cota unipessoal lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15790786"
+    },
+    {
+      "id": 15794217,
+      "title": "serviços médicos de cirurgia vascular ao HSEIT, EPER",
+      "price": "20.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Miguel Oliveira Maia, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15794217"
+    },
+    {
+      "id": 15792605,
+      "title": "Ajuste Direto n.º 04/2026 – Fornecimento de Embalagens de Leite para a Escola Básica Integrada de Arrifes – Ano Letivo de 2026/2027",
+      "price": "17.101,75 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "Lactaçores - União das Cooperativas de Lacticínios dos Açores, UCRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15792605"
+    },
+    {
+      "id": 15793610,
+      "title": "Fornecimento de leite escolar à EBS da Madalena",
+      "price": "15.750,00 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Pronicol - Produtos Lácteos, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15793610"
+    },
+    {
+      "id": 15792413,
+      "title": "Ajuste Direto Por Lotes N .º 5 Aquisição de Serviços Regulares Especializados de Transpores de Carreira de Aluguer 2026/2027",
+      "price": "15.480,00 €",
+      "buyer": "Escola Básica e Secundária Armando Côrtes-Rodrigues",
+      "seller": "Resendes Damião Soares Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15792413"
+    },
+    {
+      "id": 15792573,
+      "title": "Aquisição de serviços - Elaboração do Projeto de Conservação e Manutenção da Escola EB-JI Professor António dos Santos Botelho",
+      "price": "14.900,00 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "TECNICOUTO, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15792573"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9552,
+        "title": "Estudo sobre o impacto dos manuais digitais no sistema educativo regional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Eduardo PS, ...",
+        "date": "17/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9552"
+      },
+      {
+        "id": 9562,
+        "title": "Atrasos no pagamento dos apoios atribuídos no âmbito do Programa Loja+",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "22/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9562"
+      },
+      {
+        "id": 9566,
+        "title": "Processo de privatização da SATA Internacional - Azores Airlines",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "24/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9566"
+      },
+      {
+        "id": 9583,
+        "title": "Execução do Plano e situação financeira a 30 de setembro de 2026",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "30/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9583"
+      },
+      {
+        "id": 9584,
+        "title": "Alargamento da Rua dos Moinhos na freguesia de Fajã de Cima - Ponta Delgada",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Cristina Calisto PS, ...",
+        "date": "30/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9584"
+      },
+      {
+        "id": 9587,
+        "title": "Corvo continua sem fisioterapia apesar do Governo Regional ter anunciado a sua reposição para junho passado",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Lubélio Mendonça PS, ...",
+        "date": "01/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9587"
+      },
+      {
+        "id": 9630,
+        "title": "Manutenção da prioridade concursal dos docentes contratados abrangidos pelos incentivos à estabilidade em escolas carenciadas, em situações de ausência por doença",
+        "state_change": null,
+        "requesters": "Inês Sá PS, ...",
+        "date": "16/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9630"
+      },
+      {
+        "id": 9631,
+        "title": "Aplicação nos Açores do apoio extraordinário às entidades do setor social previsto no Decreto-Lei n.º 80-A/2026, de 31 de março",
+        "state_change": null,
+        "requesters": "Marco Martins PS, ...",
+        "date": "19/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9631"
+      },
+      {
+        "id": 9224,
+        "title": "Retirada dos pontos remanescentes aos Técnicos Superiores de Diagnóstico e Terapêutica em regime de contrato individual de trabalho no Hospital da Horta, EPE",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Inês Sá PS, ...",
+        "date": "30/03/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9224"
+      },
+      {
+        "id": 9384,
+        "title": "Execução do Estatuto do Dador de Sangue e Evolução da Dádiva de Sangue na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "25/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9384"
+      },
+      {
+        "id": 9385,
+        "title": "Gestão, ocupação e disponibilização do parque habitacional público da Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "25/06/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9385"
+      },
+      {
+        "id": 9421,
+        "title": "Custos com deslocação de profissionais de saúde nos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Carlos Silva PS, ...",
+        "date": "17/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9421"
+      },
+      {
+        "id": 9450,
+        "title": "Tecnopolo MARTEC - modelo de gestão e estratégia de funcionamento",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "31/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9450"
+      },
+      {
+        "id": 9483,
+        "title": "Situação financeira, gestão e eventual demissão do Presidente do Conselho de Administração da LOTAÇOR",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "14/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9483"
+      },
+      {
+        "id": 9489,
+        "title": "Bombeiros deixam de assegurar o serviço nos aeroportos da Região concessionados à ANA/VINCI",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Inês Sá PS, ...",
+        "date": "19/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9489"
+      },
+      {
+        "id": 9492,
+        "title": "Habitação no Nordeste e terreno na freguesia da Salga",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "21/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9492"
+      },
+      {
+        "id": 9502,
+        "title": "Rendas Sociais em atraso - esclarecimentos adicionais",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "24/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9502"
+      },
+      {
+        "id": 9523,
+        "title": "Instalação da Google no Tecnoparque da Lagoa",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9523"
+      },
+      {
+        "id": 9526,
+        "title": "Situação da rola-turca (Streptopelia decaocto) nos Açores e medidas de controlo populacional implementadas",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "01/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9526"
+      },
+      {
+        "id": 9533,
+        "title": "Execução financeira, física e material do PRR-Açores, reprogramação de investimentos e avaliação dos resultados alcançados",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9533"
+      },
+      {
+        "id": 9536,
+        "title": "Governo omite informação essencial sobre o Quadro Plurianual de Programação Orçamental 2027-2030",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Carlos Silva PS, ...",
+        "date": "07/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9536"
+      },
+      {
+        "id": 9539,
+        "title": "Privatização da Azores Airlines - Transparência exige divulgação dos candidatos",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "08/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9539"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24331,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA defende mais apoio nas escolas para crianças com necessidades especiais.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24331"
+      },
+      {
+        "id": 24332,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA  reconhece reivindicações de bolseiras de apoio extraordinário.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24332"
+      },
+      {
+        "id": 24333,
+        "title": "Relatório a que se refere o artigo 103.º do Regimento da ALRAA - Ante-Período Legislativo de Outubro 2026- Comissão de Política Geral",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24333"
+      },
+      {
+        "id": 24335,
+        "title": "Relatório a que se refere o artigo 103.º do Regimento da ALRAA - Ante-Período Legislativo de Outubro de 2026 - Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24335"
+      },
+      {
+        "id": 24336,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Sessão Solene das comemorações do Dia Regional do Engenheiro Açores 2026, no Museu dos Baleeiros, Lajes do Pico",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24336"
+      },
+      {
+        "id": 24337,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Sessão Solene do Seminário Novas Drogas e Populações Vulneráveis: Desafios do Século, promovido pela Associação Portuguesa de Patologia Dual - APPD, no Polo de Ponta Delgada da Universidade dos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24337"
+      },
+      {
+        "id": 24338,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Sucessão de demissões revela \"caos\" na gestão política da Segurança Social e prejudica instituições açorianas, afirma PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24338"
+      },
+      {
+        "id": 24339,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/A entrega projecto-piloto para controlo de animais urbanos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24339"
+      },
+      {
+        "id": 24340,
+        "title": "Relatório a que se refere o artigo 103.º do Regimento da ALRAA - Ante-Período Legislativo de Outubro de 2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24340"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-19"
+}
