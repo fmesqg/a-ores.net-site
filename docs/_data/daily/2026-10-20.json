@@ -1,0 +1,386 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15795889,
+      "title": "Aquisição de serviços de vigilância e segurança nos Edifícios e Infraestruturas afetos à Secretaria Regional do Turismo, Mobilidade e Infraestruturas, na ilha de S. Miguel.",
+      "price": "519.172,48 €",
+      "buyer": "Secretaria Regional do Turismo, Mobilidade e Infraestruturas",
+      "seller": "COPS – COMPANHIA OPERACIONAL DE SEGURANÇA, UNIPESSOAL LDA.,",
+      "procedure": "Concurso público",
+      "signing_date": "15-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15795889"
+    },
+    {
+      "id": 15795562,
+      "title": "Aquisição e fornecimento de Peças de Reposição para Motores Wartsila",
+      "price": "153.869,84 €",
+      "buyer": "EDA - Electricidade dos Açores, SA",
+      "seller": "Wartsila Portugal, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15795562"
+    },
+    {
+      "id": 15797637,
+      "title": "serviços médicos no serviço de imagiologia pelo HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Modersigns - Serviços Médicos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15797637"
+    },
+    {
+      "id": 15797818,
+      "title": "serviços médicos de imagiologia pelo HSEIT, EPER",
+      "price": "74.999,99 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Isabel Vidal Serviços Médicos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15797818"
+    },
+    {
+      "id": 15796081,
+      "title": "Consulta Prévia para Aluguer de Camião, com Operador/ Motorista e de Trator + Reboque de Máquina ou Banheira, com Operador/ Motorista",
+      "price": "70.600,00 €",
+      "buyer": "Município de Nordeste",
+      "seller": "José de Simas Moniz & Filhos, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15796081"
+    },
+    {
+      "id": 15796321,
+      "title": "Ajuste Direto nº 2/2026/EBIG",
+      "price": "30.990,96 €",
+      "buyer": "Escola Básica Integrada de Ginetes",
+      "seller": "Uniself - Sociedade de Restaurantes Públicos e Privados, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15796321"
+    },
+    {
+      "id": 15795996,
+      "title": "Ajuste Direto por Lotes nº 1/2026/EBIG",
+      "price": "28.168,47 €",
+      "buyer": "Escola Básica Integrada de Ginetes",
+      "seller": "Vale do Ave, Transportes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15795996"
+    },
+    {
+      "id": 15796699,
+      "title": "Ajuste direto por lotes-aquisição de serviços regulares especializados de transporte coletivo durante o ano letivo de 2026/2027 para a Escola Básica e Secundária  de São Roque do Pico",
+      "price": "22.595,04 €",
+      "buyer": "Escola Básica e Secundária de São Roque do Pico",
+      "seller": "Rumo à Natureza, Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15796699"
+    },
+    {
+      "id": 15795241,
+      "title": "Aquisição de Micrótomo de Minot semi automático",
+      "price": "21.952,01 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "LEICA MICROSISTEMAS-INSTRUMENTOS DE PRECISÃO, S.U., LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15795241"
+    },
+    {
+      "id": 15797123,
+      "title": "Ajuste direto por lotes-aquisição de serviços regulares especializados de transporte coletivo durante o ano letivo de 2026/2027 para a Escola Básica e Secundária  de São Roque do Pico",
+      "price": "19.047,60 €",
+      "buyer": "Escola Básica e Secundária de São Roque do Pico",
+      "seller": "Rumo à Natureza, Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15797123"
+    },
+    {
+      "id": 15796083,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "15.000,50 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Doçuras do Pico Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15796083"
+    },
+    {
+      "id": 15796293,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "10.726,15 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Pronicol - Produtos Lácteos, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15796293"
+    },
+    {
+      "id": 15795359,
+      "title": "Concurso Público para Aluguer de Camião Cisterna, incluindo Motorista",
+      "price": "9.950,00 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "JPN - Desentupimento de Fossas e Esgotos, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "19-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15795359"
+    },
+    {
+      "id": 15797194,
+      "title": "Ajuste direto por lotes-aquisição de serviços regulares especializados de transporte coletivo durante o ano letivo de 2026/2027 para a Escola Básica e Secundária  de São Roque do Pico",
+      "price": "8.760,96 €",
+      "buyer": "Escola Básica e Secundária de São Roque do Pico",
+      "seller": "Rumo à Natureza, Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15797194"
+    },
+    {
+      "id": 15796274,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "7.700,00 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Unicol - Cooperativa Agrícola CRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15796274"
+    },
+    {
+      "id": 15796306,
+      "title": "Ajuste direto n.º 4/2026/RI - Papelaria Escolar",
+      "price": "7.602,36 €",
+      "buyer": "Escola Básica Integrada de Roberto Ivens",
+      "seller": "plano a papelaria",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15796306"
+    },
+    {
+      "id": 15797957,
+      "title": "Ajuste direto por lotes-aquisição de serviços regulares especializados de transporte coletivo durante o ano letivo de 2026/2027 para a Escola Básica e Secundária  de São Roque do Pico",
+      "price": "6.960,72 €",
+      "buyer": "Escola Básica e Secundária de São Roque do Pico",
+      "seller": "PICODRIVE, UNIPESSOAL,LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15797957"
+    },
+    {
+      "id": 15796183,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "6.117,36 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Picongel, Comércio e Distribuição de P. Alimentares, Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15796183"
+    },
+    {
+      "id": 15795384,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "5.255,00 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Padaria Silva",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15795384"
+    },
+    {
+      "id": 15798025,
+      "title": "Ajuste direto por lotes-aquisição de serviços regulares especializados de transporte coletivo durante o ano letivo de 2026/2027 para a Escola Básica e Secundária  de São Roque do Pico",
+      "price": "4.807,92 €",
+      "buyer": "Escola Básica e Secundária de São Roque do Pico",
+      "seller": "PICODRIVE, UNIPESSOAL,LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15798025"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9578,
+        "title": "Impacto económico, social e turístico decorrente do encerramento da operação da Ryanair nos Açores e plano de mitigação de emergência para o setor",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Luís Vieira Leal PS, ...",
+        "date": "29/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9578"
+      },
+      {
+        "id": 9585,
+        "title": "Fundo de Desenvolvimento de Rotas Aéreas dos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Carlos Silva PS, ...",
+        "date": "30/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9585"
+      },
+      {
+        "id": 9588,
+        "title": "Concurso público para a reabilitação da Escola Básica e Secundária das Flores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "01/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9588"
+      },
+      {
+        "id": 9590,
+        "title": "Ponto de situação da execução do troço de Santo António da Variante às Capelas",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "01/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9590"
+      },
+      {
+        "id": 9633,
+        "title": "Solicitação do projeto global de infraestruturas do Parque Habitacional do Aeroporto de Santa Maria e documentação apresentada na sessão pública",
+        "state_change": null,
+        "requesters": "João Vasco Costa PS, ...",
+        "date": "19/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9633"
+      },
+      {
+        "id": 9634,
+        "title": "Relatório final sobre os custos das respostas sociais nos Açores",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "19/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9634"
+      },
+      {
+        "id": 9550,
+        "title": "Aplicação das receitas da ecotaxa marítima",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Marlene Damião PS, ...",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9550"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24352,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Contas dos Hospitais dos Açores: Nuno Barata (IL) exige transparência e um plano para reduzir as listas de espera",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24352"
+      },
+      {
+        "id": 24353,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige mudanças na saúde para que todos os açorianos tenham acesso a cuidados",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24353"
+      },
+      {
+        "id": 24354,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Hospitais. PSD/Açores destaca aumento da resposta sem abdicar do rigor financeiro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24354"
+      },
+      {
+        "id": 24355,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Proposta do PS/Açores para criar um estatuto com direitos e apoios para quem dirige associações de forma voluntária chumbada pelo PSD e Chega",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24355"
+      },
+      {
+        "id": 24356,
+        "title": "Comissão de Economia - Convocatória (Dia 30/10/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24356"
+      },
+      {
+        "id": 24357,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores aprova Estatuto do Dirigente Desportivo Voluntário",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24357"
+      },
+      {
+        "id": 24358,
+        "title": "Transformação de pergunta com pedido de resposta escrita em pergunta oral ao abrigo do n.º 3 do artigo 182.º do Regimento da Assembleia Legislativa da Região Autónom ados Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24358"
+      },
+      {
+        "id": 24341,
+        "title": "Perguntas com resposta escrita transformadas em perguntas orais, ao abrigo do n.º 3 do artigo 182.º do Regimento da ALRAA",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24341"
+      },
+      {
+        "id": 24342,
+        "title": "Retirada da transformação de pergunta com pedido de resposta escrita em pergunta oral - Requerimento n.º 758/XIII (BE) - Tecnopolo MARTEC - modelo de gestão e estratégia de funcionamento",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24342"
+      },
+      {
+        "id": 24343,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA propõe gestão privada dos hospitais da Região para melhorar a saúde dos açorianos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24343"
+      },
+      {
+        "id": 24344,
+        "title": "Relatório da atividade da Assembleia Legislativa da Região Autónoma dos Açores, 1.ª sessão legislativa da XIII Legislatura",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24344"
+      },
+      {
+        "id": 24345,
+        "title": "Relatório da atividade da Assembleia Legislativa da Região Autónoma dos Açores, 2.ª sessão legislativa da XIII Legislatura",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24345"
+      },
+      {
+        "id": 24346,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à VIII Gala da Associação de Futebol da Horta - 96º Aniversário, no Teatro Faialense, ilha do Faial",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24346"
+      },
+      {
+        "id": 24349,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS/Açores defende maior comparticipação financeira da República na Saúde e exige redução sustentada das listas de espera",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24349"
+      },
+      {
+        "id": 24350,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores quer acesso mais rápido aos cuidados de saúde e hospitais com contas equilibradas e mais eficientes",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24350"
+      },
+      {
+        "id": 24351,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Política do Governo da coligação para a Saúde é uma política falhada",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24351"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3856,
+        "title": "Projeto-piloto destinado à gestão das populações de animais urbanos",
+        "author": "PAN",
+        "topic": "Bem-estar animal",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3856"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3535,
+        "title": "Intervenção da Deputada Olivéria Santos do CH - Apresentação do Debate de urgência sobre “Saúde Financeira dos Hospitais da Região e as suas implicações no Serviço Regional de Saúde”.",
+        "date": "20/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3535"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-20"
+}
