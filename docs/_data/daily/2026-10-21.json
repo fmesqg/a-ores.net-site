@@ -1,0 +1,232 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9456,
+        "title": "Realização de trilhos não homologados na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "03/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9456"
+      },
+      {
+        "id": 9515,
+        "title": "Utilização de canhões sonoros para dispersão de aves em Santa Luzia, Pico",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9515"
+      },
+      {
+        "id": 9540,
+        "title": "Limitações de capacidade na Unidade de Neonatologia do Hospital Modular de Ponta Delgada",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "08/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9540"
+      },
+      {
+        "id": 9543,
+        "title": "Deposição de resíduos e vestígios de estruturas na Praia do Monte Verde após o MEO Monte Verde 2026",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "09/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9543"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24359,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco acusa governo de obrigar hospitais a escolher entre recorrer a falsos recibos verdes ou deixar doentes sem resposta",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24359"
+      },
+      {
+        "id": 24360,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende maior autonomia na contratação de profissionais de saúde para os hospitais da Região",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24360"
+      },
+      {
+        "id": 24361,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Contratação de profissionais de saúde é necessária, mas não pode ser a qualquer custo",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24361"
+      },
+      {
+        "id": 24362,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores avança com proposta para garantir que a Região mantém poder de decisão sobre fundos europeus",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24362"
+      },
+      {
+        "id": 24363,
+        "title": "Nota Informativa da Presidência da ALRAA - Assembleia Legislativa e Universidade dos Açores promovem colóquio sobre os 50 anos da Autonomia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24363"
+      },
+      {
+        "id": 24364,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - PS e PSD responsáveis pela crise da habitação: Nuno Barata defende mais oferta e simplificação das regras para responder à crise da habitação",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24364"
+      },
+      {
+        "id": 24365,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Governo tem falhado e nunca houve um planeamento da habitação a longo prazo",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24365"
+      },
+      {
+        "id": 24366,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS defende continuidade do investimento na habitação e preparação do período pós-PRR",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24366"
+      },
+      {
+        "id": 24367,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores denuncia falta de respostas do Governo Regional para a crise da habitação",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24367"
+      },
+      {
+        "id": 24368,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia promove o colóquio \"A Autonomia Açoriana no Portugal Democrático: Balanço e Perspetivas\", na Aula Magna e no Auditório Norte da Universidade dos Açores, em Ponta Delgada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24368"
+      },
+      {
+        "id": 24370,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - É preciso coragem política para responder à crise da Habitação: regulação do AL e mais investimento público são parte da solução",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24370"
+      },
+      {
+        "id": 24371,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 27/10/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24371"
+      },
+      {
+        "id": 24372,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Não basta dar dinheiro quando alojamento estudantil depende de casas que não existem",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24372"
+      },
+      {
+        "id": 24373,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/A vê aprovada extensão do serviço de vídeo-interpretação para pessoas surdas em toda a administração pública",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24373"
+      },
+      {
+        "id": 24374,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca investimento na Habitação e aponta execução total do PRR na Região",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24374"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3026,
+        "number": "99",
+        "date": "15/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3026"
+      },
+      {
+        "id": 3023,
+        "number": "103",
+        "date": "20/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3023"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3857,
+        "title": "Recomenda ao Governo Regional dos Açores o reforço da capacidade da Rede de Centros de Atividades de Tempos Livres na Região Autónoma dos Açores",
+        "author": "CH",
+        "topic": "Apoio à Família",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3857"
+      },
+      {
+        "id": 3858,
+        "title": "Quadro Financeiro Plurianual da União Europeia 2028-2034: participação dos Açores na definição, gestão e execução dos fundos europeus",
+        "author": "PS",
+        "topic": "Orçamento",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3858"
+      },
+      {
+        "id": 3859,
+        "title": "Recomenda ao Governo Regional dos Açores o reforço dos apoios extraordinários e a valorização das coadjuvantes de apoio extraordinário no acompanhamento de crianças com necessidades específicas de apoio à aprendizagem e à inclusão",
+        "author": "CH",
+        "topic": "Educação e Solidariedade Social",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3859"
+      },
+      {
+        "id": 3860,
+        "title": "Prorrogação do prazo para apresentação do relatório do Grupo de Trabalho, criado no âmbito da Comissão Parlamentar Permanente de Política Geral, para analisar, avaliar e propor melhorias no âmbito do dispositivo de segurança interna na Região Autónoma dos Açores",
+        "author": "PSD/PS/CH/CDS-PP/PPM/BE",
+        "topic": "Ordem e Segurança Pública",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3860"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3536,
+        "title": "Intervenção da Deputada Olivéria Santos do CH - Apresentação do Projeto de Decreto Legislativo Regional n.º 53/XIII – “Aprova o Estatuto do Dirigente Desportivo Voluntário da Região Autónoma dos Açores”.",
+        "date": "20/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3536"
+      },
+      {
+        "id": 3537,
+        "title": "Intervenção do Deputado Russell Sousa do PS  - Apresentação do Projeto de Decreto Legislativo Regional n.º 55/XIII – “Estatuto do Dirigente Associativo Voluntário da Região Autónoma dos Açores”.",
+        "date": "20/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3537"
+      },
+      {
+        "id": 3538,
+        "title": "Intervenção do Deputado António Lima do BE  - Apresentação do Projeto de Decreto Legislativo Regional n.º 59/XIII – “Autonomia para contratação de profissionais nos hospitais do Serviço Regional de Saúde”.",
+        "date": "20/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3538"
+      },
+      {
+        "id": 3539,
+        "title": "Intervenção do Deputado António Lima do BE  - Interpelação ao Governo Regional sobre “a Crise da Habitação”.",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3539"
+      },
+      {
+        "id": 3540,
+        "title": "Intervenção do Deputado Pedro Neves do PAN - Apresentação em plenário do Projeto de Decreto Legislativo Regional n.º 78/XIII – “Projeto-piloto destinado à gestão das populações de animais urbanos”.",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3540"
+      },
+      {
+        "id": 3541,
+        "title": "Intervenção do Deputado João Mendonça do PPM  - Apresentação do Projeto de Decreto Legislativo Regional n.º 69/XIII – “Cria, no âmbito da Comunidade Cultural Açoriana, o Estatuto do Açordescendente e o Cartão de Açordescendente”.",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3541"
+      },
+      {
+        "id": 3542,
+        "title": "Intervenção do Deputado Russell Sousa do PS  - Apresentação do “Cria o complemento Regional de Alojamento Estudantil”.",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3542"
+      },
+      {
+        "id": 3543,
+        "title": "Intervenção do Deputado Pedro Neves do PAN - Apresentação em plenário do Projeto de Resolução n.º 72/XIII – “Alargamento do serviço de vídeo interpretação em tempo real entre surdos e ouvintes a toda a Administração Pública Regional”.",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3543"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-21"
+}
