@@ -1,0 +1,122 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9636,
+        "title": "Documentos referentes ao processo de arrendamento de habitações pela Região ao IHRU e respetivo subarrendamento",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9636"
+      },
+      {
+        "id": 9637,
+        "title": "Apoios financeiros para o bem-estar animal",
+        "state_change": null,
+        "requesters": "Pedro Neves PAN",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9637"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24384,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Centralidade dos Açores não pode ser apenas um manifesto de intenções",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24384"
+      },
+      {
+        "id": 24385,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores lamenta que programa europeu de financiamento da defesa (SAFE) não faça qualquer referência aos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24385"
+      },
+      {
+        "id": 24386,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Perda de serviços no Porto do Varadouro pode acabar com a pesca",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24386"
+      },
+      {
+        "id": 24387,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores exige que Governo de Bolieiro devolva máquina de gelo ao Porto do Varadouro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24387"
+      },
+      {
+        "id": 24375,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende vídeo-interpretação para tornar os serviços públicos acessíveis às pessoas surdas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24375"
+      },
+      {
+        "id": 24376,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA sugere alterar vídeo-interpretação de Língua Gestual Portuguesa a todos os utentes surdos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24376"
+      },
+      {
+        "id": 24377,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - IL exige estratégia para o turismo até 2035: Nuno Barata diz que contribuintes não podem \"pagar duas vezes\" políticas de turismo",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24377"
+      },
+      {
+        "id": 24378,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco critica Governo por continuar a subsidiar a abertura de novos AL apesar de já reconhecer que há excesso de oferta",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24378"
+      },
+      {
+        "id": 24379,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA acusa Governo de deixar turismo à deriva e sem estratégia para o futuro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24379"
+      },
+      {
+        "id": 24380,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores defende que regresso das low-cost e operacionalização do Fundo de Rotas são fundamentais para os Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24380"
+      },
+      {
+        "id": 24381,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PS/Açores \"tenta fabricar crise\" no Turismo para justificar debate no Parlamento",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24381"
+      },
+      {
+        "id": 24382,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS defende respostas concretas para recuperar a procura turística e valorizar a economia regional",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24382"
+      },
+      {
+        "id": 24383,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Parlamento dos Açores aprova proposta da IL que visa transformar a centralidade atlântica em investimento e desenvolvimento",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24383"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3028,
+        "number": "104",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3028"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3544,
+        "title": "Intervenção da Deputada Marlene Damião do PS - Apresentação do Debate de Urgência sobre “Políticas Públicas de Incentivo ao Turismo”.",
+        "date": "22/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3544"
+      },
+      {
+        "id": 3545,
+        "title": "Intervenção do Deputado Nuno Barata da IL - Apresentação do Projeto de Resolução n.º 83/XIII – “Pela valorização da centralidade dos Açores na arquitetura e defesa euro-atlântica”.",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3545"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-22"
+}
