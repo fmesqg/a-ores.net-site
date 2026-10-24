@@ -1,0 +1,144 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9559,
+        "title": "Centro Social e Paroquial de Santo Antão - Creche, enquadramento das respostas sociais e conclusão do novo Centro Intergeracional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Luís Silveira CDS-PP, ...",
+        "date": "21/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9559"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24388,
+        "title": "Convocatória - Período Legislativo de Novembro",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24388"
+      },
+      {
+        "id": 24389,
+        "title": "Comissão Política Geral - Convocatória (Dia 28/10/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24389"
+      },
+      {
+        "id": 24391,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - Após queixas de associações, PAN/Açores pede esclarecimentos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24391"
+      },
+      {
+        "id": 24392,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CDS-PP - CDS defende valorização do papel geoestratégico dos Açoresjunto da República",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24392"
+      },
+      {
+        "id": 24393,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco destaca convergência nas reivindicações da Região para contrariar \"ataque à coesão\" da proposta de Orçamento da UE.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24393"
+      },
+      {
+        "id": 24394,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA subscreve diploma para melhor defender os Açores nas futuras negociações dos fundos europeus.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24394"
+      },
+      {
+        "id": 24395,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores quer Região a decidir sobre fundos europeus 2028-2034.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24395"
+      },
+      {
+        "id": 24396,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Aprovada proposta do PS/Açores para a realização de obras que evitem inundações nos Arrifes.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24396"
+      },
+      {
+        "id": 24397,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - População dos Arrifes está farta de promessas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24397"
+      },
+      {
+        "id": 24398,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Parlamento açoriano defende dotação própria para Regiões Ultraperiférica.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24398"
+      },
+      {
+        "id": 24399,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca avanço de solução há muito aguardada para cheias nos Arrife.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24399"
+      },
+      {
+        "id": 24400,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 29/10/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24400"
+      },
+      {
+        "id": 24401,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Novas drogas e combate ao tráfico: Luís Garcia reforça responsabilidade de Portugal e da UE na proteção da fronteira atlântica",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24401"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3032,
+        "number": "106",
+        "date": "23/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3032"
+      },
+      {
+        "id": 3030,
+        "number": "105",
+        "date": "22/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3030"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3861,
+        "title": "Pronúncia por iniciativa própria da Assembleia Legislativa da Região Autónoma dos Açores sobre o Quadro Financeiro Plurianual da União Europeia 2028-2034 e a salvaguarda do estatuto de ultraperiferia dos Açores",
+        "author": "PSD/PS/CH/CDS-PP/PPM/BE/IL",
+        "topic": "Orçamento, finanças e sistemas de incentivos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3861"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3546,
+        "title": "Intervenção do Deputado Joao Bruto Costa do PSD - Apresentação do Projeto de Resolução n.º 112/XIII - “Pronúncia por iniciativa própria da Assembleia Legislativa da Região Autónoma dos Açores sobre o Quadro Financeiro Plurianual da União Europeia para 2028-2034 e a salvaguarda do estatuto de ultraperiferia dos Açores”.",
+        "date": "22/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3546"
+      },
+      {
+        "id": 3547,
+        "title": "Intervenção do Deputado Vasco Cordeiro do PS - Apresentação do Projeto de Resolução n.º 114/XIII – “Quadro Financeiro Plurianual da União Europeia 2028-2034: participação dos Açores na definição, gestão e execução dos fundos europeus”.",
+        "date": "22/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3547"
+      },
+      {
+        "id": 3548,
+        "title": "Intervenção do Deputado Joao Bruto Costa do PSD - Apresentação do Projeto de Resolução n.º 117/XIII – “Pronúncia por iniciativa própria da Assembleia Legislativa da Região Autónoma dos Açores sobre o Quadro Financeiro Plurianual da União Europeia 2028-2034 e a salvaguarda do estatuto de ultraperiferia dos Açores”.",
+        "date": "23/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3548"
+      },
+      {
+        "id": 3549,
+        "title": "Intervenção da Deputada Sandra Dias do PS  - Apresentação do Agendamento potestativo do Projeto de Resolução n.º 71/XIII – “Recomenda ao Governo Regional dos Açores a execução urgente das intervenções estruturais na bacia hidrográfica que afeta as ruas do Outeiro e dos Afonsos, na freguesia dos Arrifes, concelho de Ponta Delgada”.",
+        "date": "23/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3549"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-23"
+}
