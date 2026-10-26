@@ -1,0 +1,14 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {},
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-25"
+}
