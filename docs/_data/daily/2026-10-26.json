@@ -1,0 +1,74 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9624,
+        "title": "Estudo do Instituto da Segurança Social dos Açores sobre os Custos das Respostas Sociais",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9624"
+      },
+      {
+        "id": 9639,
+        "title": "Distribuição gratuita de soutiens pós-cirúrgicos",
+        "state_change": null,
+        "requesters": "Pedro Neves PAN",
+        "date": "23/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9639"
+      },
+      {
+        "id": 9301,
+        "title": "Critérios de atribuição de vagas em creches e cumprimento da prioridade para filhos de pais trabalhadores na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/05/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9301"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24402,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/Açores questiona Governo sobre distribuição gratuita de soutiens pós-cirúrgicos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24402"
+      },
+      {
+        "id": 24403,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 27/10/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24403"
+      },
+      {
+        "id": 24404,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores quer que investimentos do SAFE - Security Action for Europe tenham impacto nos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24404"
+      },
+      {
+        "id": 24405,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Luís Garcia defende revisão constitucional clarificadora e que não permita interpretações restritivas",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24405"
+      },
+      {
+        "id": 24406,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA questiona governo sobre valorização da banana «pequena anã».",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24406"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-26"
+}
