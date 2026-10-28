@@ -1,0 +1,107 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9606,
+        "title": "Apoios à proteção e resgate de equídeos II",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "08/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9606"
+      },
+      {
+        "id": 9641,
+        "title": "Impacto do SAFE (Security Action for Europe) na Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "26/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9641"
+      },
+      {
+        "id": 9642,
+        "title": "Estudo, valorização e promoção da banana regional \"pequena anã\" da ilha Terceira",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9642"
+      },
+      {
+        "id": 9643,
+        "title": "Bem-estar animal, fiscalização das condições de detenção de cães e controlo da circulação de animais na ilha de São Miguel",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "26/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9643"
+      },
+      {
+        "id": 9644,
+        "title": "Prestação e compensação de trabalho suplementar dos assistentes operacionais da Escola Básica Integrada Roberto Ivens",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "26/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9644"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24416,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Luís Garcia defende nova ambição para a Autonomia: mais coesão entre ilhas, maior participação cidadã e instituições mais eficazes",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24416"
+      },
+      {
+        "id": 24407,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - \"É inaceitável que o Governo Regional continue a esconder dos Açorianos quem concorre à privatização da Azores Airlines\", denuncia Berto Messias.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24407"
+      },
+      {
+        "id": 24408,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige explicações sobre atraso na contagem do tempo de serviço em creche.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24408"
+      },
+      {
+        "id": 24409,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Atrasos superiores a dois anos nos rastreios ao cancro da mama colocam em causa a saúde das Açorianas, alerta PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24409"
+      },
+      {
+        "id": 24410,
+        "title": "Comissão Política Geral - Convocatória (Dia 28/10/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24410"
+      },
+      {
+        "id": 24411,
+        "title": "Comissão Política Geral - Convocatória (Dia 05/11/2026, pelas 09:30 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24411"
+      },
+      {
+        "id": 24412,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco quer travar venda de imóveis da Região e avançar com reabilitação e construção de habitação a preços acessíveis",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24412"
+      },
+      {
+        "id": 24414,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Sessão de Encerramento da conferência \"Meio Século de Autonomia com a Engenharia ao Serviço dos Açores\", no Museu do Parlamento, ilha do Faial",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24414"
+      },
+      {
+        "id": 24415,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 29/10/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24415"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-27"
+}
