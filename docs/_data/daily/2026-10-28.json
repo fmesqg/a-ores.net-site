@@ -1,0 +1,86 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9646,
+        "title": "Contabilização de tempo de serviço prestado em Creche",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "27/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9646"
+      },
+      {
+        "id": 9647,
+        "title": "Atrasos no rastreio do cancro da mama nos Açores",
+        "state_change": null,
+        "requesters": "Cristina Calisto PS, ...",
+        "date": "27/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9647"
+      },
+      {
+        "id": 9573,
+        "title": "Custos de manutenção associados ao navio Azores Ocean",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Ávila PS, ...",
+        "date": "25/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9573"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24417,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer cortar na subsídio-dependência e ajudar instituições que realmente precisam.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24417"
+      },
+      {
+        "id": 24418,
+        "title": "Comissão Assuntos Sociais - Convocatória (Dia 29/10/2026, pelas 10:00 horas) - Nova alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24418"
+      },
+      {
+        "id": 24419,
+        "title": "Comissão de Economia - Convocatória (Dia 06/11/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24419"
+      },
+      {
+        "id": 24420,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - \"Tese de doutoramento sobre metais presentes em ossadas humanas deve servir de base para estudo epidemiológico alargado sobre os impactos da presença norte-americana na ilha Terceira\", defende Berto Messias.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24420"
+      },
+      {
+        "id": 24421,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 29/10/2026, pelas 10:00 horas) - Terceira alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24421"
+      },
+      {
+        "id": 24422,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 03/11/2026, pelas 10:00 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24422"
+      },
+      {
+        "id": 24423,
+        "title": "Comissão de Assuntos Parlamentares, Ambiente e Desenvolvimento Sustentável - Convocatória (Dia 05/11/2026, pelas 14:30 horas).",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24423"
+      },
+      {
+        "id": 24425,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia recebe a proposta de Plano e Orçamento da Região para 2027, na sede do Parlamento.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24425"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-28"
+}
