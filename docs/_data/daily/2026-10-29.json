@@ -1,0 +1,149 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9649,
+        "title": "Transporte marítimo de mercadorias para a ilha do Corvo - manutenção de escala no porto da Horta",
+        "state_change": null,
+        "requesters": "Lubélio Mendonça PS, ...",
+        "date": "28/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9649"
+      },
+      {
+        "id": 9650,
+        "title": "Insuficiência de licenças de manuais digitais e erro de planeamento na estimativa das necessidades",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "29/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9650"
+      },
+      {
+        "id": 9415,
+        "title": "Dados sobre fibromialgia na Região Autónoma dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/07/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9415"
+      },
+      {
+        "id": 9466,
+        "title": "Plano de ação do Governo dos Açores para travar o aumento das rendas e reforçar a oferta de habitação para arrendamento nos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "06/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9466"
+      },
+      {
+        "id": 9575,
+        "title": "Centro de Apoio ao Desportista da Ilha de São Miguel - Governo prometeu, mas o Centro continua fechado",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Russell Sousa PS, ...",
+        "date": "25/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9575"
+      },
+      {
+        "id": 9579,
+        "title": "Equipamentos de cirurgia robótica do Serviço Regional de Saúde",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "29/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9579"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24426,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 04/11/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24426"
+      },
+      {
+        "id": 24427,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 05/11/2026, pelas 09:30 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24427"
+      },
+      {
+        "id": 24428,
+        "title": "Nota Informativa da Presidência da ALRAA - Proposta de Plano e de Orçamento da Região para 2027 entregues amanhã na Assembleia Legislativa",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24428"
+      },
+      {
+        "id": 24429,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Sessão de Encerramento do IX Colóquio \" O Faial e a Periferia Açoriana nos séculos XV a XX, no Hotel Horta, ilha do Faial",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24429"
+      },
+      {
+        "id": 24430,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia promove a apresentação da obra \"Autonomia dos Açores -  50 Anos de História\", no Museu do Parlamento dos Açores, ilha do Faial",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24430"
+      },
+      {
+        "id": 24431,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à entrega de prémios e Sessão de Encerramento do I Fórum da Vitivinicultura dos Açores no Auditório Municipal da Madalena, ilha do Pico",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24431"
+      },
+      {
+        "id": 24432,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à inauguração da Exposição Coletiva \"As Ilhas Desconhecidas. 100 Anos de Raul Brandão nos Açores\", na Sala de Exposições da Biblioteca Pública e Arquivo Regional João José da Graça, ilha do Faial",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24432"
+      },
+      {
+        "id": 24433,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia recebe em audiência de apresentação de cumprimentos, uma comitiva da Ordem dos Enfermeiros, presidida pelo Bastonário da Ordem, na sede da Assembleia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24433"
+      },
+      {
+        "id": 24434,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco tem conhecimento de falta de manuais digitais que vão alémdo que foi indicado pelo Governo e pede explicações detalhadas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24434"
+      },
+      {
+        "id": 24435,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA lamenta desinvestimento constante na ilha de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24435"
+      },
+      {
+        "id": 24436,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD destaca realização de cateterismos e aposta constante do Governo dos Açores no HSEIT.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24436"
+      },
+      {
+        "id": 24437,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia recebe a CGTP-IN/Açores - Confederação Geral dos Trabalhadores Portugueses - Intersindical Nacional nos Açores, para entrega do Caderno Reivindicativo dos Trabalhadores Açorianos para 2027, na sede da Assembleia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24437"
+      },
+      {
+        "id": 24438,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside à Sessão Solene Comemorativa do 28.º aniversário da Escola Profissional da Horta, no auditório daquela escola, na cidade da Horta",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24438"
+      },
+      {
+        "id": 24439,
+        "title": null,
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24439"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-29"
+}
