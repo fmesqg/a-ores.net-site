@@ -1,0 +1,40 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9582,
+        "title": "Disponibilidade de manuais escolares em suporte físico para empréstimo nas unidades orgânicas do Sistema Educativo Regional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Inês Sá PS, ...",
+        "date": "30/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9582"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24444,
+        "title": "Nota Informativa da Presidência da ALRAA - Parlamento açoriano associa-se à campanha nacional de sensibilização para o risco sísmico e ilumina de roxo a fachada do edifício-sede",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24444"
+      },
+      {
+        "id": 24445,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Luís Garcia destaca papel determinante da Engenharia na construção dos próximos 50 anos da Autonomia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24445"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-10-31"
+}
