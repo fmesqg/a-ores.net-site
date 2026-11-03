@@ -1,0 +1,90 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24448,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Projeto para criação de 200 novas vagas em Creche e ATL aguarda aprovação e financiamento do Governo, alerta PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24448"
+      },
+      {
+        "id": 24449,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco preocupado com falta de respostas para garantir cumprimento do modelo de educação inclusiva.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24449"
+      },
+      {
+        "id": 24450,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA alerta: Subida do preço do gás agrava dificuldades das famílias açorianas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24450"
+      },
+      {
+        "id": 24451,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Projeto Geração-Mil que abrange mais de 100 idosos das freguesias de Santa Bárbara, Remédios e Pilar da Bretanha com financiamento em atraso do Governo Regional há mais de 9 meses, denuncia PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24451"
+      },
+      {
+        "id": 24452,
+        "title": "Relatório e parecer sobre o Requerimento oral apresentado pelo Grupo Parlamentar do PSD a solicitar \"a audição da Ordem dos Médicos, do Presidente do ISSA, IPRA - Instituto da Segurança Social dos Açores, I.P.R.A. e da Inspetora Regional da Segurança Social, para prestarem esclarecimentos sobre o absentismo laboral\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24452"
+      },
+      {
+        "id": 24453,
+        "title": "Relatório e parecer sobre o Requerimento apresentado pelo Grupo Parlamentar do CH a solicitar, \"com carácter de urgência, a audição na Comissão de Assuntos Sociais, da Secretária Regional da Saúde e da Segurança Social e da Inspetora Regional da Saúde, a fim de prestarem esclarecimentos sobre o absentismo laboral\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24453"
+      },
+      {
+        "id": 24454,
+        "title": "Relatório e parecer sobre o Requerimento apresentado pelo Grupo Parlamentar do PS a solicitar a audição da \"Senhora Secretária Regional da Saúde e Segurança Social para apresentar e prestar esclarecimentos sobre o plano funcional do futuro Hospital do Divino Espírito Santo\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24454"
+      },
+      {
+        "id": 24455,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Se não fosse o CHEGA, quanto receberiam hoje os nossos idosos?",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24455"
+      },
+      {
+        "id": 24456,
+        "title": "Discurso do Presidente da ALRAA, Luís Garcia, na entrega de prémios e Sessão de Encerramento do I Fórum da Vitivinicultura dos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24456"
+      },
+      {
+        "id": 24457,
+        "title": "Discurso do Presidente da ALRAA, Luís Garcia, na Sessão de Encerramento da conferência \"Meio Século de Autonomia com a Engenharia ao Serviço dos Açores\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24457"
+      },
+      {
+        "id": 24458,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia marca presença na sessão de lançamento da obra \"Rogério Silva e a sua arte. Da Horta e Angra do Heroísmo a New Bedford\", da autoria de Luís Manuel Arruda e Onésimo Teotónio Almeida, no Hotel Horta, na ilha do Faial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24458"
+      },
+      {
+        "id": 24459,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Presidente Luís Garcia associa legado de Raul Brandão à afirmação da identidade açoriana",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24459"
+      },
+      {
+        "id": 24447,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Parlamento vai ouvir o administrador do HDES que pediu escusa de responsabilidade, por proposta do PS/Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24447"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3034,
+        "number": "41/Separata",
+        "date": "31/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3034"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-02"
+}
