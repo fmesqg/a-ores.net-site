@@ -1,0 +1,35 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
+  },
+  "alra": {
+    "informacoes": [
+      {
+        "id": 24460,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA alerta para degradação económica da ilha Terceira",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24460"
+      },
+      {
+        "id": 24461,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA preocupado com o aumento alarmante do jogo a dinheiro entre os jovens",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24461"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3036,
+        "number": "101",
+        "date": "17/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3036"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-03"
+}
