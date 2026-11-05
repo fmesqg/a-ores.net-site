@@ -1,0 +1,181 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": {
+    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1035)')))"
+  },
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9609,
+        "title": "Aquisição de Unidade de Produção de Azoto Líquido para a ilha Terceira",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "09/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9609"
+      },
+      {
+        "id": 9610,
+        "title": "Requalificação da Via Vitorino Nemésio - Obras, Concurso, Financiamento e Calendário",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "09/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9610"
+      },
+      {
+        "id": 9616,
+        "title": "Cais Multiusos do Porto da Praia da Vitória",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9616"
+      },
+      {
+        "id": 9652,
+        "title": "Financiamento da ampliação das respostas sociais de Creche e ATL do C.A.S.A. - Centro de Apoio Social e Acolhimento, na Ribeira Grande",
+        "state_change": null,
+        "requesters": "Carlos Silva PS, ...",
+        "date": "29/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9652"
+      },
+      {
+        "id": 9653,
+        "title": "Persistência dos atrasos no financiamento do Projeto Geração-Mil compromete resposta social a mais de 100 idosos nas freguesias de Santa Bárbara, Remédios e Pilar da Bretanha",
+        "state_change": null,
+        "requesters": "Patrícia Miranda PS, ...",
+        "date": "29/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9653"
+      },
+      {
+        "id": 9654,
+        "title": "Falta de acesso aos manuais digitais na Graciosa é uma falha que exige apuramento de responsabilidades",
+        "state_change": null,
+        "requesters": "José Ávila PS, ...",
+        "date": "30/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9654"
+      },
+      {
+        "id": 9655,
+        "title": "Esclarecimentos sobre a prestação de trabalho suplementar pelos assistentes operacionais nas escolas dos Açores, no âmbito da utilização dos pavilhões desportivos escolares",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "30/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9655"
+      },
+      {
+        "id": 9656,
+        "title": "Respostas educativas e apoios especializados para alunos abrangidos pelos Programas Específicos de Escolarização e Formação",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "02/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9656"
+      },
+      {
+        "id": 9657,
+        "title": "Capacidade de resposta dos CATL e acompanhamento das crianças em idade pré-escolar e do 1.º ciclo na ilha de São Miguel",
+        "state_change": null,
+        "requesters": "Marlene Damião PS, ...",
+        "date": "02/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9657"
+      },
+      {
+        "id": 9658,
+        "title": "Crescimento do jogo a dinheiro e das apostas online nos Açores - prevenção, proteção dos menores e respostas de tratamento",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "03/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9658"
+      },
+      {
+        "id": 9510,
+        "title": "Mortandade de pombos e divulgação de informação à população II",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "26/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9510"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24462,
+        "title": "Relatório e parecer sobre o relatório e parecer sobre o Requerimento apresentado pelo GP PS a solicitar a audição parlamentar do Doutor Félix Rodrigues, autor de uma tese de doutoramento \"que analisa a presença de metais pesados em esqueletos humanos de indivíduos que residiram na Praia da Vitória e na ilha Terceira\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24462"
+      },
+      {
+        "id": 24463,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Vice-Presidente da Assembleia, Deputado João Vasco Costa, preside, em nome de Sua Excelência o Presidente da Assembleia Legislativa da Região Autónoma dos Açores, à sessão de encerramento comemorativa do Centenário da Ordem dos Advogados, na Aula Magna da Universidade dos Açores, em Ponta Delgada.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24463"
+      },
+      {
+        "id": 24464,
+        "title": "Nota de Agenda da Presidência da ALRAA - O Presidente da Assembleia preside às comemorações dos 50 anos da Autonomia, organizadas pela Câmara Municipal da Ribeira Grande, nos Paços do Concelho, na ilha de São Miguel.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24464"
+      },
+      {
+        "id": 24465,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA vai propor maior apoio para o Azores Rallye 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24465"
+      },
+      {
+        "id": 24466,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - António Lima reúne-se com trabalhadores da SATA Handling e garante que o Bloco continuará a apresentar propostas para impedir privatização.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24466"
+      },
+      {
+        "id": 24468,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Deputados do Partido Socialista avançam com reuniões e visitas às instituições tauromáquicas e ganadarias para balanço da época e avaliação de melhorias a implementar.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24468"
+      },
+      {
+        "id": 24469,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco de Esquerda ao lado dos trabalhadores das IPSS: é urgente acabar com a discriminação salarial e garantir melhores condições de trabalho.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24469"
+      },
+      {
+        "id": 24470,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Trabalhadores das IPSS merecem ser respeitados e valorizados.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24470"
+      },
+      {
+        "id": 24471,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige cerco apertado à fraude nos apoios sociais.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24471"
+      },
+      {
+        "id": 24472,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Presidente Luís Garcia destaca importância da pluralidade e do diálogo na construção da Autonomia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24472"
+      }
+    ],
+    "audi_gr": [
+      {
+        "id": 3454,
+        "title": "Aprova a Estratégia Turismo 2035 PCM (MECT) - Reg. R 387/XXV/2026)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/2/3454"
+      },
+      {
+        "id": 3455,
+        "title": "Aprova o Plano de Ação Nacional para o Controle da Macroalga Invasora Regulopteryx okamurae para o horizonte temporal 2026-2030 - PCM - Reg. R 387/XXV/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/2/3455"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-04"
+}
