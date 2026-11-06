@@ -2,9 +2,78 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15845665,
+      "title": "Aquisição de peças de substituição para a sala de abate dos matadouros da Rede Regional de Abate e de serviços técnicos de apoio à atividade",
+      "price": "74.940,49 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Lado Periférico Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15845665"
+    },
+    {
+      "id": 15848334,
+      "title": "Aquisição de serviços de manutenção preventiva e corretiva dos sistemas de rega dos espaços verdes de Ponta Delgada",
+      "price": "38.278,04 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "A Granja - Soc. Rep. Prod. p/ Agricultura e Pec., Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "27-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15848334"
+    },
+    {
+      "id": 15849560,
+      "title": "serviços de enfermagem pelo HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Ana Beatriz de Oliveira Diez",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15849560"
+    },
+    {
+      "id": 15846800,
+      "title": "Aquisição de refeições escolares para a Escola Secundária Antero de Quental para o primeiro periodo do ano letivo 2026-2027",
+      "price": "19.000,80 €",
+      "buyer": "Escola Secundária Antero de Quental",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação S.A",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15846800"
+    },
+    {
+      "id": 15844940,
+      "title": "Aquisição de Reagentes e Consumíveis para Testes Laboratoriais de Imunologia para o ano de 2026",
+      "price": "11.085,00 €",
+      "buyer": "Unidade de Saúde da Ilha Graciosa",
+      "seller": "FARMAÇOR - Comércio de Produtos Químico-Farmacêuticos dos Açores, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15844940"
+    },
+    {
+      "id": 15847109,
+      "title": "Fornecimento de bens alimentícios destinados ao bufete da Escola Básica Integrada dos Arrifes, durante o ano letivo 2026/2027, de acordo com as especificações e quantidades previstas nas peças do proc...",
+      "price": "2.571,33 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "Delta Açores Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15847109"
+    },
+    {
+      "id": 15845170,
+      "title": "Prestação de serviços de substituição da Cuvete MilkoScan FT+ para o Serviço de Classificação de Leite de São Miguel (SERCLASM) para o ano de 2026",
+      "price": "1.925,89 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Micro Atomo - Tecnologia Electrónica Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15845170"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {

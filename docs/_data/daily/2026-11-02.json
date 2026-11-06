@@ -2,9 +2,148 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15884752,
+      "title": "Transporte Escolar - Carreira Pública 2026/2027",
+      "price": "154.631,51 €",
+      "buyer": "Escola Básica e Secundária da Povoação",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15884752"
+    },
+    {
+      "id": 15885446,
+      "title": "Confeção na cozinha da escola sede e o fornecimento pelo cocontratante de 7144  refeições completas e  9234 refeições ligeiras, no refeitório da escola sede, bem como a confeção, transporte e fornecim...",
+      "price": "37.073,56 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885446"
+    },
+    {
+      "id": 15884609,
+      "title": "Locação com montagem e desmontagem de equipamento lúdico infantil no âmbito das Festas de Natal 2026",
+      "price": "24.000,00 €",
+      "buyer": "Câmara Municipal de Ponta Delgada",
+      "seller": "Diversões Alentejano",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15884609"
+    },
+    {
+      "id": 15885199,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "4.896,45 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Detalhalecrim, Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885199"
+    },
+    {
+      "id": 15885428,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "4.640,00 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885428"
+    },
+    {
+      "id": 15885421,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "4.176,00 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885421"
+    },
+    {
+      "id": 15885419,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "3.196,80 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885419"
+    },
+    {
+      "id": 15885151,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "2.880,00 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885151"
+    },
+    {
+      "id": 15885413,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "2.088,00 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885413"
+    },
+    {
+      "id": 15885331,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "1.785,60 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885331"
+    },
+    {
+      "id": 15885165,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "1.559,25 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Resendes Damião Soares Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885165"
+    },
+    {
+      "id": 15885409,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "992,00 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885409"
+    },
+    {
+      "id": 15885345,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "892,80 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885345"
+    },
+    {
+      "id": 15885179,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada da Maia e percurso inverso",
+      "price": "472,50 €",
+      "buyer": "Escola Básica Integrada da Maia, Ribeira Grande",
+      "seller": "Detalhalecrim, Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15885179"
+    }
+  ],
   "alra": {
     "informacoes": [
       {

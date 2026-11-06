@@ -2,9 +2,208 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15882123,
+      "title": "Aquisição de Betão Pronto C20/25",
+      "price": "279.903,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Tecnovia - Açores - Sociedade de Empreitadas, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882123"
+    },
+    {
+      "id": 15879800,
+      "title": "Fornecimento de Refeições Escolares para o período de novembro de 2026 a junho de 2027.",
+      "price": "138.336,48 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "RESCATER - Prestações de Serviços LDA",
+      "procedure": "Concurso público",
+      "signing_date": "27-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879800"
+    },
+    {
+      "id": 15881759,
+      "title": "AQUISIÇÃO DE VIATURA PESADA COM GRUA E BÁSCULA TRILATERAL",
+      "price": "96.600,00 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "Vecoaçores Veículos Comerciais dos Açores, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15881759"
+    },
+    {
+      "id": 15882083,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "86.342,77 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882083"
+    },
+    {
+      "id": 15882093,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "77.368,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882093"
+    },
+    {
+      "id": 15880790,
+      "title": "Conceção, produção, execução, fornecimento, transporte, montagem, instalação e fixação de um conjunto de estruturas decorativas em esferovite",
+      "price": "74.730,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Bruno Manuel Medeiros de Sousa",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15880790"
+    },
+    {
+      "id": 15882132,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "60.598,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882132"
+    },
+    {
+      "id": 15881857,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "58.898,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15881857"
+    },
+    {
+      "id": 15882112,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "58.518,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882112"
+    },
+    {
+      "id": 15881865,
+      "title": "Aquisição extraordinária de viagem para abastecimento da Ilha do Corvo",
+      "price": "57.778,50 €",
+      "buyer": "Fundo Regional de Apoio à Coesão e ao Desenvolvimento Económico",
+      "seller": "Transporte Mariíimo Parece Machado Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "17-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15881865"
+    },
+    {
+      "id": 15882156,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "50.120,19 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882156"
+    },
+    {
+      "id": 15882150,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "49.503,46 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882150"
+    },
+    {
+      "id": 15881039,
+      "title": "Aquisição de viatura ligeira de mercadorias 4x4 para o Núcleo de Apoio às Atividades e Turismo de Natureza, na ilha de São Miguel",
+      "price": "47.572,50 €",
+      "buyer": "Direção Regional do Turismo",
+      "seller": "ANTERO REGO - AUTO ILHA VERDE,LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15881039"
+    },
+    {
+      "id": 15882127,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "42.118,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882127"
+    },
+    {
+      "id": 15882141,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "36.533,32 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882141"
+    },
+    {
+      "id": 15882030,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "34.018,00 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882030"
+    },
+    {
+      "id": 15882120,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "32.010,25 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882120"
+    },
+    {
+      "id": 15881784,
+      "title": "Prestação de serviços regulares especializados de transporte coletivo de crianças entre o domicílio, ou paragem previamente estabelecida, e a Escola Básica Integrada Canto da Maia e percurso inverso, ...",
+      "price": "27.738,00 €",
+      "buyer": "Escola Básica Integrada de Canto da Maia",
+      "seller": "Os Bambinos- Transportes Personalizados Lda",
+      "procedure": "Concurso público",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15881784"
+    },
+    {
+      "id": 15880663,
+      "title": "Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica Integrada de Ponta Garça por Lotes",
+      "price": "24.098,16 €",
+      "buyer": "Escola Básica Integrada de Ponta Garça",
+      "seller": "Resendes Damião Soares Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15880663"
+    },
+    {
+      "id": 15882135,
+      "title": "Aquisição de serviços de acompanhamento das atividades físicas desportivas e de limpeza das instalações desportivas geridas pelos Serviços de Desporto das Ilhas do Corvo, do Faial, de São Jorge, de Sã...",
+      "price": "22.903,30 €",
+      "buyer": "Direção Regional do Desporto",
+      "seller": "TMLJ - FACILITY SERVICES, UNIPESSOAL LDA",
+      "procedure": "Concurso público",
+      "signing_date": "22-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15882135"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {

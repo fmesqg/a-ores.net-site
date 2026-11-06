@@ -2,9 +2,88 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15836963,
+      "title": "Licenciamento de Software Microsoft, no âmbito do Plano de Recuperação e Resiliência, Componente 1, Investimento RE-C01-i08-RAA - Hospital Digital da Região Autónoma dos Açores, para o Hospital Divino...",
+      "price": "191.404,01 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "CLARANET II SOLUTIONS, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15836963"
+    },
+    {
+      "id": 15838687,
+      "title": "SERVIÇOS DE MANUTENÇÃO, ASSISTÊNCIA TÉCNICA E REPARAÇÃO AOS VEÍCULOS DA FROTA DA SECRETARIA REGIONAL DO AMBIENTE E AÇÃO CLIMÁTICA DA ILHA DE SÃO MIGUEL",
+      "price": "149.700,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "AUTO WM SERVIÇOS AUTO LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15838687"
+    },
+    {
+      "id": 15834840,
+      "title": "Aquisição de serviços de consultoria - DRCTD",
+      "price": "73.200,00 €",
+      "buyer": "Direção Regional das Comunicações e da Transição Digital",
+      "seller": "GLOBALEDA - Telecomunicações e Sistemas de Informação, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15834840"
+    },
+    {
+      "id": 15838190,
+      "title": "Aquisição de Viatura de Cabine Dupla tipo Pick-Up",
+      "price": "48.534,48 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "ANTERO REGO - AUTO ILHA VERDE,LDA.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15838190"
+    },
+    {
+      "id": 15842727,
+      "title": "Aquisição de viatura elétrica de 09 lugares, destinada a reforçar a capacidade de resposta da Junta de Freguesia da Matriz no desenvolvimento das suas atividades e competências",
+      "price": "36.405,91 €",
+      "buyer": "Freguesia de Matriz",
+      "seller": "L 2 Auto Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15842727"
+    },
+    {
+      "id": 15838943,
+      "title": "Ajuste Direto n.º 06/2026 – EBI Arrifes - Fornecimento de Refeições Escolares para o mês de outubro de 2026",
+      "price": "29.471,40 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "Rescater - Prestação de Serviços, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15838943"
+    },
+    {
+      "id": 15836977,
+      "title": "14/CPrévia/AT/2026_Empreitada de Reabilitação de Cobertura da Alfândega de Ponta Delgada",
+      "price": "28.916,34 €",
+      "buyer": "Autoridade Tributária e Aduaneira",
+      "seller": "Emanuel Pimentel Sousa Construções, Uni, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "02-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15836977"
+    },
+    {
+      "id": 15844216,
+      "title": "aquisição da câmara digital DS100 USB 3.2, do sistema de iluminação de fluorescência pE-300 Lite e da objetiva CFI PL FL DLL, ampliação 40×, an 0,75 WD 0.66MM",
+      "price": "13.959,85 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Lusopalex - Produtos de Saude Unipessoal Lda",
+      "procedure": "Contratação excluída II",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15844216"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {

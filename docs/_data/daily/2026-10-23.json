@@ -2,9 +2,208 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15830714,
+      "title": "Empreitada de substituição do pavimento da valência Lar de Idosos do Senhor Bom Jesus da Pedra",
+      "price": "100.789,16 €",
+      "buyer": "Santa Casa da Misericórdia de Vila Franca do Campo",
+      "seller": "J. H. Ornelas & ., Ca., Suc., Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15830714"
+    },
+    {
+      "id": 15829278,
+      "title": "E HIPOCLORITO DE SÓDIO PARA DESINFEÇÃO DE ÁGUA PARA CONSUMO HUMANO - 2 ANOS",
+      "price": "65.880,00 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "AGROUTIL - Especialidades Farmaceuticas, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15829278"
+    },
+    {
+      "id": 15830870,
+      "title": "Aquisição de Serviços de Elaboração de Procedimentos de Voo por Instrumentos do Tipo XLS para a Pista 27 do Aeródromo da Ilha do Pico (LPPI)",
+      "price": "59.674,73 €",
+      "buyer": "SATA - Gestão de Aeródromos, SA",
+      "seller": "Navegação Aérea de Portugal - Nav Portugal, EPE",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15830870"
+    },
+    {
+      "id": 15830930,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE PRODUÇÃO E REALIZAÇÃO DO ESPETÁCULO DOS GNR, NO ÂMBITO DA PDL26 – CAPITAL PORTUGUESA DA CULTURA",
+      "price": "39.350,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "Diferentes Ritmos Produtores Associados de Espectáculos e Eventos Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15830930"
+    },
+    {
+      "id": 15823738,
+      "title": "Ajuste Direto nº4/2026-Fornecimento de Refeições Escolares",
+      "price": "38.413,44 €",
+      "buyer": "Escola Secundária Manuel de Arriaga, Horta",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação S.A",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15823738"
+    },
+    {
+      "id": 15821000,
+      "title": "ORÇAMENTO PARTICIPATIVO 2023/24 - EDUCAÇÃO - PROJETO 03 - \"SINFONIA PARTICIPATIVA: INSTRUMENTAR O FUTURO\" PARA O CONSERVATÓRIO REGIONAL DE PONTA DELGADA",
+      "price": "33.012,79 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Viana Musica, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15821000"
+    },
+    {
+      "id": 15816544,
+      "title": "AQUISIÇÃO DE SERVIDOR DE INTELIGÊNCIA ARTIFICIAL",
+      "price": "30.000,00 €",
+      "buyer": "Direção Regional das Comunicações e da Transição Digital",
+      "seller": "FSAS TECHNOLOGIES S.L. - SUCURSAL PORTUGAL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15816544"
+    },
+    {
+      "id": 15825775,
+      "title": "Reformulação do Projeto do Reservatório das Gramas e Tratamento Complementar de Água",
+      "price": "26.900,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Ecoserviços Group, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15825775"
+    },
+    {
+      "id": 15816687,
+      "title": "REPARAÇÃO DA ESCADA ROLANTE N.º 2 DA AEROGARE CIVIL DAS LAJES",
+      "price": "25.789,22 €",
+      "buyer": "Vice-Presidência do Governo Regional",
+      "seller": "Tk Elevadores Portugal, Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15816687"
+    },
+    {
+      "id": 15830650,
+      "title": "Serviços de Apoio à Exploração das ETAR¿s da Maia, Lomba da Maia, Rabo de Peixe e ETAR Compacta do Porto Formoso",
+      "price": "21.801,24 €",
+      "buyer": "Município de Ribeira Grande",
+      "seller": "AGROLEICO GROUP - LABORATÓRIOS DE ANÁLISES QUÍMICAS E BACTERIOLÓGICAS, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15830650"
+    },
+    {
+      "id": 15821159,
+      "title": "ORÇAMENTO PARTICIPATIVO 2023/24 - EDUCAÇÃO - PROJETO 03 - \"SINFONIA PARTICIPATIVA: INSTRUMENTAR O FUTURO\" PARA O CONSERVATÓRIO REGIONAL DE PONTA DELGADA",
+      "price": "20.968,22 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Viana Musica, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15821159"
+    },
+    {
+      "id": 15822788,
+      "title": "aquisição da Arca Ultracongeladora Horizontal -152ºC",
+      "price": "20.310,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Frilabo II, Lda.",
+      "procedure": "Contratação excluída II",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15822788"
+    },
+    {
+      "id": 15830886,
+      "title": "Aquisição de Serviços de Flight Checks ao ILS do Pico",
+      "price": "16.120,00 €",
+      "buyer": "SATA - Gestão de Aeródromos, SA",
+      "seller": "Flight Calibration Services Ltd",
+      "procedure": "Contratação excluída II",
+      "signing_date": "16-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15830886"
+    },
+    {
+      "id": 15821100,
+      "title": "ORÇAMENTO PARTICIPATIVO 2023/24 - EDUCAÇÃO - PROJETO 03 - \"SINFONIA PARTICIPATIVA: INSTRUMENTAR O FUTURO\" PARA O CONSERVATÓRIO REGIONAL DE PONTA DELGADA",
+      "price": "15.767,44 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Viana Musica, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15821100"
+    },
+    {
+      "id": 15830633,
+      "title": "Ajuste Direto por Lotes n.º 05/2026 – EBI Arrifes – Aquisição de Serviços Regulares Especializados de Transporte Coletivo",
+      "price": "12.417,20 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "Detalhalecrim, Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15830633"
+    },
+    {
+      "id": 15826687,
+      "title": "Fornecimento de bens alimentícios destinados ao bufete da Escola Básica Integrada dos Arrifes, durante o ano letivo 2026/2027, de acordo com as especificações e quantidades previstas nas peças do proc...",
+      "price": "7.482,72 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "GOMES E SANTOS, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15826687"
+    },
+    {
+      "id": 15821209,
+      "title": "ORÇAMENTO PARTICIPATIVO 2023/24 - EDUCAÇÃO - PROJETO 03 - \"SINFONIA PARTICIPATIVA: INSTRUMENTAR O FUTURO\" PARA O CONSERVATÓRIO REGIONAL DE PONTA DELGADA",
+      "price": "3.823,03 €",
+      "buyer": "Direção Regional da Educação e Administração Educativa",
+      "seller": "Viana Musica, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15821209"
+    },
+    {
+      "id": 15826347,
+      "title": "Fornecimento de bens alimentícios destinados ao bufete da Escola Básica Integrada dos Arrifes, durante o ano letivo 2026/2027, de acordo com as especificações e quantidades previstas nas peças do proc...",
+      "price": "3.550,13 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "Sodril - Representações Insulares, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15826347"
+    },
+    {
+      "id": 15825622,
+      "title": "Fornecimento de bens alimentícios destinados ao bufete da Escola Básica Integrada dos Arrifes, durante o ano letivo 2026/2027, de acordo com as especificações e quantidades previstas nas peças do proc...",
+      "price": "2.860,20 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "Lactaçores - União das Cooperativas de Lacticínios dos Açores, UCRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15825622"
+    },
+    {
+      "id": 15830663,
+      "title": "Ajuste Direto por Lotes n.º 05/2026 – EBI Arrifes – Aquisição de Serviços Regulares Especializados de Transporte Coletivo",
+      "price": "2.688,00 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "Auto Viação Micaelense, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15830663"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {

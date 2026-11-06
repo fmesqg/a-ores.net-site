@@ -2,9 +2,208 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15809872,
+      "title": "Ajuste Direto para Execução da Empreitada de Beneficiação do Armazém Municipal da Achada no âmbito da Reabilitação do Património Municipal",
+      "price": "99.546,86 €",
+      "buyer": "Município de Nordeste",
+      "seller": "José de Simas Moniz & Filhos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15809872"
+    },
+    {
+      "id": 15806547,
+      "title": "Ajuste Direto por critério material nº1/2026-Aquisição de Transportes em regime de Carreira Pública",
+      "price": "55.173,18 €",
+      "buyer": "Escola Secundária Manuel de Arriaga, Horta",
+      "seller": "Farias, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15806547"
+    },
+    {
+      "id": 15806880,
+      "title": "Aquisição de 5 (cinco) Camas para a UTIC do Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "46.872,00 €",
+      "buyer": "Hospital Divino Espiríto Santo de Ponta Delgada, EPER",
+      "seller": "Utilmédica - Produtos Médicos Hospitalares, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15806880"
+    },
+    {
+      "id": 15806278,
+      "title": "EMPREITADA PARA REMODELAÇÃO INTERIOR DO EDIFÍCIO ONDE ESTÃO INSTALADOS SERVIÇOS DA DIREÇÃO REGIONAL DO AMBIENTE E AÇÃO CLIMÁTICA EM ANGRA DO HEROÍSMO",
+      "price": "41.491,44 €",
+      "buyer": "Direção Regional do Ambiente e Ação Climática",
+      "seller": "JOSÉ EMANUEL VALENTE MATOS",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15806278"
+    },
+    {
+      "id": 15807955,
+      "title": "Prestação de Serviços de Assistência Técnica a Microscópios afetos aos diferentes serviços do HSEIT e a equipamentos do Serviço de Anatomia Patológica",
+      "price": "31.844,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "LEICA MICROSISTEMAS-INSTRUMENTOS DE PRECISÃO, S.U., LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15807955"
+    },
+    {
+      "id": 15811623,
+      "title": "Empreitada de execução de rede exterior de combate a incêndios no Centro de Saúde do Nordeste, ilha de São Miguel, Açores",
+      "price": "30.243,81 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "ORDEC - OBRAS REGIONAIS DE ELECTRICIDADE E CONSTRUÇÃO CIVIL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15811623"
+    },
+    {
+      "id": 15808234,
+      "title": "Aquisição de tintas e acessórios para fornecimento contínuo durante o ano de 2026 - Procedimento por LOTES",
+      "price": "19.765,40 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "Fertin de Luisa Pontes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15808234"
+    },
+    {
+      "id": 15805602,
+      "title": "AQUISIÇÃO DE SERVIÇOS PARA EXECUÇÃO DE ANÁLISES À ÁGUA SUBTERRÂNEA NA ILHA TERCEIRA 2026",
+      "price": "19.755,00 €",
+      "buyer": "Direção-Geral de Armamento e Património da Defesa Nacional",
+      "seller": "Eurofins Lab Environment Testing Portugal",
+      "procedure": "Concurso público",
+      "signing_date": "16-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15805602"
+    },
+    {
+      "id": 15813027,
+      "title": "Transportes Escolares Especializados para alunos impossibilitados de transporte em carreira pública comum de 1 outubro a 31 de dezembro de 2026 - ano letivo 2026/2027",
+      "price": "6.230,70 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "PEDRO MIGUEL MEDEIROS SOUSA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15813027"
+    },
+    {
+      "id": 15808272,
+      "title": "Aquisição de tintas e acessórios para fornecimento contínuo durante o ano de 2026 - Procedimento por LOTES",
+      "price": "6.071,96 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "Construtora Ideal da Terceira II",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15808272"
+    },
+    {
+      "id": 15808531,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "4.886,00 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Picongel - Comércio e Distribuição de produtos Alimentares, Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15808531"
+    },
+    {
+      "id": 15813033,
+      "title": "Transportes Escolares Especializados para alunos impossibilitados de transporte em carreira pública comum de 1 outubro a 31 de dezembro de 2026 - ano letivo 2026/2027",
+      "price": "4.561,92 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "PEDRO MIGUEL MEDEIROS SOUSA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15813033"
+    },
+    {
+      "id": 15813057,
+      "title": "Transportes Escolares Especializados para alunos impossibilitados de transporte em carreira pública comum de 1 outubro a 31 de dezembro de 2026 - ano letivo 2026/2027",
+      "price": "2.676,90 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "PEDRO MIGUEL MEDEIROS SOUSA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15813057"
+    },
+    {
+      "id": 15813061,
+      "title": "Transportes Escolares Especializados para alunos impossibilitados de transporte em carreira pública comum de 1 outubro a 31 de dezembro de 2026 - ano letivo 2026/2027",
+      "price": "2.192,40 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "MÁRIO MANUEL DA PONTE RODRIGUES",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15813061"
+    },
+    {
+      "id": 15808562,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "1.949,25 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "JMV - José Maria Vieira, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15808562"
+    },
+    {
+      "id": 15808304,
+      "title": "Aquisição de tintas e acessórios para fornecimento contínuo durante o ano de 2026 - Procedimento por LOTES",
+      "price": "1.784,18 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "VIPAÇOR - Tintas e Vernizes, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-06-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15808304"
+    },
+    {
+      "id": 15813063,
+      "title": "Transportes Escolares Especializados para alunos impossibilitados de transporte em carreira pública comum de 1 outubro a 31 de dezembro de 2026 - ano letivo 2026/2027",
+      "price": "1.764,00 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "MÁRIO MANUEL DA PONTE RODRIGUES",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15813063"
+    },
+    {
+      "id": 15808574,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "1.758,00 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Sicosta - Sociedade Industrial de Carnes, Ldª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15808574"
+    },
+    {
+      "id": 15813064,
+      "title": "Transportes Escolares Especializados para alunos impossibilitados de transporte em carreira pública comum de 1 outubro a 31 de dezembro de 2026 - ano letivo 2026/2027",
+      "price": "1.752,30 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15813064"
+    },
+    {
+      "id": 15808556,
+      "title": "Aquisição de produtos alimentares para o Bufete da EBS da Madalena",
+      "price": "1.548,75 €",
+      "buyer": "Escola Básica e Secundária da Madalena",
+      "seller": "Gelpico Comércio de Fruta Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15808556"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {

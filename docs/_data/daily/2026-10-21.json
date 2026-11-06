@@ -2,9 +2,178 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15799915,
+      "title": "Aquisição de Viaturas – 26IMO001",
+      "price": "98.760,00 €",
+      "buyer": "EDA - ELECTRICIDADE DOS AÇORES, S.A.",
+      "seller": "SOCIEDADE GRAÇA LOPES - TRANSFORMAÇÃO E HOMOLOGAÇÃO DE VIATURAS LDA",
+      "procedure": "Concurso público",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15799915"
+    },
+    {
+      "id": 15799352,
+      "title": "AQUISIÇÃO DE SERVIÇOS PARA A ELABORAÇÃO DOS PROJETOS DE EXECUÇÃO DA SEGUNDA E DA TERCEIRA FASE DA PROTEÇÃO DA ORLA COSTEIRA E ORDENAMENTO DA BAÍA DO PORTO DE SÃO ROQUE DO PICO",
+      "price": "74.500,00 €",
+      "buyer": "PORTOS DOS AÇORES, SA",
+      "seller": "MSW - Estudos e Projectos de Obras Marítimas, Lda",
+      "procedure": "Consulta Prévia",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15799352"
+    },
+    {
+      "id": 15804237,
+      "title": "aquisição do leitor multimodal de microplacas Varioskan™ LUX, modelo VLBLATD2",
+      "price": "45.531,43 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Effer Saúde, Lda",
+      "procedure": "Contratação excluída II",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15804237"
+    },
+    {
+      "id": 15801470,
+      "title": "PRC/20/2026 - Prestação de serviços de elaboração de medidas de autoproteção (MAP), para os Centros de Saúde, da Unidade de Saúde da Ilha de São Jorge",
+      "price": "30.464,00 €",
+      "buyer": "Unidade de Saúde de Ilha de São Jorge",
+      "seller": "Serviço de Utilização Comum dos Hospitais",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15801470"
+    },
+    {
+      "id": 15799147,
+      "title": "PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO / ASSISTÊNCIA TÉCNICA DO AVAC DOS EDIFÍCIOS AUDITÓRIO / BIBLIOTECA E PAÇOS DO CONCELHO",
+      "price": "29.840,00 €",
+      "buyer": "Município da Madalena",
+      "seller": "Conceptair",
+      "procedure": "Consulta Prévia",
+      "signing_date": "19-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15799147"
+    },
+    {
+      "id": 15800418,
+      "title": "Aquisição de 15 portáteis DockStation para a divisão de controlos do IAMA, IPRA.",
+      "price": "20.850,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "MSIM",
+      "procedure": "Concurso público",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15800418"
+    },
+    {
+      "id": 15801427,
+      "title": "Aquisição da realização do Concerto do Artista Camané, no âmbito da Participação de Oeiras no Projeto Ponta Delgada – Capital Portuguesa da Cultura.",
+      "price": "16.500,00 €",
+      "buyer": "Município de Oeiras",
+      "seller": "1ª  ARTE, UNIPESSOAL, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15801427"
+    },
+    {
+      "id": 15802213,
+      "title": "Avença para um Assistente Técnico, para a Seção de Contabilidade e Aprovisionamento",
+      "price": "10.800,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Isabel Almeida Amaral",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15802213"
+    },
+    {
+      "id": 15801782,
+      "title": "PRC/61/2026 - Prestação de serviços de Telerradiologia",
+      "price": "8.400,00 €",
+      "buyer": "Unidade de Saúde da Ilha de São Jorge",
+      "seller": "IMI - Imagens Médicas Integradas, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15801782"
+    },
+    {
+      "id": 15800027,
+      "title": "aquisição de 15 telemóveis para a divisão de controlos do IAMA, IPRA.",
+      "price": "6.095,40 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "MEO-SERVIÇOS DE COMUNICAÇÕES E MULTIMÉDIA, SA (PTEMPRESAS)",
+      "procedure": "Concurso público",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15800027"
+    },
+    {
+      "id": 15800030,
+      "title": "Concessão da exploração da Feira do Livro no âmbito do XXI Outono Vivo",
+      "price": "2.000,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "PUBLIÇOR - PUBLICAÇÕES E PUBLICIDADE, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15800030"
+    },
+    {
+      "id": 15801523,
+      "title": "AQUISIÇÃO DE SERVIÇOS DO GRUPO CULTURAL E RECREATIVO FARROBIM JOVEM PARA A REALIZAÇÃO DE ESPETÁCULO MUSICAL NA SEMANA DO MAR 2026",
+      "price": "1.650,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Grupo Cultural e Recreativo Farrobim Jovem",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15801523"
+    },
+    {
+      "id": 15798697,
+      "title": "Aquisição de serviços de deslocação aos Açores de 24 a 25 de setembro",
+      "price": "1.123,04 €",
+      "buyer": "Direção-Geral das Artes",
+      "seller": "SMILE - VIAGENS E TURISMO UNIPESSOAL LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "27-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15798697"
+    },
+    {
+      "id": 15799258,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "892,50 €",
+      "buyer": "USI Santa Maria",
+      "seller": "SANOFI- PRODUTOS FARMACÊUTICOS,LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15799258"
+    },
+    {
+      "id": 15799768,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "575,10 €",
+      "buyer": "USI Santa Maria",
+      "seller": "SANOFI- PRODUTOS FARMACÊUTICOS,LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "16-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15799768"
+    },
+    {
+      "id": 15799325,
+      "title": "Aquisição ao abrigo do AQ 963/2024 para as instituições do SNS",
+      "price": "285,40 €",
+      "buyer": "USI Santa Maria",
+      "seller": "SANOFI- PRODUTOS FARMACÊUTICOS,LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "16-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15799325"
+    },
+    {
+      "id": 15801100,
+      "title": "AQUISIÇÃO DE SERVIÇOS DO GRUPO CULTURAL E RECREATIVO FARROBIM JOVEM PARA A REALIZAÇÃO DE ESPETÁCULO MUSICAL NA INAUGURAÇÃO DA 2.ª FASE DA VARIANTE À CIDA-DE DA HORTA",
+      "price": "250,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Grupo Cultural e Recreativo Farrobim Jovem",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15801100"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {

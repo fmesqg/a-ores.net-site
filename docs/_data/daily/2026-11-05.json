@@ -1,0 +1,309 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15900453,
+      "title": "Empreitada de Repavimentação e Requalificação do Caminho da Ponta e Prolongamento da Rede de Distribuição de Àgua",
+      "price": "419.782,60 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "TRANSJET - CONSTRUÇÕES E TRANSPORTES, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15900453"
+    },
+    {
+      "id": 15900802,
+      "title": "Empreitada de Construção do Sistema de Abastecimento de Água na Transversal – Urzelina/Santo António, Ilha de São Jorge. A empreitada visa reforçar de forma estratégica a disponibilidade e a distribui...",
+      "price": "185.250,98 €",
+      "buyer": "IROA, S. A.",
+      "seller": "Inves Tri Unipessoal Lda",
+      "procedure": "Concurso público",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15900802"
+    },
+    {
+      "id": 15904218,
+      "title": "AQUISIÇÃO DE LICENCIAMENTO MICROSOFT PARA O HOSPITAL DE SANTO ESPÍRITO DA ILHA TERCEIRA, E.P.E.R., NO ÂMBITO DO PLANO DE RECUPERAÇÃO E RESILIÊNCIA, DIMENSÃO \nRESILIÊNCIA, COMPONENTE 01, INVESTIMENTO R...",
+      "price": "157.973,79 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "DIGIBÉRIA INFORMATION TECHNOLOGIES, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15904218"
+    },
+    {
+      "id": 15900413,
+      "title": "SERVIÇO DE MANUTENÇÃO DE ESPAÇOS VERDES NA BASE AÉREA Nº4, PERÍODO 12 (DOZE) MESES.",
+      "price": "105.839,88 €",
+      "buyer": "Estado Maior da Força Aérea",
+      "seller": "Samsic Portugal-Facility Services,S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "03-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15900413"
+    },
+    {
+      "id": 15899708,
+      "title": "Aluguer, Montagem e Desmontagem de Iluminação de Natal no Concelho de Lagoa para o ano de 2026",
+      "price": "60.425,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Vigiluz - Instalações Elétricas e Comércio SU Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15899708"
+    },
+    {
+      "id": 15901914,
+      "title": "Aquisição de Serviços de Solução Integrada para Gestão de Redes de Água e Saneamento",
+      "price": "34.780,00 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "AQUASIS - Sistemas de Informação, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15901914"
+    },
+    {
+      "id": 15901462,
+      "title": "Fornecimento de Equipamentos e Instalação de Estação de Pressurização",
+      "price": "21.373,61 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "Luságua - Serviços Ambientais, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15901462"
+    },
+    {
+      "id": 15904383,
+      "title": "Aquisição de combustíveis rodoviários - Gasóleo",
+      "price": "21.000,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "GALP AÇORES, UNIPESSOAL LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15904383"
+    },
+    {
+      "id": 15899627,
+      "title": "AD/16/2026 - CONTRATO DE PRESTAÇÃO DE SERVIÇOS APOIO TÉCNICO AOS SERVIÇOS DE CONTABILIDADE",
+      "price": "18.000,00 €",
+      "buyer": "Município da Povoação",
+      "seller": "Heltra - Consultores de Gestão Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15899627"
+    },
+    {
+      "id": 15900617,
+      "title": "Locação de Viatura com braço telescópico e cesto, incluindo Operador/Motorista",
+      "price": "17.500,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Emanuel Pimentel Sousa Construções, Uni, Lda.",
+      "procedure": "Concurso público",
+      "signing_date": "03-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15900617"
+    },
+    {
+      "id": 15904206,
+      "title": "Refeições Escolares-Procedimento de ajuste direto n.º1/2026-Convite à apresentação de proposta - uma entidade",
+      "price": "16.894,50 €",
+      "buyer": "Escola Básica e Secundária de São Roque do Pico",
+      "seller": "Filipa Alexandra Gouveia Soares",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15904206"
+    },
+    {
+      "id": 15901834,
+      "title": "Ajuste direto em função de critérios materiais - Carreira Pública - 02 /11/26 a 18/11/2006",
+      "price": "16.333,33 €",
+      "buyer": "Escola Básica Integrada de Angra do Heroísmo",
+      "seller": "MOBI AZORES - MOBILIDADE E TURISMO, lDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15901834"
+    },
+    {
+      "id": 15902347,
+      "title": "Protocolo entre a Escola Básica e Secundária Armando Cortês Rodrigues e a Junta de Freguesia da Ribeira Seca -Transportes dos alunos -Circuito n.º 1",
+      "price": "12.890,31 €",
+      "buyer": "Escola Básica e Secundária Armando Côrtes-Rodrigues",
+      "seller": "Freguesia de Ribeira Seca",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15902347"
+    },
+    {
+      "id": 15899566,
+      "title": "SERVIÇOS DE MEDICINA VETERINÁRIA PARA A BASE AÉREA N.º 4 (BA4), PARA O PERÍODO DE 24 MESES.",
+      "price": "10.800,00 €",
+      "buyer": "Força Aérea Portuguesa",
+      "seller": "Denise Machado Coelho",
+      "procedure": "Consulta Prévia",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15899566"
+    },
+    {
+      "id": 15901027,
+      "title": "Ajuste Direto nº 7/2026/2027 -Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a EBSACR.",
+      "price": "10.129,12 €",
+      "buyer": "Escola Básica e Secundária Armando Côrtes-Rodrigues",
+      "seller": "Resendes Damião Soares Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15901027"
+    },
+    {
+      "id": 15900616,
+      "title": "Ajuste Direto N.º 6/2026 por Lotes para aquisição de bens alimentares para o Bufete Escolar durante o ano letivo de 2026/2027",
+      "price": "2.532,12 €",
+      "buyer": "Escola Secundária Jerónimo Emiliano de Andrade",
+      "seller": "Unicol, Cooperativa Agrícola, CRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15900616"
+    },
+    {
+      "id": 15902470,
+      "title": "Protocolo entre a Escola Básica e Secundária Armando Cortês Rodrigues e a Junta de Freguesia da Ribeira Seca - Transportes de aluno -Circuito nº10",
+      "price": "2.148,38 €",
+      "buyer": "Escola Básica e Secundária Armando Côrtes-Rodrigues",
+      "seller": "Freguesia de Ribeira Seca",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15902470"
+    },
+    {
+      "id": 15900895,
+      "title": "Ajuste Direto N.º 6/2026 por Lotes para aquisição de bens alimentares para o Bufete Escolar durante o ano letivo de 2026/2027",
+      "price": "1.062,00 €",
+      "buyer": "Escola Secundária Jerónimo Emiliano de Andrade",
+      "seller": "Unicol, Cooperativa Agrícola, CRL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15900895"
+    },
+    {
+      "id": 15900916,
+      "title": "Ajuste Direto N.º 6/2026 por Lotes para aquisição de bens alimentares para o Bufete Escolar durante o ano letivo de 2026/2027",
+      "price": "636,70 €",
+      "buyer": "Escola Secundária Jerónimo Emiliano de Andrade",
+      "seller": "Peixefrio",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15900916"
+    },
+    {
+      "id": 15903164,
+      "title": "Protocolo entre a Escola Básica e Secundária Armando Cortês Rodrigues e a Junta de Freguesia da Ribeira Seca -Transporte de Alunos -Circuito n.º12",
+      "price": "385,31 €",
+      "buyer": "Escola Básica e Secundária Armando Côrtes-Rodrigues",
+      "seller": "Freguesia de Ribeira Seca",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15903164"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9603,
+        "title": "Substituição dos Cabos Submarinos dos Açores - Diligências, Compromissos e Calendário",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "08/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9603"
+      },
+      {
+        "id": 9634,
+        "title": "Relatório final sobre os custos das respostas sociais nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "19/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9634"
+      },
+      {
+        "id": 9660,
+        "title": "Instalação de Contadores Bidirecionais em Sistemas de Produção de Energia para Autoconsumo",
+        "state_change": null,
+        "requesters": "Russell Sousa PS, ...",
+        "date": "04/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9660"
+      },
+      {
+        "id": 9661,
+        "title": "Equipamento de neuro-modulação transcraniana para a ilha das Flores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "04/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9661"
+      },
+      {
+        "id": 9662,
+        "title": "Falta de médicos e dificuldades no acesso ao tratamento de toxicodependentes na ilha Terceira",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "04/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9662"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24480,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Presidente Luís Garcia defende uma Autonomia que transforme a periferia em oportunidade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24480"
+      },
+      {
+        "id": 24481,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Desporto de formação é a melhor forma de promover estilos de vida saudáveis.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24481"
+      },
+      {
+        "id": 24473,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer respostas sobre equipamentos de neuro-modulação para doentes de Machado-Joseph nas Flores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24473"
+      },
+      {
+        "id": 24474,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Fibromialgia nos Açores: Se o CHEGA não perguntasse, não se sabia!",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24474"
+      },
+      {
+        "id": 24475,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - PAN/A propõe estudo sobre perturbações do autismo e défice de atenção em crianças e jovens.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24475"
+      },
+      {
+        "id": 24476,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca investimento de 350 mil euros no Caminho do Pau-Pique.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24476"
+      },
+      {
+        "id": 24477,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco denuncia tentativa de contornar reivindicação dos trabalhadores da Roberto Ivens e propõe verba para pagar trabalho suplementar.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24477"
+      },
+      {
+        "id": 24478,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige explicações para 500 toxicodependentes acompanhados por um único médico na ilha Terceira.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24478"
+      },
+      {
+        "id": 24479,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer garantias para a ampliação da pista do aeroporto do Pico.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24479"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-05"
+}

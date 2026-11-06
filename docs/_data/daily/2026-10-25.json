@@ -2,9 +2,18 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15832358,
+      "title": "Aquisição de uma barreira eletromecânica.",
+      "price": "9.463,96 €",
+      "buyer": "Estado-Maior do Exército",
+      "seller": "José Carlos Cabral -Comercio de Portas e Automatismos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15832358"
+    }
+  ],
   "alra": {},
   "portal": {
     "boletins": [],

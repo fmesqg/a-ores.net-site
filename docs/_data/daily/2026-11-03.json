@@ -2,9 +2,178 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15891189,
+      "title": "Aquisição de Serviços de Assistência Técnica e Manutenção Preventiva das Viaturas de Combate a Incêndios, Viaturas 4x4, Viaturas PCM e Ambulâncias dos Aeródromos das Ilhas do Pico, São Jorge, Graciosa...",
+      "price": "538.862,40 €",
+      "buyer": "SATA - Gestão de Aeródromos, SA",
+      "seller": "Aerociencias - Formação e Manutenção Aeroportuária Lda",
+      "procedure": "Concurso público",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15891189"
+    },
+    {
+      "id": 15888634,
+      "title": "Obra nº 13/05 - Substituição da rede de distribuição de água na Rua do Jogo - Santa Bárbara",
+      "price": "269.672,17 €",
+      "buyer": "Serviços Municipalizados de Água e Saneamento de Ponta Delgada",
+      "seller": "AR. Casanova - Construção Civil Lda",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15888634"
+    },
+    {
+      "id": 15891161,
+      "title": "Fornecimento de Aparelhos Respiratórios de Circuito Aberto (ARICA) para os Aeródromos das Ilhas do Pico, São Jorge, Graciosa e Corvo",
+      "price": "170.726,60 €",
+      "buyer": "SATA - Gestão de Aeródromos, SA",
+      "seller": "VIANAS, SA",
+      "procedure": "Concurso público",
+      "signing_date": "09-07-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15891161"
+    },
+    {
+      "id": 15888004,
+      "title": "Obra nº. 14/05 - Infraestruturas de Saneamento Básico nas Ruas de Lisboa e Manuel Pereira - Fajã de Baixo",
+      "price": "135.114,88 €",
+      "buyer": "Serviços Municipalizados de Água e Saneamento de Ponta Delgada",
+      "seller": "AR. Casanova - Construção Civil Lda",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15888004"
+    },
+    {
+      "id": 15889780,
+      "title": "Aquisição de serviços de transportes em regime de carreira pública nas localidades a indicar pela entidade adjudicante, nos percursos para a escola e a partir da escola, no decurso do ano escolar de 2...",
+      "price": "79.268,27 €",
+      "buyer": "Escola Básica e Secundária de Velas",
+      "seller": "Rumo à Natureza, Unipessoal Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "16-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15889780"
+    },
+    {
+      "id": 15891169,
+      "title": "Serviços de manutenção e conservação da frota do parque automóvel do Município, nomeadamente, a execução de trabalhos de serralharia, corte, quinagem e soldadura, indispensáveis à reparação, reforço e...",
+      "price": "73.919,00 €",
+      "buyer": "Câmara Municipal de Angra do Heroísmo",
+      "seller": "José Henrique Alves de Sousa &amp; Filhos Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15891169"
+    },
+    {
+      "id": 15888060,
+      "title": "Fornecimento e Instalação de Central Hidropressora no Tecnoparque",
+      "price": "48.330,47 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Sousa & Garcês, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15888060"
+    },
+    {
+      "id": 15888857,
+      "title": "Aquisição de serviços de manutenção preventiva, corretiva e evolutiva do SIAC-GRA, em regime de bolsa de horas.",
+      "price": "44.997,80 €",
+      "buyer": "Direção Regional de Apoio ao Investimento e à Competitividade",
+      "seller": "AXIANSEU II DIGITAL CONSULTING, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15888857"
+    },
+    {
+      "id": 15890179,
+      "title": "2025/50,01/3371 - Aquisição de serviços de fiscalização e coordenação de segurança em obra para a Empreitada de Construção do Novo Reservatório da Fonte da Telha, Incluindo Condutas de Ligação ao Rese...",
+      "price": "42.000,00 €",
+      "buyer": "Município de Angra do Heroísmo",
+      "seller": "BUILDPRINT - SERVIÇOS DE ENGENHARIA E CONSULTORIA, UNIPESSOAL, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15890179"
+    },
+    {
+      "id": 15890394,
+      "title": "Ajuste Direto para Fornecimento Contínuo de Blocos, para o ano de 2027",
+      "price": "31.737,60 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Vieiras, Fabricantes de materiais de construção, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15890394"
+    },
+    {
+      "id": 15890451,
+      "title": "Ajuste Direto para Fornecimento Contínuo de Cimento, para o ano de 2027",
+      "price": "31.288,32 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Vieiras, Fabricantes de materiais de construção, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15890451"
+    },
+    {
+      "id": 15887828,
+      "title": "Empreitada de substituição da solução de impermeabilização da cobertura do edifício sede da DREC.",
+      "price": "31.173,55 €",
+      "buyer": "Direção Regional de Apoio ao Investimento e à Competitividade",
+      "seller": "Marco Paulo Carvalho Viveiros- ENI",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15887828"
+    },
+    {
+      "id": 15886192,
+      "title": "Aquisição de serviços de manutenção preventiva e corretiva para equipamentos de Aquecimento, Ventilação e Ar-Condicionado (AVAC) para 36 meses",
+      "price": "26.185,37 €",
+      "buyer": "Autoridade Tributária e Aduaneira",
+      "seller": "MERCAFLUX - GESTÃO E MANUTENÇÃO DE ATIVOS, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15886192"
+    },
+    {
+      "id": 15890631,
+      "title": "Aquisição de serviços - Prospeções geológicas e projetos de contenção nas zonas da captação das nascentes do Galego e da Mãe D´Água, em Vila Franca do Campo",
+      "price": "21.700,00 €",
+      "buyer": "Município de Vila Franca do Campo",
+      "seller": "Açorgeo - Sociedade de Estudos Geotécnicos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15890631"
+    },
+    {
+      "id": 15888061,
+      "title": "Aquisição de triturador rebocável, lote 102",
+      "price": "21.000,00 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "2AB - Comércio Serviços Equipamentos, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15888061"
+    },
+    {
+      "id": 15888812,
+      "title": "Aquisição de Serviços de Impressão, Cópia e Digitalização, Incluindo o Software e  Respetivos Serviços Associados em Regime de Aluguer Operacional",
+      "price": "14.840,92 €",
+      "buyer": "Direção Regional da Agricultura, Veterinária e Alimentação",
+      "seller": "Escritório Digital, representações, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15888812"
+    },
+    {
+      "id": 15887367,
+      "title": "Aquisição de serviços de “Avaliação do Impacto Económico da Atividade de Cruzeiros em Portugal”",
+      "price": "5.189,17 €",
+      "buyer": "APFF - Administração do Porto da Figueira da Foz, SA",
+      "seller": "Universidade Nova de Lisboa",
+      "procedure": "Setores especiais – isenção parte II",
+      "signing_date": "07-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15887367"
+    }
+  ],
   "alra": {
     "informacoes": [
       {

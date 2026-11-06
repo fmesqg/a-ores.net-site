@@ -2,9 +2,148 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15854988,
+      "title": "Transportes Escolares- Circuitos de Aluguer",
+      "price": "106.704,00 €",
+      "buyer": "Escola Básica Integrada do Nordeste",
+      "seller": "Vale do Ave Transportes, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15854988"
+    },
+    {
+      "id": 15852201,
+      "title": "Empreitada de execução de vedação em rede elástica plastificada no Bairro dos Americanos, Praia da Vitória, ilha da Terceira",
+      "price": "57.300,00 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "TREPA Construção Civil, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15852201"
+    },
+    {
+      "id": 15857192,
+      "title": "Aquisição de pneus, óleos e lubrificantes para viaturas e maquinaria.",
+      "price": "35.159,87 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "Feliciano & Feliciano, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15857192"
+    },
+    {
+      "id": 15855643,
+      "title": "Aquisição de serviços de assessoria jurídica em regime de avença",
+      "price": "30.000,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "Borges da Ponte, Linhares Dias e Associados – Sociedade de Advogados, SP, RL",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15855643"
+    },
+    {
+      "id": 15865972,
+      "title": "Aquisição de serviços de organização e realização do projeto \"TATANKA\" da PDL26 - Capital Portuguesa da Cultura",
+      "price": "24.990,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Aquele Abraço, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15865972"
+    },
+    {
+      "id": 15859042,
+      "title": "Prestação de serviços de elaboração de projeto para construção de Reservatórios de água.",
+      "price": "23.980,00 €",
+      "buyer": "Município de Santa Cruz das Flores",
+      "seller": "HDRENA - ENGENHARIA HIDRÁULICA, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15859042"
+    },
+    {
+      "id": 15850393,
+      "title": "Aquisição de 4195 sacos de cimento para a Direção Regional das Obras Públicas",
+      "price": "21.184,75 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "Vieiras, Fabricantes de materiais de construção, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15850393"
+    },
+    {
+      "id": 15856853,
+      "title": "Aq.serviços para a org. e realização do Projeto \"Ilhas Desconhecidas\" da PDL26 - Capital Portuguesa da Cultura",
+      "price": "20.037,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "CULTURPROJECT - GESTÃO PROJETOS CULTURAIS, UNIPESSOAL, LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15856853"
+    },
+    {
+      "id": 15859759,
+      "title": "Limpeza de fossas",
+      "price": "19.600,00 €",
+      "buyer": "Nordeste Ativo, EM, SA",
+      "seller": "Amaral & Câmara - Aluguer de Máquinas Agrícolas",
+      "procedure": "Consulta Prévia",
+      "signing_date": "26-05-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15859759"
+    },
+    {
+      "id": 15854076,
+      "title": "Transporte Escolares - Circuitos Aluguer",
+      "price": "15.795,00 €",
+      "buyer": "Escola Básica Integrada do Nordeste",
+      "seller": "ASSOCIAÇÃO HUMANITÁRIA DOS BOMBEIROS VOLUNTÁRIOS DE NORDESTE",
+      "procedure": "Concurso público",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15854076"
+    },
+    {
+      "id": 15868149,
+      "title": "Aquisição de contratos de seguros para a Associação para a Valorização Económica dos Açores (doravante AVEA), de acordo com as cláusulas definidas nas Especificações Técnicas, constantes do Anexo I do...",
+      "price": "13.452,27 €",
+      "buyer": "Associação para a Valorização Económica dos Açores - AVEA",
+      "seller": "CBK Açores - Mediadores de Seguros Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15868149"
+    },
+    {
+      "id": 15866042,
+      "title": "MFL - Prestação de serviços assistência técnica Informática - 2027",
+      "price": "3.700,00 €",
+      "buyer": "Direção Regional da Cultura",
+      "seller": "Electro Pessoa, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15866042"
+    },
+    {
+      "id": 15850033,
+      "title": "Aquisição de serviços de voo e alojamento para a Participação no I Fórum da Vitivinicultura Açoriana",
+      "price": "654,47 €",
+      "buyer": "Instituto dos Vinhos do Douro e do Porto, IP",
+      "seller": "Cosmos",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "17-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15850033"
+    },
+    {
+      "id": 15850150,
+      "title": "Aquisição dos serviços de viagem para alteração de local de embarque para a Participação no I Fórum da Vitivinicultura Açoriana",
+      "price": "95,00 €",
+      "buyer": "Instituto dos Vinhos do Douro e do Porto, IP",
+      "seller": "Cosmos",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "09-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15850150"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {

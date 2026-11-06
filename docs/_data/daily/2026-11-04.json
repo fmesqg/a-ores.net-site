@@ -2,9 +2,178 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1035)')))"
-  },
+  "base": [
+    {
+      "id": 15893191,
+      "title": "Obra n.º 15/26 - Infraestruturas de Saneamento Básico em parte da Rua da Lapa ao Botelho - Livramento",
+      "price": "177.033,76 €",
+      "buyer": "Serviços Municipalizados de Água e Saneamento de Ponta Delgada",
+      "seller": "ALBANO VIEIRA, SA",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15893191"
+    },
+    {
+      "id": 15893215,
+      "title": "AQUISIÇÃO SE SERVIÇOS DE TRANSPORTES EM REGIME DE CARREIRA PÚBLICA NOS PERCURSOS PARA A ESCOLA E A PARTIR DA ESCOLA.",
+      "price": "99.556,93 €",
+      "buyer": "Escola Básica e Secundária da Graciosa",
+      "seller": "Empresa de Transportes Coletivos da Ilha Graciosa, L.da",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15893215"
+    },
+    {
+      "id": 15898658,
+      "title": "PROGRAMAÇÃO E EXPANSÃO MUSEOLÓGICA,SUPERVISÃO DA PROGRAMAÇÃO DA ACADEMIA DAS ARTES DA UAC PARA O BIÉNIO 2026-2028, CONCEÇÃO E IMPLEMENTAÇÃO DO PLANO ESTRATÉGICO PARA AS ARTES E PARA A CULTURA (PEAC) E...",
+      "price": "73.680,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "DUARTE NUNO DA SILVA VIEIRA CHAVES",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15898658"
+    },
+    {
+      "id": 15893735,
+      "title": "Aquisição de serviços de controlo integrado de pragas - anos de 2026 a 2029",
+      "price": "62.796,60 €",
+      "buyer": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "seller": "Anticimex Portugal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15893735"
+    },
+    {
+      "id": 15893933,
+      "title": "AD/17/2026 - AJUSTE DIRETO PARA A AQUISIÇÃO E MONTAGEM DA ILUMINAÇÃO DE NATAL 2026",
+      "price": "54.046,53 €",
+      "buyer": "Município da Povoação",
+      "seller": "Bdb Energy - Projetos, Telecomunicações e Instalações Eletricas, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15893933"
+    },
+    {
+      "id": 15892722,
+      "title": "Aquisição de serviços médicos para o acompanhamento do Projeto de Medicina Física e de Reabilitação, para a Unidade de Saúde da Ilha de São Miguel",
+      "price": "43.345,80 €",
+      "buyer": "Unidade de Saúde da Ilha de São Miguel",
+      "seller": "Maria Helena Marques Pereira Branco Gomes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15892722"
+    },
+    {
+      "id": 15893700,
+      "title": "Avaliação do impacto da RIS3 Açores e do contributo do Programa Açores 2030 para a concretização dessa estratégia",
+      "price": "39.424,71 €",
+      "buyer": "Direcção Regional do Planeamento e Fundos Estruturais",
+      "seller": "TECHNOPOLIS GROUP PORTUGAL, UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15893700"
+    },
+    {
+      "id": 15895091,
+      "title": "AQUISIÇÃO DE PNEUS, PRESTAÇÃO DE SERVIÇOS DE REPARAÇÃO DE PNEUS E SERVIÇOS CONEXOS PARA EQUIPAMENTOS MÓVEIS",
+      "price": "32.353,08 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "Pneus São Miguel, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "03-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15895091"
+    },
+    {
+      "id": 15895081,
+      "title": "Obra nº. 13/05 - Extensão da rede de distribuição de água na Canada do Maranhão - Capelas",
+      "price": "29.254,17 €",
+      "buyer": "Serviços Municipalizados de Água e Saneamento de Ponta Delgada",
+      "seller": "ALBANO VIEIRA, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15895081"
+    },
+    {
+      "id": 15897378,
+      "title": "Reparação e Manutenção do Móvel 13",
+      "price": "24.980,00 €",
+      "buyer": "SMAS",
+      "seller": "Eduardo de Faria & Filho, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15897378"
+    },
+    {
+      "id": 15895303,
+      "title": "Prestação de Serviços de Diagnóstico e Implementação sobre o Regime de Cibersegurança e Auditoria de Adequação à Diretiva NIS 2 e Apoio ao Responsável de Cibersegurança",
+      "price": "24.687,50 €",
+      "buyer": "Município de Lajes das Flores",
+      "seller": "Visualforma - Tecnologias de Informação, S.A.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "03-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15895303"
+    },
+    {
+      "id": 15897897,
+      "title": "Aquisição de Refeições Escolares para a Escola Básica e Secundária da Graciosa",
+      "price": "19.328,40 €",
+      "buyer": "Escola Básica e Secundária da Graciosa",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "01-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15897897"
+    },
+    {
+      "id": 15895297,
+      "title": "Aluguer de piscina para hidroginástica sénior",
+      "price": "14.070,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "CAFBPD - CLUBE DE ACTIVIDADE FISICA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15895297"
+    },
+    {
+      "id": 15897885,
+      "title": "Prestação de serviços, na modalidade de avença, para apoio aos Serviços de Desenvolvimento Agrário das Flores, Faial, São Miguel e Terceira na recolha de dados científicos de monitorização do projeto ...",
+      "price": "12.243,07 €",
+      "buyer": "Secretaria Regional da Agricultura e Alimentação",
+      "seller": "Alejandra Ros Prieto",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15897885"
+    },
+    {
+      "id": 15894483,
+      "title": "AQUISIÇÃO DE SERVIÇOS DE ASSISTÊNCIA TÉCNICA E FORNECIMENTO DE CONSUMÍVEIS PARA IMPRESSORAS MULTIFUNÇÕES",
+      "price": "10.962,00 €",
+      "buyer": "MUSAMI - Operações Municipais do Ambiente, EIM, SA",
+      "seller": "Escritório Digital, representações, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "03-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15894483"
+    },
+    {
+      "id": 15899205,
+      "title": "Aquisição de equipamentos de climatização para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "10.940,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "José Tomás da Cunha &amp; Filhos, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15899205"
+    },
+    {
+      "id": 15892457,
+      "title": "Aquisição de serviços de deslocação aos Açores",
+      "price": "665,35 €",
+      "buyer": "Direção-Geral das Artes",
+      "seller": "SMILE - VIAGENS E TURISMO, UNIPESSOAL, LDA\t\t",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 258.º)",
+      "signing_date": "01-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15892457"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {

@@ -2,9 +2,208 @@
   "joraa": {
     "error": "Expecting value: line 1 column 1 (char 0)"
   },
-  "base": {
-    "error": "HTTPSConnectionPool(host='www.base.gov.pt', port=443): Max retries exceeded with url: /Base4/pt/resultados/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)')))"
-  },
+  "base": [
+    {
+      "id": 15879261,
+      "title": "Aquisição de serviços de manutenção de equipamentos Dräger para o Hospital Divino Espírito Santo de Ponta Delgada",
+      "price": "422.129,16 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "Dräger Portugal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "27-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879261"
+    },
+    {
+      "id": 15879004,
+      "title": "O presente Procedimento visa a celebração de cinco Contratos referentes à Aquisição de Serviços de Limpeza nos Edifícios dos Aeródromos das Ilhas do Pico, São Jorge, Graciosa, Corvo e Aerogare da Ilha...",
+      "price": "319.284,00 €",
+      "buyer": "SATA Gestão de Aeródromos, S.A",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "17-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879004"
+    },
+    {
+      "id": 15875345,
+      "title": "Locação com montagem, desmontagem e manutenção de material de iluminação e sonorização 2026/2027",
+      "price": "162.714,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "ILUMINAÇÕES - TEIXEIRA COUTO, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15875345"
+    },
+    {
+      "id": 15879248,
+      "title": "O presente Procedimento visa a celebração de cinco Contratos referentes à Aquisição de Serviços de Limpeza nos Edifícios dos Aeródromos das Ilhas do Pico, São Jorge, Graciosa, Corvo e Aerogare da Ilha...",
+      "price": "145.515,96 €",
+      "buyer": "SATA Gestão de Aeródromos, S.A",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "17-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879248"
+    },
+    {
+      "id": 15879260,
+      "title": "O presente Procedimento visa a celebração de cinco Contratos referentes à Aquisição de Serviços de Limpeza nos Edifícios dos Aeródromos das Ilhas do Pico, São Jorge, Graciosa, Corvo e Aerogare da Ilha...",
+      "price": "133.516,08 €",
+      "buyer": "SATA Gestão de Aeródromos, S.A",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "17-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879260"
+    },
+    {
+      "id": 15879155,
+      "title": "O presente Procedimento visa a celebração de cinco Contratos referentes à Aquisição de Serviços de Limpeza nos Edifícios dos Aeródromos das Ilhas do Pico, São Jorge, Graciosa, Corvo e Aerogare da Ilha...",
+      "price": "121.284,00 €",
+      "buyer": "SATA Gestão de Aeródromos, S.A",
+      "seller": "IBERLIM - HIGIENE E SUSTENTABILIDADE AMBIENTAL, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "17-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879155"
+    },
+    {
+      "id": 15873420,
+      "title": "Aquisição Serviço Transporte - Carreira Pública 2026/2027",
+      "price": "108.530,20 €",
+      "buyer": "Escola Básica Integrada do Nordeste",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15873420"
+    },
+    {
+      "id": 15877314,
+      "title": "1 - O presente concurso tem por objeto a aquisição de 8 712 (oito mil, setecentos e doze) refeições completas e (31 968) (trinta e uma mil, novecentos e sessenta e oito) refeições ligeiras no decurso ...",
+      "price": "82.986,48 €",
+      "buyer": "Escola Básica Integrada de Canto da Maia",
+      "seller": "Rescater - Prestação de Serviços, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "21-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15877314"
+    },
+    {
+      "id": 15879136,
+      "title": "Aquisição de serviços de organização e realização do projeto \"9 nas 9\" da PDL26 - CApital Portuguesa da Cultura",
+      "price": "71.836,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Quadrivium – Associação Artística",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879136"
+    },
+    {
+      "id": 15879061,
+      "title": "Aquisição de serviços de esterilização de canídeos e felídeos",
+      "price": "69.368,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Marco André Melo - Investimentos, Lda. ",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879061"
+    },
+    {
+      "id": 15879275,
+      "title": "O presente Procedimento visa a celebração de cinco Contratos referentes à Aquisição de Serviços de Limpeza nos Edifícios dos Aeródromos das Ilhas do Pico, São Jorge, Graciosa, Corvo e Aerogare da Ilha...",
+      "price": "45.575,87 €",
+      "buyer": "SATA Gestão de Aeródromos, S.A",
+      "seller": "Sá Limpa - Facility Services, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "03-08-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879275"
+    },
+    {
+      "id": 15878747,
+      "title": "Aquisição de serviços de esterilização de canídeos e felídeos",
+      "price": "38.018,40 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Marco André Melo - Investimentos, Lda. ",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15878747"
+    },
+    {
+      "id": 15878799,
+      "title": "Aquisição de serviços de esterilização de canídeos e felídeos",
+      "price": "25.065,15 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Marco André Melo - Investimentos, Lda. ",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15878799"
+    },
+    {
+      "id": 15879366,
+      "title": "aquisição de serviços para espetáculo musical\" O Barbeiro de Sevilha\"",
+      "price": "25.000,00 €",
+      "buyer": "Coliseu Micaelense - Sociedade de Promoção e Dinamização de Eventos Culturais, Sociais e Recreativos, EM, SA",
+      "seller": "Direto Pró Palco Produções, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879366"
+    },
+    {
+      "id": 15878775,
+      "title": "Aquisição de serviços de esterilização de canídeos e felídeos",
+      "price": "23.637,90 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Marco André Melo - Investimentos, Lda. ",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15878775"
+    },
+    {
+      "id": 15877644,
+      "title": "Implementação das atividades dos WP2,3 e 6",
+      "price": "16.800,00 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Yasmina María Rodriguez González",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15877644"
+    },
+    {
+      "id": 15875764,
+      "title": "Locação com montagem, desmontagem e manutenção de material de iluminação e sonorização 2026/2027",
+      "price": "15.732,00 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "ILUMINAÇÕES - TEIXEIRA COUTO, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15875764"
+    },
+    {
+      "id": 15878948,
+      "title": "Aquisição de serviços de esterilização de canídeos e felídeos",
+      "price": "11.274,90 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Marco André Melo - Investimentos, Lda. ",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15878948"
+    },
+    {
+      "id": 15877102,
+      "title": "Análise para identificação de estimativas de emissões de GEE",
+      "price": "10.494,05 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Philipp Paul Suessle",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15877102"
+    },
+    {
+      "id": 15879016,
+      "title": "Aquisição de serviços de esterilização de canídeos e felídeos",
+      "price": "9.944,40 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "Marco André Melo - Investimentos, Lda. ",
+      "procedure": "Concurso público",
+      "signing_date": "29-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15879016"
+    }
+  ],
   "alra": {
     "requerimentos": [
       {
