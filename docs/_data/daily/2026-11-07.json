@@ -1,0 +1,122 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15909512,
+      "title": "serviços médicos de radiologia pediátrica pelo HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "RCP, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15909512"
+    },
+    {
+      "id": 15909510,
+      "title": "serviços de enfermagem ao HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Francisco Borba Alves",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15909510"
+    },
+    {
+      "id": 15909503,
+      "title": "serviços de enfermagem ao HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Leonor Martins da Rocha",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15909503"
+    },
+    {
+      "id": 15909501,
+      "title": "Serviços de enfermagem pelo HSEIT, EPER",
+      "price": "30.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Alexandra Lima Leite",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15909501"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9594,
+        "title": "Falhas na disponibilização de licenças para manuais digitais e discriminação de alunos no acesso aos recursos pedagógicos",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "06/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9594"
+      },
+      {
+        "id": 9595,
+        "title": "Acesso da comunidade científica regional ao NI «Azores Ocean», continuidade da investigação marinha e futuro do NI «Arquipélago»",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "06/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9595"
+      },
+      {
+        "id": 9597,
+        "title": "Rede de Desporto Jovem Incluso",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9597"
+      },
+      {
+        "id": 9598,
+        "title": "Preservação do Imóvel de Interesse Público da Quinta das Necessidades II",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9598"
+      },
+      {
+        "id": 9599,
+        "title": "Idosos com rendimentos abaixo do salário mínimo regional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9599"
+      },
+      {
+        "id": 9600,
+        "title": "Resultados e metas da política regional de prevenção e combates àsdependências",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9600"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-07"
+}
