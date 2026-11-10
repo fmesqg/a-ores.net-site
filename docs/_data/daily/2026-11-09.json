@@ -1,0 +1,335 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15914778,
+      "title": "Fornecimento de medicamentos diversos, ao abrigo do concurso público de aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º 2025/1589.",
+      "price": "222.793,20 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "KEDRION BIOPHARMA ",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "20-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914778"
+    },
+    {
+      "id": 15910117,
+      "title": "AQUISIÇÃO DE EQUIPAMENTOS DE MONITORIZAÇÃO E RASTREIO (TERMINAIS GPS) DE VISITANTES NA MONTANHA DO PICO",
+      "price": "151.900,00 €",
+      "buyer": "Secretaria Regional do Ambiente e Ação Climática",
+      "seller": "INOVSIGHT - SISTEMAS DE VIGILÂNCIA DE GRANDES ÁREAS, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "06-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15910117"
+    },
+    {
+      "id": 15914623,
+      "title": "AJUSTE DIRETO N.º 7/EBSTB/2026 EM FUNÇÃO DE CRITÉRIOS MATERIAIS  COM CONVITE A APENAS UMA ENTIDADE AQUISIÇÃO DE SERVIÇOS DE TRANSPORTE EM REGIME DE CARREIRA PÚBLICA PARA A ESCOLA BÁSICA E SECUNDÁRIA T...",
+      "price": "113.121,87 €",
+      "buyer": "Escola Básica e Secundária Tomás de Borba",
+      "seller": "MOBI AZORES - MOBILIDADE E TURISMO, lDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914623"
+    },
+    {
+      "id": 15914718,
+      "title": "Fornecimento de medicamentos diversos, ao abrigo do concurso público de aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º 2025/1589.",
+      "price": "101.168,06 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "MYLAN, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914718"
+    },
+    {
+      "id": 15912990,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "88.420,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "AMGEN BIOFARMACÊUTICA, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "16-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15912990"
+    },
+    {
+      "id": 15914366,
+      "title": "PARA A AQUISIÇÃO DE SERVIÇOS DE ASSESSORIA FINANCEIRA ESPECIALIZADA PARA PROCEDER À AVALIAÇÃO DAS PARTICIPAÇÕES DETIDAS PELA PORTOS DOS AÇORES, S.A., NO CAPITAL SOCIAL DAS EMPRESAS DE ESTIVA OPERTRI –...",
+      "price": "57.000,00 €",
+      "buyer": "PORTOS DOS AÇORES, SA",
+      "seller": "BANCO DE INVESTIMENTO GLOBAL SA",
+      "procedure": "Consulta Prévia",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914366"
+    },
+    {
+      "id": 15913890,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "52.151,76 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "MERCK SHARP DOHME",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15913890"
+    },
+    {
+      "id": 15912555,
+      "title": "Aquisição de materiais para prolongamentos da rede pública de abastecimento de água e novos ramais domiciliários – São Roque do Pico",
+      "price": "46.996,07 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "AÇORLUX",
+      "procedure": "Consulta Prévia",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15912555"
+    },
+    {
+      "id": 15913762,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "40.313,75 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "GRINDEKS KALCEKS PORTUGAL, SOCIEDADE UNIPESSOAL, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15913762"
+    },
+    {
+      "id": 15914249,
+      "title": "Aquisição de materiais para manutenção do sistema de abastecimento de água para consumo humano – São Roque do Pico",
+      "price": "36.915,38 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "AÇORLUX",
+      "procedure": "Consulta Prévia",
+      "signing_date": "06-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914249"
+    },
+    {
+      "id": 15913005,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "33.397,50 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "BIOJAM SA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "16-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15913005"
+    },
+    {
+      "id": 15912597,
+      "title": "PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO E SUPORTE EDOC 2026-2029",
+      "price": "27.921,15 €",
+      "buyer": "Portos dos Açores, SA",
+      "seller": "Link Consulting, Tecnologias de Informação, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15912597"
+    },
+    {
+      "id": 15914130,
+      "title": "Prestação de serviços de vigilância e segurança na Biblioteca Pública e Arquivo Regional João José da Graça",
+      "price": "26.167,14 €",
+      "buyer": "Direção Regional da Cultura",
+      "seller": "TRUST-Companhia Insular de Segurança, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914130"
+    },
+    {
+      "id": 15913115,
+      "title": "Aquisição de serviços para a organização e execução de um programa de visita guiada, incluindo serviços de transporte, acompanhamento turístico e refeições no âmbito da EURORAI",
+      "price": "23.660,00 €",
+      "buyer": "Secção Regional dos Açores",
+      "seller": "Melo, Lda - Viagens e Turismo",
+      "procedure": "Contratação excluída II",
+      "signing_date": "16-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15913115"
+    },
+    {
+      "id": 15914187,
+      "title": "Aquisição de materiais para manutenção do sistema de abastecimento de água para consumo humano – São Roque do Pico",
+      "price": "16.538,44 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "AzoresX, Unipessoal, Lda.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "06-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914187"
+    },
+    {
+      "id": 15914739,
+      "title": "Fornecimento de medicamentos diversos, ao abrigo do concurso público de aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º 2025/1589.",
+      "price": "15.480,00 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "ABBVIE,LDA",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914739"
+    },
+    {
+      "id": 15913931,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "9.227,19 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "NOVARTIS FARMA-PROD.FARMACÊUTICOS,SA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "17-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15913931"
+    },
+    {
+      "id": 15912948,
+      "title": "Fornecimento de medicamentos do aparelho cardiovascular, ao abrigo do concurso público \nde aprovisionamento, celebrado pelos serviços partilhados do ministério da saúde n.º \n2025/1627.",
+      "price": "5.284,38 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "BAXTER – MÉDICO FARMACÊUTICA, LDA.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "16-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15912948"
+    },
+    {
+      "id": 15914113,
+      "title": "Aquisição de um Motorredutor para o tanque de homogeneização das lamas da ETAR do Matadouro da Terceira",
+      "price": "1.720,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "J. Aurora - Equipamentos Industriais, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15914113"
+    },
+    {
+      "id": 15912320,
+      "title": "Prestação de Serviços de Direção Técnica do Aquafit Health & Fitness Club",
+      "price": "1.500,00 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Daniela Filipa Cardoso",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15912320"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9667,
+        "title": "Prorrogação do prazo de candidaturas ao Construir 2030 e ao PEPAC Indústria face à inoperacionalidade dos serviços municipais de licenciamento",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "06/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9667"
+      },
+      {
+        "id": 9668,
+        "title": "Despesas com deslocações e representação institucional, recursos humanos e condições de funcionamento da Escola do Mar dos Açores",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "06/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9668"
+      },
+      {
+        "id": 9670,
+        "title": "Custo real das respostas sociais das IPSS dos Açores: relatório do ISSA (outubro de 2026)",
+        "state_change": null,
+        "requesters": "Berto Messias PS, ...",
+        "date": "09/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9670"
+      },
+      {
+        "id": 9519,
+        "title": "Falta de docentes e mecanismos de mobilidade na Ilha das Flores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "31/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9519"
+      },
+      {
+        "id": 9534,
+        "title": "Encerramento do Jardim de Infância do Teatro Novo (EBJI de Capelas)",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "António Lima BE",
+        "date": "03/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9534"
+      },
+      {
+        "id": 9579,
+        "title": "Equipamentos de cirurgia robótica do Serviço Regional de Saúde",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Berto Messias PS, ...",
+        "date": "29/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9579"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24487,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA acusa governos de abandonarem a agricultura e de não cumprirem promessas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24487"
+      },
+      {
+        "id": 24488,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Agricultores açorianos estão fartos de ser iludidos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24488"
+      },
+      {
+        "id": 24489,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS quer saber quais os critérios utilizados para estudo sobre custos reais das IPSS dos Açores e identifica divergências entre o relatório e a apresentação pública do estudo.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24489"
+      },
+      {
+        "id": 24490,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA não aceita cortes nas prioridades dos açorianos.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24490"
+      },
+      {
+        "id": 24491,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores acusa Governo Regional e Governo da República de enganarem os agricultores açorianos sobre o pagamento do apoio de 23 milhões de euros.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24491"
+      },
+      {
+        "id": 24492,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores acusa Governo Regional e Governo da República de enganarem os agricultores açorianos sobre o pagamento do apoio de 23 milhões de euros.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24492"
+      },
+      {
+        "id": 24493,
+        "title": "Discurso do Presidente da ALRAA, Luís Garcia, na apresentação da obra \"Autonomia dos Açores - 50 Anos de História\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24493"
+      },
+      {
+        "id": 24494,
+        "title": "Discurso do Presidente da ALRAA, Luís Garcia, na sessão de encerramento do IX Colóquio \"O Faial e a Periferia Açoriana nos séculos XV a XX\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24494"
+      },
+      {
+        "id": 24495,
+        "title": "Discurso do Presidente da ALRAA, Luís Garcia, na sessão solene comemorativa do 28.º aniversário da Escola Profissional da Horta",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24495"
+      },
+      {
+        "id": 24496,
+        "title": "Discurso do Presidente da ALRAA, Luís Garcia, nas comemorações dos 50 anos da Autonomia organizadas pela Câmara Municipal da Ribeira Grande",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24496"
+      },
+      {
+        "id": 24497,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores realiza Jornadas Parlamentares em Vila Franca do Campo para analisar Plano e Orçamento para 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24497"
+      },
+      {
+        "id": 24498,
+        "title": "Comissão de Assuntos Sociais - Convocatória (Dia 13/11/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24498"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-09"
+}
