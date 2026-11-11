@@ -1,0 +1,259 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15919192,
+      "title": "aquisição de fuel oil - nafta",
+      "price": "412.500,54 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "BENCOM-ARMAZENAGEM E COMÉRCIO DE COMBUSTÍVEIS, S.A.",
+      "procedure": "Contratação excluída II",
+      "signing_date": "17-03-2025",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15919192"
+    },
+    {
+      "id": 15918906,
+      "title": "Empreitada de reparação de taludes - E.R. N.º 1-2ª Ribeiras, ilha do Pico",
+      "price": "129.262,70 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "Casas do Verdelho, turismo e atividades unipessoal, lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "15-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15918906"
+    },
+    {
+      "id": 15917936,
+      "title": "1. O presente Programa visa a celebração do contrato referente à “AQUISIÇÃO DE EMULSÃO BETUMINOSA ECM-2 E DE BETUME 160/220, EM REGIME DE FORNECIMENTO CONTINUO”, de acordo com as especificidades e car...",
+      "price": "81.936,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Prodemazores, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "10-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15917936"
+    },
+    {
+      "id": 15915776,
+      "title": "Aquisição de serviço de transporte dos formandos da Escola Profissional de Nordeste para o ano letivo 2026/2027",
+      "price": "45.500,00 €",
+      "buyer": "Santa Casa da Misericórdia de Nordeste",
+      "seller": "Caetano, Raposo &amp; Pereiras, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15915776"
+    },
+    {
+      "id": 15915740,
+      "title": "Empreitada de construção de um passeio pedonal costeiro à ilha do Faial - Passeio da Rainha - Projeto n.º 39/OP19",
+      "price": "42.860,75 €",
+      "buyer": "Direção Regional das Obras Públicas",
+      "seller": "Tecnovia - Açores - Sociedade de Empreitadas, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15915740"
+    },
+    {
+      "id": 15916294,
+      "title": "Ajuste Direto por Lotes nº 3/2026/EBIG",
+      "price": "38.049,77 €",
+      "buyer": "Escola Básica Integrada de Ginetes",
+      "seller": "Vale do Ave Transportes, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15916294"
+    },
+    {
+      "id": 15915919,
+      "title": "Empreitada de Recuperação do Muro do Largo do Carmo, Freguesia da Matriz, concelho da Horta",
+      "price": "36.554,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Açores Verdejantes - Pinturas Soc. Unipessoal, Ltdª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15915919"
+    },
+    {
+      "id": 15919117,
+      "title": "Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica e Secundária da Graciosa",
+      "price": "36.201,60 €",
+      "buyer": "Escola Básica e Secundária da Graciosa",
+      "seller": "Empresa de Transportes Coletivos da Ilha Graciosa, L.da",
+      "procedure": "Concurso público",
+      "signing_date": "16-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15919117"
+    },
+    {
+      "id": 15918202,
+      "title": "Prestação de Serviços de Manutenção e Acompanhamento dos Sistemas de Eletricidade, Ar Condicionado, Intrusão, Detecção e Bombagem de Incêndio e Câmara de Expurgo da BPARPD",
+      "price": "27.372,00 €",
+      "buyer": "Direção Regional da Cultura",
+      "seller": "José Mário Martins Duarte",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15918202"
+    },
+    {
+      "id": 15916738,
+      "title": "Serviços de manutenção e assistência técnica completa dos elevadores da BPARPD",
+      "price": "24.480,00 €",
+      "buyer": "Direção Regional da Cultura",
+      "seller": "Otis Elevadores Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15916738"
+    },
+    {
+      "id": 15915640,
+      "title": "Prestação de Serviços de limpeza e higienização da Casa Mortuária de São Roque do Pico",
+      "price": "18.000,00 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "Sandra das Neves Ávila",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15915640"
+    },
+    {
+      "id": 15919234,
+      "title": "Aquisição serviços de apoio técnico e cientifico no âmbito de projetos de investigação na modalidade de avença no âmbito dos projetos DaTAz, Dive Reporter , Ecodive Pw.",
+      "price": "16.200,00 €",
+      "buyer": "IMAR-Instituto do Mar",
+      "seller": "Maria Joao Marques Mendes",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15919234"
+    },
+    {
+      "id": 15915425,
+      "title": "PRESTAÇÃO DE SERVIÇOS – APOIO TÉCNICO PARA APRECIAÇÃO E EMISSÃO DE PARECERES TÉCNICOS, FISCALIZAÇÃO E VISTORIAS DE PROJECTOS DE OBRAS PARTICULARES A LICENCIAR E OU A AUTORIZAR PELA CÂMARA MUNICIPAL DO...",
+      "price": "11.976,00 €",
+      "buyer": "Município do Corvo",
+      "seller": "Projectaço, Serviços de Engenharia e Arquitetura, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15915425"
+    },
+    {
+      "id": 15919287,
+      "title": "Prestação de serviços, por lotes, de verificação, ensaio e certificação de equipamentos instalados no Hospital Divino Espírito Santo de Ponta Delgada, EPER.",
+      "price": "11.919,00 €",
+      "buyer": "Hospital Divino Espiríto Santo de Ponta Delgada, EPER",
+      "seller": "Trescal Portugal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15919287"
+    },
+    {
+      "id": 15919029,
+      "title": "Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica e Secundária da Graciosa",
+      "price": "9.763,20 €",
+      "buyer": "Escola Básica e Secundária da Graciosa",
+      "seller": "Empresa de Transportes Coletivos da Ilha Graciosa, L.da",
+      "procedure": "Concurso público",
+      "signing_date": "16-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15919029"
+    },
+    {
+      "id": 15915824,
+      "title": "Fornecimento de bens alimentícios destinados ao bufete da Escola Básica Integrada dos Arrifes, durante o ano letivo 2026/2027, de acordo com as especificações e quantidades previstas nas peças do proc...",
+      "price": "8.058,50 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "SUPERMERCADOS MANTEIGA - COM. MERC. E UTILIDADES, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15915824"
+    },
+    {
+      "id": 15919285,
+      "title": "Prestação de serviços, por lotes, de verificação, ensaio e certificação de equipamentos instalados no Hospital Divino Espírito Santo de Ponta Delgada, EPER.",
+      "price": "7.440,00 €",
+      "buyer": "Hospital Divino Espiríto Santo de Ponta Delgada, EPER",
+      "seller": "Tradelabor Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15919285"
+    },
+    {
+      "id": 15919289,
+      "title": "Prestação de serviços, por lotes, de verificação, ensaio e certificação de equipamentos instalados no Hospital Divino Espírito Santo de Ponta Delgada, EPER.",
+      "price": "6.786,00 €",
+      "buyer": "Hospital Divino Espiríto Santo de Ponta Delgada, EPER",
+      "seller": "Trescal Portugal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15919289"
+    },
+    {
+      "id": 15915573,
+      "title": "Aquisição de serviços de acessos internet fixa e VPN para o Banco das Artes, na cidade da Horta, Faial",
+      "price": "5.900,04 €",
+      "buyer": "Município da Horta",
+      "seller": "MEO - Serviços de Comunicações e Multimédia, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15915573"
+    },
+    {
+      "id": 15916651,
+      "title": "Aquisição de serviços de transporte aéreo internacional, para deslocação oficial a Belém, Brasil, no âmbito do Encontro Nacional dos Tribunais de Contas",
+      "price": "5.874,20 €",
+      "buyer": "Secção Regional dos Açores",
+      "seller": "Bestravel",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15916651"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9672,
+        "title": "Receitas provenientes de taxas e contribuições incidentes sobre prémios de seguros, cobradas na Região Autónoma dos Açores e transferidas para o Serviço Regional de Proteção Civil e Bombeiros dos Açores",
+        "state_change": null,
+        "requesters": "Nuno Barata IL",
+        "date": "10/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9672"
+      },
+      {
+        "id": 9673,
+        "title": "Atrasos na emissão de títulos de residência de formandos estrangeiros e impactos na qualificação e disponibilidade de mão-de-obra nos Açores",
+        "state_change": null,
+        "requesters": "Marlene Damião PS, ...",
+        "date": "10/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9673"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24499,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA reúne na Terceira para analisar Plano e Orçamento dos Açores para 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24499"
+      },
+      {
+        "id": 24500,
+        "title": "Nota de Imprensa da Presidência da ALRAA - Luís Garcia defende reforço da cooperação entre o poder regional e o poder local como desafio para o futuro da Autonomia",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24500"
+      },
+      {
+        "id": 24501,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Saúde. Francisco César propõe estrutura que não está prevista na lei.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24501"
+      },
+      {
+        "id": 24502,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco entrega proposta para aumentar o parque público de habitação e impedir governo de vender imóveis com este potencial.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24502"
+      },
+      {
+        "id": 24503,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Orçamento 2027. PSD/Açores destaca verba de 600 milhões para o Serviço Regional de Saúde.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24503"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-10"
+}
