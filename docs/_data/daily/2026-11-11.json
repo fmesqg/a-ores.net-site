@@ -1,0 +1,205 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15920597,
+      "title": "Aquisição de Fuel Oil (Nafta)",
+      "price": "323.340,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "BENCOM-ARMAZENAGEM E COMÉRCIO DE COMBUSTÍVEIS, S.A.",
+      "procedure": "Contratação excluída II",
+      "signing_date": "17-03-2025",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15920597"
+    },
+    {
+      "id": 15920428,
+      "title": "MFL - Prestação de serviços de limpeza e higiene - 2027",
+      "price": "21.000,00 €",
+      "buyer": "Direção Regional da Cultura",
+      "seller": "Zélia Maria Melo",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15920428"
+    },
+    {
+      "id": 15922843,
+      "title": "Aluguer de Comboio de Natal",
+      "price": "20.243,75 €",
+      "buyer": "Município de Lagoa (Açores)",
+      "seller": "Universo da Diversão Unipessoal, Ldª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "09-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15922843"
+    },
+    {
+      "id": 15920805,
+      "title": "Procedimento contratual para locação de equipamentos novos multifunções de cópia/impressão e digitalização pelo período de 24 meses",
+      "price": "20.000,00 €",
+      "buyer": "Escola Básica e Secundária das Flores",
+      "seller": "Escritório Digital- Representações, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15920805"
+    },
+    {
+      "id": 15922284,
+      "title": "aluguer embarcação, com skipper incluído, para apoio a missões de mar, no âmbito da caracterização de habitats de profundidade nos Açores, com vista ao seu mapeamento até ao limite exterior da subárea...",
+      "price": "14.655,17 €",
+      "buyer": "Universidade dos Açores",
+      "seller": "Norberto Diver Actividades Maritimas Lda",
+      "procedure": "Contratação excluída II",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15922284"
+    },
+    {
+      "id": 15920710,
+      "title": "Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica e Secundária da Graciosa",
+      "price": "14.299,20 €",
+      "buyer": "Escola Básica e Secundária da Graciosa",
+      "seller": "Empresa de Transportes Coletivos da Ilha Graciosa, L.da",
+      "procedure": "Concurso público",
+      "signing_date": "16-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15920710"
+    },
+    {
+      "id": 15920588,
+      "title": "Aquisição de Serviços Regulares Especializados de Transporte Coletivo para a Escola Básica e Secundária da Graciosa",
+      "price": "6.428,16 €",
+      "buyer": "Escola Básica e Secundária da Graciosa",
+      "seller": "Empresa de Transportes Coletivos da Ilha Graciosa, L.da",
+      "procedure": "Concurso público",
+      "signing_date": "19-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15920588"
+    },
+    {
+      "id": 15920327,
+      "title": "MFL - Prestação de serviços de desinfestação - 2027",
+      "price": "1.250,00 €",
+      "buyer": "Direção Regional da Cultura",
+      "seller": "Zélia Maria Melo",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15920327"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9602,
+        "title": "Teletrabalho na Administração Pública Regional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "08/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9602"
+      },
+      {
+        "id": 9605,
+        "title": "Forças de Segurança nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "08/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9605"
+      },
+      {
+        "id": 9607,
+        "title": "Atrasos na atribuição e no pagamento dos apoios às atividades culturais",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "08/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9607"
+      },
+      {
+        "id": 9608,
+        "title": "Que medidas vai o Governo Regional adotar para aumentar a oferta de habitação para as famílias que trabalham?",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "08/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9608"
+      },
+      {
+        "id": 9611,
+        "title": "Atraso no pagamento aos docentes dos Açores pela classificação dos exames nacionais",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "09/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9611"
+      },
+      {
+        "id": 9612,
+        "title": "Habitações do Governo fechadas e famílias à espera de uma resposta no concelho da Povoação",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Gualberto Rita PS, ...",
+        "date": "09/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9612"
+      },
+      {
+        "id": 9613,
+        "title": "Rácio dos assistentes operacionais não reflete a realidade das escolas e penaliza a Escola Básica e Secundária Armando Côrtes-Rodrigues",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Marlene Damião PS, ...",
+        "date": "09/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9613"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24504,
+        "title": "Nota de Imprensa da Representação Parlamentar da IL - Contratos com companhias low cost - Nuno Barata chama Ryanair e Berta Cabral à Comissão de Economia do Parlamento.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24504"
+      },
+      {
+        "id": 24505,
+        "title": "Nota de Imprensa da Representação Parlamentar do PAN - Projecto do PAN/A limita comercialização de lapas para fora da Região.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24505"
+      },
+      {
+        "id": 24506,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA quer saber se Governo Regional quebrou contrato com a Ryanair.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24506"
+      },
+      {
+        "id": 24507,
+        "title": "Nota de Agenda da representação parlamentar da IL - Nuno Barata na Feira de Santana e em reunião com a Federação Agrícola dos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24507"
+      },
+      {
+        "id": 24508,
+        "title": "Comissão de Economia - Convocatória (Dia 16/11/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24508"
+      },
+      {
+        "id": 24510,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores rejeita chantagens e campanhas de vitimização do Governo Regional no debate do Orçamento para 2027.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24510"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-11"
+}
