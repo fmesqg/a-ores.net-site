@@ -1,0 +1,145 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15927293,
+      "title": "AQUISIÇÃO DE MARCOS DE INCÊNDIO",
+      "price": "51.652,00 €",
+      "buyer": "Município de Santa Cruz da Graciosa",
+      "seller": "PINTO & CRUZ - TUBAGENS E SISTEMAS, S.A.",
+      "procedure": "Consulta Prévia",
+      "signing_date": "30-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15927293"
+    },
+    {
+      "id": 15930053,
+      "title": "Aquisição de Equipamentos Industriais",
+      "price": "36.210,00 €",
+      "buyer": "Santa Casa da Misericórdia da Vila de São Sebastião",
+      "seller": "ROGA - Representações, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "22-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15930053"
+    },
+    {
+      "id": 15929338,
+      "title": "Aquisição de serviços de manutenção e assistência técnica para o equipamento de digitalização da linha KAPTURE",
+      "price": "35.625,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Mind Software Multimédia Industrial,SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15929338"
+    },
+    {
+      "id": 15926834,
+      "title": "Aquisição de equipamentos de climatização para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "16.058,40 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "FIT- Fabrico e Instalações Técnicas, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15926834"
+    },
+    {
+      "id": 15926802,
+      "title": "Aquisição de equipamentos de climatização para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "14.618,80 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "FIT- Fabrico e Instalações Técnicas, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15926802"
+    },
+    {
+      "id": 15929162,
+      "title": "Ajuste Direto n. º 3/2026 - Aquisição de Material de Papelaria para o ano 2025/2026",
+      "price": "14.102,93 €",
+      "buyer": "Escola Básica e Secundária Armando Côrtes-Rodrigues",
+      "seller": "Papelaria Resarte, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "31-03-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15929162"
+    },
+    {
+      "id": 15928739,
+      "title": "Ajuste Direto n.º 2/2026 -Fornecimento de Cópias para o Ano de 2026 - Abril a Dezembro",
+      "price": "12.305,61 €",
+      "buyer": "Escola Básica e Secundária Armando Côrtes-Rodrigues",
+      "seller": "Copipélago, Serviços - Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "28-04-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15928739"
+    },
+    {
+      "id": 15926790,
+      "title": "Aquisição de material elétrico destinado à reestruturação e modernização da iluminação de Natal do Município de São Roque do Pico",
+      "price": "10.190,44 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "DD Gomes - Instalações Eléctricas, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15926790"
+    },
+    {
+      "id": 15927873,
+      "title": "Ajuste Direto n.º 138/2026/GRM - Aquisição de Equipamentos Informáticos para CAS Ponta Delgada",
+      "price": "7.417,00 €",
+      "buyer": "Instituto de Ação Social das Forças Armadas, IP",
+      "seller": "PRN - INFORMATICA LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15927873"
+    },
+    {
+      "id": 15927259,
+      "title": "Fornecimento de bens alimentícios destinados ao bufete da Escola Básica Integrada dos Arrifes, durante o ano letivo 2026/2027, de acordo com as especificações e quantidades previstas nas peças do proc...",
+      "price": "5.853,21 €",
+      "buyer": "Escola Básica Integrada de Arrifes",
+      "seller": "Padaria da Saúde - Sociedade de Panificação, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15927259"
+    },
+    {
+      "id": 15927252,
+      "title": "Aquisição anual de reagentes e consumíveis laboratoriais para o Serviço de Classificação de Leite de São Miguel (SERCLASM) e para o Serviço de Classificação de Leite da Terceira (SERCLAT)",
+      "price": "2.671,36 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Labkit - Soluções para Laboratório, Lda. ",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15927252"
+    },
+    {
+      "id": 15927005,
+      "title": "Aquisição de equipamentos de climatização para o Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "991,90 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "FIT- Fabrico e Instalações Técnicas, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "05-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15927005"
+    },
+    {
+      "id": 15929508,
+      "title": "Aquisição de serviços da Sociedade Filarmónica Unânime Praiense para a realização do Espetáculo Musical na Semana do Mar 2026",
+      "price": "900,00 €",
+      "buyer": "Município da Horta",
+      "seller": "Sociedade Unânime Praiense",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15929508"
+    }
+  ],
+  "alra": {
+    "error": "HTTPConnectionPool(host='base.alra.pt', port=82): Max retries exceeded with url: /4DACTION/w_recebe_pesquisa_peti/40?wformvalida.x=24&wformvalida.y=15&w_legis=XIII&w_numero_peti=&w_numero_peti_fim=&w_d_entrada_peti=&w_d_entrada_peti_fim=&w_assunto_peti=&w_autor_peti=&POPcomissao=&w_d_plena_peti=&w_d_plena_peti_fim= (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7a95c809a8b0>, 'Connection to base.alra.pt timed out. (connect timeout=120)'))"
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-12"
+}
