@@ -1,0 +1,361 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15931838,
+      "title": "Serviços de Iluminação da Quadra Natalícia, Passagem de Ano e Cantar às Estrelas, com Montagem, Desmontagem e Manutenção de Material de Iluminação (2026/2027).",
+      "price": "109.095,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "ILUMINAÇÕES - TEIXEIRA COUTO, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "10-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15931838"
+    },
+    {
+      "id": 15932834,
+      "title": "Serviços de Assistência técnica corretiva e preventiva dos equipamentos de recolha de dados biométricos, instalados nas lojas RIAC.",
+      "price": "74.925,00 €",
+      "buyer": "Agência para a Modernização Administrativa e Qualidade do Serviço ao Cidadão - RIAC",
+      "seller": "Vision Box – Soluções de Visão por Computador, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15932834"
+    },
+    {
+      "id": 15931739,
+      "title": "Aluguer, Montagem, Manutenção e Desmontagem de Equipamentos de Diversão (Pista de Gelo, Carrossel Parisiense, Rampa sintética de Gelo, Comboio, Charrete Cinderela e Máquinas de Gelo) para Aldeia Natal...",
+      "price": "58.000,00 €",
+      "buyer": "Municipio da  Ribeira Grande",
+      "seller": "PIPOCA D\\'IDEIAS, UNIPESSOAL, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15931739"
+    },
+    {
+      "id": 15932894,
+      "title": "Aquisição da Prestação de Serviços de Custódia do Arquivo Clínico Ativo do Hospital Divino Espírito Santo de Ponta Delgada, EPER",
+      "price": "47.709,12 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "EAD - Empresa de Arquivo de Documentação, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15932894"
+    },
+    {
+      "id": 15933186,
+      "title": "Prestação de seriços de planeamento, fiscalização e coordenação da segurança, higiene e saúde no trabalho da empreitada de Proteção do Litoral do Porto Martins - Praia da Vitória",
+      "price": "44.800,00 €",
+      "buyer": "Município da Praia da Vitória",
+      "seller": "Costa Poim - Fiscalização, Estudos e Projetos de Engenharia Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15933186"
+    },
+    {
+      "id": 15932500,
+      "title": "Aquisição de Impressoras para Modernização do Parque de Impressão, no âmbito do Plano de Recuperação e Resiliência, Componente 1, Investimento RE-C01-i08-RAA – Hospital Digital da Região Autónoma dos ...",
+      "price": "43.852,50 €",
+      "buyer": "Hospital do Divino Espírito Santo de Ponta Delgada, EPER",
+      "seller": "J. H. Ornelas &amp; CA., Sucessor, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15932500"
+    },
+    {
+      "id": 15931759,
+      "title": "Aluguer, Montagem, Manutenção e Desmontagem de Equipamentos de Diversão (Pista de Gelo, Carrossel Parisiense, Rampa sintética de Gelo, Comboio, Charrete Cinderela e Máquinas de Gelo) para Aldeia Natal...",
+      "price": "40.000,00 €",
+      "buyer": "Municipio da  Ribeira Grande",
+      "seller": "PIPOCA D\\'IDEIAS, UNIPESSOAL, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15931759"
+    },
+    {
+      "id": 15931033,
+      "title": "Ajuste Direto para Aquisição de Serviços de Análise, Conceção, Desenvolvimento, Implementação e Entrega de uma Plataforma Informática de Gestão de Processos no âmbito do Programa Regional de Intervenç...",
+      "price": "22.100,00 €",
+      "buyer": "Direção Regional da Saúde",
+      "seller": "Morfose, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15931033"
+    },
+    {
+      "id": 15933625,
+      "title": "Fornecimento e Instalação de Equipamentos Lúdicos e de Lazer para Parques e Áreas de Recreação",
+      "price": "21.857,56 €",
+      "buyer": "Centro Comunitário da Vila de São Sebastião",
+      "seller": "Escritório Digital- Representações, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15933625"
+    },
+    {
+      "id": 15931640,
+      "title": "Ajuste Direto para Fornecimento Contínuo de Betão Betuminoso, para o ano de 2027",
+      "price": "19.990,00 €",
+      "buyer": "Município da Ribeira Grande",
+      "seller": "Marques, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15931640"
+    },
+    {
+      "id": 15933226,
+      "title": "O presente Caderno de Encargos compreende as cláusulas a incluir no contrato a celebrar no procedimento por ajuste direto de equipamentos e material de escritório, por lotes, com vista a aprovisionar ...",
+      "price": "19.982,50 €",
+      "buyer": "Secretaria Regional das Finanças, Planeamento e Administração Pública",
+      "seller": "Escritório Digital- Representações, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "13-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15933226"
+    },
+    {
+      "id": 15933606,
+      "title": "Aquisição de Serviços De Transporte Escolar – Ano Letivo 2026/2027",
+      "price": "17.308,08 €",
+      "buyer": "Município das Lajes do Pico",
+      "seller": "Luís Carlos Cardoso Bettencourt, Unipessoal, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "10-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15933606"
+    },
+    {
+      "id": 15931563,
+      "title": "3026010141 -  Aquisição do serviço de reparação de viatura  AP-35-84",
+      "price": "10.047,33 €",
+      "buyer": "Ministério da Defesa Nacional - Marinha",
+      "seller": "Manufactura Auto Construtora, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "26-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15931563"
+    },
+    {
+      "id": 15931787,
+      "title": "Aluguer, Montagem, Manutenção e Desmontagem de Equipamentos de Diversão (Pista de Gelo, Carrossel Parisiense, Rampa sintética de Gelo, Comboio, Charrete Cinderela e Máquinas de Gelo) para Aldeia Natal...",
+      "price": "4.500,00 €",
+      "buyer": "Municipio da  Ribeira Grande",
+      "seller": "PIPOCA D\\'IDEIAS, UNIPESSOAL, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15931787"
+    },
+    {
+      "id": 15931777,
+      "title": "Aluguer, Montagem, Manutenção e Desmontagem de Equipamentos de Diversão (Pista de Gelo, Carrossel Parisiense, Rampa sintética de Gelo, Comboio, Charrete Cinderela e Máquinas de Gelo) para Aldeia Natal...",
+      "price": "4.000,00 €",
+      "buyer": "Municipio da  Ribeira Grande",
+      "seller": "PIPOCA D\\'IDEIAS, UNIPESSOAL, LDA",
+      "procedure": "Concurso público",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15931777"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9642,
+        "title": "Estudo, valorização e promoção da banana regional \"pequena anã\" da ilha Terceira",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "26/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9642"
+      },
+      {
+        "id": 9643,
+        "title": "Bem-estar animal, fiscalização das condições de detenção de cães e controlo da circulação de animais na ilha de São Miguel",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "RESPOSTA ATEMPADA"
+        },
+        "requesters": "António Lima BE",
+        "date": "26/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9643"
+      },
+      {
+        "id": 9675,
+        "title": "Declarações do responsável máximo da Ryanair sobre alegada quebra contratual nos Açores e possibilidade de retoma das operações na Região",
+        "state_change": null,
+        "requesters": "José Pacheco CH, ...",
+        "date": "11/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9675"
+      },
+      {
+        "id": 9676,
+        "title": "Exigência de instauração de processo de Maior Acompanhado para renovação do Estatuto do Cuidador Informal",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "11/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9676"
+      },
+      {
+        "id": 9600,
+        "title": "Resultados e metas da política regional de prevenção e combates àsdependências",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9600"
+      },
+      {
+        "id": 9615,
+        "title": "Medidas para combater o aumento do custo de vida nos Açores",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9615"
+      },
+      {
+        "id": 9617,
+        "title": "Projeto-Piloto Semana de Quatro Dias na Administração Pública Regional",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9617"
+      },
+      {
+        "id": 9618,
+        "title": "Transportes marítimo de mercadorias falha novamente aos corvinos",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Lubélio Mendonça PS, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9618"
+      },
+      {
+        "id": 9620,
+        "title": "Beneficiários do Complemento Regional de Pensão e Complemento Regional ao Abono de Família",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9620"
+      },
+      {
+        "id": 9621,
+        "title": "Dados sobre habitação",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9621"
+      },
+      {
+        "id": 9622,
+        "title": "Dados sobre remuneração complementar, derrama regional, IRS, Taxa Adicional de Solidariedade e ISP",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "António Lima BE",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9622"
+      },
+      {
+        "id": 9623,
+        "title": "Deslocações oficiais do Secretário Regional dos Assuntos Parlamentares e Comunidades e do Diretor Regional das Comunidades",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9623"
+      },
+      {
+        "id": 9625,
+        "title": "Serviços Jurídicos relacionados com o Hospital do Divino Espírito Santo e o Hospital Modular",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9625"
+      },
+      {
+        "id": 9626,
+        "title": "Cativações orçamentais na Região Autónoma dos Açores desde 2024",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "13/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9626"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24513,
+        "title": "Nota de Agenda da representação parlamentar da IL - \"Estão a mentir aos agricultores açorianos\" - Nuno Barata acusa Deputados europeus, nacionais e governantes de mentirem sobre apoios à agricultura.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24513"
+      },
+      {
+        "id": 24514,
+        "title": "Nota de Pesar da Presidência da ALRAA - Presidente Luís Garcia manifesta pesar pelo falecimento do antigo Presidente da Assembleia Dionísio Sousa",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24514"
+      },
+      {
+        "id": 24515,
+        "title": "Comissão Grupo de Trabalho para analisar, avaliar e propor melhorias no âmbito do dispositivo de segurança interna na RAA. - Convocatória (Dia 16/11/2026, pelas 14:30 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24515"
+      },
+      {
+        "id": 24516,
+        "title": "Comissão de Economia - Convocatória (Dia 16/11/2026, pelas 10:00 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24516"
+      },
+      {
+        "id": 24517,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA ouve enfermeiros prejudicados com inversões remuneratórias.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24517"
+      },
+      {
+        "id": 24518,
+        "title": "Nota de Agenda da representação parlamentar da IL - Taxas pagas pelos Açorianos nos seguros - IL quer saber onde são aplicadas as receitas dos seguros para financiar a Proteção Civil.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24518"
+      },
+      {
+        "id": 24519,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Orçamento 2027. PSD/Açores alerta para importância da execução dos fundos europeus.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24519"
+      },
+      {
+        "id": 24520,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA reclama transparência na atribuição de casas públicas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24520"
+      },
+      {
+        "id": 24511,
+        "title": "Comissão Política Geral - Convocatória (Dia 17/11/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24511"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-13"
+}
