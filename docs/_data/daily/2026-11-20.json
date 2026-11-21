@@ -1,0 +1,269 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15978177,
+      "title": "Aquisição de Equipamento Informático",
+      "price": "36.799,35 €",
+      "buyer": "Direção Regional da Agricultura, Veterinária e Alimentação",
+      "seller": "DR. INFORMATICO",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15978177"
+    },
+    {
+      "id": 15979712,
+      "title": "Aquisição de manuais escolares para o ano letivo 2026/2027, contemplando os 1.º, 2.º, 3.º e 4.º anos de escolaridade",
+      "price": "21.970,24 €",
+      "buyer": "Escola Básica Integrada de Rabo de Peixe",
+      "seller": "plano a papelaria",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "07-09-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15979712"
+    },
+    {
+      "id": 15974603,
+      "title": "26-04-Açores-AB-RP-CPREV-3470-DP-Mobiliário - Aquisição direta de mobiliário diverso ao abrigo do Acordo Quadro AQ-MOB-2026",
+      "price": "18.466,00 €",
+      "buyer": "Instituto dos Registos e do Notariado, I. P.",
+      "seller": "Julcar, Mobiliário Integrado, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "20-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15974603"
+    },
+    {
+      "id": 15978175,
+      "title": "Aquisição de Diverso Mobiliário Urbano para a Instalação no Largo do Bispo, Ilha do Faial",
+      "price": "16.007,50 €",
+      "buyer": "Município da Horta",
+      "seller": "Factor Espaço Investimentos Imobiliários, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "19-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15978175"
+    },
+    {
+      "id": 15974647,
+      "title": "26-04-Açores-AB-RP-CPREV-3470-DP-Mobiliário - Aquisição direta de mobiliário diverso ao abrigo do Acordo Quadro AQ-MOB-2026",
+      "price": "12.850,00 €",
+      "buyer": "Instituto dos Registos e do Notariado, I. P.",
+      "seller": "Julcar, Mobiliário Integrado, S.A.",
+      "procedure": "Ao abrigo de acordo-quadro (art.º 259.º)",
+      "signing_date": "20-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15974647"
+    },
+    {
+      "id": 15982794,
+      "title": "CONCURSO PÚBLICO COM VISTA À CELEBRAÇÃO DE CONTRATOS DE AQUISIÇÃO DE BENS PARA TERMINAR O APETRECHAMENTO DO EDIFÍCIO DA ESTRUTURA RESIDENCIAL PARA PESSOAS IDOSAS",
+      "price": "12.330,24 €",
+      "buyer": "Santa Casa da Misericórdia da Vila de Santa Cruz da Graciosa",
+      "seller": "J. H. Ornelas & ., Ca., Suc., Lda",
+      "procedure": "Concurso público",
+      "signing_date": "18-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15982794"
+    },
+    {
+      "id": 15981213,
+      "title": "Aquisição de uma máquina de lavar MIELE PWM514 para o Matadouro da Terceira",
+      "price": "8.897,00 €",
+      "buyer": "Instituto de Alimentação e Mercados Agrícolas, IP R. A.",
+      "seller": "Eletromoisés",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15981213"
+    },
+    {
+      "id": 15981420,
+      "title": "Aquisição de materiais e componentes para o serviço de águas da Câmara Municipal da Horta",
+      "price": "5.264,25 €",
+      "buyer": "Município da Horta",
+      "seller": "Delfim Vargas - Fabrico de Caixilharias, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "20-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15981420"
+    },
+    {
+      "id": 15982782,
+      "title": "PROCEDIMENTO DE CONCURSO PÚBLICO COM VISTA À CELEBRAÇÃO DE CONTRATOS DE AQUISIÇÃO DE BENS PARA TERMINAR O APETRECHAMENTO DO EDIFÍCIO DA ESTRUTURA RESIDENCIAL PARA PESSOAS IDOSAS",
+      "price": "5.245,50 €",
+      "buyer": "Santa Casa da Misericórdia da Vila de Santa Cruz da Graciosa",
+      "seller": "Escritório Digital- Representações, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "18-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15982782"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9686,
+        "title": "Investimento do Ministério da Defesa Nacional em Infraestruturas Espaciais na ilha de Santa Maria e eventuais condicionamentos à atividade dos operadores espaciais privados",
+        "state_change": null,
+        "requesters": "Nuno Barata IL",
+        "date": "18/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9686"
+      },
+      {
+        "id": 9687,
+        "title": "Estudo sobre os custos associados ao Passe Sub-23 nos transportes públicos rodoviários nos Açores",
+        "state_change": null,
+        "requesters": "Marlene Damião PS, ...",
+        "date": "18/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9687"
+      },
+      {
+        "id": 9688,
+        "title": "Denúncias de abate de espécies não cinegéticas e fiscalização do exercício da caça na Região Autónoma dos Açores",
+        "state_change": null,
+        "requesters": "António Lima BE",
+        "date": "19/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9688"
+      },
+      {
+        "id": 9513,
+        "title": "Saída da Ryanair dos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "28/08/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9513"
+      },
+      {
+        "id": 9537,
+        "title": "Resultados do programa jovens talentos regionais e estatuto de alto rendimento nacional",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Nuno Barata IL",
+        "date": "07/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9537"
+      },
+      {
+        "id": 9575,
+        "title": "Centro de Apoio ao Desportista da Ilha de São Miguel - Governo prometeu, mas o Centro continua fechado",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Russell Sousa PS, ...",
+        "date": "25/09/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9575"
+      },
+      {
+        "id": 9597,
+        "title": "Rede de Desporto Jovem Incluso",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "07/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9597"
+      },
+      {
+        "id": 9615,
+        "title": "Medidas para combater o aumento do custo de vida nos Açores",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9615"
+      },
+      {
+        "id": 9617,
+        "title": "Projeto-Piloto Semana de Quatro Dias na Administração Pública Regional",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "José Pacheco CH, ...",
+        "date": "12/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9617"
+      },
+      {
+        "id": 9630,
+        "title": "Manutenção da prioridade concursal dos docentes contratados abrangidos pelos incentivos à estabilidade em escolas carenciadas, em situações de ausência por doença",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Inês Sá PS, ...",
+        "date": "16/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9630"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24535,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores: Parecer do Tribunal de Contas confirma que o Governo Regional violou os limites da dívida e agravou o défice em 2025.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24535"
+      },
+      {
+        "id": 24536,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco denuncia caça ilegal de aves migratórias e alerta para impacto negativa na biodiversidade e imagem dos Açores.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24536"
+      },
+      {
+        "id": 24537,
+        "title": "Parecer do Tribunal de Contas sobre a Conta da Assembleia Legislativa da Região Autónoma dos Açores relativa ao ano de 2025",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24537"
+      },
+      {
+        "id": 24538,
+        "title": "Parecer do Tribunal de Contas sobre a Conta da Região Autónoma dos Açores referente ao ano económico de 2025",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24538"
+      },
+      {
+        "id": 24539,
+        "title": "Nota Informativa da Presidência da ALRAA - Assembleia Legislativa associa-se à 41.ª edição do Bazar Diplomático em Lisboa",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24539"
+      },
+      {
+        "id": 24541,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Orçamento da coligação é \"caso perdido\" porque ignora problemas mais graves. Bloco não desiste de apresentar propostas.",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24541"
+      },
+      {
+        "id": 24542,
+        "title": "Relatório a que se refere o artigo 103.º do Regimento da ALRAA - Ante-Período Legislativo de Novembro 2026- Comissão de Política Geral",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24542"
+      }
+    ],
+    "iniciativas": [
+      {
+        "id": 3866,
+        "title": "Protege o património imobiliário público com aptidão habitacional e reforça o Parque Público de Habitação da Região Autónoma dos Açores",
+        "author": "BE - Bloco de Esquerda",
+        "topic": "Património próprio e autonomia patrimonial da Região",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/3/3866"
+      }
+    ],
+    "peticoes": [
+      {
+        "id": 1052,
+        "title": "Pela regularização do posicionamento remuneratório de trabalhadora da Direção Regional da Saúde ao abrigo do artigo 17.º do Decreto Legislativo Regional n.º 2/2024/A, de 24 de junho",
+        "author": "Cristina Alexandra Melo Cabeceiras",
+        "state": "Em processo de admissão",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/6/1052"
+      }
+    ],
+    "audi_ar": [
+      {
+        "id": 3459,
+        "title": "Aprova o regime aplicável às entidades licenciadas na Zona Franca da Madeira e Altera Estatuto dos Benefícios Fiscais",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/5/3459"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-20"
+}
