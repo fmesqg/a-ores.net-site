@@ -193,3 +193,13 @@ def test_non_annual_name_has_periodicity():
     meta = dict(META, Periodic="Mensal")
     row, *_ = ine.rows_from("0012088", DATA, meta)
     assert row[ine.COLS.index("indicador")].endswith("(€) – mensal")
+
+
+def test_every_indicator_has_a_theme_and_rows_carry_it():
+    assert (
+        len(ine.INDICATORS)
+        == len(ine.TEMA)
+        == len({v for v, _ in ine.INDICATORS})
+    )
+    row, *_ = ine.rows_from("0012757", DATA, META)
+    assert row[ine.COLS.index("tema")] == "Rendimento e IRS"

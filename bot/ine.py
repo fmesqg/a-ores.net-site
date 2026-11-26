@@ -42,66 +42,77 @@ CATALOGUE = "https://www.ine.pt/ine/xml_indic.jsp?opc=2&lang=PT"
 UA = {"User-Agent": "acores.net open data (github.com/fmesqg/a-ores.net-site)"}
 PAUSE = 1.0
 
-# (varcd, note). Prefer the "NUTS - 2024" version of a series when INE has
+# Indicators by theme: (varcd, note). The theme groups the indicator list on
+# /dados/ine/. Prefer the "NUTS - 2024" version of a series when INE has
 # both. Find more with: python3 bot/ine.py procurar <termos>
-INDICATORS = [
-    # Freguesia: income and IRS (Estatísticas do Rendimento ao nível local)
-    ("0012757", "mediana do rendimento após IRS por sujeito passivo"),
-    ("0012741", "mediana do rendimento após IRS por agregado fiscal"),
-    ("0012749", "mediana do rendimento bruto por sujeito passivo"),
-    ("0012756", "rendimento após IRS por sujeito passivo"),
-    ("0012760", "Gini do rendimento após IRS por sujeito passivo"),
-    ("0012744", "Gini do rendimento após IRS por agregado fiscal"),
-    ("0012761", "P80/P20 do rendimento após IRS, sujeitos passivos"),
-    ("0012762", "P90/P10 do rendimento após IRS, sujeitos passivos"),
-    ("0012759", "quintis do rendimento após IRS, sujeitos passivos"),
-    ("0012747", "sujeitos passivos"),
-    ("0013318", "agregados fiscais"),
-    ("0012750", "IRS liquidado por sujeito passivo"),
-    # Freguesia: housing
-    ("0014696", "mediana das rendas de novos contratos, 12 meses"),
-    ("0014695", "novos contratos de arrendamento, 12 meses"),
-    ("0014698", "mediana das rendas de novos contratos, anual"),
-    ("0014697", "novos contratos de arrendamento, anual"),
-    ("0012254", "mediana das vendas de alojamentos (€/m²), anual"),
-    ("0014764", "vendas de alojamentos, 12 meses"),
-    ("0000087", "fogos licenciados em construções novas"),
-    ("0000076", "fogos concluídos em construções novas"),
-    ("0000086", "edifícios licenciados"),
-    # Freguesia: population
-    ("0012450", "nados-vivos"),
-    # Concelho: population
-    ("0012918", "população residente"),
-    ("0012909", "índice de envelhecimento"),
-    ("0013178", "taxa de crescimento efetivo"),
-    # Concelho: income, work, social protection
-    ("0012670", "rendimento bruto declarado por habitante"),
-    ("0012656", "ganho médio mensal (Quadros de Pessoal)"),
-    ("0014580", "poder de compra per capita"),
-    ("0013417", "beneficiários do RSI"),
-    ("0013420", "beneficiários do RSI por 1000 habitantes em idade ativa"),
-    ("0014534", "pensionistas da segurança social"),
-    # Concelho: tourism
-    ("0013213", "hóspedes em alojamento turístico, anual"),
-    ("0013214", "dormidas em alojamento turístico, anual"),
-    ("0013210", "dormidas por 100 habitantes"),
-    ("0013285", "proveitos totais do alojamento turístico"),
-    ("0012088", "dormidas em alojamento turístico, mensal"),
-    # Concelho: companies
-    ("0014061", "empresas"),
-    ("0014643", "constituição de pessoas coletivas"),
-    # Concelho: câmaras municipais
-    ("0013908", "receitas das câmaras municipais"),
-    ("0013909", "despesas das câmaras municipais"),
-    ("0013899", "receitas não financeiras das câmaras por habitante"),
-    # Concelho: other
-    ("0012261", "crimes registados"),
-    ("0014162", "consumo de eletricidade por habitante"),
-    ("0012767", "resíduos urbanos recolhidos seletivamente por habitante"),
-]
+THEMES = {
+    "Rendimento e IRS": [
+        ("0012756", "rendimento após IRS por sujeito passivo"),
+        ("0012757", "mediana do rendimento após IRS por sujeito passivo"),
+        ("0012741", "mediana do rendimento após IRS por agregado fiscal"),
+        ("0012749", "mediana do rendimento bruto por sujeito passivo"),
+        ("0012670", "rendimento bruto declarado por habitante"),
+        ("0014580", "poder de compra per capita"),
+        ("0012760", "Gini do rendimento após IRS por sujeito passivo"),
+        ("0012744", "Gini do rendimento após IRS por agregado fiscal"),
+        ("0012761", "P80/P20 do rendimento após IRS, sujeitos passivos"),
+        ("0012762", "P90/P10 do rendimento após IRS, sujeitos passivos"),
+        ("0012759", "quintis do rendimento após IRS, sujeitos passivos"),
+        ("0012750", "IRS liquidado por sujeito passivo"),
+        ("0012747", "sujeitos passivos"),
+        ("0013318", "agregados fiscais"),
+    ],
+    "Habitação e construção": [
+        ("0014698", "mediana das rendas de novos contratos, anual"),
+        ("0014696", "mediana das rendas de novos contratos, 12 meses"),
+        ("0014697", "novos contratos de arrendamento, anual"),
+        ("0014695", "novos contratos de arrendamento, 12 meses"),
+        ("0012254", "mediana das vendas de alojamentos (€/m²), anual"),
+        ("0014764", "vendas de alojamentos, 12 meses"),
+        ("0000087", "fogos licenciados em construções novas"),
+        ("0000076", "fogos concluídos em construções novas"),
+        ("0000086", "edifícios licenciados"),
+    ],
+    "População": [
+        ("0012918", "população residente"),
+        ("0012909", "índice de envelhecimento"),
+        ("0013178", "taxa de crescimento efetivo"),
+        ("0012450", "nados-vivos"),
+    ],
+    "Trabalho e proteção social": [
+        ("0012656", "ganho médio mensal (Quadros de Pessoal)"),
+        ("0013417", "beneficiários do RSI"),
+        ("0013420", "beneficiários do RSI por 1000 habitantes em idade ativa"),
+        ("0014534", "pensionistas da segurança social"),
+    ],
+    "Turismo": [
+        ("0013214", "dormidas em alojamento turístico, anual"),
+        ("0013213", "hóspedes em alojamento turístico, anual"),
+        ("0013210", "dormidas por 100 habitantes"),
+        ("0013285", "proveitos totais do alojamento turístico"),
+        ("0012088", "dormidas em alojamento turístico, mensal"),
+    ],
+    "Empresas": [
+        ("0014061", "empresas"),
+        ("0014643", "constituição de pessoas coletivas"),
+    ],
+    "Câmaras municipais": [
+        ("0013908", "receitas das câmaras municipais"),
+        ("0013909", "despesas das câmaras municipais"),
+        ("0013899", "receitas não financeiras das câmaras por habitante"),
+    ],
+    "Ambiente, energia e segurança": [
+        ("0014162", "consumo de eletricidade por habitante"),
+        ("0012767", "resíduos urbanos recolhidos seletivamente por habitante"),
+        ("0012261", "crimes registados"),
+    ],
+}
+INDICATORS = [i for items in THEMES.values() for i in items]
+TEMA = {v: t for t, items in THEMES.items() for v, _ in items}
 
 COLS = [
     "varcd",
+    "tema",
     "indicador",
     "periodo",
     "data",
@@ -263,6 +274,7 @@ def rows_from(varcd: str, data: dict, meta: dict) -> list[list]:
         out.append(
             [
                 varcd,
+                TEMA.get(varcd, ""),
                 nome,
                 periodo,
                 period_date(periodo),
@@ -309,7 +321,8 @@ def main(out_dir: Path) -> int:
         # Probably INE is down: keep the previous file rather than shrink it.
         print("Too many failures, ine.csv left unchanged:", *failed, sep="\n")
         return 1
-    rows.sort(key=lambda r: (r[0], r[3], r[5], r[9]))
+    order = {v: i for i, (v, _) in enumerate(INDICATORS)}
+    rows.sort(key=lambda r: (order[r[0]], r[4], r[6], r[10]))
     tmp = out_dir / "ine.csv.tmp"
     with open(tmp, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)

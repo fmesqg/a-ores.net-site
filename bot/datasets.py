@@ -263,7 +263,7 @@ DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
     "alra": ["titulo", "autores", "estado", "tipo"],
     "joraa": ["titulo", "ato", "entidade"],
-    "ine": ["indicador", "local", "concelho", "ilha", "categoria"],
+    "ine": ["indicador", "tema", "local", "concelho", "ilha", "categoria"],
 }
 
 
