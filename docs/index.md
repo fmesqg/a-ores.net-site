@@ -20,6 +20,7 @@ ligação para a fonte oficial.</p>
   a Madeira e com o país. Cada indicador vem com a definição do INE.</p>
   <ul>
     <li><a href="/dados/ine/#ind=0012757&nivel=Freguesia">Quanto se ganha em cada freguesia?</a></li>
+    <li><a href="/dados/ine/#ind=0012759">Como se distribui o rendimento (quintis)?</a></li>
     <li><a href="/dados/ine/#ind=0014698">Quanto custa arrendar casa?</a></li>
     <li><a href="/dados/ine/#ind=0013210">Onde há mais turistas por habitante?</a></li>
   </ul>
@@ -113,8 +114,7 @@ O açores.net pretende promover uma cidadania ativa, com informação
 acessível e fidedigna. Os dados são recolhidos automaticamente das fontes
 oficiais (INE, Governo Regional, Assembleia Legislativa, Jornal Oficial,
 portal BASE) e podem ser descarregados e reutilizados. O código está no
-[GitHub](https://github.com/fmesqg/a-ores.net-site). Ver também os
-[assuntos a trabalhar](/trabalhar).
+[GitHub](https://github.com/fmesqg/a-ores.net-site).
 
 <style>
 .lead { font-size: 1.15em; max-width: 40em; margin-bottom: 1.25em; }

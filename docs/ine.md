@@ -29,9 +29,11 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
     <label>Nível <select id="nivel"></select></label>
     <label>Ilha <select id="ilha"><option value="">todas</option></select></label>
     <label id="cat-wrap" hidden>Categoria <select id="cat"></select></label>
+    <label id="ano-wrap" hidden>Ano <select id="ano"></select></label>
     <label class="ine-grow">Local <input type="search" id="q" placeholder="ex.: Rabo de Peixe, Horta" autocomplete="off"></label>
   </div>
   <label class="ine-check"><input type="checkbox" id="todos"> Mostrar todos os períodos</label>
+  <label class="ine-check" id="grupo-wrap" hidden><input type="checkbox" id="grupo" checked> Agrupar as freguesias por concelho</label>
 </form>
 
 <p id="estado" role="status" aria-live="polite">A carregar…</p>
@@ -76,6 +78,11 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
     </table>
   </div>
   </div>
+  <p id="dist-ajuda" class="ine-sub" hidden>Cada coluna é um limite: 20% dos sujeitos
+    passivos têm um rendimento (depois do IRS) abaixo do valor da coluna “20%”, 40% abaixo do da coluna
+    “40%”, e assim por diante; a mediana divide-os ao meio. A barra vai do limite dos 20% ao dos 80%, com a
+    parte cheia entre os 40% e os 60% e um traço na mediana. “80/20” diz quantas vezes o limite dos 80% é
+    maior que o dos 20%: quanto maior, mais desigual. Escolha uma categoria para ver a evolução de um quintil.</p>
   <p id="nota" class="ine-sub"></p>
   <p><a id="exportar" href="#" download>Descarregar esta tabela (CSV)</a> ·
      <a href="/dados/ine.csv">todos os indicadores (ine.csv)</a></p>
@@ -187,6 +194,15 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 .g-tip span { color: #586e75; }
 #tabela td.lugar label { display: inline-flex; gap: .4em; align-items: baseline; cursor: pointer; }
 #tabela td.lugar input { accent-color: var(--c, #586e75); }
+#tabela tr.conc td { font-weight: bold; border-top: 2px solid #93a1a1; }
+#tabela tr.sub td.lugar { padding-left: 1.4em; }
+#tabela td.med { font-weight: bold; }
+#tabela td.dist { padding-top: 0; padding-bottom: 0; vertical-align: middle; }
+.strip { display: block; }
+.strip .s-banda { stroke: #268bd2; stroke-opacity: .45; stroke-width: 2; stroke-linecap: round; }
+.strip .s-meio { fill: #268bd2; }
+.strip .s-med { stroke: #073642; stroke-width: 2; }
+@media (prefers-color-scheme: dark) { .strip .s-med { stroke: #eee8d5; } #g-svg .rotulo { fill: #eee8d5; } }
 [hidden] { display: none !important; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 </style>
@@ -203,7 +219,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var pct = new Intl.NumberFormat("pt-PT", { maximumFractionDigits: 1, signDisplay: "exceptZero" });
   var fold = function (s) { return (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
   var IND = {}, ORDER = [], st = { ind: "", nivel: "", ilha: "", cat: "", q: "", todos: false, ord: null, dir: -1,
-    vista: "ambos", sel: [], escala: "" }; // escala "" = automatic
+    vista: "ambos", sel: [], escala: "", ano: "", grupo: true }; // escala "" = automatic
   // Categorical colours in fixed order (validated against this page's
   // background: adjacent CVD ΔE >= 11.8). A place keeps its colour while it
   // stays selected; colour follows the place, never its rank.
@@ -213,6 +229,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var table = null; // { periods, refs, rows, view } of the current view
   var REF = { "20": "Açores (RAA)", "30": "Madeira (RAM)", "PT": "Portugal" };
   var DEF = {}; // varcd -> definitions from ine_meta.json (may stay empty)
+  var MEDIANA = "0012757"; // median after IRS per sujeito passivo, shown with the quintiles
+  // Clearer names than INE's for indicators whose INE name hides what they are.
+  var NOMES = { "0012759": "Quintis do rendimento após IRS por sujeito passivo (como se distribui o rendimento)" };
 
   function parseCSV(text) {
     var rows = [], row = [], f = "", q = false, i = 0, c;
@@ -236,12 +255,15 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     rows.forEach(function (r) {
       var x = IND[r.varcd];
       if (!x) {
-        x = IND[r.varcd] = { varcd: r.varcd, tema: r.tema, nome: r.indicador, unidade: r.unidade,
+        x = IND[r.varcd] = { varcd: r.varcd, tema: r.tema, nome: NOMES[r.varcd] || r.indicador, inome: r.indicador, unidade: r.unidade,
           atualizado: r.atualizado, url: r.url, rows: [], niveis: {}, cats: {} };
         ORDER.push(r.varcd);
       }
       x.rows.push(r); x.niveis[r.nivel] = 1; x.cats[r.categoria] = 1;
     });
+    // The quintiles right after the median, at the top of the income list.
+    var i = ORDER.indexOf("0012759"), j;
+    if (i >= 0 && ORDER.indexOf(MEDIANA) >= 0) { ORDER.splice(i, 1); j = ORDER.indexOf(MEDIANA); ORDER.splice(j + 1, 0, "0012759"); }
   }
 
   // ---- definitions (ine_meta.json) -------------------------------------
@@ -363,47 +385,97 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 
   function isRate(u) { return /%|‰/.test(u || ""); }
 
+  // Quintile indicators are shown as a distribution: for one year, the four
+  // quintile limits side by side (plus INE's median, which sits between the
+  // 2nd and 3rd), instead of one quintile at a time.
+  function isDist(x) {
+    var c = Object.keys(x.cats).filter(Boolean);
+    return c.length > 1 && c.every(function (k) { return /quintil/i.test(k); });
+  }
+  var DIST_COLS = [["1º quintil", "20%"], ["2º quintil", "40%"], ["med", "Mediana"], ["3º quintil", "60%"], ["4º quintil", "80%"]];
+
   function build() {
     var x = IND[st.ind];
     var niveis = ["Concelho", "Freguesia"].filter(function (n) { return x.niveis[n]; });
     st.nivel = fillSelect($("nivel"), niveis, st.nivel || "Concelho");
+    var freg = st.nivel === "Freguesia";
     var cats = Object.keys(x.cats).filter(Boolean).sort(function (a, b) { return a.localeCompare(b, "pt", { numeric: true }); });
+    var distOK = isDist(x);
     $("cat-wrap").hidden = !cats.length;
-    st.cat = cats.length ? fillSelect($("cat"), cats, st.cat) : "";
+    st.cat = cats.length ? fillSelect($("cat"), cats, st.cat, distOK ? "todos (distribuição)" : null) : "";
+    var dist = distOK && !st.cat;
     var ilhas = {};
     x.rows.forEach(function (r) { if (r.nivel === st.nivel && r.ilha) ilhas[r.ilha] = 1; });
     var ilhaOrder = ["Santa Maria", "São Miguel", "Terceira", "Graciosa", "São Jorge", "Pico", "Faial", "Flores", "Corvo"];
     st.ilha = fillSelect($("ilha"), ilhaOrder.filter(function (i) { return ilhas[i]; }), st.ilha, "todas");
+    $("grupo-wrap").hidden = !freg;
+    $("grupo").checked = st.grupo;
 
-    // Pivot: one row per place, one column per period.
+    // Years, for the distribution view.
+    var years = {};
+    if (dist) x.rows.forEach(function (r) { years[r.data] = r.periodo; });
+    var ykeys = Object.keys(years).sort();
+    $("ano-wrap").hidden = !dist;
+    if (dist) {
+      var as = $("ano"); as.replaceChildren();
+      ykeys.slice().reverse().forEach(function (k) { var o = document.createElement("option"); o.value = k; o.textContent = years[k]; as.appendChild(o); });
+      if (ykeys.indexOf(st.ano) < 0) st.ano = ykeys[ykeys.length - 1] || "";
+      as.value = st.ano;
+    }
+
+    // Pivot: one row per place, one column per period (or per quintile).
     // Reference rows are INE's own values for the region and the country,
     // not averages of the rows below. Columns come from Azores data only.
-    var periods = {}, places = {}, refs = {};
-    x.rows.forEach(function (r) {
-      if (r.categoria !== st.cat) return;
+    // At freguesia level the concelhos come along too, to head their groups.
+    var periods = {}, places = {}, refs = {}, conc = {}, byGeo = {};
+    var add = function (r, key) {
+      var p, counts = true;
       if (REF[r.geocod]) {
-        var q = refs[r.geocod] || (refs[r.geocod] = { geo: r.geocod, local: REF[r.geocod], concelho: "", ilha: "", v: {} });
-        q.v[r.data] = parseFloat(r.valor);
-        if (r.geocod !== "20") return;
+        p = refs[r.geocod] || (refs[r.geocod] = { geo: r.geocod, local: REF[r.geocod], concelho: "", ilha: "", v: {} });
+        counts = r.geocod === "20";
       } else if (r.nivel === st.nivel) {
-        var p = places[r.geocod] || (places[r.geocod] = { geo: r.geocod, local: r.local, concelho: r.concelho, ilha: r.ilha, v: {} });
-        p.v[r.data] = parseFloat(r.valor);
+        p = places[r.geocod] || (places[r.geocod] = { geo: r.geocod, local: r.local, concelho: r.concelho, ilha: r.ilha, v: {} });
+      } else if (freg && r.nivel === "Concelho") {
+        p = conc[r.local] || (conc[r.local] = { geo: r.geocod, local: "Concelho de " + r.local, nome: r.local,
+          concelho: r.local, ilha: r.ilha, v: {}, conc: true });
+        counts = false;
       } else return;
-      periods[r.data] = r.periodo;
-    });
-    var keys = Object.keys(periods).sort();
-    var shown = st.todos ? keys : keys.slice(-RECENT);
-    // Change: latest period against the same period a year before (or the
-    // period before it, for series that are not yearly or have gaps).
-    var last = keys[keys.length - 1], prev = "";
-    if (last) {
-      var yearAgo = (parseInt(last.slice(0, 4), 10) - 1) + last.slice(4);
-      prev = periods[yearAgo] ? yearAgo : keys[keys.length - 2] || "";
+      p.v[key] = parseFloat(r.valor);
+      byGeo[r.geocod] = p;
+      if (counts && !dist) periods[r.data] = r.periodo;
+    };
+    var keys, shown, last = "", prev = "", labels, sortDefault;
+    if (dist) {
+      x.rows.forEach(function (r) { if (r.data === st.ano) add(r, r.categoria); });
+      var med = IND[MEDIANA];
+      if (med) med.rows.forEach(function (r) {
+        if (r.data === st.ano && !r.categoria && byGeo[r.geocod]) byGeo[r.geocod].v.med = parseFloat(r.valor);
+      });
+      var hasMed = Object.keys(byGeo).some(function (g) { return byGeo[g].v.med !== undefined; });
+      var cols = DIST_COLS.filter(function (c) { return c[0] !== "med" || hasMed; });
+      keys = shown = cols.map(function (c) { return c[0]; });
+      labels = {}; cols.forEach(function (c) { labels[c[0]] = c[1]; });
+      last = "1º quintil"; sortDefault = hasMed ? "med" : "3º quintil";
+    } else {
+      x.rows.forEach(function (r) { if (r.categoria === st.cat) add(r, r.data); });
+      keys = Object.keys(periods).sort();
+      shown = st.todos ? keys : keys.slice(-RECENT);
+      labels = periods;
+      // Change: latest period against the same period a year before (or the
+      // period before it, for series that are not yearly or have gaps).
+      last = keys[keys.length - 1];
+      if (last) {
+        var yearAgo = (parseInt(last.slice(0, 4), 10) - 1) + last.slice(4);
+        prev = periods[yearAgo] ? yearAgo : keys[keys.length - 2] || "";
+      }
+      sortDefault = last;
     }
-    table = { all: keys, periods: shown, labels: periods, last: last, prev: prev,
+    table = { dist: dist, ano: dist ? years[st.ano] : "", all: dist ? [] : keys, periods: shown, labels: labels,
+      last: last, prev: prev, sortDefault: sortDefault,
       refs: Object.keys(REF).filter(function (g) { return refs[g]; }).map(function (g) { return refs[g]; }),
-      rows: Object.keys(places).map(function (k) { return places[k]; }) };
-    $("todos").parentNode.hidden = keys.length <= RECENT;
+      rows: Object.keys(places).map(function (k) { return places[k]; }),
+      conc: Object.keys(conc).map(function (k) { return conc[k]; }) };
+    $("todos").parentNode.hidden = dist || keys.length <= RECENT;
     render();
   }
 
@@ -413,40 +485,76 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     if (rate) return b - a;
     return a ? (b / a - 1) * 100 : NaN;
   }
+  function ratio(p) { var a = p.v["1º quintil"], b = p.v["4º quintil"]; return a > 0 && b > 0 ? b / a : NaN; }
+  function ok(v) { return v !== undefined && !isNaN(v); }
+
+  // One row's distribution: thin band from the 20% to the 80% limit, solid
+  // between 40% and 60%, a tick at the median. Shared scale for the table.
+  function strip(p, lo, hi) {
+    var W = 150, H = 16, q = p.v, s = el("svg", { width: W, height: H, viewBox: "0 0 " + W + " " + H, "class": "strip" });
+    var a = q["1º quintil"], b = q["2º quintil"], c = q["3º quintil"], d = q["4º quintil"];
+    if (!ok(a) || !ok(d) || !(hi > lo)) return s;
+    var X = function (v) { return 4 + (v - lo) / (hi - lo) * (W - 8); };
+    el("line", { x1: X(a), x2: X(d), y1: H / 2, y2: H / 2, "class": "s-banda" }, s);
+    if (ok(b) && ok(c)) el("rect", { x: X(b), y: 3, width: Math.max(2, X(c) - X(b)), height: H - 6, rx: 2, "class": "s-meio" }, s);
+    if (ok(q.med)) el("line", { x1: X(q.med), x2: X(q.med), y1: 1, y2: H - 1, "class": "s-med" }, s);
+    var t = el("title", {}, s);
+    t.textContent = p.local + ": 20% abaixo de " + fmt.format(a) + " €, 20% acima de " + fmt.format(d) + " €" +
+      (ok(q.med) ? "; mediana " + fmt.format(q.med) + " €" : "");
+    return s;
+  }
 
   function render() {
-    var x = IND[st.ind], t = table, rate = isRate(x.unidade);
+    var x = IND[st.ind], t = table, rate = isRate(x.unidade), dist = t.dist;
     var first = t.prev, last = t.last;
-    var freg = st.nivel === "Freguesia";
+    var freg = st.nivel === "Freguesia", grouped = freg && st.grupo;
     var terms = fold(st.q).split(/\s+/).filter(Boolean);
-    var rows = t.rows.filter(function (p) {
+    var match = function (p) {
       if (st.ilha && p.ilha !== st.ilha) return false;
       var s = fold(p.local + " " + p.concelho + " " + p.ilha);
       return terms.every(function (w) { return s.indexOf(w) >= 0; });
-    });
-    var key = st.ord || last, dir = st.ord ? st.dir : -1;
+    };
+    var rows = t.rows.filter(match);
+    var key = st.ord || t.sortDefault, dir = st.ord ? st.dir : -1;
     var get = function (p) {
-      if (key === "local") return p.local;
+      if (key === "local") return p.nome || p.local;
       if (key === "var") return change(p, first, last, rate);
+      if (key === "razao") return ratio(p);
       return p.v[key];
     };
-    rows.sort(function (a, b) {
+    var cmp = function (a, b) {
       var x1 = get(a), y1 = get(b);
       if (key === "local") return x1.localeCompare(y1, "pt") * dir;
-      var na = x1 === undefined || isNaN(x1), nb = y1 === undefined || isNaN(y1);
+      var na = !ok(x1), nb = !ok(y1);
       if (na || nb) return na - nb; // missing values last
       return (x1 - y1) * dir;
-    });
+    };
+    rows.sort(cmp);
+    var heads = [];
+    if (grouped) {
+      // Each concelho, then its freguesias; concelhos and freguesias each in
+      // the chosen order.
+      var by = {};
+      rows.forEach(function (p) { (by[p.concelho] || (by[p.concelho] = [])).push(p); });
+      heads = t.conc.filter(function (c) { return by[c.nome] || match(c); }).sort(cmp);
+      var out = [];
+      heads.forEach(function (c) { out.push(c); (by[c.nome] || []).forEach(function (p) { out.push(p); }); delete by[c.nome]; });
+      Object.keys(by).forEach(function (k) { by[k].forEach(function (p) { out.push(p); }); });
+      rows = out;
+    }
+    var nFreg = rows.filter(function (p) { return !p.conc; }).length;
 
     // Header
-    var cols = [["local", freg ? "Freguesia" : "Concelho", ""]];
-    if (freg) cols.push([null, "Concelho", ""]);
+    var cols = [["local", freg ? (grouped ? "Concelho e freguesias" : "Freguesia") : "Concelho", ""]];
+    if (freg && !grouped) cols.push([null, "Concelho", ""]);
     if (!st.ilha) cols.push([null, "Ilha", ""]);
     t.periods.forEach(function (d) { cols.push([d, t.labels[d], "num"]); });
-    if (t.prev) cols.push(["var", "Var. face a " + t.labels[t.prev] + (rate ? " (pontos)" : ""), "num"]);
+    if (!dist && t.prev) cols.push(["var", "Var. face a " + t.labels[t.prev] + (rate ? " (pontos)" : ""), "num"]);
+    if (dist) { cols.push(["razao", "80/20", "num"]); cols.push([null, "Distribuição", "dist"]); }
     var tr = document.createElement("tr");
     cols.forEach(function (c) {
       var th = document.createElement("th"); th.scope = "col"; th.className = c[2];
+      if (c[0] === "razao") th.title = "Quantas vezes o limite dos 80% é maior que o dos 20%";
       if (!c[0]) { th.textContent = c[1]; tr.appendChild(th); return; }
       var b = document.createElement("button"); b.type = "button"; b.textContent = c[1];
       if (key === c[0]) th.setAttribute("aria-sort", dir > 0 ? "ascending" : "descending");
@@ -459,30 +567,45 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     $("tabela").tHead.replaceChildren(tr);
 
     // Body
-    var max = 0;
-    rows.forEach(function (p) { var v = p.v[last]; if (!isNaN(v) && Math.abs(v) > max) max = Math.abs(v); });
+    var max = 0, lo = Infinity, hi = -Infinity;
+    rows.forEach(function (p) { var v = p.v[last]; if (!p.conc && ok(v) && Math.abs(v) > max) max = Math.abs(v); });
+    if (dist) t.refs.concat(rows).forEach(function (p) {
+      if (ok(p.v["1º quintil"])) lo = Math.min(lo, p.v["1º quintil"]);
+      if (ok(p.v["4º quintil"])) hi = Math.max(hi, p.v["4º quintil"]);
+    });
     var frag = document.createDocumentFragment();
     var line = function (p, isRef) {
-      var r = document.createElement("tr"); if (isRef) r.className = "ref";
+      var r = document.createElement("tr");
+      r.className = isRef ? "ref" : p.conc ? "conc" : grouped ? "sub" : "";
       var td = function (text, cls) { var c = document.createElement("td"); c.textContent = text; if (cls) c.className = cls; r.appendChild(c); return c; };
-      var lc = td("", "lugar"), lab = document.createElement("label"), cb = document.createElement("input");
-      cb.type = "checkbox"; cb.checked = st.sel.indexOf(p.geo) >= 0;
-      cb.disabled = !cb.checked && st.sel.length >= MAXSEL;
-      cb.setAttribute("aria-label", "Mostrar " + p.local + " no gráfico");
-      if (cb.checked) lc.style.setProperty("--c", colorOf(p.geo));
-      cb.addEventListener("change", function () { toggleSel(p.geo); });
-      lab.appendChild(cb); lab.appendChild(document.createTextNode(p.local)); lc.appendChild(lab);
-      if (freg) td(p.concelho);
+      var lc = td("", "lugar"), lab = document.createElement("label");
+      if (!dist) {
+        var cb = document.createElement("input");
+        cb.type = "checkbox"; cb.checked = st.sel.indexOf(p.geo) >= 0;
+        cb.disabled = !cb.checked && st.sel.length >= MAXSEL;
+        cb.setAttribute("aria-label", "Mostrar " + p.local + " no gráfico");
+        if (cb.checked) lc.style.setProperty("--c", colorOf(p.geo));
+        cb.addEventListener("change", function () { toggleSel(p.geo); });
+        lab.appendChild(cb);
+      }
+      lab.appendChild(document.createTextNode(p.local)); lc.appendChild(lab);
+      if (freg && !grouped) td(p.concelho);
       if (!st.ilha) td(p.ilha);
       t.periods.forEach(function (d) {
-        var v = p.v[d], c = td(v === undefined || isNaN(v) ? "–" : fmt.format(v), "num");
-        if (v === undefined || isNaN(v)) c.className += " falta";
-        if (d === last && !isRef && max && !isNaN(v)) { c.className += " ult"; c.style.setProperty("--w", (Math.abs(v) / max * 100).toFixed(1) + "%"); }
+        var v = p.v[d], c = td(ok(v) ? fmt.format(v) : "–", "num");
+        if (!ok(v)) c.className += " falta";
+        if (!dist && d === last && !isRef && !p.conc && max && ok(v)) { c.className += " ult"; c.style.setProperty("--w", (Math.abs(v) / max * 100).toFixed(1) + "%"); }
+        if (dist && d === "med") c.className += " med";
       });
-      if (t.prev) {
+      if (!dist && t.prev) {
         var ch = change(p, first, last, rate);
         var c = td(isNaN(ch) ? "–" : pct.format(ch) + (rate ? "" : "%"), "num");
         c.className += isNaN(ch) ? " falta" : ch > 0 ? " sobe" : ch < 0 ? " desce" : "";
+      }
+      if (dist) {
+        var rz = ratio(p);
+        td(ok(rz) ? fmt.format(Math.round(rz * 100) / 100) : "–", "num" + (ok(rz) ? "" : " falta"));
+        td("", "dist").appendChild(strip(p, lo, hi));
       }
       frag.appendChild(r);
     };
@@ -492,18 +615,26 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 
     // Text around the table
     var a = document.createElement("a"); a.href = x.url; a.textContent = x.nome;
+    if (x.nome !== x.inome) a.title = "No INE: " + x.inome;
     $("titulo").replaceChildren(a);
     fillDefinition(st.ind);
-    $("sub").textContent = [x.unidade, st.cat, t.all.length ? "dados de " + t.labels[t.all[0]] + " a " + t.labels[t.all[t.all.length - 1]] : "",
-      "INE, atualizado em " + x.atualizado].filter(Boolean).join(" · ");
+    $("sub").textContent = (dist
+      ? [x.unidade, "distribuição em " + t.ano]
+      : [x.unidade, st.cat, t.all.length ? "dados de " + t.labels[t.all[0]] + " a " + t.labels[t.all[t.all.length - 1]] : ""])
+      .concat(["INE, atualizado em " + x.atualizado]).filter(Boolean).join(" · ");
+    $("dist-ajuda").hidden = !dist;
     var total = freg ? 156 : 19; // freguesias and concelhos of the Azores
-    var withLast = t.rows.filter(function (p) { return !isNaN(p.v[last]); }).length;
+    var withLast = t.rows.filter(function (p) { return ok(p.v[last]); }).length;
+    var when = dist ? t.ano : t.labels[last];
     $("nota").textContent = withLast < total
-      ? "Em " + t.labels[last] + ", o INE publica valores para " + withLast + " de " + total + " " +
-        (freg ? "freguesias" : "concelhos") + ". Os outros não aparecem ou têm “–”."
+      ? "Em " + when + ", o INE publica valores para " + withLast + " de " + total + " " +
+        (freg ? "freguesias" : "concelhos") + ". Os outros não aparecem ou têm “–”." +
+        (dist && freg ? " Nas freguesias pequenas, o INE não divulga os quintis." : "")
       : "";
     $("legenda").textContent = x.nome + ", por " + (freg ? "freguesia" : "concelho");
-    $("estado").textContent = rows.length + (freg ? " freguesias" : " concelhos") + (st.ilha ? " (" + st.ilha + ")" : "") + ".";
+    var pl = function (n, one, many) { return n + " " + (n === 1 ? one : many); };
+    $("estado").textContent = (freg ? pl(nFreg, "freguesia", "freguesias") : pl(nFreg, "concelho", "concelhos")) +
+      (grouped ? " em " + pl(heads.length, "concelho", "concelhos") : "") + (st.ilha ? " (" + st.ilha + ")" : "") + ".";
     $("painel").hidden = false;
     table.view = { cols: cols, rows: t.refs.concat(rows), first: first, last: last, rate: rate };
     applyVista();
@@ -529,8 +660,10 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   }
 
   function applyVista() {
-    $("grafico").hidden = st.vista === "tabela";
-    $("tabela-wrap").hidden = st.vista === "grafico";
+    var dist = table && table.dist;
+    $("grafico").hidden = dist || st.vista === "tabela";
+    $("tabela-wrap").hidden = !dist && st.vista === "grafico";
+    document.querySelector(".ine-vista").hidden = dist;
     document.querySelectorAll(".ine-vista button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.getAttribute("data-vista") === st.vista ? "true" : "false");
     });
@@ -565,9 +698,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var chart = null; // { xs, keys, series, x(), y() } for the hover layer
 
   function drawChart() {
-    if (st.vista === "tabela" || !table) return;
+    if (st.vista === "tabela" || !table || table.dist) return;
     var t = table, x = IND[st.ind];
-    var all = {}; t.refs.concat(t.rows).forEach(function (p) { all[p.geo] = p; });
+    var all = {}; t.refs.concat(t.conc, t.rows).forEach(function (p) { all[p.geo] = p; });
     var series = st.sel.filter(function (g) { return all[g]; }).map(function (g) { return { geo: g, p: all[g], c: colorOf(g) }; });
     fillJuntar(all);
     drawLegend(series);
@@ -726,25 +859,26 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     var o0 = document.createElement("option"); o0.value = "";
     o0.textContent = st.sel.length >= MAXSEL ? "Máximo de 8 locais" : "Juntar ao gráfico…"; sel.appendChild(o0);
     sel.disabled = st.sel.length >= MAXSEL;
-    var places = table.refs.concat(table.rows.filter(function (p) { return !st.ilha || p.ilha === st.ilha; })
+    var places = table.refs.concat(table.conc.concat(table.rows).filter(function (p) { return !st.ilha || p.ilha === st.ilha; })
       .sort(function (a, b) { return a.local.localeCompare(b.local, "pt"); }));
     places.forEach(function (p) {
       if (st.sel.indexOf(p.geo) >= 0) return;
       var o = document.createElement("option"); o.value = p.geo;
-      o.textContent = p.local + (p.concelho ? " (" + p.concelho + ")" : ""); sel.appendChild(o);
+      o.textContent = p.local + (p.concelho && !p.conc ? " (" + p.concelho + ")" : ""); sel.appendChild(o);
     });
   }
 
   function exportCSV(e) {
     var v = table.view, esc = function (s) { s = String(s); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
     var freg = st.nivel === "Freguesia";
-    var head = ["local"].concat(freg ? ["concelho"] : [], ["ilha"], table.periods.map(function (d) { return table.labels[d]; }));
+    var head = ["local"].concat(freg ? ["nivel", "concelho"] : [], ["ilha"], table.periods.map(function (d) { return table.labels[d]; }));
     var body = v.rows.map(function (p) {
-      return [p.local].concat(freg ? [p.concelho] : [], [p.ilha], table.periods.map(function (d) { var x = p.v[d]; return x === undefined || isNaN(x) ? "" : x; }));
+      return [p.nome || p.local].concat(freg ? [p.conc ? "Concelho" : REF[p.geo] ? "" : "Freguesia", p.concelho] : [], [p.ilha],
+        table.periods.map(function (d) { var x = p.v[d]; return x === undefined || isNaN(x) ? "" : x; }));
     });
     var text = "﻿" + [head].concat(body).map(function (r) { return r.map(esc).join(","); }).join("\n");
     var url = URL.createObjectURL(new Blob([text], { type: "text/csv;charset=utf-8" }));
-    e.currentTarget.href = url; e.currentTarget.download = "ine-" + st.ind + "-" + fold(st.nivel) + ".csv";
+    e.currentTarget.href = url; e.currentTarget.download = "ine-" + st.ind + "-" + fold(st.nivel) + (table.dist ? "-" + table.ano : "") + ".csv";
     setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
   }
 
@@ -753,6 +887,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     st.ind = IND[p.get("ind")] ? p.get("ind") : ORDER[0];
     st.nivel = p.get("nivel") || ""; st.ilha = p.get("ilha") || ""; st.cat = p.get("cat") || "";
     st.q = p.get("q") || ""; st.todos = p.get("todos") === "1";
+    st.ano = p.get("ano") || ""; st.grupo = p.get("grupo") !== "0";
     st.ord = p.get("ord") || null; st.dir = p.get("dir") === "asc" ? 1 : -1;
     st.escala = ["valor", "indice"].indexOf(p.get("escala")) >= 0 ? p.get("escala") : "";
     st.vista = ["ambos", "grafico", "tabela"].indexOf(p.get("vista")) >= 0 ? p.get("vista") : "ambos";
@@ -764,7 +899,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   function writeHash() {
     var p = new URLSearchParams();
     [["ind", st.ind], ["nivel", st.nivel], ["ilha", st.ilha], ["cat", st.cat], ["q", st.q],
-     ["todos", st.todos ? "1" : ""], ["ord", st.ord || ""], ["dir", st.ord ? (st.dir > 0 ? "asc" : "desc") : ""],
+     ["todos", st.todos ? "1" : ""], ["ano", table && table.dist ? st.ano : ""], ["grupo", st.grupo ? "" : "0"], ["ord", st.ord || ""], ["dir", st.ord ? (st.dir > 0 ? "asc" : "desc") : ""],
      ["vista", st.vista === "ambos" ? "" : st.vista], ["escala", st.escala], ["sel", st.sel.join(",") === DEFAULT_SEL.join(",") ? "" : st.sel.join(",")]]
       .forEach(function (kv) { if (kv[1]) p.set(kv[0], kv[1]); });
     if (!st.sel.length) p.set("sel", "");
@@ -776,6 +911,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   on("nivel", "change", function () { st.nivel = $("nivel").value; st.ord = null; build(); });
   on("ilha", "change", function () { st.ilha = $("ilha").value; render(); });
   on("cat", "change", function () { st.cat = $("cat").value; build(); });
+  on("ano", "change", function () { st.ano = $("ano").value; build(); });
+  on("grupo", "change", function () { st.grupo = $("grupo").checked; render(); });
   on("todos", "change", function () { st.todos = $("todos").checked; st.ord = null; build(); });
   var timer;
   $("q").addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(function () { st.q = $("q").value.trim(); render(); writeHash(); }, 150); });

@@ -26,9 +26,6 @@ collections:
   base_updates:
     output: true
     permalink: /base_updates/:path/
-  trabalhar:
-    output: true
-    permalink: /trabalhar/:path/
   portal_updates: ~
   ao:
     output: true
