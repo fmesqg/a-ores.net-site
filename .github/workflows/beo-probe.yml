@@ -1,0 +1,23 @@
+name: BEO probe (temporary)
+on:
+  pull_request:
+    paths: ['.github/workflows/beo-probe.yml']
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Headers from a GitHub runner
+        run: |
+          UA="acores.net open data (github.com/fmesqg/a-ores.net-site)"
+          for u in "https://portal.azores.gov.pt/documents/36626/21646330/BEO_2026_09_Setembro+2026.pdf" \
+                   "https://portal.azores.gov.pt/documents/36626/13933856/BEO_2024_01_Janeiro+2024.pdf" \
+                   "https://portal.azores.gov.pt/web/drot/beo-boletim-de-execu%C3%A7%C3%A3o-or%C3%A7amental"; do
+            echo "== $u"; curl -s -o /tmp/out -D - -A "$UA" "$u" | grep -iE "^HTTP|cf-mitigated|content-type"; head -c 5 /tmp/out; echo
+          done
+      - run: pip install pypdf==7.2.0
+      - name: Full parse from the runner
+        run: python3 bot/beo.py "$RUNNER_TEMP/beo" --tudo && cmp data/beo.csv "$RUNNER_TEMP/beo/beo.csv" && echo IDENTICAL
