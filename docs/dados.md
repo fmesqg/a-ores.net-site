@@ -7,8 +7,12 @@ permalink: /dados/
 
 Tudo o que o açores.net recolheu desde agosto de 2024, numa tabela por fonte:
 contratos públicos (BASE), atividade da Assembleia Legislativa (ALRA) e atos
-com montantes do Jornal Oficial (JORAA). Pesquise aqui ou descarregue os CSV.
-Cada linha tem a ligação para o documento original. É esse que se deve citar.
+com montantes do Jornal Oficial (JORAA). Junta-se uma seleção de indicadores
+do INE para os Açores, por concelho e, quando o INE os publica, por
+freguesia: rendimentos e IRS, rendas e vendas de casas, construção,
+população, turismo, empresas e finanças das câmaras. Pesquise aqui ou
+descarregue os CSV. Cada linha tem a ligação para o documento ou indicador
+original. É esse que se deve citar.
 
 <form id="dados-form" class="dados-form" role="search" onsubmit="return false">
   <fieldset>
@@ -16,12 +20,13 @@ Cada linha tem a ligação para o documento original. É esse que se deve citar.
     <label><input type="radio" name="fonte" value="base" checked> Contratos (BASE)</label>
     <label><input type="radio" name="fonte" value="alra"> Assembleia (ALRA)</label>
     <label><input type="radio" name="fonte" value="joraa"> Jornal Oficial (JORAA)</label>
+    <label><input type="radio" name="fonte" value="ine"> Estatísticas (INE)</label>
   </fieldset>
   <div class="dados-row">
     <label class="dados-grow">Pesquisa
       <input type="search" id="q" placeholder="ex.: bencom, combustível, Flores" autocomplete="off">
     </label>
-    <label>Tipo
+    <label><span id="tipo-label">Tipo</span>
       <select id="tipo"><option value="">todos</option></select>
     </label>
   </div>
@@ -52,20 +57,26 @@ Cada linha tem a ligação para o documento original. É esse que se deve citar.
 | [base.csv](/dados/base.csv) | um contrato por linha: adjudicante, adjudicatário, preço, procedimento, data de assinatura | <span data-meta="base"></span> |
 | [alra.csv](/dados/alra.csv) | requerimentos (com estado e resposta), iniciativas, votos, petições, intervenções, diários, audições, notas de imprensa | <span data-meta="alra"></span> |
 | [joraa.csv](/dados/joraa.csv) | atos do Jornal Oficial com montantes (portarias, despachos, resoluções) | <span data-meta="joraa"></span> |
-| [acores.db](/dados/acores.db) | as três tabelas acima em SQLite, com pesquisa de texto | ver abaixo |
+| [ine.csv](/dados/ine.csv) | um valor por linha: indicador, período, local (região, concelho ou freguesia), concelho, ilha, categoria, valor, unidade | <span data-meta="ine"></span> |
+| [acores.db](/dados/acores.db) | as quatro tabelas acima em SQLite, com pesquisa de texto | ver abaixo |
 
 Os CSV estão em UTF-8 e abrem diretamente no Excel, no LibreOffice ou no
 Google Sheets. Todos os ficheiros são refeitos todos os dias a partir das
 [páginas diárias](/rsss) e do código em
 [`bot/datasets.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/datasets.py).
+O `ine.csv` é atualizado uma vez por semana a partir da
+[API do INE](https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_api), pelo
+código em [`bot/ine.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/ine.py),
+que tem a lista de indicadores.
 Última geração: <span data-meta="gerado"></span>.
 
 ## Consultar em SQL
 
-O ficheiro [acores.db](/dados/acores.db) tem as mesmas três tabelas em SQLite,
-com pesquisa de texto (`base_fts`, `alra_fts`, `joraa_fts`), que ignora acentos.
+O ficheiro [acores.db](/dados/acores.db) tem as mesmas quatro tabelas em SQLite,
+com pesquisa de texto (`base_fts`, `alra_fts`, `joraa_fts`, `ine_fts`), que
+ignora acentos.
 Abre-se no navegador com o [Datasette Lite](https://lite.datasette.io), sem
-instalar nada. A primeira abertura descarrega cerca de 17 MB e demora alguns
+instalar nada. A primeira abertura descarrega cerca de 28 MB e demora alguns
 segundos. Também se abre com `sqlite3`, Python, R ou DuckDB.
 
 - [Abrir a base de dados](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores): as três tabelas, com filtros, facetas e caixa de pesquisa.
@@ -73,6 +84,9 @@ segundos. Também se abre com `sqlite3`, Python, R ou DuckDB.
 - [Ajustes diretos por entidade (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20adjudicante%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20where%20procedimento%20like%20%27Ajuste%20Direto%25%27%20group%20by%20adjudicante%20order%20by%20total_eur%20desc%20limit%20100)
 - [Pesquisa de texto em contratos (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20base.publicado%2C%20base.objeto%2C%20base.adjudicante%2C%20base.adjudicatario%2C%20base.preco%2C%20base.url%20from%20base%20join%20base_fts%20on%20base_fts.rowid%20%3D%20base.rowid%20where%20base_fts%20match%20%3Atermos%20order%20by%20base.preco%20desc&termos=bencom)
 - [Requerimentos por deputado e resposta (ALRA)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20autores%2C%20count%28%2A%29%20as%20requerimentos%2C%20sum%28estado%20%3D%20%27RESPOSTA%20ATEMPADA%27%29%20as%20atempada%2C%20sum%28estado%20%3D%20%27RESPOSTA%20TADIA%27%29%20as%20tardia%2C%20sum%28estado%20%3D%20%27FORA%20DE%20PRAZO%27%29%20as%20fora_de_prazo%20from%20alra%20where%20tipo%20%3D%20%27Requerimentos%27%20group%20by%20autores%20order%20by%20requerimentos%20desc)
+- [Rendimento médio após IRS por freguesia, 2024 (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20local%2C%20concelho%2C%20ilha%2C%20valor%20as%20euros%20from%20ine%20where%20varcd%20%3D%20%270012756%27%20and%20periodo%20%3D%20%272024%27%20and%20nivel%20%3D%20%27Freguesia%27%20order%20by%20valor%20desc)
+- [Renda mediana (€/m²) de novos contratos por concelho e ano (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20local%2C%20group_concat%28periodo%20%7C%7C%20%27%3A%20%27%20%7C%7C%20valor%2C%20%27%20%C2%B7%20%27%29%20as%20serie%20from%20ine%20where%20varcd%20%3D%20%270014698%27%20and%20nivel%20%21%3D%20%27Freguesia%27%20group%20by%20local%20order%20by%20local)
+- [População residente por concelho, 2021 e 2025 (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20local%2C%20max%28case%20when%20periodo%20%3D%20%272021%27%20then%20valor%20end%29%20as%20pop_2021%2C%20max%28case%20when%20periodo%20%3D%20%272025%27%20then%20valor%20end%29%20as%20pop_2025%2C%20round%28100.0%20%2A%20%28max%28case%20when%20periodo%20%3D%20%272025%27%20then%20valor%20end%29%20%2F%20max%28case%20when%20periodo%20%3D%20%272021%27%20then%20valor%20end%29%20-%201%29%2C%201%29%20as%20variacao_pct%20from%20ine%20where%20varcd%20%3D%20%270012918%27%20group%20by%20local%20order%20by%20variacao_pct)
 - [Montantes por entidade e ano (JORAA)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20entidade%2C%20substr%28publicado%2C%201%2C%204%29%20as%20ano%2C%20count%28%2A%29%20as%20atos%2C%20round%28sum%28montante%29%29%20as%20total_eur%20from%20joraa%20group%20by%20entidade%2C%20ano%20order%20by%20total_eur%20desc%20limit%20100)
 
 As consultas podem ser editadas na própria página do Datasette, e o endereço
@@ -91,6 +105,18 @@ de cada resultado pode ser partilhado.
 - **ALRA**: o "estado" de um requerimento é o último que o robô registou. A
   coluna `data` é a de entrada. As notas de imprensa não têm data própria, por
   isso usa-se `primeiro_dia`.
+- **INE**: é uma seleção de indicadores, não a base de dados toda. Os
+  valores são os do INE no dia da recolha. Cada linha liga ao indicador no
+  site do INE, com a metainformação. O INE não publica valores que permitam
+  identificar pessoas ou que tenham poucas observações. Por isso as medianas,
+  o Gini e os rácios P80/P20 e P90/P10 só existem para as freguesias
+  maiores, e as rendas e vendas de casas só para alguns concelhos. Os totais
+  e médias (sujeitos passivos, rendimento por sujeito passivo, fogos
+  licenciados) cobrem todas as freguesias. As séries por concelho de
+  população, turismo e câmaras começam em 2021 (NUTS 2024). Quando um
+  indicador tem várias categorias sem total (por exemplo, quintis), a coluna
+  `categoria` diz qual é. Nos períodos com mais de um ano (anos letivos,
+  quinquénios), a coluna `data` usa o último.
 
 <noscript><p>A pesquisa precisa de JavaScript. Os CSV acima funcionam sem ele.</p></noscript>
 
@@ -132,12 +158,18 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
              ["documento", "Docs", "docs"]] },
     joraa: { tipo: "serie", data: "publicado", valor: "montante", link: "url",
       cols: [["publicado", "Publicado", "d"], ["titulo", "Título", "l"], ["ato", "Ato", "t"],
-             ["entidade", "Entidade", "t"], ["montante", "Montante", "e"]] }
+             ["entidade", "Entidade", "t"], ["montante", "Montante", "e"]] },
+    ine: { tipo: "indicador", tipoLabel: "Indicador", data: "data", link: "url", sort: "data",
+      cols: [["data", "Período", "p"], ["indicador", "Indicador", "l"], ["local", "Local", "t"],
+             ["nivel", "Nível", "t"], ["concelho", "Concelho", "t"], ["categoria", "Categoria", "t"],
+             ["valor", "Valor", "n"]] }
   };
   var PAGE = 100;
   var cache = {}, state = { fonte: "base", sort: null, dir: -1, shown: PAGE }, current = [];
   var $ = function (id) { return document.getElementById(id); };
   var eur = new Intl.NumberFormat("pt-PT", { style: "currency", currency: "EUR" });
+  var num = new Intl.NumberFormat("pt-PT", { maximumFractionDigits: 2 });
+  var NUM = { e: 1, n: 1 };
   var fold = function (s) { return (s || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); };
 
   function parseCSV(text) {
@@ -197,6 +229,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       var o = document.createElement("option"); o.value = t; o.textContent = t + " (" + seen[t] + ")"; sel.appendChild(o);
     });
     sel.value = seen[state.tipo] ? state.tipo : "";
+    $("tipo-label").textContent = v.tipoLabel || "Tipo";
     $("min-wrap").hidden = !v.valor;
   }
 
@@ -213,11 +246,12 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
         for (var i = 0; i < terms.length; i++) if (r._s.indexOf(terms[i]) < 0) return false;
         return true;
       });
-      if (state.sort) {
-        var k = state.sort, num = v.cols.some(function (c) { return c[0] === k && c[2] === "e"; });
+      var k = state.sort || v.sort;
+      if (k) {
+        var isNum = v.cols.some(function (c) { return c[0] === k && NUM[c[2]]; });
         current.sort(function (a, b) {
           var x = a[k], y = b[k];
-          if (num) { x = parseFloat(x) || 0; y = parseFloat(y) || 0; return (x - y) * state.dir; }
+          if (isNum) { x = parseFloat(x) || 0; y = parseFloat(y) || 0; return (x - y) * state.dir; }
           return x.localeCompare(y, "pt") * state.dir;
         });
       }
@@ -229,6 +263,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   function cell(r, c) {
     var td = document.createElement("td"), val = r[c[0]], a;
     if (c[2] === "e") { td.className = "num"; td.textContent = val ? eur.format(parseFloat(val)) : ""; }
+    else if (c[2] === "n") { td.className = "num"; td.textContent = val === "" ? "" : num.format(parseFloat(val)); if (r.unidade) td.title = r.unidade; }
+    else if (c[2] === "p") { td.className = "dt"; td.textContent = r.periodo || val; }
     else if (c[2] === "d") { td.className = "dt"; td.textContent = val; }
     else if (c[2] === "l") { a = document.createElement("a"); a.href = r[VIEW[state.fonte].link]; a.textContent = val; td.appendChild(a); }
     else if (c[2] === "docs") {
@@ -249,9 +285,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       th.scope = "col";
       if (c[2] === "docs") { th.textContent = c[1]; tr.appendChild(th); return; }
       b.type = "button"; b.textContent = c[1];
-      if (state.sort === c[0]) th.setAttribute("aria-sort", state.dir > 0 ? "ascending" : "descending");
+      if ((state.sort || v.sort) === c[0]) th.setAttribute("aria-sort", state.dir > 0 ? "ascending" : "descending");
       b.addEventListener("click", function () {
-        if (state.sort === c[0]) state.dir = -state.dir; else { state.sort = c[0]; state.dir = c[2] === "t" || c[2] === "l" ? 1 : -1; }
+        if ((state.sort || v.sort) === c[0]) { state.sort = c[0]; state.dir = -state.dir; } else { state.sort = c[0]; state.dir = c[2] === "t" || c[2] === "l" ? 1 : -1; }
         state.shown = PAGE; apply();
       });
       th.appendChild(b); tr.appendChild(th);

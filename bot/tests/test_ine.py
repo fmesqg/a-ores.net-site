@@ -1,0 +1,195 @@
+import csv
+import sqlite3
+
+from bot import datasets, ine
+
+META = {
+    "IndicadorNome": "Valor mediano do rendimento bruto declarado deduzido do "
+    "IRS liquidado por sujeito passivo (€) por Localização geográfica (NUTS - "
+    "2024); Anual - INE, Estatísticas do Rendimento ao nível local",
+    "UnidadeMedida": "Euro (€)",
+    "DataUltimaAtualizacao": "2026-07-24",
+}
+
+DATA = {
+    "Dados": {
+        "2024": [
+            {
+                "geocod": "20",
+                "geodsg": "Região Autónoma dos Açores",
+                "dim_3": "1",
+                "dim_3_t": "HM",
+                "valor": "11000",
+            },
+            {
+                "geocod": "20",
+                "geodsg": "Região Autónoma dos Açores",
+                "dim_3": "2",
+                "dim_3_t": "H",
+                "valor": "12000",
+            },
+            {
+                "geocod": "200",
+                "geodsg": "Região Autónoma dos Açores",
+                "dim_3": "1",
+                "dim_3_t": "HM",
+                "valor": "11000",
+            },
+            {
+                "geocod": "2004206",
+                "geodsg": "Vila Franca do Campo",
+                "dim_3": "1",
+                "dim_3_t": "HM",
+                "valor": "10395",
+            },
+            {
+                "geocod": "200420602",
+                "geodsg": "Ponta Garça",
+                "dim_3": "1",
+                "dim_3_t": "HM",
+                "valor": "9305.5",
+            },
+            {
+                "geocod": "200420603",
+                "geodsg": "Ribeira das Tainhas",
+                "dim_3": "1",
+                "dim_3_t": "HM",
+                "sinal_conv": "-",
+            },
+            {
+                "geocod": "1110601",
+                "geodsg": "Lisboa",
+                "dim_3": "1",
+                "dim_3_t": "HM",
+                "valor": "15000",
+            },
+        ]
+    }
+}
+
+
+def test_period_date():
+    assert ine.period_date("2024") == "2024-01-01"
+    assert ine.period_date("Setembro de 2026") == "2026-09-01"
+    assert ine.period_date("2.º Trimestre de 2026") == "2026-04-01"
+    assert ine.period_date("2.º Semestre de 2024") == "2024-07-01"
+    assert ine.period_date("2022 / 2023") == "2023-01-01"
+    assert ine.period_date("2021 - 2025") == "2025-01-01"
+    assert ine.period_date("sem ano") == ""
+
+
+def test_nuts_and_level():
+    assert ine.nuts("4203") == "2004203"
+    assert ine.nuts("420301") == "200420301"
+    assert ine.nuts("2004203") == "2004203"
+    assert ine.nuts("1106") == "1106"  # mainland admin code: untouched
+    assert ine.level("20") == "Região"
+    assert ine.level("2004203") == "Concelho"
+    assert ine.level("200420301") == "Freguesia"
+
+
+def test_short_name():
+    assert ine.short_name(META["IndicadorNome"]) == (
+        "Valor mediano do rendimento bruto declarado deduzido do IRS "
+        "liquidado por sujeito passivo (€)"
+    )
+
+
+def test_is_total():
+    assert ine.is_total("HM")
+    assert ine.is_total("Total de obras de edificação")
+    assert not ine.is_total("1º quintil")
+
+
+def test_rows_from():
+    rows = [
+        dict(zip(ine.COLS, r, strict=True))
+        for r in ine.rows_from("0012757", DATA, META)
+    ]
+    # total (HM) only, NUTS III duplicate dropped, no Lisbon, no empty value
+    assert [r["local"] for r in rows] == [
+        "Região Autónoma dos Açores",
+        "Vila Franca do Campo",
+        "Ponta Garça",
+    ]
+    reg, conc, freg = rows
+    assert reg["nivel"] == "Região" and reg["ilha"] == ""
+    assert conc["ilha"] == "São Miguel" and conc["concelho"] == ""
+    assert freg["concelho"] == "Vila Franca do Campo"
+    assert freg["valor"] == 9305.5 and conc["valor"] == 10395
+    assert freg["categoria"] == ""
+    assert freg["data"] == "2024-01-01"
+    assert freg["unidade"] == "Euro (€)"
+    assert freg["url"] == "https://www.ine.pt/xurl/indx/0012757"
+
+
+def test_rows_from_keeps_dimension_without_total():
+    data = {
+        "Dados": {
+            "2024": [
+                {
+                    "geocod": "2004203",
+                    "geodsg": "Ponta Delgada",
+                    "dim_3_t": f"{q}º quintil",
+                    "valor": str(q * 1000),
+                }
+                for q in (1, 2)
+            ]
+        }
+    }
+    rows = ine.rows_from("0012759", data, META)
+    assert [r[ine.COLS.index("categoria")] for r in rows] == [
+        "1º quintil",
+        "2º quintil",
+    ]
+
+
+def test_rows_from_admin_division_codes():
+    data = {
+        "Dados": {
+            "2025": [
+                {
+                    "geocod": "4203",
+                    "geodsg": "Ponta Delgada",
+                    "valor": "232.99",
+                },
+                {"geocod": "1106", "geodsg": "Lisboa", "valor": "100"},
+            ]
+        }
+    }
+    (row,) = ine.rows_from("0007822", data, META)
+    assert row[ine.COLS.index("geocod")] == "2004203"
+    assert row[ine.COLS.index("nivel")] == "Concelho"
+
+
+def test_datasets_includes_ine(tmp_path):
+    docs, data = tmp_path / "docs", tmp_path / "data"
+    for coll in ("_base_updates", "_alra_updates", "_joraa_updates"):
+        (docs / coll).mkdir(parents=True)
+    data.mkdir()
+    with open(data / "ine.csv", "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(ine.COLS)
+        w.writerows(ine.rows_from("0012757", DATA, META))
+
+    meta = datasets.main(docs)
+    assert meta["ine"]["linhas"] == 3
+    assert meta["ine"]["indicadores"] == 1
+    assert (meta["ine"]["de"], meta["ine"]["ate"]) == (
+        "2024-01-01",
+        "2024-01-01",
+    )
+    assert (docs / "dados" / "ine.csv").exists()
+
+    con = sqlite3.connect(docs / "dados" / "acores.db")
+    valor, tipo = con.execute(
+        "select valor, typeof(valor) from ine join ine_fts "
+        "on ine_fts.rowid = ine.rowid where ine_fts match 'garca'"
+    ).fetchone()  # accent-insensitive: "Ponta Garça"
+    assert (valor, tipo) == (9305.5, "real")
+
+
+def test_non_annual_name_has_periodicity():
+    meta = dict(META, Periodic="Mensal")
+    row, *_ = ine.rows_from("0012088", DATA, meta)
+    assert row[ine.COLS.index("indicador")].endswith("(€) – mensal")
