@@ -7,12 +7,11 @@ permalink: /dados/
 
 Tudo o que o açores.net recolheu desde agosto de 2024, numa tabela por fonte:
 contratos públicos (BASE), atividade da Assembleia Legislativa (ALRA) e atos
-com montantes do Jornal Oficial (JORAA). Junta-se uma seleção de indicadores
-do INE para os Açores, por concelho e, quando o INE os publica, por
-freguesia: rendimentos e IRS, rendas e vendas de casas, construção,
-população, turismo, empresas e finanças das câmaras. Pesquise aqui ou
-descarregue os CSV. Cada linha tem a ligação para o documento ou indicador
-original. É esse que se deve citar.
+com montantes do Jornal Oficial (JORAA). Pesquise aqui ou descarregue os CSV.
+Cada linha tem a ligação para o documento original. É esse que se deve citar.
+
+**Estatísticas do INE por concelho e freguesia** (rendimentos e IRS, rendas,
+construção, população, turismo, câmaras): ver [Indicadores do INE](/dados/ine/).
 
 <form id="dados-form" class="dados-form" role="search" onsubmit="return false">
   <fieldset>
@@ -20,7 +19,6 @@ original. É esse que se deve citar.
     <label><input type="radio" name="fonte" value="base" checked> Contratos (BASE)</label>
     <label><input type="radio" name="fonte" value="alra"> Assembleia (ALRA)</label>
     <label><input type="radio" name="fonte" value="joraa"> Jornal Oficial (JORAA)</label>
-    <label><input type="radio" name="fonte" value="ine"> Estatísticas (INE)</label>
   </fieldset>
   <div class="dados-row">
     <label class="dados-grow">Pesquisa
@@ -105,18 +103,7 @@ de cada resultado pode ser partilhado.
 - **ALRA**: o "estado" de um requerimento é o último que o robô registou. A
   coluna `data` é a de entrada. As notas de imprensa não têm data própria, por
   isso usa-se `primeiro_dia`.
-- **INE**: é uma seleção de indicadores, não a base de dados toda. Os
-  valores são os do INE no dia da recolha. Cada linha liga ao indicador no
-  site do INE, com a metainformação. O INE não publica valores que permitam
-  identificar pessoas ou que tenham poucas observações. Por isso as medianas,
-  o Gini e os rácios P80/P20 e P90/P10 só existem para as freguesias
-  maiores, e as rendas e vendas de casas só para alguns concelhos. Os totais
-  e médias (sujeitos passivos, rendimento por sujeito passivo, fogos
-  licenciados) cobrem todas as freguesias. As séries por concelho de
-  população, turismo e câmaras começam em 2021 (NUTS 2024). Quando um
-  indicador tem várias categorias sem total (por exemplo, quintis), a coluna
-  `categoria` diz qual é. Nos períodos com mais de um ano (anos letivos,
-  quinquénios), a coluna `data` usa o último.
+- **INE**: ver as notas na página [Indicadores do INE](/dados/ine/).
 
 <noscript><p>A pesquisa precisa de JavaScript. Os CSV acima funcionam sem ele.</p></noscript>
 
@@ -158,11 +145,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
              ["documento", "Docs", "docs"]] },
     joraa: { tipo: "serie", data: "publicado", valor: "montante", link: "url",
       cols: [["publicado", "Publicado", "d"], ["titulo", "Título", "l"], ["ato", "Ato", "t"],
-             ["entidade", "Entidade", "t"], ["montante", "Montante", "e"]] },
-    ine: { tipo: "indicador", tipoLabel: "Indicador", data: "data", link: "url", sort: "data",
-      cols: [["data", "Período", "p"], ["indicador", "Indicador", "l"], ["local", "Local", "t"],
-             ["nivel", "Nível", "t"], ["concelho", "Concelho", "t"], ["categoria", "Categoria", "t"],
-             ["valor", "Valor", "n"]] }
+             ["entidade", "Entidade", "t"], ["montante", "Montante", "e"]] }
   };
   var PAGE = 100;
   var cache = {}, state = { fonte: "base", sort: null, dir: -1, shown: PAGE }, current = [];
