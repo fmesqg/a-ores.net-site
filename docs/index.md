@@ -32,8 +32,8 @@ ligação para a fonte oficial.</p>
   de execução orçamental, com um glossário dos termos.{% if site.data.beo_ultimo.periodo %}
   Último boletim: <a href="{{ site.data.beo_ultimo.url }}">{{ site.data.beo_ultimo.periodo }}</a>.{% endif %}</p>
   <ul>
-    <li><a href="/dados/beo/#quadro=sintese-global">Há défice ou excedente?</a></li>
-    <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra">Quanto rendem o IRS e o IVA?</a></li>
+    <li><a href="/dados/beo/#quadro=sintese-global&modo=acum">Há défice ou excedente?</a></li>
+    <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra&grafico=anos">Quanto rendem o IRS e o IVA, mês a mês?</a></li>
     <li><a href="/dados/beo/#quadro=despesa-do-gra-por-departamento">Quanto gasta cada secretaria?</a></li>
   </ul>
 </section>

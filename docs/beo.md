@@ -10,8 +10,10 @@ Receita e despesa do Governo Regional dos Açores, mês a mês, a partir do
 [Boletim de Execução Orçamental](https://portal.azores.gov.pt/web/drot/beo-boletim-de-execu%C3%A7%C3%A3o-or%C3%A7amental)
 que a Direção Regional do Orçamento e Tesouro publica todos os meses. Escolha
 um quadro do boletim e veja-o em gráfico, em tabela ou nos dois. Os valores
-publicados são acumulados desde janeiro; em "Mensal" vê o que entrou ou saiu
-em cada mês. A última coluna compara com o mesmo mês do ano anterior.
+publicados são acumulados desde janeiro; aqui vê, por omissão, o que entrou ou
+saiu em cada mês (“Mês a mês”), para comparar cada mês com o mesmo mês do ano
+anterior e ver as épocas do ano. Em “Acumulado no ano” vê os valores como o
+boletim os publica. Com “Ano a ano”, o gráfico põe os anos lado a lado.
 Atualizado todas as semanas. Ver também os [indicadores do INE](/dados/ine/)
 e os [outros dados abertos](/dados/).
 
@@ -27,10 +29,11 @@ e os [outros dados abertos](/dados/).
     <label id="med-wrap" hidden>Medida <select id="med"></select></label>
   </div>
   <div class="ine-row">
-    <div id="modo-wrap" class="ine-vista" role="group" aria-label="Valores">
+    <div class="modo-campo"><span class="modo-rot" id="modo-rot">Valores</span>
+    <div id="modo-wrap" class="ine-vista" role="group" aria-labelledby="modo-rot">
+      <button type="button" data-modo="mensal">Mês a mês</button>
       <button type="button" data-modo="acum">Acumulado no ano</button>
-      <button type="button" data-modo="mensal">Mensal</button>
-    </div>
+    </div></div>
     <label class="ine-grow">Procurar <input type="search" id="busca" placeholder="ex.: IRS, pessoal, saúde" autocomplete="off"></label>
   </div>
   <label class="ine-check"><input type="checkbox" id="todos"> Mostrar todos os meses</label>
@@ -129,6 +132,7 @@ Se encontrar um erro, diga-nos no
 <style>
 .wrapper { max-width: min(1200px, 100%); }
 .ine-row { display: flex; flex-wrap: wrap; gap: .5em 1em; align-items: flex-end; margin-bottom: .75em; }
+.modo-campo { display: flex; flex-direction: column; }
 .ine-row label { display: flex; flex-direction: column; margin: 0; min-width: 0; max-width: 100%; }
 .ine-grow { flex: 1 1 16em; }
 .ine-form select, .ine-form input { font: inherit; padding: .3em .4em; max-width: 100%; }
@@ -215,7 +219,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var GLOSS = {{ site.data.glossario_beo | jsonify }};
   var FONTES = {{ site.data.fontes | jsonify }};
   FONTES.boletim.url = {{ site.data.beo_ultimo.url | jsonify }};
-  var st = { q: "", linhas: "rubrica", filtro: "", med: EUR, modo: "acum", graf: "tempo", busca: "", todos: false,
+  var st = { q: "", linhas: "rubrica", filtro: "", med: EUR, modo: "mensal", graf: "tempo", busca: "", todos: false,
     ord: null, dir: 1, vista: "ambos", sel: null };
   // Categorical colours in fixed order, the same as the INE page (validated
   // against this background). A series keeps its colour while selected.
@@ -498,7 +502,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       });
       if (t.prev) {
         var ch = change(p), c = td(isNaN(ch) ? "–" : pct.format(ch) + (t.euros ? "%" : ""), "num");
-        c.className += isNaN(ch) ? " falta" : ch > 0 ? " sobe" : ch < 0 ? " desce" : "";
+        var r1 = Math.round(ch * 10) / 10; // "0%" is neither up nor down
+        c.className += isNaN(ch) ? " falta" : r1 > 0 ? " sobe" : r1 < 0 ? " desce" : "";
       }
       frag.appendChild(r);
     });
@@ -509,7 +514,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     var what = t.euros ? "Milhões de euros, " + (st.modo === "mensal" ? "por mês" : "acumulado desde janeiro") : st.med + ", acumulada desde janeiro";
     $("sub").textContent = [what, DIM[st.q] ? (t.byDim ? Q[st.q].rub[st.filtro].rubrica : st.filtro) : "",
       t.all.length ? "de " + label(t.all[0]) + " a " + label(t.last) : "", "Boletim de Execução Orçamental"].filter(Boolean).join(" · ");
-    $("nota").textContent = t.prev ? "A variação compara " + longLabel(t.last) + " com " + longLabel(t.prev) +
+    $("nota").textContent = t.prev ? "A variação compara " + (st.modo === "mensal" && t.euros ? "o que entrou ou saiu em " : "o acumulado até ") +
+      longLabel(t.last) + " com " + (st.modo === "mensal" && t.euros ? "" : "o acumulado até ") + longLabel(t.prev) +
       (t.euros ? " (só quando os dois valores são positivos)." : ", em pontos percentuais.") : "";
     $("legenda").textContent = x.nome + (st.filtro ? ", " + st.filtro : "");
     fillTerms(rows.map(function (p) { return p.nome; }).concat([st.filtro, x.nome]), t.euros);
@@ -761,7 +767,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     st.q = QORDER.filter(function (q) { return slug(q) === qs; })[0] || QORDER[0];
     st.linhas = p.get("linhas") === "dimensao" ? "dimensao" : "rubrica";
     st.filtro = p.get("filtro") || ""; st.med = p.get("medida") || EUR;
-    st.modo = p.get("modo") === "mensal" ? "mensal" : "acum";
+    st.modo = p.get("modo") === "acum" ? "acum" : "mensal";
     st.graf = p.get("grafico") === "anos" ? "anos" : "tempo";
     st.busca = p.get("q") || ""; st.todos = p.get("todos") === "1";
     st.ord = p.get("ord") || null; st.dir = p.get("dir") === "desc" ? -1 : 1;
@@ -774,7 +780,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   function writeHash() {
     var p = new URLSearchParams();
     [["quadro", slug(st.q)], ["linhas", st.linhas === "dimensao" ? "dimensao" : ""], ["filtro", st.filtro],
-     ["medida", st.med === EUR ? "" : st.med], ["modo", st.modo === "mensal" ? "mensal" : ""], ["grafico", st.graf === "anos" ? "anos" : ""],
+     ["medida", st.med === EUR ? "" : st.med], ["modo", st.modo === "acum" ? "acum" : ""], ["grafico", st.graf === "anos" ? "anos" : ""],
      ["q", st.busca], ["todos", st.todos ? "1" : ""], ["ord", st.ord || ""], ["dir", st.ord ? (st.dir > 0 ? "asc" : "desc") : ""],
      ["vista", st.vista === "ambos" ? "" : st.vista], ["sel", (st.sel || []).join("|")]]
       .forEach(function (kv) { if (kv[1]) p.set(kv[0], kv[1]); });
