@@ -86,7 +86,9 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
 <section id="glossario-sec" hidden>
 <h2 id="glossario">Glossário</h2>
 <p class="ine-sub">As definições do INE para os conceitos usados nestes indicadores
-(por exemplo, o que é um “sujeito passivo” ou um “agregado fiscal”).</p>
+(por exemplo, o que é um “sujeito passivo” ou um “agregado fiscal”). O texto é
+copiado da metainformação de cada indicador no site do INE, sem alterações;
+em cada conceito, “Fonte: INE” liga à página de onde veio.</p>
 <input type="search" id="gq" class="g-busca" placeholder="Procurar um conceito" aria-label="Procurar um conceito" autocomplete="off">
 <dl id="glossario-lista" class="glossario"></dl>
 </section>
@@ -132,6 +134,7 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
 .ine-def dl, .glossario { margin: .5em 0 0; }
 .ine-def dt, .glossario dt { font-weight: bold; margin-top: .5em; }
 .ine-def dd, .glossario dd { margin: 0 0 .2em; }
+.ine-def p.fonte { font-size: .85em; color: #586e75; }
 .ine-def p { margin: .5em 0 0; }
 .glossario dd.usado { font-size: .85em; color: #586e75; }
 .g-busca { font: inherit; padding: .3em .4em; width: min(24em, 100%); margin: .3em 0; }
@@ -252,7 +255,12 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   function fillDefinition(varcd) {
     var d = DEF[varcd], box = $("def"), body = $("def-corpo");
     if (!d) { box.hidden = true; return; }
-    var parts = [];
+    var parts = [], src = hel("p", "", "fonte"), sl = hel("a", "metainformação do indicador " + varcd);
+    sl.href = d.metainfo || x_url(varcd);
+    src.appendChild(document.createTextNode("Texto do INE, copiado da "));
+    src.appendChild(sl);
+    src.appendChild(document.createTextNode(" no site do INE (atualizado todas as semanas)."));
+    parts.push(src);
     if (d.formula) {
       var p = hel("p"); p.appendChild(hel("strong", "Fórmula: ")); p.appendChild(document.createTextNode(d.formula)); parts.push(p);
     }
@@ -266,12 +274,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       if (!f[1]) return;
       var p = hel("p"); p.appendChild(hel("strong", f[0])); p.appendChild(document.createTextNode(f[1])); parts.push(p);
     });
-    var p = hel("p"), lk = hel("a", "Metainformação completa no site do INE");
-    lk.href = d.metainfo || x_url(varcd);
-    p.appendChild(lk);
-    if (d.periodicidade) p.appendChild(document.createTextNode(" · série " + d.periodicidade.toLowerCase() +
-      (d.primeiro ? ", desde " + d.primeiro : "")));
-    parts.push(p);
+    if (d.periodicidade) parts.push(hel("p", "Série " + d.periodicidade.toLowerCase() +
+      (d.primeiro ? ", desde " + d.primeiro : "") + ".", "fonte"));
     body.replaceChildren.apply(body, parts);
     var names = cs.map(function (c) { return c[0].toLowerCase(); });
     $("def-resumo").textContent = names.length
@@ -295,7 +299,10 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     if (!keys.length) return;
     var dl = $("glossario-lista"), frag = document.createDocumentFragment();
     keys.forEach(function (k) {
-      var t = terms[k], dt = hel("dt", t.nome), dd = hel("dd", t.def), used = hel("dd", "Usado em: ", "usado");
+      var t = terms[k], dt = hel("dt", t.nome), dd = hel("dd", t.def), used = hel("dd", "Usado em: ", "usado"),
+        src = hel("a", "INE"), first = DEF[t.ind[0]] || {};
+      src.href = first.metainfo || x_url(t.ind[0]);
+      src.title = "Metainformação do indicador " + t.ind[0] + " no site do INE";
       dt.setAttribute("data-k", k + " " + fold(t.def));
       t.ind.forEach(function (v, i) {
         if (i) used.appendChild(document.createTextNode("; "));
@@ -303,6 +310,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
         a.addEventListener("click", function () { window.scrollTo(0, 0); });
         used.appendChild(a);
       });
+      used.appendChild(document.createTextNode(" · Fonte: "));
+      used.appendChild(src);
       frag.appendChild(dt); frag.appendChild(dd); frag.appendChild(used);
     });
     dl.replaceChildren(frag);

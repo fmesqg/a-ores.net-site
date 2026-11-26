@@ -87,14 +87,20 @@ e os [outros dados abertos](/dados/).
 
 <h2 id="glossario">Glossário</h2>
 
-<p class="ine-sub">Os termos do boletim em linguagem corrente. As definições
-oficiais estão na Lei de Enquadramento Orçamental e no classificador económico
-das receitas e despesas públicas (Decreto-Lei n.º 26/2002).</p>
+<p class="ine-sub">Os termos do boletim em linguagem corrente. <strong>Estas
+explicações são do açores.net, não são texto oficial.</strong> Em cada termo
+está a ligação para onde está a definição oficial: a lei ou o próprio boletim.
+Se encontrar um erro, diga-nos no
+<a href="https://github.com/fmesqg/a-ores.net-site/issues">GitHub</a>.</p>
 
 <dl class="glossario">
 {%- for g in site.data.glossario_beo %}
   <dt id="g-{{ g.termo | slugify }}">{{ g.termo }}</dt>
   <dd>{{ g.def }}</dd>
+  <dd class="fonte">Definição oficial:
+  {%- for k in g.fontes %}{% assign f = site.data.fontes[k] %}{% if f.url == "beo_ultimo" %}{% assign u = site.data.beo_ultimo.url %}{% else %}{% assign u = f.url %}{% endif %}
+    <a href="{{ u }}">{{ f.nome }}</a>{% unless forloop.last %};{% endunless %}
+  {%- endfor %}</dd>
 {%- endfor %}
 </dl>
 
@@ -132,6 +138,7 @@ das receitas e despesas públicas (Decreto-Lei n.º 26/2002).</p>
 .ine-def dl, .glossario { margin: .5em 0 0; max-width: 52em; }
 .ine-def dt, .glossario dt { font-weight: bold; margin-top: .5em; }
 .ine-def dd, .glossario dd { margin: 0 0 .2em; }
+.glossario dd.fonte, .ine-def dd.fonte { font-size: .85em; color: #586e75; margin-bottom: .5em; }
 .ine-sub { color: #586e75; font-size: .9em; }
 .ine-scroll { overflow-x: auto; }
 #tabela { font-size: .9em; border-collapse: collapse; width: auto; min-width: 100%; }
@@ -199,6 +206,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var Q = {}, QORDER = [];
   // docs/_data/glossario_beo.yml: plain-language terms, matched to rubricas.
   var GLOSS = {{ site.data.glossario_beo | jsonify }};
+  var FONTES = {{ site.data.fontes | jsonify }};
+  FONTES.boletim.url = {{ site.data.beo_ultimo.url | jsonify }};
   var st = { q: "", linhas: "rubrica", filtro: "", med: EUR, modo: "acum", graf: "tempo", busca: "", todos: false,
     ord: null, dir: 1, vista: "ambos", sel: null };
   // Categorical colours in fixed order, the same as the INE page (validated
@@ -271,6 +280,21 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     return sel.value;
   }
 
+  // "Definição oficial: <law>; <law>" for a glossary entry.
+  function sources(keys) {
+    var dd = document.createElement("dd");
+    dd.className = "fonte";
+    dd.appendChild(document.createTextNode("Definição oficial: "));
+    (keys || []).forEach(function (k, i) {
+      var f = FONTES[k], a = document.createElement("a");
+      if (!f) return;
+      if (i) dd.appendChild(document.createTextNode("; "));
+      a.href = f.url; a.textContent = f.nome;
+      dd.appendChild(a);
+    });
+    return dd;
+  }
+
   // The glossary entries that explain something in the table on screen.
   function fillTerms(names, euros) {
     var seen = {};
@@ -284,7 +308,12 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       var dt = document.createElement("dt"), dd = document.createElement("dd");
       dt.textContent = g.termo; dd.textContent = g.def;
       frag.appendChild(dt); frag.appendChild(dd);
+      frag.appendChild(sources(g.fontes));
     });
+    var note = document.createElement("dd");
+    note.className = "fonte";
+    note.innerHTML = 'Explicações do açores.net, não são texto oficial. <a href="#glossario">Glossário completo</a>.';
+    if (hits.length) frag.appendChild(note);
     dl.replaceChildren(frag);
     $("def-resumo").textContent = hits.length ? "— " + hits.map(function (g) { return g.termo.toLowerCase(); }).slice(0, 4).join(", ") + (hits.length > 4 ? "…" : "") : "";
     $("def").hidden = !hits.length;
