@@ -54,8 +54,5 @@ For AO scraper setup: `cp .ao_config.example .ao_config` and fill in credentials
 
 ## How it works
 
-GitHub Actions runs the bot daily at 00:00 UTC. It fetches new data, computes deltas against `bot/state.jsonl`, writes Jekyll markdown + JSON, summarizes the day via Claude and posts to a Telegram channel, then commits any changes.
+GitHub Actions runs the bot daily at 00:00 UTC. It fetches new data, computes deltas against `bot/state.jsonl`, writes Jekyll markdown + JSON, then commits any changes.
 
-### Telegram daily summary
-
-After writing markdown, the bot calls Claude to produce a concise Portuguese summary of the day's government activity and posts it to Telegram. Requires three GitHub secrets: `ANTHROPIC_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`. Skips gracefully if unset.

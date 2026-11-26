@@ -42,15 +42,14 @@ cd docs && bundle exec jekyll serve
 Entry point: `bot/__main__.py`
 
 ```
-fetch_web_data() → compute_delta_ids() → write_update() → write_daily_json() → summarize_and_post() → append_state()
+fetch_web_data() → compute_delta_ids() → write_update() → write_daily_json() → append_state()
 ```
 
 1. **Fetch** (`fetch.py`) — Scrapes/calls APIs for all four data sources
 2. **Delta** (`state.py`, `utils.py`) — Compares fetched IDs against `state.jsonl` to find new/changed items
 3. **Export** (`export.py`, `record.py`) — Converts records to Jekyll markdown with frontmatter
 4. **JSON feed** (`daily_json.py`) — Writes structured JSON to `docs/_data/daily/YYYY-MM-DD.json`
-5. **Summarize** (`summarize.py`) — Reads the day's markdown files, calls Claude to produce a concise Portuguese summary, posts to Telegram. Skips gracefully if API keys are unset.
-6. **State** (`utils.py`) — Appends current run's state to `state.jsonl` (auto-rotated at 60 lines)
+5. **State** (`utils.py`) — Appends current run's state to `state.jsonl` (auto-rotated at 60 lines)
 
 ### Data Sources
 
@@ -103,16 +102,10 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 - `scrapers/migrate_ao_feed.py` is the one-off script that rebuilt 30 days of pages from the old 14 MB per-article feed. It no-ops if the feed is already migrated.
 - `scrapers/repair_ao_pages.py` re-derives backfilled editions: it re-reads the section index pages to recover page numbers and any section missing from disk, then regenerates. `--no-fetch` regenerates from disk alone (use after changing ordering or filter rules); `--dry-run` reports without writing.
 
-**`bot/tgbot.py`** — Interactive Telegram bot (not part of the daily pipeline):
-- Handles on-demand slash commands: `/ao` (reads the latest `docs/_ao/` day page), `/al`, `/jo`, `/base`.
-- Runs as a separate long-lived process, not invoked by `bot/__main__.py`.
-
 ## Key Details
 
 - **State file:** `bot/state.jsonl` is an append-only ledger (~12 MB, committed). Each line is one bot run's full state. Delta computation depends on the last entry.
-- **CI/CD:** `.github/workflows/run-bot.yml` runs daily at 00:00 UTC, commits as `fmesqg-auto` if changes exist. Passes `ANTHROPIC_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` as env vars for the summary step.
-- **Telegram summary:** `summarize.py` sends one daily message to a Telegram channel. Currently covers the 4 government sources only (not news scrapers). Model configurable via `ANTHROPIC_MODEL` env var (default: `claude-haiku-4-5-20251001`).
+- **CI/CD:** `.github/workflows/run-bot.yml` runs daily at 00:00 UTC, commits as `fmesqg-auto` if changes exist.
 - **Code style:** black (line-length 79), isort (black profile), Python >=3.11. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.
 - **Tests:** `pytest bot/tests/` runs offline by default. Network-dependent tests are marked `@pytest.mark.network` and skipped unless opted in with `-m network`.
 - **Content language:** Portuguese (Azores region).
-- **RSS feeds:** Existing RSS/Jekyll output must not be affected by summary changes. The Telegram summary is a separate output channel.

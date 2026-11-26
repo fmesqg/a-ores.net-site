@@ -45,11 +45,6 @@ jobs:
           poetry install
       - name: Run bot
         run: poetry run python -m bot
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL || 'claude-haiku-4-5-20251001' }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       - name: Run AO scraper
         run: |
           printf '[credentials]\nemail = %s\npassword = %s\n' \
