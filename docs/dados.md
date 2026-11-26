@@ -72,39 +72,52 @@ orçamental): ver [Execução orçamental](/dados/beo/).
 
 <details class="termos">
 <summary><strong>O que quer dizer…</strong> adjudicante, ajuste direto, requerimento e outros termos</summary>
+<p class="fonte">Explicações do açores.net em linguagem corrente, não são texto
+oficial. Em cada termo está a ligação para a lei ou a fonte com a definição oficial.</p>
 <dl class="glossario">
   <dt>Adjudicante</dt>
   <dd>A entidade pública que contrata e paga (uma secretaria regional, uma câmara, um hospital).</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
   <dt>Adjudicatário</dt>
   <dd>A empresa ou pessoa contratada.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
   <dt>Preço contratual</dt>
   <dd>O valor do contrato, sem IVA, tal como publicado no BASE. O valor
   efetivamente pago pode ser diferente (por exemplo, com trabalhos a mais).</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a>; <a href="{{ site.data.fontes.base.url }}">{{ site.data.fontes.base.nome }}</a></dd>
   <dt>Ajuste direto</dt>
   <dd>A entidade convida uma única empresa, sem concorrência. Só é permitido
   abaixo de certos valores ou em casos previstos no Código dos Contratos
   Públicos (urgência, um só fornecedor possível…).</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
   <dt>Consulta prévia</dt>
   <dd>A entidade convida pelo menos três empresas à sua escolha.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
   <dt>Concurso público</dt>
   <dd>Aberto a qualquer empresa, anunciado em Diário da República.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
   <dt>Acordo-quadro</dt>
   <dd>Um contrato que fixa condições (preços, fornecedores) para compras
   futuras; as compras feitas ao abrigo dele aparecem como contratos próprios.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
   <dt>Requerimento</dt>
   <dd>Uma pergunta escrita de um ou mais deputados ao Governo Regional. O
   Governo tem um prazo para responder; o estado mostra se está “no prazo”,
   “fora de prazo” ou respondido.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a>; <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
   <dt>Proposta e projeto (de decreto legislativo regional, de resolução)</dt>
   <dd>Iniciativas legislativas: a proposta vem do Governo, o projeto vem dos
   deputados. Um decreto legislativo regional é uma lei regional; uma
   resolução é uma recomendação ou decisão da Assembleia.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a>; <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
   <dt>Voto</dt>
   <dd>Uma moção de pesar, congratulação, saudação ou protesto, votada em plenário.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
   <dt>Portaria, despacho e resolução do Conselho de Governo</dt>
   <dd>Atos do Governo Regional publicados no Jornal Oficial. A resolução é
   decidida em Conselho de Governo; a portaria e o despacho são de um ou mais
   membros do Governo.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a></dd>
 </dl>
 </details>
 
@@ -189,6 +202,7 @@ de cada resultado pode ser partilhado.
 .glossario { max-width: 52em; }
 .glossario dt { font-weight: bold; margin-top: .5em; }
 .glossario dd { margin: 0 0 .2em; }
+.glossario dd.fonte, .termos p.fonte { font-size: .85em; color: #586e75; margin-bottom: .5em; }
 .termos { margin: .5em 0 1.5em; max-width: 52em; }
 .termos summary { cursor: pointer; }
 #tabela td { vertical-align: top; }

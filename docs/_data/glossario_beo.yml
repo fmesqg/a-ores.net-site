@@ -2,7 +2,7 @@
 # Shown at the bottom of /dados/beo/ and, for the terms of the table on
 # screen, under its title. "aplica" lists the rubricas (or subsetores) the
 # term explains, as they appear in data/beo.csv; matching ignores case and
-# accents.
+# accents. "fontes" are keys of fontes.yml: where the official definition is.
 
 - termo: GRA, SFA, EPR e consolidado
   def: >-
@@ -14,6 +14,7 @@
     consolidado junta os três e tira as transferências entre eles, por isso
     não é a soma das partes.
   aplica: [Consolidado, Governo Regional (GRA), Serviços e fundos autónomos (SFA), Entidades públicas reclassificadas (EPR), Subsetores das AP]
+  fontes: [leo, boletim]
 
 - termo: Receita corrente
   def: >-
@@ -21,6 +22,7 @@
     contribuições, taxas, rendimentos de propriedade, transferências
     correntes e vendas de bens e serviços correntes.
   aplica: [Receita corrente, Correntes, Outras receitas correntes]
+  fontes: [classificador]
 
 - termo: Receita de capital
   def: >-
@@ -28,6 +30,7 @@
     edifícios e terrenos, transferências para investimento (fundos europeus
     para obras, por exemplo) e outras.
   aplica: [Receita de capital, Capital, Outras receitas de capital, Venda de bens de investimento]
+  fontes: [classificador]
 
 - termo: Receita efetiva e despesa efetiva
   def: >-
@@ -35,6 +38,7 @@
     empréstimos que a Região contrai ou concede e sem as amortizações de
     dívida. É a base do saldo global.
   aplica: [Receita efetiva, Despesa efetiva]
+  fontes: [classificador, leo]
 
 - termo: Receita fiscal
   def: >-
@@ -44,6 +48,7 @@
     cobrados nos Açores pertence à Região, segundo a Lei das Finanças das
     Regiões Autónomas.
   aplica: [Receita fiscal, Impostos diretos, Impostos indiretos]
+  fontes: [classificador, lfra]
 
 - termo: Receita não fiscal
   def: >-
@@ -51,6 +56,7 @@
     União Europeia, taxas e multas, vendas de bens e serviços, rendimentos
     de propriedade, reposições e outras receitas.
   aplica: [Receita não fiscal, Outras receitas]
+  fontes: [classificador, lfra]
 
 - termo: Transferências
   def: >-
@@ -59,29 +65,34 @@
     câmaras, empresas, instituições e famílias. As correntes pagam
     funcionamento; as de capital, investimento.
   aplica: [Transferências, Transferências correntes, Transferências de capital, Outras transferências, Administração central - Estado, Resto do mundo, Outros setores das AP, Segurança social]
+  fontes: [classificador]
 
 - termo: Rendimentos de propriedade
   def: >-
     Juros de depósitos, dividendos de empresas participadas e rendas de
     terrenos e edifícios da Região.
   aplica: [Rendimentos de propriedade]
+  fontes: [classificador]
 
 - termo: Reposições não abatidas nos pagamentos
   def: >-
     Dinheiro pago a mais em anos anteriores e devolvido à Região.
   aplica: [Reposições não abatidas nos pagamentos]
+  fontes: [classificador]
 
 - termo: Despesa corrente
   def: >-
     Despesa de funcionamento, que se repete todos os anos: pessoal, bens e
     serviços, juros, subsídios e transferências correntes.
   aplica: [Despesa corrente, Outras despesas correntes]
+  fontes: [classificador]
 
 - termo: Despesa de capital
   def: >-
     Investimento: obras, edifícios, equipamento (aquisição de bens de
     capital) e transferências para investimento de outras entidades.
   aplica: [Despesa de capital, Despesas de capital, Outras despesas de capital, Aquisição de bens de capital]
+  fontes: [classificador]
 
 - termo: Despesas com pessoal
   def: >-
@@ -90,30 +101,35 @@
     variáveis ou eventuais (horas extraordinárias, ajudas de custo) e as
     contribuições da entidade patronal para a segurança social.
   aplica: [Despesas com pessoal, Remunerações certas e permanentes, Abonos variáveis ou eventuais, Contribuições para a segurança social]
+  fontes: [classificador]
 
 - termo: Aquisição de bens e serviços correntes
   def: >-
     Compras para o dia a dia dos serviços: material, combustíveis e
     energia, comunicações, rendas, limpeza, consultoria, medicamentos.
   aplica: [Aquisição de bens e serviços correntes, Combustíveis e energia, Comunicações]
+  fontes: [classificador]
 
 - termo: Juros e outros encargos
   def: >-
     O custo da dívida da Região: juros e comissões dos empréstimos. A
     amortização (devolver o capital emprestado) não entra aqui.
   aplica: [Juros e outros encargos, Operações relacionadas com a dívida pública]
+  fontes: [classificador]
 
 - termo: Subsídios
   def: >-
     Pagamentos a empresas, públicas ou privadas, para baixar preços ou
     manter um serviço (transportes, por exemplo).
   aplica: [Subsídios]
+  fontes: [classificador]
 
 - termo: Despesa primária
   def: >-
     Despesa efetiva sem os juros da dívida. Mostra o que a Região gasta com
     as suas políticas, deixando de fora o custo das dívidas passadas.
   aplica: [Despesa primária, Despesa corrente primária]
+  fontes: [classificador, boletim]
 
 - termo: Saldo global
   def: >-
@@ -121,11 +137,13 @@
     paga com dívida nova. Como os valores são acumulados desde janeiro, o
     saldo de um mês a meio do ano não diz como acaba o ano.
   aplica: [Saldo global]
+  fontes: [leo, boletim]
 
 - termo: Saldo primário
   def: >-
     O saldo global sem os juros: receita efetiva menos despesa primária.
   aplica: [Saldo primário]
+  fontes: [boletim]
 
 - termo: Saldo corrente e saldo de capital
   def: >-
@@ -133,6 +151,7 @@
     despesa de capital. Um saldo corrente positivo quer dizer que as
     receitas do dia a dia pagam o funcionamento e sobra para investir.
   aplica: [Saldo corrente, Saldo de capital]
+  fontes: [classificador, boletim]
 
 - termo: Classificação por função
   def: >-
@@ -141,6 +160,7 @@
     classificação internacional das funções das administrações públicas.
     “n.e.” quer dizer “não especificado”: o que não cabe nas subfunções.
   aplica: [Saúde n.e., Educação n.e., Proteção social n.e., Exclusão social n.e., Assuntos económicos n.e.]
+  fontes: [cofog]
 
 - termo: Execução do orçamento
   def: >-
@@ -148,4 +168,5 @@
     (receita) ou paga (despesa). A meio do ano, uma execução baixa pode
     querer dizer atraso nos pagamentos ou orçamento inflacionado.
   aplica: []
+  fontes: [leo, boletim]
   medida: true
