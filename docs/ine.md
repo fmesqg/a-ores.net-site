@@ -80,8 +80,9 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
   </div>
   <p id="dist-ajuda" class="ine-sub" hidden>Cada coluna é um limite: 20% dos sujeitos
     passivos têm um rendimento (depois do IRS) abaixo do valor da coluna “20%”, 40% abaixo do da coluna
-    “40%”, e assim por diante; a mediana divide-os ao meio. A barra vai do limite dos 20% ao dos 80%, com a
-    parte cheia entre os 40% e os 60% e um traço na mediana. “80/20” diz quantas vezes o limite dos 80% é
+    “40%”, e assim por diante; a mediana divide-os ao meio. A barra (na tabela e no gráfico) vai do limite dos 20%
+    ao dos 80%, com a parte cheia entre os 40% e os 60% e um traço na mediana. As caixas na tabela escolhem os
+    locais do gráfico. “80/20” diz quantas vezes o limite dos 80% é
     maior que o dos 20%: quanto maior, mais desigual. Escolha uma categoria para ver a evolução de um quintil.</p>
   <p id="nota" class="ine-sub"></p>
   <p><a id="exportar" href="#" download>Descarregar esta tabela (CSV)</a> ·
@@ -90,15 +91,15 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
 
 <noscript><p>Esta página precisa de JavaScript. O ficheiro <a href="/dados/ine.csv">ine.csv</a> tem os mesmos dados.</p></noscript>
 
-<section id="glossario-sec" hidden>
-<h2 id="glossario">Glossário</h2>
+<details id="glossario-sec" class="glossario-todo" hidden>
+<summary id="glossario"><strong>Glossário</strong>: todos os conceitos do INE usados nesta página (<span id="g-n"></span>)</summary>
 <p class="ine-sub">As definições do INE para os conceitos usados nestes indicadores
 (por exemplo, o que é um “sujeito passivo” ou um “agregado fiscal”). O texto é
 copiado da metainformação de cada indicador no site do INE, sem alterações;
 em cada conceito, “Fonte: INE” liga à página de onde veio.</p>
 <input type="search" id="gq" class="g-busca" placeholder="Procurar um conceito" aria-label="Procurar um conceito" autocomplete="off">
 <dl id="glossario-lista" class="glossario"></dl>
-</section>
+</details>
 
 ## Notas
 
@@ -141,6 +142,8 @@ em cada conceito, “Fonte: INE” liga à página de onde veio.</p>
 .ine-def dl, .glossario { margin: .5em 0 0; }
 .ine-def dt, .glossario dt { font-weight: bold; margin-top: .5em; }
 .ine-def dd, .glossario dd { margin: 0 0 .2em; }
+.glossario-todo { margin: 1.5em 0; max-width: 52em; }
+.glossario-todo > summary { cursor: pointer; font-size: 1.1em; }
 .ine-def p.fonte { font-size: .85em; color: #586e75; }
 .ine-def p { margin: .5em 0 0; }
 .glossario dd.usado { font-size: .85em; color: #586e75; }
@@ -201,8 +204,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 .strip { display: block; }
 .strip .s-banda { stroke: #268bd2; stroke-opacity: .45; stroke-width: 2; stroke-linecap: round; }
 .strip .s-meio { fill: #268bd2; }
-.strip .s-med { stroke: #073642; stroke-width: 2; }
-@media (prefers-color-scheme: dark) { .strip .s-med { stroke: #eee8d5; } #g-svg .rotulo { fill: #eee8d5; } }
+.strip .s-med, #g-svg .d-med { stroke: #073642; stroke-width: 2; }
+@media (prefers-color-scheme: dark) { .strip .s-med, #g-svg .d-med { stroke: #eee8d5; } #g-svg .rotulo { fill: #eee8d5; } #g-svg .grade { stroke: rgba(147,161,161,.22); } }
 [hidden] { display: none !important; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 </style>
@@ -296,8 +299,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       if (!f[1]) return;
       var p = hel("p"); p.appendChild(hel("strong", f[0])); p.appendChild(document.createTextNode(f[1])); parts.push(p);
     });
-    if (d.periodicidade) parts.push(hel("p", "Série " + d.periodicidade.toLowerCase() +
-      (d.primeiro ? ", desde " + d.primeiro : "") + ".", "fonte"));
+    var fim = hel("p", d.periodicidade ? "Série " + d.periodicidade.toLowerCase() + (d.primeiro ? ", desde " + d.primeiro : "") + ". " : "", "fonte");
+    var gl = hel("a", "Todos os conceitos no glossário"); gl.href = "#glossario"; gl.className = "abre-gloss";
+    fim.appendChild(gl); parts.push(fim);
     body.replaceChildren.apply(body, parts);
     var names = cs.map(function (c) { return c[0].toLowerCase(); });
     $("def-resumo").textContent = names.length
@@ -338,6 +342,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     });
     dl.replaceChildren(frag);
     $("glossario-sec").hidden = false;
+    $("g-n").textContent = keys.length;
     $("gq").addEventListener("input", function () {
       var q = fold(this.value).split(/\s+/).filter(Boolean);
       dl.querySelectorAll("dt").forEach(function (dt) {
@@ -579,7 +584,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       r.className = isRef ? "ref" : p.conc ? "conc" : grouped ? "sub" : "";
       var td = function (text, cls) { var c = document.createElement("td"); c.textContent = text; if (cls) c.className = cls; r.appendChild(c); return c; };
       var lc = td("", "lugar"), lab = document.createElement("label");
-      if (!dist) {
+      {
         var cb = document.createElement("input");
         cb.type = "checkbox"; cb.checked = st.sel.indexOf(p.geo) >= 0;
         cb.disabled = !cb.checked && st.sel.length >= MAXSEL;
@@ -660,10 +665,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   }
 
   function applyVista() {
-    var dist = table && table.dist;
-    $("grafico").hidden = dist || st.vista === "tabela";
-    $("tabela-wrap").hidden = !dist && st.vista === "grafico";
-    document.querySelector(".ine-vista").hidden = dist;
+    $("grafico").hidden = st.vista === "tabela";
+    $("tabela-wrap").hidden = st.vista === "grafico";
     document.querySelectorAll(".ine-vista button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.getAttribute("data-vista") === st.vista ? "true" : "false");
     });
@@ -697,10 +700,82 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 
   var chart = null; // { xs, keys, series, x(), y() } for the hover layer
 
+  // Quintiles: one row per chosen place, on one euro axis. Thin band from
+  // the 20% to the 80% limit, solid from 40% to 60%, a tick at the median.
+  // Colour follows the place, as in the table and the other charts.
+  function drawDist(all) {
+    var t = table, x = IND[st.ind];
+    var series = st.sel.filter(function (g) { return all[g]; }).map(function (g) { return { geo: g, p: all[g], c: colorOf(g) }; });
+    fillJuntar(all);
+    drawLegend(series);
+    var svg = $("g-svg"); svg.replaceChildren();
+    var W = $("g-area").clientWidth || 600, narrow = W < 560, RH = 34;
+    var Q = ["1º quintil", "2º quintil", "3º quintil", "4º quintil"];
+    var vals = [];
+    series.forEach(function (s) { Q.concat(["med"]).forEach(function (k) { if (ok(s.p.v[k])) vals.push(s.p.v[k]); }); });
+    var m = { l: 8, r: 16, t: 6, b: 26 }, H = m.t + Math.max(1, series.length) * RH + m.b;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H); svg.setAttribute("height", H);
+    svg.setAttribute("aria-label", x.nome + ", " + t.ano + ": " + series.map(function (s) { return s.p.local; }).join(", "));
+    $("g-nota").hidden = false;
+    $("g-nota").textContent = t.ano + ". Barra fina: dos 20% aos 80%. Parte cheia: dos 40% aos 60%. Traço: mediana.";
+    if (!vals.length) {
+      var tx = el("text", { x: W / 2, y: H / 2, "text-anchor": "middle" }, svg);
+      tx.textContent = series.length ? "Sem valores para os locais escolhidos." : "Escolha pelo menos um local na tabela ou na lista.";
+      chart = null; return;
+    }
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals), pad = (hi - lo) * 0.05 || hi * 0.05;
+    var ticks = niceTicks(lo - pad, hi + pad, narrow ? 4 : 6); lo = ticks[0]; hi = ticks[ticks.length - 1];
+    // left margin from the longest place name (capped)
+    var probe = el("text", { "class": "rotulo" }, svg), wmax = 0, cap = narrow ? 120 : 220;
+    series.forEach(function (s) { probe.textContent = s.p.local; wmax = Math.max(wmax, probe.getComputedTextLength()); });
+    svg.removeChild(probe); m.l = Math.min(cap, Math.ceil(wmax)) + 22;
+    var iw = W - m.l - m.r;
+    var X = function (v) { return m.l + (v - lo) / (hi - lo) * iw; };
+    ticks.forEach(function (v) {
+      el("line", { x1: X(v), x2: X(v), y1: m.t, y2: H - m.b, "class": "grade" }, svg);
+      var tx = el("text", { x: X(v), y: H - 6, "text-anchor": "middle" }, svg); tx.textContent = fmt.format(v);
+    });
+    var tip = $("g-tip");
+    series.forEach(function (s, i) {
+      var q = s.p.v, y = m.t + i * RH + RH / 2, g = el("g", {}, svg);
+      el("circle", { cx: 8, cy: y, r: 5, fill: s.c }, g);
+      var name = el("text", { x: 18, y: y + 4, "class": "rotulo" }, g), nm = s.p.local;
+      name.textContent = nm;
+      while (name.getComputedTextLength() > m.l - 24 && nm.length > 4) { nm = nm.slice(0, -2); name.textContent = nm + "…"; }
+      if (ok(q[Q[0]]) && ok(q[Q[3]])) el("line", { x1: X(q[Q[0]]), x2: X(q[Q[3]]), y1: y, y2: y, stroke: s.c, "stroke-opacity": .5, "stroke-width": 3, "stroke-linecap": "round" }, g);
+      if (ok(q[Q[1]]) && ok(q[Q[2]])) el("rect", { x: X(q[Q[1]]), y: y - 7, width: Math.max(2, X(q[Q[2]]) - X(q[Q[1]])), height: 14, rx: 3, fill: s.c }, g);
+      if (ok(q.med)) el("line", { x1: X(q.med), x2: X(q.med), y1: y - 10, y2: y + 10, "class": "d-med" }, g);
+      var hit = el("rect", { x: 0, y: y - RH / 2, width: W, height: RH, fill: "transparent" }, g);
+      var showTip = function () {
+        tip.replaceChildren();
+        var hd = document.createElement("div"); hd.className = "p"; hd.textContent = s.p.local + ", " + t.ano; tip.appendChild(hd);
+        [["20%", Q[0]], ["40%", Q[1]], ["Mediana", "med"], ["60%", Q[2]], ["80%", Q[3]]].forEach(function (c) {
+          if (!ok(q[c[1]])) return;
+          var row = document.createElement("div"); row.className = "l";
+          var b = document.createElement("b"); b.textContent = fmt.format(q[c[1]]) + " €";
+          var n = document.createElement("span"); n.textContent = c[0];
+          row.appendChild(b); row.appendChild(n); tip.appendChild(row);
+        });
+        tip.hidden = false;
+        var area = $("g-area"), sx = area.clientWidth / W, left = X(ok(q[Q[3]]) ? q[Q[3]] : hi) * sx + 12;
+        if (left + tip.offsetWidth > area.clientWidth) left = Math.max(0, X(ok(q[Q[0]]) ? q[Q[0]] : lo) * sx - tip.offsetWidth - 12);
+        tip.style.left = left + "px"; tip.style.top = Math.max(0, (y - RH / 2) * sx) + "px";
+      };
+      hit.addEventListener("pointermove", showTip);
+      hit.addEventListener("pointerdown", showTip);
+      hit.addEventListener("pointerleave", function () { tip.hidden = true; });
+    });
+    chart = null;
+  }
+
   function drawChart() {
-    if (st.vista === "tabela" || !table || table.dist) return;
+    if (st.vista === "tabela" || !table) return;
     var t = table, x = IND[st.ind];
     var all = {}; t.refs.concat(t.conc, t.rows).forEach(function (p) { all[p.geo] = p; });
+    document.querySelector(".g-escala").hidden = t.dist;
+    var aj = $("g-ajuda"); if (!aj.dataset.txt) aj.dataset.txt = aj.textContent;
+    aj.textContent = t.dist ? "Escolha os locais com as caixas na tabela ou com a lista acima (até 8). Passe o rato ou toque numa linha para ver os valores." : aj.dataset.txt;
+    if (t.dist) { drawDist(all); return; }
     var series = st.sel.filter(function (g) { return all[g]; }).map(function (g) { return { geo: g, p: all[g], c: colorOf(g) }; });
     fillJuntar(all);
     drawLegend(series);
@@ -924,6 +999,14 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     b.addEventListener("click", function () { st.escala = b.getAttribute("data-escala"); drawChart(); writeHash(); });
   });
   $("g-juntar").addEventListener("change", function () { var g = $("g-juntar").value; if (g) toggleSel(g); });
+  // The hash holds the page state: open the glossary without touching it.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href="#glossario"]');
+    if (!a) return;
+    e.preventDefault();
+    $("glossario-sec").open = true;
+    $("glossario-sec").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
   $("g-svg").addEventListener("keydown", function (e) {
     if (!chart) return;
     if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
