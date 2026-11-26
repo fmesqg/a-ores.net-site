@@ -15,6 +15,9 @@ and writes, under docs/dados/:
   ine.csv    INE indicators for the Azores by region, concelho and
              freguesia: a copy of data/ine.csv, which bot/ine.py fetches
              weekly (it needs the network, so it is not rebuilt here)
+  beo.csv    the regional government's monthly budget execution (Boletim
+             de Execução Orçamental): a copy of data/beo.csv, which
+             bot/beo.py parses from the PDFs weekly
   meta.json  row counts, date coverage, build time
 
 The CSVs are UTF-8 with BOM, so Excel opens accents correctly. The search
@@ -252,19 +255,55 @@ DB_TYPES = {
     "preco": "REAL",
     "montante": "REAL",
     "valor": "REAL",
+    "ordem": "INTEGER",
+    "ano": "INTEGER",
+    "mes": "INTEGER",
 }
 DB_INDEX = {
     "base": ["publicado", "data_assinatura", "adjudicante", "adjudicatario"],
     "alra": ["tipo", "data", "primeiro_dia", "autores"],
     "joraa": ["publicado", "entidade"],
     "ine": ["varcd", "data", "nivel", "local", "concelho"],
+    "beo": ["quadro", "data", "caminho", "dimensao"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
     "alra": ["titulo", "autores", "estado", "tipo"],
     "joraa": ["titulo", "ato", "entidade"],
     "ine": ["indicador", "tema", "local", "concelho", "ilha", "categoria"],
+    "beo": ["quadro", "rubrica", "caminho", "dimensao"],
 }
+
+
+def beo_latest(cols: list[str], rows: list[list]) -> dict:
+    """The latest boletim: its month and PDF, for the home page."""
+    i, d, b = cols.index("quadro"), cols.index("data"), cols.index("boletim")
+    own = [r for r in rows if r[i] == "Síntese global"]
+    if not own:
+        return {}
+    last = max(own, key=lambda r: r[d])
+    year, month = int(last[d][:4]), int(last[d][5:7])
+    return {
+        "data": last[d],
+        "periodo": f"{MESES[month - 1]} de {year}",
+        "url": last[b],
+    }
+
+
+MESES = [
+    "janeiro",
+    "fevereiro",
+    "março",
+    "abril",
+    "maio",
+    "junho",
+    "julho",
+    "agosto",
+    "setembro",
+    "outubro",
+    "novembro",
+    "dezembro",
+]
 
 
 def write_db(path: Path, tables: dict[str, tuple[list, list]]) -> None:
@@ -354,20 +393,30 @@ def main(docs: Path) -> dict:
             (all_days[0], all_days[-1]) if all_days else ("", "")
         )
         meta[name] = info
-    ine = docs.parent / "data" / "ine.csv"
-    if ine.exists():
-        with open(ine, encoding="utf-8-sig", newline="") as f:
+    for name in ("ine", "beo"):  # fetched weekly into data/ by their bots
+        src = docs.parent / "data" / f"{name}.csv"
+        if not src.exists():
+            continue
+        with open(src, encoding="utf-8-sig", newline="") as f:
             reader = csv.reader(f)
             cols, rows = next(reader), list(reader)
-        tables["ine"] = (cols, rows)
-        info = write(out, "ine", cols, rows)
+        tables[name] = (cols, rows)
+        info = write(out, name, cols, rows)
         dates = sorted(
             r[cols.index("data")] for r in rows if r[cols.index("data")]
         )
         info["de"], info["ate"] = (dates[0], dates[-1]) if dates else ("", "")
-        info["indicadores"] = len({r[0] for r in rows})
-        meta["ine"] = info
-        write_ine_news(docs, cols, rows)
+        if name == "ine":
+            info["indicadores"] = len({r[0] for r in rows})
+            write_ine_news(docs, cols, rows)
+        else:
+            info["ultimo"] = beo_latest(cols, rows)
+            (docs / "_data").mkdir(exist_ok=True)
+            (docs / "_data" / "beo_ultimo.json").write_text(
+                json.dumps(info["ultimo"], ensure_ascii=False),
+                encoding="utf-8",
+            )
+        meta[name] = info
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(

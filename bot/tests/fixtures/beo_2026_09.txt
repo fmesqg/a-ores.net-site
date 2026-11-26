@@ -1,0 +1,411 @@
+ 
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 3 
+ 
+ 
+Índice 
+ 
+Preâmbulo ............................................................................................................................ 4 
+1. SÍNTESE GLOBAL ...................................................................................................... 5 
+Quadro I – Síntese Global (setembro) .................................................................. 5 
+2. SUBSETOR GOVERNO REGIONAL ....................................................................... 7 
+2.1 - Síntese ..................................................................................................................... 7 
+Quadro II – Execução GRA (setembro) ............................................................... 7 
+2.2 - Receita ..................................................................................................................... 8 
+2.2.1 - Receita Fiscal .................................................................................................. 8 
+Quadro III – Receita Fiscal (setembro) ................................................................ 8 
+2.2.2 - Receita Não Fiscal ......................................................................................... 9 
+Quadro IV – Receita Não Fiscal (setembro) ....................................................... 9 
+2.3 - Despesa ................................................................................................................. 10 
+Quadro V - Execução Despesa GRA (setembro) ............................................ 10 
+2.3.1 - Despesa Funcional ...................................................................................... 11 
+Quadro VI - Despesa Funcional (setembro) .................................................... 11 
+2.3.2 - Despesa Orgânica/Económica .................................................................. 11 
+Quadro VII – Despesa Orgânica (setembro) ................................................... 12 
+3. SUBSETOR SFA E EPR ............................................................................................ 13 
+Quadro VIII – Execução SFA e EPR (setembro) ............................................. 13 
+ 
+ 
+ 
+  
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 4 
+ 
+Preâmbulo 
+O Governo Regional dos Açores, através da Direção Regional do Orçamento e 
+Tesouro, disponibiliza online, a execução mensal do orçamento do Governo 
+Regional, dos Serviços e Fundos Autónomos e das Entidades Públicas 
+Reclassificadas. 
+A publicação em apreço é disponibilizada até ao final de cada mês. 
+  
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 5 
+ 
+1. SÍNTESE GLOBAL 
+A execução orçamental consolidada de setembro do corrente ano é explicitada no 
+quadro a seguir apresentado. 
+Quadro I – Síntese Global 
+ 
+ 
+ 
+(Euros)
+GRA SFA EPR SALDO CONSOLIDADO 
+RECEITA CORRENTE 992 667 747,81 439 490 842,88 252 102 793,00 1 064 463 440,41
+     Impostos diretos 255 152 996,49 0,00 0,00 255 152 996,49
+     Dos quais:
+          Imposto sobre o rendimento de pessoas singulares (IRS) 199 139 884,25 0,00 0,00 199 139 884,25
+          Imposto sobre o rendimento de pessoas coletivas (IRC) 56 013 112,24 0,00 0,00 56 013 112,24
+     Impostos indiretos 478 088 922,15 0,00 0,00 478 088 922,15
+     Dos quais:
+          Imposto sobre o valor acrescentado (IVA) 325 898 561,56 0,00 0,00 325 898 561,56
+     Contribuições para a segurança Social 0,00 0,00 0,00 0,00
+     Taxas Multas e Outras Penalidades 10 273 925,04 11 873 130,46 311 086,26 22 458 141,76
+     Rendimentos de Propriedade 2 853 000,95 51 244,37 17 489,37 2 921 734,69
+     Transferências Correntes 240 869 372,79 420 970 687,01 238 830 993,27 280 873 109,79
+          Administração Central - Estado 228 850 867,50 920 655,59 2 216 848,85 231 988 371,94
+          Outros setores das AP 0,00 396 374 074,02 234 217 860,11 10 793 990,85
+          Resto do Mundo 0,00 23 635 456,22 2 376 284,31 26 011 740,53
+          Outras Transferências 12 018 505,29 40 501,18 20 000,00 12 079 006,47
+     Venda de Bens e Serviços Correntes 3 882 555,78 3 960 468,56 10 366 544,51 18 209 568,85
+     Reposições não abatidas nos pagamentos 1 393 457,01 1 097 576,91 60 298,42 2 551 332,34
+     Outras receitas correntes 153 517,60 1 537 735,57 2 516 381,17 4 207 634,34
+ RECEITA DE CAPITAL 412 811 544,17 72 709 139,53 31 946 881,71 414 775 759,91
+     Venda de bens de investimento 243 302,23 0,00 0,00 243 302,23
+     Transferências de Capital 412 567 140,94 72 649 068,50 31 702 984,34 414 227 388,28
+          Administração Central - Estado 240 783 843,75 0,00 1 000 000,00 241 783 843,75
+          Outros setores das AP 0,00 72 649 068,50 30 514 837,00 472 100,00
+          Resto do Mundo 171 783 297,19 0,00 161 447,34 171 944 744,53
+          Outras Transferências 0,00 0,00 26 700,00 26 700,00
+     Outras Receitas de Capital 1 101,00 60 071,03 243 897,37 305 069,40
+ RECEITA EFETIVA 1 405 479 291,98 512 199 982,41 284 049 674,71 1 479 239 200,32
+ DESPESA CORRENTE 955 276 700,05 466 617 511,23 275 526 240,14 1 077 622 508,14
+     Despesas com Pessoal 122 528 510,42 315 423 576,91 159 823 996,44 597 776 083,77
+     Aquisição de Bens e Serviços Correntes 97 267 852,10 83 833 767,36 109 148 655,06 290 250 274,52
+     Juros e Outros Encargos 50 257 108,12 2 041 328,33 4 428 025,08 56 726 461,53
+     Transferências Correntes 670 348 223,09 51 278 555,95 614 747,28 102 443 583,04
+          Subsetores das AP 620 949 635,73 793 556,30 0,00 1 945 248,75
+          Outras transferências 49 398 587,36 50 484 999,65 614 747,28 100 498 334,29
+     Subsídios 956 348,52 13 723 393,57 262 325,77 14 942 067,86
+     Outras Despesas Correntes 13 918 657,80 316 889,11 1 248 490,51 15 484 037,42
+ DESPESA DE CAPITAL 433 003 579,66 25 235 925,18 12 838 846,67 368 386 546,01
+     Aquisição de Bens de Capital 114 983 750,16 21 442 843,03 11 810 845,21 148 237 438,40
+     Transferências de Capital 317 599 829,47 3 793 082,15 449 953,57 219 151 059,69
+          Subsetores das AP 111 559 866,98 58 018,00 0,00 8 926 079,48
+          Outras transferências 206 039 962,49 3 735 064,15 449 953,57 210 224 980,21
+     Outras Despesas de Capital 420 000,03 0,00 578 047,89 998 047,92
+ DESPESA EFETIVA 1 388 280 279,71 491 853 436,41 288 365 086,81 1 446 009 054,15
+SALDO GLOBAL 17 199 012,27 20 346 546,00 -4 315 412,10 33 230 146,17
+Despesa Primária 1 338 023 171,59 489 812 108,08 283 937 061,73 1 389 282 592,62
+Saldo Primário 67 456 120,39 22 387 874,33 112 612,98 89 956 607,70
+Saldo Corrente 37 391 047,76 -27 126 668,35 -23 423 447,14 -13 159 067,73
+Saldo de capital -20 192 035,49 47 473 214,35 19 108 035,04 46 389 213,90 
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 6 
+ 
+O saldo global consolidado dos organismos com enquadramento no perímetro da 
+Administração Pública Regional atingiu, no final de setembro os 33,2 milhões de 
+euros, consequência de uma receita efetiva de 1.479,2 milhões de euros e de uma 
+despesa efetiva de 1.446,0 milhões de euros. 
+Do total da receita auferida, 1.064,5 milhões de euros (72,0%) corresponderam a 
+receita corrente e 414,8 milhões de euros (28,0%) a receita de capital. 
+A despesa efetiva decompôs-se em 1.077,6 milhões de euros (74,5%) de despesa 
+corrente e 368,4 milhões de euros (25,5%) de despesa de capital. 
+  
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 7 
+ 
+2. SUBSETOR GOVERNO REGIONAL 
+2.1 - Síntese 
+ 
+A 30 de setembro do corrente ano, apurou-se um saldo global de 17,2 milhões de 
+euros e um saldo primário de 67,5 milhões de euros. 
+ 
+O saldo corrente foi de 37,4 milhões de euros, enquanto o de capital se situou nos 
+-20,2 milhões de euros. 
+ 
+Quadro II – Execução GRA  
+ 
+ 
+ 
+ 
+(Euros)
+2025 2026 VH (%)
+RECEITA CORRENTE 947 537 359,57 992 667 747,81 4,76%
+    Receitas Fiscais 702 460 871,75 733 241 918,64 4,38%
+      Impostos diretos 248 190 803,09 255 152 996,49 2,81%
+      Impostos indiretos 454 270 068,66 478 088 922,15 5,24%
+    Outras receitas correntes 245 076 487,82 259 425 829,17 5,86%
+ RECEITA DE CAPITAL 146 811 317,83 412 811 544,17 181,19%
+ RECEITA EFETIVA 1 094 348 677,40 1 405 479 291,98 28,43%
+ DESPESA CORRENTE 1 017 799 357,55 955 276 700,05 -6,14%
+     Despesas com Pessoal 115 597 659,38 122 528 510,42 6,00%
+     Aquisição de Bens e Serviços 101 411 075,11 97 267 852,10 -4,09%
+     Juros e Outros Encargos 50 271 308,98 50 257 108,12 -0,03%
+     Transferências Correntes 737 303 730,96 670 348 223,09 -9,08%
+       Administrações Públicas 686 310 353,68 620 949 635,73 -9,52%
+       Outras 50 993 377,28 49 398 587,36 -3,13%
+     Subsídios 942 974,96 956 348,52 0,00%
+     Outras Despesas Correntes 12 272 608,16 13 918 657,80 13,41%
+ DESPESA DE CAPITAL 308 265 294,48 433 003 579,66 40,46%
+     Aquisição de Bens de Capital 82 859 318,20 114 983 750,16 38,77%
+     Transferências de Capital 225 176 809,58 317 599 829,47 41,04%
+       Administrações Públicas 83 807 690,75 111 559 866,98 33,11%
+       Outras 141 369 118,83 206 039 962,49 45,75%
+     Outras Despesas de Capital 229 166,70 420 000,03 83,27%
+ DESPESA EFETIVA 1 326 064 652,03 1 388 280 279,71 4,69%
+SALDO GLOBAL -231 715 974,63 17 199 012,27 107,42%
+Saldo Corrente -70 261 997,98 37 391 047,76 153,22%
+Saldo de Capital -161 453 976,65 -20 192 035,49 87,49%
+Saldo Primário -181 444 665,65 67 456 120,39 137,18% 
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 8 
+ 
+2.2 – Receita 
+ 
+A receita efetiva situou-se nos 1.405,5 milhões de euros, repartida por 992,7 
+milhões de euros de receita corrente e 412,8 milhões de euros de receita de 
+capital. 
+ 
+A receita corrente registou um aumento de 4,8%, relativamente ao mesmo período 
+do ano anterior e a receita de capital um aumento de 181,2%. 
+ 
+Do total da receita corrente, 733,2 milhões de euros (73,9%) corresponderam à 
+receita fiscal. 
+ 
+2.2.1 - Receita Fiscal 
+A receita fiscal arrecadada, em setembro de 2026, situou-se nos 733,2 milhões de 
+euros, o que equivaleu a uma execução de 75,9% e um aumento de 4,4% 
+relativamente ao período homólogo do ano anterior. 
+ 
+Quadro III – Receita Fiscal  
+ 
+ 
+ 
+Os impostos diretos originaram uma receita de 255,2 milhões de euros, 79,3% do 
+valor orçamentado, mais 2,8% que o arrecadado no período homólogo de 2025. 
+Nestes impostos destacou-se o IRS, com 199,1 milhões de euros, com uma 
+execução de 81,4%, o equivalente a 78,1% dos impostos diretos. 
+O IRC registou uma execução de 72,7% menos 8,8% do que em setembro do ano 
+transato.  
+No período em análise, foram os impostos indiretos os que mais se destacaram, 
+com 478,1 milhões de euros, tendo assumido um peso de 65,2% no total da 
+receita fiscal. Sobressai o imposto sobre valor acrescentado (IVA) com uma 
+(Euros)
+2025 2026 VH (%) Execução 2025 (%) Execução 2026 (%)
+     IMPOSTOS DIRETOS 248 190 803,09 255 152 996,49 2,81% 78,74% 79,29%
+       Imp.s/rend.pessoas singulares (IRS) 186 776 867,94 199 139 884,25 6,62% 78,08% 81,35%
+       Imp.s/rend.pessoas coletivas (IRC) 61 413 935,15 56 013 112,24 -8,79% 80,81% 72,74%
+       Outros 0,00 0,00 0,00% 0,00% 0,00%
+     IMPOSTOS INDIRETOS 454 270 068,66 478 088 922,15 5,24% 78,28% 74,20%
+       Imposto s/ produtos petrolíferos (ISP) 57 606 775,48 60 192 843,81 4,49% 101,60% 77,47%
+       Imposto s/ valor acrescentado (IVA) 304 414 323,82 325 898 561,56 7,06% 75,07% 74,08%
+       Imposto automóvel (IA) 4 051 507,13 3 223 952,15 -20,43% 87,69% 61,41%
+       Imposto de consumo s/ tabaco 46 942 284,06 45 930 858,58 -2,15% 79,83% 74,43%
+       Imposto s/ álcool e bebidas alcoólicas (IABA) 6 571 548,73 5 706 075,99 -13,17% 72,77% 57,06%
+       Imposto de selo 26 663 396,68 27 035 485,57 1,40% 80,61% 73,57%
+       Imposto rodoviários 6 080 831,40 6 757 911,93 11,13% 61,55% 67,58%
+       Outros 1 939 401,36 3 343 232,56 100,00% 72,03% 111,44%
+RECEITA FISCAL 702 460 871,75 733 241 918,64 4,38% 78,44% 75,90% 
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 9 
+ 
+execução de 325,9 milhões de euros, representando 68,2% do total destes 
+impostos. 
+ Relativamente a 2025, verificou-se um crescimento de 5,2% nos impostos 
+indiretos. 
+2.2.2 - Receita Não Fiscal 
+A receita não fiscal situou-se nos 672,2 milhões de euros, dos quais 258,0 milhões 
+de euros foram receita corrente, 412,8 milhões de euros receita de capital e 1,4 
+milhões de euros de outras receitas. 
+Quadro IV – Receita Não Fiscal  
+ 
+ 
+ 
+Dos 258,0 milhões de euros de receita corrente arrecadada, em setembro de 
+2026, destacam-se os 240,9 milhões de euros contabilizados nas transferências 
+correntes, com uma execução de 96,8%, os quais representaram 93,4% das 
+receitas correntes.  
+As receitas de capital situaram-se nos 412,8 milhões de euros, uma execução de 
+50,2% e com um crescimento de 181,2%, face a setembro do ano de 2025.  
+O agregado “outras receitas” registou uma execução de 1,4 milhões de euros e 
+correspondeu integralmente a reposições não abatidas nos pagamentos. 
+ 
+ 
+ 
+ 
+ 
+(Euros)
+2025 2026 VH (%) Execução 2025 (%) Execução 2026 (%)
+     CORRENTES 244 222 361,44 258 032 372,16 5,65% 73,76% 95,87%
+       Taxas, multas e outras penalidades 9 425 191,45 10 273 925,04 9,00% 95,20% 104,84%
+       Rendimentos de propriedade 2 617 489,88 2 853 000,95 100,00% 71,52% 80,14%
+       Transferências 227 934 881,25 240 869 372,79 5,67% 73,32% 96,77%
+       Venda de bens e serviços correntes 4 208 081,81 3 882 555,78 -7,74% 68,26% 58,78%
+       Outras receitas correntes 36 717,05 153 517,60 318,11% 7,34% 56,23%
+     CAPITAL 146 811 317,83 412 811 544,17 181,19% 27,64% 50,20%
+       Venda de bens de investimento 299 885,77 243 302,23 -18,87% 42,84% 20,28%
+       Transferências 146 509 560,72 412 567 140,94 181,60% 27,62% 50,25%
+       Outras receitas de capital 1 871,34 1 101,00 0,00% 3,74% 2,20%
+     OUTRAS RECEITAS 854 126,38 1 393 457,01 63,14% 21,22% 34,84%
+        Reposições não abatidas nos pagamentos 854 126,38 1 393 457,01 63,14% 21,22% 34,84%
+RECEITA NÃO FISCAL 391 887 805,65 672 237 373,34 71,54% 45,24% 61,36% 
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 10 
+ 
+ 
+2.3 - Despesa 
+ 
+A despesa efetiva atingiu, em 30 de setembro do corrente ano, 1.388,3 milhões 
+de euros, o que correspondeu a uma execução de 65,7%. 
+Quadro V - Execução Despesa GRA
+ 
+ 
+ 
+A despesa corrente situou-se nos 955,3 milhões de euros, dos quais, 670,3 
+milhões de euros correspondem a transferências correntes, representando 70,2% 
+do total da despesa corrente. 
+A despesa de capital atingiu os 433,0 milhões de euros, 58,5% do valor 
+orçamentado, 73,4% dos quais corresponderam a transferências de capital. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(Euros)
+2025 2026 VH (%) Execução 2025 (%) Execução 2026 (%)
+Despesa Corrente 1 017 799 357,55 955 276 700,05 -6,14% 69,29% 69,55%
+     Despesas com Pessoal 115 597 659,38 122 528 510,42 6,00% 67,72% 75,16%
+       Remunerações Certas e Permanentes 90 376 047,80 95 420 818,63 5,58% 67,42% 75,36%
+       Abonos Variáveis ou Eventuais 3 398 816,28 3 224 888,12 -5,12% 67,82% 66,58%
+       Segurança Social 21 822 795,30 23 882 803,67 9,44% 69,00% 75,69%
+     Aquisição de Bens e Serviços Correntes 101 411 075,11 97 267 852,10 -4,09% 60,24% 58,59%
+     Juros e Outros Encargos 50 271 308,98 50 257 108,12 -0,03% 78,75% 68,75%
+     Transferências Correntes 737 303 730,96 670 348 223,09 -9,08% 71,41% 71,48%
+     Subsídios 942 974,96 956 348,52 0,00% 32,46% 39,62%
+     Outras 12 272 608,16 13 918 657,80 13,41% 40,21% 44,78%
+Despesa Corrente Primária 967 528 048,57 905 019 591,93 -6,46% 68,86% 69,59%
+Despesas de Capital 308 265 294,48 433 003 579,66 40,46% 52,47% 58,46%
+     Aquisição de Bens de Capital 82 859 318,20 114 983 750,16 38,77% 40,93% 49,72%
+     Transferências de Capital 225 176 809,58 317 599 829,47 41,04% 58,52% 62,46%
+     Outras 229 166,70 420 000,03 83,27% 83,33% 41,65%
+Despesa Primária 1 275 793 343,05 1 338 023 171,59 4,88% 64,03% 65,55%
+Despesa Efetiva 1 326 064 652,03 1 388 280 279,71 4,69% 64,49% 65,66% 
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 11 
+ 
+ 
+2.3.1 - Despesa Funcional 
+A desagregação da despesa do GRA pela ótica funcional é a que se expõe de 
+seguida. 
+Quadro VI - Despesa Funcional   
+ 
+ 
+ 
+Na desagregação funcional da despesa, destaca-se, no período em análise, as 
+verbas afetas à saúde com 431,2 milhões de euros, à educação com 274,8 milhões 
+de euros, aos transportes com 189,8 milhões de euros, aos assuntos económicos 
+com 124,4 milhões de euros e à agricultura, silvicultura, caça e pesca com 119,2 
+milhões de euros, os quais representam no seu conjunto 82,1% do total da 
+despesa. 
+ 
+ 
+2.3.2 - Despesa Orgânica/Económica 
+A Secretaria Regional da Saúde e Segurança Social, a Secretaria Regional da 
+Educação, Cultura e Desporto, a Secretaria Regional do Turismo, Mobilidade e 
+Infraestruturas e a Secretaria Regional das Finanças, Planeamento e 
+Administração Pública, foram os departamentos governamentais que registaram 
+um setembro volume da despesa com 462,1 milhões de euros, 292,4 milhões de 
+euros, 230,0 milhões de euros e 160,6 milhões de euros, representando no seu 
+conjunto 82,5% do total desta.  
+A desagregação da despesa global, de acordo com a classificação orgânica é 
+apresentada no quadro seguinte. 
+(Euros)
+Montante Estrutura (%)
+011     ÓRGÃOS EXECUTIVOS E LEGISLATIVOS, ASSUNTOS FINANCEIROS, FISCAIS E EXTERNOS 28 093 115,08 2,02%
+017 OPERAÇÕES RELACIONADAS COM A DÍVIDA PÚBLICA 50 210 791,38 3,62%
+032 SERVIÇOS DE PROTEÇÃO CIVIL 10 248 642,18 0,74%
+042 AGRICULTURA, SILVICULTURA, CAÇA E PESCA 119 213 038,25 8,59%
+043 COMBUSTÍVEIS E ENERGIA 17 383 302,06 1,25%
+045 TRANSPORTES 189 835 736,53 13,67%
+046 COMUNICAÇÕES 6 165 948,22 0,44%
+047 OUTRAS ATIVIDADES 8 174 303,17 0,59%
+048 INVESTIGAÇÃO E DESENVOLVIMENTO EM ASSUNTOS ECONÓMICOS 4 603 174,64 0,33%
+049 ASSUNTOS ECONÓMICOS N.E. 124 413 730,73 8,96%
+056 PROTEÇÃO DO AMBIENTE N.E. 26 012 603,25 1,87%
+066 HABITAÇÃO E INFRAESTRUTURAS COLETIVAS N.E. 34 776 395,09 2,50%
+076 SAÚDE N.E. 431 234 369,79 31,06%
+081 SERVIÇOS DESPORTIVOS E RECREATIVOS 11 936 466,74 0,86%
+082 SERVIÇOS CULTURAIS 13 143 064,42 0,95%
+086 DESPORTO, RECREAÇÃO, CULTURA E RELIGIÃO N.E. 1 535 109,31 0,11%
+098 EDUCAÇÃO N.E. 274 772 968,28 19,79%
+107 EXCLUSÃO SOCIAL N.E. 18 950 268,10 1,37%
+109 PROTEÇÃO SOCIAL N.E. 17 577 252,49 1,27%
+1 388 280 279,71 100,00%
+Designação Medida
+Despesa Efetiva 
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026       12 
+ 
+Quadro VII – Despesa Orgânica 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+(Euros)
+ALRAA PGR VPGR SRFPAP SRAPC SRECD SRSSS SRAA SRMP SRTMI SRJHE SRAAC TOTAL
+Despesa Corrente 12 907 381,52 4 999 670,28 11 234 467,22 98 027 241,20 3 776 434,20 275 317 984,25 377 798 707,76 38 694 622,94 4 902 645,91 88 503 898,42 19 117 108,44 19 996 537,91 935 280 162,14
+     Despesas com Pessoal 0,00 3 898 839,67 4 382 705,44 14 229 000,29 1 636 602,39 16 780 041,43 6 015 888,11 28 140 197,08 3 447 167,28 21 288 464,31 11 009 302,10 11 700 302,32 122 528 510,42
+       Remunerações Certas e Permanentes 0,00 3 093 997,36 3 326 462,72 10 940 763,52 1 304 418,34 13 213 645,05 4 735 593,71 21 807 666,53 2 720 317,73 16 473 948,79 8 710 687,82 9 093 317,06 95 420 818,63
+       Abonos Variáveis ou Eventuais 0,00 67 838,38 223 909,15 214 220,78 35 475,59 378 901,35 95 107,90 883 369,97 106 216,36 651 865,49 165 664,11 402 319,04 3 224 888,12
+       Segurança Social 0,00 737 003,93 832 333,57 3 074 015,99 296 708,46 3 187 495,03 1 185 186,50 5 449 160,58 620 633,19 4 162 650,03 2 132 950,17 2 204 666,22 23 882 803,67
+     Aquisição de Bens e Serviços Correntes 0,00 770 697,03 4 158 269,66 2 541 538,95 585 209,99 3 623 887,32 12 252 865,24 6 946 863,62 1 170 497,38 57 319 850,93 3 955 761,07 3 942 410,91 97 267 852,10
+     Juros e Outros Encargos 0,00 0,00 0,00 50 257 108,12 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 50 257 108,12
+     Transferências Correntes 0,00 323 085,18 2 625 217,27 30 251 216,27 731 124,04 254 880 361,84 359 499 382,41 3 579 917,16 282 481,25 9 849 428,97 3 985 836,04 4 340 172,66 670 348 223,09
+     Subsídios 0,00 0,00 0,00 0,00 801 480,24 4 023,68 22 512,00 0,00 0,00 32 500,00 95 832,60 0,00 956 348,52
+     Outras 12 907 381,52 7 048,40 68 274,85 748 377,57 22 017,54 29 669,98 8 060,00 27 645,08 2 500,00 13 654,21 70 376,63 13 652,02 13 918 657,80
+Despesas de Capital 420 000,03 3 051 288,84 3 728 656,56 62 572 211,89 15 543,07 17 069 938,30 84 301 778,93 48 665 525,42 26 446 649,11 141 487 731,41 31 219 464,98 14 024 791,12 433 003 579,66
+     Aquisição de Bens de Capital 0,00 99 054,35 1 601 724,74 2 317 986,83 15 543,07 2 670 514,79 15 651 113,66 647 452,86 16 791 477,75 50 147 324,62 22 235 973,80 2 805 583,69 114 983 750,16
+     Transferências de Capital 0,00 2 952 234,49 2 126 931,82 60 254 225,06 0,00 14 399 423,51 68 650 665,27 48 018 072,56 9 655 171,36 91 340 406,79 8 983 491,18 11 219 207,43 317 599 829,47
+     Outras 420 000,03 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 0,00 420 000,03
+Despesa Efetiva 13 327 381,55 8 050 959,12 14 963 123,78 160 599 453,09 3 791 977,27 292 387 922,55 462 100 486,69 87 360 148,36 31 349 295,02 229 991 629,83 50 336 573,42 34 021 329,03 1 388 280 279,71 
+BOLETIM DE EXECUÇÃO ORÇAMENTAL DO GRA – SETEMBRO DE 2026 
+  
+  
+  13 
+ 
+3. SUBSETOR SFA E EPR 
+ O saldo global dos Serviços e Fundos Autónomos (SFA) e das Entidades Públicas 
+Reclassificadas (EPR), integradas e equiparadas a SFA para efeitos de controlo 
+orçamental, atingiu os 16,0 milhões de euros, dos quais 20,3 milhões de euros 
+relativos aos SFA e -4,3 milhões de euros às EPR. 
+Quadro VIII – Execução SFA e EPR  
+ 
+ 
+ 
+  
+(Euros)
+SFA EPR TOTAL
+RECEITA CORRENTE 439 490 842,88 252 102 793,00 691 593 635,88
+     Impostos diretos 0,00 0,00 0,00
+     Impostos indiretos 0,00 0,00 0,00
+     Contribuições para a segurança Social 0,00 0,00 0,00
+     Taxas multas e outras penalidades 11 873 130,46 311 086,26 12 184 216,72
+     Rendimentos de Propriedade 51 244,37 17 489,37 68 733,74
+     Transferências correntes 420 970 687,01 238 830 993,27 659 801 680,28
+     Venda de bens e serviços correntes 3 960 468,56 10 366 544,51 14 327 013,07
+     Outras receitas correntes 1 537 735,57 2 516 381,17 4 054 116,74
+     Reposições não abatidas nos pagamentos 1 097 576,91 60 298,42 1 157 875,33
+ RECEITA DE CAPITAL 72 709 139,53 31 946 881,71 104 656 021,24
+     Venda de bens de investimento 0,00 0,00 0,00
+     Transferências de Capital 72 649 068,50 31 702 984,34 104 352 052,84
+     Outras receitas de capital 60 071,03 243 897,37 303 968,40
+ RECEITA EFETIVA 512 199 982,41 284 049 674,71 796 249 657,12
+ DESPESA CORRENTE 466 617 511,23 275 526 240,14 742 143 751,37
+     Despesas com Pessoal 315 423 576,91 159 823 996,44 475 247 573,35
+     Aquisição de Bens e Serviços Correntes 83 833 767,36 109 148 655,06 192 982 422,42
+     Subsídios 13 723 393,57 262 325,77 13 985 719,34
+     Juros e Outros Encargos 2 041 328,33 4 428 025,08 6 469 353,41
+     Transferências Correntes 51 278 555,95 614 747,28 51 893 303,23
+     Outras Despesas Correntes 316 889,11 1 248 490,51 1 565 379,62
+ DESPESA DE CAPITAL 25 235 925,18 12 838 846,67 38 074 771,85
+     Aquisição de Bens de Capital 21 442 843,03 11 810 845,21 33 253 688,24
+     Transferências de Capital 3 793 082,15 449 953,57 4 243 035,72
+     Outras Despesas de Capital 0,00 578 047,89 578 047,89
+DESPESA EFETIVA 491 853 436,41 288 365 086,81 780 218 523,22
+Operações extraorçamentais 0,00 0,00 0,00
+SALDO GLOBAL 20 346 546,00 -4 315 412,10 16 031 133,90

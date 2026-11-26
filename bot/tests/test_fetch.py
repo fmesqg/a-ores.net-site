@@ -1,10 +1,11 @@
 import asyncio
-from datetime import datetime
+from datetime import date, datetime
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
 import requests
 
+from bot import beo
 from bot.classes import FetchError, WebData
 from bot.fetch import (
     _fetch_data_dict_by_id,
@@ -66,19 +67,59 @@ class TestFetchDayJoraa:
         assert result == []
 
 
+def _head(found_months):
+    """requests.head stand-in: 200 + PDF for URLs of the given months."""
+
+    def head(url, **kwargs):
+        resp = MagicMock()
+        hit = any(f"BEO_{y}_{m:02d}_" in url for y, m in found_months)
+        resp.status_code = 200 if hit else 404
+        resp.headers = {
+            "content-type": "application/pdf" if hit else "text/html"
+        }
+        return resp
+
+    return head
+
+
 class TestFetchBeoAll:
-    def test_returns_beo_urls(self, portal_beo_html):
-        mock_resp = MagicMock()
-        mock_resp.content = portal_beo_html.encode()
-        with patch("bot.fetch.requests.get", return_value=mock_resp):
+    def test_probes_unknown_months(self):
+        with (
+            patch(
+                "bot.fetch.requests.head", side_effect=_head([(2026, 1)])
+            ) as h,
+            patch("bot.fetch.date") as d,
+        ):
+            d.today.return_value = date(2026, 3, 10)
             result = fetch_beo_all()
-        assert isinstance(result, set)
-        assert len(result) == 2
-        assert all("/BEO" in url for url in result)
+        assert result == {beo.pdf_url(2026, 1)}
+        assert h.call_count == 14  # Jan 2025 .. Feb 2026
+
+    def test_known_months_are_not_asked_again(self):
+        known = frozenset({beo.pdf_url(2026, 1), beo.pdf_url(2025, 12)})
+        with (
+            patch("bot.fetch.requests.head", side_effect=_head([])) as h,
+            patch("bot.fetch.date") as d,
+        ):
+            d.today.return_value = date(2026, 3, 10)
+            result = fetch_beo_all(known)
+        assert result == set(known)
+        assert h.call_count == 12
+
+    def test_cloudflare_challenge_is_an_error(self):
+        def challenge(url, **kwargs):
+            resp = MagicMock()
+            resp.status_code = 403
+            resp.headers = {"cf-mitigated": "challenge"}
+            return resp
+
+        with patch("bot.fetch.requests.head", side_effect=challenge):
+            result = fetch_beo_all()
+        assert isinstance(result, FetchError)
 
     def test_network_error(self):
         with patch(
-            "bot.fetch.requests.get",
+            "bot.fetch.requests.head",
             side_effect=requests.exceptions.Timeout("timeout"),
         ):
             result = fetch_beo_all()
@@ -94,6 +135,15 @@ class TestFetchSigicaAll:
         assert isinstance(result, set)
         assert len(result) == 2
         assert all("sigica" in url for url in result)
+
+    def test_cloudflare_block_is_an_error(self):
+        mock_resp = MagicMock()
+        mock_resp.raise_for_status.side_effect = requests.exceptions.HTTPError(
+            "403 Forbidden"
+        )
+        with patch("bot.fetch.requests.get", return_value=mock_resp):
+            result = fetch_sigica_all()
+        assert isinstance(result, FetchError)
 
 
 class TestFetchRequerimentos:
@@ -183,12 +233,13 @@ class TestFetchContratosRAA:
         assert len(result) == 2
         assert result[0]["id"] == 12345
 
-    def test_type_error_raises_fetch_error(self):
+    def test_null_answer_is_a_fetch_error(self):
+        # 2026-11-23: BASE answered null and the whole daily run crashed
         mock_resp = MagicMock()
         mock_resp.json.return_value = None
         with patch("bot.fetch.requests.post", return_value=mock_resp):
-            with pytest.raises(FetchError):
-                fetch_contratos_RAA("2024-08-01")
+            result = fetch_contratos_RAA("2024-08-01")
+        assert isinstance(result, FetchError)
 
 
 class TestFetchAlra:
@@ -231,30 +282,41 @@ class TestFetchAlra:
 
 
 class TestFetchPortal:
-    def test_returns_delta(
-        self, portal_beo_html, portal_sigica_html, state_dict
-    ):
+    def test_returns_delta(self, portal_sigica_html, state_dict):
         prev = State(state_dict)
-
-        def mock_get(url, **kwargs):
-            mock = MagicMock()
-            if "beo" in url:
-                mock.content = portal_beo_html.encode()
-            else:
-                mock.content = portal_sigica_html.encode()
-            return mock
-
-        with patch("bot.fetch.requests.get", side_effect=mock_get):
+        mock = MagicMock()
+        mock.content = portal_sigica_html.encode()
+        with (
+            patch("bot.fetch.requests.get", return_value=mock),
+            patch("bot.fetch.requests.head", side_effect=_head([(2026, 1)])),
+            patch("bot.fetch.date") as d,
+        ):
+            d.today.return_value = date(2026, 3, 10)
             result = fetch_portal(prev)
-        assert isinstance(result, dict)
-        assert "boletins" in result
+        assert result["boletins"] == {beo.pdf_url(2026, 1)}
         assert "sigica" in result
+
+    def test_sigica_blocked_keeps_boletins(self, state_dict):
+        prev = State(state_dict)
+        blocked = MagicMock()
+        blocked.raise_for_status.side_effect = requests.exceptions.HTTPError(
+            "403"
+        )
+        with (
+            patch("bot.fetch.requests.get", return_value=blocked),
+            patch("bot.fetch.requests.head", side_effect=_head([(2026, 2)])),
+            patch("bot.fetch.date") as d,
+        ):
+            d.today.return_value = date(2026, 3, 10)
+            result = fetch_portal(prev)
+        assert result == {"boletins": {beo.pdf_url(2026, 2)}, "sigica": set()}
 
     def test_fetch_error(self, state_dict):
         prev = State(state_dict)
-        with patch(
-            "bot.fetch.requests.get",
-            side_effect=requests.exceptions.Timeout("timeout"),
+        timeout = requests.exceptions.Timeout("timeout")
+        with (
+            patch("bot.fetch.requests.get", side_effect=timeout),
+            patch("bot.fetch.requests.head", side_effect=timeout),
         ):
             result = fetch_portal(prev)
         assert isinstance(result, FetchError)

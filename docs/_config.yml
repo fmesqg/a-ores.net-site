@@ -6,6 +6,7 @@ minima:
 header_pages:
   - dados.md
   - ine.md
+  - beo.md
   - blog.md
   - trabalhar.md
   - rsss.md
@@ -14,6 +15,7 @@ plugins:
   - jekyll-feed
 
 title: Açores.net
+lang: pt-PT
 description: Repositório de dados sobre os Açores
 collections:
   alra_updates:
