@@ -2,6 +2,8 @@
 
 Usage:
   python3 bot/ine.py [data_dir]         fetch INDICATORS, write data_dir/ine.csv
+                                        and data_dir/ine_meta.json
+  python3 bot/ine.py definicoes [dir]   refresh only ine_meta.json
   python3 bot/ine.py procurar TERMOS    search INE's catalogue for indicators
                                         with Azores-level geography
 
@@ -9,6 +11,12 @@ Stdlib only, like bot/datasets.py. The INE API is public and needs no key:
   data      https://www.ine.pt/ine/json_indicador/pindica.jsp?op=2&varcd=...
   metadata  https://www.ine.pt/ine/json_indicador/pindicaMeta.jsp?varcd=...
   catalogue https://www.ine.pt/ine/xml_indic.jsp?opc=2 (all ~13 000 indicators)
+  metainfo  https://www.ine.pt/bddXplorer/htdocs/minfo.jsp?var_cd=...
+            (HTML: concepts, formula, source; not in the JSON API)
+
+ine_meta.json has, per indicator, what a reader needs to understand it:
+INE's full title, source, periodicity, note, formula and the definitions
+of the concepts it uses. /dados/ine/ shows them under each indicator.
 
 Dim1=T asks for every period. Dim2=PT,30 adds Portugal and Madeira as
 reference rows (a separate request: <*>20 does not combine with other codes). Dim2=<*>20 asks for everything inside NUTS
@@ -39,6 +47,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 API = "https://www.ine.pt/ine/json_indicador/"
+MINFO = "https://www.ine.pt/bddXplorer/htdocs/minfo.jsp?var_cd={}&lingua=PT"
 CATALOGUE = "https://www.ine.pt/ine/xml_indic.jsp?opc=2&lang=PT"
 UA = {"User-Agent": "acores.net open data (github.com/fmesqg/a-ores.net-site)"}
 PAUSE = 1.0
@@ -300,9 +309,117 @@ def rows_from(varcd: str, data: dict, meta: dict) -> list[list]:
     return out
 
 
-def fetch(varcd: str) -> list[list]:
-    meta = get_json(API + f"pindicaMeta.jsp?varcd={varcd}&lang=PT")[0]
+# Concepts every indicator repeats; not worth showing each time.
+GENERIC = {"período de referência", "localização geográfica"}
+# Words INE writes in capitals that should stay so in sentence case.
+ACRONYMS = {
+    "irs",
+    "irc",
+    "iva",
+    "rsi",
+    "nuts",
+    "cae",
+    "ue",
+    "pib",
+    "imi",
+    "imt",
+    "ine",
+    "ipss",
+    "sns",
+    "tic",
+    "vab",
+    "cpa",
+}
+PROPER = {"gini": "Gini", "lorenz": "Lorenz"}
+
+
+def sentence_case(term: str) -> str:
+    words = term.strip().rstrip(":").lower().split()
+    words = [
+        w.upper() if w.strip("()") in ACRONYMS else PROPER.get(w, w)
+        for w in words
+    ]
+    out = " ".join(words)
+    return out[:1].upper() + out[1:]
+
+
+def html_text(fragment: str) -> str:
+    import html
+
+    t = re.sub(r"<br\s*/?>", "\n", fragment, flags=re.I)
+    t = html.unescape(re.sub(r"<[^>]+>", " ", t)).replace("\xa0", " ")
+    return re.sub(r"[ \t\r\f\v]+", " ", re.sub(r"\s*\n\s*", "\n", t)).strip()
+
+
+def parse_minfo(page: str) -> dict:
+    """Source, concepts, formula and observations from INE's metainfo page.
+    Each field is a table row: <td class="TStub">..<strong>Label</strong>
+    then <td class="textoMedio">value</td>."""
+    out: dict = {}
+    for chunk in re.split(r'<td class="TStub"', page)[1:]:
+        m = re.search(
+            r"<strong>(.*?)</strong>.*?<td[^>]*>(.*?)</td>", chunk, re.S
+        )
+        if not m:
+            continue
+        label = html_text(m[1]).lower()
+        body = m[2]
+        if label.startswith("conceitos"):
+            items = re.findall(
+                r"<li[^>]*>\s*<strong>(.*?)</strong>\s*:?(.*?)</li>",
+                body,
+                re.S,
+            )
+            out["conceitos"] = [
+                [
+                    sentence_case(html_text(t)),
+                    html_text(d).lstrip(": ").strip(),
+                ]
+                for t, d in items
+                if html_text(t).lower().rstrip(":") not in GENERIC
+            ]
+        elif label.startswith("f") and "rmula" in label:
+            out["formula"] = html_text(body)
+        elif label.startswith("fonte"):
+            out["fonte"] = html_text(body)
+        elif label.startswith("observa"):
+            out["observacoes"] = html_text(body)
+    return {k: v for k, v in out.items() if v}
+
+
+def definitions(varcd: str, meta: dict) -> dict:
+    """What /dados/ine/ shows under an indicator: pindicaMeta fields plus
+    the metainfo page (fetched here; failures leave those fields out)."""
+    d = {
+        "titulo": (meta.get("IndicadorNome") or "").strip(),
+        "periodicidade": (meta.get("Periodic") or "").strip(),
+        "primeiro": meta.get("PrimeiroPeriodo", ""),
+        "ultimo": meta.get("UltimoPeriodo", ""),
+        "unidade": meta.get("UnidadeMedida", ""),
+        "nota": (meta.get("Nota") or "").strip(),
+        "atualizado": meta.get("DataUltimaAtualizacao", ""),
+        "metainfo": f"https://www.ine.pt/xurl/metax/{varcd}",
+    }
+    try:
+        req = urllib.request.Request(MINFO.format(varcd), headers=UA)
+        with urllib.request.urlopen(req, timeout=60) as r:
+            d.update(parse_minfo(r.read().decode("utf-8", "replace")))
+    except Exception as e:  # definitions are a nice-to-have
+        print(f"{varcd}: metainformação indisponível ({e})", flush=True)
+    return {k: v for k, v in d.items() if v}
+
+
+def fetch_meta(varcd: str) -> dict:
+    return get_json(API + f"pindicaMeta.jsp?varcd={varcd}&lang=PT")[0]
+
+
+def fetch(varcd: str, defs: dict | None = None) -> list[list]:
+    """Rows for one indicator; fills defs[varcd] with its definitions."""
+    meta = fetch_meta(varcd)
     time.sleep(PAUSE)
+    if defs is not None:
+        defs[varcd] = definitions(varcd, meta)
+        time.sleep(PAUSE)
     data = get_json(data_url(varcd, "<*>20"))[0]
     if not data.get("Dados"):  # administrative division: fetch all, filter
         time.sleep(PAUSE)
@@ -318,12 +435,46 @@ def fetch(varcd: str) -> list[list]:
     return rows_from(varcd, data, meta)
 
 
-def main(out_dir: Path) -> int:
+def write_meta(out_dir: Path, defs: dict) -> None:
+    """data_dir/ine_meta.json, in INDICATORS order. Keeps the previous
+    entry of an indicator whose metadata could not be fetched this time."""
+    path = out_dir / "ine_meta.json"
+    try:
+        old = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        old = {}
+    merged = {v: defs.get(v) or old.get(v) for v, _ in INDICATORS}
+    merged = {v: d for v, d in merged.items() if d}
+    tmp = out_dir / "ine_meta.json.tmp"
+    tmp.write_text(
+        json.dumps(merged, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8",
+    )
+    tmp.replace(path)
+
+
+def main_definitions(out_dir: Path) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
-    rows, failed = [], []
+    defs = {}
     for varcd, note in INDICATORS:
         try:
-            got = fetch(varcd)
+            defs[varcd] = definitions(varcd, fetch_meta(varcd))
+        except Exception as e:
+            print(f"FAILED {varcd} ({note}): {e}")
+            continue
+        n = len(defs[varcd].get("conceitos", []))
+        print(f"{varcd} {n:2d} conceitos  {note}", flush=True)
+        time.sleep(PAUSE)
+    write_meta(out_dir, defs)
+    return 0
+
+
+def main(out_dir: Path) -> int:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    rows, failed, defs = [], [], {}
+    for varcd, note in INDICATORS:
+        try:
+            got = fetch(varcd, defs)
         except Exception as e:  # keep going; report at the end
             failed.append(f"{varcd} ({note}): {e}")
             got = []
@@ -344,6 +495,7 @@ def main(out_dir: Path) -> int:
         w.writerow(COLS)
         w.writerows(rows)
     tmp.replace(out_dir / "ine.csv")
+    write_meta(out_dir, defs)
     print(f"{len(rows)} rows, {len(INDICATORS) - len(failed)} indicators")
     for f in failed:
         print("FAILED", f)
@@ -389,6 +541,8 @@ if __name__ == "__main__":
     args = sys.argv[1:]
     if args and args[0] == "procurar":
         search(args[1:])
+    elif args and args[0] == "definicoes":
+        sys.exit(main_definitions(Path(args[1] if len(args) > 1 else "data")))
     else:
         target = Path(args[0]) if args else Path("data")
         started = dt.datetime.now()

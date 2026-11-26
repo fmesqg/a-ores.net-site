@@ -1,5 +1,6 @@
 ---
 title: Indicadores do INE
+nav_title: Estatísticas
 layout: default
 permalink: /dados/ine/
 ---
@@ -38,6 +39,10 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
 <div id="painel" hidden>
   <h2 id="titulo"></h2>
   <p id="sub" class="ine-sub"></p>
+  <details id="def" class="ine-def" hidden>
+    <summary><strong>O que mede este indicador</strong> <span id="def-resumo"></span></summary>
+    <div id="def-corpo"></div>
+  </details>
   <div class="ine-vista" role="group" aria-label="Vista">
     <button type="button" data-vista="ambos">Tabela e gráfico</button>
     <button type="button" data-vista="grafico">Gráfico</button>
@@ -78,8 +83,19 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
 
 <noscript><p>Esta página precisa de JavaScript. O ficheiro <a href="/dados/ine.csv">ine.csv</a> tem os mesmos dados.</p></noscript>
 
+<section id="glossario-sec" hidden>
+<h2 id="glossario">Glossário</h2>
+<p class="ine-sub">As definições do INE para os conceitos usados nestes indicadores
+(por exemplo, o que é um “sujeito passivo” ou um “agregado fiscal”).</p>
+<input type="search" id="gq" class="g-busca" placeholder="Procurar um conceito" aria-label="Procurar um conceito" autocomplete="off">
+<dl id="glossario-lista" class="glossario"></dl>
+</section>
+
 ## Notas
 
+- Cada indicador tem, em “O que mede este indicador”, a fórmula, as
+  definições dos conceitos, a nota e a fonte, tal como o INE as publica
+  (também em [ine_meta.json](/dados/ine_meta.json)).
 - É uma seleção de indicadores, não a base de dados toda do INE. A lista está
   em [`bot/ine.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/ine.py).
   Os valores são os do INE no dia da recolha. O título de cada tabela liga ao
@@ -110,6 +126,15 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
 .ine-check { display: inline-flex; gap: .4em; align-items: center; margin-bottom: .5em; }
 .ine-form select:focus-visible, .ine-form input:focus-visible, th button:focus-visible { outline: 3px solid #268bd2; outline-offset: 1px; }
 #titulo { margin-bottom: .25em; font-size: 1.3em; }
+.ine-def { margin: .25em 0 .9em; padding: .5em .8em; border-left: 3px solid #268bd2; background: rgba(38,139,210,.06); font-size: .95em; max-width: 52em; }
+.ine-def summary { cursor: pointer; }
+.ine-def summary span { color: #586e75; font-size: .9em; }
+.ine-def dl, .glossario { margin: .5em 0 0; }
+.ine-def dt, .glossario dt { font-weight: bold; margin-top: .5em; }
+.ine-def dd, .glossario dd { margin: 0 0 .2em; }
+.ine-def p { margin: .5em 0 0; }
+.glossario dd.usado { font-size: .85em; color: #586e75; }
+.g-busca { font: inherit; padding: .3em .4em; width: min(24em, 100%); margin: .3em 0; }
 .ine-sub { color: #586e75; font-size: .9em; }
 .ine-novidades { margin-bottom: 1em; }
 .ine-novidades summary { cursor: pointer; font-weight: bold; }
@@ -166,6 +191,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 <script>
 (function () {
   "use strict";
+  // Build time: the data files change with every deploy, so ask for this
+  // build's copy and never mix a new page with cached old data.
+  var BUILD = "{{ site.time | date: '%s' }}";
   var RECENT = 6;
   var $ = function (id) { return document.getElementById(id); };
   var fmt = new Intl.NumberFormat("pt-PT", { maximumFractionDigits: 2 });
@@ -181,6 +209,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var SVGNS = "http://www.w3.org/2000/svg";
   var table = null; // { periods, refs, rows, view } of the current view
   var REF = { "20": "Açores (RAA)", "30": "Madeira (RAM)", "PT": "Portugal" };
+  var DEF = {}; // varcd -> definitions from ine_meta.json (may stay empty)
 
   function parseCSV(text) {
     var rows = [], row = [], f = "", q = false, i = 0, c;
@@ -209,6 +238,81 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
         ORDER.push(r.varcd);
       }
       x.rows.push(r); x.niveis[r.nivel] = 1; x.cats[r.categoria] = 1;
+    });
+  }
+
+  // ---- definitions (ine_meta.json) -------------------------------------
+  function hel(tag, text, cls) {
+    var e = document.createElement(tag);
+    if (text) e.textContent = text;
+    if (cls) e.className = cls;
+    return e;
+  }
+
+  function fillDefinition(varcd) {
+    var d = DEF[varcd], box = $("def"), body = $("def-corpo");
+    if (!d) { box.hidden = true; return; }
+    var parts = [];
+    if (d.formula) {
+      var p = hel("p"); p.appendChild(hel("strong", "Fórmula: ")); p.appendChild(document.createTextNode(d.formula)); parts.push(p);
+    }
+    var cs = d.conceitos || [];
+    if (cs.length) {
+      var dl = hel("dl");
+      cs.forEach(function (c) { dl.appendChild(hel("dt", c[0])); dl.appendChild(hel("dd", c[1])); });
+      parts.push(dl);
+    }
+    [["Nota do INE: ", d.nota], ["Observações: ", d.observacoes], ["Fonte: ", d.fonte]].forEach(function (f) {
+      if (!f[1]) return;
+      var p = hel("p"); p.appendChild(hel("strong", f[0])); p.appendChild(document.createTextNode(f[1])); parts.push(p);
+    });
+    var p = hel("p"), lk = hel("a", "Metainformação completa no site do INE");
+    lk.href = d.metainfo || x_url(varcd);
+    p.appendChild(lk);
+    if (d.periodicidade) p.appendChild(document.createTextNode(" · série " + d.periodicidade.toLowerCase() +
+      (d.primeiro ? ", desde " + d.primeiro : "")));
+    parts.push(p);
+    body.replaceChildren.apply(body, parts);
+    var names = cs.map(function (c) { return c[0].toLowerCase(); });
+    $("def-resumo").textContent = names.length
+      ? "— " + (names.length > 3 ? names.slice(0, 3).join(", ") + "…" : names.join(", "))
+      : d.formula ? "— fórmula e fonte" : "— fonte e notas";
+    box.hidden = false;
+  }
+  function x_url(varcd) { return "https://www.ine.pt/xurl/metax/" + varcd; }
+
+  // All concepts, alphabetically, with the indicators that use them.
+  function fillGlossary() {
+    var terms = {};
+    ORDER.forEach(function (v) {
+      ((DEF[v] || {}).conceitos || []).forEach(function (c) {
+        var k = fold(c[0]), t = terms[k];
+        if (!t) t = terms[k] = { nome: c[0], def: c[1], ind: [] };
+        if (t.ind.indexOf(v) < 0) t.ind.push(v);
+      });
+    });
+    var keys = Object.keys(terms).sort(function (a, b) { return a.localeCompare(b, "pt"); });
+    if (!keys.length) return;
+    var dl = $("glossario-lista"), frag = document.createDocumentFragment();
+    keys.forEach(function (k) {
+      var t = terms[k], dt = hel("dt", t.nome), dd = hel("dd", t.def), used = hel("dd", "Usado em: ", "usado");
+      dt.setAttribute("data-k", k + " " + fold(t.def));
+      t.ind.forEach(function (v, i) {
+        if (i) used.appendChild(document.createTextNode("; "));
+        var a = hel("a", IND[v].nome); a.href = "#ind=" + v;
+        a.addEventListener("click", function () { window.scrollTo(0, 0); });
+        used.appendChild(a);
+      });
+      frag.appendChild(dt); frag.appendChild(dd); frag.appendChild(used);
+    });
+    dl.replaceChildren(frag);
+    $("glossario-sec").hidden = false;
+    $("gq").addEventListener("input", function () {
+      var q = fold(this.value).split(/\s+/).filter(Boolean);
+      dl.querySelectorAll("dt").forEach(function (dt) {
+        var show = q.every(function (w) { return dt.getAttribute("data-k").indexOf(w) >= 0; });
+        dt.hidden = !show; dt.nextSibling.hidden = !show; dt.nextSibling.nextSibling.hidden = !show;
+      });
     });
   }
 
@@ -380,6 +484,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     // Text around the table
     var a = document.createElement("a"); a.href = x.url; a.textContent = x.nome;
     $("titulo").replaceChildren(a);
+    fillDefinition(st.ind);
     $("sub").textContent = [x.unidade, st.cat, t.all.length ? "dados de " + t.labels[t.all[0]] + " a " + t.labels[t.all[t.all.length - 1]] : "",
       "INE, atualizado em " + x.atualizado].filter(Boolean).join(" · ");
     var total = freg ? 156 : 19; // freguesias and concelhos of the Azores
@@ -683,10 +788,15 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   $("g-svg").addEventListener("blur", hideTip);
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(drawChart, 150); });
 
-  fetch("/dados/ine.csv")
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
-    .then(function (text) {
-      index(parseCSV(text)); fillIndicators(); fillNews(); readHash(); build(); writeHash();
+  // Definitions are optional: the page works without them.
+  var defs = fetch("/dados/ine_meta.json?v=" + BUILD)
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; });
+  Promise.all([fetch("/dados/ine.csv?v=" + BUILD)
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }), defs])
+    .then(function (res) {
+      var text = res[0]; DEF = res[1] || {};
+      index(parseCSV(text)); fillIndicators(); fillNews(); readHash(); build(); writeHash(); fillGlossary();
       // a shared link opened on this page (writeHash uses replaceState, which does not fire this)
       window.addEventListener("hashchange", function () { readHash(); build(); });
     })

@@ -4,19 +4,18 @@ minima:
   skin: solarized
 
 header_pages:
-  - dados.md
   - ine.md
   - beo.md
+  - dados.md
+  - atualizacoes.md
   - blog.md
-  - trabalhar.md
-  - rsss.md
 
 plugins:
   - jekyll-feed
 
 title: Açores.net
 lang: pt-PT
-description: Repositório de dados sobre os Açores
+description: Dados públicos sobre os Açores, num só sítio e explicados
 collections:
   alra_updates:
     output: true

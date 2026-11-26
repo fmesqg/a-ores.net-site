@@ -5,3 +5,6 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+// Current page in the top navigation
+.site-nav .page-link.atual { font-weight: bold; text-decoration: underline; text-underline-offset: .25em; }
