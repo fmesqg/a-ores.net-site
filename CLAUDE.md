@@ -32,6 +32,7 @@ poetry run isort .
 
 Jekyll site (requires Ruby/Jekyll installed separately):
 ```bash
+python3 bot/datasets.py docs   # generate docs/dados/ first (gitignored)
 cd docs && bundle exec jekyll serve
 ```
 
@@ -50,6 +51,12 @@ fetch_web_data() → compute_delta_ids() → write_update() → write_daily_json
 3. **Export** (`export.py`, `record.py`) — Converts records to Jekyll markdown with frontmatter
 4. **JSON feed** (`daily_json.py`) — Writes structured JSON to `docs/_data/daily/YYYY-MM-DD.json`
 5. **State** (`utils.py`) — Appends current run's state to `state.jsonl` (auto-rotated at 60 lines)
+
+### Open datasets (`bot/datasets.py`)
+
+Stdlib-only script, run as `python3 bot/datasets.py docs` (not `-m bot.datasets`, because `bot/__init__.py` imports the whole bot). It re-parses every `docs/_base_updates/`, `_alra_updates/` and `_joraa_updates/` page (all share the `* [title](url)` + `  * key: value` shape) and writes cumulative `docs/dados/{base,alra,joraa}.csv` (UTF-8 with BOM), `acores.db` (SQLite, typed, FTS5 `<table>_fts` with `content=[table]` so Datasette shows a search box) and `meta.json`. `docs/dados/` is gitignored: `.github/workflows/pages.yml` generates it and deploys the site (Pages source = GitHub Actions); the daily run calls that workflow after committing. BASE is deduplicated by contract id, ALRA by record URL (keeping first/last day seen and the last state), JORAA by act URL. `docs/dados.md` (`/dados/`) is a client-side search page over those CSVs: no libraries, state in the URL hash, filtered CSV export. It uses `layout: default`, because the repo's `page` layout chains to a `base.html` without `<head>`.
+
+JORAA has failed every day since 2026-08-11: jo.azores.gov.pt answers the API with a Cloudflare challenge (403 HTML), which `fetch_day_joraa` then fails to parse as JSON.
 
 ### Data Sources
 
@@ -105,6 +112,7 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 ## Key Details
 
 - **State file:** `bot/state.jsonl` is an append-only ledger (~12 MB, committed). Each line is one bot run's full state. Delta computation depends on the last entry.
+- **Deploy:** `.github/workflows/pages.yml` builds Jekyll with `actions/jekyll-build-pages` and deploys on push to main, on manual dispatch and when called by the daily run.
 - **CI/CD:** `.github/workflows/run-bot.yml` runs daily at 00:00 UTC, commits as `fmesqg-auto` if changes exist.
 - **Code style:** black (line-length 79), isort (black profile), Python >=3.11. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.
 - **Tests:** `pytest bot/tests/` runs offline by default. Network-dependent tests are marked `@pytest.mark.network` and skipped unless opted in with `-m network`.
