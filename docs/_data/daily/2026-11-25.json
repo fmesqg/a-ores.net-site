@@ -1,0 +1,347 @@
+{
+  "joraa": {
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  "base": [
+    {
+      "id": 15998022,
+      "title": "Empreitada de Reabilitação do Acesso Oeste à Praia de Porto Pim",
+      "price": "120.963,33 €",
+      "buyer": "Junta Freguesia de Angústias",
+      "seller": "Biquadrada II - Açores, Lda",
+      "procedure": "Concurso público",
+      "signing_date": "14-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15998022"
+    },
+    {
+      "id": 15997182,
+      "title": "AQUISIÇÃO DE REFEIÇÕES ESCOLARES PARA A EBS DA POVOAÇÃO PARA O ANO LETIVO 2026/2027",
+      "price": "75.285,03 €",
+      "buyer": "Escola Básica e Secundária da Povoação",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação, S.A.",
+      "procedure": "Concurso público",
+      "signing_date": "02-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15997182"
+    },
+    {
+      "id": 15996263,
+      "title": "Empreitada de Conclusão da Casa Mortuária de Santo António",
+      "price": "74.893,22 €",
+      "buyer": "Freguesia de Santo António",
+      "seller": "ALMÉRIO E CORDEIRO Cª. LDA.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15996263"
+    },
+    {
+      "id": 15993065,
+      "title": "Tem por objeto a aquisição de uma “Viatura de Recolha de Resíduos Urbanos”.",
+      "price": "74.113,90 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "DSilveira Unipessoal, Lda",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15993065"
+    },
+    {
+      "id": 15991436,
+      "title": "Empreitada de Reconstrução e Reforço da Estrutura do Pavilhão Multiusos dos Mosteiros",
+      "price": "56.978,53 €",
+      "buyer": "Município de Ponta Delgada",
+      "seller": "João Rodrigues & Filhos - Serralharia Artistica, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "23-10-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15991436"
+    },
+    {
+      "id": 15996012,
+      "title": "Concurso Público nº 2/2026/2027 - Refeições Escolares completas e ligeiras de 22 de outubro a 27 novembro de 2026",
+      "price": "51.859,80 €",
+      "buyer": "Escola Básica Integrada de Ribeira Grande",
+      "seller": "RESCATER - Prestações de Serviços LDA",
+      "procedure": "Concurso público",
+      "signing_date": "16-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15996012"
+    },
+    {
+      "id": 15998360,
+      "title": "serviços médicos no serviço de urgência pelo HSEIT, EPER",
+      "price": "35.000,00 €",
+      "buyer": "Hospital de Santo Espírito da Ilha Terceira, EPER",
+      "seller": "Sofia Areia Neves da Costa Lima",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15998360"
+    },
+    {
+      "id": 15992763,
+      "title": "Aquisição de refeições escolares para a Escola Básica Integrada de Rabo de Peixe",
+      "price": "33.451,20 €",
+      "buyer": "Escola Básica Integrada de Rabo de Peixe",
+      "seller": "Gertal - Companhia Geral de Restaurantes e Alimentação, S.A.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "11-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15992763"
+    },
+    {
+      "id": 15992606,
+      "title": "Aquisição de serviços de transportes em regime de carreira pública nas localidades a indicar pela Escola Básica Integrada de Rabo de Peixe, de ida e volta.",
+      "price": "31.312,45 €",
+      "buyer": "Escola Básica Integrada de Rabo de Peixe",
+      "seller": "VALE DO AVE AÇORES UNIPESSOAL LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "06-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15992606"
+    },
+    {
+      "id": 15991876,
+      "title": "Aquisição e Montagem de Cobertura para as Celas do Canil Municipal de São Roque do Pico",
+      "price": "23.473,00 €",
+      "buyer": "Município de São Roque do Pico",
+      "seller": "Serralharia Surrica Ld.ª",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "12-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15991876"
+    },
+    {
+      "id": 15993024,
+      "title": "AD/18/2026 - AJUSTE DIRETO PARA A AQUISIÇÃO DE MATERIAIS PARA CONSERVAÇÃO E BENEFICIAÇÃO DO CAMPO DE JOGOS DO VALE DAS FURNAS",
+      "price": "20.544,10 €",
+      "buyer": "Município da Povoação",
+      "seller": "AZORDUARTE, LDA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15993024"
+    },
+    {
+      "id": 15997687,
+      "title": "Serviços de descontaminação e limpeza dos reservatórios do Datacenter de São Miguel e fornecimento de combustível",
+      "price": "18.815,32 €",
+      "buyer": "Direção Regional das Comunicações e da Transição Digital",
+      "seller": "Segma . Serviços de Engenharia e Manutenção, Lda.",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "24-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15997687"
+    },
+    {
+      "id": 15992400,
+      "title": "Fornecimento de leite meio gordo UHT e leite meio gordo sem lactose, distribuído em embalagens com capacidade de 0,20 l, com palhinha acoplada",
+      "price": "17.051,47 €",
+      "buyer": "Escola Básica Integrada de Rabo de Peixe",
+      "seller": "Lactaçores - União das Cooperativas de Lacticínios dos Açores, UCRL",
+      "procedure": "Consulta Prévia",
+      "signing_date": "04-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15992400"
+    },
+    {
+      "id": 15998199,
+      "title": "AJD890/OA/2026  - Contratação de serviços de restauração para jantar no âmbito das comemorações do Centenário da Ordem dos Advogados – 06 de novembro",
+      "price": "11.042,00 €",
+      "buyer": "Ordem dos Advogados",
+      "seller": "PAULO DO CARMO COUTO CRUZ – SOCIEDADE UNIPESSOAL, LDA. (SOLAR DA GRAÇA)",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "25-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15998199"
+    },
+    {
+      "id": 15994888,
+      "title": "Prestação de serviços de telecomunicações móveis",
+      "price": "0,00 €",
+      "buyer": "Direção Regional das Comunicações e da Transição Digital",
+      "seller": "Vodafone Portugal - Comunicações Pessoais, SA",
+      "procedure": "Ajuste Direto Regime Geral",
+      "signing_date": "18-11-2026",
+      "url": "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15994888"
+    }
+  ],
+  "alra": {
+    "requerimentos": [
+      {
+        "id": 9637,
+        "title": "Apoios financeiros para o bem-estar animal",
+        "state_change": {
+          "from": "FORA DE PRAZO",
+          "to": "RESPOSTA TADIA"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "21/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9637"
+      },
+      {
+        "id": 9639,
+        "title": "Distribuição gratuita de soutiens pós-cirúrgicos",
+        "state_change": {
+          "from": "NO PRAZO",
+          "to": "FORA DE PRAZO"
+        },
+        "requesters": "Pedro Neves PAN",
+        "date": "23/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/4/9639"
+      }
+    ],
+    "informacoes": [
+      {
+        "id": 24589,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Governo só dá migalhas aos pescadores açorianos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24589"
+      },
+      {
+        "id": 24590,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores considera que Governo deixa pescadores sem respostas perante o aumento dos custos da atividade",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24590"
+      },
+      {
+        "id": 24591,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA acusa Governo de ser reactivo e sem estratégia para o turismo",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24591"
+      },
+      {
+        "id": 24592,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Inês Sá denuncia corte de 46 milhões de euros no investimento do Governo Regional para o Faial em 2027",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24592"
+      },
+      {
+        "id": 24593,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores considera que Governo de José Manuel Bolieiro está esgotado, sem soluções para a crise do setor do turismo e para os problemas nos transportes",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24593"
+      },
+      {
+        "id": 24594,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores acusa Governo de atrasar a transição energética e deixar famílias e empresas expostas à subida dos combustíveis",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24594"
+      },
+      {
+        "id": 24595,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - \"Governo PSD/CDS/PPM volta a falhar aos Jorgenses no Orçamento para 2027, não cumprindo compromissos assumidos há seis anos\", denuncia Isabel Teixeira",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24595"
+      },
+      {
+        "id": 24596,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige melhores acessibilidade para a ilha de São Miguel",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24596"
+      },
+      {
+        "id": 24597,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores propõe pacto de regime para garantir habitação a preços acessíveis",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24597"
+      },
+      {
+        "id": 24598,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca modernização dos transportes públicos e reforço da mobilidade em 2027",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24598"
+      },
+      {
+        "id": 24599,
+        "title": "Nota de Imprensa da representação parlamentar da IL - Plano e Orçamento para 2027: Nuno Barata (IL) alerta para mais de 17 milhões de euros de despesa adicional propostos pela oposição",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24599"
+      },
+      {
+        "id": 24600,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Orçamento 2027. PSD/Açores destaca aumento de 60% para promoção turística",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24600"
+      },
+      {
+        "id": 24601,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Pescas. Governo de Bolieiro reestrutura setor com responsabilidade e inovação",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24601"
+      },
+      {
+        "id": 24602,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA propõe cheque habitação para facilitar o acesso dos açorianos a uma casa",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24602"
+      },
+      {
+        "id": 24603,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - Mário Tomé denuncia atrasos na ampliação da pista do Aeroporto do Pico, falta de investimento no porto comercial e impasse na construção do novo Centro de Saúde das Lajes",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24603"
+      },
+      {
+        "id": 24604,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - Formação profissional tem de se adequar às necessidades do mercado",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24604"
+      },
+      {
+        "id": 24605,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores aponta Região como exemplo para o País nas políticas de Habitação",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24605"
+      },
+      {
+        "id": 24606,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores afirma que Governo Regional tem de passar das palavras aos atos em matéria de proteção ambiental e prevenção de riscos",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24606"
+      },
+      {
+        "id": 24607,
+        "title": "Nota de Imprensa do Grupo Parlamentar do PS - PS/Açores exige ao Governo uma decisão sobre a profissionalização dos bombeiros e prazos para os novos quartéis",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24607"
+      },
+      {
+        "id": 24608,
+        "title": "Comissão Política Geral - Convocatória (Dia 30/11/2026, pelas 10:00 horas)",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24608"
+      },
+      {
+        "id": 24609,
+        "title": "Convocatória - Período Legislativo de Dezembro de 2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24609"
+      },
+      {
+        "id": 24611,
+        "title": "Comissão de Economia - Convocatória (Dia 02/12/2026, pelas 10:30 horas) - Alteração",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24611"
+      },
+      {
+        "id": 24612,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - PSD/Açores destaca evolução e investimento na valorização ambiental",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24612"
+      },
+      {
+        "id": 24613,
+        "title": "Nota de Imprensa da representação parlamentar da IL - Plano e Orçamento para 2027: IL vota contra e responsabiliza PS e Chega por viabilizarem hipoteca ao futuro da Região",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24613"
+      },
+      {
+        "id": 24614,
+        "title": "Nota Informativa do Grupo Parlamentar do PSD - Orçamento 2027. PSD/Açores destaca \"aposta clara\" do Governo nos Bombeiros",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24614"
+      },
+      {
+        "id": 24615,
+        "title": "Nota de Imprensa da Representação Parlamentar do BE - Bloco vota contra Orçamento de um Governo que \"esgotou o prazo de validade e já não existe politicamente\"",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24615"
+      },
+      {
+        "id": 24616,
+        "title": "Nota de Imprensa do Grupo Parlamentar do CHEGA - CHEGA exige valorização dos bombeiros dos Açores",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/8/24616"
+      }
+    ],
+    "diarios": [
+      {
+        "id": 3038,
+        "number": "106",
+        "date": "23/10/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/10/3038"
+      }
+    ],
+    "intervencoes": [
+      {
+        "id": 3558,
+        "title": "Intervenção da Secretária Regional da Juventude, Qualificação Profissional e Emprego, Maria João Carreiro - Apresentação e debate - Plano Anual Regional para o ano de 2027 e Orçamento da Região Autónoma dos Açores para o ano de 2027.",
+        "date": "25/11/2026",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3558"
+      },
+      {
+        "id": 3559,
+        "title": "Intervenção do Secretário Regional do Ambiente e Ação Climática, Alonso Miguel - Apresentação e debate - Plano Anual Regional para o ano de 2027 e Orçamento da Região Autónoma dos Açores para o ano de 2027.",
+        "date": "25/11/D226",
+        "url": "http://base.alra.pt:82/4DACTION/w_pesquisa_registo/9/3559"
+      }
+    ]
+  },
+  "portal": {
+    "boletins": [],
+    "sigica": []
+  },
+  "date": "2026-11-25"
+}
