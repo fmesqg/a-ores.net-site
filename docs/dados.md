@@ -16,6 +16,9 @@ construção, população, turismo, câmaras): ver [Indicadores do INE](/dados/i
 **Receita e despesa do Governo Regional, mês a mês** (boletins de execução
 orçamental): ver [Execução orçamental](/dados/beo/).
 
+**O que o Tribunal de Contas diz sobre a Conta da Região** (juízo, reservas,
+recomendações e números): ver [Tribunal de Contas](/dados/tdc/).
+
 <form id="dados-form" class="dados-form" role="search" onsubmit="return false">
   <fieldset>
     <legend>Fonte</legend>
@@ -60,7 +63,9 @@ orçamental): ver [Execução orçamental](/dados/beo/).
 | [joraa.csv](/dados/joraa.csv) | atos do Jornal Oficial com montantes (portarias, despachos, resoluções) | <span data-meta="joraa"></span> |
 | [ine.csv](/dados/ine.csv) | um valor por linha: indicador, período, local (região, concelho ou freguesia), concelho, ilha, categoria, valor, unidade | <span data-meta="ine"></span> |
 | [beo.csv](/dados/beo.csv) | um valor por linha: quadro do boletim de execução orçamental, rubrica, subsetor ou departamento, medida, mês (acumulado desde janeiro), valor, boletim | <span data-meta="beo"></span> |
-| [acores.db](/dados/acores.db) | as cinco tabelas acima em SQLite, com pesquisa de texto | ver abaixo |
+| [tdc.csv](/dados/tdc.csv) | o texto dos pareceres do Tribunal de Contas sobre a Conta da Região: juízo, reservas, ênfases e recomendações (com o estado que o parecer seguinte lhes deu) | <span data-meta="tdc"></span> |
+| [tdc_valores.csv](/dados/tdc_valores.csv) | os números desses pareceres: conta consolidada, dívida total, receita e despesa fora da Conta | <span data-meta="tdc_valores"></span> |
+| [acores.db](/dados/acores.db) | as sete tabelas acima em SQLite, com pesquisa de texto | ver abaixo |
 
 Os CSV estão em UTF-8 e abrem diretamente no Excel, no LibreOffice ou no
 Google Sheets. Todos os ficheiros são refeitos todos os dias a partir das
@@ -72,12 +77,14 @@ código em [`bot/ine.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bo
 que tem a lista de indicadores. O `beo.csv` é atualizado uma vez por semana a
 partir dos PDF dos boletins, por
 [`bot/beo.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/beo.py).
+Os `tdc*.csv` mudam uma vez por ano, quando sai um parecer novo, por
+[`bot/tdc.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/tdc.py).
 Última geração: <span data-meta="gerado"></span>.
 
 ## Consultar em SQL
 
-O ficheiro [acores.db](/dados/acores.db) tem as mesmas cinco tabelas em SQLite,
-com pesquisa de texto (`base_fts`, `alra_fts`, `joraa_fts`, `ine_fts`, `beo_fts`), que
+O ficheiro [acores.db](/dados/acores.db) tem as mesmas sete tabelas em SQLite,
+com pesquisa de texto (`base_fts`, `alra_fts`, `joraa_fts`, `ine_fts`, `beo_fts`, `tdc_fts`, `tdc_valores_fts`), que
 ignora acentos.
 Abre-se no navegador com o [Datasette Lite](https://lite.datasette.io), sem
 instalar nada. A primeira abertura descarrega cerca de 37 MB e demora alguns
@@ -93,6 +100,8 @@ segundos. Também se abre com `sqlite3`, Python, R ou DuckDB.
 - [População residente por concelho, 2021 e 2025 (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20local%2C%20max%28case%20when%20periodo%20%3D%20%272021%27%20then%20valor%20end%29%20as%20pop_2021%2C%20max%28case%20when%20periodo%20%3D%20%272025%27%20then%20valor%20end%29%20as%20pop_2025%2C%20round%28100.0%20%2A%20%28max%28case%20when%20periodo%20%3D%20%272025%27%20then%20valor%20end%29%20%2F%20max%28case%20when%20periodo%20%3D%20%272021%27%20then%20valor%20end%29%20-%201%29%2C%201%29%20as%20variacao_pct%20from%20ine%20where%20varcd%20%3D%20%270012918%27%20group%20by%20local%20order%20by%20variacao_pct)
 - [Despesa por departamento no último boletim (BEO)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20dimensao%20as%20departamento%2C%20round%28valor%20%2F%201e6%2C%201%29%20as%20milhoes_eur%20from%20beo%20where%20quadro%20%3D%20%27Despesa%20do%20GRA%20por%20departamento%27%20and%20rubrica%20%3D%20%27Despesa%20efetiva%27%20and%20data%20%3D%20%28select%20max%28data%29%20from%20beo%29%20order%20by%20valor%20desc)
 - [IRS cobrado até ao mesmo mês, ano a ano (BEO)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20ano%2C%20mes%2C%20round%28valor%20%2F%201e6%2C%201%29%20as%20milhoes_eur%20from%20beo%20where%20quadro%20%3D%20%27Receita%20fiscal%20do%20GRA%27%20and%20caminho%20like%20%27%25%28IRS%29%27%20and%20medida%20like%20%27Montante%25%27%20and%20mes%20%3D%20%28select%20cast%28substr%28max%28data%29%2C%206%2C%202%29%20as%20integer%29%20from%20beo%29%20order%20by%20ano)
+- [Recomendações do Tribunal de Contas por estado, ano a ano (TdC)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20conta%2C%20situacao%2C%20count%28%2A%29%20as%20recomendacoes%20from%20tdc%20where%20tipo%20%3D%20%27recomenda%C3%A7%C3%A3o%27%20and%20situacao%20%21%3D%20%27%27%20group%20by%20conta%2C%20situacao%20order%20by%20conta%2C%20recomendacoes%20desc)
+- [Dívida total e receita e despesa fora da Conta, ano a ano (TdC)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20rubrica%2C%20group_concat%28ano%20%7C%7C%20%27%3A%20%27%20%7C%7C%20round%28valor%2C%201%29%2C%20%27%20%C2%B7%20%27%29%20as%20serie%20from%20tdc_valores%20where%20quadro%20%3D%20%27Indicadores%27%20group%20by%20rubrica)
 - [Montantes por entidade e ano (JORAA)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20entidade%2C%20substr%28publicado%2C%201%2C%204%29%20as%20ano%2C%20count%28%2A%29%20as%20atos%2C%20round%28sum%28montante%29%29%20as%20total_eur%20from%20joraa%20group%20by%20entidade%2C%20ano%20order%20by%20total_eur%20desc%20limit%20100)
 
 As consultas podem ser editadas na própria página do Datasette, e o endereço
@@ -113,6 +122,7 @@ de cada resultado pode ser partilhado.
   isso usa-se `primeiro_dia`.
 - **INE**: ver as notas na página [Indicadores do INE](/dados/ine/).
 - **BEO**: ver as notas na página [Execução orçamental](/dados/beo/).
+- **Tribunal de Contas**: ver as notas na página [Tribunal de Contas](/dados/tdc/).
 
 <noscript><p>A pesquisa precisa de JavaScript. Os CSV acima funcionam sem ele.</p></noscript>
 

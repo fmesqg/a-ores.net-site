@@ -1,0 +1,57 @@
+name: Weekly TdC update
+
+# Looks for a new Parecer do Tribunal de Contas sobre a Conta da Região
+# (bot/tdc.py) and, when one is out, adds it to data/tdc.csv and
+# data/tdc_valores.csv, commits them and redeploys the site so /dados/tdc/
+# picks it up. One parecer a year, usually in November or December; while
+# there is none, a run costs one request to tcontas.pt.
+#
+# The run fails, and GitHub emails, when tcontas.pt blocks the request, the
+# parecer cannot be read (a new layout: see bot/tdc.py), or the parecer on
+# the account of two years ago is still missing.
+
+on:
+  schedule:
+    - cron: '17 5 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install pypdf==7.2.0
+      - name: Look for a new parecer
+        run: python3 bot/tdc.py data
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          if git diff --quiet -- data/tdc.csv data/tdc_valores.csv; then
+            echo "Nothing to write."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config --global user.name "fmesqg-auto"
+            git config --global user.email "fmesqg-auto@users.noreply.github.com"
+            git add data/tdc.csv data/tdc_valores.csv
+            git commit -m "TdC parecer update"
+            git pull --rebase origin main
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy-site:
+    needs: fetch
+    if: needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
