@@ -218,6 +218,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 <script>
 (function () {
   "use strict";
+  // Build time: the data files change with every deploy, so ask for this
+  // build's copy and never mix a new page with cached old data.
+  var BUILD = "{{ site.time | date: '%s' }}";
   // Columns shown per source: [csv column, label, kind]; kind: d=date, e=euros, l=link title, t=text
   var VIEW = {
     base: { tipo: "procedimento", data: "publicado", valor: "preco", link: "url",
@@ -264,7 +267,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 
   function load(fonte) {
     if (!cache[fonte]) {
-      cache[fonte] = fetch("/dados/" + fonte + ".csv")
+      cache[fonte] = fetch("/dados/" + fonte + ".csv?v=" + BUILD)
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
         .then(parseCSV);
     }
@@ -408,7 +411,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   $("mais").addEventListener("click", function () { state.shown += PAGE * 5; render(); });
   $("exportar").addEventListener("click", exportCSV);
 
-  fetch("/dados/meta.json").then(function (r) { return r.json(); }).then(function (m) {
+  fetch("/dados/meta.json?v=" + BUILD).then(function (r) { return r.json(); }).then(function (m) {
     document.querySelectorAll("[data-meta]").forEach(function (el) {
       var k = el.getAttribute("data-meta"), x = m[k];
       el.textContent = k === "gerado" ? x.replace("T", " ") : x.linhas.toLocaleString("pt-PT") + " linhas, " + x.de + " a " + x.ate;
