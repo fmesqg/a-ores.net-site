@@ -157,6 +157,11 @@ def fetch_beo_all(known: frozenset = frozenset()) -> set:
             "content-type", ""
         ):
             found.add(url)
+        elif response.status_code != 404:  # e.g. a Cloudflare challenge
+            raise requests.exceptions.HTTPError(
+                f"BEO {y}-{m:02d}: {response.status_code} "
+                f"{response.headers.get('cf-mitigated', '')} {url}"
+            )
     return found
 
 

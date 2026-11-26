@@ -193,8 +193,14 @@ def expected_months(today: dt.date) -> list[tuple[int, int]]:
     return out
 
 
+class Blocked(Exception):
+    """The portal answered with something other than the PDF or a 404."""
+
+
 def download(url: str) -> bytes | None:
-    """The PDF, or None if it is not there (yet)."""
+    """The PDF, or None if it is not there (yet). The PDFs go through
+    Cloudflare too, which in November 2026 challenges the portal's pages but
+    not /documents/. If that changes, fail now rather than wait STALE_DAYS."""
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
@@ -202,8 +208,11 @@ def download(url: str) -> bytes | None:
     except urllib.error.HTTPError as e:
         if e.code == 404:
             return None
-        raise
-    return body if body.startswith(b"%PDF") else None
+        why = e.headers.get("cf-mitigated") or e.reason
+        raise Blocked(f"{e.code} ({why}) em {url}") from e
+    if not body.startswith(b"%PDF"):
+        raise Blocked(f"a resposta não é um PDF (Cloudflare?) em {url}")
+    return body
 
 
 def pdf_pages(data: bytes) -> list[str]:
@@ -495,7 +504,11 @@ def main(out_dir: Path, everything: bool = False) -> int:
         if url is None:
             print(f"{y}-{m:02d}: pasta do ano desconhecida (FOLDERS)")
             continue
-        data = download(url)
+        try:
+            data = download(url)
+        except Blocked as e:
+            print(f"{y}-{m:02d}: bloqueado: {e}")
+            return 1
         time.sleep(PAUSE)
         if data is None:
             print(f"{y}-{m:02d}: ainda não publicado")

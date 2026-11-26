@@ -106,6 +106,17 @@ class TestFetchBeoAll:
         assert result == set(known)
         assert h.call_count == 12
 
+    def test_cloudflare_challenge_is_an_error(self):
+        def challenge(url, **kwargs):
+            resp = MagicMock()
+            resp.status_code = 403
+            resp.headers = {"cf-mitigated": "challenge"}
+            return resp
+
+        with patch("bot.fetch.requests.head", side_effect=challenge):
+            result = fetch_beo_all()
+        assert isinstance(result, FetchError)
+
     def test_network_error(self):
         with patch(
             "bot.fetch.requests.head",

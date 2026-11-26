@@ -222,3 +222,36 @@ def test_datasets_includes_beo(tmp_path):
         "SELECT count(*) FROM beo_fts WHERE beo_fts MATCH 'saude'"
     ).fetchone()[0]
     assert hits > 0
+
+
+def _http_error(code, headers):
+    import email.message
+    import urllib.error
+
+    msg = email.message.Message()
+    for k, v in headers.items():
+        msg[k] = v
+    return urllib.error.HTTPError("u", code, "Forbidden", msg, None)
+
+
+def test_download_blocked_fails_loudly(monkeypatch, tmp_path):
+    def challenge(req, timeout):
+        raise _http_error(403, {"cf-mitigated": "challenge"})
+
+    monkeypatch.setattr(beo.urllib.request, "urlopen", challenge)
+    with pytest.raises(beo.Blocked, match="challenge"):
+        beo.download("https://example.com/x.pdf")
+
+    def not_found(req, timeout):
+        raise _http_error(404, {})
+
+    monkeypatch.setattr(beo.urllib.request, "urlopen", not_found)
+    assert beo.download("https://example.com/x.pdf") is None
+
+    # and main() stops with an error instead of "not published yet"
+    def blocked(url):
+        raise beo.Blocked("403")
+
+    monkeypatch.setattr(beo, "download", blocked)
+    monkeypatch.setattr(beo, "FIRST", (2026, 8))
+    assert beo.main(tmp_path) == 1
