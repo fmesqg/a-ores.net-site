@@ -1,5 +1,5 @@
 ---
-title: ALRA Updates
+title: Novidades da Assembleia Legislativa
 layout: default
 permalink: /alra_updates
 ---
@@ -8,8 +8,8 @@ permalink: /alra_updates
 ## [ALRA RSS feed](/rss/alra.xml)
 
 {% assign full_updates = site.alra_updates | sort: "date" | reverse %}
-{% for update in full_updates %}  <p>
-  <details>
+{% for update in full_updates limit: 30 %}  <p>
+  <details id="{{ update.date | date: "%Y-%m-%d" }}">
   <summary>
   <h2>{{ update.date | date: "%Y-%m-%d"  }}</h2>
   </summary>
@@ -17,3 +17,13 @@ permalink: /alra_updates
   </details>
   </p>
 {% endfor %}
+
+## Dias anteriores
+
+Cada dia tem a sua página. Para procurar em tudo o que foi recolhido, use os [dados abertos](/dados/).
+
+<ul class="dias">
+{% for update in full_updates offset: 30 %}<li><a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a></li>
+{% endfor %}</ul>
+
+<style>.dias { columns: 9em; list-style: none; margin-left: 0; } .dias li { margin: 0 0 .2em; }</style>

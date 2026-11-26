@@ -1,0 +1,17 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign base = "https://xn--aores-yra.net" %}
+{%- for p in site.html_pages %}{% unless p.sitemap == false or p.noindex or p.url contains "404" %}
+  <url><loc>{{ base }}{{ p.url | replace: "/index.html", "/" }}</loc></url>
+{%- endunless %}{% endfor %}
+{%- for p in site.posts %}
+  <url><loc>{{ base }}{{ p.url }}</loc><lastmod>{{ p.date | date_to_xmlschema }}</lastmod></url>
+{%- endfor %}
+{%- for c in site.collections %}{% if c.output and c.label != "posts" and c.label != "ao" %}{% for p in c.docs %}
+  <url><loc>{{ base }}{{ p.url }}</loc>{% if p.date %}<lastmod>{{ p.date | date_to_xmlschema }}</lastmod>{% endif %}</url>
+{%- endfor %}{% endif %}{% endfor %}
+</urlset>

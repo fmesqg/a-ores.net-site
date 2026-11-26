@@ -8,6 +8,7 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 ## [Dados abertos](/dados/)
 
 * [Indicadores do INE](/dados/ine/): rendimentos e IRS, rendas, construção, população, turismo e câmaras, por concelho e freguesia, comparados com a Madeira e Portugal
+* [Execução orçamental](/dados/beo/): receita e despesa do Governo Regional, mês a mês, por rubrica, função e departamento{% if site.data.beo_ultimo.periodo %} (último boletim: [{{ site.data.beo_ultimo.periodo }}]({{ site.data.beo_ultimo.url }})){% endif %}
 * [Contratos, Assembleia e Jornal Oficial](/dados/): pesquisa e CSV de tudo o que o açores.net recolheu desde agosto de 2024
 {% if site.data.ine_novidades %}
 ### Novos dados do INE
@@ -58,7 +59,7 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
   {% endfor %}
 </ul>
 
-## Atualizações automáicas
+## Atualizações automáticas
 
 ### ALRA
 
@@ -119,7 +120,7 @@ Este _site_ pretende promover uma cidadania ativa, através da disponibilizaçã
 {% for update in full_updates limit:10 %}
 
     <li>
-      <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
+      <a href="/portal_updates#{{ update.date | date: "%Y-%m-%d" }}">{{ update.date | date: "%Y-%m-%d" }}</a>
     </li>
   {% endfor %}
 </ul>

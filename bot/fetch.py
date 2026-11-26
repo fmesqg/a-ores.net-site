@@ -7,6 +7,7 @@ import aiohttp
 import requests
 from bs4 import BeautifulSoup
 
+from bot import beo
 from bot.classes import FetchError, WebData
 from bot.state import State
 from bot.utils import compute_delta_ids
@@ -93,6 +94,9 @@ def catch_requests_exceptions(func):
         except requests.exceptions.RequestException as e:
             logger.warning("%s failed: %s", func.__name__, e)
             return FetchError(e)
+        except FetchError as e:  # e.g. BASE answering null instead of JSON
+            logger.warning("%s failed: %s", func.__name__, e.info)
+            return e
 
     return wrapper
 
@@ -129,27 +133,40 @@ def fetch_day_joraa(date: str) -> list[dict]:
 
 
 @catch_requests_exceptions
-def fetch_beo_all():
-    url = "https://portal.azores.gov.pt/web/drot/beo-boletim-de-execu%C3%A7%C3%A3o-or%C3%A7amental"  # noqa: E501
-    response = requests.get(
-        url,
-    )
-    base_url = "https://portal.azores.gov.pt"
-    soup = BeautifulSoup(response.content, "html.parser")
-    a_tags = soup.find_all("a")
-    return set(
-        base_url + "/".join(href.split("/")[:-1])
-        for a in a_tags
-        if (href := a.get("href")) and "/BEO" in href
-    )
+def fetch_beo_all(known: frozenset = frozenset()) -> set:
+    """Addresses of the Boletins de Execução Orçamental of this year and the
+    last. The listing page is behind a Cloudflare challenge (since mid-2026),
+    but the PDFs are not and their names are predictable (bot/beo.py), so
+    each month not seen before is asked for directly."""
+    today = date.today()
+    found = set()
+    for y, m in beo.expected_months(today):
+        if y < today.year - 1:
+            continue
+        url = beo.pdf_url(y, m)
+        if url is None:
+            logger.warning("BEO %s: no folder for the year in beo.FOLDERS", y)
+            continue
+        if url in known:
+            found.add(url)
+            continue
+        response = requests.head(
+            url, headers={"User-Agent": beo.UA}, timeout=60
+        )
+        if response.status_code == 200 and "pdf" in response.headers.get(
+            "content-type", ""
+        ):
+            found.add(url)
+    return found
 
 
 @catch_requests_exceptions
 def fetch_sigica_all():
+    """SIGICA bulletins. The page is behind the same Cloudflare challenge
+    and answers 403 to scripts; raise, so the log says so."""
     url = "https://portal.azores.gov.pt/web/drs/sigica-boletins-informativos-2024"
-    response = requests.get(
-        url,
-    )
+    response = requests.get(url, timeout=60)
+    response.raise_for_status()
     base_url = "https://portal.azores.gov.pt/web/drs/"
     soup = BeautifulSoup(response.content, "html.parser")
     a_tags = soup.find_all("a")
@@ -344,16 +361,20 @@ def fetch_alra(delta: dict):
 
 
 def fetch_portal(prev_state: State):
-    portal = {}
+    """New BEO and SIGICA links. One source failing does not hide the
+    other; only when both fail is the whole update an error."""
+    portal, failed = {}, []
     for key, value in {
-        "boletins": fetch_beo_all(),
+        "boletins": fetch_beo_all(frozenset(prev_state.boletins)),
         "sigica": fetch_sigica_all(),
     }.items():
-        if not isinstance(value, FetchError):
-            delta = value.difference(getattr(prev_state, key))
-            portal[key] = delta
+        if isinstance(value, FetchError):
+            failed.append(value)
+            portal[key] = set()
         else:
-            portal = value
+            portal[key] = value.difference(getattr(prev_state, key))
+    if len(failed) == len(portal):
+        return failed[0]
     return portal
 
 
