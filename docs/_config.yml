@@ -4,6 +4,7 @@ minima:
   skin: solarized
 
 header_pages:
+  - dados.md
   - blog.md
   - trabalhar.md
   - rsss.md

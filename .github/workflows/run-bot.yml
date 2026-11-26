@@ -68,3 +68,11 @@ jobs:
           else
             echo "Nothing to write."
           fi
+
+  deploy-site:
+    needs: daily-bot-run
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
