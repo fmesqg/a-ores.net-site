@@ -12,6 +12,9 @@ and writes, under docs/dados/:
   joraa.csv  one row per JORAA act with an amount
   acores.db  the same three tables in SQLite, typed, indexed and with an
              FTS5 index per table (<table>_fts), for SQL and Datasette Lite
+  ine.csv    INE indicators for the Azores by region, concelho and
+             freguesia: a copy of data/ine.csv, which bot/ine.py fetches
+             weekly (it needs the network, so it is not rebuilt here)
   meta.json  row counts, date coverage, build time
 
 The CSVs are UTF-8 with BOM, so Excel opens accents correctly. The search
@@ -244,16 +247,23 @@ def write(out: Path, name: str, cols: list[str], rows: list[list]) -> dict:
 
 
 # SQLite column types (default TEXT), indexed columns and FTS columns.
-DB_TYPES = {"id": "INTEGER", "preco": "REAL", "montante": "REAL"}
+DB_TYPES = {
+    "id": "INTEGER",
+    "preco": "REAL",
+    "montante": "REAL",
+    "valor": "REAL",
+}
 DB_INDEX = {
     "base": ["publicado", "data_assinatura", "adjudicante", "adjudicatario"],
     "alra": ["tipo", "data", "primeiro_dia", "autores"],
     "joraa": ["publicado", "entidade"],
+    "ine": ["varcd", "data", "nivel", "local", "concelho"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
     "alra": ["titulo", "autores", "estado", "tipo"],
     "joraa": ["titulo", "ato", "entidade"],
+    "ine": ["indicador", "local", "concelho", "ilha", "categoria"],
 }
 
 
@@ -305,8 +315,23 @@ def main(docs: Path) -> dict:
         tables[name] = (cols, rows)
         info = write(out, name, cols, rows)
         all_days = [d for d, _ in days(docs, coll)]
-        info["de"], info["ate"] = all_days[0], all_days[-1]
+        info["de"], info["ate"] = (
+            (all_days[0], all_days[-1]) if all_days else ("", "")
+        )
         meta[name] = info
+    ine = docs.parent / "data" / "ine.csv"
+    if ine.exists():
+        with open(ine, encoding="utf-8-sig", newline="") as f:
+            reader = csv.reader(f)
+            cols, rows = next(reader), list(reader)
+        tables["ine"] = (cols, rows)
+        info = write(out, "ine", cols, rows)
+        dates = sorted(
+            r[cols.index("data")] for r in rows if r[cols.index("data")]
+        )
+        info["de"], info["ate"] = (dates[0], dates[-1]) if dates else ("", "")
+        info["indicadores"] = len({r[0] for r in rows})
+        meta["ine"] = info
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(

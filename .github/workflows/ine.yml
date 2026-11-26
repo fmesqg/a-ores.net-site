@@ -1,0 +1,51 @@
+name: Weekly INE update
+
+# Refreshes data/ine.csv (INE indicators for the Azores, bot/ine.py) and,
+# when it changed, commits it and redeploys the site so /dados/ picks it up.
+# INE publishes most regional series yearly or quarterly, so weekly is enough;
+# a full run makes ~90 requests, one per second (INE answers 429 to bursts).
+
+on:
+  schedule:
+    - cron: '17 3 * * 2'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Fetch INE indicators
+        run: python3 bot/ine.py data
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          if git diff --quiet -- data/ine.csv; then
+            echo "Nothing to write."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config --global user.name "fmesqg-auto"
+            git config --global user.email "fmesqg-auto@users.noreply.github.com"
+            git add data/ine.csv
+            git commit -m "INE weekly update"
+            git pull --rebase origin main
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy-site:
+    needs: fetch
+    if: needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
