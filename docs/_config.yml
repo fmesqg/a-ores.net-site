@@ -5,6 +5,7 @@ minima:
 
 header_pages:
   - dados.md
+  - ine.md
   - blog.md
   - trabalhar.md
   - rsss.md

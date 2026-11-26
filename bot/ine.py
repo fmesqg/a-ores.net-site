@@ -10,7 +10,8 @@ Stdlib only, like bot/datasets.py. The INE API is public and needs no key:
   metadata  https://www.ine.pt/ine/json_indicador/pindicaMeta.jsp?varcd=...
   catalogue https://www.ine.pt/ine/xml_indic.jsp?opc=2 (all ~13 000 indicators)
 
-Dim1=T asks for every period. Dim2=<*>20 asks for everything inside NUTS
+Dim1=T asks for every period. Dim2=PT,30 adds Portugal and Madeira as
+reference rows (a separate request: <*>20 does not combine with other codes). Dim2=<*>20 asks for everything inside NUTS
 code 20 (the Azores): the region, its 19 concelhos and, where the indicator
 goes that deep, its 156 freguesias. Indicators keyed on the administrative
 division (concelho 4203 = Ponta Delgada) reject that code, so they are
@@ -209,7 +210,13 @@ def nuts(geocod: str) -> str:
     return geocod
 
 
+# Reference rows next to the Azores (20): Madeira (30) and Portugal (PT).
+REFERENCES = ("30", "PT")
+
+
 def level(geocod: str) -> str:
+    if geocod == "PT":
+        return "País"
     return {2: "Região", 3: "Região", 7: "Concelho", 9: "Freguesia"}.get(
         len(geocod), ""
     )
@@ -237,7 +244,7 @@ def rows_from(varcd: str, data: dict, meta: dict) -> list[list]:
     for periodo, items in (data.get("Dados") or {}).items():
         for o in items:
             g = nuts(o.get("geocod", ""))
-            if g.startswith("200") or g == "20":
+            if g.startswith("200") or g == "20" or g in REFERENCES:
                 obs.append((periodo, g, o))
     # Which extra dimensions have a total category?
     dims: dict[str, set] = {}
@@ -300,6 +307,14 @@ def fetch(varcd: str) -> list[list]:
     if not data.get("Dados"):  # administrative division: fetch all, filter
         time.sleep(PAUSE)
         data = get_json(data_url(varcd, None))[0]
+    else:  # <*>20 cannot be combined with other codes: one more request
+        time.sleep(PAUSE)
+        try:
+            refs = get_json(data_url(varcd, ",".join(REFERENCES)))[0]
+        except Exception:  # references are a nice-to-have
+            refs = {}
+        for periodo, items in (refs.get("Dados") or {}).items():
+            data["Dados"].setdefault(periodo, []).extend(items)
     return rows_from(varcd, data, meta)
 
 

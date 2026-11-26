@@ -203,3 +203,61 @@ def test_every_indicator_has_a_theme_and_rows_carry_it():
     )
     row, *_ = ine.rows_from("0012757", DATA, META)
     assert row[ine.COLS.index("tema")] == "Rendimento e IRS"
+
+
+def test_reference_rows_portugal_and_madeira():
+    data = {
+        "Dados": {
+            "2024": [
+                {"geocod": "PT", "geodsg": "Portugal", "valor": "15075"},
+                {
+                    "geocod": "30",
+                    "geodsg": "Região Autónoma da Madeira",
+                    "valor": "15550",
+                },
+                {
+                    "geocod": "300",
+                    "geodsg": "Região Autónoma da Madeira",
+                    "valor": "15550",
+                },
+                {"geocod": "3003101", "geodsg": "Funchal", "valor": "17000"},
+                {
+                    "geocod": "20",
+                    "geodsg": "Região Autónoma dos Açores",
+                    "valor": "15615",
+                },
+            ]
+        }
+    }
+    rows = [
+        dict(zip(ine.COLS, r, strict=True))
+        for r in ine.rows_from("0012756", data, META)
+    ]
+    got = {r["geocod"]: r["nivel"] for r in rows}
+    assert got == {"PT": "País", "30": "Região", "20": "Região"}  # no Funchal
+
+
+def test_ine_news_newest_first():
+    cols = ine.COLS
+
+    def row(v, upd, periodo):
+        r = dict.fromkeys(cols, "")
+        r.update(
+            varcd=v,
+            indicador=f"I{v}",
+            tema="T",
+            atualizado=upd,
+            geocod="20",
+            periodo=periodo,
+            data=ine.period_date(periodo),
+        )
+        return [r[c] for c in cols]
+
+    rows = [
+        row("1", "2026-01-01", "2024"),
+        row("2", "2026-09-29", "2025"),
+        row("2", "2026-09-29", "2024"),
+    ]
+    news = datasets.ine_news(cols, rows)
+    assert [n["varcd"] for n in news] == ["2", "1"]
+    assert news[0]["periodo"] == "2025"

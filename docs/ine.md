@@ -7,8 +7,15 @@ permalink: /dados/ine/
 
 Estatísticas do INE para os Açores, por concelho e, quando o INE as publica,
 por freguesia. Escolha um indicador. A tabela mostra um local por linha e um
-período por coluna, com o total dos Açores em cima como referência.
+período por coluna. Em cima, como referência, os valores do INE para os
+Açores, a Madeira e Portugal. A última coluna compara o período mais recente
+com o mesmo período do ano anterior.
 Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
+
+<details id="novidades" class="ine-novidades" hidden>
+  <summary>Novos dados do INE</summary>
+  <ul id="novidades-lista"></ul>
+</details>
 
 <form id="ine-form" class="ine-form" onsubmit="return false">
   <div class="ine-row">
@@ -58,7 +65,11 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
   freguesias.
 - As séries por concelho de população, turismo e câmaras começam em 2021,
   ano em que o INE passou a usar as NUTS 2024.
-- Nos indicadores em % ou ‰, a variação é a diferença em pontos.
+- Açores (RAA), Madeira (RAM) e Portugal são os valores que o INE publica
+  para essas regiões e para o país, não médias das linhas da tabela.
+- A variação compara o período mais recente com o mesmo período do ano
+  anterior (ou com o período anterior, nas séries que não são anuais). Nos
+  indicadores em % ou ‰ é a diferença em pontos.
 - Todos os indicadores num só ficheiro: [ine.csv](/dados/ine.csv), um valor
   por linha. Também está na base de dados SQLite (tabela `ine`), descrita em
   [Dados abertos](/dados/#consultar-em-sql).
@@ -73,13 +84,17 @@ Atualizado todas as semanas. Ver também os [outros dados abertos](/dados/).
 .ine-form select:focus-visible, .ine-form input:focus-visible, th button:focus-visible { outline: 3px solid #268bd2; outline-offset: 1px; }
 #titulo { margin-bottom: .25em; font-size: 1.3em; }
 .ine-sub { color: #586e75; font-size: .9em; }
+.ine-novidades { margin-bottom: 1em; }
+.ine-novidades summary { cursor: pointer; font-weight: bold; }
+.ine-novidades ul { margin-top: .4em; }
 .ine-scroll { overflow-x: auto; }
 #tabela { font-size: .9em; border-collapse: collapse; width: auto; min-width: 100%; }
 #tabela th, #tabela td { padding: .35em .6em; white-space: nowrap; }
 #tabela td.num, #tabela th.num { text-align: right; font-variant-numeric: tabular-nums; }
 #tabela td.lugar { white-space: normal; min-width: 9em; }
 #tabela th:first-child, #tabela td:first-child { position: sticky; left: 0; background: #fdf6e3; z-index: 1; }
-#tabela tr.ref td { font-weight: bold; border-bottom: 2px solid #93a1a1; }
+#tabela tr.ref td { font-weight: bold; }
+#tabela tr.ref + tr:not(.ref) td { border-top: 2px solid #93a1a1; }
 #tabela td.ult { background-image: linear-gradient(to left, rgba(38,139,210,.18) var(--w, 0%), transparent var(--w, 0%)); }
 #tabela td.falta { color: #93a1a1; }
 #tabela td.sobe { color: #2d7a2d; }
@@ -100,7 +115,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var pct = new Intl.NumberFormat("pt-PT", { maximumFractionDigits: 1, signDisplay: "exceptZero" });
   var fold = function (s) { return (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
   var IND = {}, ORDER = [], st = { ind: "", nivel: "", ilha: "", cat: "", q: "", todos: false, ord: null, dir: -1 };
-  var table = null; // { periods, ref, rows, cols } of the current view
+  var table = null; // { periods, refs, rows, view } of the current view
+  var REF = { "20": "Açores (RAA)", "30": "Madeira (RAM)", "PT": "Portugal" };
 
   function parseCSV(text) {
     var rows = [], row = [], f = "", q = false, i = 0, c;
@@ -130,6 +146,25 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       }
       x.rows.push(r); x.niveis[r.nivel] = 1; x.cats[r.categoria] = 1;
     });
+  }
+
+  // Most recently updated indicators, newest first (INE's update date).
+  function fillNews() {
+    var news = ORDER.map(function (v) {
+      var x = IND[v], last = "";
+      x.rows.forEach(function (r) { if (r.geocod === "20" && r.data > last) { last = r.data; x.ultimo = r.periodo; } });
+      return x;
+    }).sort(function (a, b) { return b.atualizado.localeCompare(a.atualizado); }).slice(0, 8);
+    var ul = $("novidades-lista");
+    news.forEach(function (x) {
+      var li = document.createElement("li"), a = document.createElement("a");
+      a.href = "#ind=" + x.varcd; a.textContent = x.nome;
+      li.appendChild(document.createTextNode(x.atualizado + ": ")); li.appendChild(a);
+      if (x.ultimo) li.appendChild(document.createTextNode(", até " + x.ultimo));
+      ul.appendChild(li);
+    });
+    $("novidades").hidden = !news.length;
+    $("novidades").open = true;
   }
 
   function fillIndicators() {
@@ -164,11 +199,16 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     st.ilha = fillSelect($("ilha"), ilhaOrder.filter(function (i) { return ilhas[i]; }), st.ilha, "todas");
 
     // Pivot: one row per place, one column per period.
-    var periods = {}, places = {}, ref = null;
+    // Reference rows are INE's own values for the region and the country,
+    // not averages of the rows below. Columns come from Azores data only.
+    var periods = {}, places = {}, refs = {};
     x.rows.forEach(function (r) {
       if (r.categoria !== st.cat) return;
-      if (r.nivel === "Região") { ref = ref || { local: "Açores", concelho: "", ilha: "", v: {} }; ref.v[r.data] = parseFloat(r.valor); }
-      else if (r.nivel === st.nivel) {
+      if (REF[r.geocod]) {
+        var q = refs[r.geocod] || (refs[r.geocod] = { local: REF[r.geocod], concelho: "", ilha: "", v: {} });
+        q.v[r.data] = parseFloat(r.valor);
+        if (r.geocod !== "20") return;
+      } else if (r.nivel === st.nivel) {
         var p = places[r.geocod] || (places[r.geocod] = { local: r.local, concelho: r.concelho, ilha: r.ilha, v: {} });
         p.v[r.data] = parseFloat(r.valor);
       } else return;
@@ -176,21 +216,30 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     });
     var keys = Object.keys(periods).sort();
     var shown = st.todos ? keys : keys.slice(-RECENT);
-    table = { all: keys, periods: shown, labels: periods, ref: ref, rows: Object.keys(places).map(function (k) { return places[k]; }) };
+    // Change: latest period against the same period a year before (or the
+    // period before it, for series that are not yearly or have gaps).
+    var last = keys[keys.length - 1], prev = "";
+    if (last) {
+      var yearAgo = (parseInt(last.slice(0, 4), 10) - 1) + last.slice(4);
+      prev = periods[yearAgo] ? yearAgo : keys[keys.length - 2] || "";
+    }
+    table = { all: keys, periods: shown, labels: periods, last: last, prev: prev,
+      refs: Object.keys(REF).filter(function (g) { return refs[g]; }).map(function (g) { return refs[g]; }),
+      rows: Object.keys(places).map(function (k) { return places[k]; }) };
     $("todos").parentNode.hidden = keys.length <= RECENT;
     render();
   }
 
   function change(p, first, last, rate) {
     var a = p.v[first], b = p.v[last];
-    if (first === last || isNaN(a) || isNaN(b)) return NaN;
+    if (!first || first === last || a === undefined || b === undefined || isNaN(a) || isNaN(b)) return NaN;
     if (rate) return b - a;
     return a ? (b / a - 1) * 100 : NaN;
   }
 
   function render() {
     var x = IND[st.ind], t = table, rate = isRate(x.unidade);
-    var first = t.periods[0], last = t.periods[t.periods.length - 1];
+    var first = t.prev, last = t.last;
     var freg = st.nivel === "Freguesia";
     var terms = fold(st.q).split(/\s+/).filter(Boolean);
     var rows = t.rows.filter(function (p) {
@@ -217,7 +266,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     if (freg) cols.push([null, "Concelho", ""]);
     if (!st.ilha) cols.push([null, "Ilha", ""]);
     t.periods.forEach(function (d) { cols.push([d, t.labels[d], "num"]); });
-    if (t.periods.length > 1) cols.push(["var", rate ? "Variação (pontos)" : "Variação", "num"]);
+    if (t.prev) cols.push(["var", "Var. face a " + t.labels[t.prev] + (rate ? " (pontos)" : ""), "num"]);
     var tr = document.createElement("tr");
     cols.forEach(function (c) {
       var th = document.createElement("th"); th.scope = "col"; th.className = c[2];
@@ -247,14 +296,14 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
         if (v === undefined || isNaN(v)) c.className += " falta";
         if (d === last && !isRef && max && !isNaN(v)) { c.className += " ult"; c.style.setProperty("--w", (Math.abs(v) / max * 100).toFixed(1) + "%"); }
       });
-      if (t.periods.length > 1) {
+      if (t.prev) {
         var ch = change(p, first, last, rate);
         var c = td(isNaN(ch) ? "–" : pct.format(ch) + (rate ? "" : "%"), "num");
         c.className += isNaN(ch) ? " falta" : ch > 0 ? " sobe" : ch < 0 ? " desce" : "";
       }
       frag.appendChild(r);
     };
-    if (t.ref && !st.q && !st.ilha) line(t.ref, true);
+    t.refs.forEach(function (r) { line(r, true); });
     rows.forEach(function (p) { line(p, false); });
     $("tabela").tBodies[0].replaceChildren(frag);
 
@@ -272,7 +321,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     $("legenda").textContent = x.nome + ", por " + (freg ? "freguesia" : "concelho");
     $("estado").textContent = rows.length + (freg ? " freguesias" : " concelhos") + (st.ilha ? " (" + st.ilha + ")" : "") + ".";
     $("painel").hidden = false;
-    table.view = { cols: cols, rows: (t.ref && !st.q && !st.ilha ? [t.ref] : []).concat(rows), first: first, last: last, rate: rate };
+    table.view = { cols: cols, rows: t.refs.concat(rows), first: first, last: last, rate: rate };
   }
 
   function exportCSV(e) {
@@ -318,7 +367,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   fetch("/dados/ine.csv")
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
     .then(function (text) {
-      index(parseCSV(text)); fillIndicators(); readHash(); build(); writeHash();
+      index(parseCSV(text)); fillIndicators(); fillNews(); readHash(); build(); writeHash();
       // a shared link opened on this page (writeHash uses replaceState, which does not fire this)
       window.addEventListener("hashchange", function () { readHash(); build(); });
     })

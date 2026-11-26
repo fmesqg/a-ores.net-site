@@ -5,6 +5,18 @@ permalink: /
 ---
 Este _site_ pretende promover uma cidadania ativa, através da disponibilização de informação acessível e fidedigna.
 
+## [Dados abertos](/dados/)
+
+* [Indicadores do INE](/dados/ine/): rendimentos e IRS, rendas, construção, população, turismo e câmaras, por concelho e freguesia, comparados com a Madeira e Portugal
+* [Contratos, Assembleia e Jornal Oficial](/dados/): pesquisa e CSV de tudo o que o açores.net recolheu desde agosto de 2024
+{% if site.data.ine_novidades %}
+### Novos dados do INE
+
+{% for n in site.data.ine_novidades limit:5 %}
+* {{ n.atualizado }}: [{{ n.indicador | xml_escape }}](/dados/ine/#ind={{ n.varcd }}), até {{ n.periodo }}
+{% endfor %}
+{% endif %}
+
 ## [Opinião](/blog)
 
 {% assign sorted_items = site.posts | sort: 'date' | reverse %}
