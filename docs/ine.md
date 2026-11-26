@@ -166,6 +166,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 <script>
 (function () {
   "use strict";
+  // Build time: the data files change with every deploy, so ask for this
+  // build's copy and never mix a new page with cached old data.
+  var BUILD = "{{ site.time | date: '%s' }}";
   var RECENT = 6;
   var $ = function (id) { return document.getElementById(id); };
   var fmt = new Intl.NumberFormat("pt-PT", { maximumFractionDigits: 2 });
@@ -683,7 +686,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   $("g-svg").addEventListener("blur", hideTip);
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(drawChart, 150); });
 
-  fetch("/dados/ine.csv")
+  fetch("/dados/ine.csv?v=" + BUILD)
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
     .then(function (text) {
       index(parseCSV(text)); fillIndicators(); fillNews(); readHash(); build(); writeHash();
