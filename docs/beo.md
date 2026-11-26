@@ -1,5 +1,6 @@
 ---
 title: Execução orçamental
+nav_title: Contas da Região
 layout: default
 permalink: /dados/beo/
 ---
@@ -40,6 +41,10 @@ e os [outros dados abertos](/dados/).
 <div id="painel" hidden>
   <h2 id="titulo"></h2>
   <p id="sub" class="ine-sub"></p>
+  <details id="def" class="ine-def" hidden>
+    <summary><strong>Termos usados neste quadro</strong> <span id="def-resumo"></span></summary>
+    <dl id="def-corpo"></dl>
+  </details>
   <div class="ine-vista" role="group" aria-label="Vista">
     <button type="button" data-vista="ambos">Tabela e gráfico</button>
     <button type="button" data-vista="grafico">Gráfico</button>
@@ -80,6 +85,19 @@ e os [outros dados abertos](/dados/).
 
 <noscript><p>Esta página precisa de JavaScript. O ficheiro <a href="/dados/beo.csv">beo.csv</a> tem os mesmos dados.</p></noscript>
 
+<h2 id="glossario">Glossário</h2>
+
+<p class="ine-sub">Os termos do boletim em linguagem corrente. As definições
+oficiais estão na Lei de Enquadramento Orçamental e no classificador económico
+das receitas e despesas públicas (Decreto-Lei n.º 26/2002).</p>
+
+<dl class="glossario">
+{%- for g in site.data.glossario_beo %}
+  <dt id="g-{{ g.termo | slugify }}">{{ g.termo }}</dt>
+  <dd>{{ g.def }}</dd>
+{%- endfor %}
+</dl>
+
 ## Notas
 
 - Os valores vêm dos PDF do boletim, lidos por
@@ -88,12 +106,8 @@ e os [outros dados abertos](/dados/).
   se deve citar. O título de cada tabela liga ao último boletim.
 - Os boletins dão valores acumulados desde janeiro. "Mensal" é a diferença
   entre um mês e o anterior; em janeiro é o próprio valor.
-- "Execução do orçamento" é a percentagem do orçamento anual já cobrada ou
-  paga, tal como o boletim a publica.
-- GRA é o Governo Regional (os departamentos). SFA são os serviços e fundos
-  autónomos e EPR as entidades públicas reclassificadas (hospitais, por
-  exemplo). O consolidado não é a soma dos três: tira as transferências entre
-  eles.
+- O que quer dizer cada termo (receita efetiva, saldo primário, GRA, SFA,
+  EPR…) está no [glossário](#glossario), mais abaixo.
 - Os valores de 2023 vêm da coluna do ano anterior dos boletins de 2024, e só
   existem para a receita fiscal, a receita não fiscal e a despesa do GRA.
 - Os departamentos mudaram com o Governo que tomou posse em 2024. Os antigos
@@ -112,6 +126,12 @@ e os [outros dados abertos](/dados/).
 .ine-check { display: inline-flex; gap: .4em; align-items: center; margin-bottom: .5em; }
 .ine-form select:focus-visible, .ine-form input:focus-visible, th button:focus-visible { outline: 3px solid #268bd2; outline-offset: 1px; }
 #titulo { margin-bottom: .25em; font-size: 1.3em; }
+.ine-def { margin: .25em 0 .9em; padding: .5em .8em; border-left: 3px solid #268bd2; background: rgba(38,139,210,.06); font-size: .95em; max-width: 52em; }
+.ine-def summary { cursor: pointer; }
+.ine-def summary span { color: #586e75; font-size: .9em; }
+.ine-def dl, .glossario { margin: .5em 0 0; max-width: 52em; }
+.ine-def dt, .glossario dt { font-weight: bold; margin-top: .5em; }
+.ine-def dd, .glossario dd { margin: 0 0 .2em; }
 .ine-sub { color: #586e75; font-size: .9em; }
 .ine-scroll { overflow-x: auto; }
 #tabela { font-size: .9em; border-collapse: collapse; width: auto; min-width: 100%; }
@@ -177,6 +197,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var fold = function (s) { return (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
   var slug = function (s) { return fold(s).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); };
   var Q = {}, QORDER = [];
+  // docs/_data/glossario_beo.yml: plain-language terms, matched to rubricas.
+  var GLOSS = {{ site.data.glossario_beo | jsonify }};
   var st = { q: "", linhas: "rubrica", filtro: "", med: EUR, modo: "acum", graf: "tempo", busca: "", todos: false,
     ord: null, dir: 1, vista: "ambos", sel: null };
   // Categorical colours in fixed order, the same as the INE page (validated
@@ -247,6 +269,25 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     var vals = items.map(function (it) { return it[0]; });
     sel.value = vals.indexOf(keep) >= 0 ? keep : vals.indexOf(fallback) >= 0 ? fallback : vals[0] || "";
     return sel.value;
+  }
+
+  // The glossary entries that explain something in the table on screen.
+  function fillTerms(names, euros) {
+    var seen = {};
+    names.forEach(function (n) { if (n) seen[fold(n)] = 1; });
+    var hits = GLOSS.filter(function (g) {
+      if (g.medida) return !euros;
+      return (g.aplica || []).some(function (a) { return seen[fold(a)]; });
+    });
+    var dl = $("def-corpo"), frag = document.createDocumentFragment();
+    hits.forEach(function (g) {
+      var dt = document.createElement("dt"), dd = document.createElement("dd");
+      dt.textContent = g.termo; dd.textContent = g.def;
+      frag.appendChild(dt); frag.appendChild(dd);
+    });
+    dl.replaceChildren(frag);
+    $("def-resumo").textContent = hits.length ? "— " + hits.map(function (g) { return g.termo.toLowerCase(); }).slice(0, 4).join(", ") + (hits.length > 4 ? "…" : "") : "";
+    $("def").hidden = !hits.length;
   }
 
   function rubricas(x) {
@@ -425,6 +466,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     $("nota").textContent = t.prev ? "A variação compara " + longLabel(t.last) + " com " + longLabel(t.prev) +
       (t.euros ? " (só quando os dois valores são positivos)." : ", em pontos percentuais.") : "";
     $("legenda").textContent = x.nome + (st.filtro ? ", " + st.filtro : "");
+    fillTerms(rows.map(function (p) { return p.nome; }).concat([st.filtro, x.nome]), t.euros);
     $("estado").textContent = rows.length + (t.byDim ? " " + DIM[st.q][1].toLowerCase() : " rubricas") + ".";
     $("painel").hidden = false;
     document.querySelectorAll("#modo-wrap button").forEach(function (b) {

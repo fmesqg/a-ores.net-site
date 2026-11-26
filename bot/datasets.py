@@ -15,6 +15,8 @@ and writes, under docs/dados/:
   ine.csv    INE indicators for the Azores by region, concelho and
              freguesia: a copy of data/ine.csv, which bot/ine.py fetches
              weekly (it needs the network, so it is not rebuilt here)
+  ine_meta.json  definitions of each INE indicator (concepts, formula,
+             source, note): a copy of data/ine_meta.json, from bot/ine.py
   beo.csv    the regional government's monthly budget execution (Boletim
              de Execução Orçamental): a copy of data/beo.csv, which
              bot/beo.py parses from the PDFs weekly
@@ -409,6 +411,9 @@ def main(docs: Path) -> dict:
         if name == "ine":
             info["indicadores"] = len({r[0] for r in rows})
             write_ine_news(docs, cols, rows)
+            defs = docs.parent / "data" / "ine_meta.json"
+            if defs.exists():
+                (out / "ine_meta.json").write_bytes(defs.read_bytes())
         else:
             info["ultimo"] = beo_latest(cols, rows)
             (docs / "_data").mkdir(exist_ok=True)

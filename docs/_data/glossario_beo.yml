@@ -1,0 +1,151 @@
+# Terms used in the Boletim de Execução Orçamental, in plain language.
+# Shown at the bottom of /dados/beo/ and, for the terms of the table on
+# screen, under its title. "aplica" lists the rubricas (or subsetores) the
+# term explains, as they appear in data/beo.csv; matching ignores case and
+# accents.
+
+- termo: GRA, SFA, EPR e consolidado
+  def: >-
+    GRA é o Governo Regional propriamente dito (os departamentos, as
+    secretarias regionais). SFA são os serviços e fundos autónomos, que têm
+    orçamento próprio (por exemplo, fundos regionais e institutos). EPR são
+    as entidades públicas reclassificadas, empresas e outras entidades que
+    contam como administração pública (os hospitais, por exemplo). O
+    consolidado junta os três e tira as transferências entre eles, por isso
+    não é a soma das partes.
+  aplica: [Consolidado, Governo Regional (GRA), Serviços e fundos autónomos (SFA), Entidades públicas reclassificadas (EPR), Subsetores das AP]
+
+- termo: Receita corrente
+  def: >-
+    Receita que se repete todos os anos e não mexe no património: impostos,
+    contribuições, taxas, rendimentos de propriedade, transferências
+    correntes e vendas de bens e serviços correntes.
+  aplica: [Receita corrente, Correntes, Outras receitas correntes]
+
+- termo: Receita de capital
+  def: >-
+    Receita ocasional, ligada a investimento ou património: venda de
+    edifícios e terrenos, transferências para investimento (fundos europeus
+    para obras, por exemplo) e outras.
+  aplica: [Receita de capital, Capital, Outras receitas de capital, Venda de bens de investimento]
+
+- termo: Receita efetiva e despesa efetiva
+  def: >-
+    A receita ou despesa total sem as operações financeiras: sem os
+    empréstimos que a Região contrai ou concede e sem as amortizações de
+    dívida. É a base do saldo global.
+  aplica: [Receita efetiva, Despesa efetiva]
+
+- termo: Receita fiscal
+  def: >-
+    Impostos. Os diretos incidem sobre o rendimento (IRS, IRC); os
+    indiretos sobre o consumo (IVA, imposto sobre produtos petrolíferos,
+    tabaco, álcool, selo, imposto automóvel). A receita dos impostos
+    cobrados nos Açores pertence à Região, segundo a Lei das Finanças das
+    Regiões Autónomas.
+  aplica: [Receita fiscal, Impostos diretos, Impostos indiretos]
+
+- termo: Receita não fiscal
+  def: >-
+    Tudo o que não é imposto: transferências do Orçamento do Estado e da
+    União Europeia, taxas e multas, vendas de bens e serviços, rendimentos
+    de propriedade, reposições e outras receitas.
+  aplica: [Receita não fiscal, Outras receitas]
+
+- termo: Transferências
+  def: >-
+    Dinheiro recebido ou dado sem contrapartida direta. Na receita, sobretudo
+    do Estado (Orçamento do Estado) e da União Europeia; na despesa, para
+    câmaras, empresas, instituições e famílias. As correntes pagam
+    funcionamento; as de capital, investimento.
+  aplica: [Transferências, Transferências correntes, Transferências de capital, Outras transferências, Administração central - Estado, Resto do mundo, Outros setores das AP, Segurança social]
+
+- termo: Rendimentos de propriedade
+  def: >-
+    Juros de depósitos, dividendos de empresas participadas e rendas de
+    terrenos e edifícios da Região.
+  aplica: [Rendimentos de propriedade]
+
+- termo: Reposições não abatidas nos pagamentos
+  def: >-
+    Dinheiro pago a mais em anos anteriores e devolvido à Região.
+  aplica: [Reposições não abatidas nos pagamentos]
+
+- termo: Despesa corrente
+  def: >-
+    Despesa de funcionamento, que se repete todos os anos: pessoal, bens e
+    serviços, juros, subsídios e transferências correntes.
+  aplica: [Despesa corrente, Outras despesas correntes]
+
+- termo: Despesa de capital
+  def: >-
+    Investimento: obras, edifícios, equipamento (aquisição de bens de
+    capital) e transferências para investimento de outras entidades.
+  aplica: [Despesa de capital, Despesas de capital, Outras despesas de capital, Aquisição de bens de capital]
+
+- termo: Despesas com pessoal
+  def: >-
+    Salários e outros custos com trabalhadores: remunerações certas e
+    permanentes (vencimentos, subsídios de férias e de Natal), abonos
+    variáveis ou eventuais (horas extraordinárias, ajudas de custo) e as
+    contribuições da entidade patronal para a segurança social.
+  aplica: [Despesas com pessoal, Remunerações certas e permanentes, Abonos variáveis ou eventuais, Contribuições para a segurança social]
+
+- termo: Aquisição de bens e serviços correntes
+  def: >-
+    Compras para o dia a dia dos serviços: material, combustíveis e
+    energia, comunicações, rendas, limpeza, consultoria, medicamentos.
+  aplica: [Aquisição de bens e serviços correntes, Combustíveis e energia, Comunicações]
+
+- termo: Juros e outros encargos
+  def: >-
+    O custo da dívida da Região: juros e comissões dos empréstimos. A
+    amortização (devolver o capital emprestado) não entra aqui.
+  aplica: [Juros e outros encargos, Operações relacionadas com a dívida pública]
+
+- termo: Subsídios
+  def: >-
+    Pagamentos a empresas, públicas ou privadas, para baixar preços ou
+    manter um serviço (transportes, por exemplo).
+  aplica: [Subsídios]
+
+- termo: Despesa primária
+  def: >-
+    Despesa efetiva sem os juros da dívida. Mostra o que a Região gasta com
+    as suas políticas, deixando de fora o custo das dívidas passadas.
+  aplica: [Despesa primária, Despesa corrente primária]
+
+- termo: Saldo global
+  def: >-
+    Receita efetiva menos despesa efetiva. Negativo é défice: a diferença é
+    paga com dívida nova. Como os valores são acumulados desde janeiro, o
+    saldo de um mês a meio do ano não diz como acaba o ano.
+  aplica: [Saldo global]
+
+- termo: Saldo primário
+  def: >-
+    O saldo global sem os juros: receita efetiva menos despesa primária.
+  aplica: [Saldo primário]
+
+- termo: Saldo corrente e saldo de capital
+  def: >-
+    Receita corrente menos despesa corrente; receita de capital menos
+    despesa de capital. Um saldo corrente positivo quer dizer que as
+    receitas do dia a dia pagam o funcionamento e sobra para investir.
+  aplica: [Saldo corrente, Saldo de capital]
+
+- termo: Classificação por função
+  def: >-
+    Para que serve a despesa (saúde, educação, transportes, proteção
+    social), independentemente do departamento que a paga. Segue a
+    classificação internacional das funções das administrações públicas.
+    “n.e.” quer dizer “não especificado”: o que não cabe nas subfunções.
+  aplica: [Saúde n.e., Educação n.e., Proteção social n.e., Exclusão social n.e., Assuntos económicos n.e.]
+
+- termo: Execução do orçamento
+  def: >-
+    A percentagem do valor previsto no orçamento do ano que já foi cobrada
+    (receita) ou paga (despesa). A meio do ano, uma execução baixa pode
+    querer dizer atraso nos pagamentos ou orçamento inflacionado.
+  aplica: []
+  medida: true

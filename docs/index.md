@@ -3,124 +3,127 @@ title: Açores
 layout: default
 permalink: /
 ---
-Este _site_ pretende promover uma cidadania ativa, através da disponibilização de informação acessível e fidedigna.
+{%- assign alra = site.alra_updates | sort: "date" | last -%}
+{%- assign joraa = site.joraa_updates | sort: "date" | last -%}
+{%- assign base = site.base_updates | sort: "date" | last -%}
+<p class="lead">Dados públicos sobre os Açores, num só sítio e explicados:
+estatísticas por concelho e freguesia, as contas do Governo Regional,
+contratos públicos e o trabalho da Assembleia Legislativa. Cada número tem
+ligação para a fonte oficial.</p>
 
-## [Dados abertos](/dados/)
+<div class="portas">
 
-* [Indicadores do INE](/dados/ine/): rendimentos e IRS, rendas, construção, população, turismo e câmaras, por concelho e freguesia, comparados com a Madeira e Portugal
-* [Execução orçamental](/dados/beo/): receita e despesa do Governo Regional, mês a mês, por rubrica, função e departamento{% if site.data.beo_ultimo.periodo %} (último boletim: [{{ site.data.beo_ultimo.periodo }}]({{ site.data.beo_ultimo.url }})){% endif %}
-* [Contratos, Assembleia e Jornal Oficial](/dados/): pesquisa e CSV de tudo o que o açores.net recolheu desde agosto de 2024
+<section class="porta">
+  <h2><a href="/dados/ine/">Estatísticas por concelho e freguesia</a></h2>
+  <p>Rendimentos e IRS, rendas e preço das casas, população, turismo,
+  câmaras municipais. Compare o seu concelho ou freguesia com os outros, com
+  a Madeira e com o país. Cada indicador vem com a definição do INE.</p>
+  <ul>
+    <li><a href="/dados/ine/#ind=0012757&nivel=Freguesia">Quanto se ganha em cada freguesia?</a></li>
+    <li><a href="/dados/ine/#ind=0014698">Quanto custa arrendar casa?</a></li>
+    <li><a href="/dados/ine/#ind=0013210">Onde há mais turistas por habitante?</a></li>
+  </ul>
+</section>
+
+<section class="porta">
+  <h2><a href="/dados/beo/">Contas do Governo Regional</a></h2>
+  <p>Quanto a Região cobra e quanto gasta, mês a mês, a partir dos boletins
+  de execução orçamental, com um glossário dos termos.{% if site.data.beo_ultimo.periodo %}
+  Último boletim: <a href="{{ site.data.beo_ultimo.url }}">{{ site.data.beo_ultimo.periodo }}</a>.{% endif %}</p>
+  <ul>
+    <li><a href="/dados/beo/#quadro=sintese-global">Há défice ou excedente?</a></li>
+    <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra">Quanto rendem o IRS e o IVA?</a></li>
+    <li><a href="/dados/beo/#quadro=despesa-do-gra-por-departamento">Quanto gasta cada secretaria?</a></li>
+  </ul>
+</section>
+
+<section class="porta">
+  <h2><a href="/dados/">Contratos, Assembleia e Jornal Oficial</a></h2>
+  <p>Pesquise os contratos públicos (quem contratou o quê, a quem e por
+  quanto), as perguntas dos deputados ao Governo e os atos do Jornal Oficial
+  com montantes. Desde agosto de 2024, em tabela e em CSV.</p>
+  <ul>
+    <li><a href="/dados/#fonte=base&min=1000000">Contratos acima de um milhão de euros</a></li>
+    <li><a href="/dados/#fonte=alra&tipo=Requerimentos">Perguntas dos deputados ao Governo</a></li>
+    <li><a href="/dados/#fonte=joraa">Apoios e despesas publicados no Jornal Oficial</a></li>
+  </ul>
+</section>
+
+<section class="porta">
+  <h2><a href="/atualizacoes/">Acompanhar o dia a dia</a></h2>
+  <p>O que entrou de novo, todos os dias, na Assembleia Legislativa, no
+  Jornal Oficial e no portal dos contratos públicos. Pode seguir pelo site ou
+  por <a href="/rsss">RSS</a>. Última recolha:</p>
+  <ul>
+    {%- if alra %}<li><a href="{{ alra.url }}">Assembleia</a>: {{ alra.date | date: "%d/%m/%Y" }}</li>{% endif %}
+    {%- if joraa %}<li><a href="{{ joraa.url }}">Jornal Oficial</a>: {{ joraa.date | date: "%d/%m/%Y" }}</li>{% endif %}
+    {%- if base %}<li><a href="{{ base.url }}">Contratos</a>: {{ base.date | date: "%d/%m/%Y" }}</li>{% endif %}
+  </ul>
+</section>
+
+</div>
+
 {% if site.data.ine_novidades %}
-### Novos dados do INE
+## Novos dados do INE
 
-{% for n in site.data.ine_novidades limit:5 %}
-* {{ n.atualizado }}: [{{ n.indicador | xml_escape }}](/dados/ine/#ind={{ n.varcd }}), até {{ n.periodo }}
-{% endfor %}
+<ul>
+{%- for n in site.data.ine_novidades limit:5 %}
+  <li>{{ n.atualizado | date: "%d/%m/%Y" }}: <a href="/dados/ine/#ind={{ n.varcd }}">{{ n.indicador | xml_escape }}</a>, até {{ n.periodo }}</li>
+{%- endfor %}
+</ul>
 {% endif %}
 
-## [Opinião](/blog)
-
-{% assign sorted_items = site.posts | sort: 'date' | reverse %}
-{% for post in sorted_items limit:10%}
-{% if post.op %}
-  {% assign author = site.authors | where: "short_name", post.author | first %}
-  {% assign post_date = post.date | date: "%Y-%m-%d" %}
-  {% if author %}
-
-* {{ post_date }}: [{{ post.title | xml_escape }}]({{ post.url | strip }}) por [{{ author.name }}]({{ author.url }})
-  {% else %}
-* {{ post_date }}: [{{ post.title | xml_escape }}]({{ post.url | strip }}) por {{ post.author }}
-  {% endif %}
-  
-{% endif %}
-{% endfor %}
-
-## Retrato dos Açores (PORDATA)
-
-* [pdf](/assets/pdf/RetratoAçores2023.pdf)
-* [site](https://www.pordata.pt/retratos/2023/retrato+dos+acores-91)
-
-## Análises/Documentos
-
+{%- assign sorted_items = site.posts | sort: 'date' | reverse -%}
+<div class="colunas">
+<section>
+<h2><a href="/blog">Opinião</a></h2>
 <ul>
-  {% for post in site.posts %}
-  {% unless post.op %}
-    {% if post.link  %}
-    <li>
-      <a href="{{ post.page }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
-    </li>
-    {% else %}
-    <li>
-      <a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} - {{ post.title }}</a>
-    </li>
-    {% endif %}
-
-  {% endunless %}
-  {% endfor %}
+{%- assign n = 0 -%}
+{%- for post in sorted_items -%}
+{%- if post.op and n < 5 -%}
+  {%- assign n = n | plus: 1 -%}
+  {%- assign author = site.authors | where: "short_name", post.author | first %}
+  <li><a href="{{ post.url }}">{{ post.title | xml_escape }}</a>
+    <span class="meta">{% if author %}{{ author.name }}{% else %}{{ post.author }}{% endif %}, {{ post.date | date: "%d/%m/%Y" }}</span></li>
+{%- endif -%}
+{%- endfor %}
 </ul>
+<p><a href="/blog">Todos os artigos de opinião</a></p>
+</section>
 
-## Atualizações automáticas
-
-### ALRA
-
-#### [Aqui](/alra_updates) para todas as atualizações ALRA (web)
-
-#### [Aqui](/rss/alra.xml) ALRA RSS feed
-
+<section>
+<h2><a href="/blog#analises">Análises e documentos</a></h2>
 <ul>
-{% assign full_updates = site.alra_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:10 %}
-
-    <li>
-      <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
-    </li>
-  {% endfor %}
+{%- assign n = 0 -%}
+{%- for post in sorted_items -%}
+{%- unless post.op -%}{%- if n < 5 -%}
+  {%- assign n = n | plus: 1 %}
+  <li><a href="{% if post.link %}{{ post.page }}{% else %}{{ post.url }}{% endif %}">{{ post.title | xml_escape }}</a>
+    <span class="meta">{{ post.date | date: "%d/%m/%Y" }}</span></li>
+{%- endif -%}{%- endunless -%}
+{%- endfor %}
 </ul>
+<p><a href="/blog#analises">Todas as análises</a></p>
+</section>
+</div>
 
-### JORAA
+## Sobre
 
-#### [Aqui](/joraa_updates) para todas as atualizações JORAA (web)
+O açores.net pretende promover uma cidadania ativa, com informação
+acessível e fidedigna. Os dados são recolhidos automaticamente das fontes
+oficiais (INE, Governo Regional, Assembleia Legislativa, Jornal Oficial,
+portal BASE) e podem ser descarregados e reutilizados. O código está no
+[GitHub](https://github.com/fmesqg/a-ores.net-site). Ver também os
+[assuntos a trabalhar](/trabalhar).
 
-#### [Aqui](/rss/joraa.xml) JORAA RSS feed
-
-<ul>
-{% assign full_updates = site.joraa_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:10 %}
-
-    <li>
-      <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-### BASE (Açores)
-
-#### [Aqui](/base_updates) para todas as atualizações BASE (web)
-
-#### [Aqui](/rss/base.xml) BASE RSS feed
-
-<ul>
-{% assign full_updates = site.base_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:10 %}
-
-    <li>
-      <a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-### Portal (Açores)
-
-#### [Aqui](/portal_updates) para todas as atualizações do Portal (web)
-
-#### [Aqui](/rss/portal.xml) Portal-GRA RSS feed
-
-<ul>
-{% assign full_updates = site.portal_updates | sort: "date" | reverse %}
-{% for update in full_updates limit:10 %}
-
-    <li>
-      <a href="/portal_updates#{{ update.date | date: "%Y-%m-%d" }}">{{ update.date | date: "%Y-%m-%d" }}</a>
-    </li>
-  {% endfor %}
-</ul>
+<style>
+.lead { font-size: 1.15em; max-width: 40em; margin-bottom: 1.25em; }
+.portas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(17em, 100%), 1fr)); gap: 1em; margin-bottom: 1.5em; }
+.porta { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .9em 1em .4em; background: rgba(147,161,161,.08); }
+.porta h2 { font-size: 1.15em; margin: 0 0 .4em; }
+.porta p { font-size: .95em; margin-bottom: .5em; }
+.porta ul { margin: 0 0 .6em 1.1em; font-size: .95em; }
+.colunas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr)); gap: 0 2em; }
+.colunas h2 { font-size: 1.3em; }
+.meta { color: #586e75; font-size: .85em; white-space: nowrap; }
+</style>

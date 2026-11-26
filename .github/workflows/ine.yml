@@ -1,9 +1,10 @@
 name: Weekly INE update
 
-# Refreshes data/ine.csv (INE indicators for the Azores, bot/ine.py) and,
+# Refreshes data/ine.csv and data/ine_meta.json (INE indicators for the
+# Azores and their definitions, bot/ine.py) and,
 # when it changed, commits it and redeploys the site so /dados/ picks it up.
 # INE publishes most regional series yearly or quarterly, so weekly is enough;
-# a full run makes ~90 requests, one per second (INE answers 429 to bursts).
+# a full run makes ~140 requests (data, metadata and definitions), one per second (INE answers 429 to bursts).
 
 on:
   schedule:
@@ -28,13 +29,13 @@ jobs:
       - name: Commit and push if changed
         id: commit
         run: |
-          if git diff --quiet -- data/ine.csv; then
+          if git diff --quiet -- data/ine.csv data/ine_meta.json && [ -z "$(git ls-files --others --exclude-standard data/ine_meta.json)" ]; then
             echo "Nothing to write."
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config --global user.name "fmesqg-auto"
             git config --global user.email "fmesqg-auto@users.noreply.github.com"
-            git add data/ine.csv
+            git add data/ine.csv data/ine_meta.json
             git commit -m "INE weekly update"
             git pull --rebase origin main
             git push origin main
