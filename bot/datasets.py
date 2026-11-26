@@ -301,6 +301,41 @@ def write_db(path: Path, tables: dict[str, tuple[list, list]]) -> None:
     tmp.replace(path)
 
 
+def ine_news(cols: list[str], rows: list[list], limit: int = 8) -> list[dict]:
+    """Indicators most recently updated by INE, newest first, with the
+    latest period they cover."""
+    c = {k: i for i, k in enumerate(cols)}
+    by: dict[str, dict] = {}
+    for r in rows:
+        x = by.setdefault(
+            r[c["varcd"]],
+            {
+                "varcd": r[c["varcd"]],
+                "indicador": r[c["indicador"]],
+                "tema": r[c["tema"]],
+                "atualizado": r[c["atualizado"]],
+                "data": "",
+                "periodo": "",
+            },
+        )
+        if r[c["geocod"]] == "20" and r[c["data"]] > x["data"]:
+            x["data"], x["periodo"] = r[c["data"]], r[c["periodo"]]
+    news = sorted(
+        by.values(), key=lambda x: (x["atualizado"], x["data"]), reverse=True
+    )
+    return news[:limit]
+
+
+def write_ine_news(docs: Path, cols: list[str], rows: list[list]) -> None:
+    """docs/_data/ine_novidades.json, for the home page (Jekyll reads _data
+    at build time; pages.yml runs this script before Jekyll)."""
+    (docs / "_data").mkdir(exist_ok=True)
+    (docs / "_data" / "ine_novidades.json").write_text(
+        json.dumps(ine_news(cols, rows), ensure_ascii=False, indent=1),
+        encoding="utf-8",
+    )
+
+
 def main(docs: Path) -> dict:
     out = docs / "dados"
     out.mkdir(exist_ok=True)
@@ -332,6 +367,7 @@ def main(docs: Path) -> dict:
         info["de"], info["ate"] = (dates[0], dates[-1]) if dates else ("", "")
         info["indicadores"] = len({r[0] for r in rows})
         meta["ine"] = info
+        write_ine_news(docs, cols, rows)
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(
