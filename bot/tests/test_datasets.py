@@ -733,3 +733,272 @@ def test_sper_and_maiores():
         "trabalhadores": 1783,
         "pct": 100,
     }
+
+
+def test_publico_data():
+    cols = ["quadro", "indicador", "ordem", "rubrica", "local", "data"]
+    cols += ["valor", "unidade", "provisorio", "ficheiro", "pagina"]
+    ar = datasets.AR_ACORES
+    pt = "Postos de trabalho"
+    q17 = "Postos de trabalho nas administrações públicas, por carreira"
+    rows = []
+
+    def add(q, ind, ordem, rub, local, data, v, prov=""):
+        rows.append(
+            [q, ind, str(ordem), rub, local, data, str(v), "", prov, "f", "p"]
+        )
+
+    for data, k in (("2025-09-30", 0), ("2025-12-31", 0), ("2026-09-30", 1)):
+        prov = "p" if k else ""
+        add("Q1.1", pt, 42, ar, "Açores", data, 300 + 10 * k, prov)
+        add(
+            "Q1.1",
+            pt,
+            43,
+            "Órgãos do Governo Regional dos Açores",
+            "Açores",
+            data,
+            200,
+            prov,
+        )
+        add(
+            "Q1.1",
+            pt,
+            50,
+            "Educação, Cultura e Desporto",
+            "Açores",
+            data,
+            150 + 10 * k,
+            prov,
+        )
+        add(
+            "Q1.1",
+            pt,
+            51,
+            "Saúde e Segurança Social",
+            "Açores",
+            data,
+            50,
+            prov,
+        )
+        add("Q1.1", pt, 57, datasets.AR_SER, "Açores", data, 100, prov)
+        add(
+            "Q1.1",
+            pt,
+            81,
+            "Fundos de Segurança Social da Adm. Regional dos Açores",
+            "Açores",
+            data,
+            7,
+            prov,
+        )
+        add("Q1.7", q17, 9, "Total", "Açores", data, 400 + 20 * k, prov)
+        add("Q1.7", q17, 9, "Total", "Portugal", data, 10000, prov)
+        add("Q1.7", q17, 11, "Dirigente superior", "Açores", data, 20, prov)
+        add(
+            "Q1.7",
+            q17,
+            12,
+            "Dirigente superior de 1.º grau",
+            "Açores",
+            data,
+            8,
+            prov,
+        )
+        add("Q1.7", q17, 29, "Médico", "Açores", data, 30 + 5 * k, prov)
+        add(
+            "Q1.7",
+            q17,
+            45,
+            "Polícia de Segurança Pública",
+            "Açores",
+            data,
+            0,
+            prov,
+        )
+    for local, v in (("Açores", 1890.68), ("Portugal", 1974.15)):
+        add(
+            "Q1.13",
+            "Remuneração base média mensal",
+            9,
+            "Total",
+            local,
+            "2026-07-01",
+            v,
+            "p",
+        )
+        add(
+            "Q1.13",
+            "Remuneração base média mensal",
+            9,
+            "Total",
+            local,
+            "2026-04-01",
+            v - 10,
+        )
+    scols = ["serie", "indicador", "rubrica", "local", "periodo", "data"]
+    scols += ["valor", "unidade", "nota", "ficheiro", "pagina"]
+    srows = [
+        [
+            "emprego",
+            "População empregada",
+            "Total",
+            "Açores",
+            "2026-T2",
+            "2026-04-01",
+            "122",
+            "",
+            "",
+            "",
+            "u",
+        ],
+        [
+            "emprego",
+            "População empregada",
+            "Total",
+            "Açores",
+            "2026-T3",
+            "2026-07-01",
+            "2.5",
+            "",
+            "",
+            "",
+            "u",
+        ],
+        [
+            "emprego",
+            "População empregada por setor (CAE-Rev.4)",
+            "P: Administração pública e defesa",
+            "Açores",
+            "2026-T3",
+            "2026-07-01",
+            "0.3",
+            "",
+            "",
+            "",
+            "u",
+        ],
+    ]
+    sper = {
+        "ano": 2024,
+        "empresas": [
+            {"nome": "SATA", "trabalhadores": 80, "ap": False},
+            {"nome": "HDES", "trabalhadores": 70, "ap": True},
+            {"nome": "Sem ficha", "ap": False},
+        ],
+    }
+    d = datasets.publico_data((cols, rows), (scols, srows), sper)
+    assert d["data"] == "2026-09-30" and d["provisorio"]
+    assert d["periodo"] == "30 de setembro de 2026"
+    assert (d["ap"], d["ap_var"], d["ar"], d["ar_var"]) == (420, 20, 310, 10)
+    assert d["ap_pct_pais"] == 4.2
+    assert (d["fss"], d["outros"]) == (7, 103)
+    # departments and the reclassified companies (last) add up to the total
+    assert [x["nome"] for x in d["secretarias"]][
+        0
+    ] == "Educação, Cultura e Desporto"
+    assert d["secretarias"][-1]["ser"] and d["secretarias_soma_ok"]
+    # careers: groups only, no sub-rows, no zeros; the rest is "other"
+    assert [c["nome"] for c in d["carreiras"]] == [
+        "Médicos",
+        "Dirigentes superiores",
+    ]
+    assert d["carreiras_resto"] == 420 - 35 - 20
+    assert [e["ano"] for e in d["evolucao"]] == [2025, 2026]
+    assert d["evolucao"][-1]["quando"] == "30 de setembro"
+    assert d["salarios"]["acores"]["base"] == 1891
+    assert d["salarios"]["mes"] == "julho de 2026"
+    # 420 jobs in general government at the end of T3 + 80 in market
+    # companies, out of 2 500 people in work
+    w = d["peso"]
+    assert (w["ap"], w["mercado"], w["publico"]) == (420, 80, 500)
+    assert (w["publico_pct"], w["privado_pct"], w["um_em"]) == (20, 80, 5)
+    assert w["periodo"] == "3.º trimestre de 2026" and w["setor_p_mil"] == 0.3
+    assert datasets.publico_data((cols, [])) == {}
+
+
+def test_municipio_matches_spellings_and_skips_others():
+    cs = [
+        "Ribeira Grande",
+        "Calheta (R.A.A.)",
+        "Lagoa (R.A.A.)",
+        "Vila da Praia da Vitória",
+        "Santa Cruz das Flores",
+        "Santa Cruz da Graciosa",
+        "Ponta Delgada",
+    ]
+    m = datasets.municipio
+    assert m("MUNICÍPIO DA RIBEIRA GRANDE", cs) == "Ribeira Grande"
+    assert m("Municipio da  Ribeira Grande", cs) == "Ribeira Grande"
+    assert m("Município de Calheta - São Jorge", cs) == "Calheta (R.A.A.)"
+    assert m("Município de Lagoa (Açores)", cs) == "Lagoa (R.A.A.)"
+    assert m("Município da Praia da Vitória", cs) == "Vila da Praia da Vitória"
+    assert m("Município de Santa Cruz da Graciosa", cs) == (
+        "Santa Cruz da Graciosa"
+    )
+    assert m("Câmara Municipal de Ponta Delgada", cs) == "Ponta Delgada"
+    # Madeira's Calheta, the Algarve's Lagoa, SMAS and companies are not
+    assert m("Município da Calheta", cs) == ""
+    assert m("Município de Lagoa", cs) == ""
+    assert m("SMAS Câmara Municipal de Ponta Delgada", cs) == ""
+    assert m("Associação de Municípios da Ilha do Pico", cs) == ""
+    assert m("Portos dos Açores, S.A.", cs) == ""
+
+
+def test_camaras_data_per_inhabitant():
+    cols = [
+        "varcd",
+        "nivel",
+        "geocod",
+        "local",
+        "ilha",
+        "categoria",
+        "periodo",
+        "valor",
+    ]
+
+    def r(v, nivel, geo, local, periodo, valor, ilha=""):
+        return [v, nivel, geo, local, ilha, "", periodo, str(valor)]
+
+    rows = []
+    for geo, local, nivel, ilha, pop, desp in (
+        ("2004901", "Corvo", "Concelho", "Corvo", 400, 2_000_000),
+        (
+            "2004203",
+            "Ponta Delgada",
+            "Concelho",
+            "São Miguel",
+            70_000,
+            63_000_000,
+        ),
+        (
+            "20",
+            "Região Autónoma dos Açores",
+            "Região",
+            "",
+            240_000,
+            300_000_000,
+        ),
+        ("1", "Continente", "NUTS I", "", 1, 1),
+    ):
+        for ano, f in (("2021", 0.5), ("2025", 1)):
+            rows.append(r("0012918", nivel, geo, local, ano, pop, ilha))
+            rows.append(r("0013909", nivel, geo, local, ano, desp * f, ilha))
+            rows.append(r("0013908", nivel, geo, local, ano, desp * f, ilha))
+    base_cols = ["publicado", "adjudicante", "preco"]
+    base = [
+        ["2024-08-21", "Município do Corvo", "400000"],
+        ["2025-01-02", "Município do Corvo", "40000"],
+        ["2025-01-03", "Musami - Operações Municipais do Ambiente, EIM", "9"],
+    ]
+    d = datasets.camaras_data((cols, rows), (base_cols, base))
+    assert d["ano"] == "2025" and d["inicio"] == "2021"
+    corvo, pdl = d["concelhos"]
+    assert corvo["nome"] == "Corvo" and corvo["despesa_hab"] == 5000
+    assert corvo["var_pct"] == 100
+    assert corvo["contratos_n"] == 2 and corvo["contratos_hab"] == 1100
+    assert pdl["despesa_hab"] == 900 and "contratos_n" not in pdl
+    assert d["sem_contratos"] == ["Ponta Delgada"]
+    assert [x["nome"] for x in d["refs"]] == ["Açores"]
+    assert d["base_de"] == "2024-08-21"
+    assert len(d["grafico"]["pontos"]) == 2

@@ -35,11 +35,15 @@ and writes, under docs/dados/:
   maiores.csv  the 200 largest companies with head office in the Azores in
              one year (Açoriano Oriental's "100 Maiores Empresas dos
              Açores"): a copy of data/maiores_<ano>.csv, entered by hand
+  emprego_publico.csv  jobs and pay in general government in the Azores,
+             quarterly since 2011 (DGAEP, SIOE): a copy of
+             data/emprego_publico.csv (bot/dgaep.py)
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json,
 resumo.json (the numbers on /introducao/ and /dados/srea/), sper.json
-(/dados/sper/) and maiores.json (/dados/maiores-empresas/).
+(/dados/sper/), maiores.json (/dados/maiores-empresas/) and publico.json
+(/economia/setor-publico/ and the public/private split on /economia/).
 
 The CSVs are UTF-8 with BOM, so Excel opens accents correctly. The search
 page (docs/dados.md) reads them directly. None of these files is committed:
@@ -320,6 +324,7 @@ DB_INDEX = {
     "sper_empresas": ["relatorio", "sigla"],
     "sper_regiao": ["relatorio", "quadro", "ano"],
     "maiores": ["ano", "posicao", "ilha", "setor"],
+    "emprego_publico": ["quadro", "local", "data"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
@@ -334,6 +339,7 @@ DB_FTS = {
     "sper_empresas": ["empresa", "acionista", "nota"],
     "sper_regiao": ["quadro", "grupo", "rubrica"],
     "maiores": ["empresa", "ilha", "setor"],
+    "emprego_publico": ["indicador", "rubrica", "local"],
 }
 
 
@@ -1149,14 +1155,500 @@ def maiores_data(
         "publicas_pct": (
             round(100 * sum(d["vn"] for d in pub) / vn) if vn else 0
         ),
+        "privadas": len(emp) - len(pub),
+        "privadas_vn": round(vn - sum(d["vn"] for d in pub), 1),
+        "privadas_trabalhadores": sum(
+            d["trabalhadores"] for d in emp if not d["publica"]
+        ),
         "setores": groups("setor"),
         "ilhas": groups("ilha"),
         "empresas": emp,
     }
 
 
+AR_ACORES = "ADMINISTRAÇÃO REGIONAL DOS AÇORES"
+AR_SER = "dos quais: SER - Entid. Reclassif."
+AR_FORA = {
+    AR_ACORES,
+    "Órgãos do Governo Regional dos Açores",
+    "Serviços e Fundos Autónomos da AR dos Açores",
+}
+CARREIRAS = {
+    "Educ.infância e doc. ens. básico/secund.": (
+        "Educadores de infância e professores do básico e secundário"
+    ),
+    "Assist. operacional/operário/auxiliar": (
+        "Assistentes operacionais, operários e auxiliares"
+    ),
+    "Assistente técnico/administrativo": (
+        "Assistentes técnicos e administrativos"
+    ),
+    "Técnico superior": "Técnicos superiores",
+    "Enfermeiro": "Enfermeiros",
+    "Médico": "Médicos",
+    "Técnico diagnóstico e terapêutica": (
+        "Técnicos de diagnóstico e terapêutica"
+    ),
+    "Técnico superior de saúde": "Técnicos superiores de saúde",
+    "Docente ensino universitário": "Professores universitários",
+    "Representantes do poder legislativo": (
+        "Eleitos e membros de órgãos executivos"
+    ),
+    "Dirigente intermédio": "Dirigentes intermédios",
+    "Dirigente superior": "Dirigentes superiores",
+    "Informático": "Informáticos",
+    "Magistrado": "Magistrados",
+    "Oficial de justiça": "Oficiais de justiça",
+    "Pessoal de inspeção": "Inspetores",
+    "Polícia municipal": "Polícia municipal",
+}
+# the sub-rows of a group in Q1.7 ("Dirigente superior de 1.º grau",
+# "Forças Armadas - Oficial", ...)
+SUBCARREIRA = re.compile(r" de \d\.º| - ")
+MESES_DGAEP = {
+    "01": "janeiro",
+    "04": "abril",
+    "07": "julho",
+    "10": "outubro",
+}
+
+
+def _dia(data: str) -> str:
+    """'2026-09-30' -> '30 de setembro de 2026'."""
+    return f"{int(data[8:10])} de {_mes(data)}"
+
+
+def publico_data(
+    emprego: tuple[list, list],
+    srea: tuple[list, list] | None = None,
+    sper: dict | None = None,
+) -> dict:
+    """data/emprego_publico.csv (bot/dgaep.py) for /economia/setor-publico/:
+    jobs in general government in the Azores by career, the regional
+    administration by department, the yearly series and pay; with the SREA
+    employment survey and the CFP's market companies, the public and
+    private shares of the jobs in the Azores (an estimate, see the page)."""
+    rows = _dicts(emprego)
+    if not rows:
+        return {}
+
+    def serie(quadro, rubrica, local="Açores", indicador=None) -> dict:
+        return {
+            r["data"]: _num(r["valor"])
+            for r in rows
+            if r["quadro"] == quadro
+            and r["rubrica"] == rubrica
+            and r["local"] == local
+            and (indicador is None or r["indicador"] == indicador)
+        }
+
+    ar = serie("Q1.1", AR_ACORES)
+    ap = serie("Q1.7", "Total")
+    pt = serie("Q1.7", "Total", "Portugal")
+    if not ar or not ap:
+        return {}
+    last = max(ar)
+    antes = f"{int(last[:4]) - 1}{last[4:]}"
+    q11 = [r for r in rows if r["quadro"] == "Q1.1" and r["local"] == "Açores"]
+    fss = serie(
+        "Q1.1",
+        next(
+            (r["rubrica"] for r in q11 if r["rubrica"].startswith("Fundos")),
+            "",
+        ),
+    )
+    out: dict = {
+        "data": last,
+        "periodo": _dia(last),
+        "provisorio": any(r["provisorio"] for r in rows if r["data"] == last),
+        "ficheiro": rows[0]["ficheiro"],
+        "pagina": rows[0]["pagina"],
+        "ap": int(ap[last]),
+        "ap_var": int(ap[last] - ap[antes]) if antes in ap else None,
+        "ap_pct_pais": (
+            round(100 * ap[last] / pt[last], 1) if pt.get(last) else None
+        ),
+        "ar": int(ar[last]),
+        "ar_var": int(ar[last] - ar[antes]) if antes in ar else None,
+        "ar_inicio": int(ar[min(ar)]),
+        "ano_inicio": int(min(ar)[:4]),
+        "fss": int(fss.get(last) or 0),
+    }
+    # the rest of general government in the Azores: the State's services
+    # (courts, university, ...) and the municipalities and parishes
+    out["outros"] = out["ap"] - out["ar"] - out["fss"]
+
+    # regional administration by department; the reclassified companies
+    # (the hospitals EPE) are counted apart from the departments, and the
+    # two add up to the total
+    deps = []
+    for _ordem, rub in sorted({(int(r["ordem"]), r["rubrica"]) for r in q11}):
+        if rub in AR_FORA or rub.startswith("Fundos"):
+            continue
+        x = serie("Q1.1", rub)
+        if last not in x:
+            continue
+        nome = rub
+        if rub == AR_SER:
+            nome = "Hospitais EPE e outras empresas públicas contadas como administração"
+        elif rub == "Órgãos de Soberania e Entidades Independentes":
+            nome = "Assembleia Legislativa e outros órgãos independentes"
+        deps.append(
+            {
+                "nome": nome,
+                "valor": int(x[last]),
+                "var": int(x[last] - x[antes]) if antes in x else None,
+                "pct": round(100 * x[last] / ar[last], 1),
+                "ser": rub == AR_SER,
+            }
+        )
+    deps.sort(key=lambda d: (d["ser"], -d["valor"]))
+    out["secretarias"] = deps
+    out["secretarias_soma_ok"] = sum(d["valor"] for d in deps) == out["ar"]
+
+    # by career, everybody in general government in the Azores
+    q17 = {
+        r["rubrica"]
+        for r in rows
+        if r["quadro"] == "Q1.7" and r["local"] == "Açores"
+    }
+    car = []
+    for rub in q17 - {"Total"}:
+        if SUBCARREIRA.search(rub):
+            continue
+        x = serie("Q1.7", rub)
+        if not x.get(last):
+            continue
+        car.append(
+            {
+                "nome": CARREIRAS.get(rub, rub),
+                "valor": int(x[last]),
+                "var": int(x[last] - x[antes]) if antes in x else None,
+                "pct": round(100 * x[last] / ap[last], 1),
+            }
+        )
+    car.sort(key=lambda d: -d["valor"])
+    resto = out["ap"] - sum(d["valor"] for d in car[:10])
+    out["carreiras"] = car[:10]
+    out["carreiras_resto"] = resto
+    out["carreiras_resto_pct"] = round(100 * resto / ap[last], 1)
+
+    # one point a year (31 December) and the latest quarter
+    anos = sorted({d[:4] for d in ar})
+    evol = []
+    for a in anos:
+        d = (
+            f"{a}-12-31"
+            if f"{a}-12-31" in ar
+            else (last if a == last[:4] else "")
+        )
+        if not d:
+            continue
+        evol.append(
+            {
+                "ano": int(a),
+                "quando": "31 dez" if d.endswith("12-31") else _dia(d)[:-8],
+                "ar": int(ar[d]),
+                "ap": int(ap[d]) if d in ap else None,
+            }
+        )
+    out["evolucao"] = evol
+    out["evolucao_max"] = max((e["ap"] or e["ar"]) for e in evol)
+
+    # pay: general government in each region (Q1.13) and the regional
+    # administration (Q1.9), in the latest month surveyed
+    pay = {}
+    for quadro, rub, local, chave in (
+        ("Q1.13", "Total", "Açores", "acores"),
+        ("Q1.13", "Total", "Portugal", "pais"),
+        ("Q1.9", AR_ACORES, "Açores", "ar"),
+        ("Q1.9", "ADMINISTRAÇÃO REGIONAL DA MADEIRA", "Madeira", "madeira"),
+    ):
+        for ind, k in (
+            ("Remuneração base média mensal", "base"),
+            ("Ganho médio mensal", "ganho"),
+        ):
+            x = serie(quadro, rub, local, ind)
+            if x:
+                m = max(x)
+                pay.setdefault(chave, {})[k] = round(x[m])
+                pay["mes"] = f"{MESES_DGAEP.get(m[5:7], m[5:7])} de {m[:4]}"
+    out["salarios"] = pay
+
+    # public and private shares of the jobs in the Azores
+    if srea:
+        sr = _dicts(srea)
+        emp = sorted(
+            (
+                r
+                for r in sr
+                if r["serie"] == "emprego"
+                and r["indicador"] == "População empregada"
+                and r["rubrica"] == "Total"
+            ),
+            key=lambda r: r["data"],
+        )
+        if emp:
+            e = emp[-1]
+            y, q = e["periodo"].split("-T")
+            fim = f"{y}-{3 * int(q):02d}"
+            ap_q = next((v for d, v in ap.items() if d[:7] == fim), None)
+            total = _num(e["valor"]) * 1000
+            setor_p = next(
+                (
+                    _num(r["valor"])
+                    for r in sr
+                    if r["serie"] == "emprego"
+                    and r["periodo"] == e["periodo"]
+                    and r["rubrica"].startswith("P:")
+                ),
+                None,
+            )
+            mercado = 0
+            if sper:
+                mercado = sum(
+                    d.get("trabalhadores", 0)
+                    for d in sper.get("empresas", [])
+                    if not d.get("ap")
+                )
+            if ap_q:
+                pub = ap_q + mercado
+                out["peso"] = {
+                    "periodo": f"{q}.º trimestre de {y}",
+                    "emprego_mil": _num(e["valor"]),
+                    "ap": int(ap_q),
+                    "ap_pct": round(100 * ap_q / total, 1),
+                    "mercado": mercado,
+                    "mercado_ano": sper.get("ano") if sper else None,
+                    "publico": int(pub),
+                    "publico_pct": round(100 * pub / total),
+                    "um_em": round(total / pub),
+                    "privado": int(total - pub),
+                    "privado_pct": 100 - round(100 * pub / total),
+                    "setor_p_mil": setor_p,
+                    "url": e["pagina"],
+                }
+    return out
+
+
+# /financas/camaras/: the 19 câmaras municipais per inhabitant, next to other
+# sources for the same concelho.
+CAMARAS_IND = {
+    "pop": "0012918",
+    "receita": "0013908",
+    "despesa": "0013909",
+    "rnf_hab": "0013899",
+    "rendimento": "0012757",
+    "dormidas": "0013210",
+    "rsi": "0013420",
+}
+REFS = {"20": "Açores", "30": "Madeira", "PT": "Portugal"}
+NAO_CAMARA = re.compile(
+    r"associacao|servicos municipalizados|smas|operacoes municipais|"
+    r"empresa municipal|\bei ?m\b|comunidade|comercio"
+)
+# the same name exists in mainland Portugal or Madeira
+AMBIGUO = {"calheta": r"jorge|acores|raa", "lagoa": r"acores|raa"}
+
+
+def _words(s: str) -> str:
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c)).lower()
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", s).split())
+
+
+def municipio(adjudicante: str, concelhos: list[str]) -> str:
+    """The concelho whose câmara is the BASE adjudicante, or "" (also for
+    SMAS, municipal companies and associations of municipalities). BASE has
+    several spellings: "Município de Lagoa (Açores)", "Câmara Municipal de
+    Nordeste", "MUNICÍPIO DA RIBEIRA GRANDE", "Municipio da  Ribeira Grande".
+    """
+    n = _words(adjudicante)
+    if not re.search(r"\b(municipio|camara municipal)\b", n):
+        return ""
+    if NAO_CAMARA.search(n):
+        return ""
+    keys = []
+    for c in concelhos:
+        k = _words(re.sub(r"\(R\.A\.A\.\)", "", c))
+        keys.append((k.removeprefix("vila da "), c))
+    for k, c in sorted(keys, key=lambda kc: -len(kc[0])):
+        if re.search(rf"\b{k}\b", n):
+            if k in AMBIGUO and not re.search(AMBIGUO[k], n):
+                return ""
+            return c
+    return ""
+
+
+def camaras_data(
+    ine: tuple[list, list], base: tuple[list, list] | None = None
+) -> dict:
+    """Receitas and despesas of each câmara municipal per inhabitant (INE),
+    with income, tourism and RSI for the same concelho and the contracts the
+    câmara signed in BASE."""
+    rows = [r for r in _dicts(ine) if r["varcd"] in CAMARAS_IND.values()]
+    if not rows:
+        return {}
+    by: dict = {}
+    for r in rows:
+        if r["categoria"] or not r["valor"]:
+            continue
+        geo = r["geocod"]
+        if r["nivel"] != "Concelho" and geo not in REFS:
+            continue
+        by.setdefault((r["varcd"], geo), {})[r["periodo"]] = float(r["valor"])
+
+    def serie(k: str, geo: str) -> dict:
+        return by.get((CAMARAS_IND[k], geo), {})
+
+    anos = sorted(
+        {
+            a
+            for (v, _), d in by.items()
+            if v == CAMARAS_IND["despesa"]
+            for a in d
+        }
+    )
+    if not anos:
+        return {}
+    ano, inicio = anos[-1], anos[0]
+
+    def ultimo(k: str) -> str:
+        return max(
+            (a for (v, _), d in by.items() if v == CAMARAS_IND[k] for a in d),
+            default="",
+        )
+
+    anos_de = {k: ultimo(k) for k in ("rendimento", "dormidas", "rsi")}
+    nomes = {}
+    for r in rows:
+        if r["nivel"] == "Concelho":
+            nomes[r["geocod"]] = (r["local"], r["ilha"])
+    contratos: dict = {}
+    base_de = base_ate = ""
+    if base:
+        cols = base[0]
+        b = [dict(zip(cols, r, strict=False)) for r in base[1]]
+        datas = sorted(r["publicado"] for r in b if r["publicado"])
+        base_de, base_ate = (datas[0], datas[-1]) if datas else ("", "")
+        concelhos = [n for n, _ in nomes.values()]
+        for r in b:
+            c = municipio(r["adjudicante"], concelhos)
+            if c:
+                d = contratos.setdefault(c, {"n": 0, "valor": 0.0})
+                d["n"] += 1
+                d["valor"] += float(r["preco"] or 0)
+
+    def linha(geo: str, nome: str, ilha: str = "") -> dict | None:
+        pop = serie("pop", geo).get(ano)
+        desp = serie("despesa", geo).get(ano)
+        if not pop or desp is None:
+            return None
+        rec = serie("receita", geo).get(ano, 0)
+        pop0 = serie("pop", geo).get(inicio)
+        desp0 = serie("despesa", geo).get(inicio)
+        d = {
+            "nome": nome,
+            "ilha": ilha,
+            "pop": int(pop),
+            "despesa_m": round(desp / 1e6, 1),
+            "receita_m": round(rec / 1e6, 1),
+            "despesa_hab": round(desp / pop),
+            "receita_hab": round(rec / pop),
+            "rnf_hab": round(serie("rnf_hab", geo).get(ano, 0)),
+        }
+        if pop0 and desp0:
+            d["despesa_hab_inicio"] = round(desp0 / pop0)
+            d["var_pct"] = round(100 * (d["despesa_hab"] / (desp0 / pop0) - 1))
+        for k, a in anos_de.items():
+            v = serie(k, geo).get(a)
+            if v is not None:
+                d[k] = round(v, 1) if k == "rsi" else round(v)
+        if nome in contratos:
+            c = contratos[nome]
+            d["contratos_n"] = c["n"]
+            d["contratos_m"] = round(c["valor"] / 1e6, 1)
+            d["contratos_hab"] = round(c["valor"] / pop)
+        return d
+
+    lista = [
+        x for g, (n, i) in nomes.items() if (x := linha(g, n, i)) is not None
+    ]
+    lista.sort(key=lambda d: -d["despesa_hab"])
+    refs = [x for g, n in REFS.items() if (x := linha(g, n)) is not None]
+    out = {
+        "ano": ano,
+        "inicio": inicio,
+        "anos_de": anos_de,
+        "concelhos": lista,
+        "refs": refs,
+        "max_hab": max(d["despesa_hab"] for d in lista) if lista else 0,
+        "base_de": base_de,
+        "base_ate": base_ate,
+        "sem_contratos": [d["nome"] for d in lista if "contratos_n" not in d],
+        "url": {
+            k: f"https://www.ine.pt/xurl/indx/{v}"
+            for k, v in CAMARAS_IND.items()
+        },
+    }
+    out["grafico"] = _dispersao(lista)
+    return out
+
+
+def _ponto(x: float, y: float, nome: str, rotulos: dict) -> dict:
+    p = {"x": x, "y": y, "nome": nome, "rotulo": nome in rotulos}
+    if nome in rotulos:
+        dx, dy, ancora = rotulos[nome]
+        p.update(lx=round(x + dx, 1), ly=round(y + dy, 1), ancora=ancora)
+    return p
+
+
+def _dispersao(lista: list[dict]) -> dict:
+    """Positions for the scatter of population (log scale) against spending
+    per inhabitant, in a 600 x 300 viewBox."""
+    import math
+
+    if not lista:
+        return {}
+    w, h, esq, dir_, top, fundo = 600, 300, 56, 16, 12, 34
+    xs = [500, 1000, 5000, 10000, 50000]
+    lo, hi = math.log10(300), math.log10(100000)
+    ymax = 1000 * math.ceil(max(d["despesa_hab"] for d in lista) / 1000)
+
+    def x(v):
+        return round(
+            esq + (math.log10(v) - lo) / (hi - lo) * (w - esq - dir_), 1
+        )
+
+    def y(v):
+        return round(top + (1 - v / ymax) * (h - top - fundo), 1)
+
+    # label the extremes only; on the right edge the label goes to the left
+    rotulos = {
+        "Corvo": (8, 4, "start"),
+        "Lajes das Flores": (8, 4, "start"),
+        "Angra do Heroísmo": (-8, -8, "end"),
+        "Ponta Delgada": (-8, 18, "end"),
+    }
+    return {
+        "w": w,
+        "h": h,
+        "esq": esq,
+        "dir": w - dir_,
+        "base": h - fundo,
+        "top": top,
+        "pontos": [
+            _ponto(x(d["pop"]), y(d["despesa_hab"]), d["nome"], rotulos)
+            for d in lista
+        ],
+        "xt": [{"x": x(v), "v": v} for v in xs],
+        "yt": [{"y": y(v), "v": v} for v in range(0, ymax + 1, 2000)],
+    }
+
+
 def write_economia(docs: Path, tables: dict) -> None:
-    """docs/_data/sper.json and maiores.json for the Economia section."""
+    """docs/_data/sper.json, maiores.json and publico.json for the Economia
+    section."""
     (docs / "_data").mkdir(exist_ok=True)
     sper: dict = {}
     if "sper" in tables:
@@ -1187,7 +1679,16 @@ def write_economia(docs: Path, tables: dict) -> None:
                 d["posicao"] = posicao[d["sigla"]]
         if sper:
             sper["maiores_ano"] = maiores["ano"]
-    for name, data in (("sper", sper), ("maiores", maiores)):
+    publico: dict = {}
+    if "emprego_publico" in tables:
+        publico = publico_data(
+            tables["emprego_publico"], tables.get("srea"), sper
+        )
+    for name, data in (
+        ("sper", sper),
+        ("maiores", maiores),
+        ("publico", publico),
+    ):
         (docs / "_data" / f"{name}.json").write_text(
             json.dumps(_texts(data), ensure_ascii=False, indent=1),
             encoding="utf-8",
@@ -1225,6 +1726,20 @@ def _texts(node, total: float | None = None):
             else:
                 _texts(v)
     return node
+
+
+def write_camaras(docs: Path, tables: dict) -> None:
+    """docs/_data/camaras.json for /financas/camaras/."""
+    data = (
+        camaras_data(tables["ine"], tables.get("base"))
+        if "ine" in tables
+        else {}
+    )
+    (docs / "_data").mkdir(exist_ok=True)
+    (docs / "_data" / "camaras.json").write_text(
+        json.dumps(_texts(data), ensure_ascii=False, indent=1),
+        encoding="utf-8",
+    )
 
 
 def write_resumo(docs: Path, tables: dict) -> None:
@@ -1280,6 +1795,7 @@ def main(docs: Path) -> dict:
         "sper_empresas",
         "sper_regiao",
         "maiores",
+        "emprego_publico",
     ):
         src = docs.parent / "data" / f"{name}.csv"
         if name == "maiores" and maiores:
@@ -1319,6 +1835,7 @@ def main(docs: Path) -> dict:
         meta[name] = info
     write_resumo(docs, tables)
     write_economia(docs, tables)
+    write_camaras(docs, tables)
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(

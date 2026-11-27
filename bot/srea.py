@@ -18,6 +18,8 @@ Series kept, chosen for people who are not data experts:
   desemprego unemployment rate, quarterly (Inquérito ao Emprego). Each
              file has the last five quarters, so every file on the page is
              read and the history builds up in the CSV
+  emprego    people in work (thousands), total and by sector of activity
+             (CAE-Rev.4, from 2026), from the same Inquérito ao Emprego file
   dormidas   nights in hotels and in alojamento local by island, monthly
              (each file has this year and last year; history builds up)
   pib        GDP by island, annual, and pib_hab, GDP per resident using
@@ -299,12 +301,26 @@ RUBRICAS_IE = {
 }
 
 
-def parse_desemprego(book: dict[str, Rows]) -> list[dict]:
-    """Inquérito ao Emprego, Quadro 10: the last five quarters."""
-    rows = next((v for k, v in book.items() if k.strip() == "Quadro 10"), None)
+def _ie_table(
+    book: dict[str, Rows],
+    quadro: str,
+    serie: str,
+    indicador: str,
+    unidade: str,
+    rubrica_of,
+) -> list[dict]:
+    """One table of the Inquérito ao Emprego: a column per quarter (the
+    last five, or fewer in a new table), a label in the first column of a
+    block's first row and the sex (HM, H, M) in the second."""
+    rows = next((v for k, v in book.items() if k.strip() == quadro), None)
     if rows is None:
         return []
-    head = next(r for r in rows if sum("trimestre" in text(c) for c in r) >= 3)
+    head = next(
+        (r for r in rows if sum("trimestre" in text(c) for c in r) >= 3),
+        None,
+    )
+    if head is None:
+        return []
     quarters = {}
     for j, c in enumerate(head):
         m = re.match(r"(\d)\.º trimestre (\d{4})", text(c))
@@ -316,28 +332,73 @@ def parse_desemprego(book: dict[str, Rows]) -> list[dict]:
     for r in rows[rows.index(head) + 1 :]:
         if text(r[0]):
             label = text(r[0])
-        rubrica = RUBRICAS_IE.get((label, text(r[1]) if len(r) > 1 else ""))
+        rubrica = rubrica_of(label, text(r[1]) if len(r) > 1 else "")
         if not rubrica:
             continue
         for j, (y, q) in quarters.items():
-            v = number(r[j])
+            v = number(r[j]) if j < len(r) else None
             if v is None:
                 continue
             flag = text(r[j + 1]) if j + 1 < len(r) else ""
             out.append(
                 row(
-                    "desemprego",
-                    "Taxa de desemprego",
+                    serie,
+                    indicador,
                     rubrica,
                     "Açores",
                     f"{y}-T{q}",
                     f"{y}-{3 * q - 2:02d}-01",
                     v,
-                    "%",
+                    unidade,
                     NOTAS.get(flag, ""),
                 )
             )
     return out
+
+
+def parse_desemprego(book: dict[str, Rows]) -> list[dict]:
+    """Inquérito ao Emprego, Quadro 10: the last five quarters."""
+    return _ie_table(
+        book,
+        "Quadro 10",
+        "desemprego",
+        "Taxa de desemprego",
+        "%",
+        lambda label, sexo: RUBRICAS_IE.get((label, sexo)),
+    )
+
+
+def parse_emprego(book: dict[str, Rows]) -> list[dict]:
+    """Inquérito ao Emprego: people in work (thousands), the total from
+    Quadro 4 and by sector of activity from Quadro 6.1 (CAE-Rev.4, in the
+    files since 2026; the older Quadro 6 uses CAE-Rev.3, whose sections
+    have other letters, and is not read). Both sexes only."""
+    total = _ie_table(
+        book,
+        "Quadro 4",
+        "emprego",
+        "População empregada",
+        "milhares",
+        lambda label, sexo: (
+            "Total" if label == "População empregada" and sexo == "HM" else ""
+        ),
+    )
+    setores = _ie_table(
+        book,
+        "Quadro 6.1",
+        "emprego",
+        "População empregada por setor (CAE-Rev.4)",
+        "milhares",
+        lambda label, sexo: (
+            label if sexo == "HM" and label != "População empregada" else ""
+        ),
+    )
+    return total + setores
+
+
+def parse_ie(book: dict[str, Rows]) -> list[dict]:
+    """The quarterly Inquérito ao Emprego file: unemployment and jobs."""
+    return parse_desemprego(book) + parse_emprego(book)
 
 
 def parse_dormidas(book: dict[str, Rows], rubrica: str) -> list[dict]:
@@ -485,7 +546,7 @@ SERIES = [
         "desemprego",
         "mercado-de-trabalho",
         r"Quadros_Publicacao_IE|Estatisticas-\d\.o-Trim",
-        parse_desemprego,
+        parse_ie,
         True,
     ),
     (

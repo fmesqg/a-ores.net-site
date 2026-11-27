@@ -1,13 +1,23 @@
 <nav class="secao-nav" aria-label="Economia dos Açores">
-  {%- assign itens = "/economia/|Resumo;/dados/srea/|Indicadores (SREA);/dados/sper/|Empresas públicas;/dados/maiores-empresas/|Maiores empresas (revista 100 Maiores)" | split: ";" -%}
-  {%- for i in itens -%}
-    {%- assign item = i | split: "|" -%}
-    <a href="{{ item[0] }}"{% if page.url == item[0] %} aria-current="page"{% endif %}>{{ item[1] }}</a>
+  {%- assign grupos = "|/economia/|Resumo#Setor público|/economia/setor-publico/|Emprego público;/dados/sper/|Empresas públicas;/financas/|Finanças da Região#Setor privado|/dados/maiores-empresas/|Maiores empresas (revista 100 Maiores)" | split: "#" -%}
+  {%- for g in grupos -%}
+    {%- assign partes = g | split: "|" -%}
+    {%- assign nome = partes[0] -%}
+    {%- assign resto = g | remove_first: nome | remove_first: "|" | split: ";" -%}
+    <span class="grupo">{%- if nome != "" %}<b>{{ nome }}</b>{% endif -%}
+    {%- for i in resto -%}
+      {%- assign item = i | split: "|" -%}
+      <a href="{{ item[0] }}"{% if page.url == item[0] %} aria-current="page"{% endif %}>{{ item[1] }}</a>
+    {%- endfor -%}
+    </span>
   {%- endfor -%}
 </nav>
 <style>
-.secao-nav { display: flex; flex-wrap: wrap; gap: .3em .4em; margin: 0 0 1em; font-size: .92em; }
+.secao-nav { display: flex; flex-wrap: wrap; gap: .4em 1em; margin: 0 0 1em; font-size: .92em; align-items: center; }
+.secao-nav .grupo { display: flex; flex-wrap: wrap; gap: .3em .4em; align-items: center; }
+.secao-nav .grupo b { font-size: .85em; text-transform: uppercase; letter-spacing: .04em; color: #586e75; font-weight: 600; }
 .secao-nav a { padding: .25em .7em; border: 1px solid rgba(147,161,161,.6); border-radius: 999px; text-decoration: none; }
 .secao-nav a:hover { background: rgba(38,139,210,.12); }
 .secao-nav a[aria-current] { background: #268bd2; border-color: #268bd2; color: #fdf6e3; }
+@media (prefers-color-scheme: dark) { .secao-nav .grupo b { color: #93a1a1; } }
 </style>

@@ -1,0 +1,59 @@
+name: Weekly DGAEP update (public employment)
+
+# Reads the newest Síntese Estatística do Emprego Público (DGAEP, from the
+# SIOE) with bot/dgaep.py and rewrites data/emprego_publico.csv: jobs and pay
+# in general government in the Azores, quarterly since 2011. A new edition
+# comes out every quarter (mid February, May, August, November); when it
+# changes the file, the run commits it and redeploys the site so
+# /economia/setor-publico/ picks it up. A run costs two requests to
+# dgaep.gov.pt.
+#
+# The run fails, and GitHub emails, when the page or the Excel file cannot be
+# read, the tables changed layout (see bot/dgaep.py), or the newest quarter
+# is more than about six months old.
+
+on:
+  schedule:
+    - cron: '23 6 * * 5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install openpyxl==3.1.5
+      - name: Read the newest SIEP
+        run: python3 bot/dgaep.py data
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          if git diff --quiet -- data/emprego_publico.csv; then
+            echo "Nothing to write."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config --global user.name "fmesqg-auto"
+            git config --global user.email "fmesqg-auto@users.noreply.github.com"
+            git add data/emprego_publico.csv
+            git commit -m "DGAEP public employment update"
+            git pull --rebase origin main
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy-site:
+    needs: fetch
+    if: needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

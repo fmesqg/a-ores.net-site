@@ -85,6 +85,17 @@ A mais antiga vem de {{ t.desde }}.</p>
 </ul>
 </section>
 
+<section class="porta">
+<h2><a href="/financas/camaras/">Câmaras municipais, por habitante</a></h2>
+<p>Receitas e despesas das 19 câmaras divididas pela população, ao lado do
+rendimento, do turismo, do RSI e dos contratos de cada câmara no BASE.</p>
+<ul>
+  <li><a href="/financas/camaras/#despesa">Quanto gasta cada câmara por habitante?</a></li>
+  <li><a href="/financas/camaras/#tamanho">Os concelhos pequenos gastam mais?</a></li>
+  <li><a href="/financas/camaras/#cruzar">Contratos, rendimento e turismo no mesmo concelho</a></li>
+</ul>
+</section>
+
 </div>
 
 ## Como se ligam

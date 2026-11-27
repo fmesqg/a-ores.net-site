@@ -11,21 +11,23 @@ estatísticas por concelho e freguesia, as contas do Governo Regional,
 contratos públicos e o trabalho da Assembleia Legislativa. Cada número tem
 ligação para a fonte oficial. Primeira vez por aqui? Comece pela
 <a href="/introducao/"><strong>introdução aos dados dos Açores</strong></a>.
-Jornalista? Veja o <a href="/tutorial/"><strong>tutorial</strong></a>: como
-fazer notícias com estes dados, com exemplos reais.</p>
+Jornalista? O <a href="/tutorial/"><strong>guia de dados</strong></a> mostra,
+com casos reais, onde está cada número e o que tem de particular cada fonte.</p>
 
 <div class="portas">
 
 <section class="porta">
-  <h2><a href="/dados/ine/">Estatísticas por concelho e freguesia</a></h2>
-  <p>Rendimentos e IRS, rendas e preço das casas, população, turismo,
-  câmaras municipais. Compare o seu concelho ou freguesia com os outros, com
-  a Madeira e com o país. Cada indicador vem com a definição do INE.</p>
+  <h2><a href="/dados/ine/">Estatísticas</a></h2>
+  <p>Por concelho e freguesia (INE): rendimentos e IRS, rendas e preço das
+  casas, população, turismo, câmaras municipais. Para a Região, mês a mês
+  (SREA): preços, emprego, atividade e turismo por ilha. Cada indicador vem
+  com a definição oficial.</p>
   <ul>
     <li><a href="/dados/ine/#ind=0012757&nivel=Freguesia">Quanto se ganha em cada freguesia?</a></li>
     <li><a href="/dados/ine/#ind=0012759">Como se distribui o rendimento (quintis)?</a></li>
     <li><a href="/dados/ine/#ind=0014698">Quanto custa arrendar casa?</a></li>
     <li><a href="/dados/ine/#ind=0013210">Onde há mais turistas por habitante?</a></li>
+    <li><a href="/dados/srea/">Como estão os preços, o emprego e o turismo agora?</a></li>
   </ul>
 </section>
 
@@ -38,17 +40,19 @@ fazer notícias com estes dados, com exemplos reais.</p>
     <li><a href="/dados/beo/#quadro=sintese-global&modo=acum">Há défice ou excedente?</a></li>
     <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra&grafico=anos">Quanto rendem o IRS e o IVA, mês a mês?</a></li>
     <li><a href="/dados/beo/#quadro=despesa-do-gra-por-departamento">Quanto gasta cada secretaria?</a></li>
+    <li><a href="/financas/camaras/">Quanto gasta cada câmara por habitante?</a></li>
     <li><a href="/dados/tdc/">O que diz o Tribunal de Contas sobre as contas da Região?</a>{% if site.data.tdc_ultimo.conta %} (último parecer: <a href="{{ site.data.tdc_ultimo.url }}">Conta de {{ site.data.tdc_ultimo.conta }}</a>){% endif %}</li>
   </ul>
 </section>
 
 <section class="porta">
   <h2><a href="/economia/">Economia</a></h2>
-  <p>Preços, emprego e turismo, mês a mês; as empresas públicas regionais
-  (SATA, EDA, Portos, hospitais) e as 200 maiores empresas com sede nos
-  Açores (revista <cite>100 Maiores Empresas dos Açores</cite>).</p>
+  <p>Setor público e privado: quem trabalha para a Região, o Estado e as
+  autarquias, as empresas públicas regionais (SATA, EDA, Portos, hospitais)
+  e as 200 maiores empresas com sede nos Açores (revista <cite>100 Maiores
+  Empresas dos Açores</cite>).</p>
   <ul>
-    <li><a href="/dados/srea/">Como estão os preços, o emprego e o turismo agora?</a></li>
+    <li><a href="/economia/setor-publico/">Quantas pessoas trabalham para o setor público?</a></li>
     <li><a href="/dados/sper/#empresas">Quanto fatura e quanto perde cada empresa pública?</a></li>
     <li><a href="/dados/sper/#esforco">Quanto paga a Região às suas empresas?</a></li>
     <li><a href="/dados/maiores-empresas/">Quais são as maiores empresas dos Açores?</a></li>
