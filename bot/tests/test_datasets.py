@@ -1090,3 +1090,24 @@ def test_ilhas_censos_sums_concelhos():
         (x["o_pct"] for x in c), reverse=True
     )
     assert {x["nome"]: x["ilha"] for x in c}["Lajes das Flores"] == "Flores"
+
+
+def test_salario_pib_latest_common_year():
+    cols = ["varcd", "periodo", "geocod", "categoria", "valor", "url"]
+    vals = {
+        "0014103": {"20": 20000, "30": 25000, "PT": 24000},
+        "0012749": {"20": 11000, "30": 11000, "PT": 12000},
+        "0012656": {"20": 1000, "30": 1100, "PT": 1200},
+    }
+    rows = [
+        [v, "2024", g, "", str(x), f"u{v}"]
+        for v, d in vals.items()
+        for g, x in d.items()
+    ]
+    rows.append(["0014103", "2025", "20", "", "21000", "u"])  # alone
+    out = datasets.salario_pib(cols, rows)
+    assert out["ano"] == "2024"
+    a = out["locais"][0]
+    assert a["local"] == "Açores" and a["mediana_pct"] == 55
+    assert a["ganho_ano"] == 14000 and a["ganho_pct"] == 70
+    assert datasets.salario_pib(cols, rows[:3]) == {}

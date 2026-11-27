@@ -468,7 +468,63 @@ RESUMO_INE = (
     "0013420",  # RSI por 1000 habitantes
     "0014698",  # renda mediana, novos contratos (€/m²)
     "0013210",  # dormidas por 100 habitantes
+    "0014103",  # PIB por habitante
+    "0014663",  # inflação (IPC, variação homóloga)
+    "0012136",  # taxa de desemprego, trimestral
+    "0012749",  # rendimento bruto mediano por sujeito passivo
 )
+PIB_HAB, MEDIANA_BRUTO, GANHO = "0014103", "0012749", "0012656"
+
+
+def salario_pib(cols: list[str], rows: list[list]) -> dict:
+    """Gross pay against GDP per head, Açores/Madeira/país, for the latest
+    year with the three series: the median gross income declared per
+    taxpayer (IRS, annual) and the mean monthly earnings (Quadros de
+    Pessoal) times 14, an açores.net estimate of a year's pay."""
+    c = {k: i for i, k in enumerate(cols)}
+    val: dict[tuple, float] = {}
+    url = {}
+    for r in rows:
+        v, g = r[c["varcd"]], r[c["geocod"]]
+        if v in (PIB_HAB, MEDIANA_BRUTO, GANHO) and g in ("20", "30", "PT"):
+            if not r[c["categoria"]] and (x := _num(r[c["valor"]])):
+                val[(v, g, r[c["periodo"]])] = x
+                url[v] = r[c["url"]]
+    anos = [
+        a
+        for a in {k[2] for k in val}
+        if all(
+            (v, g, a) in val
+            for v in (PIB_HAB, MEDIANA_BRUTO, GANHO)
+            for g in ("20", "30", "PT")
+        )
+    ]
+    if not anos:
+        return {}
+    ano = max(anos)
+    locais = []
+    for g, nome in (("20", "Açores"), ("30", "Madeira"), ("PT", "Portugal")):
+        pib = val[(PIB_HAB, g, ano)]
+        med = val[(MEDIANA_BRUTO, g, ano)]
+        ganho = val[(GANHO, g, ano)]
+        locais.append(
+            {
+                "local": nome,
+                "pib": pib,
+                "mediana": med,
+                "mediana_pct": round(100 * med / pib),
+                "ganho": ganho,
+                "ganho_ano": round(ganho * 14),
+                "ganho_pct": round(100 * ganho * 14 / pib),
+            }
+        )
+    return {
+        "ano": ano,
+        "locais": locais,
+        "url_pib": url[PIB_HAB],
+        "url_mediana": url[MEDIANA_BRUTO],
+        "url_ganho": url[GANHO],
+    }
 
 
 def _num(v: str) -> float | None:
@@ -1921,6 +1977,7 @@ def write_resumo(docs: Path, tables: dict) -> None:
     out: dict = {}
     if "ine" in tables:
         out["ine"] = resumo_ine(*tables["ine"])
+        out["salario_pib"] = salario_pib(*tables["ine"])
     if "beo" in tables:
         out["beo"] = resumo_beo(*tables["beo"])
         pop = out.get("ine", {}).get("0012918", {}).get("acores")

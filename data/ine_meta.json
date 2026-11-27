@@ -651,6 +651,78 @@
   ],
   "observacoes": "Contagem"
  },
+ "0014103": {
+  "titulo": "Produto interno bruto (B.1*g) por habitante a preços correntes (Base 2021 - €) por Localização geográfica (NUTS - 2024); Anual - INE, Contas económicas regionais",
+  "periodicidade": "Anual",
+  "primeiro": "1995",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "atualizado": "2025-12-19",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014103",
+  "fonte": "INE, Contas económicas regionais",
+  "conceitos": [
+   [
+    "Produto interno bruto",
+    "Resultado final da atividade de produção das unidades produtivas residentes na região ou no país no período de referência e que é calculado segundo a ótica da produção, da despesa e do rendimento."
+   ],
+   [
+    "População média",
+    "População calculada pela média aritmética dos efetivos em dois momentos de observação, habitualmente em dois finais de anos consecutivos."
+   ]
+  ],
+  "formula": "Produto interno bruto a preços correntes/ População média anual residente"
+ },
+ "0014663": {
+  "titulo": "Índice de preços no consumidor (Taxa de variação homóloga - Base 2025 - %) por Localização geográfica (NUTS II - 2024) e Consumo individual por objetivo; Mensal - INE, Índice de preços no consumidor",
+  "periodicidade": "Mensal",
+  "primeiro": "Janeiro de 1992",
+  "ultimo": "Outubro de 2026",
+  "unidade": "Percentagem (%)",
+  "atualizado": "2026-11-11",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014663",
+  "fonte": "INE, Índice de preços no consumidor",
+  "conceitos": [
+   [
+    "Território económico",
+    "Território que consiste em: a) a área (território geográfico) sob a administração efetiva e o controlo económico de uma única administração pública; b) as zonas francas, incluindo entrepostos e fábricas sob controlo aduaneiro; c) o espaço aéreo nacional, as águas territoriais e a plataforma continental situada em águas internacionais em relação à qual o país dispõe de direitos exclusivos; d) os enclaves territoriais, isto é, os territórios geográficos situados no resto do mundo e utilizados, em virtude de tratados internacionais ou de acordos entre Estados, por administrações públicas do país (embaixadas, consulados, bases militares, bases científicas, etc.); e) os jazigos (de petróleo, gás natural, etc.) situados em águas internacionais fora da plataforma continental do país, explorados por unidades residentes no território."
+   ],
+   [
+    "Preço no consumidor",
+    "Quantia paga pelas famílias na aquisição de bens e serviços individuais baseados em transações monetárias. Esta quantia corresponde ao valor que o adquirente efetivamente paga no momento de aquisição e inclui todos os impostos indiretos líquidos de subsídios sobre os produtos, reduções e descontos desde que de aplicação generalizada aos consumidores, e exclui juros e outros custos associados à compra a crédito."
+   ],
+   [
+    "População residente",
+    "Conjunto de pessoas que, independentemente de estarem presentes ou ausentes num determinado alojamento no momento de observação, viveram no seu local de residência habitual por um período contínuo de, pelo menos, 12 meses anteriores ao momento de observação, ou que chegaram ao seu local de residência habitual durante o período correspondente aos 12 meses anteriores ao momento de observação, com a intenção de aí permanecer por um período mínimo de um ano."
+   ]
+  ],
+  "formula": "[(IPC ano n, mês t)/ (IPC ano (n-1), mês t)-1]*100"
+ },
+ "0012136": {
+  "titulo": "Taxa de desemprego (Série 2021 - %) por Local de residência (NUTS - 2024) e Sexo; Trimestral - INE, Inquérito ao emprego (Série - 2021)",
+  "periodicidade": "Trimestral",
+  "primeiro": "1.º Trimestre de 2011",
+  "ultimo": "3.º Trimestre de 2026",
+  "unidade": "Percentagem (%)",
+  "nota": "Todas as estimativas relativas à série de 2011 (em vigor do 1.º trimestre de 2011 ao 4.º trimestre de 2020) foram revistas no âmbito do exercício de reconciliação com a série de 2021, possibilitando assim a comparação das estimativas entre as duas séries.",
+  "atualizado": "2026-11-04",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012136",
+  "fonte": "INE, Inquérito ao emprego (Série - 2021)",
+  "conceitos": [
+   [
+    "Taxa de desemprego",
+    "Taxa que define a relação entre a população desempregada e a população ativa."
+   ],
+   [
+    "População ativa",
+    "População formada por todos os indivíduos ativos."
+   ],
+   [
+    "Sexo",
+    "Características biológicas e fisiológicas que definem homens e mulheres."
+   ]
+  ],
+  "formula": "(População desempregada/ População ativa)*100"
+ },
  "0012656": {
   "titulo": "Ganho médio mensal (€) por Localização geográfica (NUTS - 2024); Anual - MTSSS/GEP, Quadros de pessoal",
   "periodicidade": "Anual",
