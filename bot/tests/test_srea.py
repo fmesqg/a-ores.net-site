@@ -222,3 +222,93 @@ def test_parse_emprego_total_and_sectors():
     assert {r["unidade"] for r in rows} == {"milhares"}
     both = srea.parse_ie(book)
     assert len(both) == 6  # no Quadro 10 here
+
+
+def test_parse_pagamentos():
+    head = [
+        "Ano",
+        "Canal",
+        "Mês",
+        "Concelho",
+        "Tipo de Operação",
+        "Origem do cartão",
+        "Valor (euros)",
+    ]
+    tpa, ca = "Terminais de Pagamento Automático", "Caixas Automáticos"
+    book = {
+        "PIVOT - Valor": [["", "Valor (€)"]],
+        "DADOS - Valor": [
+            head,
+            ["2026", tpa, "Outubro", "Corvo", "Compras", "Portugal", 100],
+            ["2026", tpa, "Outubro", "Corvo", "Compras", "Outro país", 40],
+            ["2026", tpa, "Outubro", "Lagoa", "Compras", "Portugal", 10],
+            ["2026", tpa, "Outubro", "Lagoa", "Outras Operações", "x", 99],
+            ["2026", ca, "Março", "Lagoa", "Levantamentos", "Portugal", 7],
+            ["2026", ca, "Março", "Lagoa", "Consultas", "Portugal", 0],
+        ],
+    }
+    rows = srea.parse_pagamentos(book, "Valor", "€", concelhos=True)
+    got = {(r["rubrica"], r["local"], r["periodo"]): r["valor"] for r in rows}
+    assert got[("Compras em TPA", "Açores", "2026-10")] == 150
+    assert got[("Compras em TPA", "Corvo", "2026-10")] == 140
+    assert (
+        got[("Compras em TPA com cartões estrangeiros", "Açores", "2026-10")]
+        == 40
+    )
+    assert got[("Levantamentos em CA", "Lagoa", "2026-03")] == 7
+    assert len(got) == 7
+    only = srea.parse_pagamentos(book, "Número", "operações", concelhos=False)
+    assert {r["local"] for r in only} == {"Açores"}
+
+
+def test_parse_pde_newer_notification_wins():
+    def post(date, text):
+        return {"date": date, "link": f"https://srea/{date}/", "content": text}
+
+    posts = [
+        post(
+            "2026-09-23",
+            "<p>Em 2025 (resultados provisórios), a necessidade de "
+            "financiamento da Administração Pública da Região Autónoma dos "
+            "Açores foi de 305,5 milhões de euros (M€), tendo a dívida bruta "
+            "(consolidada) atingido os 3.797,8 M€. O SREA…</p>",
+        ),
+        post(
+            "2026-03-26",
+            "<p>Em 2025 a necessidade de financiamento da Administração "
+            "Pública da Região Autónoma dos Açores foi de 299,9 milhões de "
+            "euros (M€), tendo a dívida bruta (consolidada) atingido os "
+            "3.797,8 M€.</p>",
+        ),
+        post("2026-04-06", "<p>Inquéritos às famílias</p>"),
+    ]
+    rows = srea.parse_pde(posts)
+    assert len(rows) == 4
+    last = {r["indicador"]: r for r in rows[2:]}
+    saldo = last["Saldo das administrações públicas regionais"]
+    assert saldo["valor"] == -305.5
+    assert saldo["nota"] == "provisório"
+    assert saldo["ficheiro"] == "https://srea/2026-09-23/"
+    assert last["Dívida bruta consolidada"]["valor"] == 3797.8
+    assert srea.pt_number("3.797,8") == 3797.8
+
+
+def test_get_retries_then_raises_on_403(monkeypatch):
+    import io
+    import urllib.error
+
+    calls = []
+
+    def urlopen(req, timeout):
+        calls.append(req.full_url)
+        code = 503 if len(calls) == 1 else 403
+        raise urllib.error.HTTPError(req.full_url, code, "x", {}, io.BytesIO())
+
+    monkeypatch.setattr(srea.urllib.request, "urlopen", urlopen)
+    monkeypatch.setattr(srea.gov, "wait", lambda host=None: None)
+    monkeypatch.setattr(srea.gov, "_sleep", lambda s: None)
+    try:
+        srea.get("https://srea.azores.gov.pt/x")
+    except urllib.error.HTTPError as e:
+        assert e.code == 403
+    assert len(calls) == 2

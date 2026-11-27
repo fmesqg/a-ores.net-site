@@ -20,9 +20,10 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    # one client at a time on *.azores.gov.pt (rate limits: bot/gov.py)
+    # srea.azores.gov.pt has its own, lighter limit (bot/gov.py), so this
+    # job does not queue behind the JORAA and BEO ones (group azores-gov)
     concurrency:
-      group: azores-gov
+      group: srea
       cancel-in-progress: false
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
