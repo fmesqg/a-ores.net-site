@@ -1,0 +1,65 @@
+name: Weekly EU funds update (PRR and Kohesio)
+
+# Reads, with bot/fundos.py, the PRR open data of the Estrutura de Missão
+# Recuperar Portugal (dados.gov.pt, four xlsx files of ~40 MB, updated
+# daily) and the Kohesio API of the European Commission (~40 requests),
+# keeps the projects in the Azores and rewrites data/prr_*.csv and
+# data/kohesio_*.csv. Neither source is an Azores government site, so the
+# azores-gov limit (bot/gov.py) does not apply. The Kohesio part is a work
+# in progress: see the docstring of bot/fundos.py.
+#
+# The run fails, and GitHub emails, when a source returns no Azorean
+# project; the other source is still written and committed.
+
+on:
+  schedule:
+    - cron: '23 6 * * 2'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install openpyxl==3.1.5
+      - name: Read the PRR and Kohesio
+        id: fetch
+        run: python3 bot/fundos.py data
+        continue-on-error: true
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          FILES="data/prr_projetos.csv data/prr_entidades.csv data/kohesio_projetos.csv data/kohesio_beneficiarios.csv"
+          git add -N $FILES 2>/dev/null || true
+          if git diff --quiet -- $FILES; then
+            echo "Nothing to write."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config --global user.name "fmesqg-auto"
+            git config --global user.email "fmesqg-auto@users.noreply.github.com"
+            git add $FILES
+            git commit -m "EU funds weekly update"
+            git pull --rebase origin main
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Fail if a source had no Azorean project
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1
+
+  deploy-site:
+    needs: fetch
+    if: always() && needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

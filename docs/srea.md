@@ -108,6 +108,31 @@ Olhe para a tendência de vários trimestres.</p>
   <p class="fonte"></p>
 </figure>
 
+<figure class="grafico" data-g="pagamentos">
+  <figcaption>Pagamentos com cartão: valor por mês (€)</figcaption>
+  <div class="g-topo">
+    <label class="g-escolha">Concelho <select class="g-concelho"></select></label>
+    <div class="g-legenda"></div>
+  </div>
+  <div class="g-area"><svg role="img" tabindex="0"></svg><div class="g-tip" hidden></div></div>
+  <details class="g-tabela"><summary>Ver os números</summary><div></div></details>
+  <p class="nota">Compras nos terminais de pagamento (TPA) e levantamentos nas
+  caixas automáticas (CA) da rede SIBS, no concelho onde está o terminal.
+  As compras com cartões estrangeiros são uma parte das compras em TPA e
+  mostram o peso do turismo.</p>
+  <p class="fonte"></p>
+</figure>
+<figure class="grafico" data-g="pde">
+  <figcaption>Contas da Região na ótica de Bruxelas: saldo e dívida (M€)</figcaption>
+  <div class="g-pde"></div>
+  <p class="nota">Saldo e dívida bruta das administrações públicas regionais
+  no Procedimento dos Défices Excessivos (contas nacionais), que o SREA
+  publica em março e setembro. Um saldo negativo é um défice. O SREA só tem
+  estas notificações no site desde 2025, por isso há poucos anos.
+  <a href="/financas/">Execução orçamental e Tribunal de Contas →</a></p>
+  <p class="fonte"></p>
+</figure>
+
 <h2 id="turismo">4. Turismo por ilha</h2>
 {% if s.dormidas %}
 <p class="grande">{{ s.dormidas.valor | divided_by: 10000 | divided_by: 100.0 | round: 2 | replace: ".", "," }} milhões<small> de dormidas</small></p>
@@ -260,7 +285,11 @@ p.grande { font-size: 1.9em; font-weight: bold; line-height: 1.15; margin-bottom
 .g-tabela { margin-top: .4em; font-size: .9em; }
 .g-tabela summary { cursor: pointer; color: #586e75; }
 .g-tabela div { max-height: 22em; overflow: auto; }
-.g-tabela table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.g-tabela table, .g-pde table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.g-pde { font-size: .95em; margin-bottom: .4em; }
+.g-pde th, .g-pde td { padding: .2em .8em; text-align: right; border-bottom: 1px solid rgba(147,161,161,.3); }
+.g-pde th:first-child, .g-pde td:last-child { text-align: left; }
+.grafico .nota { font-size: .85em; max-width: 44em; }
 .g-tabela th, .g-tabela td { padding: .15em .6em; text-align: right; border-bottom: 1px solid rgba(147,161,161,.3); }
 .g-tabela th:first-child, .g-tabela td:first-child { text-align: left; }
 .palavras dt { font-weight: bold; margin-top: .7em; }
@@ -335,7 +364,7 @@ p.grande { font-size: 1.9em; font-weight: bold; line-height: 1.15; margin-bottom
     list.filter(Boolean).forEach(function (s, i) {
       if (seen[s.ficheiro]) return; seen[s.ficheiro] = 1;
       if (Object.keys(seen).length > 1) p.appendChild(document.createTextNode(" · "));
-      var a = h("a", "SREA, " + decodeURIComponent(s.ficheiro.split("/").pop()), p); a.href = s.ficheiro;
+      var a = h("a", "SREA, " + decodeURIComponent(s.ficheiro.replace(/\/$/, "").split("/").pop()), p); a.href = s.ficheiro;
     });
     var pg = list.filter(Boolean)[0];
     if (pg) { p.appendChild(document.createTextNode(" (")); var b = h("a", "página do SREA", p); b.href = pg.pagina; p.appendChild(document.createTextNode(")")); }
@@ -531,9 +560,51 @@ p.grande { font-size: 1.9em; font-weight: bold; line-height: 1.15; margin-bottom
     return redraw;
   }
 
+  function pagamentos() {
+    var fig = document.querySelector('[data-g="pagamentos"]');
+    var rows = find({ serie: "pagamentos", indicador: "Valor" });
+    if (!rows.length) return;
+    var sel = fig.querySelector(".g-concelho");
+    var locais = ["Açores"].concat(rows.map(function (s) { return s.local; }).filter(function (x, i, a) { return x !== "Açores" && a.indexOf(x) === i; }).sort(function (x, y) { return x.localeCompare(y, "pt"); }));
+    locais.forEach(function (l) { var o = h("option", l, sel); o.value = l; });
+    var NOMES = [["Compras em TPA", "Compras em TPA", C1], ["Compras em TPA com cartões estrangeiros", "Das quais, com cartões estrangeiros", C2], ["Levantamentos em CA", "Levantamentos em CA", "#859900"]];
+    var redraw = function () {
+      var keys = {}, series = [];
+      NOMES.forEach(function (n) {
+        var s = rows.filter(function (r) { return r.local === sel.value && r.rubrica === n[0]; })[0];
+        if (!s) return;
+        s.p.forEach(function (p) { keys[p[0]] = 1; });
+        series.push({ nome: n[1], c: n[2], v: asMap(s) });
+      });
+      draw(fig, Object.keys(keys).sort(), series, { big: true, zero: true });
+    };
+    sel.onchange = redraw;
+    redraw(); source(fig, rows.filter(function (s) { return s.local === "Açores"; }).slice(0, 1));
+    return redraw;
+  }
+  function pde() {
+    var fig = document.querySelector('[data-g="pde"]');
+    var saldo = one({ serie: "pde", indicador: "Saldo das administrações públicas regionais" });
+    var divida = one({ serie: "pde", indicador: "Dívida bruta consolidada" });
+    if (!saldo && !divida) return;
+    var anos = {}; [saldo, divida].forEach(function (s) { if (s) s.p.forEach(function (p) { anos[p[0]] = p[2] || ""; }); });
+    var t = h("table", "", fig.querySelector(".g-pde")), tr = h("tr", "", h("thead", "", t));
+    ["Ano", "Saldo (M€)", "Dívida bruta (M€)", ""].forEach(function (x) { h("th", x, tr); });
+    var body = h("tbody", "", t), vs = asMap(saldo), vd = asMap(divida);
+    Object.keys(anos).sort().reverse().forEach(function (a) {
+      var r = h("tr", "", body);
+      h("th", a, r);
+      h("td", vs[a] == null ? "–" : n1.format(vs[a]).replace("-", "−"), r);
+      h("td", vd[a] == null ? "–" : n1.format(vd[a]), r);
+      h("td", anos[a], r);
+    });
+    source(fig, [divida || saldo]);
+  }
+
   fetch("/dados/srea.json?v=" + BUILD).then(function (r) { return r.json(); }).then(function (d) {
     DATA = d;
-    var redraws = [ipc(), desemprego(), atividade(), turismo()].filter(Boolean);
+    pde();
+    var redraws = [ipc(), desemprego(), atividade(), pagamentos(), turismo()].filter(Boolean);
     var w = 0;
     window.addEventListener("resize", function () {
       clearTimeout(w); w = setTimeout(function () { redraws.forEach(function (f) { f(); }); }, 200);
