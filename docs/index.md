@@ -11,8 +11,8 @@ estatísticas por concelho e freguesia, as contas do Governo Regional,
 contratos públicos e o trabalho da Assembleia Legislativa. Cada número tem
 ligação para a fonte oficial. Primeira vez por aqui? Comece pela
 <a href="/introducao/"><strong>introdução aos dados dos Açores</strong></a>.
-Jornalista? Veja o <a href="/tutorial/"><strong>tutorial</strong></a>: como
-fazer notícias com estes dados, com exemplos reais.</p>
+Jornalista? O <a href="/tutorial/"><strong>guia de dados</strong></a> mostra,
+com casos reais, onde está cada número e o que tem de particular cada fonte.</p>
 
 <div class="portas">
 
@@ -40,6 +40,7 @@ fazer notícias com estes dados, com exemplos reais.</p>
     <li><a href="/dados/beo/#quadro=sintese-global&modo=acum">Há défice ou excedente?</a></li>
     <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra&grafico=anos">Quanto rendem o IRS e o IVA, mês a mês?</a></li>
     <li><a href="/dados/beo/#quadro=despesa-do-gra-por-departamento">Quanto gasta cada secretaria?</a></li>
+    <li><a href="/financas/camaras/">Quanto gasta cada câmara por habitante?</a></li>
     <li><a href="/dados/tdc/">O que diz o Tribunal de Contas sobre as contas da Região?</a>{% if site.data.tdc_ultimo.conta %} (último parecer: <a href="{{ site.data.tdc_ultimo.url }}">Conta de {{ site.data.tdc_ultimo.conta }}</a>){% endif %}</li>
   </ul>
 </section>

@@ -12,10 +12,11 @@ GitHub Pages by GitHub Actions).
 |------|---------------|------------|
 | [`/`](https://xn--aores-yra.net/) | Entry points, latest updates, opinion | `docs/index.md` |
 | [`/introducao/`](https://xn--aores-yra.net/introducao/) | Introdução aos dados dos Açores: islands, who decides what, the Region's money, how people live, key terms | `docs/introducao.md` + `docs/_data/resumo.json` |
-| [`/tutorial/`](https://xn--aores-yra.net/tutorial/) | Tutorial for journalists: worked examples, pitfalls, a checklist before publishing | `docs/tutorial.md` (figures written in by hand, as of Nov 2026) |
+| [`/tutorial/`](https://xn--aores-yra.net/tutorial/) | Guide for journalists: worked examples and what is particular to each source (no generic journalism advice) | `docs/tutorial.md` (figures written in by hand, as of Nov 2026) |
 | [`/financas/`](https://xn--aores-yra.net/financas/) | Finanças: the Region's deficit, debt and money left out of the Conta; entry to BEO and TdC | `docs/financas.md` + `docs/_data/resumo.json` |
 | [`/dados/ine/`](https://xn--aores-yra.net/dados/ine/) | INE indicators by concelho and freguesia, vs Madeira and Portugal | `data/ine.csv` |
 | [`/economia/`](https://xn--aores-yra.net/economia/) | Economia, split into public and private sector: jobs in government, public companies, largest companies, the public/private share of jobs, and GDP, inflation and unemployment | `docs/economia.md` + `docs/_data/` |
+| [`/financas/camaras/`](https://xn--aores-yra.net/financas/camaras/) | The 19 câmaras municipais per inhabitant (INE spending ÷ population), next to income, tourism, RSI and the câmara's BASE contracts for the same concelho | `data/ine.csv`, BASE; built into `docs/_data/camaras.json` |
 | [`/economia/setor-publico/`](https://xn--aores-yra.net/economia/setor-publico/) | Public sector jobs in the Azores (Region, State, municipalities) by career and regional department, since 2011, and pay (DGAEP, SIOE) | `data/emprego_publico.csv` |
 | [`/dados/srea/`](https://xn--aores-yra.net/dados/srea/) | Indicators (menu "Estatísticas", next to the INE page): prices, employment by sector, activity, tourism, GDP by island (SREA) | `data/srea.csv` |
 | [`/dados/sper/`](https://xn--aores-yra.net/dados/sper/) | Regional public companies (SATA, EDA, hospitals...), company by company, and the Region's net financial effort (CFP) | `data/sper*.csv` |

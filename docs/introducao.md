@@ -137,7 +137,7 @@ no <a href="{{ f.estatuto.url }}">Estatuto Político-Administrativo</a>.</p>
   <p>As 19 câmaras municipais e as 156 juntas tratam do que está mais perto:
   água, recolha do lixo, ruas, licenças de obras, apoios locais. Têm
   orçamento próprio, separado do da Região.</p>
-  <p class="ir"><a href="/dados/ine/#ind=0013899">Quanto recebe cada câmara por habitante →</a></p>
+  <p class="ir"><a href="/financas/camaras/">Quanto recebe e gasta cada câmara por habitante →</a></p>
 </section>
 <section class="cartao">
   <h3>O Estado</h3>
@@ -360,9 +360,8 @@ das <a href="/dados/beo/">contas da Região</a>, com ligação aos textos legais
   <li><a href="/atualizacoes/">O que saiu hoje no Jornal Oficial e na Assembleia?</a></li>
 </ul>
 
-<p>Vai escrever sobre estes dados? O <a href="/tutorial/">tutorial para
-jornalistas</a> mostra, com casos reais, como encontrar um número, compará-lo
-sem enganar, segui-lo até ao documento oficial e citá-lo.</p>
+<p>Para jornalistas: o <a href="/tutorial/">guia de dados</a> tem casos
+reais, com o caminho para cada número e o que convém saber de cada fonte.</p>
 
 {%- assign antigas = site.posts | where_exp: "p", "p.op != true" | sort: "date" | reverse %}
 {% if antigas.size > 0 %}

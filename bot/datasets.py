@@ -1431,6 +1431,221 @@ def publico_data(
     return out
 
 
+# /financas/camaras/: the 19 câmaras municipais per inhabitant, next to other
+# sources for the same concelho.
+CAMARAS_IND = {
+    "pop": "0012918",
+    "receita": "0013908",
+    "despesa": "0013909",
+    "rnf_hab": "0013899",
+    "rendimento": "0012757",
+    "dormidas": "0013210",
+    "rsi": "0013420",
+}
+REFS = {"20": "Açores", "30": "Madeira", "PT": "Portugal"}
+NAO_CAMARA = re.compile(
+    r"associacao|servicos municipalizados|smas|operacoes municipais|"
+    r"empresa municipal|\bei ?m\b|comunidade|comercio"
+)
+# the same name exists in mainland Portugal or Madeira
+AMBIGUO = {"calheta": r"jorge|acores|raa", "lagoa": r"acores|raa"}
+
+
+def _words(s: str) -> str:
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c)).lower()
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", s).split())
+
+
+def municipio(adjudicante: str, concelhos: list[str]) -> str:
+    """The concelho whose câmara is the BASE adjudicante, or "" (also for
+    SMAS, municipal companies and associations of municipalities). BASE has
+    several spellings: "Município de Lagoa (Açores)", "Câmara Municipal de
+    Nordeste", "MUNICÍPIO DA RIBEIRA GRANDE", "Municipio da  Ribeira Grande".
+    """
+    n = _words(adjudicante)
+    if not re.search(r"\b(municipio|camara municipal)\b", n):
+        return ""
+    if NAO_CAMARA.search(n):
+        return ""
+    keys = []
+    for c in concelhos:
+        k = _words(re.sub(r"\(R\.A\.A\.\)", "", c))
+        keys.append((k.removeprefix("vila da "), c))
+    for k, c in sorted(keys, key=lambda kc: -len(kc[0])):
+        if re.search(rf"\b{k}\b", n):
+            if k in AMBIGUO and not re.search(AMBIGUO[k], n):
+                return ""
+            return c
+    return ""
+
+
+def camaras_data(
+    ine: tuple[list, list], base: tuple[list, list] | None = None
+) -> dict:
+    """Receitas and despesas of each câmara municipal per inhabitant (INE),
+    with income, tourism and RSI for the same concelho and the contracts the
+    câmara signed in BASE."""
+    rows = [r for r in _dicts(ine) if r["varcd"] in CAMARAS_IND.values()]
+    if not rows:
+        return {}
+    by: dict = {}
+    for r in rows:
+        if r["categoria"] or not r["valor"]:
+            continue
+        geo = r["geocod"]
+        if r["nivel"] != "Concelho" and geo not in REFS:
+            continue
+        by.setdefault((r["varcd"], geo), {})[r["periodo"]] = float(r["valor"])
+
+    def serie(k: str, geo: str) -> dict:
+        return by.get((CAMARAS_IND[k], geo), {})
+
+    anos = sorted(
+        {
+            a
+            for (v, _), d in by.items()
+            if v == CAMARAS_IND["despesa"]
+            for a in d
+        }
+    )
+    if not anos:
+        return {}
+    ano, inicio = anos[-1], anos[0]
+
+    def ultimo(k: str) -> str:
+        return max(
+            (a for (v, _), d in by.items() if v == CAMARAS_IND[k] for a in d),
+            default="",
+        )
+
+    anos_de = {k: ultimo(k) for k in ("rendimento", "dormidas", "rsi")}
+    nomes = {}
+    for r in rows:
+        if r["nivel"] == "Concelho":
+            nomes[r["geocod"]] = (r["local"], r["ilha"])
+    contratos: dict = {}
+    base_de = base_ate = ""
+    if base:
+        cols = base[0]
+        b = [dict(zip(cols, r, strict=False)) for r in base[1]]
+        datas = sorted(r["publicado"] for r in b if r["publicado"])
+        base_de, base_ate = (datas[0], datas[-1]) if datas else ("", "")
+        concelhos = [n for n, _ in nomes.values()]
+        for r in b:
+            c = municipio(r["adjudicante"], concelhos)
+            if c:
+                d = contratos.setdefault(c, {"n": 0, "valor": 0.0})
+                d["n"] += 1
+                d["valor"] += float(r["preco"] or 0)
+
+    def linha(geo: str, nome: str, ilha: str = "") -> dict | None:
+        pop = serie("pop", geo).get(ano)
+        desp = serie("despesa", geo).get(ano)
+        if not pop or desp is None:
+            return None
+        rec = serie("receita", geo).get(ano, 0)
+        pop0 = serie("pop", geo).get(inicio)
+        desp0 = serie("despesa", geo).get(inicio)
+        d = {
+            "nome": nome,
+            "ilha": ilha,
+            "pop": int(pop),
+            "despesa_m": round(desp / 1e6, 1),
+            "receita_m": round(rec / 1e6, 1),
+            "despesa_hab": round(desp / pop),
+            "receita_hab": round(rec / pop),
+            "rnf_hab": round(serie("rnf_hab", geo).get(ano, 0)),
+        }
+        if pop0 and desp0:
+            d["despesa_hab_inicio"] = round(desp0 / pop0)
+            d["var_pct"] = round(100 * (d["despesa_hab"] / (desp0 / pop0) - 1))
+        for k, a in anos_de.items():
+            v = serie(k, geo).get(a)
+            if v is not None:
+                d[k] = round(v, 1) if k == "rsi" else round(v)
+        if nome in contratos:
+            c = contratos[nome]
+            d["contratos_n"] = c["n"]
+            d["contratos_m"] = round(c["valor"] / 1e6, 1)
+            d["contratos_hab"] = round(c["valor"] / pop)
+        return d
+
+    lista = [
+        x for g, (n, i) in nomes.items() if (x := linha(g, n, i)) is not None
+    ]
+    lista.sort(key=lambda d: -d["despesa_hab"])
+    refs = [x for g, n in REFS.items() if (x := linha(g, n)) is not None]
+    out = {
+        "ano": ano,
+        "inicio": inicio,
+        "anos_de": anos_de,
+        "concelhos": lista,
+        "refs": refs,
+        "max_hab": max(d["despesa_hab"] for d in lista) if lista else 0,
+        "base_de": base_de,
+        "base_ate": base_ate,
+        "sem_contratos": [d["nome"] for d in lista if "contratos_n" not in d],
+        "url": {
+            k: f"https://www.ine.pt/xurl/indx/{v}"
+            for k, v in CAMARAS_IND.items()
+        },
+    }
+    out["grafico"] = _dispersao(lista)
+    return out
+
+
+def _ponto(x: float, y: float, nome: str, rotulos: dict) -> dict:
+    p = {"x": x, "y": y, "nome": nome, "rotulo": nome in rotulos}
+    if nome in rotulos:
+        dx, dy, ancora = rotulos[nome]
+        p.update(lx=round(x + dx, 1), ly=round(y + dy, 1), ancora=ancora)
+    return p
+
+
+def _dispersao(lista: list[dict]) -> dict:
+    """Positions for the scatter of population (log scale) against spending
+    per inhabitant, in a 600 x 300 viewBox."""
+    import math
+
+    if not lista:
+        return {}
+    w, h, esq, dir_, top, fundo = 600, 300, 56, 16, 12, 34
+    xs = [500, 1000, 5000, 10000, 50000]
+    lo, hi = math.log10(300), math.log10(100000)
+    ymax = 1000 * math.ceil(max(d["despesa_hab"] for d in lista) / 1000)
+
+    def x(v):
+        return round(
+            esq + (math.log10(v) - lo) / (hi - lo) * (w - esq - dir_), 1
+        )
+
+    def y(v):
+        return round(top + (1 - v / ymax) * (h - top - fundo), 1)
+
+    # label the extremes only; on the right edge the label goes to the left
+    rotulos = {
+        "Corvo": (8, 4, "start"),
+        "Lajes das Flores": (8, 4, "start"),
+        "Angra do Heroísmo": (-8, -8, "end"),
+        "Ponta Delgada": (-8, 18, "end"),
+    }
+    return {
+        "w": w,
+        "h": h,
+        "esq": esq,
+        "dir": w - dir_,
+        "base": h - fundo,
+        "top": top,
+        "pontos": [
+            _ponto(x(d["pop"]), y(d["despesa_hab"]), d["nome"], rotulos)
+            for d in lista
+        ],
+        "xt": [{"x": x(v), "v": v} for v in xs],
+        "yt": [{"y": y(v), "v": v} for v in range(0, ymax + 1, 2000)],
+    }
+
+
 def write_economia(docs: Path, tables: dict) -> None:
     """docs/_data/sper.json, maiores.json and publico.json for the Economia
     section."""
@@ -1511,6 +1726,20 @@ def _texts(node, total: float | None = None):
             else:
                 _texts(v)
     return node
+
+
+def write_camaras(docs: Path, tables: dict) -> None:
+    """docs/_data/camaras.json for /financas/camaras/."""
+    data = (
+        camaras_data(tables["ine"], tables.get("base"))
+        if "ine" in tables
+        else {}
+    )
+    (docs / "_data").mkdir(exist_ok=True)
+    (docs / "_data" / "camaras.json").write_text(
+        json.dumps(_texts(data), ensure_ascii=False, indent=1),
+        encoding="utf-8",
+    )
 
 
 def write_resumo(docs: Path, tables: dict) -> None:
@@ -1606,6 +1835,7 @@ def main(docs: Path) -> dict:
         meta[name] = info
     write_resumo(docs, tables)
     write_economia(docs, tables)
+    write_camaras(docs, tables)
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(

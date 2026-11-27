@@ -1,31 +1,29 @@
 ---
-title: "Tutorial: dados dos Açores para jornalistas"
+title: "Guia: dados dos Açores para jornalistas"
 layout: default
 permalink: /tutorial/
-description: Como usar o açores.net para fazer notícias com dados públicos dos Açores - encontrar e citar um número, comparar sem enganar, seguir o dinheiro, ler as contas da Região e as perguntas dos deputados, e verificar tudo na fonte.
+description: Onde está cada número no açores.net, de onde vem e o que tem de particular cada fonte - INE, contratos públicos, Jornal Oficial, contas da Região, câmaras municipais e Assembleia - com casos reais.
 ---
 
-# Tutorial: dados dos Açores para jornalistas
+# Guia: dados dos Açores para jornalistas
 
-<p class="lead">Este tutorial mostra, com casos reais, como passar de uma
-pergunta a um número que se pode publicar. O açores.net serve para encontrar
-a informação depressa. Na notícia cita-se o documento oficial, a que cada
-número do site tem ligação.</p>
+<p class="lead">Casos reais, com o caminho para cada número no açores.net e
+o que convém saber de cada fonte. Todos os números têm ligação ao documento
+oficial de onde vêm.</p>
 
 <nav class="indice" aria-label="Nesta página">
-  <a href="#citar"><span>1</span> Encontrar e citar um número</a>
-  <a href="#comparar"><span>2</span> Comparar sem enganar</a>
+  <a href="#citar"><span>1</span> Rendimento por freguesia</a>
+  <a href="#comparar"><span>2</span> Câmaras e concelhos por habitante</a>
   <a href="#dinheiro"><span>3</span> Seguir o dinheiro</a>
   <a href="#contas"><span>4</span> Ler as contas da Região</a>
   <a href="#assembleia"><span>5</span> Acompanhar a Assembleia</a>
-  <a href="#verificar"><span>6</span> Descarregar e verificar</a>
-  <a href="#lista"><span>7</span> Antes de publicar</a>
+  <a href="#verificar"><span>6</span> Descarregar e fazer as próprias contas</a>
 </nav>
 
 <p class="fonte">Os números dos exemplos são os que estavam no site em
 novembro de 2026. Se abrir as ligações mais tarde, podem ter mudado.</p>
 
-<h2 id="citar">1. Encontrar e citar um número</h2>
+<h2 id="citar">1. Rendimento por freguesia</h2>
 
 **A pergunta:** quanto se ganha nos Açores, e onde se ganha menos?
 
@@ -38,49 +36,53 @@ novembro de 2026. Se abrir as ligações mais tarde, podem ter mudado.</p>
   <li>Ordene a coluna de 2024. A freguesia com o valor mais baixo é Ponta
   Garça (Vila Franca do Campo), com <strong>9 305 €</strong>. A mais alta é
   Ponta Delgada (São Pedro), com 17 585 €.</li>
-  <li>Abra a definição e a ligação para o INE, junto ao nome do indicador.
-  Na notícia, cite o INE, o nome do indicador e o ano, não o açores.net.</li>
+  <li>A definição oficial e a ligação ao indicador no INE estão junto ao
+  nome do indicador.</li>
 </ol>
 
 <div class="cuidado">
-<p><strong>Cuidado</strong></p>
+<p><strong>Desta fonte</strong></p>
 <ul>
-  <li><strong>Em falta não é zero.</strong> O INE só publica este valor para
-  25 freguesias e 16 dos 19 concelhos. Nas outras, há poucos contribuintes e
-  o valor fica em segredo estatístico. Pode escrever "entre as freguesias
-  com dados", mas não "a freguesia mais pobre dos Açores".</li>
-  <li><strong>Mediana não é média.</strong> A mediana é o valor do meio:
-  metade dos contribuintes declara menos e a outra metade mais. Use a
-  palavra que está no indicador.</li>
-  <li><strong>É rendimento declarado ao fisco.</strong> Só conta quem
-  entregou declaração de IRS, e só o que lá foi declarado.</li>
+  <li><strong>Só 25 freguesias e 16 dos 19 concelhos têm valor.</strong> Nas
+  outras há poucos contribuintes e o INE mantém o valor em segredo
+  estatístico. Ponta Garça é a mais baixa entre as que têm dados.</li>
+  <li><strong>É rendimento declarado no IRS</strong>: fica de fora quem não
+  entrega declaração e o que não é declarado.</li>
 </ul>
 </div>
 
-<h2 id="comparar">2. Comparar sem enganar</h2>
+<h2 id="comparar">2. Câmaras e concelhos por habitante</h2>
 
-Um número sozinho diz pouco. As comparações que o site já faz:
+**A pergunta:** que câmara gasta mais?
 
-- **Com a Madeira e o país.** Todas as tabelas do INE têm estas referências
-  no topo.
-- **Por habitante.** Num concelho grande há mais de tudo. Para comparar
-  concelhos, procure o indicador "por habitante" ou "por 1000 habitantes"
-  (por exemplo,
-  [dormidas por 100 habitantes](/dados/ine/#ind=0013210)).
-- **A evolução, não só o nível.** No gráfico do INE, escolha a escala
-  "Índice": cada local começa em 100 e vê-se quem cresceu mais.
-- **Mesmo período.** Nas contas da Região, compare o mesmo mês de anos
-  diferentes (gráfico "ano a ano"), não setembro com dezembro.
+<ol class="passos">
+  <li>Abra <a href="/financas/camaras/">Câmaras municipais por habitante</a>.
+  Em total, Ponta Delgada é a que mais gasta (67,5 M€ em 2025). Por habitante
+  é das que menos gasta: <strong>942 €</strong>, contra 1 259 € na média dos
+  Açores e <strong>7 194 €</strong> no Corvo.</li>
+  <li>O gráfico por baixo da tabela mostra que a despesa por habitante desce com o tamanho
+  do concelho.</li>
+  <li>A segunda tabela junta, para cada concelho, o rendimento mediano, as
+  dormidas por 100 habitantes, o RSI por 1000 habitantes e os contratos que a
+  câmara assinou no BASE. Ordene por qualquer coluna.</li>
+</ol>
 
 <div class="cuidado">
-<p><strong>Cuidado</strong></p>
+<p><strong>Desta fonte</strong></p>
 <ul>
-  <li><strong>Ilhas pequenas, variações grandes.</strong> O Corvo tem cerca
-  de 430 habitantes. Uma família a mais ou a menos muda as percentagens. Dê
-  também o número absoluto.</li>
-  <li><strong>Euros de anos diferentes</strong> não valem o mesmo. Para
-  comparar rendimentos ao longo de vários anos, tenha em conta a inflação
-  (<a href="/dados/srea/#precos">IPC dos Açores, SREA</a>).</li>
+  <li><strong>A divisão é do açores.net</strong>: despesa do INE a dividir
+  pela população residente do INE no mesmo ano. A receita por habitante é o
+  valor que o INE publica, sem operações financeiras.</li>
+  <li><strong>A despesa inclui operações financeiras</strong> (amortização
+  de empréstimos), o que pesa num ano de reembolso grande.</li>
+  <li><strong>Os contratos são os que o açores.net recolheu do BASE</strong>
+  desde agosto de 2024. Os nomes das câmaras no BASE variam e são juntados
+  pelo nome do concelho. Da Câmara de Vila do Porto não aparece nenhum.</li>
+  <li>Noutros indicadores do INE, a página do INE tem versões "por
+  habitante" ou "por 1000 habitantes" (por exemplo,
+  <a href="/dados/ine/#ind=0013210">dormidas por 100 habitantes</a>) e a
+  escala "Índice" no gráfico, em que cada local começa em 100. O
+  <a href="/dados/srea/#precos">IPC dos Açores</a> está no SREA.</li>
 </ul>
 </div>
 
@@ -120,22 +122,21 @@ na ALRA</a></p>
 </div>
 
 <div class="cuidado">
-<p><strong>Cuidado</strong></p>
+<p><strong>Desta fonte</strong></p>
 <ul>
-  <li><strong>Valor do contrato não é dinheiro gasto.</strong> O BASE dá o
+  <li><strong>Valor do contrato não é despesa paga.</strong> O BASE dá o
   preço contratual, que normalmente não inclui IVA e pode mudar com
   trabalhos a mais. O pagamento faz-se ao longo da obra.</li>
-  <li><strong>A coluna "Montante" do Jornal Oficial é uma pista, não um
-  valor para citar.</strong> O açores.net soma todos os valores em euros
+  <li><strong>A coluna "Montante" do Jornal Oficial é uma soma
+  automática.</strong> O açores.net soma todos os valores em euros
   que aparecem no texto do ato. Se o mesmo valor aparece duas vezes, conta
   duas vezes: o Despacho n.º 694/2025 aparece com 6 350 000 €, o dobro do
-  que autoriza. Leia sempre o ato.</li>
-  <li><strong>Contar contratos não é somar dinheiro.</strong> Desde agosto
+  que autoriza.</li>
+  <li><strong>Em número e em valor, o peso é diferente.</strong> Desde agosto
   de 2024, os ajustes diretos são 64 % dos contratos para os Açores
-  publicados no BASE, mas só 26 % do valor. Diga qual dos dois está a usar.</li>
-  <li>O ajuste direto é legal dentro de limites de valor e em casos
-  previstos no Código dos Contratos Públicos. Antes de o apresentar como
-  irregular, confirme o fundamento indicado no contrato.</li>
+  publicados no BASE, mas só 26 % do valor.</li>
+  <li>O fundamento de cada ajuste direto (limite de valor ou artigo do
+  Código dos Contratos Públicos) está na ficha do contrato no BASE.</li>
 </ul>
 </div>
 
@@ -150,17 +151,16 @@ na ALRA</a></p>
   <li>Na linha "Saúde", de janeiro a setembro: <strong>411,6 M€</strong> em
   2024, <strong>476,6 M€</strong> em 2025 e <strong>431,2 M€</strong> em
   2026, menos 9,5 % do que no ano anterior.</li>
-  <li>Abra o boletim em PDF (ligação na página) e confirme o valor no
-  quadro.</li>
+  <li>O boletim em PDF de cada mês está ligado na página.</li>
 </ol>
 
 <div class="cuidado">
-<p><strong>Cuidado</strong></p>
+<p><strong>Desta fonte</strong></p>
 <ul>
   <li><strong>É despesa paga até ao fim do mês</strong>, não orçamento nem
-  despesa feita. Uma transferência para os hospitais paga em outubro, e não
-  em setembro, muda a comparação. Antes de escrever "corte", veja o ano
-  completo (se já houver) e pergunte à Secretaria Regional das Finanças.</li>
+  despesa comprometida. Uma transferência para os hospitais paga em outubro,
+  e não em setembro, muda a comparação até setembro. O ano completo está no
+  boletim de dezembro.</li>
   <li>Os boletins são provisórios. Os valores finais estão na Conta da
   Região, e o <a href="/dados/tdc/">Tribunal de Contas</a> diz se os pode
   confirmar e com que reservas.</li>
@@ -186,19 +186,16 @@ regista se a resposta chegou a tempo.
   ou siga por [RSS](/rsss).
 
 <div class="cuidado">
-<p><strong>Cuidado</strong></p>
+<p><strong>Desta fonte</strong></p>
 <ul>
-  <li>O estado é o último que o robô viu no site da Assembleia. Confirme na
-  ficha do requerimento antes de escrever que o Governo não respondeu.</li>
-  <li>A resposta do Governo é a versão de uma das partes. Leia-a, mas não a
-  trate como facto verificado.</li>
+  <li>O estado é o último que o robô viu no site da Assembleia. A ficha de
+  cada requerimento, na ALRA, tem o estado atual.</li>
 </ul>
 </div>
 
-<h2 id="verificar">6. Descarregar e verificar</h2>
+<h2 id="verificar">6. Descarregar e fazer as próprias contas</h2>
 
-Tudo o que o site mostra pode ser descarregado, para fazer as suas próprias
-contas:
+Tudo o que o site mostra pode ser descarregado:
 
 - **Em folha de cálculo.** Cada fonte tem um CSV na
   [página de dados](/dados/#descarregar), que abre no Excel, no LibreOffice ou
@@ -223,19 +220,6 @@ contas:
 </ul>
 </div>
 
-<h2 id="lista">7. Antes de publicar</h2>
-
-<ul class="lista">
-  <li>Abri o documento oficial e o número está lá?</li>
-  <li>Indico a fonte, o período e a unidade (€, %, por habitante)?</li>
-  <li>O valor é provisório? Digo-o?</li>
-  <li>Comparo o que é comparável: mesmo período, por habitante, mesma
-  definição?</li>
-  <li>Distingo "zero" de "sem dados"?</li>
-  <li>Contratado, autorizado ou pago: qual é o meu número?</li>
-  <li>Pedi uma reação à entidade de que falo?</li>
-</ul>
-
 Encontrou um erro no site ou quer um dado que ainda não está cá? Abra um
 pedido no [GitHub](https://github.com/fmesqg/a-ores.net-site/issues).
 
@@ -259,9 +243,6 @@ h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
 .cartao h3 { font-size: 1.05em; margin: 0 0 .4em; }
 .cartao p { font-size: .95em; margin-bottom: .5em; }
 .cartao .ir { font-size: .9em; }
-.lista { list-style: none; margin-left: 0; max-width: 42em; }
-.lista li { padding-left: 1.6em; position: relative; margin-bottom: .35em; }
-.lista li::before { content: "☐"; position: absolute; left: 0; color: #268bd2; }
 .fonte { font-size: .85em; color: #586e75; }
 @media (prefers-color-scheme: dark) { .fonte { color: #93a1a1; } }
 </style>

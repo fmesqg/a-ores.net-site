@@ -141,3 +141,8 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 - **Code style:** black (line-length 79), isort (black profile), Python >=3.11.5. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.
 - **Tests:** `pytest bot/tests/` runs offline by default. Network-dependent tests are marked `@pytest.mark.network` and skipped unless opted in with `-m network`.
 - **Content language:** Portuguese (Azores region).
+
+## Tone and crossing data
+
+- Pages for journalists (`docs/tutorial.md`) must not be condescending: keep only what is specific to these data, such as coverage gaps, what a column really is and source quirks. Do not explain mediana vs média, inflation, citing sources or asking for reaction.
+- Municipal figures read better per inhabitant. `camaras_data` in `bot/datasets.py` divides INE spending by INE population and matches BASE adjudicantes to concelhos (`municipio`, which handles several spellings and leaves out SMAS and municipal companies). Prefer pages that put several sources side by side per concelho, and label the site's own calculations.
