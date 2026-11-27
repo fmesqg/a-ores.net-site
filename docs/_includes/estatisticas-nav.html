@@ -1,0 +1,13 @@
+<nav class="secao-nav" aria-label="Estatísticas">
+  {%- assign itens = "/dados/ine/|Concelhos e freguesias (INE);/dados/srea/|Indicadores regionais (SREA)" | split: ";" -%}
+  {%- for i in itens -%}
+    {%- assign item = i | split: "|" -%}
+    <a href="{{ item[0] }}"{% if page.url == item[0] %} aria-current="page"{% endif %}>{{ item[1] }}</a>
+  {%- endfor -%}
+</nav>
+<style>
+.secao-nav { display: flex; flex-wrap: wrap; gap: .3em .4em; margin: 0 0 1em; font-size: .92em; }
+.secao-nav a { padding: .25em .7em; border: 1px solid rgba(147,161,161,.6); border-radius: 999px; text-decoration: none; }
+.secao-nav a:hover { background: rgba(38,139,210,.12); }
+.secao-nav a[aria-current] { background: #268bd2; border-color: #268bd2; color: #fdf6e3; }
+</style>

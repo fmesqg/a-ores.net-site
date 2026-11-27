@@ -310,7 +310,8 @@ as ligações abrem cada indicador lugar a lugar.</p>
 {% endif %}
 </div>
 <p class="ir">Preços, emprego, economia e turismo ilha a ilha, todos os meses:
-<a href="/dados/srea/">Economia →</a></p>
+<a href="/dados/srea/">Estatísticas →</a> · Setor público e privado:
+<a href="/economia/">Economia →</a></p>
 
 <h2 id="palavras">5. Seis palavras para ler os números</h2>
 

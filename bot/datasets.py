@@ -35,11 +35,15 @@ and writes, under docs/dados/:
   maiores.csv  the 200 largest companies with head office in the Azores in
              one year (Açoriano Oriental's "100 Maiores Empresas dos
              Açores"): a copy of data/maiores_<ano>.csv, entered by hand
+  emprego_publico.csv  jobs and pay in general government in the Azores,
+             quarterly since 2011 (DGAEP, SIOE): a copy of
+             data/emprego_publico.csv (bot/dgaep.py)
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json,
 resumo.json (the numbers on /introducao/ and /dados/srea/), sper.json
-(/dados/sper/) and maiores.json (/dados/maiores-empresas/).
+(/dados/sper/), maiores.json (/dados/maiores-empresas/) and publico.json
+(/economia/setor-publico/ and the public/private split on /economia/).
 
 The CSVs are UTF-8 with BOM, so Excel opens accents correctly. The search
 page (docs/dados.md) reads them directly. None of these files is committed:
@@ -320,6 +324,7 @@ DB_INDEX = {
     "sper_empresas": ["relatorio", "sigla"],
     "sper_regiao": ["relatorio", "quadro", "ano"],
     "maiores": ["ano", "posicao", "ilha", "setor"],
+    "emprego_publico": ["quadro", "local", "data"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
@@ -334,6 +339,7 @@ DB_FTS = {
     "sper_empresas": ["empresa", "acionista", "nota"],
     "sper_regiao": ["quadro", "grupo", "rubrica"],
     "maiores": ["empresa", "ilha", "setor"],
+    "emprego_publico": ["indicador", "rubrica", "local"],
 }
 
 
@@ -1149,14 +1155,285 @@ def maiores_data(
         "publicas_pct": (
             round(100 * sum(d["vn"] for d in pub) / vn) if vn else 0
         ),
+        "privadas": len(emp) - len(pub),
+        "privadas_vn": round(vn - sum(d["vn"] for d in pub), 1),
+        "privadas_trabalhadores": sum(
+            d["trabalhadores"] for d in emp if not d["publica"]
+        ),
         "setores": groups("setor"),
         "ilhas": groups("ilha"),
         "empresas": emp,
     }
 
 
+AR_ACORES = "ADMINISTRAÇÃO REGIONAL DOS AÇORES"
+AR_SER = "dos quais: SER - Entid. Reclassif."
+AR_FORA = {
+    AR_ACORES,
+    "Órgãos do Governo Regional dos Açores",
+    "Serviços e Fundos Autónomos da AR dos Açores",
+}
+CARREIRAS = {
+    "Educ.infância e doc. ens. básico/secund.": (
+        "Educadores de infância e professores do básico e secundário"
+    ),
+    "Assist. operacional/operário/auxiliar": (
+        "Assistentes operacionais, operários e auxiliares"
+    ),
+    "Assistente técnico/administrativo": (
+        "Assistentes técnicos e administrativos"
+    ),
+    "Técnico superior": "Técnicos superiores",
+    "Enfermeiro": "Enfermeiros",
+    "Médico": "Médicos",
+    "Técnico diagnóstico e terapêutica": (
+        "Técnicos de diagnóstico e terapêutica"
+    ),
+    "Técnico superior de saúde": "Técnicos superiores de saúde",
+    "Docente ensino universitário": "Professores universitários",
+    "Representantes do poder legislativo": (
+        "Eleitos e membros de órgãos executivos"
+    ),
+    "Dirigente intermédio": "Dirigentes intermédios",
+    "Dirigente superior": "Dirigentes superiores",
+    "Informático": "Informáticos",
+    "Magistrado": "Magistrados",
+    "Oficial de justiça": "Oficiais de justiça",
+    "Pessoal de inspeção": "Inspetores",
+    "Polícia municipal": "Polícia municipal",
+}
+# the sub-rows of a group in Q1.7 ("Dirigente superior de 1.º grau",
+# "Forças Armadas - Oficial", ...)
+SUBCARREIRA = re.compile(r" de \d\.º| - ")
+MESES_DGAEP = {
+    "01": "janeiro",
+    "04": "abril",
+    "07": "julho",
+    "10": "outubro",
+}
+
+
+def _dia(data: str) -> str:
+    """'2026-09-30' -> '30 de setembro de 2026'."""
+    return f"{int(data[8:10])} de {_mes(data)}"
+
+
+def publico_data(
+    emprego: tuple[list, list],
+    srea: tuple[list, list] | None = None,
+    sper: dict | None = None,
+) -> dict:
+    """data/emprego_publico.csv (bot/dgaep.py) for /economia/setor-publico/:
+    jobs in general government in the Azores by career, the regional
+    administration by department, the yearly series and pay; with the SREA
+    employment survey and the CFP's market companies, the public and
+    private shares of the jobs in the Azores (an estimate, see the page)."""
+    rows = _dicts(emprego)
+    if not rows:
+        return {}
+
+    def serie(quadro, rubrica, local="Açores", indicador=None) -> dict:
+        return {
+            r["data"]: _num(r["valor"])
+            for r in rows
+            if r["quadro"] == quadro
+            and r["rubrica"] == rubrica
+            and r["local"] == local
+            and (indicador is None or r["indicador"] == indicador)
+        }
+
+    ar = serie("Q1.1", AR_ACORES)
+    ap = serie("Q1.7", "Total")
+    pt = serie("Q1.7", "Total", "Portugal")
+    if not ar or not ap:
+        return {}
+    last = max(ar)
+    antes = f"{int(last[:4]) - 1}{last[4:]}"
+    q11 = [r for r in rows if r["quadro"] == "Q1.1" and r["local"] == "Açores"]
+    fss = serie(
+        "Q1.1",
+        next(
+            (r["rubrica"] for r in q11 if r["rubrica"].startswith("Fundos")),
+            "",
+        ),
+    )
+    out: dict = {
+        "data": last,
+        "periodo": _dia(last),
+        "provisorio": any(r["provisorio"] for r in rows if r["data"] == last),
+        "ficheiro": rows[0]["ficheiro"],
+        "pagina": rows[0]["pagina"],
+        "ap": int(ap[last]),
+        "ap_var": int(ap[last] - ap[antes]) if antes in ap else None,
+        "ap_pct_pais": (
+            round(100 * ap[last] / pt[last], 1) if pt.get(last) else None
+        ),
+        "ar": int(ar[last]),
+        "ar_var": int(ar[last] - ar[antes]) if antes in ar else None,
+        "ar_inicio": int(ar[min(ar)]),
+        "ano_inicio": int(min(ar)[:4]),
+        "fss": int(fss.get(last) or 0),
+    }
+    # the rest of general government in the Azores: the State's services
+    # (courts, university, ...) and the municipalities and parishes
+    out["outros"] = out["ap"] - out["ar"] - out["fss"]
+
+    # regional administration by department; the reclassified companies
+    # (the hospitals EPE) are counted apart from the departments, and the
+    # two add up to the total
+    deps = []
+    for _ordem, rub in sorted({(int(r["ordem"]), r["rubrica"]) for r in q11}):
+        if rub in AR_FORA or rub.startswith("Fundos"):
+            continue
+        x = serie("Q1.1", rub)
+        if last not in x:
+            continue
+        nome = rub
+        if rub == AR_SER:
+            nome = "Hospitais EPE e outras empresas públicas contadas como administração"
+        elif rub == "Órgãos de Soberania e Entidades Independentes":
+            nome = "Assembleia Legislativa e outros órgãos independentes"
+        deps.append(
+            {
+                "nome": nome,
+                "valor": int(x[last]),
+                "var": int(x[last] - x[antes]) if antes in x else None,
+                "pct": round(100 * x[last] / ar[last], 1),
+                "ser": rub == AR_SER,
+            }
+        )
+    deps.sort(key=lambda d: (d["ser"], -d["valor"]))
+    out["secretarias"] = deps
+    out["secretarias_soma_ok"] = sum(d["valor"] for d in deps) == out["ar"]
+
+    # by career, everybody in general government in the Azores
+    q17 = {
+        r["rubrica"]
+        for r in rows
+        if r["quadro"] == "Q1.7" and r["local"] == "Açores"
+    }
+    car = []
+    for rub in q17 - {"Total"}:
+        if SUBCARREIRA.search(rub):
+            continue
+        x = serie("Q1.7", rub)
+        if not x.get(last):
+            continue
+        car.append(
+            {
+                "nome": CARREIRAS.get(rub, rub),
+                "valor": int(x[last]),
+                "var": int(x[last] - x[antes]) if antes in x else None,
+                "pct": round(100 * x[last] / ap[last], 1),
+            }
+        )
+    car.sort(key=lambda d: -d["valor"])
+    resto = out["ap"] - sum(d["valor"] for d in car[:10])
+    out["carreiras"] = car[:10]
+    out["carreiras_resto"] = resto
+    out["carreiras_resto_pct"] = round(100 * resto / ap[last], 1)
+
+    # one point a year (31 December) and the latest quarter
+    anos = sorted({d[:4] for d in ar})
+    evol = []
+    for a in anos:
+        d = (
+            f"{a}-12-31"
+            if f"{a}-12-31" in ar
+            else (last if a == last[:4] else "")
+        )
+        if not d:
+            continue
+        evol.append(
+            {
+                "ano": int(a),
+                "quando": "31 dez" if d.endswith("12-31") else _dia(d)[:-8],
+                "ar": int(ar[d]),
+                "ap": int(ap[d]) if d in ap else None,
+            }
+        )
+    out["evolucao"] = evol
+    out["evolucao_max"] = max((e["ap"] or e["ar"]) for e in evol)
+
+    # pay: general government in each region (Q1.13) and the regional
+    # administration (Q1.9), in the latest month surveyed
+    pay = {}
+    for quadro, rub, local, chave in (
+        ("Q1.13", "Total", "Açores", "acores"),
+        ("Q1.13", "Total", "Portugal", "pais"),
+        ("Q1.9", AR_ACORES, "Açores", "ar"),
+        ("Q1.9", "ADMINISTRAÇÃO REGIONAL DA MADEIRA", "Madeira", "madeira"),
+    ):
+        for ind, k in (
+            ("Remuneração base média mensal", "base"),
+            ("Ganho médio mensal", "ganho"),
+        ):
+            x = serie(quadro, rub, local, ind)
+            if x:
+                m = max(x)
+                pay.setdefault(chave, {})[k] = round(x[m])
+                pay["mes"] = f"{MESES_DGAEP.get(m[5:7], m[5:7])} de {m[:4]}"
+    out["salarios"] = pay
+
+    # public and private shares of the jobs in the Azores
+    if srea:
+        sr = _dicts(srea)
+        emp = sorted(
+            (
+                r
+                for r in sr
+                if r["serie"] == "emprego"
+                and r["indicador"] == "População empregada"
+                and r["rubrica"] == "Total"
+            ),
+            key=lambda r: r["data"],
+        )
+        if emp:
+            e = emp[-1]
+            y, q = e["periodo"].split("-T")
+            fim = f"{y}-{3 * int(q):02d}"
+            ap_q = next((v for d, v in ap.items() if d[:7] == fim), None)
+            total = _num(e["valor"]) * 1000
+            setor_p = next(
+                (
+                    _num(r["valor"])
+                    for r in sr
+                    if r["serie"] == "emprego"
+                    and r["periodo"] == e["periodo"]
+                    and r["rubrica"].startswith("P:")
+                ),
+                None,
+            )
+            mercado = 0
+            if sper:
+                mercado = sum(
+                    d.get("trabalhadores", 0)
+                    for d in sper.get("empresas", [])
+                    if not d.get("ap")
+                )
+            if ap_q:
+                pub = ap_q + mercado
+                out["peso"] = {
+                    "periodo": f"{q}.º trimestre de {y}",
+                    "emprego_mil": _num(e["valor"]),
+                    "ap": int(ap_q),
+                    "ap_pct": round(100 * ap_q / total, 1),
+                    "mercado": mercado,
+                    "mercado_ano": sper.get("ano") if sper else None,
+                    "publico": int(pub),
+                    "publico_pct": round(100 * pub / total),
+                    "um_em": round(total / pub),
+                    "privado": int(total - pub),
+                    "privado_pct": 100 - round(100 * pub / total),
+                    "setor_p_mil": setor_p,
+                    "url": e["pagina"],
+                }
+    return out
+
+
 def write_economia(docs: Path, tables: dict) -> None:
-    """docs/_data/sper.json and maiores.json for the Economia section."""
+    """docs/_data/sper.json, maiores.json and publico.json for the Economia
+    section."""
     (docs / "_data").mkdir(exist_ok=True)
     sper: dict = {}
     if "sper" in tables:
@@ -1187,7 +1464,16 @@ def write_economia(docs: Path, tables: dict) -> None:
                 d["posicao"] = posicao[d["sigla"]]
         if sper:
             sper["maiores_ano"] = maiores["ano"]
-    for name, data in (("sper", sper), ("maiores", maiores)):
+    publico: dict = {}
+    if "emprego_publico" in tables:
+        publico = publico_data(
+            tables["emprego_publico"], tables.get("srea"), sper
+        )
+    for name, data in (
+        ("sper", sper),
+        ("maiores", maiores),
+        ("publico", publico),
+    ):
         (docs / "_data" / f"{name}.json").write_text(
             json.dumps(_texts(data), ensure_ascii=False, indent=1),
             encoding="utf-8",
@@ -1280,6 +1566,7 @@ def main(docs: Path) -> dict:
         "sper_empresas",
         "sper_regiao",
         "maiores",
+        "emprego_publico",
     ):
         src = docs.parent / "data" / f"{name}.csv"
         if name == "maiores" and maiores:

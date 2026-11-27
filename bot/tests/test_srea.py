@@ -183,3 +183,42 @@ def test_merge_newer_wins(tmp_path):
     ]
     srea.write_csv(path, rows)
     assert "2026-09,2026-09-01,2," in path.read_text(encoding="utf-8-sig")
+
+
+def test_parse_emprego_total_and_sectors():
+    q = "{}.º trimestre {}"
+    head = [None, None, q.format(2, 2026), None, q.format(3, 2026), None]
+    head += ["Homóloga", "Voltar ao índice", q.format(1, 2021)]
+    book = {
+        "Quadro 4": [
+            ["Q4. POPULAÇÃO EMPREGADA"],
+            head,
+            ["População empregada", "HM", 122.1, "", 121.3, ""],
+            [None, "H", 63.6, "", 62.5, ""],
+            ["Dos 16 aos 24 anos", "HM", 6.0, "§", 5.9, "§"],
+        ],
+        "Quadro 6.1": [
+            ["Q6.1. POPULAÇÃO EMPREGADA POR SETOR (CAE-REV. 4)"],
+            head,
+            ["População empregada", "HM", 122.1, "", 121.3, ""],
+            ["A: Agricultura, floresta e pesca", "HM", 7.8, "§", 6.8, "§"],
+            [None, "M", "x", "", "x", ""],
+            ["L: Atividades financeiras e de seguros", "HM", "x", "", "x", ""],
+            ["P: Administração pública e defesa", "HM", 16.2, "", 16.2, ""],
+        ],
+    }
+    rows = srea.parse_emprego(book)
+    got = {(r["rubrica"], r["periodo"]): (r["valor"], r["nota"]) for r in rows}
+    assert got[("Total", "2026-T3")] == (121.3, "")
+    assert got[("A: Agricultura, floresta e pesca", "2026-T2")] == (
+        7.8,
+        "fiabilidade reduzida",
+    )
+    assert got[("P: Administração pública e defesa", "2026-T3")][0] == 16.2
+    # the total of Quadro 6.1 repeats Quadro 4; men, youth and secret ("x")
+    # cells are not kept
+    assert len(rows) == 6
+    assert {r["serie"] for r in rows} == {"emprego"}
+    assert {r["unidade"] for r in rows} == {"milhares"}
+    both = srea.parse_ie(book)
+    assert len(both) == 6  # no Quadro 10 here

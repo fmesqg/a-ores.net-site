@@ -3,7 +3,10 @@ title: Indicadores do INE
 nav_title: Estatísticas
 layout: default
 permalink: /dados/ine/
+secao: estatisticas
 ---
+{% include estatisticas-nav.html %}
+
 # Indicadores do INE
 
 Estatísticas do INE para os Açores, por concelho e, quando o INE as publica,
