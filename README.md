@@ -10,7 +10,7 @@ GitHub Pages by GitHub Actions).
 
 | Page | What it shows | Built from |
 |------|---------------|------------|
-| [`/`](https://xn--aores-yra.net/) | Entry points, latest updates, opinion | `docs/index.md` |
+| [`/`](https://xn--aores-yra.net/) | Entry points, latest updates | `docs/index.md` |
 | [`/introducao/`](https://xn--aores-yra.net/introducao/) | Introdução aos dados dos Açores: islands, who decides what, the Region's money, how people live, key terms | `docs/introducao.md` + `docs/_data/resumo.json` |
 | [`/tutorial/`](https://xn--aores-yra.net/tutorial/) | Guide for journalists: worked examples and what is particular to each source (no generic journalism advice) | `docs/tutorial.md` (figures written in by hand, as of Nov 2026) |
 | [`/financas/`](https://xn--aores-yra.net/financas/) | Finanças: the Region's deficit, debt and money left out of the Conta; entry to BEO and TdC | `docs/financas.md` + `docs/_data/resumo.json` |
@@ -25,7 +25,7 @@ GitHub Pages by GitHub Actions).
 | [`/dados/tdc/`](https://xn--aores-yra.net/dados/tdc/) | Tribunal de Contas opinions on the Region's accounts | `data/tdc.csv`, `data/tdc_valores.csv` |
 | [`/dados/`](https://xn--aores-yra.net/dados/) | Search and CSV export of contracts (BASE), Assembly records (ALRA) and Jornal Oficial acts (JORAA) | `docs/_{base,alra,joraa}_updates/` |
 | [`/atualizacoes/`](https://xn--aores-yra.net/atualizacoes/), [RSS](https://xn--aores-yra.net/rsss) | What came in each day | `docs/_*_updates/`, `docs/rss/` |
-| [`/blog`](https://xn--aores-yra.net/blog) | Opinion and older analyses | `docs/_posts/` |
+| [`/blog`](https://xn--aores-yra.net/blog) | Opinion and older analyses (not in the menu) | `docs/_posts/` |
 
 `docs/dados/` (CSVs, SQLite with full-text search, JSON for the charts) and
 `docs/_data/resumo.json` are not committed: `python3 bot/datasets.py docs`

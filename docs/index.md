@@ -119,26 +119,6 @@ permalink: /
 </ul>
 {% endif %}
 
-{%- assign sorted_items = site.posts | sort: 'date' | reverse -%}
-<div class="colunas">
-<section>
-<h2><a href="/blog">Opinião</a></h2>
-<ul>
-{%- assign n = 0 -%}
-{%- for post in sorted_items -%}
-{%- if post.op and n < 5 -%}
-  {%- assign n = n | plus: 1 -%}
-  {%- assign author = site.authors | where: "short_name", post.author | first %}
-  <li><a href="{{ post.url }}">{{ post.title | xml_escape }}</a>
-    <span class="meta">{% if author %}{{ author.name }}{% else %}{{ post.author }}{% endif %}, {{ post.date | date: "%d/%m/%Y" }}</span></li>
-{%- endif -%}
-{%- endfor %}
-</ul>
-<p><a href="/blog">Todos os artigos de opinião</a></p>
-</section>
-
-</div>
-
 ## Sobre
 
 O açores.net pretende promover uma cidadania ativa, com informação
@@ -146,6 +126,9 @@ acessível e fidedigna. Os dados são recolhidos automaticamente das fontes
 oficiais (INE, Governo Regional, Assembleia Legislativa, Jornal Oficial,
 portal BASE) e podem ser descarregados e reutilizados. O código está no
 [GitHub](https://github.com/fmesqg/a-ores.net-site).
+
+O açores.net é mantido por
+[Francisco Mesquita](https://mesquita.xyz).
 
 <style>
 .lead { font-size: 1.15em; max-width: 40em; margin-bottom: .3em; }
@@ -161,7 +144,5 @@ portal BASE) e podem ser descarregados e reutilizados. O código está no
 .porta h2 { font-size: 1.15em; margin: 0 0 .4em; }
 .porta p { font-size: .95em; margin-bottom: .5em; }
 .porta ul { margin: 0 0 .6em 1.1em; font-size: .95em; }
-.colunas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr)); gap: 0 2em; }
-.colunas h2 { font-size: 1.3em; }
 .meta { color: #586e75; font-size: .85em; white-space: nowrap; }
 </style>

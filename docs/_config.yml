@@ -10,7 +10,6 @@ header_pages:
   - economia.md
   - dados.md
   - atualizacoes.md
-  - blog.md
 
 plugins:
   - jekyll-feed
