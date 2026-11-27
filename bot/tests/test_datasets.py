@@ -1023,3 +1023,70 @@ def test_joraa_estado_backfill_note():
     }
     assert datasets.joraa_estado(old)["atraso_de"] == "12/08/2026"
     assert datasets.joraa_estado(old)["atraso_ate"] == "26/11/2026"
+
+
+def test_comparacao_acores_madeira_pais():
+    cols = ["quadro", "rubrica", "local", "data", "valor", "provisorio"]
+    rows = [
+        ["Q1.7", "Total", "Açores", "2026-09-30", "25828", "p"],
+        ["Q1.7", "Total", "Madeira", "2026-09-30", "27646", "p"],
+        ["Q1.7", "Total", "Portugal", "2026-09-30", "764805", "p"],
+        ["Q1.7", "Total", "Açores", "2025-12-31", "25000", ""],
+        [
+            "Q1.1",
+            "ADMINISTRAÇÃO REGIONAL DOS AÇORES",
+            "Açores",
+            "2026-09-30",
+            "19592",
+            "p",
+        ],
+    ]
+    icols = ["varcd", "geocod", "categoria", "valor", "data", "periodo"]
+    q3 = ("2026-07-01", "3.º Trimestre de 2026")
+    ine = [
+        ["0012118", "20", "", "121300", *q3],
+        ["0012118", "30", "", "137200", *q3],
+        ["0012118", "PT", "", "5391000", *q3],
+        ["0012118", "20", "", "119600", "2025-10-01", "4.º Trimestre de 2025"],
+    ]
+    k = datasets._comparacao(
+        [dict(zip(cols, r, strict=True)) for r in rows], (icols, ine)
+    )
+    assert k["data"] == "2026-09-30" and k["provisorio"]
+    a, m, p = k["locais"]
+    assert (a["local"], a["ap_pct"], a["ar_pct"]) == ("Açores", 21.3, 16.2)
+    assert m["ap_pct"] == 20.2 and "ar" not in m
+    assert p["ap_pct"] == 14.2
+    # INE without the quarter: no comparison rather than a mismatched one
+    assert (
+        datasets._comparacao(
+            [dict(zip(cols, r, strict=True)) for r in rows], (icols, ine[3:])
+        )
+        == {}
+    )
+
+
+def test_ilhas_censos_sums_concelhos():
+    cols = ["concelho", "ilha", "secao", "valor", "url"]
+    u = "https://www.ine.pt/xurl/indx/0012344"
+    rows = [
+        ["Corvo", "Corvo", "O", "69", u],
+        ["Corvo", "Corvo", "P", "14", u],
+        ["Corvo", "Corvo", "Q", "26", u],
+        ["Corvo", "Corvo", "Total", "219", u],
+        ["Lajes das Flores", "Flores", "O", "200", u],
+        ["Lajes das Flores", "Flores", "Total", "800", u],
+        ["Santa Cruz das Flores", "Flores", "O", "281", u],
+        ["Santa Cruz das Flores", "Flores", "Total", "891", u],
+    ]
+    il = datasets._ilhas_censos((cols, rows))
+    flores, corvo = il["lista"]  # in the islands' order, west last
+    assert flores["empregados"] == 1691 and flores["o_pct"] == 28.4
+    assert corvo["opq_pct"] == 49.8
+    assert il["acores"]["empregados"] == 1910
+    c = il["concelhos"]
+    assert len(c) == 3
+    assert [x["o_pct"] for x in c] == sorted(
+        (x["o_pct"] for x in c), reverse=True
+    )
+    assert {x["nome"]: x["ilha"] for x in c}["Lajes das Flores"] == "Flores"

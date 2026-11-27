@@ -88,8 +88,10 @@ def test_parse_q17_azores_column_and_national_total():
     assert got[("Total", "Açores", "2026-09-30")] == 26
     assert got[("Total", "Portugal", "2025-12-31")] == 700
     assert got[("Dirigente superior", "Açores", "2026-09-30")] == 2
+    assert got[("Total", "Madeira", "2026-09-30")] == 31
     assert ("Médico", "Portugal", "2026-09-30") not in got
-    assert len(rows) == 8  # the variation columns are not levels
+    assert ("Médico", "Madeira", "2026-09-30") not in got
+    assert len(rows) == 10  # the variation columns are not levels
 
 
 def test_parse_q19_both_pay_blocks():

@@ -325,6 +325,7 @@ DB_INDEX = {
     "sper_regiao": ["relatorio", "quadro", "ano"],
     "maiores": ["ano", "posicao", "ilha", "setor"],
     "emprego_publico": ["quadro", "local", "data"],
+    "censos2021_setores": ["ilha", "secao"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
@@ -340,6 +341,7 @@ DB_FTS = {
     "sper_regiao": ["quadro", "grupo", "rubrica"],
     "maiores": ["empresa", "ilha", "setor"],
     "emprego_publico": ["indicador", "rubrica", "local"],
+    "censos2021_setores": ["concelho", "ilha"],
 }
 
 
@@ -1222,6 +1224,8 @@ def publico_data(
     emprego: tuple[list, list],
     srea: tuple[list, list] | None = None,
     sper: dict | None = None,
+    ine: tuple[list, list] | None = None,
+    censos: tuple[list, list] | None = None,
 ) -> dict:
     """data/emprego_publico.csv (bot/dgaep.py) for /economia/setor-publico/:
     jobs in general government in the Azores by career, the regional
@@ -1428,7 +1432,137 @@ def publico_data(
                     "setor_p_mil": setor_p,
                     "url": e["pagina"],
                 }
+    if ine:
+        out["comparacao"] = _comparacao(rows, ine)
+    if censos:
+        out["ilhas"] = _ilhas_censos(censos)
     return out
+
+
+ORDEM_ILHAS = [
+    "Santa Maria",
+    "São Miguel",
+    "Terceira",
+    "Graciosa",
+    "São Jorge",
+    "Pico",
+    "Faial",
+    "Flores",
+    "Corvo",
+]
+
+
+def _ilhas_censos(censos: tuple[list, list]) -> dict:
+    """Employed residents of each island in CAE sections O (public
+    administration, defence, social security), P (education) and Q (health
+    and social work), 2021 census (data/censos2021_setores.csv)."""
+    soma: dict = {}
+    conc: dict = {}
+    ilha_de: dict = {}
+    for r in _dicts(censos):
+        for k, tab in ((r["ilha"], soma), (r["concelho"], conc)):
+            d = tab.setdefault(k, {"O": 0, "P": 0, "Q": 0, "Total": 0})
+            d[r["secao"]] += int(r["valor"])
+        ilha_de[r["concelho"]] = r["ilha"]
+    if not soma:
+        return {}
+    soma["Açores"] = {
+        k: sum(d[k] for d in soma.values()) for k in ("O", "P", "Q", "Total")
+    }
+
+    def linha(nome: str, tab: dict | None = None) -> dict:
+        d = (tab or soma)[nome]
+        t = d["Total"]
+        return {
+            "ilha": ilha_de.get(nome, nome) if tab else nome,
+            "nome": nome,
+            "empregados": t,
+            "o": d["O"],
+            "o_pct": round(100 * d["O"] / t, 1),
+            "p_pct": round(100 * d["P"] / t, 1),
+            "q_pct": round(100 * d["Q"] / t, 1),
+            "opq_pct": round(100 * (d["O"] + d["P"] + d["Q"]) / t, 1),
+        }
+
+    ilhas = [linha(n) for n in ORDEM_ILHAS if n in soma]
+    concelhos = sorted(
+        (linha(n, conc) for n in conc), key=lambda x: -x["o_pct"]
+    )
+    return {
+        "lista": ilhas,
+        "concelhos": concelhos,
+        "max_pct_concelho": max(x["opq_pct"] for x in concelhos),
+        "acores": linha("Açores"),
+        "max_pct": max(x["opq_pct"] for x in ilhas),
+        "url": _dicts(censos)[0]["url"],
+    }
+
+
+EMPREGADOS = "0012118"  # INE, Inquérito ao Emprego, quarterly, NUTS II
+AR_LOCAL = {
+    "Açores": "ADMINISTRAÇÃO REGIONAL DOS AÇORES",
+    "Madeira": "ADMINISTRAÇÃO REGIONAL DA MADEIRA",
+}
+
+
+def _comparacao(rows: list[dict], ine: tuple[list, list]) -> dict:
+    """General government jobs (DGAEP Q1.7, by NUTS) as a share of the
+    employed population (INE) in the Azores, Madeira and Portugal, for the
+    latest quarter both have."""
+    ap = {
+        (r["local"], r["data"]): _num(r["valor"])
+        for r in rows
+        if r["quadro"] == "Q1.7" and r["rubrica"] == "Total"
+    }
+    ar = {
+        (r["local"], r["data"]): _num(r["valor"])
+        for r in rows
+        if r["quadro"] == "Q1.1" and AR_LOCAL.get(r["local"]) == r["rubrica"]
+    }
+    nomes = {"20": "Açores", "30": "Madeira", "PT": "Portugal"}
+    emp = {}
+    for r in _dicts(ine):
+        if r["varcd"] == EMPREGADOS and not r["categoria"] and r["valor"]:
+            if r["geocod"] in nomes:
+                emp[(nomes[r["geocod"]], r["data"])] = (
+                    _num(r["valor"]),
+                    r["periodo"],
+                )
+
+    def inicio(d: str) -> str:  # 2026-09-30 -> 2026-07-01
+        return f"{d[:4]}-{int(d[5:7]) - 2:02d}-01"
+
+    datas = sorted({d for (_, d) in ap}, reverse=True)  # quarter ends
+    for d in datas:
+        if all((n, d) in ap and (n, inicio(d)) in emp for n in nomes.values()):
+            break
+    else:
+        return {}
+    locais = []
+    for n in nomes.values():
+        e, periodo = emp[(n, inicio(d))]
+        x = {
+            "local": n,
+            "ap": int(ap[(n, d)]),
+            "empregados": int(e),
+            "ap_pct": round(100 * ap[(n, d)] / e, 1),
+        }
+        if (n, d) in ar:
+            x["ar"] = int(ar[(n, d)])
+            x["ar_pct"] = round(100 * ar[(n, d)] / e, 1)
+        locais.append(x)
+    return {
+        "data": d,
+        "periodo": periodo,
+        "provisorio": any(
+            r["provisorio"]
+            for r in rows
+            if r["quadro"] == "Q1.7" and r["data"] == d
+        ),
+        "locais": locais,
+        "max_pct": max(x["ap_pct"] for x in locais),
+        "url_ine": f"https://www.ine.pt/xurl/indx/{EMPREGADOS}",
+    }
 
 
 # /financas/camaras/: the 19 câmaras municipais per inhabitant, next to other
@@ -1682,7 +1816,11 @@ def write_economia(docs: Path, tables: dict) -> None:
     publico: dict = {}
     if "emprego_publico" in tables:
         publico = publico_data(
-            tables["emprego_publico"], tables.get("srea"), sper
+            tables["emprego_publico"],
+            tables.get("srea"),
+            sper,
+            tables.get("ine"),
+            tables.get("censos2021_setores"),
         )
     for name, data in (
         ("sper", sper),
@@ -1831,6 +1969,7 @@ def main(docs: Path) -> dict:
         "sper_regiao",
         "maiores",
         "emprego_publico",
+        "censos2021_setores",
     ):
         src = docs.parent / "data" / f"{name}.csv"
         if name == "maiores" and maiores:

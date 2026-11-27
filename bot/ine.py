@@ -91,6 +91,7 @@ THEMES = {
     ],
     "Trabalho e proteção social": [
         ("0012656", "ganho médio mensal (Quadros de Pessoal)"),
+        ("0012118", "população empregada (Inquérito ao Emprego), trimestral"),
         ("0013417", "beneficiários do RSI"),
         ("0013420", "beneficiários do RSI por 1000 habitantes em idade ativa"),
         ("0014534", "pensionistas da segurança social"),
@@ -475,6 +476,17 @@ def main_definitions(out_dir: Path) -> int:
     return 0
 
 
+def previous_rows(path: Path, fetched: set[str]) -> list[list]:
+    """Rows of the current CSV for the listed indicators that this run did
+    not get (INE fails now and then on one series): keep them rather than
+    drop the indicator until next week."""
+    if not path.exists():
+        return []
+    wanted = {v for v, _ in INDICATORS} - fetched
+    with open(path, encoding="utf-8-sig", newline="") as f:
+        return [r for r in list(csv.reader(f))[1:] if r and r[0] in wanted]
+
+
 def main(out_dir: Path) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     rows, failed, defs = [], [], {}
@@ -493,6 +505,7 @@ def main(out_dir: Path) -> int:
         # Probably INE is down: keep the previous file rather than shrink it.
         print("Too many failures, ine.csv left unchanged:", *failed, sep="\n")
         return 1
+    rows += previous_rows(out_dir / "ine.csv", {r[0] for r in rows})
     order = {v: i for i, (v, _) in enumerate(INDICATORS)}
     rows.sort(key=lambda r: (order[r[0]], r[4], r[6], r[10]))
     tmp = out_dir / "ine.csv.tmp"
@@ -543,10 +556,70 @@ def search(terms: list[str]) -> None:
             )
 
 
+CENSOS_CAE = "0012344"  # Censos 2021: employed by residence and CAE section
+CENSOS_SECOES = {
+    "Administração Pública e Defesa; Segurança Social Obrigatória": "O",
+    "Educação": "P",
+    "Atividades de saúde humana e apoio social": "Q",
+    "Total": "Total",
+}
+
+
+def censos_setores(data: dict) -> list[list]:
+    """Rows (concelho, ilha, secção, valor) for the employed population of
+    the 2021 census in sections O, P and Q and in total, both sexes and all
+    professions, for each Azores concelho."""
+    out = []
+    for items in (data.get("Dados") or {}).values():
+        for o in items:
+            g = o.get("geocod", "")
+            sec = CENSOS_SECOES.get(o.get("dim_4_t", ""))
+            if (
+                len(g) == 4
+                and g.startswith("4")
+                and sec
+                and o.get("dim_3_t") == "HM"
+                and o.get("dim_5_t") == "Total"
+                and o.get("valor") not in (None, "")
+            ):
+                out.append(
+                    [
+                        o.get("geodsg", ""),
+                        ILHAS[g[1]],
+                        sec,
+                        int(float(o["valor"])),
+                    ]
+                )
+    return sorted(out)
+
+
+def main_censos(out_dir: Path) -> int:
+    """data/censos2021_setores.csv, once: the census does not change."""
+    d = get_json(data_url(CENSOS_CAE, "<*>20"))
+    rows = censos_setores(d[0] if isinstance(d, list) else d)
+    if not rows:
+        print("Censos: nothing parsed")
+        return 1
+    with open(
+        out_dir / "censos2021_setores.csv",
+        "w",
+        encoding="utf-8-sig",
+        newline="",
+    ) as f:
+        w = csv.writer(f)
+        w.writerow(["concelho", "ilha", "secao", "valor", "url"])
+        url = f"https://www.ine.pt/xurl/indx/{CENSOS_CAE}"
+        w.writerows(r + [url] for r in rows)
+    print(f"{len(rows)} rows")
+    return 0
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     if args and args[0] == "procurar":
         search(args[1:])
+    elif args and args[0] == "censos":
+        sys.exit(main_censos(Path(args[1] if len(args) > 1 else "data")))
     elif args and args[0] == "definicoes":
         sys.exit(main_definitions(Path(args[1] if len(args) > 1 else "data")))
     else:
