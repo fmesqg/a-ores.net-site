@@ -1,7 +1,8 @@
 ---
-title: Açores 101
+title: Introdução aos dados dos Açores
+nav_title: Introdução
 layout: default
-permalink: /acores-101/
+permalink: /introducao/
 description: Os Açores explicados a quem chega pela primeira vez aos dados - quem decide, de onde vem e para onde vai o dinheiro, como se vive, com ligação às fontes oficiais.
 ---
 {%- assign r = site.data.resumo -%}
@@ -15,6 +16,8 @@ description: Os Açores explicados a quem chega pela primeira vez aos dados - qu
 {%- assign dorm = r.ine["0013210"] -%}
 {%- assign b = r.beo -%}
 {%- assign sr = r.srea -%}
+
+# Introdução aos dados dos Açores
 
 <p class="lead">Nunca olhou para números sobre os Açores? Comece aqui. Em dez
 minutos, sem jargão: quem vive cá, quem decide o quê, de onde vem e para onde
