@@ -713,10 +713,21 @@ def resumo_srea(cols: list[str], rows: list[list]) -> dict:
         last = [r for r in ph if r[c["periodo"]] == ano]
         top = max(v(r) for r in last if r[c["local"]] != "Açores")
         reg = next((r for r in last if r[c["local"]] == "Açores"), None)
+        total = next(
+            (
+                v(r)
+                for r in rows
+                if r[c["serie"]] == "pib"
+                and r[c["local"]] == "Açores"
+                and r[c["periodo"]] == ano
+            ),
+            None,
+        )
         out["pib_hab"] = {
             "ano": ano,
             "provisorio": any(r[c["nota"]] for r in last),
             "acores": v(reg) if reg else None,
+            "total_mm": round(total / 1e9, 1) if total else None,
             "por_ilha": [
                 {
                     "ilha": r[c["local"]],

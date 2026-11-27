@@ -63,6 +63,36 @@ jovem do que a do país: há {{ env.acores_t }} pessoas com 65 ou mais anos por
 cada 100 com menos de 15, contra {{ env.pt_t }} no país
 (<a href="{{ env.url }}">INE, índice de envelhecimento, {{ env.periodo }}</a>).{% endif %}</p>
 
+{%- assign ph = r.srea.pib_hab %}
+{% if ph %}
+<h3 id="produz">O que cada ilha produz</h3>
+
+<p>Em {{ ph.ano }}, os Açores produziram cerca de
+<strong>{{ ph.total_mm | replace: ".", "," }} mil milhões de euros</strong>: é o
+produto interno bruto (PIB), o valor de tudo o que se produz num ano.
+Por habitante, dá <strong>{{ ph.acores_t }} €</strong>. São Miguel produz
+mais de metade do total, mas por habitante as ilhas ficam mais perto umas das
+outras do que a população faria pensar.</p>
+
+<figure class="barras" aria-labelledby="cap-pib">
+  <figcaption id="cap-pib">PIB por habitante, por ilha, {{ ph.ano }}{% if ph.provisorio %} (provisório){% endif %}</figcaption>
+  {%- for i in ph.por_ilha %}
+  <div class="barra" title="{{ i.ilha }}: {{ i.valor_t }} € por habitante">
+    <span class="nome">{{ i.ilha }}</span>
+    <span class="trilho"><span class="valor" style="width: {{ i.pct }}%"></span></span>
+    <span class="num">{{ i.valor_t }} €</span>
+  </div>
+  {%- endfor %}
+</figure>
+<p>O PIB por habitante não é o que cada pessoa ganha: conta também os lucros
+das empresas e o que se produz para fora, e uma ilha pequena com um aeroporto
+ou um porto grande produz muito por habitante. Para o rendimento das
+famílias, veja <a href="#viver">Como se vive</a>.</p>
+<p class="fonte">Fonte: <a href="{{ ph.url }}">SREA, PIB por ilha</a>, dividido
+pela população residente estimada pelo SREA no mesmo ano (conta do açores.net).
+<a href="/dados/srea/#ilhas">Mais sobre a economia de cada ilha →</a></p>
+{% endif %}
+
 <h2 id="quem-decide">2. Quem decide o quê</h2>
 
 <p>Os Açores são uma <strong>região autónoma</strong>: desde 1976 têm
