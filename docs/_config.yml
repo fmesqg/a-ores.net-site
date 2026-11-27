@@ -31,16 +31,8 @@ collections:
   ao:
     output: true
     permalink: /ao/:path/
-  authors:
-    output: true
-    permalink: /blog/:path/
 
 defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
   - scope:
       path: ""
       type: "ao"

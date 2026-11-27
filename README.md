@@ -25,7 +25,7 @@ GitHub Pages by GitHub Actions).
 | [`/dados/tdc/`](https://xn--aores-yra.net/dados/tdc/) | Tribunal de Contas opinions on the Region's accounts | `data/tdc.csv`, `data/tdc_valores.csv` |
 | [`/dados/`](https://xn--aores-yra.net/dados/) | Search and CSV export of contracts (BASE), Assembly records (ALRA) and Jornal Oficial acts (JORAA) | `docs/_{base,alra,joraa}_updates/` |
 | [`/atualizacoes/`](https://xn--aores-yra.net/atualizacoes/), [RSS](https://xn--aores-yra.net/rsss) | What came in each day | `docs/_*_updates/`, `docs/rss/` |
-| [`/blog`](https://xn--aores-yra.net/blog) | Opinion and older analyses (not in the menu) | `docs/_posts/` |
+| `/blog/mesquita/*` | Redirects to the opinion articles, now on [mesquita.xyz](https://mesquita.xyz) | `docs/redirecionamentos/` |
 
 `docs/dados/` (CSVs, SQLite with full-text search, JSON for the charts) and
 `docs/_data/resumo.json` are not committed: `python3 bot/datasets.py docs`

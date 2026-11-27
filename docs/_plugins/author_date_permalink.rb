@@ -6,7 +6,7 @@ module Jekyll
       def generate(site)
         # First pass: collect authors
         authors = {}
-        site.collections['authors'].docs.each do |author|
+        (site.collections['authors']&.docs || []).each do |author|
           authors[author.data['short_name']] = author.url
         end
   

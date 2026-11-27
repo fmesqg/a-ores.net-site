@@ -228,10 +228,10 @@ de setembro de 2026) e a venda da SEGMA e da Globaleda
 São opinião, não fazem parte dos dados.</p>
 
 <ul>
-  <li>Francisco Mesquita, <a href="/blog/mesquita/bencom">"Reféns da BENCOM até quando?"</a>, janeiro de 2025</li>
-  <li>Francisco Mesquita, <a href="/blog/mesquita/eletricidade">"Eletricidade dos Açores"</a>, agosto de 2025</li>
+  <li>Francisco Mesquita, <a href="https://mesquita.xyz/bencom">"Reféns da BENCOM até quando?"</a>, janeiro de 2025</li>
+  <li>Francisco Mesquita, <a href="https://mesquita.xyz/eletricidade">"Eletricidade dos Açores"</a>, agosto de 2025</li>
   <li>Fernando Mesquita, <a href="/ao/20260903-23/">"Dos bolsos dos açorianos para os cofres do Grupo Bensaude"</a>, Açoriano Oriental, setembro de 2026</li>
-  <li>Francisco Mesquita, <a href="/blog/mesquita/machado">"Bom para quem, Joaquim Machado?"</a>, novembro de 2026</li>
+  <li>Francisco Mesquita, <a href="https://mesquita.xyz/machado">"Bom para quem, Joaquim Machado?"</a>, novembro de 2026</li>
 </ul>
 
 <style>
