@@ -15,7 +15,10 @@ GitHub Pages by GitHub Actions).
 | [`/tutorial/`](https://xn--aores-yra.net/tutorial/) | Tutorial for journalists: worked examples, pitfalls, a checklist before publishing | `docs/tutorial.md` (figures written in by hand, as of Nov 2026) |
 | [`/financas/`](https://xn--aores-yra.net/financas/) | Finanças: the Region's deficit, debt and money left out of the Conta; entry to BEO and TdC | `docs/financas.md` + `docs/_data/resumo.json` |
 | [`/dados/ine/`](https://xn--aores-yra.net/dados/ine/) | INE indicators by concelho and freguesia, vs Madeira and Portugal | `data/ine.csv` |
-| [`/dados/srea/`](https://xn--aores-yra.net/dados/srea/) | Economia: prices, employment, activity, tourism, GDP by island (SREA) | `data/srea.csv` |
+| [`/economia/`](https://xn--aores-yra.net/economia/) | Economia: GDP, inflation, unemployment and the public companies' weight; entry to the three pages below | `docs/economia.md` + `docs/_data/` |
+| [`/dados/srea/`](https://xn--aores-yra.net/dados/srea/) | Indicators: prices, employment, activity, tourism, GDP by island (SREA) | `data/srea.csv` |
+| [`/dados/sper/`](https://xn--aores-yra.net/dados/sper/) | Regional public companies (SATA, EDA, hospitals...), company by company, and the Region's net financial effort (CFP) | `data/sper*.csv` |
+| [`/dados/maiores-empresas/`](https://xn--aores-yra.net/dados/maiores-empresas/) | The 200 largest companies with head office in the Azores, by sector and island | `data/maiores_2024.csv` |
 | [`/dados/beo/`](https://xn--aores-yra.net/dados/beo/) | Budget execution (Boletins de Execução Orçamental), month by month | `data/beo.csv` |
 | [`/dados/tdc/`](https://xn--aores-yra.net/dados/tdc/) | Tribunal de Contas opinions on the Region's accounts | `data/tdc.csv`, `data/tdc_valores.csv` |
 | [`/dados/`](https://xn--aores-yra.net/dados/) | Search and CSV export of contracts (BASE), Assembly records (ALRA) and Jornal Oficial acts (JORAA) | `docs/_{base,alra,joraa}_updates/` |
@@ -36,6 +39,8 @@ generates them at build time.
 | [SREA](https://srea.azores.gov.pt) | `python3 bot/srea.py data` | `data/srea.csv` | weekly, `srea.yml` |
 | [Portal](https://portal.azores.gov.pt) (BEO PDFs) | `python3 bot/beo.py data` | `data/beo.csv` | weekly, `beo.yml` |
 | [Tribunal de Contas](https://www.tcontas.pt) | `python3 bot/tdc.py data` | `data/tdc.csv`, `data/tdc_valores.csv` | weekly, `tdc.yml` |
+| [Conselho das Finanças Públicas](https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas) | `python3 bot/cfp.py data` | `data/sper.csv`, `data/sper_empresas.csv`, `data/sper_regiao.csv` | weekly, `cfp.yml` |
+| 100 Maiores Empresas dos Açores (Açoriano Oriental, yearly magazine) | entered by hand from the magazine | `data/maiores_<ano>.csv` | once a year |
 | all of the above | `python3 bot/datasets.py docs` | `docs/dados/`, `docs/_data/` | every deploy, `pages.yml` |
 
 Requests to `*.azores.gov.pt` (JORAA, Portal, SREA) go through `bot/gov.py`:

@@ -22,4 +22,6 @@ docs/_data/ine_novidades.json
 docs/_data/beo_ultimo.json
 docs/_data/tdc_ultimo.json
 docs/_data/resumo.json
+docs/_data/sper.json
+docs/_data/maiores.json
 .DS_Store

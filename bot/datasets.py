@@ -29,10 +29,17 @@ and writes, under docs/dados/:
              tourism by island, GDP by island): a copy of data/srea.csv,
              which bot/srea.py fetches weekly
   srea.json  the same series, compact, for the charts on /dados/srea/
+  sper.csv, sper_empresas.csv, sper_regiao.csv  the regional public
+             companies (SERAA), company by company, from the Conselho das
+             Finanças Públicas: copies of data/sper*.csv (bot/cfp.py)
+  maiores.csv  the 200 largest companies with head office in the Azores in
+             one year (Açoriano Oriental's "100 Maiores Empresas dos
+             Açores"): a copy of data/maiores_<ano>.csv, entered by hand
   meta.json  row counts, date coverage, build time
 
-and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json
-and resumo.json (the numbers on /introducao/ and /dados/srea/).
+and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json,
+resumo.json (the numbers on /introducao/ and /dados/srea/), sper.json
+(/dados/sper/) and maiores.json (/dados/maiores-empresas/).
 
 The CSVs are UTF-8 with BOM, so Excel opens accents correctly. The search
 page (docs/dados.md) reads them directly. None of these files is committed:
@@ -45,6 +52,7 @@ import json
 import re
 import sqlite3
 import sys
+import unicodedata
 from pathlib import Path
 
 ITEM = re.compile(r"^\* \[(?P<title>.*)\]\((?P<url>[^)\s]+)\)\s*$")
@@ -274,6 +282,30 @@ DB_TYPES = {
     "mes": "INTEGER",
     "conta": "INTEGER",
     "numero": "INTEGER",
+    "posicao": "INTEGER",
+    "trabalhadores": "INTEGER",
+    "participacao": "REAL",
+    **{
+        c: "REAL"
+        for c in (
+            "volume_negocios",
+            "volume_negocios_2023",
+            "cresc_vn_pct",
+            "vab",
+            "ativo",
+            "capital_proprio",
+            "passivo",
+            "resultado_liquido",
+            "resultado_liquido_2023",
+            "cresc_rl_pct",
+            "solvabilidade_pct",
+            "rentab_cp_pct",
+            "rentab_ativo_pct",
+            "rentab_vn_pct",
+            "rotacao_ativo_pct",
+            "vab_trabalhador",
+        )
+    },
 }
 DB_INDEX = {
     "base": ["publicado", "data_assinatura", "adjudicante", "adjudicatario"],
@@ -284,6 +316,10 @@ DB_INDEX = {
     "tdc": ["conta", "tipo"],
     "tdc_valores": ["quadro", "ano", "caminho"],
     "srea": ["serie", "data", "local"],
+    "sper": ["sigla", "ano", "indicador"],
+    "sper_empresas": ["relatorio", "sigla"],
+    "sper_regiao": ["relatorio", "quadro", "ano"],
+    "maiores": ["ano", "posicao", "ilha", "setor"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
@@ -294,6 +330,10 @@ DB_FTS = {
     "tdc": ["tipo", "texto", "referencia", "situacao"],
     "tdc_valores": ["quadro", "rubrica", "caminho"],
     "srea": ["indicador", "rubrica", "local"],
+    "sper": ["empresa", "indicador"],
+    "sper_empresas": ["empresa", "acionista", "nota"],
+    "sper_regiao": ["quadro", "grupo", "rubrica"],
+    "maiores": ["empresa", "ilha", "setor"],
 }
 
 
@@ -809,6 +849,351 @@ def resumo_tdc(tdc: tuple[list, list], valores: tuple[list, list]) -> dict:
     return out
 
 
+def _dicts(table: tuple[list, list]) -> list[dict]:
+    cols, rows = table
+    return [dict(zip(cols, r, strict=False)) for r in rows]
+
+
+def _fold(s: str) -> str:
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+def _rel_key(rel: str) -> tuple[int, int]:
+    n, y = rel.split("/")
+    return int(y), int(n)
+
+
+# CAE Rev. 3 sections, as the CFP list gives them (one letter).
+CAE = {
+    "A": "Agricultura e pesca",
+    "C": "Indústria",
+    "D": "Eletricidade e gás",
+    "E": "Água e resíduos",
+    "F": "Construção",
+    "G": "Comércio",
+    "H": "Transportes",
+    "I": "Alojamento e restauração",
+    "J": "Informação e comunicação",
+    "L": "Imobiliário",
+    "M": "Atividades técnicas",
+    "N": "Serviços administrativos",
+    "O": "Administração pública",
+    "Q": "Saúde",
+    "R": "Cultura e espetáculos",
+}
+SPER_IND = {
+    "trabalhadores": "Número de Trabalhadores",
+    "vn": "Volume de Negócios",
+    "vab": "Valor Acrescentado Bruto (VAB)",
+    "ebitda": "EBITDA",
+    "rl": "Resultado Líquido",
+    "cp": "Capital Próprio",
+    "passivo": "Total do Passivo",
+    "ativo": "Total do Ativo",
+    "pessoal": "Gastos com Pessoal",
+}
+ESFORCO = "Esforço financeiro líquido da Região"
+ESFORCO_TOTAL = "Esforço financeiro líquido (2)-(1)"
+
+
+def sper_data(
+    sper: tuple[list, list],
+    empresas: tuple[list, list] | None = None,
+    regiao: tuple[list, list] | None = None,
+) -> dict:
+    """data/sper*.csv (bot/cfp.py) for /dados/sper/ and /economia/: sector
+    totals by year, one entry per company for the latest year, the
+    Region's net financial effort and the sector's weight."""
+    v = _dicts(sper)
+    if not v:
+        return {}
+    by = {
+        (r["sigla"], int(r["ano"]), r["indicador"]): _num(r["valor"])
+        for r in v
+    }
+    anos = sorted({int(r["ano"]) for r in v})
+    ano = anos[-1]
+    rel = max({r["relatorio"] for r in v}, key=_rel_key)
+    last = next(r for r in v if r["relatorio"] == rel)
+    siglas = sorted({r["sigla"] for r in v})
+
+    def amount(k: str, x: float, dec: int = 2) -> float:
+        """People as integers, money in million euros (+ 0.0 drops -0.0)."""
+        return int(x) if k == "trabalhadores" else round(x / 1e6, dec) + 0.0
+
+    totais = []
+    for a in anos:
+        t: dict = {"ano": a}
+        for k, ind in SPER_IND.items():
+            xs = [
+                by[s, a, ind]
+                for s in siglas
+                if by.get((s, a, ind)) is not None
+            ]
+            if xs:
+                t[k] = amount(k, sum(xs), 1)
+        t["prejuizo"] = sum(
+            1 for s in siglas if (by.get((s, a, SPER_IND["rl"])) or 0) < 0
+        )
+        totais.append(t)
+    out: dict = {
+        "relatorio": rel,
+        "url": last["url"],
+        "ficheiro": last.get("ficheiro", ""),
+        "ano": ano,
+        "anos": [{"ano": a} for a in anos],
+        "totais": totais,
+        "total": totais[-1],
+    }
+    lista = (
+        [e for e in _dicts(empresas) if e["relatorio"] == rel]
+        if empresas
+        else []
+    )
+    emp = []
+    for e in lista or [{"sigla": s, "empresa": s} for s in siglas]:
+        s = e["sigla"]
+        part = _num(e.get("participacao", ""))
+        d: dict = {
+            "sigla": s,
+            "nome": _curto(e["empresa"], s),
+            "empresa": e["empresa"],
+            "setor": CAE.get(e.get("cae", ""), e.get("cae", "")),
+            "acionista": e.get("acionista", ""),
+            "ap": e.get("ap") == "sim",
+            "nota": e.get("nota", ""),
+        }
+        if part is not None:
+            d["participacao"] = round(100 * part, 1)
+        for k, ind in SPER_IND.items():
+            x = by.get((s, ano, ind))
+            if x is not None:
+                d[k] = amount(k, x)
+        d["rl_anos"] = [
+            (
+                {"ano": a, "v": amount("rl", by[s, a, SPER_IND["rl"]])}
+                if by.get((s, a, SPER_IND["rl"])) is not None
+                else {"ano": a}
+            )
+            for a in anos
+        ]
+        emp.append(d)
+    emp.sort(key=lambda d: -d.get("vn", -1e9))
+    out["empresas"] = emp
+    out["n"] = len(emp)
+    out["sem_ficha"] = [d["nome"] for d in emp if "vn" not in d]
+    out["cp_negativo"] = [d["nome"] for d in emp if d.get("cp", 0) < 0]
+    if regiao:
+        out.update(_sper_regiao(_dicts(regiao), rel))
+    return out
+
+
+def _sper_regiao(rows: list[dict], rel: str) -> dict:
+    out: dict = {}
+    mine = [r for r in rows if r["relatorio"] == rel]
+    esf = [r for r in mine if r["quadro"] == ESFORCO]
+    if esf:
+        anos = sorted({int(r["ano"]) for r in esf})
+        linhas: dict[str, dict] = {}
+        for r in esf:
+            ln = linhas.setdefault(
+                r["rubrica"],
+                {"rubrica": r["rubrica"], "unidade": r["unidade"], "v": {}},
+            )
+            ln["v"][int(r["ano"])] = _num(r["valor"])
+        out["esforco"] = {
+            "relatorio": rel,
+            "url": esf[0]["url"],
+            "nota": next((r["nota"] for r in esf if r["nota"]), ""),
+            "anos": [{"ano": a} for a in anos],
+            "linhas": [
+                {
+                    "rubrica": ln["rubrica"],
+                    "unidade": ln["unidade"],
+                    "total": ln["rubrica"].startswith("Esforço"),
+                    "valores": [
+                        {"v": ln["v"][a]} if a in ln["v"] else {} for a in anos
+                    ],
+                }
+                for ln in linhas.values()
+            ],
+        }
+        tot = {
+            int(r["ano"]): _num(r["valor"])
+            for r in esf
+            if r["rubrica"] == ESFORCO_TOTAL
+        }
+        if tot:
+            a = max(tot)
+            out["esforco"].update(ano=a, total=tot[a])
+            # The same year in an older report, when the method differed.
+            for r in rows:
+                if (
+                    r["relatorio"] != rel
+                    and r["quadro"] == ESFORCO
+                    and r["rubrica"] == ESFORCO_TOTAL
+                    and int(r["ano"]) in tot
+                    and abs(_num(r["valor"]) - tot[int(r["ano"])]) > 1
+                ):
+                    out["esforco"]["antes"] = {
+                        "relatorio": r["relatorio"],
+                        "url": r["url"],
+                        "ano": int(r["ano"]),
+                        "valor": _num(r["valor"]),
+                        "agora": tot[int(r["ano"])],
+                    }
+    peso = [r for r in mine if r["quadro"] == "Peso na economia"]
+    for k, start in (
+        ("vab_pib", "Peso do SERAA"),
+        ("emprego", "Proporção do SERAA"),
+    ):
+        xs = [r for r in peso if r["rubrica"].startswith(start)]
+        if xs:
+            r = max(xs, key=lambda r: int(r["ano"]))
+            out[k] = round(_num(r["valor"]), 1)
+            out["peso_ano"] = int(r["ano"])
+    return out
+
+
+def _curto(empresa: str, sigla: str) -> str:
+    """Readable short name: 'Sata Air Açores, S.A.' -> 'SATA Air Açores',
+    'HDES - Hospital Divino Espirito Santo, E.P.E.R.' -> 'HDES'."""
+    nome = empresa.split(",")[0].strip()
+    if " - " in nome or len(nome) > 22:
+        return sigla
+    return re.sub(r"^Sata\b", "SATA", nome)
+
+
+def _company_keys(name: str, loose: bool) -> set[str]:
+    out = {_fold(name.split(",")[0])}
+    if loose:
+        out.add(_fold(name.split(" - ")[0]))
+    return out
+
+
+def maiores_data(
+    maiores: tuple[list, list], sper_lista: list[dict] | None = None
+) -> dict:
+    """The largest companies (data/maiores_<ano>.csv, in thousands of euros)
+    for /dados/maiores-empresas/ and /economia/, with the regional public
+    companies among them marked."""
+    m = _dicts(maiores)
+    if not m:
+        return {}
+    # Full CFP names only: a sigla such as "SATA" would also match a private
+    # "SATA - ..." company by its loose key.
+    publicas = {}
+    for e in sper_lista or []:
+        for k in _company_keys(e["empresa"], False):
+            publicas[k] = e["sigla"]
+
+    def num(x: str) -> float:
+        return _num(x) or 0.0
+
+    emp = []
+    for r in m:
+        sigla = next(
+            (
+                publicas[k]
+                for k in _company_keys(r["empresa"], True)
+                if k in publicas
+            ),
+            "",
+        )
+        d = {
+            "posicao": int(r["posicao"]),
+            "empresa": r["empresa"],
+            "ilha": r["ilha"],
+            "setor": r["setor"],
+            "trabalhadores": int(num(r["trabalhadores"])),
+            "vn": round(num(r["volume_negocios"]) / 1e3, 1),
+            "rl": round(num(r["resultado_liquido"]) / 1e3, 1),
+            "publica": sigla,
+        }
+        if r["cresc_vn_pct"]:
+            d["cresc_vn"] = num(r["cresc_vn_pct"])
+        emp.append(d)
+    emp.sort(key=lambda d: d["posicao"])
+    vn = sum(d["vn"] for d in emp)
+
+    def groups(key: str) -> list[dict]:
+        g: dict[str, dict] = {}
+        for d in emp:
+            x = g.setdefault(
+                d[key], {"nome": d[key], "n": 0, "vn": 0.0, "trabalhadores": 0}
+            )
+            x["n"] += 1
+            x["vn"] += d["vn"]
+            x["trabalhadores"] += d["trabalhadores"]
+        out = sorted(g.values(), key=lambda x: -x["vn"])
+        for x in out:
+            x["vn"] = round(x["vn"], 1)
+            x["pct"] = round(100 * x["vn"] / vn) if vn else 0
+        return out
+
+    pub = [d for d in emp if d["publica"]]
+    return {
+        "ano": int(m[0]["ano"]),
+        "fonte": m[0]["fonte"],
+        "url": m[0]["url"],
+        "n": len(emp),
+        "vn": round(vn, 1),
+        "trabalhadores": sum(d["trabalhadores"] for d in emp),
+        "top10_pct": (
+            round(100 * sum(d["vn"] for d in emp[:10]) / vn) if vn else 0
+        ),
+        "prejuizo": sum(1 for d in emp if d["rl"] < 0),
+        "publicas": len(pub),
+        "publicas_pct": (
+            round(100 * sum(d["vn"] for d in pub) / vn) if vn else 0
+        ),
+        "setores": groups("setor"),
+        "ilhas": groups("ilha"),
+        "empresas": emp,
+    }
+
+
+def write_economia(docs: Path, tables: dict) -> None:
+    """docs/_data/sper.json and maiores.json for the Economia section."""
+    (docs / "_data").mkdir(exist_ok=True)
+    sper: dict = {}
+    if "sper" in tables:
+        sper = sper_data(
+            tables["sper"],
+            tables.get("sper_empresas"),
+            tables.get("sper_regiao"),
+        )
+    maiores: dict = {}
+    if "maiores" in tables:
+        lista = (
+            [
+                e
+                for e in _dicts(tables["sper_empresas"])
+                if e["relatorio"] == sper.get("relatorio")
+            ]
+            if "sper_empresas" in tables
+            else []
+        )
+        maiores = maiores_data(tables["maiores"], lista)
+        posicao = {
+            d["publica"]: d["posicao"]
+            for d in maiores["empresas"]
+            if d["publica"]
+        }
+        for d in sper.get("empresas", []):
+            if d["sigla"] in posicao:
+                d["posicao"] = posicao[d["sigla"]]
+        if sper:
+            sper["maiores_ano"] = maiores["ano"]
+    for name, data in (("sper", sper), ("maiores", maiores)):
+        (docs / "_data" / f"{name}.json").write_text(
+            json.dumps(_texts(data), ensure_ascii=False, indent=1),
+            encoding="utf-8",
+        )
+
+
 def pt_num(x: float) -> str:
     """245328 -> '245 328', 39.38 -> '39,4', 5.94 -> '5,94' (pt-PT, the
     thousands separator is a no-break space)."""
@@ -884,8 +1269,21 @@ def main(docs: Path) -> dict:
         )
         meta[name] = info
     # fetched weekly into data/ by their bots
-    for name in ("ine", "beo", "srea", "tdc", "tdc_valores"):
+    maiores = sorted((docs.parent / "data").glob("maiores_*.csv"))
+    for name in (
+        "ine",
+        "beo",
+        "srea",
+        "tdc",
+        "tdc_valores",
+        "sper",
+        "sper_empresas",
+        "sper_regiao",
+        "maiores",
+    ):
         src = docs.parent / "data" / f"{name}.csv"
+        if name == "maiores" and maiores:
+            src = maiores[-1]  # the latest year entered
         if not src.exists():
             continue
         with open(src, encoding="utf-8-sig", newline="") as f:
@@ -893,10 +1291,11 @@ def main(docs: Path) -> dict:
             cols, rows = next(reader), list(reader)
         tables[name] = (cols, rows)
         info = write(out, name, cols, rows)
-        when = cols.index(
-            next(c for c in ("data", "conta", "ano") if c in cols)
+        when = next(
+            (cols.index(c) for c in ("data", "conta", "ano") if c in cols),
+            None,
         )
-        dates = sorted(r[when] for r in rows if r[when])
+        dates = sorted(r[when] for r in rows if when is not None and r[when])
         info["de"], info["ate"] = (dates[0], dates[-1]) if dates else ("", "")
         if name == "ine":
             info["indicadores"] = len({r[0] for r in rows})
@@ -919,6 +1318,7 @@ def main(docs: Path) -> dict:
             )
         meta[name] = info
     write_resumo(docs, tables)
+    write_economia(docs, tables)
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(

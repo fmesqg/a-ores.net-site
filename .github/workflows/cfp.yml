@@ -1,0 +1,57 @@
+name: Weekly CFP update (regional public companies)
+
+# Looks for a new Conselho das Finanças Públicas report on the regional
+# public business sector (bot/cfp.py) and, when one is out, adds its Azores
+# companies to data/sper.csv, data/sper_empresas.csv and data/sper_regiao.csv,
+# commits them and redeploys the site so /dados/sper/ picks it up. One report
+# a year; while there is none, a run costs one request to cfp.pt.
+#
+# The run fails, and GitHub emails, when cfp.pt cannot be read, a new report
+# has a different layout (see bot/cfp.py), or the report expected by now is
+# still missing.
+
+on:
+  schedule:
+    - cron: '37 5 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install openpyxl==3.1.5
+      - name: Look for a new report
+        run: python3 bot/cfp.py data
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          if git diff --quiet -- data/sper.csv data/sper_empresas.csv data/sper_regiao.csv; then
+            echo "Nothing to write."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config --global user.name "fmesqg-auto"
+            git config --global user.email "fmesqg-auto@users.noreply.github.com"
+            git add data/sper.csv data/sper_empresas.csv data/sper_regiao.csv
+            git commit -m "CFP regional public sector update"
+            git pull --rebase origin main
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy-site:
+    needs: fetch
+    if: needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
