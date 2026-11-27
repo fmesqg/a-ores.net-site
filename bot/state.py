@@ -34,8 +34,9 @@ class State:
     def get_updated_state(cls, prev_state, web_data: WebData):
         update_state: State = deepcopy(prev_state)
         update_state.datetime = NOW_DATETIME
-        if not isinstance(web_data.joraa, FetchError):
-            update_state.last_joraa_update = YESTERDAY_DATE
+        if not isinstance(web_data.joraa, FetchError) and web_data.joraa:
+            # the last day fetched: a backlog may take several runs
+            update_state.last_joraa_update = max(web_data.joraa)
         if not isinstance(web_data.base, FetchError):
             update_state.last_base_update = YESTERDAY_DATE
         if not isinstance(web_data.portal, FetchError):

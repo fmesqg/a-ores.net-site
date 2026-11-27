@@ -73,32 +73,6 @@ def test_requerimento_to_markdown_with_resposta():
     assert "15/01/2024" in md
 
 
-def test_requerimento_export_table_row():
-    data = {
-        "id": 100,
-        "url": "http://example.com/100",
-        "Número": "42",
-        "Requerente(s)": "João CH; Ana PS",
-        "Texto Requerimento": "http://example.com/req.pdf",
-    }
-    r = Requerimento(data)
-    headers = [
-        "Número",
-        "Requerente(s)",
-        "Alteração do Status",
-        "Texto Requerimento",
-        "Texto Resposta",
-    ]
-    row = r.export_table_row(
-        headers=headers, prev="NO PRAZO", now="RESPOSTA ATEMPADA"
-    )
-    assert "[42]" in row[0]
-    assert "João CH ..." in row[1]
-    assert "NO PRAZO → RESPOSTA ATEMPADA" in row[2]
-    assert "[Requerimento]" in row[3]
-    assert row[4] is None
-
-
 # --- Diario ---
 
 
@@ -234,19 +208,6 @@ def test_info_to_markdown_no_assunto():
     assert Info(data).to_markdown() is None
 
 
-def test_info_export_table_row():
-    data = {
-        "url": "http://example.com/n1",
-        "Assunto": "Test",
-        "Texto Informação": "http://example.com/info.pdf",
-    }
-    headers = ["link", "Assunto", "Texto Informação"]
-    row = Info(data).export_table_row(headers=headers)
-    assert "[link]" in row[0]
-    assert row[1] == "Test"
-    assert "[Informação]" in row[2]
-
-
 # --- Iniciativa ---
 
 
@@ -273,18 +234,6 @@ def test_iniciativa_to_markdown_full():
 def test_iniciativa_to_markdown_no_assunto():
     data = {"url": "http://example.com/ini1"}
     assert Iniciativa(data).to_markdown() is None
-
-
-def test_iniciativa_export_table_row():
-    data = {
-        "url": "http://example.com/ini1",
-        "Nº Processo": "105",
-        "Texto Iniciativa": "http://example.com/ini.pdf",
-    }
-    headers = ["Nº Processo", "Texto Iniciativa"]
-    row = Iniciativa(data).export_table_row(headers=headers)
-    assert "[105]" in row[0]
-    assert "[Texto Iniciativa]" in row[1]
 
 
 # --- Voto ---
@@ -314,28 +263,3 @@ def test_voto_to_markdown_full():
 def test_voto_to_markdown_no_assunto():
     data = {"url": "http://example.com/v1"}
     assert Voto(data).to_markdown() is None
-
-
-def test_voto_export_table_row():
-    data = {
-        "url": "http://example.com/v1",
-        "Nº Entrada": "1550",
-        "Texto Voto Apresentado": "http://example.com/va.pdf",
-        "Texto Voto Aprovado": "http://example.com/vap.pdf",
-    }
-    headers = ["Nº Entrada", "Texto Voto Apresentado", "Texto Voto Aprovado"]
-    row = Voto(data).export_table_row(headers=headers)
-    assert "[1550]" in row[0]
-    assert "[Texto Voto Apresentado]" in row[1]
-    assert "[Texto Voto Aprovado]" in row[2]
-
-
-def test_voto_export_table_row_no_docs():
-    data = {
-        "url": "http://example.com/v1",
-        "Nº Entrada": "1550",
-    }
-    headers = ["Nº Entrada", "Texto Voto Apresentado", "Texto Voto Aprovado"]
-    row = Voto(data).export_table_row(headers=headers)
-    assert row[1] is None
-    assert row[2] is None

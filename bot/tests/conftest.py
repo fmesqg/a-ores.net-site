@@ -3,7 +3,16 @@ import os
 
 import pytest
 
+from bot import gov
+
 FIXTURES_DIR = os.path.join(os.path.dirname(__file__), "fixtures")
+
+
+@pytest.fixture(autouse=True)
+def no_gov_pause(monkeypatch):
+    """gov.wait() sleeps up to 3 minutes between requests: not in tests."""
+    monkeypatch.setattr(gov, "_sleep", lambda seconds: None)
+    monkeypatch.setattr(gov, "_last", None)
 
 
 @pytest.fixture

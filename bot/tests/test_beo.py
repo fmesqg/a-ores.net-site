@@ -177,7 +177,6 @@ def test_finish_uses_latest_labels():
 def test_main_adds_new_months_and_fails_when_stale(tmp_path, monkeypatch):
     text = pages("beo_2026_09.txt")
     monkeypatch.setattr(beo, "FIRST", (2026, 8))
-    monkeypatch.setattr(beo, "PAUSE", 0)
     monkeypatch.setattr(
         beo, "download", lambda url: b"%PDF" if "_09_" in url else None
     )

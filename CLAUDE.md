@@ -43,14 +43,13 @@ cd docs && bundle exec jekyll serve
 Entry point: `bot/__main__.py`
 
 ```
-fetch_web_data() → compute_delta_ids() → write_update() → write_daily_json() → append_state()
+fetch_web_data() → compute_delta_ids() → write_update() → append_state()
 ```
 
 1. **Fetch** (`fetch.py`) — Scrapes/calls APIs for all four data sources
 2. **Delta** (`state.py`, `utils.py`) — Compares fetched IDs against `state.jsonl` to find new/changed items
 3. **Export** (`export.py`, `record.py`) — Converts records to Jekyll markdown with frontmatter
-4. **JSON feed** (`daily_json.py`) — Writes structured JSON to `docs/_data/daily/YYYY-MM-DD.json`
-5. **State** (`utils.py`) — Appends current run's state to `state.jsonl` (auto-rotated at 60 lines)
+4. **State** (`utils.py`) — Appends current run's state to `state.jsonl` (auto-rotated at 60 lines)
 
 ### Open datasets (`bot/datasets.py`)
 
@@ -72,7 +71,9 @@ Stdlib-only, `python3 bot/ine.py data` (network, ~6 min). Fetches the curated `I
 
 `python3 bot/srea.py data` (needs `openpyxl` and `xlrd`) updates `data/srea.csv` (committed) from the Excel files of srea.azores.gov.pt (Serviço Regional de Estatística dos Açores): IPC (inflation), IAE and ICP (monthly activity and consumption), unemployment rate (Inquérito ao Emprego, Quadro 10), nights by island (hotels and alojamento local), GDP and population by island, and `pib_hab` computed from them. Each edition is a new upload with a changing name, so `SERIES` finds each file by a regex among the links of its area page (`/area/<slug>/`); a failed series makes `main()` return 1 (`.github/workflows/srea.yml`, weekly, still commits the others and then fails). Unemployment and nights files only hold the last quarters/two years, so history accumulates in the CSV (newer rows win by `KEY`). The "relatório" pages open a Reporting Services server behind Cloudflare: don't use it. `bot/datasets.py` writes `docs/dados/srea.json` (charts) and `resumo.srea` (numbers) for `docs/srea.md` (`/dados/srea/`, "Economia") and `/acores-101/`.
 
-JORAA has failed every day since 2026-08-11: jo.azores.gov.pt answers the API with a Cloudflare challenge (403 HTML), which `fetch_day_joraa` then fails to parse as JSON.
+### Azores government sites (`bot/gov.py`)
+
+Every request to `*.azores.gov.pt` (JORAA API, portal BEO/SIGICA in `fetch.py`, `beo.py`, `srea.py`) sends `gov.UA` and calls `gov.wait()` first. Those sites are behind Cloudflare; the government's network team whitelists that User-Agent on condition of ≤20 requests/hour from 07:00 to 20:00 (Azores time) and ≥20 s between requests otherwise. Never parallelise these requests or change the UA without telling them. The three workflows that call them share the `azores-gov` concurrency group, so they queue instead of overlapping. JORAA was blocked (403 challenge) from 2026-08-11; `fetch_joraa` fetches day by day (one search + one request per act, for `textoIntegral`) within `JORAA_BUDGET` (3 h ≈ 15 days) and `last_joraa_update` moves only to the last day fetched, so a backlog is caught up over several nights.
 
 ### Data Sources
 
@@ -85,11 +86,11 @@ JORAA has failed every day since 2026-08-11: jo.azores.gov.pt answers the API wi
 
 ### Record Types (`record.py`)
 
-Abstract `Record` base class with subclasses: `Requerimento`, `Iniciativa`, `Voto`, `Diario`, `Interven`, `Peti`, `Info`, `AudiARep`, `AudiGRep`. Each implements `to_markdown()` and `to_dict()` (structured JSON serialization).
+Abstract `Record` base class with subclasses: `Requerimento`, `Iniciativa`, `Voto`, `Diario`, `Interven`, `Peti`, `Info`, `AudiARep`, `AudiGRep`. Each implements `to_markdown()`.
 
 ### Jekyll Site (`docs/`)
 
-Minima theme. Five auto-generated collections (`_alra_updates/`, `_joraa_updates/`, `_base_updates/`, `_portal_updates/` from the bot; `_ao/` from the AO scraper) plus manual blog posts in `_posts/`. Structured JSON feed in `_data/daily/`.
+Minima theme. Five auto-generated collections (`_alra_updates/`, `_joraa_updates/`, `_base_updates/`, `_portal_updates/` from the bot; `_ao/` from the AO scraper) plus manual blog posts in `_posts/`.
 
 ### News Scrapers (`scrapers/`)
 
@@ -122,7 +123,6 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 - Pages carry `noindex: true` (via the `ao` defaults in `docs/_config.yml` → `_includes/custom-head.html`) and `docs/robots.txt` disallows `/ao/`, since they host paywalled print text.
 - Ordering: sections by their lowest page number, articles by page within each section, ties keeping the print edition's order — so slug `-01` is the front of the paper. Articles with no page sort last.
 - Front-page teasers (`page` in `FRONT_PAGE_NUMBERS` = `{"0", "1"}`) are dropped: they are reworded one-line blurbs for articles that run inside. Page `0` is the lead story, whose card omits the `Pág. N` marker.
-- `scrapers/migrate_ao_feed.py` is the one-off script that rebuilt 30 days of pages from the old 14 MB per-article feed. It no-ops if the feed is already migrated.
 - `scrapers/repair_ao_pages.py` re-derives backfilled editions: it re-reads the section index pages to recover page numbers and any section missing from disk, then regenerates. `--no-fetch` regenerates from disk alone (use after changing ordering or filter rules); `--dry-run` reports without writing.
 
 ## Key Details
@@ -130,6 +130,6 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 - **State file:** `bot/state.jsonl` is an append-only ledger (~12 MB, committed). Each line is one bot run's full state. Delta computation depends on the last entry.
 - **Deploy:** `.github/workflows/pages.yml` builds Jekyll with `actions/jekyll-build-pages` and deploys on push to main, on manual dispatch and when called by the daily run.
 - **CI/CD:** `.github/workflows/run-bot.yml` runs daily at 00:00 UTC, commits as `fmesqg-auto` if changes exist.
-- **Code style:** black (line-length 79), isort (black profile), Python >=3.11. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.
+- **Code style:** black (line-length 79), isort (black profile), Python >=3.11.5. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.
 - **Tests:** `pytest bot/tests/` runs offline by default. Network-dependent tests are marked `@pytest.mark.network` and skipped unless opted in with `-m network`.
 - **Content language:** Portuguese (Azores region).

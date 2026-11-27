@@ -39,6 +39,22 @@ def test_get_updated_state_success(state_dict):
     assert updated.alra_state == {"requerimentos": {}, "informacoes": [99]}
 
 
+def test_get_updated_state_joraa_moves_to_last_day_fetched(state_dict):
+    prev = State(state_dict)
+    days = [date(2024, 8, 20), date(2024, 8, 21)]
+    wd = WebData(
+        joraa={d: [] for d in days},
+        alra={},
+        base={},
+        portal=FetchError("timeout"),
+        alra_ids=FetchError("timeout"),
+    )
+    assert State.get_updated_state(prev, wd).last_joraa_update == days[-1]
+    wd.joraa = {}
+    updated = State.get_updated_state(prev, wd)
+    assert updated.last_joraa_update == prev.last_joraa_update
+
+
 def test_get_updated_state_joraa_error(state_dict):
     prev = State(state_dict)
     original_joraa_date = prev.last_joraa_update

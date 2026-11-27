@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fill in the page numbers the legacy feed never stored.
 
-Editions backfilled by ``migrate_ao_feed`` carry no ``page``, so the
+Editions backfilled from the old per-article feed carry no ``page``, so the
 front-page teaser filter in :mod:`scrapers.ao_pages` cannot see them.
 This re-fetches only the print edition's *section index* pages (roughly
 nine per edition, not one request per article), maps ``artigo`` id to

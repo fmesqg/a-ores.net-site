@@ -39,14 +39,16 @@ import html
 import io
 import re
 import sys
-import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
+try:
+    from bot import gov
+except ImportError:  # run as a script: python3 bot/<name>.py
+    import gov
+
 SITE = "https://srea.azores.gov.pt"
-UA = "acores.net open data (github.com/fmesqg/a-ores.net-site)"
-PAUSE = 0.5
 
 COLS = [
     "serie",
@@ -85,7 +87,8 @@ Rows = list[list]
 
 def get(url: str) -> bytes:
     url = urllib.parse.quote(url, safe=":/%?=&#")  # names carry "–"
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    req = urllib.request.Request(url, headers=gov.HEADERS)
+    gov.wait()
     with urllib.request.urlopen(req, timeout=60) as r:
         return r.read()
 
@@ -557,7 +560,6 @@ def main(out_dir: Path) -> int:
         try:
             if area not in pages:
                 pages[area] = get(page).decode("utf-8", "replace")
-                time.sleep(PAUSE)
             files = [
                 u for u in area_files(pages[area]) if re.search(pattern, u)
             ]
@@ -567,7 +569,6 @@ def main(out_dir: Path) -> int:
             for url in files if every else files[-1:]:
                 fname = urllib.parse.unquote(url.rsplit("/", 1)[-1])
                 rows = parse(sheets(get(url), fname))
-                time.sleep(PAUSE)
                 for r in rows:
                     r["ficheiro"], r["pagina"] = url, page
                 got += rows

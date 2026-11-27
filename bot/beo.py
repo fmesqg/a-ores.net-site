@@ -41,16 +41,18 @@ import datetime as dt
 import io
 import re
 import sys
-import time
 import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
 
+try:
+    from bot import gov
+except ImportError:  # run as a script: python3 bot/<name>.py
+    import gov
+
 BASE = "https://portal.azores.gov.pt/documents/36626"
-UA = "acores.net open data (github.com/fmesqg/a-ores.net-site)"
-PAUSE = 0.5
 FIRST = (2024, 1)
 STALE_DAYS = 80  # a boletim is due by the end of the next month
 
@@ -201,7 +203,8 @@ def download(url: str) -> bytes | None:
     """The PDF, or None if it is not there (yet). The PDFs go through
     Cloudflare too, which in November 2026 challenges the portal's pages but
     not /documents/. If that changes, fail now rather than wait STALE_DAYS."""
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    req = urllib.request.Request(url, headers=gov.HEADERS)
+    gov.wait()
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
             body = r.read()
@@ -509,7 +512,6 @@ def main(out_dir: Path, everything: bool = False) -> int:
         except Blocked as e:
             print(f"{y}-{m:02d}: bloqueado: {e}")
             return 1
-        time.sleep(PAUSE)
         if data is None:
             print(f"{y}-{m:02d}: ainda não publicado")
             continue
