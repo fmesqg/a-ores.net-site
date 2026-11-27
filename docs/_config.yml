@@ -4,7 +4,7 @@ minima:
   skin: solarized
 
 header_pages:
-  - acores-101.md
+  - introducao.md
   - ine.md
   - beo.md
   - srea.md

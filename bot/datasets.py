@@ -32,7 +32,7 @@ and writes, under docs/dados/:
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json
-and resumo.json (the numbers on /acores-101/ and /dados/srea/).
+and resumo.json (the numbers on /introducao/ and /dados/srea/).
 
 The CSVs are UTF-8 with BOM, so Excel opens accents correctly. The search
 page (docs/dados.md) reads them directly. None of these files is committed:
@@ -411,7 +411,7 @@ def write_ine_news(docs: Path, cols: list[str], rows: list[list]) -> None:
     )
 
 
-# Indicators shown on /acores-101/ (Açores vs Madeira vs país, latest year).
+# Indicators shown on /introducao/ (Açores vs Madeira vs país, latest year).
 RESUMO_INE = (
     "0012918",  # população residente
     "0012909",  # índice de envelhecimento
@@ -591,7 +591,7 @@ def _mes(data: str) -> str:
 
 
 def resumo_srea(cols: list[str], rows: list[list]) -> dict:
-    """Latest SREA figures for /acores-101/ and /dados/srea/."""
+    """Latest SREA figures for /introducao/ and /dados/srea/."""
     c = {k: i for i, k in enumerate(cols)}
 
     def pts(serie, indicador, rubrica="Total", local="Açores") -> list:
@@ -776,7 +776,7 @@ def _texts(node, total: float | None = None):
 
 
 def write_resumo(docs: Path, tables: dict) -> None:
-    """docs/_data/resumo.json: the few numbers /acores-101/ shows, computed
+    """docs/_data/resumo.json: the few numbers /introducao/ shows, computed
     here so that page does not download the full CSVs."""
     out: dict = {}
     if "ine" in tables:
