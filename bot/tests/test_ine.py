@@ -261,3 +261,25 @@ def test_ine_news_newest_first():
     news = datasets.ine_news(cols, rows)
     assert [n["varcd"] for n in news] == ["2", "1"]
     assert news[0]["periodo"] == "2025"
+
+
+def test_rows_from_scales_thousands():
+    # Câmaras' revenue: UnidadeMedida "Euro (€)" but values in 10^3 €.
+    data = {
+        "Dados": {
+            "2025": [
+                {
+                    "geocod": "2004203",
+                    "geodsg": "Ponta Delgada",
+                    "valor": "75105",
+                },
+                {"geocod": "20", "geodsg": "Açores", "valor": "0.5"},
+            ]
+        }
+    }
+    rows = ine.rows_from("0013908", data, {**META, "Potencia10": "3"})
+    valor = ine.COLS.index("valor")
+    assert [r[valor] for r in rows] == [75105000, 500]
+    assert rows[0][ine.COLS.index("unidade")] == "Euro (€)"
+    rows = ine.rows_from("0013908", data, {**META, "Potencia10": "0"})
+    assert [r[valor] for r in rows] == [75105, 0.5]

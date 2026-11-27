@@ -247,6 +247,12 @@ def rows_from(varcd: str, data: dict, meta: dict) -> list[list]:
     if periodicidade and periodicidade != "anual":
         nome += f" – {periodicidade}"  # annual and monthly series share names
     unidade = meta.get("UnidadeMedida", "")
+    # Some series come in thousands (Potencia10 = 3) while UnidadeMedida
+    # still says "Euro (€)": store them in the stated unit.
+    try:
+        escala = 10 ** int(meta.get("Potencia10") or 0)
+    except ValueError:
+        escala = 1
     atualizado = meta.get("DataUltimaAtualizacao", "")
     url = f"https://www.ine.pt/xurl/indx/{varcd}"
     obs = []
@@ -278,7 +284,7 @@ def rows_from(varcd: str, data: dict, meta: dict) -> list[list]:
         if valor in (None, ""):
             continue
         try:
-            valor = float(valor)
+            valor = float(valor) * escala
         except ValueError:
             continue
         cat = " · ".join(
