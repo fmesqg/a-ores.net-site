@@ -25,10 +25,14 @@ and writes, under docs/dados/:
              status the next parecer gave them), from data/tdc.csv
   tdc_valores.csv  figures from those pareceres (consolidated account,
              debt, revenue and expenditure left off the books)
+  srea.csv   SREA series (inflation, economic activity, unemployment,
+             tourism by island, GDP by island): a copy of data/srea.csv,
+             which bot/srea.py fetches weekly
+  srea.json  the same series, compact, for the charts on /dados/srea/
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json
-and resumo.json (the numbers on /acores-101/).
+and resumo.json (the numbers on /acores-101/ and /dados/srea/).
 
 The CSVs are UTF-8 with BOM, so Excel opens accents correctly. The search
 page (docs/dados.md) reads them directly. None of these files is committed:
@@ -279,6 +283,7 @@ DB_INDEX = {
     "beo": ["quadro", "data", "caminho", "dimensao"],
     "tdc": ["conta", "tipo"],
     "tdc_valores": ["quadro", "ano", "caminho"],
+    "srea": ["serie", "data", "local"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
@@ -288,6 +293,7 @@ DB_FTS = {
     "beo": ["quadro", "rubrica", "caminho", "dimensao"],
     "tdc": ["tipo", "texto", "referencia", "situacao"],
     "tdc_valores": ["quadro", "rubrica", "caminho"],
+    "srea": ["indicador", "rubrica", "local"],
 }
 
 
@@ -553,6 +559,178 @@ def resumo_beo(cols: list[str], rows: list[list]) -> dict:
     }
 
 
+def srea_json(cols: list[str], rows: list[list]) -> list[dict]:
+    """data/srea.csv grouped by series, for the charts on /dados/srea/:
+    one entry per (serie, indicador, rubrica, local) with its points."""
+    c = {k: i for i, k in enumerate(cols)}
+    by: dict[tuple, dict] = {}
+    for r in sorted(rows, key=lambda r: r[c["data"]]):
+        k = tuple(r[c[x]] for x in ("serie", "indicador", "rubrica", "local"))
+        s = by.setdefault(
+            k,
+            {
+                "serie": k[0],
+                "indicador": k[1],
+                "rubrica": k[2],
+                "local": k[3],
+                "unidade": r[c["unidade"]],
+                "pagina": r[c["pagina"]],
+                "p": [],
+            },
+        )
+        s["ficheiro"] = r[c["ficheiro"]]
+        p = [r[c["periodo"]], _num(r[c["valor"]])]
+        if r[c["nota"]]:
+            p.append(r[c["nota"]])
+        s["p"].append(p)
+    return list(by.values())
+
+
+def _mes(data: str) -> str:
+    return f"{MESES[int(data[5:7]) - 1]} de {data[:4]}"
+
+
+def resumo_srea(cols: list[str], rows: list[list]) -> dict:
+    """Latest SREA figures for /acores-101/ and /dados/srea/."""
+    c = {k: i for i, k in enumerate(cols)}
+
+    def pts(serie, indicador, rubrica="Total", local="Açores") -> list:
+        return sorted(
+            (
+                r
+                for r in rows
+                if r[c["serie"]] == serie
+                and r[c["indicador"]] == indicador
+                and r[c["rubrica"]] == rubrica
+                and r[c["local"]] == local
+            ),
+            key=lambda r: r[c["data"]],
+        )
+
+    def v(r) -> float:
+        return _num(r[c["valor"]]) or 0.0
+
+    out: dict = {}
+    vh = pts("ipc", "Variação homóloga")
+    if vh:
+        last = vh[-1]
+        m12 = {
+            r[c["data"]]: v(r)
+            for r in pts("ipc", "Variação média dos últimos 12 meses")
+        }
+        classes = sorted(
+            (
+                {"nome": r[c["rubrica"]], "valor": v(r)}
+                for r in rows
+                if r[c["serie"]] == "ipc"
+                and r[c["indicador"]] == "Variação homóloga"
+                and r[c["rubrica"]] != "Total"
+                and r[c["data"]] == last[c["data"]]
+            ),
+            key=lambda x: -x["valor"],
+        )
+        out["ipc"] = {
+            "valor": v(last),
+            "cem": round(100 + v(last), 2),
+            "media12": m12.get(last[c["data"]]),
+            "periodo": _mes(last[c["data"]]),
+            "antes": _mes(
+                f"{int(last[c['data']][:4]) - 1}{last[c['data']][4:]}"
+            ),
+            "mais": classes[:3],
+            "menos": classes[-2:][::-1],
+            "url": last[c["pagina"]],
+        }
+    for serie, ind in (
+        ("iae", "Indicador de atividade económica"),
+        ("icp", "Indicador do consumo privado"),
+    ):
+        s = pts(serie, ind)
+        if s:
+            out[serie] = {
+                "valor": round(v(s[-1]), 1),
+                "periodo": _mes(s[-1][c["data"]]),
+                "url": s[-1][c["pagina"]],
+            }
+    d = pts("desemprego", "Taxa de desemprego")
+    if d:
+        last = d[-1]
+        y, q = last[c["periodo"]].split("-T")
+        prev = {r[c["periodo"]]: v(r) for r in d}.get(f"{int(y) - 1}-T{q}")
+        out["desemprego"] = {
+            "valor": v(last),
+            "antes": prev,
+            "periodo": f"{q}.º trimestre de {y}",
+            "periodo_antes": f"{q}.º trimestre de {int(y) - 1}",
+            "nota": last[c["nota"]],
+            "url": last[c["pagina"]],
+        }
+    dorm = [r for r in rows if r[c["serie"]] == "dormidas"]
+    if dorm:
+        # the last month both kinds of accommodation have published
+        last = min(
+            max(r[c["data"]] for r in dorm if r[c["rubrica"]] == k)
+            for k in {r[c["rubrica"]] for r in dorm}
+        )
+        y, m = int(last[:4]), int(last[5:7])
+
+        def ytd(local, year):
+            return sum(
+                v(r)
+                for r in dorm
+                if r[c["local"]] == local
+                and r[c["data"]][:4] == str(year)
+                and int(r[c["data"]][5:7]) <= m
+            )
+
+        ilhas = []
+        for local in sorted({r[c["local"]] for r in dorm} - {"Açores"}):
+            a, b = ytd(local, y), ytd(local, y - 1)
+            ilhas.append(
+                {
+                    "ilha": local,
+                    "valor": round(a),
+                    "var": round(100 * (a - b) / b, 1) if b else None,
+                }
+            )
+        ilhas.sort(key=lambda x: -x["valor"])
+        a, b = ytd("Açores", y), ytd("Açores", y - 1)
+        out["dormidas"] = {
+            "valor": round(a),
+            "antes": round(b),
+            "var": round(100 * (a - b) / b, 1) if b else None,
+            "periodo": (
+                f"janeiro a {MESES[m - 1]} de {y}"
+                if m > 1
+                else f"janeiro de {y}"
+            ),
+            "ilhas": ilhas,
+            "url": dorm[0][c["pagina"]],
+        }
+    ph = [r for r in rows if r[c["serie"]] == "pib_hab"]
+    if ph:
+        ano = max(r[c["periodo"]] for r in ph)
+        last = [r for r in ph if r[c["periodo"]] == ano]
+        top = max(v(r) for r in last if r[c["local"]] != "Açores")
+        reg = next((r for r in last if r[c["local"]] == "Açores"), None)
+        out["pib_hab"] = {
+            "ano": ano,
+            "provisorio": any(r[c["nota"]] for r in last),
+            "acores": v(reg) if reg else None,
+            "por_ilha": [
+                {
+                    "ilha": r[c["local"]],
+                    "valor": v(r),
+                    "pct": round(100 * v(r) / top),
+                }
+                for r in sorted(last, key=lambda r: -v(r))
+                if r[c["local"]] != "Açores"
+            ],
+            "url": last[0][c["pagina"]],
+        }
+    return out
+
+
 def pt_num(x: float) -> str:
     """245328 -> '245 328', 39.38 -> '39,4', 5.94 -> '5,94' (pt-PT, the
     thousands separator is a no-break space)."""
@@ -599,6 +777,8 @@ def write_resumo(docs: Path, tables: dict) -> None:
             out["beo"]["despesa_hab"] = round(
                 out["beo"]["despesa"] * 1e6 / pop
             )
+    if "srea" in tables:
+        out["srea"] = resumo_srea(*tables["srea"])
     (docs / "_data").mkdir(exist_ok=True)
     (docs / "_data" / "resumo.json").write_text(
         json.dumps(_texts(out), ensure_ascii=False, indent=1), encoding="utf-8"
@@ -624,7 +804,7 @@ def main(docs: Path) -> dict:
         )
         meta[name] = info
     # fetched weekly into data/ by their bots
-    for name in ("ine", "beo", "tdc", "tdc_valores"):
+    for name in ("ine", "beo", "srea", "tdc", "tdc_valores"):
         src = docs.parent / "data" / f"{name}.csv"
         if not src.exists():
             continue
@@ -644,6 +824,11 @@ def main(docs: Path) -> dict:
             defs = docs.parent / "data" / "ine_meta.json"
             if defs.exists():
                 (out / "ine_meta.json").write_bytes(defs.read_bytes())
+        elif name == "srea":
+            (out / "srea.json").write_text(
+                json.dumps(srea_json(cols, rows), ensure_ascii=False),
+                encoding="utf-8",
+            )
         elif name in ("beo", "tdc"):
             latest = beo_latest if name == "beo" else tdc_latest
             info["ultimo"] = latest(cols, rows)
