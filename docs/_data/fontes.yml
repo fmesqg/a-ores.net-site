@@ -27,3 +27,9 @@ estatuto:
 alra:
   nome: Assembleia Legislativa (alra.pt)
   url: https://www.alra.pt/
+lei_eleitoral:
+  nome: Lei eleitoral da Assembleia Legislativa dos Açores (Lei Orgânica n.º 5/2006)
+  url: https://diariodarepublica.pt/dr/detalhe/lei-organica/5-2006-540392
+governo:
+  nome: Portal do Governo dos Açores
+  url: https://portal.azores.gov.pt/
