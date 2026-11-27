@@ -46,7 +46,7 @@ fazer notícias com estes dados, com exemplos reais.</p>
   <h2><a href="/economia/">Economia</a></h2>
   <p>Preços, emprego e turismo, mês a mês; as empresas públicas regionais
   (SATA, EDA, Portos, hospitais) e as 200 maiores empresas com sede nos
-  Açores.</p>
+  Açores (revista <cite>100 Maiores Empresas dos Açores</cite>).</p>
   <ul>
     <li><a href="/dados/srea/">Como estão os preços, o emprego e o turismo agora?</a></li>
     <li><a href="/dados/sper/#empresas">Quanto fatura e quanto perde cada empresa pública?</a></li>

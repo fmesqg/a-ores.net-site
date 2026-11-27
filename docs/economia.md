@@ -82,7 +82,9 @@ resultado líquido de {{ p.total.rl_t | replace: "-", "−" }} M€.{% endif %}<
 <section class="porta">
 <h2><a href="/dados/maiores-empresas/">Maiores empresas</a></h2>
 <p>As {{ m.n | default: 200 }} empresas com sede nos Açores que mais
-faturaram{% if m.ano %} em {{ m.ano }}{% endif %}, por setor e por ilha.{% if m.top10_pct %}
+faturaram{% if m.ano %} em {{ m.ano }}{% endif %}, por setor e por ilha,
+segundo a revista <cite>100 Maiores Empresas dos Açores</cite> (Açoriano
+Oriental).{% if m.top10_pct %}
 As dez maiores fazem {{ m.top10_pct }} % do volume de negócios das
 {{ m.n }}.{% endif %}</p>
 <ul>

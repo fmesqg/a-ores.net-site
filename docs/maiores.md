@@ -10,10 +10,14 @@ description: As 200 maiores empresas com sede nos Açores, por volume de negóci
 
 # Maiores empresas dos Açores
 
+<p class="fonte-topo">Fonte: revista <a href="{{ m.url }}"><cite>100 Maiores
+Empresas dos Açores {{ m.ano }}</cite></a> (Açoriano Oriental / Açormedia,
+com dados da Informa D&B), publicada em dezembro de {{ m.ano | plus: 1 }}.
+Todos os números desta página são da revista, exceto a marcação das
+empresas públicas.</p>
+
 <p class="lead">As {{ m.n }} empresas com sede nos Açores que mais
-faturaram em {{ m.ano }}, segundo a revista <a href="{{ m.url }}">100
-Maiores Empresas dos Açores</a>, do Açoriano Oriental, com dados da Informa
-D&B. Juntas, venderam {{ m.vn_t }} milhões de euros e empregavam
+faturaram em {{ m.ano }}. Juntas, venderam {{ m.vn_t }} milhões de euros e empregavam
 {{ m.trabalhadores_t }} pessoas.</p>
 
 {% if m.n %}
@@ -108,9 +112,11 @@ Clique num cabeçalho para ordenar.</p>
   <li>Empresas públicas regionais: as do <a href="/dados/sper/">setor
   público empresarial regional</a>, segundo o Conselho das Finanças
   Públicas. Os hospitais não entram no ranking.</li>
-  <li>Dados abertos: <a href="/dados/maiores.csv">maiores.csv</a> (todas as
-  colunas da revista: VAB, ativo, capital próprio, passivo, rentabilidades,
-  em milhares de euros).</li>
+  <li>Dados abertos: <a href="/dados/maiores.csv">maiores.csv</a>, com
+  todas as colunas da tabela da revista <cite>100 Maiores Empresas dos
+  Açores {{ m.ano }}</cite> (VAB, ativo, capital próprio, passivo,
+  rentabilidades, em milhares de euros); cada linha cita a revista na coluna
+  <code>fonte</code>.</li>
 </ul>
 
 <style>
@@ -134,6 +140,7 @@ table.sper .neg { color: #b5442c; }
 #lista-tabela thead th[aria-sort]::after { content: " ↓"; }
 #lista-tabela thead th[aria-sort="ascending"]::after { content: " ↑"; }
 .tag { font-size: .75em; border: 1px solid #93a1a1; border-radius: 4px; padding: 0 .3em; text-decoration: none; white-space: nowrap; }
+.fonte-topo { font-size: .9em; border-left: 4px solid #268bd2; padding: .3em .8em; background: rgba(38,139,210,.08); }
 .filtro { display: flex; flex-wrap: wrap; gap: .5em 1.2em; align-items: center; margin-bottom: .5em; }
 .nota { font-size: .85em; color: #586e75; }
 @media (prefers-color-scheme: dark) { .nota { color: #93a1a1; } table.sper .neg { color: #e0805f; } }

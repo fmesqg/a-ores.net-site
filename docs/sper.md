@@ -54,7 +54,8 @@ de cada empresa.</p>
 <p class="nota">Milhões de euros, exceto trabalhadores. Ordenadas por volume
 de negócios.{% if s.maiores_ano %} "Posição" é o lugar entre as
 <a href="/dados/maiores-empresas/">200 maiores empresas dos Açores</a> em
-{{ s.maiores_ano }}.{% endif %} AP: a empresa conta como administração
+{{ s.maiores_ano }}, segundo a revista <cite>100 Maiores Empresas dos
+Açores</cite> (Açoriano Oriental).{% endif %} AP: a empresa conta como administração
 pública nas contas nacionais (o seu défice e a sua dívida entram nos da
 Região).</p>
 <div class="tabela-scroll">

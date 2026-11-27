@@ -1,5 +1,5 @@
 <nav class="secao-nav" aria-label="Economia dos Açores">
-  {%- assign itens = "/economia/|Resumo;/dados/srea/|Indicadores (SREA);/dados/sper/|Empresas públicas;/dados/maiores-empresas/|Maiores empresas" | split: ";" -%}
+  {%- assign itens = "/economia/|Resumo;/dados/srea/|Indicadores (SREA);/dados/sper/|Empresas públicas;/dados/maiores-empresas/|Maiores empresas (revista 100 Maiores)" | split: ";" -%}
   {%- for i in itens -%}
     {%- assign item = i | split: "|" -%}
     <a href="{{ item[0] }}"{% if page.url == item[0] %} aria-current="page"{% endif %}>{{ item[1] }}</a>
