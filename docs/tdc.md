@@ -2,7 +2,10 @@
 title: Tribunal de Contas
 layout: default
 permalink: /dados/tdc/
+secao: financas
 ---
+{% include financas-nav.html %}
+
 # Tribunal de Contas
 
 O que o Tribunal de Contas diz, todos os anos, sobre as contas da Região. A

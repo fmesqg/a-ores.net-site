@@ -1,9 +1,11 @@
 ---
 title: Execução orçamental
-nav_title: Contas da Região
 layout: default
 permalink: /dados/beo/
+secao: financas
 ---
+{% include financas-nav.html %}
+
 # Execução orçamental
 
 Receita e despesa do Governo Regional dos Açores, mês a mês, a partir do

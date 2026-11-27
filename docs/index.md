@@ -31,7 +31,7 @@ fazer notícias com estes dados, com exemplos reais.</p>
 </section>
 
 <section class="porta">
-  <h2><a href="/dados/beo/">Contas do Governo Regional</a></h2>
+  <h2><a href="/financas/">Finanças da Região</a></h2>
   <p>Quanto a Região cobra e quanto gasta, mês a mês, a partir dos boletins
   de execução orçamental, com um glossário dos termos.{% if site.data.beo_ultimo.periodo %}
   Último boletim: <a href="{{ site.data.beo_ultimo.url }}">{{ site.data.beo_ultimo.periodo }}</a>.{% endif %}</p>
