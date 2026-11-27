@@ -119,6 +119,9 @@ coluna "% O", que fica abaixo, e a coluna "% O+P+Q", que fica acima. Os
 números da DGAEP, no topo desta página, incluem professores, médicos e
 hospitais, mas não estão divididos por ilha.</p>
 
+<p class="nota">As percentagens são da população empregada que mora em cada
+ilha (pessoas, pelo emprego principal), não da população total.</p>
+
 <div class="tabela-scroll">
 <table class="sper barras">
 <thead><tr><th>Ilha</th><th class="n">Empregados (2021)</th><th class="n">Adm. pública (O)</th><th class="n">% O</th><th class="n">% educação (P)</th><th class="n">% saúde e apoio social (Q)</th><th class="n">% O+P+Q</th><th class="barra-col" aria-hidden="true"></th></tr></thead>
@@ -150,7 +153,7 @@ hospitais, mas não estão divididos por ilha.</p>
 <h2 id="comparar">Açores, Madeira e país</h2>
 
 <p>Postos de trabalho nas administrações públicas por cada 100 pessoas
-empregadas, no {{ k.periodo | downcase }}{% if k.provisorio %} (dados provisórios da DGAEP){% endif %}.</p>
+empregadas (não por 100 habitantes), no {{ k.periodo | downcase }}{% if k.provisorio %} (dados provisórios da DGAEP){% endif %}.</p>
 
 <div class="tabela-scroll">
 <table class="sper barras">
