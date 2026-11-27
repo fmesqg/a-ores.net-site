@@ -1,11 +1,10 @@
-import asyncio
 from datetime import date, datetime
-from unittest.mock import AsyncMock, MagicMock, patch
+from unittest.mock import MagicMock, patch
 
 import pytest
 import requests
 
-from bot import beo
+from bot import beo, gov
 from bot.classes import FetchError, WebData
 from bot.fetch import (
     _fetch_data_dict_by_id,
@@ -14,6 +13,7 @@ from bot.fetch import (
     fetch_beo_all,
     fetch_contratos_RAA,
     fetch_day_joraa,
+    fetch_joraa,
     fetch_joraa_ato,
     fetch_portal,
     fetch_record,
@@ -322,33 +322,69 @@ class TestFetchPortal:
         assert isinstance(result, FetchError)
 
 
-def _make_async_session(mock_resp):
-    """Build a mock aiohttp session with proper async context manager."""
-    ctx = MagicMock()
-    ctx.__aenter__ = AsyncMock(return_value=mock_resp)
-    ctx.__aexit__ = AsyncMock(return_value=False)
-    session = MagicMock()
-    session.get.return_value = ctx
-    return session
-
-
 class TestFetchJoraaAto:
     def test_success(self, joraa_ato_json):
-        mock_resp = MagicMock()
-        mock_resp.status = 200
-        mock_resp.json = AsyncMock(return_value=joraa_ato_json)
-
-        session = _make_async_session(mock_resp)
-        result = asyncio.run(fetch_joraa_ato(session, "abc123"))
+        mock_resp = MagicMock(status_code=200)
+        mock_resp.json.return_value = joraa_ato_json
+        with patch("bot.fetch.requests.get", return_value=mock_resp) as get:
+            result = fetch_joraa_ato("abc123")
         assert result == joraa_ato_json
+        url = get.call_args.args[0]
+        assert url == "https://jo.azores.gov.pt/api/public/ato/abc123"
+        assert get.call_args.kwargs["headers"] == gov.HEADERS
 
-    def test_error_status(self):
-        mock_resp = MagicMock()
-        mock_resp.status = 500
+    def test_cloudflare_challenge(self):
+        mock_resp = MagicMock(status_code=403)
+        mock_resp.raise_for_status.side_effect = requests.HTTPError("403")
+        with patch("bot.fetch.requests.get", return_value=mock_resp):
+            assert isinstance(fetch_joraa_ato("bad_id"), FetchError)
 
-        session = _make_async_session(mock_resp)
-        with pytest.raises(FetchError):
-            asyncio.run(fetch_joraa_ato(session, "bad_id"))
+
+class TestFetchJoraa:
+    days = [date(2026, 8, 12), date(2026, 8, 13), date(2026, 8, 14)]
+
+    def run(self, day_results, ato=lambda id: {"id": id}):
+        results = iter(day_results)
+        with (
+            patch(  # a function: FetchError results are returned, not raised
+                "bot.fetch.fetch_day_joraa",
+                side_effect=lambda date: next(results),
+            ),
+            patch("bot.fetch.fetch_joraa_ato", side_effect=ato) as atos,
+        ):
+            return fetch_joraa(self.days), atos
+
+    def test_all_days_with_full_acts(self):
+        result, atos = self.run([[{"id": "a"}], [], [{"id": "b"}]])
+        assert result == {
+            self.days[0]: [{"id": "a"}],
+            self.days[1]: [],
+            self.days[2]: [{"id": "b"}],
+        }
+        assert atos.call_count == 2
+
+    def test_keeps_days_before_a_failure(self):
+        err = FetchError("403")
+        result, _ = self.run([[], err, []])
+        assert result == {self.days[0]: []}
+
+    def test_failed_act_stops_the_day(self):
+        err = FetchError("403")
+        result, atos = self.run(
+            [[], [{"id": "a"}, {"id": "b"}], []], ato=lambda id: err
+        )
+        assert result == {self.days[0]: []}
+        assert atos.call_count == 1
+
+    def test_failure_on_first_day_is_an_error(self):
+        err = FetchError("403")
+        result, _ = self.run([err, [], []])
+        assert result is err
+
+    def test_stops_when_budget_spent(self, monkeypatch):
+        monkeypatch.setattr("bot.fetch.JORAA_BUDGET", -1)
+        result, _ = self.run([[], [], []])
+        assert result == {}
 
 
 class TestFetchWebData:

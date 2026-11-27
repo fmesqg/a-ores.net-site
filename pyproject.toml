@@ -7,7 +7,6 @@ name = "Acores.net"
 authors = [{ email = "franciscogabriel@duck.com", name = "Francisco Gabriel" }]
 dependencies = [
     "requests>=2.32.0,<3",
-    "aiohttp>=3.9,<4",
     "beautifulsoup4>=4.12,<5",
     "lxml>=6.1,<7",
 ]
