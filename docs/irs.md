@@ -78,7 +78,7 @@ cada agregado.</p>
 comparação por mil agregados desconta o tamanho de cada região. O número de
 escalões e o rendimento a partir do qual se entra no último mudam com o
 Orçamento do Estado (5 escalões até 2017, 7 até 2021 e 9 desde 2022): ver as
-taxas gerais em cada dossiê da AT.</p>
+<a href="#gerais">taxas gerais</a>.</p>
 <div class="tabela-scroll">
 <table class="sper">
 <thead><tr>
@@ -99,6 +99,58 @@ taxas gerais em cada dossiê da AT.</p>
 </tbody>
 </table>
 </div>
+
+{% if d.gerais.escaloes %}
+<h2 id="gerais">Taxas gerais, {{ d.gerais.ano }}</h2>
+
+<div class="tabela-scroll">
+<table class="sper">
+<thead><tr><th scope="col">Rendimento coletável</th><th scope="col" class="n">Continente</th><th scope="col" class="n">Açores</th><th scope="col" class="n">Madeira</th></tr></thead>
+<tbody>
+{%- for e in d.gerais.escaloes %}
+<tr><th scope="row">{{ e.escalao }}</th><td class="n">{{ e.continente_s }}</td><td class="n">{{ e.acores_s }}</td><td class="n">{{ e.madeira_s }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<p class="fonte">Fonte: AT, mapa «Taxas Gerais de IRS» do dossiê. As taxas
+dos anos desde 2017 estão em <a href="/dados/at_irs.csv">at_irs.csv</a>.</p>
+{% endif %}
+
+{% if d.pais %}
+<h2 id="pais">Os Açores no país</h2>
+
+<p class="nota">Agregados e IRS liquidado por região, nos mapas «por distrito»
+da AT. Estes mapas contam mais agregados e mais imposto do que os mapas por
+escalão acima (em {{ d.ano }}, {{ d.pais.last.acores_agregados_t }} agregados e
+{{ d.pais.last.acores_irs_m_t }} M€ nos Açores, contra {{ d.agregados_t }} e
+{{ d.irs_m_t }} M€). As notas prévias da AT não explicam a diferença; use
+cada série com a sua tabela. O IRS por agregado é um cálculo do
+açores.net.</p>
+<div class="tabela-scroll">
+<table class="sper">
+<thead><tr>
+  <th scope="col">Ano</th>
+  <th scope="col" class="n">Açores: agregados</th>
+  <th scope="col" class="n">% do país</th>
+  <th scope="col" class="n">IRS (M€)</th>
+  <th scope="col" class="n">% do país</th>
+  <th scope="col" class="n">IRS por agregado (€)</th>
+  <th scope="col" class="n">Madeira: IRS por agregado (€)</th>
+  <th scope="col" class="n">País: IRS por agregado (€)</th>
+</tr></thead>
+<tbody>
+{%- for s in d.pais reversed %}
+<tr><th scope="row">{{ s.ano }}</th><td class="n">{{ s.acores_agregados_t }}</td><td class="n">{{ s.acores_agregados_pct_t }}</td><td class="n">{{ s.acores_irs_m_t }}</td><td class="n">{{ s.acores_irs_pct_t }}</td><td class="n">{{ s.acores_por_agregado_t }}</td><td class="n">{{ s.madeira_por_agregado_t }}</td><td class="n">{{ s.pais_por_agregado_t }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<p class="fonte">Fonte: AT, mapas «por distrito» dos dossiês (até 2019 os
+Açores aparecem também divididos pelos antigos distritos de Angra do Heroísmo,
+Horta e Ponta Delgada). Todos os distritos, a taxa efetiva e o rendimento
+estão em <a href="/dados/at_distritos.csv">at_distritos.csv</a>.</p>
+{% endif %}
 
 <h2 id="adicional">Taxa adicional de solidariedade</h2>
 
@@ -141,7 +193,7 @@ de 250 mil €); estão separadas em <a href="/dados/at_irs.csv">at_irs.csv</a>.
   <a href="/dados/at_irs.csv">at_irs.csv</a> e na tabela <code>at_irs</code> da
   <a href="/dados/#consultar-em-sql">base de dados</a>. São atualizados quando
   a AT publica um dossiê novo (entre o fim de março e meados de abril), por
-  <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/at_irs.py"><code>bot/at_irs.py</code></a>.</li>
+  <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/at_ir.py"><code>bot/at_ir.py</code></a>.</li>
 </ul>
 {% else %}
 <p>Os dados ainda não foram gerados.</p>

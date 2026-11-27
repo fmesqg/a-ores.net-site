@@ -43,9 +43,14 @@ and writes, under docs/dados/:
              quarterly since 2011 (DGAEP, SIOE): a copy of
              data/emprego_publico.csv (bot/dgaep.py)
   at_irs.csv IRS households, income and tax by tax bracket in the Azores,
-             Madeira and the mainland, and the additional solidarity rate,
+             Madeira and the mainland, the additional solidarity rate and the general rates,
              yearly since 2016 (AT, Dossier Estatístico): a copy of
-             data/at_irs.csv (bot/at_irs.py)
+             data/at_irs.csv (bot/at_ir.py)
+  at_irc.csv IRC at the regional rate, state surcharge (derrama estadual)
+             by bracket and nominal rates, Azores / Madeira / mainland
+             (AT, Dossier Estatístico IRC): data/at_irc.csv (bot/at_ir.py)
+  at_distritos.csv  the "por distrito" chapters of the IRS (since 2015)
+             and IRC (since 2011) dossiers: data/at_distritos.csv
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json,
@@ -422,6 +427,8 @@ DB_INDEX = {
     "emprego_publico": ["quadro", "local", "data"],
     "censos2021_setores": ["ilha", "secao"],
     "at_irs": ["quadro", "medida", "ano", "regiao"],
+    "at_irc": ["quadro", "ano", "regiao"],
+    "at_distritos": ["imposto", "medida", "ano", "regiao"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento", "cpv"],
@@ -439,6 +446,8 @@ DB_FTS = {
     "emprego_publico": ["indicador", "rubrica", "local"],
     "censos2021_setores": ["concelho", "ilha"],
     "at_irs": ["quadro", "medida", "regiao", "taxa", "titularidade"],
+    "at_irc": ["quadro", "medida", "regiao", "escalao"],
+    "at_distritos": ["imposto", "medida", "distrito", "regiao"],
 }
 
 
@@ -2129,10 +2138,269 @@ def irs_data(at: tuple[list, list]) -> dict:
     }
 
 
+def at_regioes(
+    dist: tuple[list, list], imposto: str, medida: str, unidade: str
+) -> dict[str, dict[int, float]]:
+    """{regiao: {ano: valor}} from at_distritos. The AT's regional total
+    when it prints one ("R. A. Açores", "RA MADEIRA", "TOTAL"); else, for
+    the years it only prints the old districts, their sum (Angra, Horta
+    and Ponta Delgada; Funchal is all of Madeira). Rates of the three
+    Azorean districts cannot be added, so those years stay empty."""
+    tot: dict[str, dict[int, float]] = {}
+    parts: dict[str, dict[int, list]] = {}
+    for r in _dicts(dist):
+        if (r["imposto"], r["medida"], r["unidade"]) != (
+            imposto,
+            medida,
+            unidade,
+        ):
+            continue
+        reg, ano, v = r["regiao"], int(r["ano"]), float(r["valor"])
+        lab = _fold(r["distrito"])
+        if reg == "Total" or "acores" in lab or "madeira" in lab:
+            tot.setdefault(reg, {})[ano] = v
+        elif reg in ("Açores", "Madeira"):
+            parts.setdefault(reg, {}).setdefault(ano, []).append(v)
+    for reg, anos in parts.items():
+        for ano, vs in anos.items():
+            if ano in tot.get(reg, {}):
+                continue
+            if unidade != "%" or len(vs) == 1:
+                tot.setdefault(reg, {})[ano] = sum(vs)
+    return tot
+
+
+def _pct_s(x: float | None) -> str:
+    # rates keep every decimal (11,55 %, not 11,6 %)
+    return "" if x is None else f"{x:g} %".replace(".", ",")
+
+
+def _share(a: float | None, b: float | None) -> float | str:
+    return round(100 * a / b, 1) if a and b else ""
+
+
+def irs_pais(dist: tuple[list, list]) -> list[dict]:
+    """IRS by region, year by year, from the 'por distrito' maps:
+    households, tax, tax per household and the shares of the country."""
+    g = {
+        k: at_regioes(dist, "IRS", m, u)
+        for k, m, u in (
+            ("agr", "Agregados", "agregados"),
+            ("irs", "IRS liquidado", "€"),
+        )
+    }
+    out = []
+    for a in sorted(g["irs"].get("Açores", {})):
+        linha: dict = {"ano": a}
+        for reg, k in (
+            ("Açores", "acores"),
+            ("Madeira", "madeira"),
+            ("Total", "pais"),
+        ):
+            n = g["agr"].get(reg, {}).get(a)
+            v = g["irs"].get(reg, {}).get(a)
+            if not (n and v):
+                continue
+            linha[k + "_agregados"] = int(n)
+            linha[k + "_irs_m"] = round(v / 1e6, 1)
+            linha[k + "_por_agregado"] = round(v / n)
+        tot_n = g["agr"].get("Total", {}).get(a)
+        tot_v = g["irs"].get("Total", {}).get(a)
+        linha["acores_agregados_pct"] = _share(
+            g["agr"].get("Açores", {}).get(a), tot_n
+        )
+        linha["acores_irs_pct"] = _share(
+            g["irs"].get("Açores", {}).get(a), tot_v
+        )
+        out.append(linha)
+    return out
+
+
+def irs_gerais(at: tuple[list, list]) -> dict:
+    """The general IRS rates of the latest year, a row per bracket."""
+    rows = [r for r in _dicts(at) if r["quadro"] == "Taxas gerais"]
+    if not rows:
+        return {}
+    ano = max(int(r["ano"]) for r in rows)
+    by: dict[int, dict] = {}
+    for r in rows:
+        if int(r["ano"]) != ano:
+            continue
+        o = int(r["escalao"])
+        d = by.setdefault(o, {"ordem": o})
+        d[
+            {
+                "Continente": "continente",
+                "Açores": "acores",
+                "Madeira": "madeira",
+            }[r["regiao"]]
+            + "_s"
+        ] = _pct_s(float(r["taxa"]))
+        d["limite"] = r["valor"]
+    escaloes = []
+    anterior = None
+    for o in sorted(by):
+        d = by[o]
+        lim = float(d.pop("limite")) if d.get("limite") else None
+        de = f"{pt_num(anterior)} €" if anterior else ""
+        ate = f"{pt_num(lim)} €" if lim else ""
+        d["escalao"] = (
+            f"até {ate}"
+            if not de
+            else f"de {de} a {ate}" if ate else f"acima de {de}"
+        )
+        anterior = lim
+        escaloes.append(d)
+    return {"ano": ano, "escaloes": escaloes}
+
+
 def write_irs(docs: Path, tables: dict) -> None:
     data = irs_data(tables["at_irs"]) if "at_irs" in tables else {}
+    if data:
+        if "at_distritos" in tables:
+            data["pais"] = irs_pais(tables["at_distritos"])
+        data["gerais"] = irs_gerais(tables["at_irs"])
     (docs / "_data").mkdir(exist_ok=True)
     (docs / "_data" / "irs.json").write_text(
+        json.dumps(_texts(data), ensure_ascii=False, indent=1),
+        encoding="utf-8",
+    )
+
+
+def _primeiro_num(s: str) -> float:
+    """'Mais de 1.500.000 a 7.500.000' -> 1500000."""
+    m = re.search(r"\d[\d.]*", s)
+    return float(m[0].replace(".", "")) if m else 0.0
+
+
+def irc_data(dist: tuple[list, list], irc: tuple[list, list]) -> dict:
+    """docs/_data/irc.json for /dados/irc/: IRC in the Azores year by year
+    (AT, Dossier Estatístico IRC), against Madeira and the country."""
+    g = {
+        k: at_regioes(dist, "IRC", m, u)
+        for k, m, u in (
+            ("decl", "Declarações", "declarações"),
+            ("lucro", "Lucro tributável", "€"),
+            ("prej", "Prejuízo fiscal", "€"),
+            ("mc", "Matéria coletável", "€"),
+            ("liq", "IRC liquidado", "€"),
+            ("taxa", "Taxa média efetiva", "%"),
+        )
+    }
+    anos = sorted(g["liq"].get("Açores", {}))
+    if not anos:
+        return {}
+    linhas = _dicts(irc)
+
+    def quadro(q: str, reg: str, unidade: str, escalao: str | None = None):
+        return {
+            int(r["ano"]): float(r["valor"])
+            for r in linhas
+            if r["quadro"] == q
+            and r["regiao"] == reg
+            and r["unidade"] == unidade
+            and (escalao is None or r["escalao"] == escalao)
+        }
+
+    regional = quadro("Cálculo do imposto", "Açores", "€")
+    regional_n = quadro("Cálculo do imposto", "Açores", "declarações")
+    derrama = quadro("Derrama estadual", "Açores", "€", "Total")
+    derrama_n = quadro("Derrama estadual", "Açores", "declarações", "Total")
+
+    def v(k: str, a: int, reg: str = "Açores"):
+        return g[k].get(reg, {}).get(a)
+
+    def m(x: float | None) -> float | str:
+        return "" if x is None else round(x / 1e6, 1)
+
+    serie = []
+    for a in anos:
+        serie.append(
+            {
+                "ano": a,
+                "declaracoes": int(v("decl", a) or 0),
+                "lucro_m": m(v("lucro", a)),
+                "prejuizo_m": m(v("prej", a)),
+                "irc_m": m(v("liq", a)),
+                "regional_m": m(regional.get(a)),
+                "decl_pct": _share(v("decl", a), v("decl", a, "Total")),
+                "irc_pct": _share(v("liq", a), v("liq", a, "Total")),
+                "taxa_s": _pct_s(v("taxa", a)),
+                "taxa_madeira_s": _pct_s(v("taxa", a, "Madeira")),
+                "taxa_pais_s": _pct_s(v("taxa", a, "Total")),
+                "derrama_m": m(derrama.get(a)) if a in derrama else "",
+                "derrama_n": int(derrama_n[a]) if a in derrama_n else "",
+            }
+        )
+    ano = anos[-1]
+    ultimo = serie[-1]
+    escaloes = [
+        {
+            "escalao": r["escalao"],
+            "declaracoes": int(
+                next(
+                    (
+                        float(x["valor"])
+                        for x in linhas
+                        if x["quadro"] == "Derrama estadual"
+                        and x["regiao"] == "Açores"
+                        and x["unidade"] == "declarações"
+                        and x["ano"] == r["ano"]
+                        and x["escalao"] == r["escalao"]
+                    ),
+                    0,
+                )
+            ),
+            "valor_m": round(float(r["valor"]) / 1e6, 2),
+        }
+        for r in linhas
+        if r["quadro"] == "Derrama estadual"
+        and r["regiao"] == "Açores"
+        and r["unidade"] == "€"
+        and int(r["ano"]) == ano
+        and r["escalao"] != "Total"
+    ]
+    escaloes.sort(key=lambda e: _primeiro_num(e["escalao"]))
+    nominais: dict[str, dict] = {}
+    for r in linhas:
+        if r["quadro"] != "Taxas nominais" or int(r["ano"]) != ano:
+            continue
+        d = nominais.setdefault(r["escalao"], {"designacao": r["escalao"]})
+        key = {
+            "Continente": "continente",
+            "Açores": "acores",
+            "Madeira": "madeira",
+        }
+        d[key[r["regiao"]] + "_s"] = _pct_s(float(r["valor"]))
+    fonte = next(
+        r
+        for r in _dicts(dist)
+        if r["imposto"] == "IRC" and int(r["ano"]) == ano
+    )
+    # the general rate first, then the reduced and the normal rate
+    ordem = sorted(
+        nominais, key=lambda k: (not k.startswith("Taxa geral"), "<=" not in k)
+    )
+    return {
+        "ano": ano,
+        "primeiro": anos[0],
+        "ultimo": ultimo,
+        "lucro_cresc": _share(v("lucro", ano), v("lucro", anos[0])),
+        "regional_n": int(regional_n.get(ano, 0)),
+        "serie": serie,
+        "derrama_escaloes": escaloes,
+        "nominais": [nominais[k] for k in ordem],
+        "dossie": fonte["dossie"],
+        "url": fonte["url"],
+    }
+
+
+def write_irc(docs: Path, tables: dict) -> None:
+    data = {}
+    if "at_distritos" in tables and "at_irc" in tables:
+        data = irc_data(tables["at_distritos"], tables["at_irc"])
+    (docs / "_data").mkdir(exist_ok=True)
+    (docs / "_data" / "irc.json").write_text(
         json.dumps(_texts(data), ensure_ascii=False, indent=1),
         encoding="utf-8",
     )
@@ -2253,6 +2521,8 @@ def main(docs: Path) -> dict:
         "emprego_publico",
         "censos2021_setores",
         "at_irs",
+        "at_irc",
+        "at_distritos",
     ):
         src = docs.parent / "data" / f"{name}.csv"
         if name == "maiores" and maiores:
@@ -2295,6 +2565,7 @@ def main(docs: Path) -> dict:
     write_economia(docs, tables)
     write_camaras(docs, tables)
     write_irs(docs, tables)
+    write_irc(docs, tables)
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(
