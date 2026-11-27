@@ -167,7 +167,7 @@ o número pode passar o dos outros mapas.</p>
   <li>Os dados completos (todos os distritos, também o resultado líquido e a
   matéria coletável) estão em <a href="/dados/at_distritos.csv">at_distritos.csv</a>
   e <a href="/dados/at_irc.csv">at_irc.csv</a>, e nas tabelas com o mesmo nome
-  da <a href="/dados/#consultar-em-sql">base de dados</a>. São atualizados
+  da <a href="/dados/sql/">base de dados</a>. São atualizados
   quando a AT publica um dossiê novo (entre o fim de março e meados de abril),
   por <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/at_ir.py"><code>bot/at_ir.py</code></a>.</li>
 </ul>

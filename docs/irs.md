@@ -191,7 +191,7 @@ de 250 mil €); estão separadas em <a href="/dados/at_irs.csv">at_irs.csv</a>.
   prévias</a> de cada dossiê antes de usar os números.</li>
   <li>Os dados completos (também casados e não casados, e o continente) estão em
   <a href="/dados/at_irs.csv">at_irs.csv</a> e na tabela <code>at_irs</code> da
-  <a href="/dados/#consultar-em-sql">base de dados</a>. São atualizados quando
+  <a href="/dados/sql/">base de dados</a>. São atualizados quando
   a AT publica um dossiê novo (entre o fim de março e meados de abril), por
   <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/at_ir.py"><code>bot/at_ir.py</code></a>.</li>
 </ul>

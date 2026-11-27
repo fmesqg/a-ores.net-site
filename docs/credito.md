@@ -229,7 +229,7 @@ açores.net.</p>
   <li>Os dados completos (as nove regiões NUTS II, todos os setores de
   atividade e indicadores das empresas) estão em
   <a href="/dados/bportugal.csv">bportugal.csv</a> e na tabela
-  <code>bportugal</code> da <a href="/dados/#consultar-em-sql">base de
+  <code>bportugal</code> da <a href="/dados/sql/">base de
   dados</a>. São atualizados todas as semanas por
   <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/bportugal.py"><code>bot/bportugal.py</code></a>,
   a partir da <a href="https://bpstat.bportugal.pt/api/media/files/scripts/menu/api.html">API
