@@ -359,6 +359,10 @@ das <a href="/dados/beo/">contas da Região</a>, com ligação aos textos legais
   <li><a href="/atualizacoes/">O que saiu hoje no Jornal Oficial e na Assembleia?</a></li>
 </ul>
 
+<p>Vai escrever sobre estes dados? O <a href="/tutorial/">tutorial para
+jornalistas</a> mostra, com casos reais, como encontrar um número, compará-lo
+sem enganar, segui-lo até ao documento oficial e citá-lo.</p>
+
 {%- assign antigas = site.posts | where_exp: "p", "p.op != true" | sort: "date" | reverse %}
 {% if antigas.size > 0 %}
 <details class="antigas">

@@ -9,7 +9,8 @@ permalink: /dados/
 Tudo o que o açores.net recolheu desde agosto de 2024, numa tabela por fonte:
 contratos públicos (BASE), atividade da Assembleia Legislativa (ALRA) e atos
 com montantes do Jornal Oficial (JORAA). Pesquise aqui ou descarregue os CSV.
-Cada linha tem a ligação para o documento original. É esse que se deve citar.
+Cada linha tem a ligação para o documento original. É esse que se deve citar
+(ver o [tutorial para jornalistas](/tutorial/)).
 
 **Estatísticas do INE por concelho e freguesia** (rendimentos e IRS, rendas,
 construção, população, turismo, câmaras): ver [Indicadores do INE](/dados/ine/).
@@ -177,14 +178,18 @@ segundos. Também se abre com `sqlite3`, Python, R ou DuckDB.
 As consultas podem ser editadas na própria página do Datasette, e o endereço
 de cada resultado pode ser partilhado.
 
-**Limitações**
+<p id="limitacoes"><strong>Limitações</strong></p>
 
 - Só entra o que o robô viu. Os dias em que uma fonte falhou ficam em falta.
 - **JORAA**: desde 11 de agosto de 2026 o jo.azores.gov.pt bloqueia pedidos
   automáticos, por isso não há atos novos a partir dessa data. O montante é
-  a "soma dos montantes" que o próprio JORAA declara, com os erros dele. Por
-  exemplo, a Adenda n.º 5/2025 ao contrato-programa do HDES aparece com
-  159 864 847 000 €. "0" quer dizer que o ato não indica montante.
+  calculado pelo açores.net: a soma de todos os valores em euros que
+  aparecem no resumo e no texto do ato. Um valor repetido conta duas vezes
+  (o Despacho n.º 694/2025 autoriza 3 175 000 € e aparece com 6 350 000 €),
+  e números mal escritos no ato dão somas absurdas (a Adenda n.º 5/2025 ao
+  contrato-programa do HDES aparece com 159 864 847 000 €). Serve para
+  encontrar atos. Para citar, leia o valor no próprio ato. "0" quer dizer
+  que não se encontrou nenhum valor em euros.
 - **BASE**: a data de publicação é o dia em que o contrato apareceu no portal,
   não o da assinatura. Um contrato republicado conta uma vez só.
 - **ALRA**: o "estado" de um requerimento é o último que o robô registou. A

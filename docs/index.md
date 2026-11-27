@@ -10,7 +10,9 @@ permalink: /
 estatísticas por concelho e freguesia, as contas do Governo Regional,
 contratos públicos e o trabalho da Assembleia Legislativa. Cada número tem
 ligação para a fonte oficial. Primeira vez por aqui? Comece pela
-<a href="/introducao/"><strong>introdução aos dados dos Açores</strong></a>.</p>
+<a href="/introducao/"><strong>introdução aos dados dos Açores</strong></a>.
+Jornalista? Veja o <a href="/tutorial/"><strong>tutorial</strong></a>: como
+fazer notícias com estes dados, com exemplos reais.</p>
 
 <div class="portas">
 
