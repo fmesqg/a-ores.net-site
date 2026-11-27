@@ -8,62 +8,102 @@ from bot.state import State
 from bot.utils import (
     append_state,
     compute_delta_ids,
-    find_monies,
+    euros_pt,
     get_prev_state,
+    joraa_amount,
     markdown_base,
     markdown_joraa,
     markdown_portal,
-    parse_currency_to_number,
     safe_markdown,
     write_update,
 )
 
-# --- find_monies ---
+# --- joraa_amount ---
 
 
-def test_find_monies_euro_suffix():
-    assert find_monies("valor de 1.500,00 €") == ["1.500,00 €"]
+def clauses(*texts):
+    return [{"normativo": t} for t in texts]
 
 
-def test_find_monies_euro_prefix():
-    # pattern2 matches €\s?\d{1,3} so only captures 3 digits after €
-    assert find_monies("valor de € 200") == ["€ 200"]
+def test_amount_grant_not_added_to_project_cost():
+    act = {
+        "sumario": "Aquisição de mobiliário.",
+        "considerandos": "<p>Entre a Região e a Junta de Freguesia...</p>",
+        "normativos": clauses(
+            "1 – O custo total do investimento apoiado é de 9.688,32 € "
+            "(nove mil, seiscentos e oitenta e oito euros).\n2 – A PRIMEIRA "
+            "OUTORGANTE assegura a comparticipação, a fundo perdido, no valor "
+            "de 9.470,33 € (nove mil, quatrocentos e setenta euros).",
+            "O processamento é feito em duas prestações, a primeira no "
+            "montante de 5.000,00 €.",
+        ),
+    }
+    assert joraa_amount(act) == (9470.33, "valor")
 
 
-def test_find_monies_nbsp():
-    assert find_monies("1.500,00&nbsp;€") == ["1.500,00 €"]
+def test_amount_amendment_reads_the_new_clauses_only():
+    act = {
+        "sumario": "Aditamento ao Protocolo de Cooperação",
+        "considerandos": "foi concedido um apoio no montante de "
+        "16.297,49€, deixando de ser preciso o apoio de 5.199,07€",
+        "normativos": clauses(
+            "cujo investimento estimado é de 10.598,42€ (dez mil...), a "
+            "primeira outorgante obriga-se a conceder uma comparticipação "
+            "no valor de 11.098,42€ que inclui o encargo com o registo do "
+            "ónus, no montante total de 250,00€"
+        ),
+    }
+    assert joraa_amount(act) == (11098.42, "valor")
 
 
-def test_find_monies_multiple():
-    result = find_monies("paga 100 € e recebe 200,50 €")
-    assert len(result) == 2
+def test_amount_list_of_grants_adds_up_repeated_values():
+    act = {
+        "sumario": "Apoio financeiro.",
+        "considerandos": "<p>se concedam os seguintes apoios:</p>"
+        "<p>Nome: A, Lda</p><p>Montante Euros: 1 525,00 €</p>"
+        "<p>Nome: B, Lda</p><p>Montante Euros: 25&nbsp;000,00 €</p>"
+        "<p>Nome: C, Lda</p><p>Montante Euros: 25 000,00 €</p>",
+        "normativos": [],
+    }
+    assert joraa_amount(act) == (51525.0, "soma de 3 valores")
 
 
-def test_find_monies_thousands_space():
-    assert find_monies("10 000,00 €") == ["10 000,00 €"]
+def test_amount_repeated_value_counts_once():
+    act = {
+        "sumario": "Autoriza a despesa de 3 175 000,00 €",
+        "textoIntegral": "É autorizada a despesa de 3 175 000,00 € "
+        "(três milhões...), com o limite de 3.175.000 euros.",
+    }
+    assert joraa_amount(act) == (3175000.0, "valor")
 
 
-def test_find_monies_no_match():
-    assert find_monies("sem valores monetários") == []
+def test_amount_procurement_notice_base_price():
+    act = {
+        "sumario": "Empreitada de arruamentos.",
+        "considerandos": "Valor do preço base do procedimento (EUR): (*) "
+        "Valor total estimado (EUR): (*) 199523 Preço Base s/IVA (€): (*) "
+        "199.523,28 Lotes: N.º: (*) LOT-0001 Preço base s/IVA (€): (*) "
+        "72.259,00",
+        "normativos": [],
+    }
+    assert joraa_amount(act) == (199523.28, "preço base")
 
 
-# --- parse_currency_to_number ---
+def test_amount_ignores_numbers_glued_to_a_reference():
+    act = {
+        "sumario": "Apoio",
+        "considerandos": "moradia sita no Caminho n.º 17 250,00 € de apoio",
+    }
+    assert joraa_amount(act) == (250.0, "valor")
 
 
-def test_parse_currency_simple():
-    assert parse_currency_to_number("100 €") == 100.0
+def test_amount_none_without_euros():
+    act = {"sumario": "Recomenda", "considerandos": "artigo 44.º, n.º 3"}
+    assert joraa_amount(act) is None
 
 
-def test_parse_currency_thousands_dot():
-    assert parse_currency_to_number("1.500,00 €") == 1500.0
-
-
-def test_parse_currency_prefix():
-    assert parse_currency_to_number("€ 2000") == 2000.0
-
-
-def test_parse_currency_thousands_space():
-    assert parse_currency_to_number("10 000,00 €") == 10000.0
+def test_euros_pt():
+    assert euros_pt(1234567.8) == "1 234 567,80 €"
 
 
 # --- compute_delta_ids ---

@@ -349,10 +349,25 @@ JORAA_COLS = [
     "ato",
     "titulo",
     "montante",
+    "montante_tipo",
     "entidade",
     "serie",
     "url",
 ]
+# Until November 2026 the bot wrote "Soma dos montantes", the sum of every
+# amount in the act (repeated amounts, costs and instalments included);
+# since then "Montante: 1 234,56 € (what it is)", from utils.joraa_amount.
+JORAA_SOMA_ANTIGA = "soma de todos os valores (método antigo)"
+
+
+def joraa_montante(subs: list[str]) -> tuple[float | None, str]:
+    for s in subs:
+        if s.startswith("Soma"):
+            return euros(s, "."), JORAA_SOMA_ANTIGA
+        if s.startswith("Montante:"):
+            valor, _, tipo = s.partition("€")
+            return euros(valor, ","), tipo.strip(" ()")
+    return None, ""
 
 
 def build_joraa(docs: Path) -> list[list]:
@@ -360,15 +375,17 @@ def build_joraa(docs: Path) -> list[list]:
     for day, path in days(docs, "_joraa_updates"):
         for _, title, url, subs in parse_day(path):
             ato = subs[0] if subs else ""
-            montante = next(
-                (euros(s, ".") for s in subs if s.startswith("Soma")), None
-            )
+            montante, tipo = joraa_montante(subs)
             serie = next((s for s in subs if s.startswith("Jornal")), "")
             entidade = next(
-                (s for s in subs[1:] if not s.startswith(("Soma", "Jornal"))),
+                (
+                    s
+                    for s in subs[1:]
+                    if not s.startswith(("Soma", "Montante:", "Jornal"))
+                ),
                 "",
             )
-            rows[url] = [day, ato, title, montante, entidade, serie, url]
+            rows[url] = [day, ato, title, montante, tipo, entidade, serie, url]
     return sorted(rows.values(), key=lambda r: (r[0], r[3] or 0), reverse=True)
 
 

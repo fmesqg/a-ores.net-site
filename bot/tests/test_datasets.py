@@ -59,6 +59,16 @@ date: 2024-08-21
 """
 
 
+def test_joraa_montante_old_and_new_lines():
+    assert datasets.joraa_montante(
+        ["Despacho", "Soma dos montantes: 1,500.00 €"]
+    ) == (1500.0, datasets.JORAA_SOMA_ANTIGA)
+    assert datasets.joraa_montante(
+        ["Despacho", "Montante: 25 010,49 € (soma de 8 valores)"]
+    ) == (25010.49, "soma de 8 valores")
+    assert datasets.joraa_montante(["Despacho", "Entidade"]) == (None, "")
+
+
 def test_euros_both_conventions():
     assert datasets.euros("120.963,33 €", ",") == 120963.33
     assert datasets.euros("12,987,000.00 €", ".") == 12987000.0
@@ -109,6 +119,7 @@ def test_build_all(tmp_path):
 
     (j,) = rows("joraa")
     assert j["montante"] == "993164.4"
+    assert j["montante_tipo"] == datasets.JORAA_SOMA_ANTIGA
     assert j["entidade"].startswith("Secretaria Regional da Educação")
 
     assert meta["base"]["linhas"] == 1
