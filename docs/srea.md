@@ -36,11 +36,11 @@ medida pelo índice de preços no consumidor (IPC) dos Açores.
 <div class="duas">
 <div>
 <p><strong>O que mais subiu</strong></p>
-<ul>{% for c in s.ipc.mais %}<li>{{ c.nome }}: {{ c.valor_t }}%</li>{% endfor %}</ul>
+<ul>{% for c in s.ipc.mais %}<li>{{ c.nome | escape }}: {{ c.valor_t }}%</li>{% endfor %}</ul>
 </div>
 <div>
 <p><strong>O que menos subiu ou desceu</strong></p>
-<ul>{% for c in s.ipc.menos %}<li>{{ c.nome }}: {{ c.valor_t }}%</li>{% endfor %}</ul>
+<ul>{% for c in s.ipc.menos %}<li>{{ c.nome | escape }}: {{ c.valor_t }}%</li>{% endfor %}</ul>
 </div>
 </div>
 {% endif %}

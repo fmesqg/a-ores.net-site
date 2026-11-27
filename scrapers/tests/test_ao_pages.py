@@ -269,6 +269,16 @@ def test_write_article_pages_escapes_body_html(pages_dir):
     assert "<p>a &lt; b &amp; &lt;script&gt;</p>" in page
 
 
+def test_pages_neutralise_liquid(pages_dir):
+    # Jekyll runs Liquid on these pages: "{{" in an article must not run.
+    sections_data = {"politica": [_article(title="{% x %}", body="{{ y }}")]}
+    entries = build_entries(sections_data, "2026-08-25")
+    write_article_pages(entries, "2026-08-25")
+    page = (pages_dir / "20260825-01.md").read_text(encoding="utf-8")
+    assert "<p>&#123;&#123; y &#125;&#125;</p>" in page
+    assert "&#123;% x %&#125;" in build_link_list(entries)
+
+
 def test_write_article_pages_splits_paragraphs(pages_dir):
     sections_data = {"politica": [_article(body="Um.\n\nDois.\n\nTrês.")]}
     write_article_pages(

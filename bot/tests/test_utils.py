@@ -14,6 +14,7 @@ from bot.utils import (
     markdown_joraa,
     markdown_portal,
     parse_currency_to_number,
+    safe_markdown,
     write_update,
 )
 
@@ -142,6 +143,27 @@ def test_compute_delta_ids_no_changes(state_dict):
     }
     delta = compute_delta_ids(prev, current)
     assert delta == {}
+
+
+# --- safe_markdown ---
+
+
+def test_safe_markdown_neutralises_html_liquid_and_links():
+    md = (
+        "* [<img src=x onerror=alert(1)>](https://alra.pt/a?b=1&c=2)\n"
+        "  * {{ site.x }} {% include y %} {: onclick=z}\n"
+        "* [x](javascript:alert(1)) [y]( JavaScript:z) [ok](/ao/1/)"
+    )
+    out = safe_markdown(md)
+    assert "<" not in out and "{" not in out and "}" not in out
+    assert (
+        "[&lt;img src=x onerror=alert(1)>](https://alra.pt/a?b=1&c=2)" in out
+    )
+    assert "&#123;&#123; site.x &#125;&#125;" in out
+    assert "[x](#) [y](#) [ok](/ao/1/)" in out
+    assert safe_markdown("* [a](https://jo.azores.gov.pt/#/ato/1)") == (
+        "* [a](https://jo.azores.gov.pt/#/ato/1)"
+    )
 
 
 # --- write_collection ---
