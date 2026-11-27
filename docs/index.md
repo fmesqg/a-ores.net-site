@@ -31,6 +31,7 @@ permalink: /
   <ul>
     <li><a href="/tutorial/#fontes">cada fonte num quadro: nível, período, atualização, cuidados</a></li>
     <li><a href="/tutorial/#dinheiro">casos reais: seguir um contrato do BASE ao Jornal Oficial</a></li>
+    <li><a href="/casos/eda-bencom/">um caso de ponta a ponta: o fuelóleo da EDA e a BENCOM</a></li>
     <li><a href="/tutorial/#verificar">CSV e SQL no navegador, sem instalar nada</a></li>
   </ul>
 </section>
