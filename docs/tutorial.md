@@ -212,9 +212,11 @@ Tudo o que o site mostra pode ser descarregado:
 <ul>
   <li>Contratos, Assembleia e Jornal Oficial só desde agosto de 2024, e só
   o que o robô viu. Se uma fonte falhou num dia, esse dia pode faltar.</li>
-  <li>Desde 11 de agosto de 2026, o site do Jornal Oficial bloqueia o
-  robô. Os atos publicados desde então ainda não estão no açores.net e
-  serão recolhidos quando o acesso voltar.</li>
+  <li>De 11 de agosto a 27 de novembro de 2026, o site do Jornal Oficial
+  bloqueou o robô. Os dias em falta estão a ser recolhidos, dos mais
+  recentes para os mais antigos{% if site.data.joraa_estado.atraso_de %}:
+  ainda faltam os atos publicados entre {{ site.data.joraa_estado.atraso_de }}
+  e {{ site.data.joraa_estado.atraso_ate }}{% endif %}.</li>
   <li>Mais notas por fonte na <a href="/dados/#limitacoes">página de
   dados</a>.</li>
 </ul>

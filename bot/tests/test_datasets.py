@@ -1002,3 +1002,24 @@ def test_camaras_data_per_inhabitant():
     assert [x["nome"] for x in d["refs"]] == ["Açores"]
     assert d["base_de"] == "2024-08-21"
     assert len(d["grafico"]["pontos"]) == 2
+
+
+def test_joraa_estado_backfill_note():
+    line = {
+        "datetime": "2026-11-28 01:30:00",
+        "last_joraa_update": "2026-11-27",
+    }
+    assert datasets.joraa_estado(line) == {}
+    line["joraa_backfill"] = ["2026-08-12", "2026-11-05"]
+    assert datasets.joraa_estado(line) == {
+        "atraso_de": "12/08/2026",
+        "atraso_ate": "05/11/2026",
+        "dias": 86,
+    }
+    # before the first run that plans a backfill
+    old = {
+        "datetime": "2026-11-27 09:26:17",
+        "last_joraa_update": "2026-08-11",
+    }
+    assert datasets.joraa_estado(old)["atraso_de"] == "12/08/2026"
+    assert datasets.joraa_estado(old)["atraso_ate"] == "26/11/2026"

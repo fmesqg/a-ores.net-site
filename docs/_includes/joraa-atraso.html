@@ -1,0 +1,15 @@
+{%- assign j = site.data.joraa_estado -%}
+{%- if j.atraso_de -%}
+<div class="aviso-joraa" role="note">
+<p><strong>Jornal Oficial: atos em falta, em recuperação.</strong> O
+jo.azores.gov.pt bloqueou o robô do açores.net de 11 de agosto a 27 de
+novembro de 2026. Os atos novos voltaram a entrar todos os dias. Os publicados
+entre {{ j.atraso_de }} e {{ j.atraso_ate }} ({{ j.dias }} dias) ainda estão
+a ser recolhidos, alguns dias por noite, dos mais recentes para os mais
+antigos. Até lá, esses dias faltam nas pesquisas e nas somas.</p>
+</div>
+<style>
+.aviso-joraa { border-left: 4px solid #b58900; background: rgba(181,137,0,.08); padding: .6em 1em .1em; margin: 1em 0; max-width: 46em; border-radius: 0 6px 6px 0; }
+.aviso-joraa p { margin-bottom: .5em; }
+</style>
+{%- endif -%}

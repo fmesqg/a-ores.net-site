@@ -200,15 +200,49 @@ def fetch_joraa_ato(id):
 
 
 JORAA_BUDGET = 3 * 3600  # seconds per run
+JORAA_RECENT = 3  # days fetched first; older missing days wait as backfill
+
+
+def joraa_plan(
+    last: date, backfill: tuple[date, date] | None, today: date
+) -> tuple[list[date], tuple[date, date] | None]:
+    """The JORAA days to ask for, in order, and the backfill range they
+    come from. The newest days go first (at most JORAA_RECENT of them, oldest
+    first so ``last`` can move up to the last one done); any older day
+    after ``last`` joins the backfill, which is then worked through from its
+    newest day down, with whatever budget is left."""
+    yesterday = today - timedelta(days=1)
+    first = max(
+        last + timedelta(days=1), yesterday - timedelta(days=JORAA_RECENT - 1)
+    )
+    if first > last + timedelta(days=1):
+        start, end = last + timedelta(days=1), first - timedelta(days=1)
+        if backfill:
+            start, end = min(start, backfill[0]), max(end, backfill[1])
+        backfill = (start, end)
+    recent = [
+        first + timedelta(days=i) for i in range((yesterday - first).days + 1)
+    ]
+    older = (
+        [
+            backfill[1] - timedelta(days=i)
+            for i in range((backfill[1] - backfill[0]).days + 1)
+        ]
+        if backfill
+        else []
+    )
+    return recent + older, backfill
 
 
 def fetch_joraa(days: list[date]) -> dict | FetchError:
-    """Each day's acts, day by day, at the pace gov.wait() allows (20 s a
-    request at night: some 15 days of acts in JORAA_BUDGET). Stops at the
-    first failure or when the budget is spent and returns the days done so
-    far: the state then moves only up to the last of them, so a backlog is
-    caught up over several nights. A failure on the first day is returned
-    as such, so the day's page shows the error."""
+    """Each day's acts, day by day in the order of ``days`` (joraa_plan:
+    the newest days, then the backfill from its newest day down), at the
+    pace gov.wait() allows (20 s a request at night: some 15 days of acts in
+    JORAA_BUDGET). Stops at the first failure or when the budget is spent
+    and returns the days done so far: State.get_updated_state works out from
+    them what is still missing, so a backlog is caught up over several
+    nights. A failure on the first day is returned as such, so the day's
+    page shows the error."""
     deadline = time.monotonic() + JORAA_BUDGET
     joraa: dict = {}
     for day in days:
@@ -424,10 +458,9 @@ def fetch_web_data(prev_state: State) -> WebData:
     joraa_last: date = prev_state.last_joraa_update
     base_last: date = prev_state.last_base_update
 
-    joraa_date_list = [
-        joraa_last + timedelta(days=i)
-        for i in range(1, (datetime.now().date() - joraa_last).days)
-    ]
+    joraa_date_list, joraa_backfill = joraa_plan(
+        joraa_last, prev_state.joraa_backfill, datetime.now().date()
+    )
     base_date_list = [
         base_last + timedelta(days=i)
         for i in range(1, (datetime.now().date() - base_last).days)
@@ -451,4 +484,5 @@ def fetch_web_data(prev_state: State) -> WebData:
         base=base_dict,
         portal=fetch_portal(prev_state=prev_state),
         alra_ids=alra_pre_fetch,
+        joraa_backfill=joraa_backfill,
     )

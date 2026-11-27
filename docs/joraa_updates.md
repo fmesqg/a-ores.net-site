@@ -7,8 +7,7 @@ permalink: /joraa_updates
 
 ## [JORAA RSS feed](/rss/joraa.xml)
 
-Desde 11 de agosto de 2026 o jo.azores.gov.pt bloqueia o acesso automático,
-por isso os dias seguintes só têm a mensagem de erro.
+{% include joraa-atraso.html %}
 
 {% assign full_updates = site.joraa_updates | sort: "date" | reverse %}
 {% for update in full_updates limit: 30 %}  <p>

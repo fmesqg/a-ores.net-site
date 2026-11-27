@@ -33,6 +33,7 @@ Fonte: <a href="https://www.alra.pt/">alra.pt</a>.</p>
 resoluções do Governo Regional. O açores.net destaca os atos com montantes:
 apoios, subsídios, contratos-programa e outras despesas.
 Fonte: <a href="https://jo.azores.gov.pt/">jo.azores.gov.pt</a>.</p>
+{% include joraa-atraso.html %}
 {%- when "base" %}
 <p>Os contratos públicos assinados por entidades dos Açores (Governo,
 câmaras, hospitais, empresas públicas): quem contratou, com quem, o quê, por
