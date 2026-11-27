@@ -89,7 +89,7 @@ Abstract `Record` base class with subclasses: `Requerimento`, `Iniciativa`, `Vot
 
 ### Jekyll Site (`docs/`)
 
-Minima theme. Five auto-generated collections (`_alra_updates/`, `_joraa_updates/`, `_base_updates/`, `_portal_updates/` from the bot; `_ao/` from the AO scraper) plus manual blog posts in `_posts/`. Structured JSON feed in `_data/daily/`.
+Minima theme. Five auto-generated collections (`_alra_updates/`, `_joraa_updates/`, `_base_updates/`, `_portal_updates/` from the bot; `_ao/` from the AO scraper) plus manual blog posts in `_posts/`. Structured JSON feed in `_data/daily/` (not used by any template).
 
 ### News Scrapers (`scrapers/`)
 
@@ -122,7 +122,6 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 - Pages carry `noindex: true` (via the `ao` defaults in `docs/_config.yml` → `_includes/custom-head.html`) and `docs/robots.txt` disallows `/ao/`, since they host paywalled print text.
 - Ordering: sections by their lowest page number, articles by page within each section, ties keeping the print edition's order — so slug `-01` is the front of the paper. Articles with no page sort last.
 - Front-page teasers (`page` in `FRONT_PAGE_NUMBERS` = `{"0", "1"}`) are dropped: they are reworded one-line blurbs for articles that run inside. Page `0` is the lead story, whose card omits the `Pág. N` marker.
-- `scrapers/migrate_ao_feed.py` is the one-off script that rebuilt 30 days of pages from the old 14 MB per-article feed. It no-ops if the feed is already migrated.
 - `scrapers/repair_ao_pages.py` re-derives backfilled editions: it re-reads the section index pages to recover page numbers and any section missing from disk, then regenerates. `--no-fetch` regenerates from disk alone (use after changing ordering or filter rules); `--dry-run` reports without writing.
 
 ## Key Details
@@ -130,6 +129,6 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 - **State file:** `bot/state.jsonl` is an append-only ledger (~12 MB, committed). Each line is one bot run's full state. Delta computation depends on the last entry.
 - **Deploy:** `.github/workflows/pages.yml` builds Jekyll with `actions/jekyll-build-pages` and deploys on push to main, on manual dispatch and when called by the daily run.
 - **CI/CD:** `.github/workflows/run-bot.yml` runs daily at 00:00 UTC, commits as `fmesqg-auto` if changes exist.
-- **Code style:** black (line-length 79), isort (black profile), Python >=3.11. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.
+- **Code style:** black (line-length 79), isort (black profile), Python >=3.11.5. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.
 - **Tests:** `pytest bot/tests/` runs offline by default. Network-dependent tests are marked `@pytest.mark.network` and skipped unless opted in with `-m network`.
 - **Content language:** Portuguese (Azores region).

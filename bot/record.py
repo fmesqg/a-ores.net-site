@@ -6,9 +6,6 @@ class Record:
         self._data = data
 
     @abstractmethod
-    def export_table_row(self, **kwargs): ...
-
-    @abstractmethod
     def to_markdown(self, **kwargs) -> None | str: ...
 
     def to_dict(self, **kwargs) -> dict:
@@ -16,21 +13,6 @@ class Record:
 
 
 class Requerimento(Record):
-
-    def export_table_row(self, *, headers, prev, now):
-        x: dict = self._data
-        if len(requerentes := x["Requerente(s)"].split(";")) > 1:
-            x["Requerente(s)"] = requerentes[0] + " ..."
-        x["Número"] = f"[{x['Número']}]({x['url']})"
-        prev_status = "Não existente" if prev is None else prev
-        x["Alteração do Status"] = f"{prev_status} → {now}"
-        x["Texto Requerimento"] = f"[Requerimento]({x['Texto Requerimento']})"
-        x["Texto Resposta"] = (
-            f"[Resposta]({t})"
-            if (t := x.get("Texto Resposta", None))
-            else None
-        )
-        return [x.get(header, "") for header in headers]
 
     def to_markdown(self, *, prev, now):
         x: dict = self._data
@@ -187,15 +169,6 @@ class Peti(Record):
 
 
 class Info(Record):
-    def export_table_row(self, *, headers):
-        x = self._data
-        x["link"] = f"[link]({x['url']})"
-        x["Texto Informação"] = (
-            f"[Informação]({t})"
-            if (t := x.get("Texto Informação", None))
-            else None
-        )
-        return [x.get(header, "") for header in headers]
 
     def to_markdown(self):
         x = self._data
@@ -235,16 +208,6 @@ class Iniciativa(Record):
             md += f"\n  * Resultado: {estado}"
         return md
 
-    def export_table_row(self, *, headers):
-        x = self._data
-        x["Nº Processo"] = f"[{x['Nº Processo']}]({x['url']})"
-        x["Texto Iniciativa"] = (
-            f"[Texto Iniciativa]({t})"
-            if (t := x.get("Texto Iniciativa", None))
-            else None
-        )
-        return [x.get(header, "") for header in headers]
-
     def to_dict(self, **kwargs):
         x = self._data
         return {
@@ -257,20 +220,6 @@ class Iniciativa(Record):
 
 
 class Voto(Record):
-    def export_table_row(self, *, headers):
-        x = self._data
-        x["Nº Entrada"] = f"[{x['Nº Entrada']}]({x['url']})"
-        x["Texto Voto Apresentado"] = (
-            f"[Texto Voto Apresentado]({t})"
-            if (t := x.get("Texto Voto Apresentado", None))
-            else None
-        )
-        x["Texto Voto Aprovado"] = (
-            f"[Texto Voto Aprovado]({t})"
-            if (t := x.get("Texto Voto Aprovado", None))
-            else None
-        )
-        return [x.get(header, "") for header in headers]
 
     def to_markdown(self):
         x = self._data
