@@ -12,6 +12,7 @@ GitHub Pages by GitHub Actions).
 |------|---------------|------------|
 | [`/`](https://xn--aores-yra.net/) | Entry points, latest updates, opinion | `docs/index.md` |
 | [`/introducao/`](https://xn--aores-yra.net/introducao/) | Introdução aos dados dos Açores: islands, who decides what, the Region's money, how people live, key terms | `docs/introducao.md` + `docs/_data/resumo.json` |
+| [`/tutorial/`](https://xn--aores-yra.net/tutorial/) | Tutorial for journalists: worked examples, pitfalls, a checklist before publishing | `docs/tutorial.md` (figures written in by hand, as of Nov 2026) |
 | [`/dados/ine/`](https://xn--aores-yra.net/dados/ine/) | INE indicators by concelho and freguesia, vs Madeira and Portugal | `data/ine.csv` |
 | [`/dados/srea/`](https://xn--aores-yra.net/dados/srea/) | Economia: prices, employment, activity, tourism, GDP by island (SREA) | `data/srea.csv` |
 | [`/dados/beo/`](https://xn--aores-yra.net/dados/beo/) | Budget execution (Boletins de Execução Orçamental), month by month | `data/beo.csv` |
