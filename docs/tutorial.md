@@ -12,6 +12,8 @@ description: Para jornalistas, decisores políticos e investigadores. Cada fonte
 <ul class="lead-lista">
   <li><a href="#fontes">cada fonte num quadro</a>: nível geográfico, período, atualização e o que convém saber</li>
   <li>seis casos reais, com o caminho para cada número</li>
+  <li>um caso seguido de ponta a ponta, por todas as fontes:
+  <a href="/casos/eda-bencom/">o fuelóleo da EDA e a BENCOM</a></li>
   <li>todos os números com ligação ao documento oficial</li>
 </ul>
 
@@ -168,6 +170,10 @@ na ALRA</a></p>
   Código dos Contratos Públicos) está na ficha do contrato no BASE.</li>
 </ul>
 </div>
+
+<p>O mesmo método, aplicado a um caso com mais fontes (contratos, Jornal
+Oficial, Assembleia, imprensa, contas das empresas e o regulador):
+<a href="/casos/eda-bencom/">o fuelóleo da EDA e a BENCOM</a>.</p>
 
 <h2 id="contas">4. Ler as contas da Região</h2>
 
