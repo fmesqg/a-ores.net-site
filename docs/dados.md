@@ -180,9 +180,12 @@ de cada resultado pode ser partilhado.
 
 <p id="limitacoes"><strong>Limitações</strong></p>
 
+{% include joraa-atraso.html %}
+
 - Só entra o que o robô viu. Os dias em que uma fonte falhou ficam em falta.
-- **JORAA**: desde 11 de agosto de 2026 o jo.azores.gov.pt bloqueia pedidos
-  automáticos, por isso não há atos novos a partir dessa data. O montante é
+- **JORAA**: de 11 de agosto a 27 de novembro de 2026 o jo.azores.gov.pt
+  bloqueou o robô. Os dias em falta estão a ser recolhidos (ver o aviso acima,
+  enquanto durar). O montante é
   calculado pelo açores.net: a soma de todos os valores em euros que
   aparecem no resumo e no texto do ato. Um valor repetido conta duas vezes
   (o Despacho n.º 694/2025 autoriza 3 175 000 € e aparece com 6 350 000 €),

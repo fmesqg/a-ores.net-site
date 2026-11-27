@@ -1870,6 +1870,41 @@ def write_camaras(docs: Path, tables: dict) -> None:
     )
 
 
+def joraa_estado(line: dict) -> dict:
+    """The JORAA days still missing, from the bot's last state line: the
+    backfill range, or, before the bot has planned one, the days after the
+    last one fetched (more than the few recent days a night run takes)."""
+    hoje = dt.date.fromisoformat(line["datetime"][:10])
+    last = dt.date.fromisoformat(line["last_joraa_update"])
+    de = ate = None
+    if line.get("joraa_backfill"):
+        de, ate = (dt.date.fromisoformat(d) for d in line["joraa_backfill"])
+    elif (hoje - last).days > 3:
+        de, ate = last + dt.timedelta(days=1), hoje - dt.timedelta(days=1)
+    if not de:
+        return {}
+    return {
+        "atraso_de": de.strftime("%d/%m/%Y"),
+        "atraso_ate": ate.strftime("%d/%m/%Y"),
+        "dias": (ate - de).days + 1,
+    }
+
+
+def write_joraa_estado(docs: Path) -> None:
+    """docs/_data/joraa_estado.json for the note on the JORAA backfill
+    (_includes/joraa-atraso.html)."""
+    state = docs.parent / "bot" / "state.jsonl"
+    out: dict = {}
+    if state.exists():
+        lines = state.read_text(encoding="utf-8").strip().splitlines()
+        if lines:
+            out = joraa_estado(json.loads(lines[-1]))
+    (docs / "_data").mkdir(exist_ok=True)
+    (docs / "_data" / "joraa_estado.json").write_text(
+        json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8"
+    )
+
+
 def write_resumo(docs: Path, tables: dict) -> None:
     """docs/_data/resumo.json: the few numbers /introducao/ and /financas/ show, computed
     here so that page does not download the full CSVs."""
@@ -1963,6 +1998,7 @@ def main(docs: Path) -> dict:
             )
         meta[name] = info
     write_resumo(docs, tables)
+    write_joraa_estado(docs)
     write_economia(docs, tables)
     write_camaras(docs, tables)
     write_db(out / "acores.db", tables)

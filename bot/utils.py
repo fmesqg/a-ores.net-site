@@ -215,6 +215,11 @@ def append_state(state: State):
     state_json: dict = {
         "datetime": NOW_DATETIME.strftime("%Y-%m-%d %H:%M:%S"),
         "last_joraa_update": state.last_joraa_update.strftime("%Y-%m-%d"),
+        "joraa_backfill": (
+            [d.strftime("%Y-%m-%d") for d in state.joraa_backfill]
+            if state.joraa_backfill
+            else None
+        ),
         "last_base_update": state.last_base_update.strftime("%Y-%m-%d"),
         "boletins": list(state.data["boletins"]),
         "sigica": list(state.data["sigica"]),

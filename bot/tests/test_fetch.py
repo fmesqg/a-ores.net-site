@@ -538,3 +538,35 @@ def test_fetch_info():
     }
     actual = fetch_record(Info, 20085)._data
     assert expected == actual
+
+
+def test_joraa_plan_recent_first_then_backfill_newest_down():
+    from datetime import date
+
+    from bot.fetch import joraa_plan
+
+    d = date
+    # blocked since 11 Aug, today 27 Nov: 24-26 Nov first, the rest later
+    days, back = joraa_plan(d(2026, 8, 11), None, d(2026, 11, 27))
+    assert days[:4] == [
+        d(2026, 11, 24),
+        d(2026, 11, 25),
+        d(2026, 11, 26),
+        d(2026, 11, 23),
+    ]
+    assert days[-1] == d(2026, 8, 12)
+    assert back == (d(2026, 8, 12), d(2026, 11, 23))
+    # next night: the 3 recent days done, backfill partly done
+    days, back = joraa_plan(
+        d(2026, 11, 26), (d(2026, 8, 12), d(2026, 11, 5)), d(2026, 11, 28)
+    )
+    assert days[:2] == [d(2026, 11, 27), d(2026, 11, 5)]
+    assert back == (d(2026, 8, 12), d(2026, 11, 5))
+    # a normal day, nothing missing
+    assert joraa_plan(d(2026, 12, 1), None, d(2026, 12, 3)) == (
+        [d(2026, 12, 2)],
+        None,
+    )
+    # missed two nights: still within the recent window, no backfill
+    days, back = joraa_plan(d(2026, 12, 1), None, d(2026, 12, 4))
+    assert days == [d(2026, 12, 2), d(2026, 12, 3)] and back is None
