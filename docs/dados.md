@@ -10,7 +10,7 @@ Tudo o que o açores.net recolheu desde agosto de 2024, numa tabela por fonte:
 contratos públicos (BASE), atividade da Assembleia Legislativa (ALRA) e atos
 com montantes do Jornal Oficial (JORAA). Pesquise aqui ou descarregue os CSV.
 Cada linha tem a ligação para o documento original
-(ver o [guia para jornalistas](/tutorial/)).
+(ver o [guia](/tutorial/)).
 
 **Estatísticas do INE por concelho e freguesia** (rendimentos e IRS, rendas,
 construção, população, turismo, câmaras): ver [Indicadores do INE](/dados/ine/).

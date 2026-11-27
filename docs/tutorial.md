@@ -1,17 +1,22 @@
 ---
-title: "Guia: dados dos Açores para jornalistas"
+title: "Guia: trabalhar com os dados dos Açores"
 layout: default
 permalink: /tutorial/
-description: Onde está cada número no açores.net, de onde vem e o que tem de particular cada fonte - INE, contratos públicos, Jornal Oficial, contas da Região, câmaras municipais e Assembleia - com casos reais.
+description: Para jornalistas, decisores políticos e investigadores. Cada fonte num quadro e, com casos reais, onde está cada número no açores.net, de onde vem e o que tem de particular cada fonte - INE, contratos públicos, Jornal Oficial, contas da Região, câmaras municipais e Assembleia - com casos reais.
 ---
 
-# Guia: dados dos Açores para jornalistas
+# Guia: trabalhar com os dados dos Açores
 
-<p class="lead">Casos reais, com o caminho para cada número no açores.net e
-o que convém saber de cada fonte. Todos os números têm ligação ao documento
-oficial de onde vêm.</p>
+<p class="lead">Para jornalistas, decisores políticos e investigadores:</p>
+
+<ul class="lead-lista">
+  <li><a href="#fontes">cada fonte num quadro</a>: nível geográfico, período, atualização e o que convém saber</li>
+  <li>seis casos reais, com o caminho para cada número</li>
+  <li>todos os números com ligação ao documento oficial</li>
+</ul>
 
 <nav class="indice" aria-label="Nesta página">
+  <a href="#fontes"><span>•</span> As fontes num quadro</a>
   <a href="#citar"><span>1</span> Rendimento por freguesia</a>
   <a href="#comparar"><span>2</span> Câmaras e concelhos por habitante</a>
   <a href="#dinheiro"><span>3</span> Seguir o dinheiro</a>
@@ -22,6 +27,30 @@ oficial de onde vêm.</p>
 
 <p class="fonte">Os números dos exemplos são os que estavam no site em
 novembro de 2026. Se abrir as ligações mais tarde, podem ter mudado.</p>
+
+<h2 id="fontes">As fontes num quadro</h2>
+
+<div class="tabela">
+<table class="fontes">
+<thead><tr><th scope="col">Fonte</th><th scope="col">Nível</th><th scope="col">Período e atualização</th><th scope="col">Convém saber</th></tr></thead>
+<tbody>
+<tr><th scope="row"><a href="/dados/ine/">INE</a></th><td>concelho, freguesia; Açores, Madeira e país</td><td>varia por indicador; o site verifica uma vez por semana</td><td>segredo estatístico em concelhos e freguesias pequenos; definição oficial junto de cada indicador</td></tr>
+<tr><th scope="row"><a href="/dados/srea/">SREA</a></th><td>Região, algumas séries por ilha</td><td>mensal ou trimestral; verificado uma vez por semana</td><td>o emprego e o desemprego vêm de um inquérito por amostragem</td></tr>
+<tr><th scope="row"><a href="/dados/beo/">Execução orçamental</a></th><td>Região (subsetores e secretarias)</td><td>mensal, acumulado desde janeiro</td><td>despesa paga, não orçamentada; provisório até à Conta</td></tr>
+<tr><th scope="row"><a href="/dados/tdc/">Tribunal de Contas</a></th><td>Região</td><td>um parecer por ano sobre a Conta</td><td>reservas e recomendações com o estado que lhes dá o parecer seguinte</td></tr>
+<tr><th scope="row"><a href="/financas/camaras/">Câmaras</a></th><td>concelho</td><td>anual (INE)</td><td>valores por habitante calculados pelo açores.net; a despesa inclui amortização de empréstimos</td></tr>
+<tr><th scope="row"><a href="/economia/setor-publico/">Emprego público</a></th><td>Açores, Madeira, país</td><td>trimestral (DGAEP)</td><td>postos de trabalho, não pessoas; o último trimestre é provisório</td></tr>
+<tr><th scope="row"><a href="/dados/sper/">Empresas públicas</a></th><td>empresa</td><td>anual (CFP)</td><td>o site mostra o relatório mais recente</td></tr>
+<tr><th scope="row"><a href="/dados/maiores-empresas/">Maiores empresas</a></th><td>empresa com sede nos Açores</td><td>anual, publicado com um ano de atraso</td><td>ranking de uma revista, não estatística oficial</td></tr>
+<tr><th scope="row"><a href="/dados/#fonte=base">Contratos (BASE)</a></th><td>contrato</td><td>diário, desde agosto de 2024</td><td>preço contratual, em regra sem IVA; não é despesa paga</td></tr>
+<tr><th scope="row"><a href="/dados/#fonte=joraa">Jornal Oficial</a></th><td>ato</td><td>diário, desde agosto de 2024</td><td>o montante é uma soma automática dos valores no texto{% if site.data.joraa_estado.atraso_de %}; faltam os atos de {{ site.data.joraa_estado.atraso_de }} a {{ site.data.joraa_estado.atraso_ate }}{% endif %}</td></tr>
+<tr><th scope="row"><a href="/dados/#fonte=alra">Assembleia</a></th><td>iniciativa, requerimento</td><td>diário, desde agosto de 2024</td><td>estado do requerimento é o último visto pelo robô</td></tr>
+</tbody>
+</table>
+</div>
+
+<p class="fonte">Descrição dos ficheiros e código de recolha de cada fonte na
+<a href="/dados/#descarregar">página de dados</a>.</p>
 
 <h2 id="citar">1. Rendimento por freguesia</h2>
 
@@ -229,7 +258,12 @@ pedido no [GitHub](https://github.com/fmesqg/a-ores.net-site/issues).
 definições oficiais estão junto de cada indicador, com ligação à fonte.</p>
 
 <style>
-.lead { font-size: 1.15em; max-width: 40em; }
+.lead { font-size: 1.15em; max-width: 40em; margin-bottom: .3em; }
+.lead-lista { margin: 0 0 1em 1.2em; max-width: 40em; }
+.tabela { overflow-x: auto; margin-bottom: .6em; }
+.fontes { font-size: .9em; border-collapse: collapse; }
+.fontes th, .fontes td { vertical-align: top; text-align: left; padding: .35em .5em; }
+.fontes th[scope=row] { white-space: nowrap; }
 .indice { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr)); gap: .4em; margin: 1em 0 1em; }
 .indice a { display: block; padding: .45em .7em; border: 1px solid rgba(147,161,161,.6); border-radius: 6px; background: rgba(147,161,161,.08); text-decoration: none; }
 .indice a:hover { background: rgba(38,139,210,.12); }
