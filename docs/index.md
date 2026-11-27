@@ -26,7 +26,6 @@ fazer notícias com estes dados, com exemplos reais.</p>
     <li><a href="/dados/ine/#ind=0012759">Como se distribui o rendimento (quintis)?</a></li>
     <li><a href="/dados/ine/#ind=0014698">Quanto custa arrendar casa?</a></li>
     <li><a href="/dados/ine/#ind=0013210">Onde há mais turistas por habitante?</a></li>
-    <li><a href="/dados/srea/">Como estão os preços, o emprego e o turismo agora?</a></li>
   </ul>
 </section>
 
@@ -40,6 +39,19 @@ fazer notícias com estes dados, com exemplos reais.</p>
     <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra&grafico=anos">Quanto rendem o IRS e o IVA, mês a mês?</a></li>
     <li><a href="/dados/beo/#quadro=despesa-do-gra-por-departamento">Quanto gasta cada secretaria?</a></li>
     <li><a href="/dados/tdc/">O que diz o Tribunal de Contas sobre as contas da Região?</a>{% if site.data.tdc_ultimo.conta %} (último parecer: <a href="{{ site.data.tdc_ultimo.url }}">Conta de {{ site.data.tdc_ultimo.conta }}</a>){% endif %}</li>
+  </ul>
+</section>
+
+<section class="porta">
+  <h2><a href="/economia/">Economia</a></h2>
+  <p>Preços, emprego e turismo, mês a mês; as empresas públicas regionais
+  (SATA, EDA, Portos, hospitais) e as 200 maiores empresas com sede nos
+  Açores.</p>
+  <ul>
+    <li><a href="/dados/srea/">Como estão os preços, o emprego e o turismo agora?</a></li>
+    <li><a href="/dados/sper/#empresas">Quanto fatura e quanto perde cada empresa pública?</a></li>
+    <li><a href="/dados/sper/#esforco">Quanto paga a Região às suas empresas?</a></li>
+    <li><a href="/dados/maiores-empresas/">Quais são as maiores empresas dos Açores?</a></li>
   </ul>
 </section>
 

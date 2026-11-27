@@ -1,11 +1,15 @@
 ---
-title: Economia
+title: Indicadores da economia
 layout: default
 permalink: /dados/srea/
+secao: economia
 description: Preços, emprego, atividade económica, turismo e PIB por ilha nos Açores, com os números mais recentes do Serviço Regional de Estatística dos Açores (SREA), explicados.
 ---
 {%- assign s = site.data.resumo.srea -%}
 {%- assign f = site.data.fontes -%}
+{% include economia-nav.html %}
+
+# Indicadores da economia
 
 <p class="lead">Como estão os preços, o emprego, a economia e o turismo nos
 Açores: os números mais recentes do <a href="{{ f.srea.url }}">Serviço

@@ -1,0 +1,39 @@
+﻿relatorio,ordem,sigla,empresa,cae,participacao,acionista,ap,nota,url
+13/2024,1,Lotaçor,"Lotaçor, S.A.",A,1,RAA,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,2,Santa Catarina,"Santa Catarina - Indústria Conserveira, S.A.",C,1,Lotaçor,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,3,EDA,"EDA, S.A.",D,0.501,RAA,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,4,EDA Renováveis,"EDA Renováveis, S.A.",D,0.501,EDA,,"EDA com 99,68% e SEGMA com 0,32%.",https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,5,Atlântico Line,"Atlântico Line, S.A.",H,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,6,Portos dos Açores,"Portos dos Açores, S.A.",H,1,RAA,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,7,SATA Holding,"Sata Holding, S.A.",H,1,RAA,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,8,SATA,"Sata Air Açores, S.A.",H,1,SATA Holding,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,9,SATA Internacional,"Sata Internacional - Azores Airlines, S.A.",H,1,SATA Holding,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,10,SATA Aeródromos,"Sata - Gestão de Aeródromos, S.A.",H,1,SATA Holding,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,11,Ilhas de Valor,"Ilhas de Valor, S.A.",I,1,RAA,sim,"Participação direta da RAA com 50,56% e indiretamente via FRACDE (49.44%).",https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,12,PJCSC,"PJCSC - Pousada da Juventude da Caldeira do Santo Cristo, Lda.",I,0.6087,Ilhas de Valor,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,13,GLOBALEDA,"Globaleda - Telecomunicações e Sistemas de Informação, S.A.",J,0.3752,EDA,,"EDA com 74,9%.",https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,14,SEGMA,"SEGMA - Serviços de Engenharia, Gestão e Manutenção, Lda.",M,0.501,EDA,,EDA com 90% e EDA Renováveis com 10%.,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,15,IROA,"IROA - Instituto Regional de Ordenamento Agrário, S.A.",O,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,16,HDES,"HDES - Hospital Divino Espirito Santo, E.P.E.R.",Q,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,17,HSEIT,"HSEIT - Hospital de Santo Espírito da Ilha Terceira, E.P.E.R.",Q,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,18,HH,"HH - Hospital da Horta, E.P.E.R.",Q,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+13/2024,19,Teatro Micaelense,"Teatro Micaelense, S.A.",R,0.9981,FRACDE,sim,"Participação direta da RAA com 34,47% e indiretamente via FRACDE (65,34%).",https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-regional-2022-2023
+9/2025,1,Lotaçor,"Lotaçor, S.A.",A,1,RAA,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,2,Santa Catarina,"Santa Catarina - Indústria Conserveira, S.A.",C,1,Lotaçor,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,3,EDA,"EDA, S.A.",D,0.501,RAA,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,4,EDA Renováveis,"EDA Renováveis, S.A.",D,0.501,EDA,,"EDA com 99,68% e SEGMA com 0,32%.",https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,5,Atlântico Line,"Atlântico Line, S.A.",H,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,6,Portos dos Açores,"Portos dos Açores, S.A.",H,1,RAA,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,7,SATA Holding,"Sata Holding, S.A.",H,1,RAA,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,8,SATA,"Sata Air Açores, S.A.",H,1,SATA Holding,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,9,SATA Internacional,"Sata Internacional - Azores Airlines, S.A.",H,1,SATA Holding,,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,10,SATA Aeródromos,"Sata - Gestão de Aeródromos, S.A.",H,1,SATA Holding,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,11,Ilhas de Valor,"Ilhas de Valor, S.A.",I,1,RAA,sim,"Participação direta da RAA com 50,56% e indiretamente via FRACDE (49,44%).",https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,12,PJCSC,"PJCSC - Pousada da Juventude da Caldeira do Santo Cristo, Lda.",I,0.609,Ilhas de Valor,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,13,GLOBALEDA,"Globaleda - Telecomunicações e Sistemas de Informação, S.A.",J,0.375,EDA,,"EDA com 74,9%.",https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,14,SEGMA,"SEGMA - Serviços de Engenharia, Gestão e Manutenção, Lda.",M,0.501,EDA,,EDA com 90% e EDA Renováveis com 10%.,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,15,IROA,"IROA - Instituto Regional de Ordenamento Agrário, S.A.",O,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,16,HDES,"HDES - Hospital Divino Espirito Santo, E.P.E.R.",Q,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,17,HSEIT,"HSEIT - Hospital de Santo Espírito da Ilha Terceira, E.P.E.R.",Q,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,18,HH,"HH - Hospital da Horta, E.P.E.R.",Q,1,RAA,sim,,https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024
+9/2025,19,Teatro Micaelense,"Teatro Micaelense, S.A.",R,0.998,FRACDE,sim,"Participação direta da RAA com 34,47% e indiretamente via FRACDE (65,34%).",https://www.cfp.pt/pt/publicacoes/sectores-das-administracoes-publicas/sector-empresarial-do-estado-e-regional-2023-2024

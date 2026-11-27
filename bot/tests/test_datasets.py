@@ -497,3 +497,239 @@ def test_resumo_tdc():
     assert (r["saldo"], r["saldo_abs"]) == (-199.3, 199.3)
     assert r["receita_fora"] == 613.0 and "despesa_fora" not in r
     assert datasets.resumo_tdc(([], []), ([], [])) == {}
+
+
+def test_sper_and_maiores():
+    url = "https://www.cfp.pt/rel"
+    scols = [
+        "relatorio",
+        "ano",
+        "sigla",
+        "empresa",
+        "ordem",
+        "indicador",
+        "valor",
+        "unidade",
+        "fonte",
+        "url",
+        "ficheiro",
+    ]
+
+    def v(rel, ano, sigla, ind, valor):
+        return [
+            rel,
+            str(ano),
+            sigla,
+            "",
+            "0",
+            ind,
+            str(valor),
+            "€",
+            "",
+            url,
+            "f.xlsx",
+        ]
+
+    sper = (
+        scols,
+        [
+            v("13/2024", 2023, "SATA", "Resultado Líquido", -9.97e6),
+            v("9/2025", 2023, "SATA", "Resultado Líquido", -9.97e6),
+            v("9/2025", 2024, "SATA", "Resultado Líquido", -11.6e6),
+            v("9/2025", 2024, "SATA", "Volume de Negócios", 60.6e6),
+            v("9/2025", 2024, "SATA", "Capital Próprio", -26e6),
+            v("9/2025", 2024, "SATA", "Número de Trabalhadores", 991),
+            v("9/2025", 2024, "EDA", "Resultado Líquido", 10.4e6),
+            v("9/2025", 2024, "EDA", "Volume de Negócios", 264.6e6),
+            v("9/2025", 2024, "EDA", "Capital Próprio", 290e6),
+        ],
+    )
+    ecols = [
+        "relatorio",
+        "ordem",
+        "sigla",
+        "empresa",
+        "cae",
+        "participacao",
+        "acionista",
+        "ap",
+        "nota",
+        "url",
+    ]
+    empresas = (
+        ecols,
+        [
+            [
+                "9/2025",
+                "3",
+                "EDA",
+                "EDA, S.A.",
+                "D",
+                "0.501",
+                "RAA",
+                "",
+                "",
+                url,
+            ],
+            [
+                "9/2025",
+                "7",
+                "SATA Holding",
+                "Sata Holding, S.A.",
+                "H",
+                "1",
+                "RAA",
+                "",
+                "",
+                url,
+            ],
+            [
+                "9/2025",
+                "8",
+                "SATA",
+                "Sata Air Açores, S.A.",
+                "H",
+                "1",
+                "SATA Holding",
+                "sim",
+                "",
+                url,
+            ],
+        ],
+    )
+    rcols = [
+        "relatorio",
+        "quadro",
+        "ordem",
+        "grupo",
+        "rubrica",
+        "ano",
+        "valor",
+        "unidade",
+        "nota",
+        "url",
+    ]
+    esf = "Esforço financeiro líquido da Região"
+    tot = "Esforço financeiro líquido (2)-(1)"
+    regiao = (
+        rcols,
+        [
+            ["13/2024", esf, "0", "", tot, "2023", "339.3", "M€", "", url],
+            [
+                "9/2025",
+                esf,
+                "0",
+                "",
+                "Dividendos",
+                "2023",
+                "3.1",
+                "M€",
+                "n",
+                url,
+            ],
+            ["9/2025", esf, "1", "", tot, "2023", "75.1", "M€", "", url],
+            ["9/2025", esf, "1", "", tot, "2024", "93.5", "M€", "", url],
+            [
+                "9/2025",
+                "Peso na economia",
+                "0",
+                "Indicadores",
+                "Peso do SERAA no PIB RAA",
+                "2024",
+                "7.6",
+                "%",
+                "",
+                url,
+            ],
+        ],
+    )
+    s = datasets.sper_data(sper, empresas, regiao)
+    assert s["relatorio"] == "9/2025" and s["ano"] == 2024
+    assert [e["sigla"] for e in s["empresas"]] == [
+        "EDA",
+        "SATA",
+        "SATA Holding",
+    ]
+    sata = s["empresas"][1]
+    assert sata["nome"] == "SATA Air Açores" and sata["ap"]
+    assert sata["rl"] == -11.6 and sata["participacao"] == 100.0
+    assert sata["rl_anos"] == [
+        {"ano": 2023, "v": -9.97},
+        {"ano": 2024, "v": -11.6},
+    ]
+    assert s["total"]["vn"] == 325.2 and s["total"]["prejuizo"] == 1
+    assert s["sem_ficha"] == ["SATA Holding"]
+    assert s["cp_negativo"] == ["SATA Air Açores"]
+    assert s["esforco"]["total"] == 93.5
+    assert s["esforco"]["antes"]["valor"] == 339.3
+    assert s["esforco"]["antes"]["agora"] == 75.1
+    assert s["vab_pib"] == 7.6
+
+    mcols = [
+        "ano",
+        "posicao",
+        "empresa",
+        "ilha",
+        "setor",
+        "trabalhadores",
+        "volume_negocios",
+        "cresc_vn_pct",
+        "resultado_liquido",
+        "fonte",
+        "url",
+    ]
+    maiores = (
+        mcols,
+        [
+            [
+                "2024",
+                "1",
+                "EDA - ELECTRICIDADE DOS AÇORES, S.A.",
+                "São Miguel",
+                "Energia",
+                "783",
+                "264566",
+                "-2.6",
+                "10431",
+                "f",
+                "u",
+            ],
+            [
+                "2024",
+                "2",
+                "SATA AIR AÇORES - SOCIEDADE AÇORIANA, S.A.",
+                "São Miguel",
+                "Energia",
+                "1000",
+                "60600",
+                "",
+                "-11600",
+                "f",
+                "u",
+            ],
+            [
+                "2024",
+                "3",
+                "SATA - OUTRA, LDA",
+                "Terceira",
+                "Comércio",
+                "5",
+                "1000",
+                "1",
+                "1",
+                "f",
+                "u",
+            ],
+        ],
+    )
+    lista = [dict(zip(ecols, r, strict=True)) for r in empresas[1]]
+    m = datasets.maiores_data(maiores, lista)
+    assert [e["publica"] for e in m["empresas"]] == ["EDA", "SATA", ""]
+    assert m["vn"] == 326.2 and m["prejuizo"] == 1 and m["publicas"] == 2
+    assert m["ilhas"][0] == {
+        "nome": "São Miguel",
+        "n": 2,
+        "vn": 325.2,
+        "trabalhadores": 1783,
+        "pct": 100,
+    }
