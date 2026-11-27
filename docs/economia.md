@@ -95,32 +95,83 @@ vêm das fontes oficiais e de uma revista, ligadas em cada caso.</p>
 
 <h2 id="conjuntura">Como está a economia</h2>
 
+{%- assign i = site.data.resumo.ine -%}
+{%- assign trio = "0014103,0014663,0012136" | split: "," %}
 <div class="numeros">
-{%- if s.pib_hab %}
+{%- for v in trio %}
+{%- assign x = i[v] -%}
+{%- if v == "0014103" %}{% assign u = " €" %}{% else %}{% assign u = " %" %}{% endif -%}
+{%- if x.acores %}
 <div class="numero">
-  <p class="rotulo">PIB de {{ s.pib_hab.ano }}{% if s.pib_hab.provisorio %} (provisório){% endif %}</p>
-  <p class="grande">{{ s.pib_hab.total_mm_t }} <small>mil milhões €</small></p>
-  <p>{{ s.pib_hab.acores_t }} € por habitante.</p>
-  <p class="fonte">SREA, <a href="/dados/srea/#ilhas">contas regionais</a>.</p>
+  {%- case v -%}
+  {%- when "0014103" %}<p class="rotulo">PIB por habitante, {{ x.periodo }}</p>
+  <p class="grande">{{ x.acores_t }} <small>€</small></p>
+  {%- when "0014663" %}<p class="rotulo">Inflação, {{ x.periodo | downcase }}</p>
+  <p class="grande">{{ x.acores_t }} <small>%</small></p>
+  {%- when "0012136" %}<p class="rotulo">Desemprego, {{ x.periodo | downcase }}</p>
+  <p class="grande">{{ x.acores_t }} <small>%</small></p>
+  {%- endcase %}
+  <p class="ref">Madeira {{ x.madeira_t }}{{ u }} · Portugal {{ x.pt_t }}{{ u }}</p>
+  <p class="fonte">INE, <a href="/dados/ine/#ind={{ v }}">série</a> · <a href="{{ x.url }}">fonte</a></p>
 </div>
 {%- endif %}
-{%- if s.ipc %}
-<div class="numero">
-  <p class="rotulo">Inflação</p>
-  <p class="grande">{{ s.ipc.valor_t }} <small>%</small></p>
-  <p>Subida dos preços entre {{ s.ipc.antes }} e {{ s.ipc.periodo }}.</p>
-  <p class="fonte">SREA, <a href="/dados/srea/#precos">IPC</a>.</p>
+{%- endfor %}
 </div>
-{%- endif %}
-{%- if s.desemprego %}
-<div class="numero">
-  <p class="rotulo">Desemprego</p>
-  <p class="grande">{{ s.desemprego.valor_t }} <small>%</small></p>
-  <p>No {{ s.desemprego.periodo }} ({{ s.desemprego.antes_t }} % um ano antes).</p>
-  <p class="fonte">SREA, <a href="/dados/srea/#emprego">Inquérito ao Emprego</a>.</p>
+
+<p class="fonte">A inflação é a variação dos preços face ao mesmo mês do ano
+anterior. O desemprego vem do Inquérito ao Emprego, por amostragem. O SREA
+publica as mesmas séries para os Açores, com mais detalhe, nas
+<a href="/dados/srea/">Estatísticas</a>; o PIB do SREA para {{ s.pib_hab.ano }} é
+uma estimativa mais recente ({{ s.pib_hab.acores_t }} € por habitante).</p>
+
+{%- assign sp = site.data.resumo.salario_pib %}
+{% if sp.locais %}
+<h3 id="salarios">Salários e PIB por habitante, {{ sp.ano }}</h3>
+
+{% assign a = sp.locais[0] -%}
+<p>Nos Açores, metade dos contribuintes declarou ao IRS menos de
+<strong>{{ a.mediana_t }} €</strong> brutos no ano: {{ a.mediana_pct }} % do
+PIB por habitante ({{ a.pib_t }} €).</p>
+
+<ul>
+  <li><strong>PIB por habitante</strong>: o que a economia produz num ano a dividir por todos os residentes.</li>
+  <li><strong>Mediana do rendimento bruto</strong>: metade dos contribuintes declarou menos do que este valor ao IRS.</li>
+  <li><strong>Ganho médio × 14</strong>: o ganho médio mensal dos trabalhadores por conta de outrem, vezes 14 meses.</li>
+</ul>
+
+<div class="tabela">
+<table class="salarios">
+<thead><tr><th scope="col"></th><th scope="col">PIB por habitante</th><th scope="col">Mediana do rendimento bruto</th><th scope="col">Ganho médio × 14</th></tr></thead>
+<tbody>
+{%- for l in sp.locais %}
+<tr>
+  <th scope="row">{{ l.local }}</th>
+  <td>{{ l.pib_t }} €</td>
+  <td>{{ l.mediana_t }} €<span class="barra"><span style="width: {{ l.mediana_pct }}%"></span></span><small>{{ l.mediana_pct }} % do PIB por habitante</small></td>
+  <td>{{ l.ganho_ano_t }} €<span class="barra"><span style="width: {{ l.ganho_pct }}%"></span></span><small>{{ l.ganho_pct }} % do PIB por habitante</small></td>
+</tr>
+{%- endfor %}
+</tbody>
+</table>
 </div>
-{%- endif %}
-</div>
+
+<ul class="notas">
+  <li>O PIB por habitante não é um rendimento: inclui lucros, impostos sobre
+  a produção e a depreciação, e divide por toda a população, incluindo
+  crianças e reformados.</li>
+  <li>A mediana do IRS é por sujeito passivo e inclui pensões e outros
+  rendimentos declarados; fica de fora quem não entrega declaração.</li>
+  <li>O ganho médio vem dos Quadros de Pessoal: trabalhadores por conta de
+  outrem a tempo completo, sem a administração pública. A média puxa para
+  cima com os salários altos. Multiplicar por 14 é uma aproximação do
+  açores.net ao valor anual.</li>
+</ul>
+
+<p class="fonte">INE: <a href="{{ sp.url_pib }}">PIB por habitante</a>,
+<a href="{{ sp.url_mediana }}">rendimento bruto mediano</a>,
+<a href="{{ sp.url_ganho }}">ganho médio mensal</a>. As percentagens são
+cálculo do açores.net.</p>
+{% endif %}
 
 <p class="fonte">Mais números nas <a href="/dados/srea/">Estatísticas</a>:
 preços, emprego, turismo e PIB por ilha (SREA) e rendimentos, rendas e
@@ -143,6 +194,14 @@ população por concelho e freguesia (<a href="/dados/ine/">INE</a>).</p>
 .numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
 .numero .grande small { font-size: .5em; font-weight: normal; }
 .perguntas { margin-left: 1.1em; font-size: .95em; }
+.numero .ref { font-size: .9em; }
+.tabela { overflow-x: auto; }
+.salarios { border-collapse: collapse; font-size: .95em; }
+.salarios th, .salarios td { text-align: left; vertical-align: top; padding: .4em .6em; }
+.salarios td small { display: block; font-size: .8em; color: #586e75; }
+.barra { display: block; width: 9em; max-width: 100%; height: 6px; margin: .3em 0 .15em; background: rgba(147,161,161,.25); border-radius: 3px; }
+.barra span { display: block; height: 6px; background: #268bd2; border-radius: 3px; }
+.notas { font-size: .9em; max-width: 42em; }
 .fonte { font-size: .85em; color: #586e75; }
-@media (prefers-color-scheme: dark) { .fonte { color: #93a1a1; } .barra-dupla .pub { background: #2f7fb8; } }
+@media (prefers-color-scheme: dark) { .fonte, .salarios td small { color: #93a1a1; } .barra-dupla .pub { background: #2f7fb8; } }
 </style>

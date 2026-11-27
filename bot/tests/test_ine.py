@@ -83,6 +83,8 @@ def test_nuts_and_level():
     assert ine.nuts("420301") == "200420301"
     assert ine.nuts("2004203") == "2004203"
     assert ine.nuts("1106") == "1106"  # mainland admin code: untouched
+    assert ine.nuts("2") == "20" and ine.nuts("3") == "30"  # IPC NUTS II
+    assert ine.nuts("1") == "1"
     assert ine.level("20") == "Região"
     assert ine.level("2004203") == "Concelho"
     assert ine.level("200420301") == "Freguesia"

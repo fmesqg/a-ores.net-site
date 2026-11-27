@@ -89,6 +89,11 @@ THEMES = {
         ("0013178", "taxa de crescimento efetivo"),
         ("0012450", "nados-vivos"),
     ],
+    "Conjuntura": [
+        ("0014103", "PIB por habitante (base 2021)"),
+        ("0014663", "inflação: IPC, variação homóloga, mensal"),
+        ("0012136", "taxa de desemprego, trimestral"),
+    ],
     "Trabalho e proteção social": [
         ("0012656", "ganho médio mensal (Quadros de Pessoal)"),
         ("0012118", "população empregada (Inquérito ao Emprego), trimestral"),
@@ -217,6 +222,8 @@ def nuts(geocod: str) -> str:
     200420301); NUTS codes are returned unchanged."""
     if re.fullmatch(r"4[1-9]\d{2}(\d{2})?", geocod):
         return "2004" + geocod[1:]
+    if geocod in ("2", "3"):  # IPC by NUTS II: Açores 2, Madeira 3
+        return geocod + "0"
     return geocod
 
 
@@ -428,7 +435,12 @@ def fetch(varcd: str, defs: dict | None = None) -> list[list]:
         defs[varcd] = definitions(varcd, meta)
         time.sleep(PAUSE)
     data = get_json(data_url(varcd, "<*>20"))[0]
-    if not data.get("Dados"):  # administrative division: fetch all, filter
+    azores = any(
+        nuts(o.get("geocod", "")).startswith("20")
+        for items in (data.get("Dados") or {}).values()
+        for o in items
+    )
+    if not azores:  # other geography codes: fetch all, filter
         time.sleep(PAUSE)
         data = get_json(data_url(varcd, None))[0]
     else:  # <*>20 cannot be combined with other codes: one more request
