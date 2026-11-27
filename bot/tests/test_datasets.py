@@ -1186,3 +1186,66 @@ def test_base_merges_impic_history(tmp_path):
     assert con.execute(
         "select adjudicatario_nif, propostas from base where id = 11758845"
     ).fetchone() == ("512002850", 1)
+
+
+def test_at_regioes_sums_old_districts_only_when_needed():
+    cols = [
+        "imposto",
+        "medida",
+        "unidade",
+        "ano",
+        "distrito",
+        "regiao",
+        "valor",
+    ]
+    rows = [
+        [
+            "IRS",
+            "Agregados",
+            "agregados",
+            "2019",
+            "ANGRA DO HEROISMO",
+            "Açores",
+            "30",
+        ],
+        ["IRS", "Agregados", "agregados", "2019", "HORTA", "Açores", "10"],
+        [
+            "IRS",
+            "Agregados",
+            "agregados",
+            "2019",
+            "PONTA DELGADA",
+            "Açores",
+            "60",
+        ],
+        [
+            "IRS",
+            "Agregados",
+            "agregados",
+            "2019",
+            "RA AÇORES",
+            "Açores",
+            "100",
+        ],
+        ["IRS", "Agregados", "agregados", "2018", "HORTA", "Açores", "9"],
+        [
+            "IRS",
+            "Agregados",
+            "agregados",
+            "2018",
+            "PONTA DELGADA",
+            "Açores",
+            "50",
+        ],
+        ["IRS", "Agregados", "agregados", "2018", "FUNCHAL", "Madeira", "70"],
+        ["IRS", "Agregados", "agregados", "2018", "TOTAL:", "Total", "900"],
+        ["IRS", "Taxa efetiva", "%", "2018", "HORTA", "Açores", "7"],
+        ["IRS", "Taxa efetiva", "%", "2018", "PONTA DELGADA", "Açores", "8"],
+        ["IRS", "Taxa efetiva", "%", "2018", "FUNCHAL", "Madeira", "9"],
+    ]
+    got = datasets.at_regioes((cols, rows), "IRS", "Agregados", "agregados")
+    assert got["Açores"] == {2019: 100.0, 2018: 59.0}
+    assert got["Madeira"] == {2018: 70.0}
+    assert got["Total"] == {2018: 900.0}
+    taxa = datasets.at_regioes((cols, rows), "IRS", "Taxa efetiva", "%")
+    assert "Açores" not in taxa and taxa["Madeira"] == {2018: 9.0}
