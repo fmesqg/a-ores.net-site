@@ -215,7 +215,7 @@ regista se a resposta chegou a tempo.
 - Desde agosto de 2024, o site registou 825 requerimentos. A Assembleia
   marca 446 com "resposta atempada", 311 com "resposta tardia" e 37 "fora
   de prazo".
-- [Requerimentos e respostas por deputado](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20autores%2C%20count%28%2A%29%20as%20requerimentos%2C%20sum%28estado%20%3D%20%27RESPOSTA%20ATEMPADA%27%29%20as%20atempada%2C%20sum%28estado%20%3D%20%27RESPOSTA%20TADIA%27%29%20as%20tardia%2C%20sum%28estado%20%3D%20%27FORA%20DE%20PRAZO%27%29%20as%20fora_de_prazo%20from%20alra%20where%20tipo%20%3D%20%27Requerimentos%27%20group%20by%20autores%20order%20by%20requerimentos%20desc)
+- [Requerimentos e respostas por deputado](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/parlamento.db#/parlamento?sql=select%20autores%2C%20count%28%2A%29%20as%20requerimentos%2C%20sum%28estado%20%3D%20%27RESPOSTA%20ATEMPADA%27%29%20as%20atempada%2C%20sum%28estado%20%3D%20%27RESPOSTA%20TADIA%27%29%20as%20tardia%2C%20sum%28estado%20%3D%20%27FORA%20DE%20PRAZO%27%29%20as%20fora_de_prazo%20from%20alra%20where%20tipo%20%3D%20%27Requerimentos%27%20group%20by%20autores%20order%20by%20requerimentos%20desc)
   (consulta SQL já feita, abre no navegador).
 - Para saber o que entrou ontem, veja as [atualizações diárias](/atualizacoes/)
   ou siga por [RSS](/rsss).
@@ -236,10 +236,10 @@ Tudo o que o site mostra pode ser descarregado:
   [página de dados](/dados/#descarregar), que abre no Excel, no LibreOffice ou
   no Google Sheets. Nas páginas de pesquisa, "Descarregar" guarda só as
   linhas filtradas.
-- **Em SQL, sem instalar nada.** O ficheiro `acores.db` abre no
-  [Datasette Lite](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores),
-  no navegador. Por exemplo, os
-  [ajustes diretos por entidade](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20adjudicante%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20where%20procedimento%20like%20%27Ajuste%20Direto%25%27%20group%20by%20adjudicante%20order%20by%20total_eur%20desc%20limit%20100).
+- **Em SQL, sem instalar nada.** As bases de dados (uma por tema; a dos
+  contratos é [contratos.db](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos))
+  abrem no Datasette Lite, no navegador. Por exemplo, os
+  [ajustes diretos por entidade](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20adjudicante%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20where%20procedimento%20like%20%27Ajuste%20Direto%25%27%20group%20by%20adjudicante%20order%20by%20total_eur%20desc%20limit%20100).
   Pode alterar a consulta e partilhar o endereço do resultado.
 
 <div class="cuidado">

@@ -159,7 +159,7 @@ gasóleo, no mesmo período, foi sempre a concurso. Daqui deduzimos (não é
 dito em nenhum documento do BASE) que, até então, o fuelóleo vinha ao abrigo
 do acordo com a BENCOM que terminou a 31 de janeiro de 2025 (ver jan 2023 na
 cronologia).</p>
-<p class="ir">Pesquisa do açores.net nos dados do IMPIC · <a href="https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20publicado%2C%20preco%2C%20procedimento%2C%20adjudicatario%2C%20concorrentes%2C%20objeto%2C%20url%20from%20base%20where%20adjudicante%20like%20%27%25Electricidade%20dos%20A%25%27%20and%20%28objeto%20like%20%27%25fuel%25%27%20or%20objeto%20like%20%27%25gas%C3%B3leo%25%27%29%20order%20by%20publicado">ver a consulta</a></p>
+<p class="ir">Pesquisa do açores.net nos dados do IMPIC · <a href="https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20publicado%2C%20preco%2C%20procedimento%2C%20adjudicatario%2C%20concorrentes%2C%20objeto%2C%20url%20from%20base%20where%20adjudicante%20like%20%27%25Electricidade%20dos%20A%25%27%20and%20%28objeto%20like%20%27%25fuel%25%27%20or%20objeto%20like%20%27%25gas%C3%B3leo%25%27%29%20order%20by%20publicado">ver a consulta</a></p>
 </div>
 <div class="cartao">
 <h3>Margem: fornecedor e cliente</h3>
@@ -211,7 +211,7 @@ encontrámos publicados.</p>
   <li>Jornal Oficial: <a href="/dados/#fonte=joraa&q=Electricidade%20dos%20A%C3%A7ores">EDA</a> ·
   <a href="/dados/#fonte=joraa&q=EDA%20Renov%C3%A1veis">EDA Renováveis</a>
   (licenças de produção, apoios do PRR)</li>
-  <li><a href="https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20base.publicado%2C%20base.objeto%2C%20base.adjudicante%2C%20base.adjudicatario%2C%20base.preco%2C%20base.url%20from%20base%20join%20base_fts%20on%20base_fts.rowid%20%3D%20base.rowid%20where%20base_fts%20match%20%3Atermos%20order%20by%20base.preco%20desc&termos=bencom">Em SQL</a>,
+  <li><a href="https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20base.publicado%2C%20base.objeto%2C%20base.adjudicante%2C%20base.adjudicatario%2C%20base.preco%2C%20base.url%20from%20base%20join%20base_fts%20on%20base_fts.rowid%20%3D%20base.rowid%20where%20base_fts%20match%20%3Atermos%20order%20by%20base.preco%20desc&termos=bencom">Em SQL</a>,
   para somar e cruzar (<a href="/tutorial/#verificar">como</a>)</li>
   <li>Novos contratos, requerimentos e atos chegam todos os dias às
   <a href="/atualizacoes/">atualizações</a> e aos feeds RSS.</li>

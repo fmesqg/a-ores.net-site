@@ -1,7 +1,7 @@
 name: Build and deploy site
 
 # The site is built here instead of by the legacy "deploy from branch" Pages
-# builder, so the generated open data (docs/dados/: CSVs, acores.db,
+# builder, so the generated open data (docs/dados/: CSVs, the <tema>.db files,
 # meta.json, from bot/datasets.py) is published without being committed.
 # Requires Settings → Pages → Source: "GitHub Actions".
 #
