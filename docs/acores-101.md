@@ -218,7 +218,7 @@ Região: <a href="{{ f.lfra.url }}">Lei das Finanças das Regiões Autónomas</a
 {% if tdc.conta %}
 <p><strong>Quem verifica estas contas?</strong> Todos os anos, o Tribunal de
 Contas dá um parecer sobre a Conta da Região. Sobre a Conta de
-{{ tdc.conta }}: <em>{{ tdc.juizo }}</em>.
+{{ tdc.conta }}: <em>{{ tdc.juizo | escape }}</em>.
 <a href="/dados/tdc/">O que o Tribunal disse e o que aconteceu às recomendações →</a></p>
 <p class="fonte">Fonte: <a href="{{ tdc.url }}">Tribunal de Contas, Parecer sobre a Conta da Região de {{ tdc.conta }}</a></p>
 {% endif %}

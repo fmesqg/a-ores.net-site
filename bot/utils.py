@@ -94,6 +94,23 @@ def write_update(web_data: WebData):
         )
 
 
+# Scraped text (ALRA petitions and votes, JORAA, BASE, error messages) goes
+# into these pages as-is. kramdown passes raw HTML through, and Jekyll runs
+# Liquid on the page, so "<" would let a title inject HTML or script, "{{" or
+# "{%" would run Liquid (or break the build), and "{:" would add attributes.
+# Links other than http(s) or site-relative (e.g. "javascript:") are dropped.
+_UNSAFE_CHARS = {"<": "&lt;", "{": "&#123;", "}": "&#125;"}
+_UNSAFE_LINK = re.compile(
+    r"\]\((?!\s*(?:https?://|/|#))(?:[^()]|\([^()]*\))*\)", re.I
+)
+
+
+def safe_markdown(text: str) -> str:
+    """Neutralise HTML, Liquid and unsafe links in generated markdown."""
+    text = re.sub("[<{}]", lambda m: _UNSAFE_CHARS[m.group()], text)
+    return _UNSAFE_LINK.sub("](#)", text)
+
+
 def write_collection(date: str, update, title, folder):
     page_font_matter = f"""---
 date: {date}
@@ -106,7 +123,7 @@ layout: default
             os.path.dirname(__file__), "..", "docs", folder, f"{date}.md"
         )
         with open(path, "w", encoding="utf-8") as f:
-            f.write(page_font_matter + update + "\n")
+            f.write(page_font_matter + safe_markdown(update) + "\n")
 
 
 def markdown_joraa(entries):

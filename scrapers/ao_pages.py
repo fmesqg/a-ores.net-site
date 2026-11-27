@@ -73,6 +73,13 @@ def day_slug(target_date: str) -> str:
     return target_date.replace("-", "")
 
 
+def _html(text: str) -> str:
+    """HTML-escape scraped text for a Jekyll page body. Braces become
+    entities too: Jekyll runs Liquid on the page, so "{{" or "{%" in an
+    article would run as Liquid (or break the site build)."""
+    return html.escape(text).replace("{", "&#123;").replace("}", "&#125;")
+
+
 def _yaml_str(value: str) -> str:
     """Quote a string as a YAML scalar.
 
@@ -168,10 +175,10 @@ def build_link_list(entries: list[dict], absolute: bool = False) -> str:
             if current_section is not None:
                 lines.append("</ul>")
             current_section = entry["section"]
-            lines.append(f"<h2>{html.escape(entry['section_label'])}</h2>")
+            lines.append(f"<h2>{_html(entry['section_label'])}</h2>")
             lines.append("<ul>")
         href = html.escape(prefix + entry["url"])
-        label = html.escape(entry["title"] + _meta_suffix(entry))
+        label = _html(entry["title"] + _meta_suffix(entry))
         lines.append(f'<li><a href="{href}">{label}</a></li>')
 
     if current_section is not None:
@@ -222,7 +229,7 @@ def write_article_pages(entries: list[dict], target_date: str) -> int:
             ),
         }
         paragraphs = [
-            f"<p>{html.escape(p.strip())}</p>"
+            f"<p>{_html(p.strip())}</p>"
             for p in entry["body"].split("\n\n")
             if p.strip()
         ]
