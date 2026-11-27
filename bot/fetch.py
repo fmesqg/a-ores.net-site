@@ -1,13 +1,12 @@
-import asyncio
 import functools
 import logging
+import time
 from datetime import date, datetime, timedelta
 
-import aiohttp
 import requests
 from bs4 import BeautifulSoup
 
-from bot import beo
+from bot import beo, gov
 from bot.classes import FetchError, WebData
 from bot.state import State
 from bot.utils import compute_delta_ids
@@ -122,10 +121,10 @@ def fetch_alra_ids(record_type, url=None):
 
 @catch_requests_exceptions
 def fetch_day_joraa(date: str) -> list[dict]:
-    url = f"https://jo.azores.gov.pt/api/public/search/ato?fromDate={date}&toDate={date}"
-    response = requests.get(
-        url,
-    )
+    url = f"https://jo.azores.gov.pt/api/public/search/ato?fromDate={date}&toDate={date}"  # noqa: E501
+    gov.wait()
+    response = requests.get(url, headers=gov.HEADERS, timeout=60)
+    response.raise_for_status()  # a Cloudflare challenge is a 403
     if (res := response.json())["resultSize"] > 0:
         return res["list"]
     else:
@@ -150,9 +149,8 @@ def fetch_beo_all(known: frozenset = frozenset()) -> set:
         if url in known:
             found.add(url)
             continue
-        response = requests.head(
-            url, headers={"User-Agent": beo.UA}, timeout=60
-        )
+        gov.wait()
+        response = requests.head(url, headers=gov.HEADERS, timeout=60)
         if response.status_code == 200 and "pdf" in response.headers.get(
             "content-type", ""
         ):
@@ -170,7 +168,8 @@ def fetch_sigica_all():
     """SIGICA bulletins. The page is behind the same Cloudflare challenge
     and answers 403 to scripts; raise, so the log says so."""
     url = "https://portal.azores.gov.pt/web/drs/sigica-boletins-informativos-2024"
-    response = requests.get(url, timeout=60)
+    gov.wait()
+    response = requests.get(url, headers=gov.HEADERS, timeout=60)
     response.raise_for_status()
     base_url = "https://portal.azores.gov.pt/web/drs/"
     soup = BeautifulSoup(response.content, "html.parser")
@@ -187,15 +186,46 @@ def fetch_sigica_all():
 
 
 @catch_requests_exceptions
-async def fetch_joraa_ato(session: aiohttp.ClientSession, id):
-    base_url = "https://jo.azores.gov.pt/api/public/ato/"
-    async with session.get(base_url + id) as response:
-        if response.status == 200:
-            return await response.json()
-        else:
-            raise FetchError(
-                f"Erro ao buscar ato '{id}'\nStatus: {response.status}"
-            )
+def fetch_joraa_ato(id):
+    """One act, with its full text (``textoIntegral``), where the amounts
+    that markdown_joraa adds up are."""
+    gov.wait()
+    response = requests.get(
+        f"https://jo.azores.gov.pt/api/public/ato/{id}",
+        headers=gov.HEADERS,
+        timeout=60,
+    )
+    response.raise_for_status()
+    return response.json()
+
+
+JORAA_BUDGET = 3 * 3600  # seconds per run
+
+
+def fetch_joraa(days: list[date]) -> dict | FetchError:
+    """Each day's acts, day by day, at the pace gov.wait() allows (20 s a
+    request at night: some 15 days of acts in JORAA_BUDGET). Stops at the
+    first failure or when the budget is spent and returns the days done so
+    far: the state then moves only up to the last of them, so a backlog is
+    caught up over several nights. A failure on the first day is returned
+    as such, so the day's page shows the error."""
+    deadline = time.monotonic() + JORAA_BUDGET
+    joraa: dict = {}
+    for day in days:
+        if time.monotonic() > deadline:
+            logger.warning("JORAA: time budget spent; resuming at %s", day)
+            break
+        items = fetch_day_joraa(date=day.strftime("%Y-%m-%d"))
+        atos: list = []
+        for entry in [] if isinstance(items, FetchError) else items:
+            if isinstance(ato := fetch_joraa_ato(entry["id"]), FetchError):
+                items = ato
+                break
+            atos.append(ato)
+        if isinstance(items, FetchError):
+            return joraa or items
+        joraa[day] = atos
+    return joraa
 
 
 @catch_requests_exceptions
@@ -384,34 +414,12 @@ def fetch_portal(prev_state: State):
 
 
 def fetch_web_data(prev_state: State) -> WebData:
-    async def process_joraa(joraa_dict):
-        async with aiohttp.ClientSession() as session:
-            joraa = {}
-            for day, daily_items in joraa_dict.items():
-                if isinstance(daily_items, FetchError):
-                    return daily_items
-                tasks = [
-                    fetch_joraa_ato(session, entry["id"])
-                    for entry in daily_items
-                ]
-                results = await asyncio.gather(*tasks, return_exceptions=True)
-
-                joraa[day] = [
-                    result
-                    for result in results
-                    if not isinstance(result, FetchError)
-                ]
-
-            return joraa
-
     alra_pre_fetch = pre_fetch_alra()
     if not isinstance(alra_pre_fetch, FetchError):
         delta = compute_delta_ids(prev_state, alra_pre_fetch)
         alra_web_data = fetch_alra(delta=delta)
     else:
         alra_web_data = alra_pre_fetch
-
-    # FIXME this is begging for a function
 
     joraa_last: date = prev_state.last_joraa_update
     base_last: date = prev_state.last_base_update
@@ -424,10 +432,6 @@ def fetch_web_data(prev_state: State) -> WebData:
         base_last + timedelta(days=i)
         for i in range(1, (datetime.now().date() - base_last).days)
     ]
-    joraa_dict = {
-        day: fetch_day_joraa(date=day.strftime("%Y-%m-%d"))
-        for day in joraa_date_list
-    }
     base_dict = {
         day: fetch_contratos_RAA(
             from_pub_date=day.strftime("%Y-%m-%d"),
@@ -443,7 +447,7 @@ def fetch_web_data(prev_state: State) -> WebData:
 
     return WebData(
         alra=alra_web_data,
-        joraa=asyncio.run(process_joraa(joraa_dict=joraa_dict)),
+        joraa=fetch_joraa(joraa_date_list),
         base=base_dict,
         portal=fetch_portal(prev_state=prev_state),
         alra_ids=alra_pre_fetch,

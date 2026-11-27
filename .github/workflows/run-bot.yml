@@ -35,6 +35,10 @@ jobs:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     needs: lint-and-test
     runs-on: ubuntu-latest
+    # one client at a time on *.azores.gov.pt (rate limits: bot/gov.py)
+    concurrency:
+      group: azores-gov
+      cancel-in-progress: false
     permissions:
       contents: write
     steps:
