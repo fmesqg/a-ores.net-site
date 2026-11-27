@@ -112,6 +112,13 @@ e segurança social</strong> (secção O) é quase toda pública. A
 <strong>educação</strong> (P) e a <strong>saúde e apoio social</strong> (Q)
 juntam o público e o privado: escolas privadas, IPSS, misericórdias.</p>
 
+<p>Os professores das escolas públicas e os médicos e enfermeiros dos
+hospitais e centros de saúde <strong>não estão na secção O</strong>: estão em
+P e Q. Por isso, em cada ilha, o peso real do emprego público fica entre a
+coluna "% O", que fica abaixo, e a coluna "% O+P+Q", que fica acima. Os
+números da DGAEP, no topo desta página, incluem professores, médicos e
+hospitais, mas não estão divididos por ilha.</p>
+
 <div class="tabela-scroll">
 <table class="sper barras">
 <thead><tr><th>Ilha</th><th class="n">Empregados (2021)</th><th class="n">Adm. pública (O)</th><th class="n">% O</th><th class="n">% educação (P)</th><th class="n">% saúde e apoio social (Q)</th><th class="n">% O+P+Q</th><th class="barra-col" aria-hidden="true"></th></tr></thead>
