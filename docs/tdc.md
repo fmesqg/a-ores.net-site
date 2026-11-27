@@ -85,7 +85,7 @@ parecer de cada ano disse sobre ela.</p>
 - Os pareceres anteriores a 2023, com outro formato, estão na
   [página do Tribunal](https://www.tcontas.pt/pt-pt/ProdutosTC/PareceresTribunalContas/pareceres-craa/Paginas/pareceres-craa.aspx).
 - Também na base de dados SQLite (tabelas `tdc` e `tdc_valores`), descrita
-  em [Dados abertos](/dados/#consultar-em-sql).
+  em [Dados abertos](/dados/sql/).
 
 <style>
 .wrapper { max-width: min(1200px, 100%); }

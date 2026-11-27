@@ -1,28 +1,29 @@
 ---
 title: Dados
-nav_title: Pesquisar
+nav_title: Dados
 layout: default
 permalink: /dados/
+secao: dados
 ---
-# Dados abertos
+<script>
+// Old addresses of the sections that now have their own page.
+(function () {
+  var moved = { "#descarregar": "/dados/descarregar/", "#consultar-em-sql": "/dados/sql/",
+    "#limitacoes": "/dados/notas/#limitacoes", "#o-que-é-cada-fonte": "/dados/notas/",
+    "#o-que-e-cada-fonte": "/dados/notas/" };
+  var to = moved[decodeURIComponent(location.hash)];
+  if (to) location.replace(to);
+})();
+</script>
+{% include dados-nav.html %}
 
-Uma tabela por fonte: contratos públicos (BASE) desde 2012, e atividade da
-Assembleia Legislativa (ALRA) e atos com montantes do Jornal Oficial (JORAA)
-desde agosto de 2024. Pesquise aqui ou descarregue os CSV. Cada linha tem a
-ligação para o documento original (ver o [guia](/tutorial/)).
+# Pesquisar nos dados
 
-**Estatísticas do INE por concelho e freguesia** (rendimentos e IRS, rendas,
-construção, população, turismo, câmaras): ver [Indicadores do INE](/dados/ine/).
-
-**Receita e despesa do Governo Regional, mês a mês** (boletins de execução
-orçamental): ver [Execução orçamental](/dados/beo/).
-
-**O que o Tribunal de Contas diz sobre a Conta da Região** (juízo, reservas,
-recomendações e números): ver [Tribunal de Contas](/dados/tdc/).
-
-**Quantos agregados há em cada escalão de IRS e quanto pagam** (Autoridade
-Tributária, desde 2016, com a Madeira e o continente): ver
-[IRS por escalão](/dados/irs/).
+Contratos públicos (BASE) desde 2012, e atividade da Assembleia Legislativa
+(ALRA) e atos com montantes do Jornal Oficial (JORAA) desde agosto de 2024.
+Cada linha tem a ligação para o documento original. O que é cada fonte e o
+que falta: [Fontes e limitações](/dados/notas/). As mesmas tabelas em
+ficheiro: [Descarregar](/dados/descarregar/).
 
 <form id="dados-form" class="dados-form" role="search" onsubmit="return false">
   <fieldset>
@@ -59,191 +60,12 @@ Tributária, desde 2016, com a Madeira e o continente): ver
 </div>
 <p><button type="button" id="mais" hidden>Mostrar mais</button></p>
 
-## O que é cada fonte
+<noscript><p>A pesquisa precisa de JavaScript. Os mesmos dados estão nos
+<a href="/dados/descarregar/">ficheiros CSV</a>, que funcionam sem ele.</p></noscript>
 
-<dl class="glossario">
-  <dt>Contratos públicos (BASE)</dt>
-  <dd>O portal <a href="https://www.base.gov.pt/">base.gov.pt</a>, onde as
-  entidades públicas são obrigadas a publicar os contratos que assinam. Aqui
-  estão os contratos executados nos Açores (Governo Regional, câmaras,
-  hospitais, empresas públicas, serviços do Estado na Região): desde agosto de
-  2024, os que o açores.net viu aparecer dia a dia; antes disso, e para
-  completar, os
-  <a href="https://dados.gov.pt/datasets/contratos-publicos-portal-base-impic-contratos-de-2012-a-2026">dados
-  abertos do IMPIC</a>, que gere o portal.</dd>
-  <dt>Assembleia Legislativa (ALRA)</dt>
-  <dd>O parlamento regional, em <a href="https://www.alra.pt/">alra.pt</a>:
-  requerimentos, iniciativas legislativas, votos, petições, audições,
-  diários das sessões e notas de imprensa.</dd>
-  <dt>Jornal Oficial (JORAA)</dt>
-  <dd>O <a href="https://jo.azores.gov.pt/">Jornal Oficial da Região</a>,
-  onde saem os atos do Governo Regional. Só entram os atos com montantes
-  (apoios, subsídios, contratos-programa, autorizações de despesa).</dd>
-</dl>
-
-<details class="termos">
-<summary><strong>O que quer dizer…</strong> adjudicante, ajuste direto, requerimento e outros termos</summary>
-<p class="fonte">Explicações do açores.net em linguagem corrente, não são texto
-oficial. Em cada termo está a ligação para a lei ou a fonte com a definição oficial.</p>
-<dl class="glossario">
-  <dt>Adjudicante</dt>
-  <dd>A entidade pública que contrata e paga (uma secretaria regional, uma câmara, um hospital).</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
-  <dt>Adjudicatário</dt>
-  <dd>A empresa ou pessoa contratada.</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
-  <dt>Preço contratual</dt>
-  <dd>O valor do contrato, sem IVA, tal como publicado no BASE. O valor
-  efetivamente pago pode ser diferente (por exemplo, com trabalhos a mais).</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a>; <a href="{{ site.data.fontes.base.url }}">{{ site.data.fontes.base.nome }}</a></dd>
-  <dt>Ajuste direto</dt>
-  <dd>A entidade convida uma única empresa, sem concorrência. Só é permitido
-  abaixo de certos valores ou em casos previstos no Código dos Contratos
-  Públicos (urgência, um só fornecedor possível…).</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
-  <dt>Consulta prévia</dt>
-  <dd>A entidade convida pelo menos três empresas à sua escolha.</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
-  <dt>Concurso público</dt>
-  <dd>Aberto a qualquer empresa, anunciado em Diário da República.</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
-  <dt>Acordo-quadro</dt>
-  <dd>Um contrato que fixa condições (preços, fornecedores) para compras
-  futuras; as compras feitas ao abrigo dele aparecem como contratos próprios.</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
-  <dt>Requerimento</dt>
-  <dd>Uma pergunta escrita de um ou mais deputados ao Governo Regional. O
-  Governo tem um prazo para responder; o estado mostra se está “no prazo”,
-  “fora de prazo” ou respondido.</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a>; <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
-  <dt>Proposta e projeto (de decreto legislativo regional, de resolução)</dt>
-  <dd>Iniciativas legislativas: a proposta vem do Governo, o projeto vem dos
-  deputados. Um decreto legislativo regional é uma lei regional; uma
-  resolução é uma recomendação ou decisão da Assembleia.</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a>; <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
-  <dt>Voto</dt>
-  <dd>Uma moção de pesar, congratulação, saudação ou protesto, votada em plenário.</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
-  <dt>Portaria, despacho e resolução do Conselho de Governo</dt>
-  <dd>Atos do Governo Regional publicados no Jornal Oficial. A resolução é
-  decidida em Conselho de Governo; a portaria e o despacho são de um ou mais
-  membros do Governo.</dd>
-  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a></dd>
-</dl>
-</details>
-
-## Descarregar
-
-| Ficheiro | Conteúdo | Cobertura |
-|---|---|---|
-| [base.csv](/dados/base.csv) | um contrato por linha: adjudicante, adjudicatário, preço, procedimento, data de assinatura, número de concorrentes e origem da linha (`açores.net` ou `IMPIC`) | <span data-meta="base"></span> |
-| [alra.csv](/dados/alra.csv) | requerimentos (com estado e resposta), iniciativas, votos, petições, intervenções, diários, audições, notas de imprensa | <span data-meta="alra"></span> |
-| [joraa.csv](/dados/joraa.csv) | atos do Jornal Oficial com montantes (portarias, despachos, resoluções) | <span data-meta="joraa"></span> |
-| [ine.csv](/dados/ine.csv) | um valor por linha: indicador, período, local (região, concelho ou freguesia), concelho, ilha, categoria, valor, unidade | <span data-meta="ine"></span> |
-| [beo.csv](/dados/beo.csv) | um valor por linha: quadro do boletim de execução orçamental, rubrica, subsetor ou departamento, medida, mês (acumulado desde janeiro), valor, boletim | <span data-meta="beo"></span> |
-| [tdc.csv](/dados/tdc.csv) | o texto dos pareceres do Tribunal de Contas sobre a Conta da Região: juízo, reservas, ênfases e recomendações (com o estado que o parecer seguinte lhes deu) | <span data-meta="tdc"></span> |
-| [tdc_valores.csv](/dados/tdc_valores.csv) | os números desses pareceres: conta consolidada, dívida total, receita e despesa fora da Conta | <span data-meta="tdc_valores"></span> |
-| [at_irs.csv](/dados/at_irs.csv) | um valor por linha: IRS por escalão (agregados, rendimento englobado, IRS liquidado) nos Açores, na Madeira e no continente, a taxa adicional de solidariedade e as taxas gerais | <span data-meta="at_irs"></span> |
-| [at_irc.csv](/dados/at_irc.csv) | um valor por linha: IRC à taxa da Região, derrama estadual por escalão e taxas nominais de IRC, nos Açores, na Madeira e no continente | <span data-meta="at_irc"></span> |
-| [at_distritos.csv](/dados/at_distritos.csv) | um valor por linha: os mapas «por distrito» da AT, de IRS (agregados, rendimento, imposto, taxa efetiva, desde 2015) e de IRC (declarações, lucro, prejuízo, matéria coletável, imposto, taxa efetiva, desde 2011), com o distrito como a AT o escreve e a região | <span data-meta="at_distritos"></span> |
-| [bportugal.csv](/dados/bportugal.csv) | um valor por linha, do Banco de Portugal: empréstimos a particulares (habitação, consumo) e a empresas, crédito vencido e devedores por região (mensal), depósitos por região (mensal, desde 2018), investimento direto do exterior por região (anual) e indicadores das empresas por região e setor (anual, desde 2006), com o número da série no BPstat | <span data-meta="bportugal"></span> |
-| [contratos.db](/dados/contratos.db), [parlamento.db](/dados/parlamento.db), [financas.db](/dados/financas.db), [estatisticas.db](/dados/estatisticas.db), [empresas.db](/dados/empresas.db) | as tabelas acima em SQLite, uma base por tema, com pesquisa de texto; a tabela `base` tem mais colunas (NIF, CPV, preço base e preço efetivo, propostas, local de execução, fundamentação) | ver abaixo |
-
-Os CSV estão em UTF-8 e abrem diretamente no Excel, no LibreOffice ou no
-Google Sheets. Todos os ficheiros são refeitos todos os dias a partir das
-[páginas diárias](/rsss) e do código em
-[`bot/datasets.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/datasets.py).
-O `ine.csv` é atualizado uma vez por semana a partir da
-[API do INE](https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_api), pelo
-código em [`bot/ine.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/ine.py),
-que tem a lista de indicadores. O `beo.csv` é atualizado uma vez por semana a
-partir dos PDF dos boletins, por
-[`bot/beo.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/beo.py).
-Os `tdc*.csv` mudam uma vez por ano, quando sai um parecer novo, por
-[`bot/tdc.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/tdc.py).
-Os contratos anteriores a agosto de 2024 vêm dos ficheiros anuais do IMPIC,
-relidos uma vez por mês por
-[`bot/base_impic.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/base_impic.py).
-Os `at_*.csv` mudam uma vez por ano, quando a AT publica os dossiês
-estatísticos de IRS e de IRC, por
-[`bot/at_ir.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/at_ir.py).
-O `bportugal.csv` é relido uma vez por semana da API do BPstat por
-[`bot/bportugal.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/bportugal.py).
-Última geração: <span data-meta="gerado"></span>.
-
-## Consultar em SQL
-
-As mesmas tabelas estão em SQLite, numa base de dados por tema, com
-pesquisa de texto (`base_fts`, `alra_fts`, `joraa_fts`, `ine_fts` e as
-outras `<tabela>_fts`), que ignora acentos. Abrem-se no navegador com o
-[Datasette Lite](https://lite.datasette.io), sem instalar nada: a primeira
-abertura descarrega a base inteira e demora alguns segundos (a de contratos é
-a maior). Também se abrem com `sqlite3`, Python, R ou DuckDB. Uma consulta só
-junta tabelas da mesma base.
-
-| Base | Tabelas | Abrir |
-|---|---|---|
-| [contratos.db](/dados/contratos.db): Contratos públicos | `base` (BASE, desde 2012) | [no Datasette Lite](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos) |
-| [parlamento.db](/dados/parlamento.db): Assembleia Legislativa e Jornal Oficial | `alra`, `joraa` | [no Datasette Lite](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/parlamento.db#/parlamento) |
-| [financas.db](/dados/financas.db): Finanças da Região e impostos | `beo`, `tdc`, `tdc_valores`, `at_irs`, `at_irc`, `at_distritos` | [no Datasette Lite](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/financas.db#/financas) |
-| [estatisticas.db](/dados/estatisticas.db): Estatísticas | `ine`, `srea`, `emprego_publico`, `censos2021_setores` | [no Datasette Lite](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/estatisticas.db#/estatisticas) |
-| [empresas.db](/dados/empresas.db): Empresas e crédito | `bportugal`, `sper`, `sper_empresas`, `sper_regiao`, `maiores` | [no Datasette Lite](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/empresas.db#/empresas) |
-
-Consultas prontas (pode alterá-las e partilhar o endereço do resultado):
-
-- [Maiores adjudicatários (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20adjudicatario%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20group%20by%20adjudicatario%20order%20by%20total_eur%20desc%20limit%20100)
-- [Ajustes diretos por entidade (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20adjudicante%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20where%20procedimento%20like%20%27Ajuste%20Direto%25%27%20group%20by%20adjudicante%20order%20by%20total_eur%20desc%20limit%20100)
-- [Pesquisa de texto em contratos (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20base.publicado%2C%20base.objeto%2C%20base.adjudicante%2C%20base.adjudicatario%2C%20base.preco%2C%20base.url%20from%20base%20join%20base_fts%20on%20base_fts.rowid%20%3D%20base.rowid%20where%20base_fts%20match%20%3Atermos%20order%20by%20base.preco%20desc&termos=bencom)
-- [Contratos por ano, com e sem concorrência (BASE, desde 2012)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20substr%28publicado%2C%201%2C%204%29%20as%20ano%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%20%2F%201e6%2C%201%29%20as%20milhoes_eur%2C%20round%28100.0%20%2A%20sum%28case%20when%20procedimento%20like%20%27Ajuste%20Direto%25%27%20then%20preco%20end%29%20%2F%20sum%28preco%29%2C%201%29%20as%20pct_valor_ajuste_direto%20from%20base%20group%20by%20ano%20order%20by%20ano)
-- [Concursos com um só concorrente, por entidade (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20adjudicante%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20where%20procedimento%20like%20%27Concurso%25%27%20and%20concorrentes%20%3D%201%20group%20by%20adjudicante%20order%20by%20total_eur%20desc%20limit%20100)
-- [Contratos entre duas entidades, ano a ano (BASE; mude os nomes)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/contratos.db#/contratos?sql=select%20substr%28publicado%2C%201%2C%204%29%20as%20ano%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%2C%20group_concat%28distinct%20procedimento%29%20as%20procedimentos%20from%20base%20where%20adjudicante%20like%20%3Aadjudicante%20and%20adjudicatario%20like%20%3Aadjudicatario%20group%20by%20ano%20order%20by%20ano&adjudicante=%25EDA%25&adjudicatario=%25BENCOM%25)
-- [Agregados e IRS no último escalão, Açores e Madeira (AT)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/financas.db#/financas?sql=select%20ano%2C%20regiao%2C%20taxa%2C%20valor%20as%20agregados%20from%20at_irs%20where%20quadro%20%3D%20%27Taxas%20de%20tributa%C3%A7%C3%A3o%27%20and%20medida%20%3D%20%27Agregados%27%20and%20titularidade%20%3D%20%27Total%27%20and%20regiao%20%21%3D%20%27Continente%27%20and%20escalao%20%3D%20%28select%20max%28escalao%29%20from%20at_irs%20b%20where%20b.ano%20%3D%20at_irs.ano%20and%20b.regiao%20%3D%20at_irs.regiao%20and%20b.quadro%20%3D%20at_irs.quadro%20and%20b.medida%20%3D%20at_irs.medida%29%20order%20by%20regiao%2C%20ano)
-- [Empresas e IRC liquidado, Açores e Madeira, desde 2011 (AT)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/financas.db#/financas?sql=select%20ano%2C%20regiao%2C%20sum%28case%20when%20medida%20%3D%20%27Declara%C3%A7%C3%B5es%27%20then%20valor%20end%29%20as%20declaracoes%2C%20round%28sum%28case%20when%20medida%20%3D%20%27IRC%20liquidado%27%20and%20unidade%20%3D%20%27%E2%82%AC%27%20then%20valor%20end%29%20%2F%201e6%2C%201%29%20as%20irc_milhoes%20from%20at_distritos%20where%20imposto%20%3D%20%27IRC%27%20and%20regiao%20in%20%28%27A%C3%A7ores%27%2C%20%27Madeira%27%29%20group%20by%20ano%2C%20regiao%20order%20by%20regiao%2C%20ano)
-- [Crédito à habitação e ao consumo no fim de cada ano, Açores e Madeira, desde 2009 (Banco de Portugal)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/empresas.db#/empresas?sql=select%20substr%28data%2C%201%2C%204%29%20as%20ano%2C%20regiao%2C%20detalhe%20as%20finalidade%2C%20valor%20as%20milhoes_eur%20from%20bportugal%20where%20conjunto%20%3D%20%27emprestimos%27%20and%20indicador%20%3D%20%27Empr%C3%A9stimos%27%20and%20setor%20%3D%20%27Particulares%27%20and%20detalhe%20%21%3D%20%27%27%20and%20regiao%20in%20%28%27A%C3%A7ores%27%2C%20%27Madeira%27%29%20and%20data%20like%20%27%25-12-31%27%20order%20by%20regiao%2C%20finalidade%2C%20ano)
-- [Requerimentos por deputado e resposta (ALRA)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/parlamento.db#/parlamento?sql=select%20autores%2C%20count%28%2A%29%20as%20requerimentos%2C%20sum%28estado%20%3D%20%27RESPOSTA%20ATEMPADA%27%29%20as%20atempada%2C%20sum%28estado%20%3D%20%27RESPOSTA%20TADIA%27%29%20as%20tardia%2C%20sum%28estado%20%3D%20%27FORA%20DE%20PRAZO%27%29%20as%20fora_de_prazo%20from%20alra%20where%20tipo%20%3D%20%27Requerimentos%27%20group%20by%20autores%20order%20by%20requerimentos%20desc)
-- [Rendimento médio após IRS por freguesia, 2024 (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/estatisticas.db#/estatisticas?sql=select%20local%2C%20concelho%2C%20ilha%2C%20valor%20as%20euros%20from%20ine%20where%20varcd%20%3D%20%270012756%27%20and%20periodo%20%3D%20%272024%27%20and%20nivel%20%3D%20%27Freguesia%27%20order%20by%20valor%20desc)
-- [Renda mediana (€/m²) de novos contratos por concelho e ano (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/estatisticas.db#/estatisticas?sql=select%20local%2C%20group_concat%28periodo%20%7C%7C%20%27%3A%20%27%20%7C%7C%20valor%2C%20%27%20%C2%B7%20%27%29%20as%20serie%20from%20ine%20where%20varcd%20%3D%20%270014698%27%20and%20nivel%20%21%3D%20%27Freguesia%27%20group%20by%20local%20order%20by%20local)
-- [População residente por concelho, 2021 e 2025 (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/estatisticas.db#/estatisticas?sql=select%20local%2C%20max%28case%20when%20periodo%20%3D%20%272021%27%20then%20valor%20end%29%20as%20pop_2021%2C%20max%28case%20when%20periodo%20%3D%20%272025%27%20then%20valor%20end%29%20as%20pop_2025%2C%20round%28100.0%20%2A%20%28max%28case%20when%20periodo%20%3D%20%272025%27%20then%20valor%20end%29%20%2F%20max%28case%20when%20periodo%20%3D%20%272021%27%20then%20valor%20end%29%20-%201%29%2C%201%29%20as%20variacao_pct%20from%20ine%20where%20varcd%20%3D%20%270012918%27%20group%20by%20local%20order%20by%20variacao_pct)
-- [Despesa por departamento no último boletim (BEO)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/financas.db#/financas?sql=select%20dimensao%20as%20departamento%2C%20round%28valor%20%2F%201e6%2C%201%29%20as%20milhoes_eur%20from%20beo%20where%20quadro%20%3D%20%27Despesa%20do%20GRA%20por%20departamento%27%20and%20rubrica%20%3D%20%27Despesa%20efetiva%27%20and%20data%20%3D%20%28select%20max%28data%29%20from%20beo%29%20order%20by%20valor%20desc)
-- [IRS cobrado até ao mesmo mês, ano a ano (BEO)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/financas.db#/financas?sql=select%20ano%2C%20mes%2C%20round%28valor%20%2F%201e6%2C%201%29%20as%20milhoes_eur%20from%20beo%20where%20quadro%20%3D%20%27Receita%20fiscal%20do%20GRA%27%20and%20caminho%20like%20%27%25%28IRS%29%27%20and%20medida%20like%20%27Montante%25%27%20and%20mes%20%3D%20%28select%20cast%28substr%28max%28data%29%2C%206%2C%202%29%20as%20integer%29%20from%20beo%29%20order%20by%20ano)
-- [Recomendações do Tribunal de Contas por estado, ano a ano (TdC)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/financas.db#/financas?sql=select%20conta%2C%20situacao%2C%20count%28%2A%29%20as%20recomendacoes%20from%20tdc%20where%20tipo%20%3D%20%27recomenda%C3%A7%C3%A3o%27%20and%20situacao%20%21%3D%20%27%27%20group%20by%20conta%2C%20situacao%20order%20by%20conta%2C%20recomendacoes%20desc)
-- [Dívida total e receita e despesa fora da Conta, ano a ano (TdC)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/financas.db#/financas?sql=select%20rubrica%2C%20group_concat%28ano%20%7C%7C%20%27%3A%20%27%20%7C%7C%20round%28valor%2C%201%29%2C%20%27%20%C2%B7%20%27%29%20as%20serie%20from%20tdc_valores%20where%20quadro%20%3D%20%27Indicadores%27%20group%20by%20rubrica)
-- [Montantes por entidade e ano (JORAA)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/parlamento.db#/parlamento?sql=select%20entidade%2C%20substr%28publicado%2C%201%2C%204%29%20as%20ano%2C%20count%28%2A%29%20as%20atos%2C%20round%28sum%28montante%29%29%20as%20total_eur%20from%20joraa%20group%20by%20entidade%2C%20ano%20order%20by%20total_eur%20desc%20limit%20100)
-
-As consultas podem ser editadas na própria página do Datasette, e o endereço
-de cada resultado pode ser partilhado.
-
-<p id="limitacoes"><strong>Limitações</strong></p>
-
-{% include joraa-atraso.html %}
-
-- Só entra o que o robô viu. Os dias em que uma fonte falhou ficam em falta.
-- **JORAA**: de 11 de agosto a 27 de novembro de 2026 o jo.azores.gov.pt
-  bloqueou o robô. Os dias em falta estão a ser recolhidos (ver o aviso acima,
-  enquanto durar). O montante é
-  calculado pelo açores.net: a soma de todos os valores em euros que
-  aparecem no resumo e no texto do ato. Um valor repetido conta duas vezes
-  (o Despacho n.º 694/2025 autoriza 3 175 000 € e aparece com 6 350 000 €),
-  e números mal escritos no ato dão somas absurdas (a Adenda n.º 5/2025 ao
-  contrato-programa do HDES aparece com 159 864 847 000 €). Serve para
-  encontrar atos. Para citar, leia o valor no próprio ato. "0" quer dizer
-  que não se encontrou nenhum valor em euros.
-- **BASE**: a data de publicação é o dia em que o contrato apareceu no portal,
-  não o da assinatura. Um contrato republicado conta uma vez só. Desde agosto
-  de 2024 é o dia em que o açores.net o viu; antes, é a data que o IMPIC
-  publica (coluna `recolha`). Entram os contratos com local de execução nos
-  Açores, o mesmo critério da pesquisa do BASE. As colunas extra do IMPIC
-  (concorrentes, propostas, preço efetivo) são as que as entidades
-  preencheram no portal e às vezes faltam.
-- **IRS (AT)**: ver as notas na página [IRS por escalão](/dados/irs/#notas).
-- **ALRA**: o "estado" de um requerimento é o último que o robô registou. A
-  coluna `data` é a de entrada. As notas de imprensa não têm data própria, por
-  isso usa-se `primeiro_dia`.
-- **INE**: ver as notas na página [Indicadores do INE](/dados/ine/).
-- **BEO**: ver as notas na página [Execução orçamental](/dados/beo/).
-- **Tribunal de Contas**: ver as notas na página [Tribunal de Contas](/dados/tdc/).
-
-<noscript><p>A pesquisa precisa de JavaScript. Os CSV acima funcionam sem ele.</p></noscript>
+<p class="ir">Procura números e não documentos? Estatísticas por concelho e
+freguesia em <a href="/dados/ine/">Estatísticas</a>; as contas do Governo
+Regional, impostos e Tribunal de Contas em <a href="/financas/">Finanças</a>.</p>
 
 <style>
 .wrapper { max-width: min(1200px, 100%); }
@@ -469,13 +291,6 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   });
   $("mais").addEventListener("click", function () { state.shown += PAGE * 5; render(); });
   $("exportar").addEventListener("click", exportCSV);
-
-  fetch("/dados/meta.json?v=" + BUILD).then(function (r) { return r.json(); }).then(function (m) {
-    document.querySelectorAll("[data-meta]").forEach(function (el) {
-      var k = el.getAttribute("data-meta"), x = m[k];
-      el.textContent = k === "gerado" ? x.replace("T", " ") : x.linhas.toLocaleString("pt-PT") + " linhas, " + x.de + " a " + x.ate;
-    });
-  }).catch(function () {});
 
   readHash();
   switchFonte();

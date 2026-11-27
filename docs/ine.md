@@ -128,7 +128,7 @@ em cada conceito, “Fonte: INE” liga à página de onde veio.</p>
   indicadores em % ou ‰ é a diferença em pontos.
 - Todos os indicadores num só ficheiro: [ine.csv](/dados/ine.csv), um valor
   por linha. Também está na base de dados SQLite (tabela `ine`), descrita em
-  [Dados abertos](/dados/#consultar-em-sql).
+  [Dados abertos](/dados/sql/).
 
 <style>
 .wrapper { max-width: min(1200px, 100%); }

@@ -52,7 +52,7 @@ novembro de 2026. Se abrir as ligações mais tarde, podem ter mudado.</p>
 </div>
 
 <p class="fonte">Descrição dos ficheiros e código de recolha de cada fonte na
-<a href="/dados/#descarregar">página de dados</a>.</p>
+<a href="/dados/descarregar/">página de dados</a>.</p>
 
 <h2 id="citar">1. Rendimento por freguesia</h2>
 
@@ -233,7 +233,7 @@ regista se a resposta chegou a tempo.
 Tudo o que o site mostra pode ser descarregado:
 
 - **Em folha de cálculo.** Cada fonte tem um CSV na
-  [página de dados](/dados/#descarregar), que abre no Excel, no LibreOffice ou
+  [página de dados](/dados/descarregar/), que abre no Excel, no LibreOffice ou
   no Google Sheets. Nas páginas de pesquisa, "Descarregar" guarda só as
   linhas filtradas.
 - **Em SQL, sem instalar nada.** As bases de dados (uma por tema; a dos
@@ -252,7 +252,7 @@ Tudo o que o site mostra pode ser descarregado:
   recentes para os mais antigos{% if site.data.joraa_estado.atraso_de %}:
   ainda faltam os atos publicados entre {{ site.data.joraa_estado.atraso_de }}
   e {{ site.data.joraa_estado.atraso_ate }}{% endif %}.</li>
-  <li>Mais notas por fonte na <a href="/dados/#limitacoes">página de
+  <li>Mais notas por fonte na <a href="/dados/notas/#limitacoes">página de
   dados</a>.</li>
 </ul>
 </div>

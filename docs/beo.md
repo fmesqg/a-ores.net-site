@@ -129,7 +129,7 @@ Se encontrar um erro, diga-nos no
   célula em branco, a tabela mostra "–".
 - Todos os quadros num só ficheiro: [beo.csv](/dados/beo.csv), um valor por
   linha. Também está na base de dados SQLite (tabela `beo`), descrita em
-  [Dados abertos](/dados/#consultar-em-sql).
+  [Dados abertos](/dados/sql/).
 
 <style>
 .wrapper { max-width: min(1200px, 100%); }
