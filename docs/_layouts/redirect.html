@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<title>{{ page.title | default: "Mudou-se" | escape }}</title>
+<link rel="canonical" href="{{ page.redirect_to }}">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url={{ page.redirect_to }}">
+</head>
+<body>
+<p>Este texto está agora em <a href="{{ page.redirect_to }}">{{ page.redirect_to }}</a>.</p>
+</body>
+</html>
