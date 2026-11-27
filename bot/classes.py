@@ -8,9 +8,17 @@ class FetchError(Exception):
 
 class WebData:
     def __init__(
-        self, joraa=None, alra=None, base=None, portal=None, alra_ids=None
+        self,
+        joraa=None,
+        alra=None,
+        base=None,
+        portal=None,
+        alra_ids=None,
+        joraa_backfill=None,
     ):
         self.joraa: dict[date, dict] = joraa
+        # JORAA days still missing after this run's plan (fetch.joraa_plan)
+        self.joraa_backfill: tuple[date, date] | None = joraa_backfill
         self.alra = alra
         self.base: dict[date, dict] = base
         self.portal = portal

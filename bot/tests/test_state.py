@@ -109,3 +109,38 @@ def test_get_updated_state_alra_ids_error(state_dict):
     )
     updated = State.get_updated_state(prev, wd)
     assert updated.alra_state == original_alra
+
+
+def _wd(joraa, backfill):
+    return WebData(
+        joraa=joraa,
+        alra={},
+        base={},
+        portal=FetchError("x"),
+        alra_ids=FetchError("x"),
+        joraa_backfill=backfill,
+    )
+
+
+def test_old_state_line_has_no_backfill(state_dict):
+    assert State(state_dict).joraa_backfill is None
+
+
+def test_joraa_backfill_recent_days_first(state_dict):
+    prev = State(state_dict)  # last JORAA day: 2024-08-19
+    backfill = (date(2024, 8, 20), date(2024, 9, 1))
+    recent = [date(2024, 9, 2), date(2024, 9, 3)]
+    older = [date(2024, 9, 1), date(2024, 8, 31)]
+    up = State.get_updated_state(
+        prev, _wd({d: [] for d in recent + older}, backfill)
+    )
+    assert up.last_joraa_update == date(2024, 9, 3)
+    assert up.joraa_backfill == (date(2024, 8, 20), date(2024, 8, 30))
+    # nothing fetched (JORAA down): the plan is kept, the front stays put
+    up = State.get_updated_state(prev, _wd(FetchError("403"), backfill))
+    assert up.last_joraa_update == date(2024, 9, 1)
+    assert up.joraa_backfill == backfill
+    # the whole backfill done
+    days = [date(2024, 8, 20 + i) for i in range(12)] + [date(2024, 9, 1)]
+    up = State.get_updated_state(prev, _wd({d: [] for d in days}, backfill))
+    assert up.joraa_backfill is None
