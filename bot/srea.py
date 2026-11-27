@@ -8,7 +8,8 @@ per area (/area/<slug>/). A new edition is uploaded under a new address
 (wp-content/uploads/<ano>/<mês>/...), often with a slightly different name,
 so each series is found by looking for a pattern among the links of its
 area page (SERIES). The site's "relatório" pages open a Reporting Services
-server that sits behind a Cloudflare challenge; the Excel files do not.
+server that sits behind a Cloudflare challenge; the Excel files and the
+WordPress API do not. Requests follow SREA's own limit in bot/gov.py.
 
 Series kept, chosen for people who are not data experts:
   ipc        inflation in the Azores (IPC): year-on-year change, monthly,
@@ -24,6 +25,13 @@ Series kept, chosen for people who are not data experts:
              (each file has this year and last year; history builds up)
   pib        GDP by island, annual, and pib_hab, GDP per resident using
   populacao  the SREA population estimates by island
+  pagamentos card operations (SIBS), monthly since 2020: purchases in
+             payment terminals (TPA), those with foreign cards, and cash
+             withdrawals (CA); value in € by concelho, number for the Azores
+  pde        saldo and dívida bruta of the Azores' public administration
+             (Procedimento dos Défices Excessivos), yearly, read from the
+             lead sentence of each notification post (POSTS): its tables
+             are images. The WordPress site keeps posts only from 2025
 
 Rows are kept by (serie, indicador, rubrica, local, periodo); a newer file
 overwrites what an older one said, so revisions land. Excel is read with
@@ -39,8 +47,10 @@ import csv
 import datetime as dt
 import html
 import io
+import json
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -87,12 +97,29 @@ Rows = list[list]
 # --- reading -------------------------------------------------------------
 
 
-def get(url: str) -> bytes:
+HOST = urllib.parse.urlsplit(SITE).hostname
+RETRY = {429, 500, 502, 503, 504}
+
+
+def get(url: str, tries: int = 5) -> bytes:
+    """GET within SREA's rate limit (bot/gov.py). On 429 or 5xx, wait
+    longer each time (Retry-After when given) and try again; any other
+    error, a 403 above all, is raised at once rather than repeated."""
     url = urllib.parse.quote(url, safe=":/%?=&#")  # names carry "–"
     req = urllib.request.Request(url, headers=gov.HEADERS)
-    gov.wait()
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return r.read()
+    for n in range(tries):
+        gov.wait(HOST)
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code not in RETRY or n == tries - 1:
+                raise
+            after = e.headers.get("Retry-After", "")
+            delay = int(after) if after.isdigit() else 10 * 2**n
+            print(f"{e.code} on {url}; retrying in {delay} s", file=sys.stderr)
+            gov._sleep(delay)
+    raise AssertionError("unreachable")
 
 
 def area_files(page_html: str) -> list[str]:
@@ -500,6 +527,101 @@ def parse_populacao(book: dict[str, Rows]) -> list[dict]:
     return out
 
 
+PAGAMENTOS = {
+    # rubrica: (canal starts with, tipo de operação, origem do cartão)
+    "Compras em TPA": ("Terminais", "Compras", None),
+    "Compras em TPA com cartões estrangeiros": (
+        "Terminais",
+        "Compras",
+        "Outro país",
+    ),
+    "Levantamentos em CA": ("Caixas", "Levantamentos", None),
+}
+
+
+def parse_pagamentos(
+    book: dict[str, Rows], indicador: str, unidade: str, concelhos: bool
+) -> list[dict]:
+    """SIBS card operations (TPA: payment terminals; CA: cash machines),
+    monthly since 2020. The DADOS sheet has a row per year, month,
+    concelho, channel, operation type and card origin; it is summed into
+    the rubricas of PAGAMENTOS, for the Azores and, when ``concelhos``,
+    for each concelho."""
+    rows = next(v for k, v in book.items() if k.strip().startswith("DADOS"))
+    head = next(r for r in rows if "Concelho" in [text(c) for c in r])
+    col = {text(c): j for j, c in enumerate(head)}
+    i_ano, i_mes, i_conc = col["Ano"], col["Mês"], col["Concelho"]
+    i_canal, i_tipo = col["Canal"], col["Tipo de Operação"]
+    i_orig, i_val = col["Origem do cartão"], len(col) - 1
+    sums: dict[tuple, float] = {}
+    for r in rows[rows.index(head) + 1 :]:
+        if len(r) <= i_val:
+            continue
+        y, m, v = year_of(r[i_ano]), month_of(r[i_mes]), number(r[i_val])
+        if not (y and m) or v is None:
+            continue
+        canal, tipo, orig = text(r[i_canal]), text(r[i_tipo]), text(r[i_orig])
+        for rubrica, (c, t, o) in PAGAMENTOS.items():
+            if canal.startswith(c) and tipo == t and o in (None, orig):
+                places = ["Açores"] + ([text(r[i_conc])] if concelhos else [])
+                for local in places:
+                    k = (rubrica, local, y, m)
+                    sums[k] = sums.get(k, 0) + v
+    return [
+        row(
+            "pagamentos",
+            indicador,
+            rubrica,
+            local,
+            f"{y}-{m:02d}",
+            f"{y}-{m:02d}-01",
+            v,
+            unidade,
+        )
+        for (rubrica, local, y, m), v in sums.items()
+    ]
+
+
+PDE_LEAD = re.compile(
+    r"Em (\d{4})\s*(?:\(([^)]*)\))?,?\s*a (necessidade|capacidade) de "
+    r"financiamento da Administração Pública da Região Autónoma dos Açores "
+    r"foi de ([\d.]+(?:,\d+)?) milhões de euros.*?dívida bruta "
+    r"\(consolidada\) atingido os ([\d.]+(?:,\d+)?) M€",
+    re.S,
+)
+
+
+def pt_number(s: str) -> float:
+    """'3.797,8' -> 3797.8"""
+    return float(s.replace(".", "").replace(",", "."))
+
+
+def parse_pde(posts: list[dict]) -> list[dict]:
+    """Saldo and dívida of the Azores' public administration (Procedimento
+    dos Défices Excessivos), from the lead sentence of each notification
+    post: the tables are only images. Posts oldest first, so a later
+    notification revises an earlier one for the same year."""
+    out = []
+    for p in sorted(posts, key=lambda p: p["date"]):
+        body = html.unescape(re.sub(r"<[^>]+>", " ", p["content"]))
+        m = PDE_LEAD.search(re.sub(r"\s+", " ", body))
+        if not m:
+            continue
+        y, quali, sinal, saldo, divida = m.groups()
+        nota = "provisório" if quali and "provis" in quali else ""
+        saldo_v = pt_number(saldo) * (-1 if sinal == "necessidade" else 1)
+        for indicador, v in (
+            ("Saldo das administrações públicas regionais", saldo_v),
+            ("Dívida bruta consolidada", pt_number(divida)),
+        ):
+            r = row(
+                "pde", indicador, "Total", "Açores", y, f"{y}-01-01", v, "M€"
+            )
+            r.update(nota=nota, ficheiro=p["link"], pagina=p["link"])
+            out.append(r)
+    return out
+
+
 def pib_hab(rows: list[dict]) -> list[dict]:
     """GDP per resident by island, where both are known for the year."""
     pop = {
@@ -571,7 +693,48 @@ SERIES = [
         parse_populacao,
         False,
     ),
+    (
+        "pagamentos-valor",
+        "atividade-financeira",
+        r"/Operacoes-em-TPA-e-CA-valor",
+        lambda b: parse_pagamentos(b, "Valor", "€", concelhos=True),
+        False,
+    ),
+    (
+        "pagamentos-numero",
+        "atividade-financeira",
+        r"/Operacoes-em-TPA-e-CA-numero",
+        lambda b: parse_pagamentos(b, "Número", "operações", concelhos=False),
+        False,
+    ),
 ]
+
+# Series read from the text of SREA's posts (WordPress API) rather than from
+# an Excel file: name, search terms, slug prefix of the posts, parser.
+POSTS = [
+    ("pde", "defices excessivos", "pde-", parse_pde),
+]
+
+
+def posts(search: str, slug: str) -> list[dict]:
+    """Every post matching ``search`` whose slug starts with ``slug``."""
+    q = urllib.parse.urlencode(
+        {
+            "search": search,
+            "per_page": 100,
+            "_fields": "date,link,slug,content",
+        }
+    )
+    got = json.loads(get(f"{SITE}/wp-json/wp/v2/posts?{q}"))
+    return [
+        {
+            "date": p["date"],
+            "link": p["link"],
+            "content": p["content"]["rendered"],
+        }
+        for p in got
+        if p["slug"].startswith(slug)
+    ]
 
 
 # --- CSV -----------------------------------------------------------------
@@ -589,7 +752,10 @@ def merge(old: list[dict], new: list[dict]) -> list[dict]:
     keep = {tuple(r[k] for k in KEY): r for r in old}
     for r in new:
         keep[tuple(str(r[k]) for k in KEY)] = r
-    order = {s[0].split("-")[0]: i for i, s in enumerate(SERIES)}
+    names = [s[0] for s in SERIES] + [p[0] for p in POSTS]
+    order = {}
+    for i, name in enumerate(names):
+        order.setdefault(name.split("-")[0], i)
     order["pib_hab"] = order["pib"]
     return sorted(
         keep.values(),
@@ -612,34 +778,51 @@ def write_csv(path: Path, rows: list[dict]) -> None:
             w.writerow({**r, "valor": int(v) if v == int(v) else v})
 
 
+def excel_series(name, area, pattern, parse, every, pages) -> list[dict]:
+    """One series from the Excel files on its area page (``pages`` caches
+    the area pages already read)."""
+    page = f"{SITE}/area/{area}/"
+    if area not in pages:
+        pages[area] = get(page).decode("utf-8", "replace")
+    files = [u for u in area_files(pages[area]) if re.search(pattern, u)]
+    if not files:
+        raise ValueError(f"no file matches {pattern!r}")
+    got = []
+    for url in files if every else files[-1:]:
+        fname = urllib.parse.unquote(url.rsplit("/", 1)[-1])
+        rows = parse(sheets(get(url), fname))
+        for r in rows:
+            r["ficheiro"], r["pagina"] = url, page
+        got += rows
+    print(f"{name}: {len(got)} values from {len(files)} file(s)")
+    return got
+
+
 def main(out_dir: Path) -> int:
     pages: dict[str, str] = {}
+    jobs = [(s[0], lambda s=s: excel_series(*s, pages)) for s in SERIES] + [
+        (
+            name,
+            lambda search=search, slug=slug, parse=parse: parse(
+                posts(search, slug)
+            ),
+        )
+        for name, search, slug, parse in POSTS
+    ]
     new: list[dict] = []
     failed = []
-    for name, area, pattern, parse, every in SERIES:
-        page = f"{SITE}/area/{area}/"
+    for name, job in jobs:
         try:
-            if area not in pages:
-                pages[area] = get(page).decode("utf-8", "replace")
-            files = [
-                u for u in area_files(pages[area]) if re.search(pattern, u)
-            ]
-            if not files:
-                raise ValueError(f"no file matches {pattern!r}")
-            got = []
-            for url in files if every else files[-1:]:
-                fname = urllib.parse.unquote(url.rsplit("/", 1)[-1])
-                rows = parse(sheets(get(url), fname))
-                for r in rows:
-                    r["ficheiro"], r["pagina"] = url, page
-                got += rows
+            got = job()
             if not got:
-                raise ValueError(f"nothing parsed from {files[-1]}")
+                raise ValueError("nothing parsed")
             new += got
-            print(f"{name}: {len(got)} values from {len(files)} file(s)")
         except Exception as e:  # keep going; report at the end
             failed.append(name)
             print(f"{name}: FAILED {e}", file=sys.stderr)
+            if isinstance(e, urllib.error.HTTPError) and e.code == 403:
+                print("SREA refused the bot (403): stopping.", file=sys.stderr)
+                break
     path = out_dir / "srea.csv"
     rows = merge(read_csv(path), new)
     rows = merge(rows, pib_hab(rows))
