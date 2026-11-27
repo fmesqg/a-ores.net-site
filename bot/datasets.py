@@ -15,6 +15,8 @@ and writes, under docs/dados/:
   ine.csv    INE indicators for the Azores by region, concelho and
              freguesia: a copy of data/ine.csv, which bot/ine.py fetches
              weekly (it needs the network, so it is not rebuilt here)
+  ine_meta.json  definitions of each INE indicator (concepts, formula,
+             source, note): a copy of data/ine_meta.json, from bot/ine.py
   beo.csv    the regional government's monthly budget execution (Boletim
              de Execução Orçamental): a copy of data/beo.csv, which
              bot/beo.py parses from the PDFs weekly
@@ -24,6 +26,9 @@ and writes, under docs/dados/:
   tdc_valores.csv  figures from those pareceres (consolidated account,
              debt, revenue and expenditure left off the books)
   meta.json  row counts, date coverage, build time
+
+and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json
+and resumo.json (the numbers on /acores-101/).
 
 The CSVs are UTF-8 with BOM, so Excel opens accents correctly. The search
 page (docs/dados.md) reads them directly. None of these files is committed:
@@ -400,6 +405,206 @@ def write_ine_news(docs: Path, cols: list[str], rows: list[list]) -> None:
     )
 
 
+# Indicators shown on /acores-101/ (Açores vs Madeira vs país, latest year).
+RESUMO_INE = (
+    "0012918",  # população residente
+    "0012909",  # índice de envelhecimento
+    "0012757",  # rendimento mediano após IRS por sujeito passivo
+    "0012656",  # ganho médio mensal
+    "0013420",  # RSI por 1000 habitantes
+    "0014698",  # renda mediana, novos contratos (€/m²)
+    "0013210",  # dormidas por 100 habitantes
+)
+
+
+def _num(v: str) -> float | None:
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def resumo_ine(cols: list[str], rows: list[list]) -> dict:
+    """Latest Região/país values of RESUMO_INE, plus population by island."""
+    c = {k: i for i, k in enumerate(cols)}
+    out: dict = {}
+    for v in RESUMO_INE:
+        own = [r for r in rows if r[c["varcd"]] == v and not r[c["categoria"]]]
+        top = [r for r in own if r[c["geocod"]] in ("20", "30", "PT")]
+        if not top:
+            continue
+        last = max(r[c["data"]] for r in top)
+        x = {"periodo": "", "url": "", "unidade": ""}
+        for r in top:
+            if r[c["data"]] != last:
+                continue
+            key = {"20": "acores", "30": "madeira", "PT": "pt"}[r[c["geocod"]]]
+            x[key] = _num(r[c["valor"]])
+            x["periodo"], x["url"] = r[c["periodo"]], r[c["url"]]
+            x["unidade"] = r[c["unidade"]]
+        if v == "0012918":
+            ilhas: dict[str, float] = {}
+            for r in own:
+                if r[c["data"]] == last and r[c["nivel"]] == "Concelho":
+                    n = _num(r[c["valor"]]) or 0
+                    ilhas[r[c["ilha"]]] = ilhas.get(r[c["ilha"]], 0) + n
+            x["ilhas"] = [
+                {"ilha": k, "valor": round(n)}
+                for k, n in sorted(ilhas.items(), key=lambda t: -t[1])
+            ]
+        out[v] = x
+    return out
+
+
+def resumo_beo(cols: list[str], rows: list[list]) -> dict:
+    """The last complete year of the budget execution bulletins, consolidated:
+    where the money came from, what it paid and the balance (millions of €)."""
+    c = {k: i for i, k in enumerate(cols)}
+    euro = [r for r in rows if r[c["medida"]] == "Montante (€)"]
+    sint = [
+        r
+        for r in euro
+        if r[c["quadro"]] == "Síntese global"
+        and r[c["dimensao"]] == "Consolidado"
+    ]
+    anos = sorted({r[c["ano"]] for r in sint if r[c["mes"]] == "12"})
+    if not anos:
+        return {}
+    ano = anos[-1]
+    dez = [r for r in sint if r[c["ano"]] == ano and r[c["mes"]] == "12"]
+    by = {r[c["caminho"]]: _num(r[c["valor"]]) or 0.0 for r in dez}
+
+    def m(*paths: str) -> float:
+        return round(sum(by.get(p, 0.0) for p in paths) / 1e6, 1)
+
+    rc, rk = "Receita corrente › ", "Receita de capital › "
+    receita = m("Receita efetiva")
+    impostos = m(rc + "Impostos diretos", rc + "Impostos indiretos")
+    estado = m(
+        rc + "Transferências correntes › Administração central - Estado",
+        rk + "Transferências de capital › Administração central - Estado",
+    )
+    exterior = m(
+        rc + "Transferências correntes › Resto do mundo",
+        rk + "Transferências de capital › Resto do mundo",
+    )
+    dc = "Despesa corrente › "
+    despesa = m("Despesa efetiva")
+    pessoal = m(dc + "Despesas com pessoal")
+    bens = m(dc + "Aquisição de bens e serviços correntes")
+    juros = m(dc + "Juros e outros encargos")
+    capital = m("Despesa de capital")
+    func = [
+        r
+        for r in euro
+        if r[c["quadro"]] == "Despesa do GRA por função"
+        and r[c["ano"]] == ano
+        and r[c["mes"]] == "12"
+        and r[c["nivel"]] == "1"
+    ]
+    funcoes = sorted(
+        (
+            {
+                "nome": r[c["rubrica"]].removesuffix(" n.e."),
+                "valor": round((_num(r[c["valor"]]) or 0) / 1e6, 1),
+            }
+            for r in func
+        ),
+        key=lambda x: -x["valor"],
+    )
+    total_f = round(sum(x["valor"] for x in funcoes), 1)
+    if len(funcoes) > 5:
+        resto = round(total_f - sum(x["valor"] for x in funcoes[:5]), 1)
+        funcoes = funcoes[:5] + [{"nome": "Todas as outras", "valor": resto}]
+    return {
+        "ano": ano,
+        "boletim": dez[0][c["boletim"]] if dez else "",
+        "receita": receita,
+        "receitas": [
+            {"nome": "Impostos cobrados nos Açores", "valor": impostos},
+            {"nome": "Transferências do Estado", "valor": estado},
+            {
+                "nome": "Do exterior (sobretudo fundos europeus)",
+                "valor": exterior,
+            },
+            {
+                "nome": "Outras receitas",
+                "valor": round(receita - impostos - estado - exterior, 1),
+            },
+        ],
+        "despesa": despesa,
+        "despesas": [
+            {"nome": "Salários e outros custos com pessoal", "valor": pessoal},
+            {"nome": "Compras de bens e serviços", "valor": bens},
+            {
+                "nome": "Investimento e apoios ao investimento",
+                "valor": capital,
+            },
+            {"nome": "Juros da dívida", "valor": juros},
+            {
+                "nome": "Outras despesas",
+                "valor": round(despesa - pessoal - bens - capital - juros, 1),
+            },
+        ],
+        "saldo": m("Saldo global"),
+        "saldo_abs": abs(m("Saldo global")),
+        "funcoes": funcoes,
+        "funcoes_total": total_f,
+    }
+
+
+def pt_num(x: float) -> str:
+    """245328 -> '245 328', 39.38 -> '39,4', 5.94 -> '5,94' (pt-PT, the
+    thousands separator is a no-break space)."""
+    dec = 0 if abs(x) >= 100 else 1 if abs(x) >= 10 else 2
+    s = f"{x:,.{dec}f}".replace(",", "\u00a0").replace(".", ",")
+    if "," in s:
+        s = s.rstrip("0").rstrip(",")
+    return s
+
+
+def _texts(node, total: float | None = None):
+    """Add 'k_t' (formatted) next to every number 'k', and 'pct' (share of
+    total) to items of the lists, so the Liquid page needs no arithmetic."""
+    if isinstance(node, dict):
+        for k, v in list(node.items()):
+            if isinstance(v, int | float) and not isinstance(v, bool):
+                node[k + "_t"] = pt_num(v)
+            elif isinstance(v, list):
+                tot = {
+                    "ilhas": node.get("acores"),
+                    "receitas": node.get("receita"),
+                    "despesas": node.get("despesa"),
+                    "funcoes": node.get("funcoes_total"),
+                }.get(k)
+                for item in v:
+                    if tot and isinstance(item, dict) and "valor" in item:
+                        item["pct"] = round(100 * item["valor"] / tot)
+                    _texts(item)
+            else:
+                _texts(v)
+    return node
+
+
+def write_resumo(docs: Path, tables: dict) -> None:
+    """docs/_data/resumo.json: the few numbers /acores-101/ shows, computed
+    here so that page does not download the full CSVs."""
+    out: dict = {}
+    if "ine" in tables:
+        out["ine"] = resumo_ine(*tables["ine"])
+    if "beo" in tables:
+        out["beo"] = resumo_beo(*tables["beo"])
+        pop = out.get("ine", {}).get("0012918", {}).get("acores")
+        if out["beo"] and pop:
+            out["beo"]["despesa_hab"] = round(
+                out["beo"]["despesa"] * 1e6 / pop
+            )
+    (docs / "_data").mkdir(exist_ok=True)
+    (docs / "_data" / "resumo.json").write_text(
+        json.dumps(_texts(out), ensure_ascii=False, indent=1), encoding="utf-8"
+    )
+
+
 def main(docs: Path) -> dict:
     out = docs / "dados"
     out.mkdir(exist_ok=True)
@@ -436,6 +641,9 @@ def main(docs: Path) -> dict:
         if name == "ine":
             info["indicadores"] = len({r[0] for r in rows})
             write_ine_news(docs, cols, rows)
+            defs = docs.parent / "data" / "ine_meta.json"
+            if defs.exists():
+                (out / "ine_meta.json").write_bytes(defs.read_bytes())
         elif name in ("beo", "tdc"):
             latest = beo_latest if name == "beo" else tdc_latest
             info["ultimo"] = latest(cols, rows)
@@ -445,6 +653,7 @@ def main(docs: Path) -> dict:
                 encoding="utf-8",
             )
         meta[name] = info
+    write_resumo(docs, tables)
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(

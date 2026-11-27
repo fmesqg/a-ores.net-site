@@ -1,0 +1,1022 @@
+{
+ "0012756": {
+  "titulo": "Rendimento bruto declarado deduzido do IRS liquidado por sujeito passivo (€) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012756",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ],
+   [
+    "Sujeito passivo",
+    "Pessoa singular que reside em território português e que, nele não residindo, aí obtém rendimentos."
+   ],
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ]
+  ],
+  "formula": "Rendimento bruto declarado - IRS liquidado/ n.º de sujeitos passivos"
+ },
+ "0012757": {
+  "titulo": "Valor mediano do rendimento bruto declarado deduzido do IRS liquidado por sujeito passivo (€) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012757",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ],
+   [
+    "Sujeito passivo",
+    "Pessoa singular que reside em território português e que, nele não residindo, aí obtém rendimentos."
+   ],
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ]
+  ],
+  "formula": "Valor mediano do rendimento bruto declarado deduzido do IRS liquidado/ N.º de sujeitos passivos"
+ },
+ "0012741": {
+  "titulo": "Valor mediano do rendimento bruto declarado deduzido do IRS liquidado por agregado fiscal (€) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012741",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Agregado fiscal",
+    "Agregado familiar constituído por: a) cônjuges não separados judicialmente de pessoas e bens, ou os unidos de facto, e respetivos dependentes; b) Cada um dos cônjuges ou ex-cônjuges, respetivamente, nos casos de separação judicial de pessoas e bens ou de declaração de nulidade, anulação ou dissolução do casamento, e dependentes a seu cargo; c) pai ou mãe solteiros e dependentes a seu cargo; d) adotante solteiro e dependentes a seu cargo."
+   ],
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ],
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ]
+  ],
+  "formula": "Valor mediano do rendimento bruto declarado deduzido do IRS liquidado/ N.º de agregados fiscais"
+ },
+ "0012749": {
+  "titulo": "Valor mediano do rendimento bruto declarado por sujeito passivo (€) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012749",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ],
+   [
+    "Sujeito passivo",
+    "Pessoa singular que reside em território português e que, nele não residindo, aí obtém rendimentos."
+   ]
+  ],
+  "formula": "Valor mediano do rendimento bruto declarado/ N.º de sujeitos passivos"
+ },
+ "0012670": {
+  "titulo": "Rendimento bruto declarado por habitante (€) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012670",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Imposto sobre o rendimento de pessoas singulares",
+    "Imposto que incide sobre o valor anual dos rendimentos das pessoas singulares residentes em Portugal, independentemente do local onde foram obtidos, e sobre o valor dos rendimentos obtidos em Portugal por não residentes."
+   ],
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ]
+  ],
+  "formula": "Rendimento bruto declarado/ População média anual residente"
+ },
+ "0014580": {
+  "titulo": "Poder de compra per capita por Localização geográfica (NUTS - 2024); Bienal - INE, Estudo sobre o poder de compra concelhio",
+  "periodicidade": "Bienal",
+  "primeiro": "2023",
+  "ultimo": "2023",
+  "unidade": "Não aplicável (-)",
+  "atualizado": "2025-11-06",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014580",
+  "fonte": "INE, Estudo sobre o poder de compra concelhio",
+  "conceitos": [
+   [
+    "População residente",
+    "Conjunto de pessoas que, independentemente de estarem presentes ou ausentes num determinado alojamento no momento de observação, viveram no seu local de residência habitual por um período contínuo de, pelo menos, 12 meses anteriores ao momento de observação, ou que chegaram ao seu local de residência habitual durante o período correspondente aos 12 meses anteriores ao momento de observação, com a intenção de aí permanecer por um período mínimo de um ano."
+   ]
+  ],
+  "formula": "IPC = (1 + CV*Factor1)/(1 + CV*FACT1Pond)*100\nOnde: CV = Coeficiente de variação escolhido;\nFactor1 = Valores do 1º factor extraído do modelo;\nFACT1Pond = Valor resultante da soma para todos os concelhos [Soma(Factor1)*(peso populacional)]."
+ },
+ "0012760": {
+  "titulo": "Coeficiente de Gini do rendimento bruto declarado deduzido do IRS liquidado por sujeito passivo (%) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Percentagem (%)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012760",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ],
+   [
+    "Coeficiente de Gini",
+    "Indicador de desigualdade na distribuição do rendimento que visa sintetizar num único valor a assimetria dessa distribuição, assumindo valores entre 0 (quando todos os indivíduos têm igual rendimento) e 100 (quando todo o rendimento se concentra num único indivíduo)."
+   ],
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ]
+  ]
+ },
+ "0012744": {
+  "titulo": "Coeficiente de Gini do rendimento bruto declarado deduzido do IRS liquidado por agregado fiscal (%) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Percentagem (%)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012744",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Coeficiente de Gini",
+    "Indicador de desigualdade na distribuição do rendimento que visa sintetizar num único valor a assimetria dessa distribuição, assumindo valores entre 0 (quando todos os indivíduos têm igual rendimento) e 100 (quando todo o rendimento se concentra num único indivíduo)."
+   ],
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ],
+   [
+    "Agregado fiscal",
+    "Agregado familiar constituído por: a) cônjuges não separados judicialmente de pessoas e bens, ou os unidos de facto, e respetivos dependentes; b) Cada um dos cônjuges ou ex-cônjuges, respetivamente, nos casos de separação judicial de pessoas e bens ou de declaração de nulidade, anulação ou dissolução do casamento, e dependentes a seu cargo; c) pai ou mãe solteiros e dependentes a seu cargo; d) adotante solteiro e dependentes a seu cargo."
+   ],
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ]
+  ]
+ },
+ "0012761": {
+  "titulo": "Desigualdade na distribuição do rendimento bruto declarado deduzido do IRS liquidado dos sujeitos passivos (P80/P20 - N.º) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Número (N.º)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012761",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ],
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ],
+   [
+    "Sujeito passivo",
+    "Pessoa singular que reside em território português e que, nele não residindo, aí obtém rendimentos."
+   ]
+  ],
+  "formula": "Percentil 80 do rendimento bruto declarado deduzido do IRS liquidado/ Percentil 20 do rendimento bruto declarado deduzido do IRS liquidado"
+ },
+ "0012762": {
+  "titulo": "Desigualdade na distribuição do rendimento bruto declarado deduzido do IRS liquidado dos sujeitos passivos (P90/P10 - N.º) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Número (N.º)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012762",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ],
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ],
+   [
+    "Sujeito passivo",
+    "Pessoa singular que reside em território português e que, nele não residindo, aí obtém rendimentos."
+   ]
+  ],
+  "formula": "Percentil 90 do rendimento bruto declarado deduzido do IRS liquidado/ Percentil 10 do rendimento bruto declarado deduzido do IRS liquidado"
+ },
+ "0012759": {
+  "titulo": "Distribuição do rendimento bruto declarado deduzido de IRS liquidado (€) dos sujeitos passivos por Localização geográfica (NUTS - 2024) e Quintis de rendimento; Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012759",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Sujeito passivo",
+    "Pessoa singular que reside em território português e que, nele não residindo, aí obtém rendimentos."
+   ],
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ],
+   [
+    "Imposto sobre o rendimento de pessoas singulares",
+    "Imposto que incide sobre o valor anual dos rendimentos das pessoas singulares residentes em Portugal, independentemente do local onde foram obtidos, e sobre o valor dos rendimentos obtidos em Portugal por não residentes."
+   ],
+   [
+    "Rendimento bruto declarado",
+    "Rendimento que corresponde: 1) ao valor do rendimento não isento antes de efetuada qualquer dedução específica para as categorias A (Trabalho dependente) e H (Pensões); 2) ao valor do rendimento líquido, ou seja, ao valor do rendimento depois de efetuadas as respetivas deduções específicas, para as restantes categorias."
+   ]
+  ]
+ },
+ "0012750": {
+  "titulo": "Imposto sobre o rendimento de pessoas singulares liquidado por sujeito passivo (€) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012750",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Sujeito passivo",
+    "Pessoa singular que reside em território português e que, nele não residindo, aí obtém rendimentos."
+   ],
+   [
+    "Imposto sobre o rendimento de pessoas singulares liquidado",
+    "Valor do imposto que corresponde ao imposto devido, ou seja, à coleta líquida das deduções previstas no código do IRS e dos benefícios fiscais, antes de efetuadas as deduções relativas às retenções na fonte e aos pagamentos por conta."
+   ]
+  ],
+  "formula": "Imposto sobre o rendimento de pessoas singulares liquidado/ N.º de sujeitos passivos"
+ },
+ "0012747": {
+  "titulo": "Sujeitos Passivos (N.º) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Número (N.º)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012747",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Sujeito passivo",
+    "Pessoa singular que reside em território português e que, nele não residindo, aí obtém rendimentos."
+   ],
+   [
+    "Imposto sobre o rendimento de pessoas singulares",
+    "Imposto que incide sobre o valor anual dos rendimentos das pessoas singulares residentes em Portugal, independentemente do local onde foram obtidos, e sobre o valor dos rendimentos obtidos em Portugal por não residentes."
+   ]
+  ]
+ },
+ "0013318": {
+  "titulo": "Agregados fiscais (N.º) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "periodicidade": "Anual",
+  "primeiro": "2018",
+  "ultimo": "2024",
+  "unidade": "Número (N.º)",
+  "nota": "A informação exclui os agregados fiscais com rendimento bruto declarado deduzido do IRS liquidado menor que zero.",
+  "atualizado": "2026-07-24",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013318",
+  "fonte": "INE, Estatísticas do Rendimento ao nível local com base na informação produzida pelo Ministério das Finanças - Autoridade Tributária e Aduaneira.",
+  "conceitos": [
+   [
+    "Agregado fiscal",
+    "Agregado familiar constituído por: a) cônjuges não separados judicialmente de pessoas e bens, ou os unidos de facto, e respetivos dependentes; b) Cada um dos cônjuges ou ex-cônjuges, respetivamente, nos casos de separação judicial de pessoas e bens ou de declaração de nulidade, anulação ou dissolução do casamento, e dependentes a seu cargo; c) pai ou mãe solteiros e dependentes a seu cargo; d) adotante solteiro e dependentes a seu cargo."
+   ]
+  ]
+ },
+ "0014698": {
+  "titulo": "Valor mediano das rendas de novos contratos de arrendamento de alojamentos familiares (Metodologia 2026 - €/ m²) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas de Rendas da Habitação ao nível local",
+  "periodicidade": "Anual",
+  "primeiro": "2020",
+  "ultimo": "2025",
+  "unidade": "Euro/ Metro quadrado (€/ m²)",
+  "atualizado": "2026-09-29",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014698",
+  "fonte": "INE, Estatísticas de Rendas da Habitação ao nível local",
+  "conceitos": [
+   [
+    "Área bruta privativa",
+    "Valor correspondente à superfície total medida pelo perímetro exterior e eixos das paredes ou outros elementos separadores do edifício ou da fração, incluindo varandas privativas fechadas, caves e sótãos privativos com utilização idêntica à do edifício ou da fração."
+   ],
+   [
+    "Contrato de arrendamento urbano",
+    "Contrato pelo qual uma das partes concede à outra o gozo temporário de um prédio urbano, no todo ou em parte, mediante retribuição."
+   ],
+   [
+    "Alojamento familiar",
+    "Alojamento que, normalmente, se destina a alojar apenas uma família e não é totalmente utilizado para outros fins no momento de referência."
+   ],
+   [
+    "Alojamento",
+    "Local distinto e independente que, pelo modo como foi construído, reconstruído, ampliado, transformado ou está a ser utilizado, se destina a habitação com a condição de não estar a ser utilizado totalmente para outros fins no momento de referência: por distinto entende-se que é cercado por paredes de tipo clássico ou de outro tipo, é coberto e permite que uma pessoa ou um grupo de pessoas possa dormir, preparar refeições ou abrigar-se das intempéries separado de outros membros da coletividade; por independente entende-se que os seus ocupantes não têm que atravessar outros alojamentos para entrar ou sair do alojamento onde habitam."
+   ]
+  ],
+  "formula": "Mediana do valor das vendas por m2 de alojamentos familiares."
+ },
+ "0014696": {
+  "titulo": "Valor mediano das rendas de novos contratos de arrendamento de alojamentos familiares nos últimos 12 meses (Metodologia 2026 - €/ m²) por Localização geográfica (NUTS - 2024); Trimestral - INE, Estatísticas de Rendas da Habitação ao nível local",
+  "periodicidade": "Trimestral",
+  "primeiro": "1.º Trimestre de 2020",
+  "ultimo": "2.º Trimestre de 2026",
+  "unidade": "Euro/ Metro quadrado (€/ m²)",
+  "atualizado": "2026-09-29",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014696",
+  "fonte": "INE, Estatísticas de Rendas da Habitação ao nível local",
+  "conceitos": [
+   [
+    "Alojamento",
+    "Local distinto e independente que, pelo modo como foi construído, reconstruído, ampliado, transformado ou está a ser utilizado, se destina a habitação com a condição de não estar a ser utilizado totalmente para outros fins no momento de referência: por distinto entende-se que é cercado por paredes de tipo clássico ou de outro tipo, é coberto e permite que uma pessoa ou um grupo de pessoas possa dormir, preparar refeições ou abrigar-se das intempéries separado de outros membros da coletividade; por independente entende-se que os seus ocupantes não têm que atravessar outros alojamentos para entrar ou sair do alojamento onde habitam."
+   ],
+   [
+    "Contrato de arrendamento urbano",
+    "Contrato pelo qual uma das partes concede à outra o gozo temporário de um prédio urbano, no todo ou em parte, mediante retribuição."
+   ],
+   [
+    "Área bruta privativa",
+    "Valor correspondente à superfície total medida pelo perímetro exterior e eixos das paredes ou outros elementos separadores do edifício ou da fração, incluindo varandas privativas fechadas, caves e sótãos privativos com utilização idêntica à do edifício ou da fração."
+   ]
+  ],
+  "formula": "Mediana do valor das vendas por m2 de alojamentos familiares."
+ },
+ "0014697": {
+  "titulo": "Novos contratos de arrendamento de alojamentos familiares (Metodologia 2026 - N.º) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas de Rendas da Habitação ao nível local",
+  "periodicidade": "Anual",
+  "primeiro": "2020",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-09-29",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014697",
+  "fonte": "INE, Estatísticas de Rendas da Habitação ao nível local",
+  "conceitos": [
+   [
+    "Contrato de arrendamento urbano",
+    "Contrato pelo qual uma das partes concede à outra o gozo temporário de um prédio urbano, no todo ou em parte, mediante retribuição."
+   ],
+   [
+    "Alojamento familiar",
+    "Alojamento que, normalmente, se destina a alojar apenas uma família e não é totalmente utilizado para outros fins no momento de referência."
+   ],
+   [
+    "Alojamento",
+    "Local distinto e independente que, pelo modo como foi construído, reconstruído, ampliado, transformado ou está a ser utilizado, se destina a habitação com a condição de não estar a ser utilizado totalmente para outros fins no momento de referência: por distinto entende-se que é cercado por paredes de tipo clássico ou de outro tipo, é coberto e permite que uma pessoa ou um grupo de pessoas possa dormir, preparar refeições ou abrigar-se das intempéries separado de outros membros da coletividade; por independente entende-se que os seus ocupantes não têm que atravessar outros alojamentos para entrar ou sair do alojamento onde habitam."
+   ]
+  ],
+  "formula": "Somatório do número de novos contratos de arrendamento de alojamentos familiares."
+ },
+ "0014695": {
+  "titulo": "Novos contratos de arrendamento de alojamentos familiares nos últimos 12 meses (Metodologia 2026 - N.º) por Localização geográfica (NUTS - 2024 - geografia 2025); Trimestral - INE, Estatísticas de Rendas da Habitação ao nível local",
+  "periodicidade": "Trimestral",
+  "primeiro": "1.º Trimestre de 2026",
+  "ultimo": "2.º Trimestre de 2026",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-09-29",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014695",
+  "fonte": "INE, Estatísticas de Rendas da Habitação ao nível local",
+  "conceitos": [
+   [
+    "Contrato de arrendamento urbano",
+    "Contrato pelo qual uma das partes concede à outra o gozo temporário de um prédio urbano, no todo ou em parte, mediante retribuição."
+   ],
+   [
+    "Área bruta privativa",
+    "Valor correspondente à superfície total medida pelo perímetro exterior e eixos das paredes ou outros elementos separadores do edifício ou da fração, incluindo varandas privativas fechadas, caves e sótãos privativos com utilização idêntica à do edifício ou da fração."
+   ],
+   [
+    "Alojamento",
+    "Local distinto e independente que, pelo modo como foi construído, reconstruído, ampliado, transformado ou está a ser utilizado, se destina a habitação com a condição de não estar a ser utilizado totalmente para outros fins no momento de referência: por distinto entende-se que é cercado por paredes de tipo clássico ou de outro tipo, é coberto e permite que uma pessoa ou um grupo de pessoas possa dormir, preparar refeições ou abrigar-se das intempéries separado de outros membros da coletividade; por independente entende-se que os seus ocupantes não têm que atravessar outros alojamentos para entrar ou sair do alojamento onde habitam."
+   ]
+  ],
+  "formula": "Somatório do número de novos contratos de arrendamento de alojamentos familiares."
+ },
+ "0012254": {
+  "titulo": "Valor mediano das vendas de alojamentos familiares (Metodologia 2022 - €/ m²) por Localização geográfica (NUTS - 2024) e Tipologia do fogo; Anual - INE, Estatísticas de preços da habitação ao nível local (Metodologia 2022)",
+  "periodicidade": "Anual",
+  "primeiro": "2019",
+  "ultimo": "2025",
+  "unidade": "Euro/ Metro quadrado (€/ m²)",
+  "atualizado": "2026-10-23",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012254",
+  "fonte": "INE, Estatísticas de preços da habitação ao nível local (Metodologia 2022)",
+  "conceitos": [
+   [
+    "Tipologia do fogo",
+    "Classificação atribuída a cada fogo segundo o número de quartos de dormir e para cuja identificação se utiliza o símbolo Tx, sendo que x representa o número de quartos de dormir."
+   ],
+   [
+    "Alojamento familiar",
+    "Alojamento que, normalmente, se destina a alojar apenas uma família e não é totalmente utilizado para outros fins no momento de referência."
+   ]
+  ],
+  "formula": "Mediana do valor das vendas por m2 de alojamentos familiares no período de referência"
+ },
+ "0014764": {
+  "titulo": "Vendas de alojamentos familiares nos últimos 12 meses (Metodologia 2022 - N.º) por Localização geográfica (NUTS - 2024 - geografia 2025); Trimestral - INE, Estatísticas de preços da habitação ao nível local (Metodologia 2022)",
+  "periodicidade": "Trimestral",
+  "primeiro": "1.º Trimestre de 2026",
+  "ultimo": "2.º Trimestre de 2026",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-10-23",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014764",
+  "fonte": "INE, Estatísticas de preços da habitação ao nível local (Metodologia 2022)",
+  "conceitos": [
+   [
+    "Alojamento familiar",
+    "Alojamento que, normalmente, se destina a alojar apenas uma família e não é totalmente utilizado para outros fins no momento de referência."
+   ]
+  ]
+ },
+ "0000087": {
+  "titulo": "Fogos licenciados (N.º) em construções novas para habitação familiar por Localização geográfica (NUTS - 2002) e Tipologia do fogo; Anual - INE, Inquérito aos projetos de obras de edificação e de demolição de edifícios",
+  "periodicidade": "Anual",
+  "primeiro": "1995",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "nota": "Para os anos de 2002 a 2005, não foi possível obter as respostas relativas aos municípios de Lisboa e Seia, pelo que os dados apresentados se encontram subavaliados.<br>De 1995 a 2001 inclui-se apenas a informação que tem desagregação ao nível de município.<br>Dados definitivos até 2020 e preliminares de 2021 em diante.",
+  "atualizado": "2026-07-17",
+  "metainfo": "https://www.ine.pt/xurl/metax/0000087",
+  "fonte": "INE, Inquérito aos projetos de obras de edificação e de demolição de edifícios",
+  "conceitos": [
+   [
+    "Obra",
+    "Todo trabalho de construção, reconstrução, ampliação, alteração, reparação, conservação, limpeza, restauro e demolição de bens imóveis."
+   ],
+   [
+    "Construção nova",
+    "Edificação inteiramente nova ainda que no terreno sobre que foi erguida já tenha sido efetuada outra construção."
+   ],
+   [
+    "Fogo",
+    "Parte ou totalidade de um edifício dotada de acesso independente e constituída por um ou mais compartimentos destinados à habitação e por espaços privativos complementares."
+   ],
+   [
+    "Tipologia do fogo",
+    "O tipo de fogo é definido pelo número de quartos de dormir, e para a sua identificação utiliza-se o símbolo Tx, em que x representa o número de quartos de dormir."
+   ]
+  ],
+  "observacoes": "Contagem"
+ },
+ "0000076": {
+  "titulo": "Fogos concluídos (N.º) em construções novas para habitação familiar por Localização geográfica (NUTS - 2002) e Tipologia do fogo; Anual - INE, Estatísticas das obras concluídas",
+  "periodicidade": "Anual",
+  "primeiro": "1995",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "nota": "Os totais dos municípios poderão não corresponder à soma das respetivas freguesias por questões de arredondamento e ausência de classificação.<br>Para os anos de 2002 a 2005, não foi possível obter todas as respostas relativas aos municípios de Lisboa e Seia. Para os anos de 2011 a 2017 não foi possível obter a totalidade das respostas relativas ao município da Amadora. Os dados apresentados para estes municípios, nestes períodos, encontram-se subavaliados.<br>O total de fogos inclui fogos de tipologia não identificada pelo que o total pode não corresponder à soma das parcelas. <br>Informação com base nas Estimativas de Obras Concluídas para os anos de 2024 e 2025.<br>Dados definitivos até 2020 e preliminares de 2021 em diante.",
+  "atualizado": "2026-07-17",
+  "metainfo": "https://www.ine.pt/xurl/metax/0000076",
+  "fonte": "INE, Estatísticas das obras concluídas",
+  "conceitos": [
+   [
+    "Tipologia do fogo",
+    "O tipo de fogo é definido pelo número de quartos de dormir, e para a sua identificação utiliza-se o símbolo Tx, em que x representa o número de quartos de dormir."
+   ],
+   [
+    "Fogo",
+    "Parte ou totalidade de um edifício dotada de acesso independente e constituída por um ou mais compartimentos destinados à habitação e por espaços privativos complementares."
+   ],
+   [
+    "Construção nova",
+    "Edificação inteiramente nova ainda que no terreno sobre que foi erguida já tenha sido efetuada outra construção."
+   ],
+   [
+    "Obra",
+    "Todo trabalho de construção, reconstrução, ampliação, alteração, reparação, conservação, limpeza, restauro e demolição de bens imóveis."
+   ]
+  ],
+  "observacoes": "Contagem"
+ },
+ "0000086": {
+  "titulo": "Edifícios licenciados (N.º) por Localização geográfica (NUTS - 2002), Tipo de obra  e Destino da obra ; Anual - INE, Inquérito aos projetos de obras de edificação e de demolição de edifícios",
+  "periodicidade": "Anual",
+  "primeiro": "1995",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "nota": "Para os anos de 2002 a 2005, não foi possível obter as respostas relativas aos municípios de Lisboa e Seia, pelo que os dados apresentados se encontram subavaliados.<br>De 1995 a 2001 inclui-se apenas a informação que tem desagregação ao nível de município.<br>Dados definitivos até 2020 e preliminares de 2021 em diante.",
+  "atualizado": "2026-07-17",
+  "metainfo": "https://www.ine.pt/xurl/metax/0000086",
+  "fonte": "INE, Inquérito aos projetos de obras de edificação e de demolição de edifícios",
+  "conceitos": [
+   [
+    "Tipo de obra",
+    "Designação dos trabalhos efetuados em edifícios ou terrenos (construção nova, ampliação, alteração, reconstrução, demolição, remodelação e urbanização)."
+   ],
+   [
+    "Construção nova",
+    "Edificação inteiramente nova ainda que no terreno sobre que foi erguida já tenha sido efetuada outra construção."
+   ],
+   [
+    "Obra",
+    "Todo trabalho de construção, reconstrução, ampliação, alteração, reparação, conservação, limpeza, restauro e demolição de bens imóveis."
+   ],
+   [
+    "Destino da obra",
+    "Tipo de utilização dado à edificação tal como habitação, agricultura, comércio, indústria entre outros."
+   ],
+   [
+    "Licença de obras",
+    "Autorização concedida pelas Câmaras Municipais ao abrigo de legislação específica, para execução de Obras (construções novas, ampliações, transformações, restaurações e demolições de edifícios)."
+   ]
+  ],
+  "observacoes": "Contagem"
+ },
+ "0012918": {
+  "titulo": "População residente (N.º) por Local de residência (NUTS - 2024), Sexo e Grupo etário; Anual - INE, Estimativas anuais da população residente",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-06-22",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012918",
+  "fonte": "INE, Estimativas anuais da população residente",
+  "conceitos": [
+   [
+    "Sexo",
+    "Características biológicas e fisiológicas que definem homens e mulheres."
+   ],
+   [
+    "Grupo etário",
+    "Intervalo de idade, em anos, no qual o indivíduo se enquadra, de acordo com o momento de referência"
+   ],
+   [
+    "População residente",
+    "Conjunto de pessoas que, independentemente de estarem presentes ou ausentes num determinado alojamento no momento de observação, viveram no seu local de residência habitual por um período contínuo de, pelo menos, 12 meses anteriores ao momento de observação, ou que chegaram ao seu local de residência habitual durante o período correspondente aos 12 meses anteriores ao momento de observação, com a intenção de aí permanecer por um período mínimo de um ano."
+   ]
+  ],
+  "formula": "Valor estimado"
+ },
+ "0012909": {
+  "titulo": "Índice de envelhecimento (N.º) por Local de residência (NUTS - 2024); Anual - INE, Estimativas anuais da população residente",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-06-22",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012909",
+  "fonte": "INE, Estimativas anuais da população residente",
+  "conceitos": [
+   [
+    "População residente",
+    "Conjunto de pessoas que, independentemente de estarem presentes ou ausentes num determinado alojamento no momento de observação, viveram no seu local de residência habitual por um período contínuo de, pelo menos, 12 meses anteriores ao momento de observação, ou que chegaram ao seu local de residência habitual durante o período correspondente aos 12 meses anteriores ao momento de observação, com a intenção de aí permanecer por um período mínimo de um ano."
+   ],
+   [
+    "Índice de envelhecimento",
+    "Relação entre a população idosa e a população jovem, definida habitualmente como o quociente entre o número de pessoas com 65 ou mais anos e o número de pessoas com idades compreendidas entre os 0 e os 14 anos (expressa habitualmente por 100 (10^2) pessoas dos 0 aos 14 anos)."
+   ]
+  ],
+  "formula": "IE=[(P(65, +)/ P(0, 14)]*10^n\nP(65, +)=População residente com 65 e mais anos de idade.\nP(0, 14)=População residente com idade entre 0 e 14 anos.\nn=2."
+ },
+ "0013178": {
+  "titulo": "Taxa de crescimento efetivo (%) por Local de residência (NUTS - 2024); Anual - INE, Indicadores demográficos",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Percentagem (%)",
+  "atualizado": "2026-06-22",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013178",
+  "fonte": "INE, Indicadores demográficos",
+  "conceitos": [
+   [
+    "População média",
+    "População calculada pela média aritmética dos efetivos em dois momentos de observação, habitualmente em dois finais de anos consecutivos."
+   ],
+   [
+    "Taxa de crescimento efetivo",
+    "Variação populacional observada durante um determinado período de tempo, normalmente um ano civil, referido à população média desse período (habitualmente expressa por 100 (10^2) ou 1000 (10^3) habitantes)."
+   ]
+  ],
+  "formula": "TCE=[[P(t)-P(t-1)]/[P(t)+P(t-1)]/2]*10^n; P(t)=População no momento t; P(t-1)=População no momento (t-1); n=2 ou 3"
+ },
+ "0012450": {
+  "titulo": "Nados-vivos (N.º) por Local de residência da mãe (NUTS - 2024) e Sexo; Anual - INE, Nados-vivos",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-04-30",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012450",
+  "fonte": "INE, Nados-vivos",
+  "conceitos": [
+   [
+    "Nado-vivo",
+    "Produto do nascimento vivo."
+   ]
+  ],
+  "observacoes": "Contagem"
+ },
+ "0012656": {
+  "titulo": "Ganho médio mensal (€) por Localização geográfica (NUTS - 2024); Anual - MTSSS/GEP, Quadros de pessoal",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2024",
+  "unidade": "Euro (€)",
+  "nota": "Os dados referem-se a trabalhadores por conta de outrem a tempo completo com remuneração completa.",
+  "atualizado": "2026-03-27",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012656",
+  "fonte": "MTSSS/GEP, Quadros de pessoal",
+  "conceitos": [
+   [
+    "Estabelecimento",
+    "Empresa ou parte de uma empresa (fábrica, oficina, mina, armazém, loja, entreposto, etc.) situada num local topograficamente identificado. Nesse local ou a partir dele exercem-se atividades económicas para as quais, regra geral, uma ou várias pessoas trabalham (eventualmente a tempo parcial), por conta de uma mesma empresa."
+   ],
+   [
+    "Ganho",
+    "Montante ilíquido em dinheiro e/ou géneros pago ao trabalhador com caráter regular, durante o período de referência, por tempo trabalhado ou trabalho fornecido no período normal e extraordinário, incluindo o pagamento de horas remuneradas, mas não efetuadas (férias, feriados e outras ausências pagas)."
+   ]
+  ]
+ },
+ "0013417": {
+  "titulo": "Beneficiárias/os do rendimento social de inserção, da segurança social (N.º) por Local de residência (NUTS - 2024); Anual - Instituto de Informática",
+  "periodicidade": "Anual",
+  "primeiro": "2023",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "nota": "O total de Portugal inclui beneficiárias/os com residência não determinada.",
+  "atualizado": "2026-08-28",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013417",
+  "fonte": "Instituto de Informática",
+  "conceitos": [
+   [
+    "Beneficiário",
+    "Pessoa inscrita como titular do direito a proteção social no âmbito dos Regimes da Segurança Social, contributivos e não contributivos."
+   ],
+   [
+    "Rendimento social de inserção",
+    "Prestação incluída no subsistema de solidariedade e num programa de inserção, de modo a conferir às pessoas e aos seus agregados familiares apoios adaptados à sua situação pessoal, que contribuam para a satisfação das suas necessidades essenciais e que favoreçam a progressiva inserção laboral, social e comunitária."
+   ]
+  ],
+  "observacoes": "SEGURANÇA SOCIAL: Conjunto de sistemas e subsistemas de direito exercido nos termos estabelecidos na Constituição, nos instrumentos internacionais aplicáveis e na Lei de Bases da Segurança Social."
+ },
+ "0013420": {
+  "titulo": "Beneficiárias/os do rendimento social de inserção, da segurança social por 1000 habitantes em idade ativa (‰) por Local de residência (NUTS - 2024); Anual - Instituto de Informática",
+  "periodicidade": "Anual",
+  "primeiro": "2023",
+  "ultimo": "2025",
+  "unidade": "Permilagem (‰)",
+  "atualizado": "2026-11-03",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013420",
+  "fonte": "Instituto de Informática",
+  "conceitos": [
+   [
+    "Rendimento social de inserção",
+    "Prestação incluída no subsistema de solidariedade e num programa de inserção, de modo a conferir às pessoas e aos seus agregados familiares apoios adaptados à sua situação pessoal, que contribuam para a satisfação das suas necessidades essenciais e que favoreçam a progressiva inserção laboral, social e comunitária."
+   ]
+  ],
+  "formula": "(Beneficiárias/os do rendimento social de inserção, da segurança social/ População média em idade ativa)*1000"
+ },
+ "0014534": {
+  "titulo": "Pensionistas da segurança social (Série 2017 - N.º) por Local de residência (NUTS - 2024) e Tipo de pensão; Anual - Instituto de Informática",
+  "periodicidade": "Anual",
+  "primeiro": "2017",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-08-28",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014534",
+  "fonte": "Instituto de Informática",
+  "conceitos": [
+   [
+    "Pensionista",
+    "Titular de uma prestação pecuniária por invalidez, velhice, doença profissional ou morte."
+   ],
+   [
+    "Pensão",
+    "Prestação pecuniária mensal de atribuição continuada por morte (sobrevivência), invalidez, doença profissional e velhice."
+   ],
+   [
+    "Segurança social",
+    "Conjunto de sistemas e subsistemas de direito exercido nos termos estabelecidos na Constituição, nos instrumentos internacionais aplicáveis e na Lei de Bases da Segurança Social."
+   ]
+  ],
+  "observacoes": "A partir de janeiro de 2017, contabiliza-se o número de pensionistas com pagamento de pensão no âmbito da Segurança Social: Regime Geral, Regime Não Contributivo e Equiparado, Regime Especial de Segurança Social das Atividades Agrícolas. Os dados dizem respeito às pensões pagas pela Segurança Social."
+ },
+ "0013214": {
+  "titulo": "Dormidas (N.º) nos estabelecimentos de alojamento turístico por Localização geográfica (NUTS - 2024) e Tipo (alojamento turístico); Anual - INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "periodicidade": "Anual",
+  "primeiro": "2022",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-07-09",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013214",
+  "fonte": "INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "conceitos": [
+   [
+    "Alojamento turístico",
+    "Tipo de alojamento para dormidas de turistas."
+   ],
+   [
+    "Estabelecimento de alojamento turístico",
+    "Estabelecimento que se destina a prestar serviços de curta duração mediante remuneração e funciona em um ou mais edifícios ou instalações."
+   ],
+   [
+    "Dormida",
+    "Permanência de um indivíduo num estabelecimento que fornece alojamento, por um período compreendido entre as 12 horas de um dia e as 12 horas do dia seguinte."
+   ]
+  ]
+ },
+ "0013213": {
+  "titulo": "Hóspedes (N.º) nos estabelecimentos de alojamento turístico por Localização geográfica (NUTS - 2024) e Tipo (alojamento turístico); Anual - INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "periodicidade": "Anual",
+  "primeiro": "2022",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-07-09",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013213",
+  "fonte": "INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "conceitos": [
+   [
+    "Alojamento turístico",
+    "Tipo de alojamento para dormidas de turistas."
+   ],
+   [
+    "Estabelecimento de alojamento turístico",
+    "Estabelecimento que se destina a prestar serviços de curta duração mediante remuneração e funciona em um ou mais edifícios ou instalações."
+   ],
+   [
+    "Hóspede",
+    "Indivíduo que efetua pelo menos uma dormida num estabelecimento de alojamento turístico."
+   ]
+  ]
+ },
+ "0013210": {
+  "titulo": "Dormidas nos estabelecimentos de alojamento turístico por 100 habitantes (N.º) por Localização geográfica (NUTS - 2024); Anual - INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "periodicidade": "Anual",
+  "primeiro": "2022",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-07-09",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013210",
+  "fonte": "INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "conceitos": [
+   [
+    "Estabelecimento de alojamento turístico",
+    "Estabelecimento que se destina a prestar serviços de curta duração mediante remuneração e funciona em um ou mais edifícios ou instalações."
+   ],
+   [
+    "Dormida",
+    "Permanência de um indivíduo num estabelecimento que fornece alojamento, por um período compreendido entre as 12 horas de um dia e as 12 horas do dia seguinte."
+   ],
+   [
+    "Estabelecimento",
+    "Empresa ou parte de uma empresa (fábrica, oficina, mina, armazém, loja, entreposto, etc.) situada num local topograficamente identificado. Nesse local ou a partir dele exercem-se atividades económicas para as quais, regra geral, uma ou várias pessoas trabalham (eventualmente a tempo parcial), por conta de uma mesma empresa."
+   ]
+  ],
+  "formula": "(Dormidas nos estabelecimentos de alojamento turístico/ Número dehabitantes)"
+ },
+ "0013285": {
+  "titulo": "Proveitos totais (€) nos estabelecimentos de alojamento turístico por Localização geográfica (NUTS - 2024) e Tipo (alojamento turístico); Anual - INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "periodicidade": "Anual",
+  "primeiro": "2022",
+  "ultimo": "2025",
+  "unidade": "Euro (€)",
+  "atualizado": "2026-07-09",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013285",
+  "fonte": "INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "conceitos": [
+   [
+    "Proveitos totais dos meios de alojamento turístico",
+    "Valores resultantes da atividade dos meios de alojamento turístico: aposento, restauração e outros decorrentes da própria atividade (aluguer de salas, lavandaria, tabacaria, telefone, entre outros)."
+   ],
+   [
+    "Estabelecimento de alojamento turístico",
+    "Estabelecimento que se destina a prestar serviços de curta duração mediante remuneração e funciona em um ou mais edifícios ou instalações."
+   ]
+  ]
+ },
+ "0012088": {
+  "titulo": "Dormidas (N.º) nos estabelecimentos de alojamento turístico por Localização geográfica (NUTS - 2024) e Segmento (alojamento turístico); Mensal - INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "periodicidade": "Mensal",
+  "primeiro": "Janeiro de 2022",
+  "ultimo": "Setembro de 2026",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-11-17",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012088",
+  "fonte": "INE, Inquérito à permanência de hóspedes na hotelaria e outros alojamentos",
+  "conceitos": [
+   [
+    "Hóspede",
+    "Indivíduo que efetua pelo menos uma dormida num estabelecimento de alojamento turístico."
+   ],
+   [
+    "Dormida",
+    "Permanência de um indivíduo num estabelecimento que fornece alojamento, por um período compreendido entre as 12 horas de um dia e as 12 horas do dia seguinte."
+   ],
+   [
+    "Alojamento turístico",
+    "Tipo de alojamento para dormidas de turistas."
+   ],
+   [
+    "Estabelecimento de alojamento turístico",
+    "Estabelecimento que se destina a prestar serviços de curta duração mediante remuneração e funciona em um ou mais edifícios ou instalações."
+   ]
+  ]
+ },
+ "0014061": {
+  "titulo": "Empresas (N.º) por Localização geográfica (NUTS - 2024) e Dimensão; Anual - INE, Sistema de contas integradas das empresas",
+  "periodicidade": "Anual",
+  "primeiro": "2023",
+  "ultimo": "2024",
+  "unidade": "Número (N.º)",
+  "atualizado": "2025-12-11",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014061",
+  "fonte": "INE, Sistema de contas integradas das empresas",
+  "conceitos": [
+   [
+    "Empresa",
+    "Entidade jurídica (pessoa singular ou coletiva) correspondente a uma unidade organizacional de produção de bens e/ou serviços, usufruindo de uma certa autonomia de decisão, nomeadamente quanto à afetação dos seus recursos correntes. Uma empresa pode exercer uma ou várias atividades, em um ou em vários locais."
+   ]
+  ],
+  "formula": "IES"
+ },
+ "0014643": {
+  "titulo": "Constituição de pessoas coletivas e entidades equiparadas (N.º) por Localização geográfica (NUTS - 2024) e Atividade económica (Subclasse - CAE Rev. 4); Anual - DGPJ - Direção Geral da Política da Justiça, Constituição e dissolução de pessoas coletivas e entidades equiparadas",
+  "periodicidade": "Anual",
+  "primeiro": "2025",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-01-29",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014643",
+  "fonte": "DGPJ - Direção Geral da Política da Justiça, Constituição e dissolução de pessoas coletivas e entidades equiparadas",
+  "conceitos": [
+   [
+    "Pessoa coletiva",
+    "Organização constituída por um agrupamento de indivíduos ou por um complexo patrimonial tendo em vista a prossecução de um interesse comum determinado e à qual a ordem jurídica atribui a qualidade de sujeito de direito (personalidade jurídica). Podem ser de direito público ou de direito privado."
+   ],
+   [
+    "Empresa",
+    "Entidade jurídica (pessoa singular ou coletiva) correspondente a uma unidade organizacional de produção de bens e/ou serviços, usufruindo de uma certa autonomia de decisão, nomeadamente quanto à afetação dos seus recursos correntes. Uma empresa pode exercer uma ou várias atividades, em um ou em vários locais."
+   ],
+   [
+    "Atividade económica",
+    "Resultado da combinação dos fatores produtivos (mão de obra, matérias-primas, equipamento, etc.), com vista à produção de bens e serviços. Independentemente dos fatores produtivos que integram o bem ou serviço produzido, toda a atividade pressupõe, em termos genéricos, uma entrada de produtos (bens ou serviços), um processo de incorporação de valor acrescentado e uma saída (bens ou serviços)."
+   ],
+   [
+    "Entidade equiparada a pessoa coletiva",
+    "Para efeitos de inscrição no Ficheiro Central de Pessoas Coletivas, todos os serviços, entidades ou organismos não personalizados cujo registo se revele de interesse, nomeadamente para efeitos de planeamento e gestão."
+   ]
+  ]
+ },
+ "0013908": {
+  "titulo": "Receitas (€) das câmaras municipais por Localização geográfica (NUTS - 2024) e Classificador económico (Receitas); Anual - Direção-Geral das Autarquias Locais",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Euro (€)",
+  "nota": "Os apuramentos relativos às receitas e despesas das câmaras municipais têm subjacente uma base de caixa , daí que possam ser entendidas como entradas/origens de fundos e saídas/aplicações de fundos. A informação da receita é referente à receita cobrada líquida. Nas situações em que o valor dos reembolsos ou restituições são superiores ao valor cobrado, verifica-se um valor negativo da receita cobrada líquida.",
+  "atualizado": "2026-11-20",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013908",
+  "fonte": "Direção-Geral das Autarquias Locais",
+  "conceitos": [
+   [
+    "Câmara municipal",
+    "A câmara municipal é o órgão colegial do tipo executivo a quem está atribuída a gestão permanente dos assuntos municipais."
+   ]
+  ]
+ },
+ "0013909": {
+  "titulo": "Despesas (€) das câmaras municipais por Localização geográfica (NUTS - 2024) e Classificador económico (Despesas); Anual - Direção-Geral das Autarquias Locais",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Euro (€)",
+  "nota": "Os apuramentos relativos às receitas e despesas das câmaras municipais têm subjacente uma base de caixa , daí que possam ser entendidas como entradas/origens de fundos e saídas/aplicações de fundos.",
+  "atualizado": "2026-11-20",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013909",
+  "fonte": "Direção-Geral das Autarquias Locais",
+  "conceitos": [
+   [
+    "Câmara municipal",
+    "A câmara municipal é o órgão colegial do tipo executivo a quem está atribuída a gestão permanente dos assuntos municipais."
+   ]
+  ]
+ },
+ "0013899": {
+  "titulo": "Receitas das operações não financeiras das câmaras municipais por habitante (€/ hab.) por Localização geográfica (NUTS - 2024); Anual - Direção-Geral das Autarquias Locais",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Euro/ Habitante (€/ hab.)",
+  "nota": "Os apuramentos relativos às receitas e despesas das câmaras municipais têm subjacente uma base de caixa , daí que possam ser entendidas como entradas/origens de fundos e saídas/aplicações de fundos.",
+  "atualizado": "2026-11-21",
+  "metainfo": "https://www.ine.pt/xurl/metax/0013899",
+  "fonte": "Direção-Geral das Autarquias Locais",
+  "conceitos": [
+   [
+    "Câmara municipal",
+    "A câmara municipal é o órgão colegial do tipo executivo a quem está atribuída a gestão permanente dos assuntos municipais."
+   ]
+  ],
+  "formula": "(Receitas das operações não financeiras das câmaras municipais/ População residente em 31 de dezembro)"
+ },
+ "0014162": {
+  "titulo": "Consumo de energia elétrica por habitante (kWh/ hab.) por Local de residência (NUTS - 2024); Anual - DGEG, Estatísticas do carvão, petróleo, energia elétrica e gás natural",
+  "periodicidade": "Anual",
+  "primeiro": "2020",
+  "ultimo": "2024",
+  "unidade": "Quilowatt hora/ Habitante (kWh/ hab.)",
+  "atualizado": "2026-07-11",
+  "metainfo": "https://www.ine.pt/xurl/metax/0014162",
+  "fonte": "DGEG, Estatísticas do carvão, petróleo, energia elétrica e gás natural",
+  "conceitos": [
+   [
+    "População residente",
+    "Pessoas que, independentemente de no momento de observação - zero horas do dia de referência - estarem presentes ou ausentes numa determinada unidade de alojamento, aí habitam a maior parte do ano com a família ou detêm a totalidade ou a maior parte dos seus haveres."
+   ],
+   [
+    "Energia elétrica",
+    "Energia produzida por centrais hidroelétricas, nucleares e térmicas convencionais, de ondas e marés, eólicas e solares fotovoltaicas."
+   ]
+  ]
+ },
+ "0012767": {
+  "titulo": "Resíduos urbanos recolhidos seletivamente por habitante (kg/ hab.) por Localização geográfica (NUTS - 2024); Anual - INE, Estatísticas dos resíduos urbanos",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Quilograma/ Habitante (kg/ hab.)",
+  "atualizado": "2026-11-20",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012767",
+  "fonte": "INE, Estatísticas dos resíduos urbanos",
+  "conceitos": [
+   [
+    "População média",
+    "População calculada pela média aritmética dos efetivos em dois momentos de observação, habitualmente em dois finais de anos consecutivos."
+   ],
+   [
+    "Gestão de resíduos sólidos urbanos",
+    "Operações de recolha, transporte, tratamento, valorização e eliminação dos resíduos, incluindo o auto controlo destas operações e a vigilância dos locais de descarga depois de encerrados. Relativamente aos sistemas de gestão de resíduos sólidos urbanos, podem ser especificadas as seguintes fases: recolha, recolha seletiva, transportes, valorização e eliminação."
+   ],
+   [
+    "Recolha seletiva de resíduos",
+    "Recolha especial de resíduos que são objeto de deposição separada por parte do detentor, com a finalidade de serem reciclados (Ex.: os vidrões e os denominados \"ecopontos\")."
+   ]
+  ],
+  "formula": "Resíduos urbanos recolhidos seletivamente/ População média anual residente"
+ },
+ "0012261": {
+  "titulo": "Crimes registados (N.º) pelas autoridades policiais por Localização geográfica (NUTS - 2024) e Categoria de crime; Anual - Direcção-Geral da Política de Justiça",
+  "periodicidade": "Anual",
+  "primeiro": "2021",
+  "ultimo": "2025",
+  "unidade": "Número (N.º)",
+  "atualizado": "2026-03-31",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012261",
+  "fonte": "Direcção-Geral da Política de Justiça",
+  "conceitos": [
+   [
+    "Crime",
+    "Todo o facto descrito e declarado passível de pena criminal por lei anterior ao momento da sua prática."
+   ],
+   [
+    "Crime registado",
+    "Crime detetado pelas autoridades policiais ou levado ao seu conhecimento por meio de denúncia ou queixa."
+   ]
+  ]
+ }
+}

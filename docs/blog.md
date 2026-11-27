@@ -1,10 +1,11 @@
 ---
-title: Opinião
+title: Opinião e análises
+nav_title: Opinião
 layout: default
 permalink: /blog
 ---
 
-## Artigos
+## Artigos de opinião
 
 {% assign sorted_items = site.posts | sort: 'date' | reverse %}
 {% for post in sorted_items %}
@@ -20,6 +21,13 @@ permalink: /blog
   
 {% endif %}
 {% endfor %}
+
+## Análises e documentos {#analises}
+
+{% for post in sorted_items %}{% unless post.op %}
+* {{ post.date | date: "%Y-%m-%d" }}: [{{ post.title | xml_escape }}]({% if post.link %}{{ post.page }}{% else %}{{ post.url }}{% endif %})
+{% endunless %}{% endfor %}
+* Retrato dos Açores 2023 (PORDATA): [pdf](/assets/pdf/RetratoAçores2023.pdf), [site](https://www.pordata.pt/retratos/2023/retrato+dos+acores-91)
 
 ## Autores
 

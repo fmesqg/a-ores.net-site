@@ -1,5 +1,6 @@
 ---
 title: Execução orçamental
+nav_title: Contas da Região
 layout: default
 permalink: /dados/beo/
 ---
@@ -9,8 +10,10 @@ Receita e despesa do Governo Regional dos Açores, mês a mês, a partir do
 [Boletim de Execução Orçamental](https://portal.azores.gov.pt/web/drot/beo-boletim-de-execu%C3%A7%C3%A3o-or%C3%A7amental)
 que a Direção Regional do Orçamento e Tesouro publica todos os meses. Escolha
 um quadro do boletim e veja-o em gráfico, em tabela ou nos dois. Os valores
-publicados são acumulados desde janeiro; em "Mensal" vê o que entrou ou saiu
-em cada mês. A última coluna compara com o mesmo mês do ano anterior.
+publicados são acumulados desde janeiro; aqui vê, por omissão, o que entrou ou
+saiu em cada mês (“Mês a mês”), para comparar cada mês com o mesmo mês do ano
+anterior e ver as épocas do ano. Em “Acumulado no ano” vê os valores como o
+boletim os publica. Com “Ano a ano”, o gráfico põe os anos lado a lado.
 Atualizado todas as semanas. Ver também os [indicadores do INE](/dados/ine/)
 e os [outros dados abertos](/dados/).
 
@@ -26,10 +29,11 @@ e os [outros dados abertos](/dados/).
     <label id="med-wrap" hidden>Medida <select id="med"></select></label>
   </div>
   <div class="ine-row">
-    <div id="modo-wrap" class="ine-vista" role="group" aria-label="Valores">
+    <div class="modo-campo"><span class="modo-rot" id="modo-rot">Valores</span>
+    <div id="modo-wrap" class="ine-vista" role="group" aria-labelledby="modo-rot">
+      <button type="button" data-modo="mensal">Mês a mês</button>
       <button type="button" data-modo="acum">Acumulado no ano</button>
-      <button type="button" data-modo="mensal">Mensal</button>
-    </div>
+    </div></div>
     <label class="ine-grow">Procurar <input type="search" id="busca" placeholder="ex.: IRS, pessoal, saúde" autocomplete="off"></label>
   </div>
   <label class="ine-check"><input type="checkbox" id="todos"> Mostrar todos os meses</label>
@@ -40,6 +44,10 @@ e os [outros dados abertos](/dados/).
 <div id="painel" hidden>
   <h2 id="titulo"></h2>
   <p id="sub" class="ine-sub"></p>
+  <details id="def" class="ine-def" hidden>
+    <summary><strong>Termos usados neste quadro</strong> <span id="def-resumo"></span></summary>
+    <dl id="def-corpo"></dl>
+  </details>
   <div class="ine-vista" role="group" aria-label="Vista">
     <button type="button" data-vista="ambos">Tabela e gráfico</button>
     <button type="button" data-vista="grafico">Gráfico</button>
@@ -62,7 +70,7 @@ e os [outros dados abertos](/dados/).
       <div id="g-tip" class="g-tip" hidden></div>
     </div>
     <p id="g-ajuda" class="ine-sub">Junte linhas com a lista acima ou com as caixas na tabela (até 8). Em "Ano a ano",
-      cada linha é um ano, de janeiro a dezembro, para a primeira série escolhida. Passe o rato, toque ou use as setas para ver os valores.</p>
+      cada linha é um ano, de janeiro a dezembro, para a série marcada na tabela. Passe o rato, toque ou use as setas para ver os valores.</p>
   </div>
   <div id="tabela-wrap">
   <div class="ine-scroll">
@@ -80,6 +88,27 @@ e os [outros dados abertos](/dados/).
 
 <noscript><p>Esta página precisa de JavaScript. O ficheiro <a href="/dados/beo.csv">beo.csv</a> tem os mesmos dados.</p></noscript>
 
+<details id="glossario" class="glossario-todo">
+<summary><strong>Glossário completo</strong> ({{ site.data.glossario_beo | size }} termos do boletim)</summary>
+
+<p class="ine-sub">Os termos do boletim em linguagem corrente. <strong>Estas
+explicações são do açores.net, não são texto oficial.</strong> Em cada termo
+está a ligação para onde está a definição oficial: a lei ou o próprio boletim.
+Se encontrar um erro, diga-nos no
+<a href="https://github.com/fmesqg/a-ores.net-site/issues">GitHub</a>.</p>
+
+<dl class="glossario">
+{%- for g in site.data.glossario_beo %}
+  <dt id="g-{{ g.termo | slugify }}">{{ g.termo }}</dt>
+  <dd>{{ g.def }}</dd>
+  <dd class="fonte">Definição oficial:
+  {%- for k in g.fontes %}{% assign f = site.data.fontes[k] %}{% if f.url == "beo_ultimo" %}{% assign u = site.data.beo_ultimo.url %}{% else %}{% assign u = f.url %}{% endif %}
+    <a href="{{ u }}">{{ f.nome }}</a>{% unless forloop.last %};{% endunless %}
+  {%- endfor %}</dd>
+{%- endfor %}
+</dl>
+</details>
+
 ## Notas
 
 - Os valores vêm dos PDF do boletim, lidos por
@@ -88,12 +117,9 @@ e os [outros dados abertos](/dados/).
   se deve citar. O título de cada tabela liga ao último boletim.
 - Os boletins dão valores acumulados desde janeiro. "Mensal" é a diferença
   entre um mês e o anterior; em janeiro é o próprio valor.
-- "Execução do orçamento" é a percentagem do orçamento anual já cobrada ou
-  paga, tal como o boletim a publica.
-- GRA é o Governo Regional (os departamentos). SFA são os serviços e fundos
-  autónomos e EPR as entidades públicas reclassificadas (hospitais, por
-  exemplo). O consolidado não é a soma dos três: tira as transferências entre
-  eles.
+- O que quer dizer cada termo (receita efetiva, saldo primário, GRA, SFA,
+  EPR…) está em “Termos usados neste quadro”, por cima da tabela, e no
+  [glossário completo](#glossario), mais abaixo.
 - Os valores de 2023 vêm da coluna do ano anterior dos boletins de 2024, e só
   existem para a receita fiscal, a receita não fiscal e a despesa do GRA.
 - Os departamentos mudaram com o Governo que tomou posse em 2024. Os antigos
@@ -106,12 +132,23 @@ e os [outros dados abertos](/dados/).
 <style>
 .wrapper { max-width: min(1200px, 100%); }
 .ine-row { display: flex; flex-wrap: wrap; gap: .5em 1em; align-items: flex-end; margin-bottom: .75em; }
+.modo-campo { display: flex; flex-direction: column; }
 .ine-row label { display: flex; flex-direction: column; margin: 0; min-width: 0; max-width: 100%; }
 .ine-grow { flex: 1 1 16em; }
 .ine-form select, .ine-form input { font: inherit; padding: .3em .4em; max-width: 100%; }
 .ine-check { display: inline-flex; gap: .4em; align-items: center; margin-bottom: .5em; }
 .ine-form select:focus-visible, .ine-form input:focus-visible, th button:focus-visible { outline: 3px solid #268bd2; outline-offset: 1px; }
 #titulo { margin-bottom: .25em; font-size: 1.3em; }
+.ine-def { margin: .25em 0 .9em; padding: .5em .8em; border-left: 3px solid #268bd2; background: rgba(38,139,210,.06); font-size: .95em; max-width: 52em; }
+.ine-def summary { cursor: pointer; }
+.ine-def summary span { color: #586e75; font-size: .9em; }
+.ine-def dl, .glossario { margin: .5em 0 0; max-width: 52em; }
+.ine-def dt, .glossario dt { font-weight: bold; margin-top: .5em; }
+.ine-def dd, .glossario dd { margin: 0 0 .2em; }
+.glossario-todo { margin: 1.5em 0; max-width: 52em; }
+.glossario-todo > summary { cursor: pointer; font-size: 1.1em; }
+#tabela tr.ativa td { background: rgba(38,139,210,.08); }
+.glossario dd.fonte, .ine-def dd.fonte { font-size: .85em; color: #586e75; margin-bottom: .5em; }
 .ine-sub { color: #586e75; font-size: .9em; }
 .ine-scroll { overflow-x: auto; }
 #tabela { font-size: .9em; border-collapse: collapse; width: auto; min-width: 100%; }
@@ -163,6 +200,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 #tabela td.lugar input { accent-color: var(--c, #586e75); }
 [hidden] { display: none !important; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+@media (prefers-color-scheme: dark) { #g-svg .rotulo { fill: #eee8d5; } #g-svg .grade { stroke: rgba(147,161,161,.22); } }
 </style>
 
 <script>
@@ -177,7 +215,11 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   var fold = function (s) { return (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase(); };
   var slug = function (s) { return fold(s).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); };
   var Q = {}, QORDER = [];
-  var st = { q: "", linhas: "rubrica", filtro: "", med: EUR, modo: "acum", graf: "tempo", busca: "", todos: false,
+  // docs/_data/glossario_beo.yml: plain-language terms, matched to rubricas.
+  var GLOSS = {{ site.data.glossario_beo | jsonify }};
+  var FONTES = {{ site.data.fontes | jsonify }};
+  FONTES.boletim.url = {{ site.data.beo_ultimo.url | jsonify }};
+  var st = { q: "", linhas: "rubrica", filtro: "", med: EUR, modo: "mensal", graf: "tempo", busca: "", todos: false,
     ord: null, dir: 1, vista: "ambos", sel: null };
   // Categorical colours in fixed order, the same as the INE page (validated
   // against this background). A series keeps its colour while selected.
@@ -247,6 +289,45 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     var vals = items.map(function (it) { return it[0]; });
     sel.value = vals.indexOf(keep) >= 0 ? keep : vals.indexOf(fallback) >= 0 ? fallback : vals[0] || "";
     return sel.value;
+  }
+
+  // "Definição oficial: <law>; <law>" for a glossary entry.
+  function sources(keys) {
+    var dd = document.createElement("dd");
+    dd.className = "fonte";
+    dd.appendChild(document.createTextNode("Definição oficial: "));
+    (keys || []).forEach(function (k, i) {
+      var f = FONTES[k], a = document.createElement("a");
+      if (!f) return;
+      if (i) dd.appendChild(document.createTextNode("; "));
+      a.href = f.url; a.textContent = f.nome;
+      dd.appendChild(a);
+    });
+    return dd;
+  }
+
+  // The glossary entries that explain something in the table on screen.
+  function fillTerms(names, euros) {
+    var seen = {};
+    names.forEach(function (n) { if (n) seen[fold(n)] = 1; });
+    var hits = GLOSS.filter(function (g) {
+      if (g.medida) return !euros;
+      return (g.aplica || []).some(function (a) { return seen[fold(a)]; });
+    });
+    var dl = $("def-corpo"), frag = document.createDocumentFragment();
+    hits.forEach(function (g) {
+      var dt = document.createElement("dt"), dd = document.createElement("dd");
+      dt.textContent = g.termo; dd.textContent = g.def;
+      frag.appendChild(dt); frag.appendChild(dd);
+      frag.appendChild(sources(g.fontes));
+    });
+    var note = document.createElement("dd");
+    note.className = "fonte";
+    note.innerHTML = 'Explicações do açores.net, não são texto oficial. <a href="#glossario">Glossário completo</a>.';
+    if (hits.length) frag.appendChild(note);
+    dl.replaceChildren(frag);
+    $("def-resumo").textContent = hits.length ? "— " + hits.map(function (g) { return g.termo.toLowerCase(); }).slice(0, 4).join(", ") + (hits.length > 4 ? "…" : "") : "";
+    $("def").hidden = !hits.length;
   }
 
   function rubricas(x) {
@@ -394,15 +475,25 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     var max = 0;
     rows.forEach(function (p) { var v = p.v[t.last]; if (ok(v) && Math.abs(v) > max) max = Math.abs(v); });
     var frag = document.createDocumentFragment();
+    var anos = st.graf === "anos";
+    var shownKey = st.sel.filter(function (k) { return t.rows.some(function (p) { return p.key === k; }); })[0];
     rows.forEach(function (p) {
       var r = document.createElement("tr"); if (tree && !t.byDim) r.className = "n" + p.nivel;
       var td = function (text, cls) { var c = document.createElement("td"); c.textContent = text; if (cls) c.className = cls; r.appendChild(c); return c; };
       var lc = td("", "lugar" + (tree && !t.byDim ? " n" + p.nivel : "")), lab = document.createElement("label"), cb = document.createElement("input");
-      cb.type = "checkbox"; cb.checked = st.sel.indexOf(p.key) >= 0;
-      cb.disabled = !cb.checked && st.sel.length >= MAXSEL;
-      cb.setAttribute("aria-label", "Mostrar " + p.nome + " no gráfico");
-      if (cb.checked) lc.style.setProperty("--c", colorOf(p.key));
-      cb.addEventListener("change", function () { toggleSel(p.key); });
+      if (anos) {
+        // "Ano a ano" draws one series: the table picks it, like the list.
+        cb.type = "radio"; cb.name = "serie"; cb.checked = p.key === shownKey;
+        cb.setAttribute("aria-label", "Ver " + p.nome + " ano a ano no gráfico");
+        if (cb.checked) r.className += " ativa";
+        cb.addEventListener("change", function () { showFirst(p.key); });
+      } else {
+        cb.type = "checkbox"; cb.checked = st.sel.indexOf(p.key) >= 0;
+        cb.disabled = !cb.checked && st.sel.length >= MAXSEL;
+        cb.setAttribute("aria-label", "Mostrar " + p.nome + " no gráfico");
+        if (cb.checked) lc.style.setProperty("--c", colorOf(p.key));
+        cb.addEventListener("change", function () { toggleSel(p.key); });
+      }
       lab.appendChild(cb); lab.appendChild(document.createTextNode(tree || t.byDim ? p.nome : (p.caminho || p.nome))); lc.appendChild(lab);
       t.periods.forEach(function (d) {
         var v = p.v[d], c = td(show(v), "num");
@@ -411,7 +502,8 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       });
       if (t.prev) {
         var ch = change(p), c = td(isNaN(ch) ? "–" : pct.format(ch) + (t.euros ? "%" : ""), "num");
-        c.className += isNaN(ch) ? " falta" : ch > 0 ? " sobe" : ch < 0 ? " desce" : "";
+        var r1 = Math.round(ch * 10) / 10; // "0%" is neither up nor down
+        c.className += isNaN(ch) ? " falta" : r1 > 0 ? " sobe" : r1 < 0 ? " desce" : "";
       }
       frag.appendChild(r);
     });
@@ -422,9 +514,11 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     var what = t.euros ? "Milhões de euros, " + (st.modo === "mensal" ? "por mês" : "acumulado desde janeiro") : st.med + ", acumulada desde janeiro";
     $("sub").textContent = [what, DIM[st.q] ? (t.byDim ? Q[st.q].rub[st.filtro].rubrica : st.filtro) : "",
       t.all.length ? "de " + label(t.all[0]) + " a " + label(t.last) : "", "Boletim de Execução Orçamental"].filter(Boolean).join(" · ");
-    $("nota").textContent = t.prev ? "A variação compara " + longLabel(t.last) + " com " + longLabel(t.prev) +
+    $("nota").textContent = t.prev ? "A variação compara " + (st.modo === "mensal" && t.euros ? "o que entrou ou saiu em " : "o acumulado até ") +
+      longLabel(t.last) + " com " + (st.modo === "mensal" && t.euros ? "" : "o acumulado até ") + longLabel(t.prev) +
       (t.euros ? " (só quando os dois valores são positivos)." : ", em pontos percentuais.") : "";
     $("legenda").textContent = x.nome + (st.filtro ? ", " + st.filtro : "");
+    fillTerms(rows.map(function (p) { return p.nome; }).concat([st.filtro, x.nome]), t.euros);
     $("estado").textContent = rows.length + (t.byDim ? " " + DIM[st.q][1].toLowerCase() : " rubricas") + ".";
     $("painel").hidden = false;
     document.querySelectorAll("#modo-wrap button").forEach(function (b) {
@@ -445,6 +539,13 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       var used = {}; Object.keys(slot).forEach(function (k) { used[slot[k]] = 1; });
       for (var i = 0; i < COLORS.length; i++) if (!used[i]) { slot[g] = i; break; }
     });
+  }
+
+  // "Ano a ano": the chosen series goes first; the others stay chosen for
+  // "Ao longo do tempo".
+  function showFirst(k) {
+    st.sel = [k].concat(st.sel.filter(function (x) { return x !== k; })).slice(0, MAXSEL);
+    assignSlots(); render(); writeHash();
   }
 
   function toggleSel(k) {
@@ -666,7 +767,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     st.q = QORDER.filter(function (q) { return slug(q) === qs; })[0] || QORDER[0];
     st.linhas = p.get("linhas") === "dimensao" ? "dimensao" : "rubrica";
     st.filtro = p.get("filtro") || ""; st.med = p.get("medida") || EUR;
-    st.modo = p.get("modo") === "mensal" ? "mensal" : "acum";
+    st.modo = p.get("modo") === "acum" ? "acum" : "mensal";
     st.graf = p.get("grafico") === "anos" ? "anos" : "tempo";
     st.busca = p.get("q") || ""; st.todos = p.get("todos") === "1";
     st.ord = p.get("ord") || null; st.dir = p.get("dir") === "desc" ? -1 : 1;
@@ -679,7 +780,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   function writeHash() {
     var p = new URLSearchParams();
     [["quadro", slug(st.q)], ["linhas", st.linhas === "dimensao" ? "dimensao" : ""], ["filtro", st.filtro],
-     ["medida", st.med === EUR ? "" : st.med], ["modo", st.modo === "mensal" ? "mensal" : ""], ["grafico", st.graf === "anos" ? "anos" : ""],
+     ["medida", st.med === EUR ? "" : st.med], ["modo", st.modo === "acum" ? "acum" : ""], ["grafico", st.graf === "anos" ? "anos" : ""],
      ["q", st.busca], ["todos", st.todos ? "1" : ""], ["ord", st.ord || ""], ["dir", st.ord ? (st.dir > 0 ? "asc" : "desc") : ""],
      ["vista", st.vista === "ambos" ? "" : st.vista], ["sel", (st.sel || []).join("|")]]
       .forEach(function (kv) { if (kv[1]) p.set(kv[0], kv[1]); });
@@ -705,12 +806,18 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     b.addEventListener("click", function () { st.vista = b.getAttribute("data-vista"); applyVista(); drawChart(); writeHash(); });
   });
   document.querySelectorAll("[data-graf]").forEach(function (b) {
-    b.addEventListener("click", function () { st.graf = b.getAttribute("data-graf"); applyVista(); drawChart(); writeHash(); });
+    b.addEventListener("click", function () { st.graf = b.getAttribute("data-graf"); render(); writeHash(); });
+  });
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href="#glossario"]');
+    if (!a) return;
+    e.preventDefault();
+    $("glossario").open = true;
+    $("glossario").scrollIntoView({ behavior: "smooth", block: "start" });
   });
   $("g-juntar").addEventListener("change", function () {
     var k = $("g-juntar").value; if (!k) return;
-    if (st.graf === "anos") { st.sel = [k].concat(st.sel.filter(function (x) { return x !== k; })).slice(0, MAXSEL); assignSlots(); render(); writeHash(); }
-    else toggleSel(k);
+    if (st.graf === "anos") showFirst(k); else toggleSel(k);
   });
   $("g-svg").addEventListener("keydown", function (e) {
     if (!chart) return;

@@ -1,5 +1,6 @@
 ---
 title: Dados
+nav_title: Pesquisar
 layout: default
 permalink: /dados/
 ---
@@ -53,6 +54,75 @@ recomendações e números): ver [Tribunal de Contas](/dados/tdc/).
   </table>
 </div>
 <p><button type="button" id="mais" hidden>Mostrar mais</button></p>
+
+## O que é cada fonte
+
+<dl class="glossario">
+  <dt>Contratos públicos (BASE)</dt>
+  <dd>O portal <a href="https://www.base.gov.pt/">base.gov.pt</a>, onde as
+  entidades públicas são obrigadas a publicar os contratos que assinam. Aqui
+  estão os das entidades dos Açores (Governo Regional, câmaras, hospitais,
+  empresas públicas).</dd>
+  <dt>Assembleia Legislativa (ALRA)</dt>
+  <dd>O parlamento regional, em <a href="https://www.alra.pt/">alra.pt</a>:
+  requerimentos, iniciativas legislativas, votos, petições, audições,
+  diários das sessões e notas de imprensa.</dd>
+  <dt>Jornal Oficial (JORAA)</dt>
+  <dd>O <a href="https://jo.azores.gov.pt/">Jornal Oficial da Região</a>,
+  onde saem os atos do Governo Regional. Só entram os atos com montantes
+  (apoios, subsídios, contratos-programa, autorizações de despesa).</dd>
+</dl>
+
+<details class="termos">
+<summary><strong>O que quer dizer…</strong> adjudicante, ajuste direto, requerimento e outros termos</summary>
+<p class="fonte">Explicações do açores.net em linguagem corrente, não são texto
+oficial. Em cada termo está a ligação para a lei ou a fonte com a definição oficial.</p>
+<dl class="glossario">
+  <dt>Adjudicante</dt>
+  <dd>A entidade pública que contrata e paga (uma secretaria regional, uma câmara, um hospital).</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
+  <dt>Adjudicatário</dt>
+  <dd>A empresa ou pessoa contratada.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
+  <dt>Preço contratual</dt>
+  <dd>O valor do contrato, sem IVA, tal como publicado no BASE. O valor
+  efetivamente pago pode ser diferente (por exemplo, com trabalhos a mais).</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a>; <a href="{{ site.data.fontes.base.url }}">{{ site.data.fontes.base.nome }}</a></dd>
+  <dt>Ajuste direto</dt>
+  <dd>A entidade convida uma única empresa, sem concorrência. Só é permitido
+  abaixo de certos valores ou em casos previstos no Código dos Contratos
+  Públicos (urgência, um só fornecedor possível…).</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
+  <dt>Consulta prévia</dt>
+  <dd>A entidade convida pelo menos três empresas à sua escolha.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
+  <dt>Concurso público</dt>
+  <dd>Aberto a qualquer empresa, anunciado em Diário da República.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
+  <dt>Acordo-quadro</dt>
+  <dd>Um contrato que fixa condições (preços, fornecedores) para compras
+  futuras; as compras feitas ao abrigo dele aparecem como contratos próprios.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.ccp.url }}">{{ site.data.fontes.ccp.nome }}</a></dd>
+  <dt>Requerimento</dt>
+  <dd>Uma pergunta escrita de um ou mais deputados ao Governo Regional. O
+  Governo tem um prazo para responder; o estado mostra se está “no prazo”,
+  “fora de prazo” ou respondido.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a>; <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
+  <dt>Proposta e projeto (de decreto legislativo regional, de resolução)</dt>
+  <dd>Iniciativas legislativas: a proposta vem do Governo, o projeto vem dos
+  deputados. Um decreto legislativo regional é uma lei regional; uma
+  resolução é uma recomendação ou decisão da Assembleia.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a>; <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
+  <dt>Voto</dt>
+  <dd>Uma moção de pesar, congratulação, saudação ou protesto, votada em plenário.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.alra.url }}">{{ site.data.fontes.alra.nome }}</a></dd>
+  <dt>Portaria, despacho e resolução do Conselho de Governo</dt>
+  <dd>Atos do Governo Regional publicados no Jornal Oficial. A resolução é
+  decidida em Conselho de Governo; a portaria e o despacho são de um ou mais
+  membros do Governo.</dd>
+  <dd class="fonte">Definição oficial: <a href="{{ site.data.fontes.estatuto.url }}">{{ site.data.fontes.estatuto.nome }}</a></dd>
+</dl>
+</details>
 
 ## Descarregar
 
@@ -139,6 +209,12 @@ de cada resultado pode ser partilhado.
 .dados-form input:focus-visible, .dados-form select:focus-visible, button:focus-visible, th button:focus-visible { outline: 3px solid #268bd2; outline-offset: 1px; }
 .dados-scroll { overflow-x: auto; }
 #tabela { font-size: .9em; width: 100%; }
+.glossario { max-width: 52em; }
+.glossario dt { font-weight: bold; margin-top: .5em; }
+.glossario dd { margin: 0 0 .2em; }
+.glossario dd.fonte, .termos p.fonte { font-size: .85em; color: #586e75; margin-bottom: .5em; }
+.termos { margin: .5em 0 1.5em; max-width: 52em; }
+.termos summary { cursor: pointer; }
 #tabela td { vertical-align: top; }
 #tabela td.num { text-align: right; white-space: nowrap; }
 #tabela td.dt { white-space: nowrap; }
@@ -152,6 +228,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 <script>
 (function () {
   "use strict";
+  // Build time: the data files change with every deploy, so ask for this
+  // build's copy and never mix a new page with cached old data.
+  var BUILD = "{{ site.time | date: '%s' }}";
   // Columns shown per source: [csv column, label, kind]; kind: d=date, e=euros, l=link title, t=text
   var VIEW = {
     base: { tipo: "procedimento", data: "publicado", valor: "preco", link: "url",
@@ -198,7 +277,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
 
   function load(fonte) {
     if (!cache[fonte]) {
-      cache[fonte] = fetch("/dados/" + fonte + ".csv")
+      cache[fonte] = fetch("/dados/" + fonte + ".csv?v=" + BUILD)
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
         .then(parseCSV);
     }
@@ -342,7 +421,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
   $("mais").addEventListener("click", function () { state.shown += PAGE * 5; render(); });
   $("exportar").addEventListener("click", exportCSV);
 
-  fetch("/dados/meta.json").then(function (r) { return r.json(); }).then(function (m) {
+  fetch("/dados/meta.json?v=" + BUILD).then(function (r) { return r.json(); }).then(function (m) {
     document.querySelectorAll("[data-meta]").forEach(function (el) {
       var k = el.getAttribute("data-meta"), x = m[k];
       el.textContent = k === "gerado" ? x.replace("T", " ") : x.linhas.toLocaleString("pt-PT") + " linhas, " + x.de + " a " + x.ate;

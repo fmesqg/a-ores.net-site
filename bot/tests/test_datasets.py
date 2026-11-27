@@ -139,3 +139,151 @@ def test_sqlite_fts(tmp_path):
     assert con.execute(
         "select count(*) from alra where resposta is null"
     ).fetchone() == (2,)
+
+
+def test_pt_num():
+    assert datasets.pt_num(245328) == "245 328"
+    assert datasets.pt_num(39.38) == "39,4"
+    assert datasets.pt_num(5.94) == "5,94"
+    assert datasets.pt_num(75.0) == "75"
+    assert datasets.pt_num(-198.5) == "-198"
+
+
+INE_COLS = [
+    "varcd",
+    "tema",
+    "indicador",
+    "periodo",
+    "data",
+    "nivel",
+    "geocod",
+    "local",
+    "concelho",
+    "ilha",
+    "categoria",
+    "valor",
+    "unidade",
+    "atualizado",
+    "url",
+]
+
+
+def _ine(varcd, data, nivel, geocod, ilha, valor):
+    return [
+        varcd,
+        "",
+        "",
+        data[:4],
+        data,
+        nivel,
+        geocod,
+        "",
+        "",
+        ilha,
+        "",
+        str(valor),
+        "",
+        "",
+        f"https://www.ine.pt/xurl/indx/{varcd}",
+    ]
+
+
+BEO_COLS = [
+    "quadro",
+    "ordem",
+    "nivel",
+    "rubrica",
+    "caminho",
+    "dimensao",
+    "medida",
+    "ano",
+    "mes",
+    "data",
+    "valor",
+    "boletim",
+]
+
+
+def _beo(
+    quadro, caminho, valor, ano="2025", mes="12", nivel="0", dim="Consolidado"
+):
+    return [
+        quadro,
+        "1",
+        nivel,
+        caminho.split(" › ")[-1],
+        caminho,
+        dim,
+        "Montante (€)",
+        ano,
+        mes,
+        f"{ano}-{int(mes):02d}-01",
+        str(valor),
+        f"https://example/BEO_{ano}_{mes}.pdf",
+    ]
+
+
+def test_resumo(tmp_path):
+    ine = [
+        _ine("0012918", "2024-01-01", "Região", "20", "", 1),  # older: ignored
+        _ine("0012918", "2025-01-01", "Região", "20", "", 300),
+        _ine("0012918", "2025-01-01", "País", "PT", "", 10000),
+        _ine("0012918", "2025-01-01", "Concelho", "4201", "Flores", 100),
+        _ine("0012918", "2025-01-01", "Concelho", "4301", "Pico", 150),
+        _ine("0012918", "2025-01-01", "Concelho", "4302", "Pico", 50),
+    ]
+    rc = "Receita corrente › "
+    s = "Síntese global"
+    beo = [
+        _beo(s, "Receita efetiva", 1000e6),
+        _beo(s, rc + "Impostos diretos", 300e6),
+        _beo(s, rc + "Impostos indiretos", 300e6),
+        _beo(
+            s,
+            rc + "Transferências correntes › Administração central - Estado",
+            200e6,
+        ),
+        _beo(
+            s,
+            "Receita de capital › Transferências de capital › Resto do mundo",
+            100e6,
+        ),
+        _beo(s, "Despesa efetiva", 1200e6),
+        _beo(s, "Despesa corrente › Despesas com pessoal", 500e6),
+        _beo(s, "Saldo global", -200e6),
+        _beo(
+            s, "Receita efetiva", 9e9, ano="2026", mes="9"
+        ),  # year not closed
+        _beo(
+            "Despesa do GRA por função", "Saúde n.e.", 400e6, nivel="1", dim=""
+        ),
+    ]
+    datasets.write_resumo(
+        tmp_path, {"ine": (INE_COLS, ine), "beo": (BEO_COLS, beo)}
+    )
+    r = json.loads((tmp_path / "_data" / "resumo.json").read_text())
+    pop = r["ine"]["0012918"]
+    assert (pop["acores"], pop["pt"], pop["periodo"]) == (300, 10000, "2025")
+    assert [(i["ilha"], i["valor"], i["pct"]) for i in pop["ilhas"]] == [
+        ("Pico", 200, 67),
+        ("Flores", 100, 33),
+    ]
+    b = r["beo"]
+    assert (
+        b["ano"] == "2025" and b["saldo"] == -200 and b["saldo_abs_t"] == "200"
+    )
+    rec = {i["nome"]: i["valor"] for i in b["receitas"]}
+    assert rec["Impostos cobrados nos Açores"] == 600
+    assert rec["Transferências do Estado"] == 200
+    assert rec["Do exterior (sobretudo fundos europeus)"] == 100
+    assert rec["Outras receitas"] == 100
+    assert b["funcoes"] == [
+        {
+            "nome": "Saúde",
+            "valor": 400.0,
+            "pct": 100,
+            "valor_t": "400",
+            "pct_t": "100",
+        }
+    ]
+    assert b["despesa_hab"] == 4000000

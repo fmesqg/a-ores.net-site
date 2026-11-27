@@ -1,0 +1,35 @@
+# Official sources cited next to the plain-language glossaries
+# (glossario_beo.yml, /dados/). Keys are referenced from "fontes" lists.
+leo:
+  nome: Lei de Enquadramento Orçamental (Lei n.º 151/2015)
+  url: https://diariodarepublica.pt/dr/detalhe/lei/151-2015-70262477
+classificador:
+  nome: Classificador económico das receitas e despesas públicas (Decreto-Lei n.º 26/2002)
+  url: https://diariodarepublica.pt/dr/detalhe/decreto-lei/26-2002-284358
+lfra:
+  nome: Lei das Finanças das Regiões Autónomas (Lei Orgânica n.º 2/2013)
+  url: https://diariodarepublica.pt/dr/detalhe/lei-organica/2-2013-499567
+cofog:
+  nome: Classificação das funções das administrações públicas (COFOG, Eurostat)
+  url: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Classification_of_the_functions_of_government_(COFOG)
+boletim:
+  nome: Boletim de execução orçamental (último)
+  url: beo_ultimo
+ccp:
+  nome: Código dos Contratos Públicos (versão consolidada)
+  url: https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2008-34455475
+base:
+  nome: Portal BASE
+  url: https://www.base.gov.pt/
+estatuto:
+  nome: Estatuto Político-Administrativo dos Açores (Lei n.º 2/2009)
+  url: https://diariodarepublica.pt/dr/detalhe/lei/2-2009-397322
+alra:
+  nome: Assembleia Legislativa (alra.pt)
+  url: https://www.alra.pt/
+lei_eleitoral:
+  nome: Lei eleitoral da Assembleia Legislativa dos Açores (Lei Orgânica n.º 5/2006)
+  url: https://diariodarepublica.pt/dr/detalhe/lei-organica/5-2006-540392
+governo:
+  nome: Portal do Governo dos Açores
+  url: https://portal.azores.gov.pt/
