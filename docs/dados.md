@@ -6,11 +6,10 @@ permalink: /dados/
 ---
 # Dados abertos
 
-Tudo o que o açores.net recolheu desde agosto de 2024, numa tabela por fonte:
-contratos públicos (BASE), atividade da Assembleia Legislativa (ALRA) e atos
-com montantes do Jornal Oficial (JORAA). Pesquise aqui ou descarregue os CSV.
-Cada linha tem a ligação para o documento original
-(ver o [guia](/tutorial/)).
+Uma tabela por fonte: contratos públicos (BASE) desde 2012, e atividade da
+Assembleia Legislativa (ALRA) e atos com montantes do Jornal Oficial (JORAA)
+desde agosto de 2024. Pesquise aqui ou descarregue os CSV. Cada linha tem a
+ligação para o documento original (ver o [guia](/tutorial/)).
 
 **Estatísticas do INE por concelho e freguesia** (rendimentos e IRS, rendas,
 construção, população, turismo, câmaras): ver [Indicadores do INE](/dados/ine/).
@@ -20,6 +19,10 @@ orçamental): ver [Execução orçamental](/dados/beo/).
 
 **O que o Tribunal de Contas diz sobre a Conta da Região** (juízo, reservas,
 recomendações e números): ver [Tribunal de Contas](/dados/tdc/).
+
+**Quantos agregados há em cada escalão de IRS e quanto pagam** (Autoridade
+Tributária, desde 2016, com a Madeira e o continente): ver
+[IRS por escalão](/dados/irs/).
 
 <form id="dados-form" class="dados-form" role="search" onsubmit="return false">
   <fieldset>
@@ -62,8 +65,12 @@ recomendações e números): ver [Tribunal de Contas](/dados/tdc/).
   <dt>Contratos públicos (BASE)</dt>
   <dd>O portal <a href="https://www.base.gov.pt/">base.gov.pt</a>, onde as
   entidades públicas são obrigadas a publicar os contratos que assinam. Aqui
-  estão os das entidades dos Açores (Governo Regional, câmaras, hospitais,
-  empresas públicas).</dd>
+  estão os contratos executados nos Açores (Governo Regional, câmaras,
+  hospitais, empresas públicas, serviços do Estado na Região): desde agosto de
+  2024, os que o açores.net viu aparecer dia a dia; antes disso, e para
+  completar, os
+  <a href="https://dados.gov.pt/datasets/contratos-publicos-portal-base-impic-contratos-de-2012-a-2026">dados
+  abertos do IMPIC</a>, que gere o portal.</dd>
   <dt>Assembleia Legislativa (ALRA)</dt>
   <dd>O parlamento regional, em <a href="https://www.alra.pt/">alra.pt</a>:
   requerimentos, iniciativas legislativas, votos, petições, audições,
@@ -129,14 +136,15 @@ oficial. Em cada termo está a ligação para a lei ou a fonte com a definição
 
 | Ficheiro | Conteúdo | Cobertura |
 |---|---|---|
-| [base.csv](/dados/base.csv) | um contrato por linha: adjudicante, adjudicatário, preço, procedimento, data de assinatura | <span data-meta="base"></span> |
+| [base.csv](/dados/base.csv) | um contrato por linha: adjudicante, adjudicatário, preço, procedimento, data de assinatura, número de concorrentes e origem da linha (`açores.net` ou `IMPIC`) | <span data-meta="base"></span> |
 | [alra.csv](/dados/alra.csv) | requerimentos (com estado e resposta), iniciativas, votos, petições, intervenções, diários, audições, notas de imprensa | <span data-meta="alra"></span> |
 | [joraa.csv](/dados/joraa.csv) | atos do Jornal Oficial com montantes (portarias, despachos, resoluções) | <span data-meta="joraa"></span> |
 | [ine.csv](/dados/ine.csv) | um valor por linha: indicador, período, local (região, concelho ou freguesia), concelho, ilha, categoria, valor, unidade | <span data-meta="ine"></span> |
 | [beo.csv](/dados/beo.csv) | um valor por linha: quadro do boletim de execução orçamental, rubrica, subsetor ou departamento, medida, mês (acumulado desde janeiro), valor, boletim | <span data-meta="beo"></span> |
 | [tdc.csv](/dados/tdc.csv) | o texto dos pareceres do Tribunal de Contas sobre a Conta da Região: juízo, reservas, ênfases e recomendações (com o estado que o parecer seguinte lhes deu) | <span data-meta="tdc"></span> |
 | [tdc_valores.csv](/dados/tdc_valores.csv) | os números desses pareceres: conta consolidada, dívida total, receita e despesa fora da Conta | <span data-meta="tdc_valores"></span> |
-| [acores.db](/dados/acores.db) | as sete tabelas acima em SQLite, com pesquisa de texto | ver abaixo |
+| [at_irs.csv](/dados/at_irs.csv) | um valor por linha: IRS por escalão (agregados, rendimento englobado, IRS liquidado) nos Açores, na Madeira e no continente, e a taxa adicional de solidariedade | <span data-meta="at_irs"></span> |
+| [acores.db](/dados/acores.db) | as tabelas acima em SQLite, com pesquisa de texto; a tabela `base` tem mais colunas (NIF, CPV, preço base e preço efetivo, propostas, local de execução, fundamentação) | ver abaixo |
 
 Os CSV estão em UTF-8 e abrem diretamente no Excel, no LibreOffice ou no
 Google Sheets. Todos os ficheiros são refeitos todos os dias a partir das
@@ -150,21 +158,31 @@ partir dos PDF dos boletins, por
 [`bot/beo.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/beo.py).
 Os `tdc*.csv` mudam uma vez por ano, quando sai um parecer novo, por
 [`bot/tdc.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/tdc.py).
+Os contratos anteriores a agosto de 2024 vêm dos ficheiros anuais do IMPIC,
+relidos uma vez por mês por
+[`bot/base_impic.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/base_impic.py).
+O `at_irs.csv` muda uma vez por ano, quando a AT publica um dossiê estatístico
+novo, por
+[`bot/at_irs.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/at_irs.py).
 Última geração: <span data-meta="gerado"></span>.
 
 ## Consultar em SQL
 
-O ficheiro [acores.db](/dados/acores.db) tem as mesmas sete tabelas em SQLite,
-com pesquisa de texto (`base_fts`, `alra_fts`, `joraa_fts`, `ine_fts`, `beo_fts`, `tdc_fts`, `tdc_valores_fts`), que
-ignora acentos.
+O ficheiro [acores.db](/dados/acores.db) tem as mesmas tabelas em SQLite,
+com pesquisa de texto (`base_fts`, `alra_fts`, `joraa_fts`, `ine_fts` e as
+outras `<tabela>_fts`), que ignora acentos.
 Abre-se no navegador com o [Datasette Lite](https://lite.datasette.io), sem
-instalar nada. A primeira abertura descarrega cerca de 37 MB e demora alguns
-segundos. Também se abre com `sqlite3`, Python, R ou DuckDB.
+instalar nada. A primeira abertura descarrega a base inteira (algumas dezenas de MB) e
+demora alguns segundos. Também se abre com `sqlite3`, Python, R ou DuckDB.
 
 - [Abrir a base de dados](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores): as tabelas, com filtros, facetas e caixa de pesquisa.
 - [Maiores adjudicatários (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20adjudicatario%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20group%20by%20adjudicatario%20order%20by%20total_eur%20desc%20limit%20100)
 - [Ajustes diretos por entidade (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20adjudicante%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20where%20procedimento%20like%20%27Ajuste%20Direto%25%27%20group%20by%20adjudicante%20order%20by%20total_eur%20desc%20limit%20100)
 - [Pesquisa de texto em contratos (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20base.publicado%2C%20base.objeto%2C%20base.adjudicante%2C%20base.adjudicatario%2C%20base.preco%2C%20base.url%20from%20base%20join%20base_fts%20on%20base_fts.rowid%20%3D%20base.rowid%20where%20base_fts%20match%20%3Atermos%20order%20by%20base.preco%20desc&termos=bencom)
+- [Contratos por ano, com e sem concorrência (BASE, desde 2012)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20substr%28publicado%2C%201%2C%204%29%20as%20ano%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%20%2F%201e6%2C%201%29%20as%20milhoes_eur%2C%20round%28100.0%20%2A%20sum%28case%20when%20procedimento%20like%20%27Ajuste%20Direto%25%27%20then%20preco%20end%29%20%2F%20sum%28preco%29%2C%201%29%20as%20pct_valor_ajuste_direto%20from%20base%20group%20by%20ano%20order%20by%20ano)
+- [Concursos com um só concorrente, por entidade (BASE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20adjudicante%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%20from%20base%20where%20procedimento%20like%20%27Concurso%25%27%20and%20concorrentes%20%3D%201%20group%20by%20adjudicante%20order%20by%20total_eur%20desc%20limit%20100)
+- [Contratos entre duas entidades, ano a ano (BASE; mude os nomes)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20substr%28publicado%2C%201%2C%204%29%20as%20ano%2C%20count%28%2A%29%20as%20contratos%2C%20round%28sum%28preco%29%29%20as%20total_eur%2C%20group_concat%28distinct%20procedimento%29%20as%20procedimentos%20from%20base%20where%20adjudicante%20like%20%3Aadjudicante%20and%20adjudicatario%20like%20%3Aadjudicatario%20group%20by%20ano%20order%20by%20ano&adjudicante=%25EDA%25&adjudicatario=%25BENCOM%25)
+- [Agregados e IRS no último escalão, Açores e Madeira (AT)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20ano%2C%20regiao%2C%20taxa%2C%20valor%20as%20agregados%20from%20at_irs%20where%20quadro%20%3D%20%27Taxas%20de%20tributa%C3%A7%C3%A3o%27%20and%20medida%20%3D%20%27Agregados%27%20and%20titularidade%20%3D%20%27Total%27%20and%20regiao%20%21%3D%20%27Continente%27%20and%20escalao%20%3D%20%28select%20max%28escalao%29%20from%20at_irs%20b%20where%20b.ano%20%3D%20at_irs.ano%20and%20b.regiao%20%3D%20at_irs.regiao%20and%20b.quadro%20%3D%20at_irs.quadro%20and%20b.medida%20%3D%20at_irs.medida%29%20order%20by%20regiao%2C%20ano)
 - [Requerimentos por deputado e resposta (ALRA)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20autores%2C%20count%28%2A%29%20as%20requerimentos%2C%20sum%28estado%20%3D%20%27RESPOSTA%20ATEMPADA%27%29%20as%20atempada%2C%20sum%28estado%20%3D%20%27RESPOSTA%20TADIA%27%29%20as%20tardia%2C%20sum%28estado%20%3D%20%27FORA%20DE%20PRAZO%27%29%20as%20fora_de_prazo%20from%20alra%20where%20tipo%20%3D%20%27Requerimentos%27%20group%20by%20autores%20order%20by%20requerimentos%20desc)
 - [Rendimento médio após IRS por freguesia, 2024 (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20local%2C%20concelho%2C%20ilha%2C%20valor%20as%20euros%20from%20ine%20where%20varcd%20%3D%20%270012756%27%20and%20periodo%20%3D%20%272024%27%20and%20nivel%20%3D%20%27Freguesia%27%20order%20by%20valor%20desc)
 - [Renda mediana (€/m²) de novos contratos por concelho e ano (INE)](https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20local%2C%20group_concat%28periodo%20%7C%7C%20%27%3A%20%27%20%7C%7C%20valor%2C%20%27%20%C2%B7%20%27%29%20as%20serie%20from%20ine%20where%20varcd%20%3D%20%270014698%27%20and%20nivel%20%21%3D%20%27Freguesia%27%20group%20by%20local%20order%20by%20local)
@@ -194,7 +212,13 @@ de cada resultado pode ser partilhado.
   encontrar atos. Para citar, leia o valor no próprio ato. "0" quer dizer
   que não se encontrou nenhum valor em euros.
 - **BASE**: a data de publicação é o dia em que o contrato apareceu no portal,
-  não o da assinatura. Um contrato republicado conta uma vez só.
+  não o da assinatura. Um contrato republicado conta uma vez só. Desde agosto
+  de 2024 é o dia em que o açores.net o viu; antes, é a data que o IMPIC
+  publica (coluna `recolha`). Entram os contratos com local de execução nos
+  Açores, o mesmo critério da pesquisa do BASE. As colunas extra do IMPIC
+  (concorrentes, propostas, preço efetivo) são as que as entidades
+  preencheram no portal e às vezes faltam.
+- **IRS (AT)**: ver as notas na página [IRS por escalão](/dados/irs/#notas).
 - **ALRA**: o "estado" de um requerimento é o último que o robô registou. A
   coluna `data` é a de entrada. As notas de imprensa não têm data própria, por
   isso usa-se `primeiro_dia`.
@@ -244,7 +268,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     base: { tipo: "procedimento", data: "publicado", valor: "preco", link: "url",
       cols: [["publicado", "Publicado", "d"], ["objeto", "Objeto", "l"], ["adjudicante", "Adjudicante", "t"],
              ["adjudicatario", "Adjudicatário", "t"], ["preco", "Preço", "e"], ["procedimento", "Procedimento", "t"],
-             ["data_assinatura", "Assinatura", "d"]] },
+             ["data_assinatura", "Assinatura", "d"], ["concorrentes", "Concorrentes", "n"]] },
     alra: { tipo: "tipo", data: "primeiro_dia", link: "url",
       cols: [["primeiro_dia", "Visto em", "d"], ["tipo", "Tipo", "t"], ["titulo", "Título", "l"],
              ["autores", "Autores", "t"], ["data", "Entrada", "d"], ["estado", "Estado", "t"],

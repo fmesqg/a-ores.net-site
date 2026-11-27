@@ -1,0 +1,60 @@
+name: AT IRS statistics (Dossier Estatístico)
+
+# Reads every IRS "Dossier Estatístico" on the Portal das Finanças with
+# bot/at_irs.py and rewrites data/at_irs.csv: households, income and tax by
+# tax bracket in the Azores, Madeira and the mainland, and the additional
+# solidarity rate, since 2016. The AT publishes a new edition once a year,
+# between late March and mid April, so the run is weekly from March to May
+# and monthly otherwise. A run costs about ten requests to
+# info.portaldasfinancas.gov.pt, two seconds apart.
+#
+# The run fails, and GitHub emails, when the page lists no dossier, an
+# edition cannot be read (the tables changed layout), or the newest year
+# is more than two years old.
+
+on:
+  schedule:
+    - cron: '17 5 * 3-5 2'
+    - cron: '17 5 2 1,2,6-12 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install openpyxl==3.1.5
+      - name: Read the IRS dossiers
+        run: python3 bot/at_irs.py data
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          if git diff --quiet -- data/at_irs.csv && git ls-files --error-unmatch data/at_irs.csv >/dev/null 2>&1; then
+            echo "Nothing to write."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config --global user.name "fmesqg-auto"
+            git config --global user.email "fmesqg-auto@users.noreply.github.com"
+            git add data/at_irs.csv
+            git commit -m "AT IRS statistics update"
+            git pull --rebase origin main
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy-site:
+    needs: fetch
+    if: needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

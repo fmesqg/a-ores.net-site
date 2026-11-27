@@ -82,6 +82,12 @@ diretas.</p>
   <span class="onde">AdC: <a href="https://www.concorrencia.pt/sites/default/files/processos/ccent/AdC-CCENT_2010_40-Decisao-VNC-final-net.pdf">Ccent. 40/2010</a></span></li>
   <li><b>2010–2021.</b> A EDA paga 22 M€ acima do valor aceite pela ERSE.
   <span class="onde">ERSE: <a href="https://app.parlamento.pt/webutils/docs/doc.pdf?path=6148523063484d364c793968636d356c6443397a6158526c63793959566b786c5a79394562324e31625756756447397a554756795a3356756447467a556d5678645756796157316c626e527663793878553077764e5455344e5441355a4449745a6d4e68595330304e7a63354c5467335a544d744e546b325a6d597a4e6d4535596a41334c6e426b5a673d3d&fich=558509d2-fcaa-4779-87e3-596ff36a9b07.pdf&Inline=true">resposta</a> ao requerimento 10-EI/XV/1 da Assembleia da República</span></li>
+  <li><b>2013–2023.</b> No BASE, a EDA compra o gasóleo das centrais por
+  concurso público (2013, 2019, 2020, 2023), com dois ou três concorrentes:
+  Repsol e Galp ou Petrogal. Do fuelóleo só publica contratos de
+  <em>transporte</em> (SOTRAN e J. H. Ornelas, 2020–2023), nenhum de
+  fornecimento.
+  <span class="onde">No açores.net: <a href="/dados/#fonte=base&q=gas%C3%B3leo%20centrais%20termoel">gasóleo</a> · <a href="/dados/#fonte=base&q=transporte%20de%20fuel%C3%B3leo">transporte de fuelóleo</a> (dados abertos do IMPIC, desde 2012)</span></li>
   <li><b>jan 2023.</b> O Governo Regional confirma que a BENCOM denunciou o
   acordo, que termina a 31 de janeiro de 2025.
   <span class="onde">Assembleia: <a href="http://base.alra.pt:82/Doc_Req/XIIrequeresp531.pdf">resposta ao requerimento 531/XII</a></span></li>
@@ -114,7 +120,7 @@ diretas.</p>
   válidas, um concurso internacional tem vencedor: a BENCOM, com
   <strong>168 331 700 €</strong>, por até três anos. A Galp foi excluída por
   propor um preço acima do máximo.
-  <span class="onde">TED: <a href="https://ted.europa.eu/pt/notice/-/detail/524899-2026">anúncio de adjudicação</a> (ainda não aparece nos dados do BASE recolhidos pelo açores.net)</span></li>
+  <span class="onde">TED: <a href="https://ted.europa.eu/pt/notice/-/detail/524899-2026">anúncio de adjudicação</a> (ainda não aparece no BASE, nem na recolha diária nem nos dados abertos do IMPIC)</span></li>
   <li><b>set 2026.</b> O Relatório e Contas da EDA de 2025 regista perdas de
   8,9 M€ (95 % de 9,4 M€) por custos de fuelóleo que a ERSE não aceita.
   <span class="onde">No açores.net: <a href="/ao/20260915-11/">Açoriano Oriental, 15/09</a> · <a href="https://files.eda.pt/edasharepointfiles/Files/GaleriaDocumentos/132/RG_EDA_2025.pdf#page=30">R&amp;C, p. 30</a></span></li>
@@ -143,6 +149,17 @@ diretas.</p>
 proposta da BENCOM foi admitida. No gasóleo, o concurso de 2025 foi ganho
 por dois fornecedores, Repsol e Galp.</p>
 <p class="ir">BASE e TED, ligações acima</p>
+</div>
+<div class="cartao">
+<h3>Fuelóleo no BASE antes de 2024</h3>
+<p class="grande">0 contratos</p>
+<p>De 2012 a agosto de 2024, a EDA não publicou no BASE nenhum contrato de
+compra de fuelóleo; o primeiro é o ajuste direto de setembro de 2024. O
+gasóleo, no mesmo período, foi sempre a concurso. Daqui deduzimos (não é
+dito em nenhum documento do BASE) que, até então, o fuelóleo vinha ao abrigo
+do acordo com a BENCOM que terminou a 31 de janeiro de 2025 (ver jan 2023 na
+cronologia).</p>
+<p class="ir">Pesquisa do açores.net nos dados do IMPIC · <a href="https://lite.datasette.io/?url=https://xn--aores-yra.net/dados/acores.db#/acores?sql=select%20publicado%2C%20preco%2C%20procedimento%2C%20adjudicatario%2C%20concorrentes%2C%20objeto%2C%20url%20from%20base%20where%20adjudicante%20like%20%27%25Electricidade%20dos%20A%25%27%20and%20%28objeto%20like%20%27%25fuel%25%27%20or%20objeto%20like%20%27%25gas%C3%B3leo%25%27%29%20order%20by%20publicado">ver a consulta</a></p>
 </div>
 <div class="cartao">
 <h3>Margem: fornecedor e cliente</h3>

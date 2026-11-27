@@ -1,4 +1,5 @@
 import csv
+import gzip
 import json
 import sqlite3
 
@@ -1111,3 +1112,77 @@ def test_salario_pib_latest_common_year():
     assert a["local"] == "Açores" and a["mediana_pct"] == 55
     assert a["ganho_ano"] == 14000 and a["ganho_pct"] == 70
     assert datasets.salario_pib(cols, rows[:3]) == {}
+
+
+def test_base_merges_impic_history(tmp_path):
+    (tmp_path / "docs" / "_base_updates").mkdir(parents=True)
+    (tmp_path / "docs" / "_base_updates" / "2025-10-01.md").write_text(
+        "# BASE\n\n"
+        "* [Fuelóleo](https://www.base.gov.pt/Base4/pt/detalhe/"
+        "?type=contratos&id=11758845)\n"
+        "  * Adjudicante: EDA\n  * Adjudicatário: BENCOM\n"
+        "  * Preço contratual: 64.500.000,00 €\n",
+        encoding="utf-8",
+    )
+    folder = tmp_path / "data" / "base_impic"
+    folder.mkdir(parents=True)
+    from bot import base_impic
+
+    def gz(name, rows):
+        with gzip.open(folder / name, "wt", encoding="utf-8", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(base_impic.COLS)
+            w.writerows(rows)
+
+    blank = [""] * (len(base_impic.COLS) - 1)
+
+    def r(**kw):
+        d = dict(zip(base_impic.COLS, ["", *blank], strict=True))
+        d.update(kw)
+        return [d[c] for c in base_impic.COLS]
+
+    gz(
+        "2025.csv.gz",
+        [
+            r(
+                id="11758845",
+                publicado="2025-09-30",
+                preco="64500000.0",
+                adjudicatario_nif="512002850",
+                concorrentes="1",
+                propostas="1",
+            )
+        ],
+    )
+    gz(
+        "2014.csv.gz",
+        [
+            r(
+                id="1000",
+                publicado="2014-03-02",
+                preco="0.0",
+                adjudicante="EDA",
+                adjudicatario="BENCOM",
+                procedimento="Ajuste Direto",
+            )
+        ],
+    )
+    meta = datasets.main(tmp_path / "docs")
+    assert meta["base"]["linhas"] == 2
+    assert meta["base"]["de"] == "2014-03-02"
+    assert meta["base"]["diario_de"] == "2025-10-01"
+    with open(
+        tmp_path / "docs" / "dados" / "base.csv", encoding="utf-8-sig"
+    ) as f:
+        rows = {x["id"]: x for x in csv.DictReader(f)}
+    assert rows["11758845"]["publicado"] == "2025-10-01"  # the bot's day
+    assert rows["11758845"]["recolha"] == "açores.net"
+    assert rows["11758845"]["concorrentes"] == "1"
+    assert "adjudicatario_nif" not in rows["11758845"]  # only in acores.db
+    old = rows["1000"]
+    assert old["recolha"] == "IMPIC" and old["preco"] == "0.0"
+    assert old["url"].endswith("id=1000")
+    con = sqlite3.connect(tmp_path / "docs" / "dados" / "acores.db")
+    assert con.execute(
+        "select adjudicatario_nif, propostas from base where id = 11758845"
+    ).fetchone() == ("512002850", 1)
