@@ -1084,3 +1084,9 @@ def test_ilhas_censos_sums_concelhos():
     assert flores["empregados"] == 1691 and flores["o_pct"] == 28.4
     assert corvo["opq_pct"] == 49.8
     assert il["acores"]["empregados"] == 1910
+    c = il["concelhos"]
+    assert len(c) == 3
+    assert [x["o_pct"] for x in c] == sorted(
+        (x["o_pct"] for x in c), reverse=True
+    )
+    assert {x["nome"]: x["ilha"] for x in c}["Lajes das Flores"] == "Flores"

@@ -1457,20 +1457,25 @@ def _ilhas_censos(censos: tuple[list, list]) -> dict:
     administration, defence, social security), P (education) and Q (health
     and social work), 2021 census (data/censos2021_setores.csv)."""
     soma: dict = {}
+    conc: dict = {}
+    ilha_de: dict = {}
     for r in _dicts(censos):
-        d = soma.setdefault(r["ilha"], {"O": 0, "P": 0, "Q": 0, "Total": 0})
-        d[r["secao"]] += int(r["valor"])
+        for k, tab in ((r["ilha"], soma), (r["concelho"], conc)):
+            d = tab.setdefault(k, {"O": 0, "P": 0, "Q": 0, "Total": 0})
+            d[r["secao"]] += int(r["valor"])
+        ilha_de[r["concelho"]] = r["ilha"]
     if not soma:
         return {}
     soma["Açores"] = {
         k: sum(d[k] for d in soma.values()) for k in ("O", "P", "Q", "Total")
     }
 
-    def linha(nome: str) -> dict:
-        d = soma[nome]
+    def linha(nome: str, tab: dict | None = None) -> dict:
+        d = (tab or soma)[nome]
         t = d["Total"]
         return {
-            "ilha": nome,
+            "ilha": ilha_de.get(nome, nome) if tab else nome,
+            "nome": nome,
             "empregados": t,
             "o": d["O"],
             "o_pct": round(100 * d["O"] / t, 1),
@@ -1480,8 +1485,13 @@ def _ilhas_censos(censos: tuple[list, list]) -> dict:
         }
 
     ilhas = [linha(n) for n in ORDEM_ILHAS if n in soma]
+    concelhos = sorted(
+        (linha(n, conc) for n in conc), key=lambda x: -x["o_pct"]
+    )
     return {
         "lista": ilhas,
+        "concelhos": concelhos,
+        "max_pct_concelho": max(x["opq_pct"] for x in concelhos),
         "acores": linha("Açores"),
         "max_pct": max(x["opq_pct"] for x in ilhas),
         "url": _dicts(censos)[0]["url"],

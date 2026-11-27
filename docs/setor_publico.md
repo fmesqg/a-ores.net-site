@@ -135,6 +135,20 @@ ilha (pessoas, pelo emprego principal), não da população total.</p>
 </table>
 </div>
 
+<details class="concelhos">
+<summary><strong>Por concelho</strong> ({{ il.concelhos.size }}), ordenado pela secção O</summary>
+<div class="tabela-scroll">
+<table class="sper barras">
+<thead><tr><th>Concelho</th><th class="n">Empregados (2021)</th><th class="n">Adm. pública (O)</th><th class="n">% O</th><th class="n">% educação (P)</th><th class="n">% saúde e apoio social (Q)</th><th class="n">% O+P+Q</th><th class="barra-col" aria-hidden="true"></th></tr></thead>
+<tbody>
+{%- for x in il.concelhos %}
+<tr><th scope="row">{{ x.nome | remove: " (R.A.A.)" }}{% if x.ilha != x.nome %} <small>{{ x.ilha }}</small>{% endif %}</th><td class="n">{{ x.empregados_t }}</td><td class="n">{{ x.o_t }}</td><td class="n">{{ x.o_pct_t }}</td><td class="n">{{ x.p_pct_t }}</td><td class="n">{{ x.q_pct_t }}</td><td class="n">{{ x.opq_pct_t }}</td><td class="barra-col" aria-hidden="true"><span class="barra" style="width: {{ x.opq_pct | times: 100.0 | divided_by: il.max_pct_concelho }}%"></span></td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+</details>
+
 <ul class="nota">
   <li>INE, <a href="{{ il.url }}">Censos 2021</a>: população empregada por
   local de residência e secção de atividade (CAE Rev. 3). A soma por ilha e
@@ -329,6 +343,8 @@ do <a href="/dados/sper/">Conselho das Finanças Públicas</a>.</p>
 table.sper { border-collapse: collapse; font-size: .9em; min-width: 100%; }
 table.sper th, table.sper td { padding: .3em .5em; border-bottom: 1px solid rgba(147,161,161,.35); text-align: left; vertical-align: top; }
 table.sper th[scope="row"] { font-weight: normal; white-space: nowrap; }
+.concelhos { margin: .5em 0 1em; }
+.concelhos summary { cursor: pointer; margin-bottom: .5em; }
 table.sper th[scope="row"] small { color: #839496; }
 table.sper .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 table.sper thead th, table.sper thead th.n { white-space: normal; }
