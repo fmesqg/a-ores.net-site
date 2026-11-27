@@ -21,7 +21,12 @@ secao: dados
 | [at_irc.csv](/dados/at_irc.csv) | um valor por linha: IRC à taxa da Região, derrama estadual por escalão e taxas nominais de IRC, nos Açores, na Madeira e no continente | <span data-meta="at_irc"></span> |
 | [at_distritos.csv](/dados/at_distritos.csv) | um valor por linha: os mapas «por distrito» da AT, de IRS (agregados, rendimento, imposto, taxa efetiva, desde 2015) e de IRC (declarações, lucro, prejuízo, matéria coletável, imposto, taxa efetiva, desde 2011), com o distrito como a AT o escreve e a região | <span data-meta="at_distritos"></span> |
 | [bportugal.csv](/dados/bportugal.csv) | um valor por linha, do Banco de Portugal: empréstimos a particulares (habitação, consumo) e a empresas, crédito vencido e devedores por região (mensal), depósitos por região (mensal, desde 2018), investimento direto do exterior por região (anual) e indicadores das empresas por região e setor (anual, desde 2006), com o número da série no BPstat | <span data-meta="bportugal"></span> |
-| [contratos.db](/dados/contratos.db), [parlamento.db](/dados/parlamento.db), [financas.db](/dados/financas.db), [estatisticas.db](/dados/estatisticas.db), [empresas.db](/dados/empresas.db) | as tabelas acima em SQLite, uma base por tema, com pesquisa de texto; a tabela `base` tem mais colunas (NIF, CPV, preço base e preço efetivo, propostas, local de execução, fundamentação) | ver abaixo |
+| [srea.csv](/dados/srea.csv) | um valor por linha, do SREA: inflação, atividade económica, desemprego, turismo por ilha, PIB por ilha, pagamentos com cartão por concelho e défice e dívida da Região | <span data-meta="srea"></span> |
+| [prr_projetos.csv](/dados/prr_projetos.csv) | um projeto do PRR por linha, dos que têm uma parte nos Açores: designação, componente, investimento, concelhos, valor aprovado e pago (total e parte dos Açores), datas | <span data-meta="prr_projetos"></span> |
+| [prr_entidades.csv](/dados/prr_entidades.csv) | as entidades desses projetos: NIF, nome, papel (beneficiário final, beneficiário intermediário, parceiro), sede, CAE, valor contratado e pago | <span data-meta="prr_entidades"></span> |
+| [kohesio_projetos.csv](/dados/kohesio_projetos.csv) | **em construção:** os projetos dos fundos de coesão (2014-2020 e 2021-2027) que o Kohesio situa nos Açores: programa, período, fundo, custo total, apoio da UE, datas e uma nota quando a localização é duvidosa | <span data-meta="kohesio_projetos"></span> |
+| [kohesio_beneficiarios.csv](/dados/kohesio_beneficiarios.csv) | **em construção:** os beneficiários desses projetos, segundo o Kohesio, com o número de projetos e os totais (sem NIF; incluem projetos mal localizados) | <span data-meta="kohesio_beneficiarios"></span> |
+| [contratos.db](/dados/contratos.db), [parlamento.db](/dados/parlamento.db), [financas.db](/dados/financas.db), [estatisticas.db](/dados/estatisticas.db), [empresas.db](/dados/empresas.db), [fundos.db](/dados/fundos.db) | as tabelas acima em SQLite, uma base por tema, com pesquisa de texto; a tabela `base` tem mais colunas (NIF, CPV, preço base e preço efetivo, propostas, local de execução, fundamentação) | ver abaixo |
 
 Os CSV estão em UTF-8 e abrem diretamente no Excel, no LibreOffice ou no
 Google Sheets. Todos os ficheiros são refeitos todos os dias a partir das
@@ -43,6 +48,10 @@ estatísticos de IRS e de IRC, por
 [`bot/at_ir.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/at_ir.py).
 O `bportugal.csv` é relido uma vez por semana da API do BPstat por
 [`bot/bportugal.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/bportugal.py).
+Os `prr_*.csv` e `kohesio_*.csv` são relidos uma vez por semana, dos dados
+abertos da Recuperar Portugal e da API do Kohesio, por
+[`bot/fundos.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/fundos.py)
+(ver [Fundos europeus](/financas/fundos-europeus/)).
 Última geração: <span data-meta="gerado"></span>.
 <script>
 fetch("/dados/meta.json?v={{ site.time | date: '%s' }}").then(function (r) { return r.json(); }).then(function (m) {

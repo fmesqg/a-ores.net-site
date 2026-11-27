@@ -28,6 +28,14 @@ secao: dados
   <dd>O <a href="https://jo.azores.gov.pt/">Jornal Oficial da Região</a>,
   onde saem os atos do Governo Regional. Só entram os atos com montantes
   (apoios, subsídios, contratos-programa, autorizações de despesa).</dd>
+  <dt>Fundos europeus (PRR e Kohesio)</dt>
+  <dd>Os projetos do Plano de Recuperação e Resiliência com uma parte nos
+  Açores e as suas entidades, dos
+  <a href="https://dados.gov.pt/datasets/dataset-estrutura-de-missao-prr-projetos-2">dados
+  abertos da Recuperar Portugal</a>; e os projetos dos fundos de coesão
+  (2014-2020 e 2021-2027) que o <a href="https://kohesio.ec.europa.eu/">Kohesio</a>,
+  da Comissão Europeia, situa nos Açores. A parte do Kohesio está em
+  construção. Ver <a href="/financas/fundos-europeus/">Fundos europeus</a>.</dd>
 </dl>
 
 <details class="termos">
@@ -110,3 +118,6 @@ oficial. Em cada termo está a ligação para a lei ou a fonte com a definição
 - **INE**: ver as notas na página [Indicadores do INE](/dados/ine/).
 - **BEO**: ver as notas na página [Execução orçamental](/dados/beo/).
 - **Tribunal de Contas**: ver as notas na página [Tribunal de Contas](/dados/tdc/).
+- **Fundos europeus**: ver as notas na página
+  [Fundos europeus](/financas/fundos-europeus/#notas). Os dados do Kohesio
+  estão em construção.
