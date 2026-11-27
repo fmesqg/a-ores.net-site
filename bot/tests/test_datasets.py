@@ -400,6 +400,18 @@ def test_resumo_srea_and_json():
                 "provisório",
             )
         )
+    rows.append(
+        _srea(
+            "pib",
+            "Produto interno bruto",
+            "Preços correntes",
+            "Açores",
+            "2024",
+            "2024-01-01",
+            5753263000,
+            "provisório",
+        )
+    )
     r = datasets.resumo_srea(SREA_COLS, rows)
     assert r["ipc"]["valor"] == 2.64 and r["ipc"]["media12"] == 2.68
     assert r["ipc"]["periodo"] == "outubro de 2026"
@@ -427,6 +439,7 @@ def test_resumo_srea_and_json():
     assert t["ilhas"] == [{"ilha": "Pico", "valor": 36, "var": -10.0}]
     p = r["pib_hab"]
     assert p["ano"] == "2024" and p["provisorio"] and p["acores"] == 20000
+    assert p["total_mm"] == 5.8
     assert [(i["ilha"], i["pct"]) for i in p["por_ilha"]] == [
         ("Corvo", 100),
         ("Pico", 80),
