@@ -325,6 +325,7 @@ DB_INDEX = {
     "sper_regiao": ["relatorio", "quadro", "ano"],
     "maiores": ["ano", "posicao", "ilha", "setor"],
     "emprego_publico": ["quadro", "local", "data"],
+    "censos2021_setores": ["ilha", "secao"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
@@ -340,6 +341,7 @@ DB_FTS = {
     "sper_regiao": ["quadro", "grupo", "rubrica"],
     "maiores": ["empresa", "ilha", "setor"],
     "emprego_publico": ["indicador", "rubrica", "local"],
+    "censos2021_setores": ["concelho", "ilha"],
 }
 
 
@@ -1223,6 +1225,7 @@ def publico_data(
     srea: tuple[list, list] | None = None,
     sper: dict | None = None,
     ine: tuple[list, list] | None = None,
+    censos: tuple[list, list] | None = None,
 ) -> dict:
     """data/emprego_publico.csv (bot/dgaep.py) for /economia/setor-publico/:
     jobs in general government in the Azores by career, the regional
@@ -1431,7 +1434,58 @@ def publico_data(
                 }
     if ine:
         out["comparacao"] = _comparacao(rows, ine)
+    if censos:
+        out["ilhas"] = _ilhas_censos(censos)
     return out
+
+
+ORDEM_ILHAS = [
+    "Santa Maria",
+    "São Miguel",
+    "Terceira",
+    "Graciosa",
+    "São Jorge",
+    "Pico",
+    "Faial",
+    "Flores",
+    "Corvo",
+]
+
+
+def _ilhas_censos(censos: tuple[list, list]) -> dict:
+    """Employed residents of each island in CAE sections O (public
+    administration, defence, social security), P (education) and Q (health
+    and social work), 2021 census (data/censos2021_setores.csv)."""
+    soma: dict = {}
+    for r in _dicts(censos):
+        d = soma.setdefault(r["ilha"], {"O": 0, "P": 0, "Q": 0, "Total": 0})
+        d[r["secao"]] += int(r["valor"])
+    if not soma:
+        return {}
+    soma["Açores"] = {
+        k: sum(d[k] for d in soma.values()) for k in ("O", "P", "Q", "Total")
+    }
+
+    def linha(nome: str) -> dict:
+        d = soma[nome]
+        t = d["Total"]
+        return {
+            "ilha": nome,
+            "empregados": t,
+            "o": d["O"],
+            "o_pct": round(100 * d["O"] / t, 1),
+            "p_pct": round(100 * d["P"] / t, 1),
+            "q_pct": round(100 * d["Q"] / t, 1),
+            "opq_pct": round(100 * (d["O"] + d["P"] + d["Q"]) / t, 1),
+        }
+
+    ilhas = [linha(n) for n in ORDEM_ILHAS if n in soma]
+    return {
+        "lista": ilhas,
+        "acores": linha("Açores"),
+        "max_pct": max(x["opq_pct"] for x in ilhas),
+        "url": _dicts(censos)[0]["url"],
+    }
 
 
 EMPREGADOS = "0012118"  # INE, Inquérito ao Emprego, quarterly, NUTS II
@@ -1756,6 +1810,7 @@ def write_economia(docs: Path, tables: dict) -> None:
             tables.get("srea"),
             sper,
             tables.get("ine"),
+            tables.get("censos2021_setores"),
         )
     for name, data in (
         ("sper", sper),
@@ -1869,6 +1924,7 @@ def main(docs: Path) -> dict:
         "sper_regiao",
         "maiores",
         "emprego_publico",
+        "censos2021_setores",
     ):
         src = docs.parent / "data" / f"{name}.csv"
         if name == "maiores" and maiores:

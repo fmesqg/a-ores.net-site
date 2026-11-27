@@ -1043,3 +1043,23 @@ def test_comparacao_acores_madeira_pais():
         )
         == {}
     )
+
+
+def test_ilhas_censos_sums_concelhos():
+    cols = ["concelho", "ilha", "secao", "valor", "url"]
+    u = "https://www.ine.pt/xurl/indx/0012344"
+    rows = [
+        ["Corvo", "Corvo", "O", "69", u],
+        ["Corvo", "Corvo", "P", "14", u],
+        ["Corvo", "Corvo", "Q", "26", u],
+        ["Corvo", "Corvo", "Total", "219", u],
+        ["Lajes das Flores", "Flores", "O", "200", u],
+        ["Lajes das Flores", "Flores", "Total", "800", u],
+        ["Santa Cruz das Flores", "Flores", "O", "281", u],
+        ["Santa Cruz das Flores", "Flores", "Total", "891", u],
+    ]
+    il = datasets._ilhas_censos((cols, rows))
+    flores, corvo = il["lista"]  # in the islands' order, west last
+    assert flores["empregados"] == 1691 and flores["o_pct"] == 28.4
+    assert corvo["opq_pct"] == 49.8
+    assert il["acores"]["empregados"] == 1910

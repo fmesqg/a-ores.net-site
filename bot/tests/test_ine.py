@@ -293,3 +293,43 @@ def test_previous_rows_keeps_indicators_that_failed(tmp_path):
     # 0012918 was fetched again; 0000087 failed; 9999999 left the list
     assert ine.previous_rows(p, {"0012918"}) == [["0000087", "a"]]
     assert ine.previous_rows(tmp_path / "nada.csv", set()) == []
+
+
+def test_censos_setores_keeps_concelhos_and_sections():
+    o = {"dim_3_t": "HM", "dim_5_t": "Total"}
+    data = {
+        "Dados": {
+            "2021": [
+                {
+                    **o,
+                    "geocod": "4901",
+                    "geodsg": "Corvo",
+                    "dim_4_t": "Educação",
+                    "valor": "14",
+                },
+                {
+                    **o,
+                    "geocod": "4901",
+                    "geodsg": "Corvo",
+                    "dim_4_t": "Construção",
+                    "valor": "30",
+                },
+                {
+                    **o,
+                    "geocod": "490101",
+                    "geodsg": "Corvo",
+                    "dim_4_t": "Educação",
+                    "valor": "14",
+                },
+                {
+                    **o,
+                    "geocod": "4901",
+                    "geodsg": "Corvo",
+                    "dim_4_t": "Educação",
+                    "valor": "7",
+                    "dim_3_t": "H",
+                },
+            ]
+        }
+    }
+    assert ine.censos_setores(data) == [["Corvo", "Corvo", "P", 14]]

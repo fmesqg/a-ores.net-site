@@ -52,6 +52,7 @@ emprego público, e as empresas que a Região controla. Para o dinheiro
 
 <nav class="indice" aria-label="Nesta página">
   <a href="#peso">Público e privado</a>
+  <a href="#ilhas">Ilha a ilha</a>
   <a href="#comparar">Açores, Madeira e país</a>
   <a href="#carreiras">Que profissões</a>
   <a href="#secretarias">Secretaria a secretaria</a>
@@ -98,6 +99,43 @@ diferentes:</p>
 "Administração pública e defesa" (CAE P): {{ w.setor_p_mil_t }} mil pessoas.
 É um conceito diferente, porque os professores e os profissionais de saúde
 ficam nos setores da educação e da saúde, sejam públicos ou privados.</p>
+{% endif %}
+
+{%- assign il = e.ilhas %}
+{% if il.lista %}
+<h2 id="ilhas">Ilha a ilha</h2>
+
+<p>Não há números oficiais de emprego público por ilha: a DGAEP só divide por
+região. Os Censos de 2021 dão uma aproximação, que é o setor de atividade em que
+trabalham os residentes de cada ilha. A <strong>administração pública, defesa
+e segurança social</strong> (secção O) é quase toda pública. A
+<strong>educação</strong> (P) e a <strong>saúde e apoio social</strong> (Q)
+juntam o público e o privado: escolas privadas, IPSS, misericórdias.</p>
+
+<div class="tabela-scroll">
+<table class="sper barras">
+<thead><tr><th>Ilha</th><th class="n">Empregados (2021)</th><th class="n">Adm. pública (O)</th><th class="n">% O</th><th class="n">% educação (P)</th><th class="n">% saúde e apoio social (Q)</th><th class="n">% O+P+Q</th><th class="barra-col" aria-hidden="true"></th></tr></thead>
+<tbody>
+{%- for x in il.lista %}
+<tr><th scope="row">{{ x.ilha }}</th><td class="n">{{ x.empregados_t }}</td><td class="n">{{ x.o_t }}</td><td class="n">{{ x.o_pct_t }}</td><td class="n">{{ x.p_pct_t }}</td><td class="n">{{ x.q_pct_t }}</td><td class="n">{{ x.opq_pct_t }}</td><td class="barra-col" aria-hidden="true"><span class="barra" style="width: {{ x.opq_pct | times: 100.0 | divided_by: il.max_pct }}%"></span></td></tr>
+{%- endfor %}
+</tbody>
+{%- assign t = il.acores %}
+<tfoot><tr><th scope="row">Açores</th><td class="n">{{ t.empregados_t }}</td><td class="n">{{ t.o_t }}</td><td class="n">{{ t.o_pct_t }}</td><td class="n">{{ t.p_pct_t }}</td><td class="n">{{ t.q_pct_t }}</td><td class="n">{{ t.opq_pct_t }}</td><td class="barra-col"></td></tr></tfoot>
+</table>
+</div>
+
+<ul class="nota">
+  <li>INE, <a href="{{ il.url }}">Censos 2021</a>: população empregada por
+  local de residência e secção de atividade (CAE Rev. 3). A soma por ilha e
+  as percentagens são do açores.net.</li>
+  <li>Conta-se onde a pessoa mora, não onde trabalha. Os números são de 2021
+  e não vão ser atualizados antes do próximo recenseamento.</li>
+  <li>Nas ilhas pequenas, uma parte maior dos empregos é pública. A escola, o
+  centro de saúde, a câmara e os serviços da Região existem em todas as ilhas,
+  e há menos empresas privadas para os equilibrar.
+  <span class="fonte">(Explicação do açores.net.)</span></li>
+</ul>
 {% endif %}
 
 {%- assign k = e.comparacao %}
@@ -280,7 +318,7 @@ do <a href="/dados/sper/">Conselho das Finanças Públicas</a>.</p>
 .tabela-scroll { overflow-x: auto; margin-bottom: 1em; }
 table.sper { border-collapse: collapse; font-size: .9em; min-width: 100%; }
 table.sper th, table.sper td { padding: .3em .5em; border-bottom: 1px solid rgba(147,161,161,.35); text-align: left; vertical-align: top; }
-table.sper th[scope="row"] { font-weight: normal; }
+table.sper th[scope="row"] { font-weight: normal; white-space: nowrap; }
 table.sper th[scope="row"] small { color: #839496; }
 table.sper .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 table.sper thead th, table.sper thead th.n { white-space: normal; }
