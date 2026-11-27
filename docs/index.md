@@ -9,7 +9,8 @@ permalink: /
 <p class="lead">Dados públicos sobre os Açores, num só sítio e explicados:
 estatísticas por concelho e freguesia, as contas do Governo Regional,
 contratos públicos e o trabalho da Assembleia Legislativa. Cada número tem
-ligação para a fonte oficial.</p>
+ligação para a fonte oficial. Primeira vez por aqui? Comece pelo
+<a href="/acores-101/"><strong>Açores 101</strong></a>.</p>
 
 <div class="portas">
 
@@ -92,19 +93,18 @@ ligação para a fonte oficial.</p>
 <p><a href="/blog">Todos os artigos de opinião</a></p>
 </section>
 
-<section>
-<h2><a href="/blog#analises">Análises e documentos</a></h2>
+<section class="a101">
+<h2><a href="/acores-101/">Açores 101</a></h2>
+<p>Primeira vez por aqui? Os Açores explicados sem jargão, em dez minutos,
+com os números mais recentes e a fonte de cada um.</p>
 <ul>
-{%- assign n = 0 -%}
-{%- for post in sorted_items -%}
-{%- unless post.op -%}{%- if n < 5 -%}
-  {%- assign n = n | plus: 1 %}
-  <li><a href="{% if post.link %}{{ post.page }}{% else %}{{ post.url }}{% endif %}">{{ post.title | xml_escape }}</a>
-    <span class="meta">{{ post.date | date: "%d/%m/%Y" }}</span></li>
-{%- endif -%}{%- endunless -%}
-{%- endfor %}
+  <li><a href="/acores-101/#ilhas">Quantas pessoas vivem em cada ilha?</a></li>
+  <li><a href="/acores-101/#quem-decide">Quem decide o quê: Assembleia, Governo, câmaras</a></li>
+  <li><a href="/acores-101/#dinheiro">De onde vem e para onde vai o dinheiro da Região</a></li>
+  <li><a href="/acores-101/#viver">Rendimentos, rendas, pobreza e turismo, comparados com o país</a></li>
+  <li><a href="/acores-101/#palavras">Seis palavras para ler os números</a></li>
 </ul>
-<p><a href="/blog#analises">Todas as análises</a></p>
+<p><a href="/acores-101/">Começar →</a></p>
 </section>
 </div>
 
@@ -125,5 +125,6 @@ portal BASE) e podem ser descarregados e reutilizados. O código está no
 .porta ul { margin: 0 0 .6em 1.1em; font-size: .95em; }
 .colunas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr)); gap: 0 2em; }
 .colunas h2 { font-size: 1.3em; }
+.a101 { border-left: 4px solid #268bd2; padding-left: 1em; }
 .meta { color: #586e75; font-size: .85em; white-space: nowrap; }
 </style>
