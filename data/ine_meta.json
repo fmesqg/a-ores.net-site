@@ -672,6 +672,32 @@
    ]
   ]
  },
+ "0012118": {
+  "titulo": "População empregada (Série 2021 - N.º) por Local de residência (NUTS - 2024), Sexo e Situação na profissão; Trimestral - INE, Inquérito ao emprego (Série - 2021)",
+  "periodicidade": "Trimestral",
+  "primeiro": "1.º Trimestre de 2011",
+  "ultimo": "3.º Trimestre de 2026",
+  "unidade": "Número (N.º)",
+  "nota": "Todas as estimativas relativas à série de 2011 (em vigor do 1.º trimestre de 2011 ao 4.º trimestre de 2020) foram revistas no âmbito do exercício de reconciliação com a série de 2021, possibilitando assim a comparação das estimativas entre as duas séries.",
+  "atualizado": "2026-11-04",
+  "metainfo": "https://www.ine.pt/xurl/metax/0012118",
+  "fonte": "INE, Inquérito ao emprego (Série - 2021)",
+  "conceitos": [
+   [
+    "Sexo",
+    "Características biológicas e fisiológicas que definem homens e mulheres."
+   ],
+   [
+    "Situação na profissão",
+    "Relação de dependência ou independência de um indivíduo ativo no exercício da profissão, em função dos riscos económicos em que incorre e da natureza do controlo que exerce na empresa."
+   ],
+   [
+    "População empregada",
+    "População formada pelos indivíduos empregados."
+   ]
+  ],
+  "formula": "Valor estimado"
+ },
  "0013417": {
   "titulo": "Beneficiárias/os do rendimento social de inserção, da segurança social (N.º) por Local de residência (NUTS - 2024); Anual - Instituto de Informática",
   "periodicidade": "Anual",

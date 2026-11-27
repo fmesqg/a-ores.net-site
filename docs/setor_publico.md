@@ -52,6 +52,7 @@ emprego público, e as empresas que a Região controla. Para o dinheiro
 
 <nav class="indice" aria-label="Nesta página">
   <a href="#peso">Público e privado</a>
+  <a href="#comparar">Açores, Madeira e país</a>
   <a href="#carreiras">Que profissões</a>
   <a href="#secretarias">Secretaria a secretaria</a>
   <a href="#evolucao">Desde {{ e.ano_inicio }}</a>
@@ -97,6 +98,40 @@ diferentes:</p>
 "Administração pública e defesa" (CAE P): {{ w.setor_p_mil_t }} mil pessoas.
 É um conceito diferente, porque os professores e os profissionais de saúde
 ficam nos setores da educação e da saúde, sejam públicos ou privados.</p>
+{% endif %}
+
+{%- assign k = e.comparacao %}
+{% if k.locais %}
+<h2 id="comparar">Açores, Madeira e país</h2>
+
+<p>Postos de trabalho nas administrações públicas por cada 100 pessoas
+empregadas, no {{ k.periodo | downcase }}{% if k.provisorio %} (dados provisórios da DGAEP){% endif %}.</p>
+
+<div class="tabela-scroll">
+<table class="sper barras">
+<thead><tr><th></th><th class="n">Administrações públicas</th><th class="n">Pessoas empregadas (INE)</th><th class="n">Em cada 100</th><th class="barra-col" aria-hidden="true"></th><th class="n">Só a administração regional, em cada 100</th></tr></thead>
+<tbody>
+{%- for x in k.locais %}
+<tr><th scope="row">{{ x.local }}</th><td class="n">{{ x.ap_t }}</td><td class="n">{{ x.empregados_t }}</td><td class="n">{{ x.ap_pct_t }}</td><td class="barra-col" aria-hidden="true"><span class="barra" style="width: {{ x.ap_pct | times: 100.0 | divided_by: k.max_pct }}%"></span></td><td class="n">{{ x.ar_pct_t | default: "" }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+
+<ul class="nota">
+  <li>Cálculo do açores.net: postos de trabalho por região da DGAEP
+  (<a href="{{ e.pagina }}">SIEP</a>, quadro 1.7) a dividir pela
+  <a href="{{ k.url_ine }}">população empregada</a> do Inquérito ao Emprego
+  do INE no mesmo trimestre. Para as três regiões usa-se o INE, e não o SREA,
+  para que a fonte seja a mesma.</li>
+  <li>A DGAEP conta cada posto de trabalho onde fica o serviço. A PSP e a GNR,
+  por exemplo, contam na sede, em Lisboa. Por isso os Açores e a Madeira têm
+  menos postos do que pessoas a trabalhar lá para o Estado, e a comparação entre
+  as duas regiões é mais justa do que com o país.</li>
+  <li>As empresas públicas de mercado (SATA, EDA…) não entram, para comparar o
+  mesmo em todo o lado. Os salários das três regiões estão em
+  <a href="#salarios">Salários</a>.</li>
+</ul>
 {% endif %}
 
 <h2 id="carreiras">Que profissões</h2>

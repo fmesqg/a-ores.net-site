@@ -91,6 +91,7 @@ THEMES = {
     ],
     "Trabalho e proteção social": [
         ("0012656", "ganho médio mensal (Quadros de Pessoal)"),
+        ("0012118", "população empregada (Inquérito ao Emprego), trimestral"),
         ("0013417", "beneficiários do RSI"),
         ("0013420", "beneficiários do RSI por 1000 habitantes em idade ativa"),
         ("0014534", "pensionistas da segurança social"),
@@ -475,6 +476,17 @@ def main_definitions(out_dir: Path) -> int:
     return 0
 
 
+def previous_rows(path: Path, fetched: set[str]) -> list[list]:
+    """Rows of the current CSV for the listed indicators that this run did
+    not get (INE fails now and then on one series): keep them rather than
+    drop the indicator until next week."""
+    if not path.exists():
+        return []
+    wanted = {v for v, _ in INDICATORS} - fetched
+    with open(path, encoding="utf-8-sig", newline="") as f:
+        return [r for r in list(csv.reader(f))[1:] if r and r[0] in wanted]
+
+
 def main(out_dir: Path) -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     rows, failed, defs = [], [], {}
@@ -493,6 +505,7 @@ def main(out_dir: Path) -> int:
         # Probably INE is down: keep the previous file rather than shrink it.
         print("Too many failures, ine.csv left unchanged:", *failed, sep="\n")
         return 1
+    rows += previous_rows(out_dir / "ine.csv", {r[0] for r in rows})
     order = {v: i for i, (v, _) in enumerate(INDICATORS)}
     rows.sort(key=lambda r: (order[r[0]], r[4], r[6], r[10]))
     tmp = out_dir / "ine.csv.tmp"

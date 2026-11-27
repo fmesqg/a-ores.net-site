@@ -1002,3 +1002,44 @@ def test_camaras_data_per_inhabitant():
     assert [x["nome"] for x in d["refs"]] == ["Açores"]
     assert d["base_de"] == "2024-08-21"
     assert len(d["grafico"]["pontos"]) == 2
+
+
+def test_comparacao_acores_madeira_pais():
+    cols = ["quadro", "rubrica", "local", "data", "valor", "provisorio"]
+    rows = [
+        ["Q1.7", "Total", "Açores", "2026-09-30", "25828", "p"],
+        ["Q1.7", "Total", "Madeira", "2026-09-30", "27646", "p"],
+        ["Q1.7", "Total", "Portugal", "2026-09-30", "764805", "p"],
+        ["Q1.7", "Total", "Açores", "2025-12-31", "25000", ""],
+        [
+            "Q1.1",
+            "ADMINISTRAÇÃO REGIONAL DOS AÇORES",
+            "Açores",
+            "2026-09-30",
+            "19592",
+            "p",
+        ],
+    ]
+    icols = ["varcd", "geocod", "categoria", "valor", "data", "periodo"]
+    q3 = ("2026-07-01", "3.º Trimestre de 2026")
+    ine = [
+        ["0012118", "20", "", "121300", *q3],
+        ["0012118", "30", "", "137200", *q3],
+        ["0012118", "PT", "", "5391000", *q3],
+        ["0012118", "20", "", "119600", "2025-10-01", "4.º Trimestre de 2025"],
+    ]
+    k = datasets._comparacao(
+        [dict(zip(cols, r, strict=True)) for r in rows], (icols, ine)
+    )
+    assert k["data"] == "2026-09-30" and k["provisorio"]
+    a, m, p = k["locais"]
+    assert (a["local"], a["ap_pct"], a["ar_pct"]) == ("Açores", 21.3, 16.2)
+    assert m["ap_pct"] == 20.2 and "ar" not in m
+    assert p["ap_pct"] == 14.2
+    # INE without the quarter: no comparison rather than a mismatched one
+    assert (
+        datasets._comparacao(
+            [dict(zip(cols, r, strict=True)) for r in rows], (icols, ine[3:])
+        )
+        == {}
+    )

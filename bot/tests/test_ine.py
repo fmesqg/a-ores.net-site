@@ -283,3 +283,13 @@ def test_rows_from_scales_thousands():
     assert rows[0][ine.COLS.index("unidade")] == "Euro (€)"
     rows = ine.rows_from("0013908", data, {**META, "Potencia10": "0"})
     assert [r[valor] for r in rows] == [75105, 0.5]
+
+
+def test_previous_rows_keeps_indicators_that_failed(tmp_path):
+    p = tmp_path / "ine.csv"
+    p.write_text(
+        "﻿varcd,x\n0000087,a\n0012918,b\n9999999,c\n", encoding="utf-8"
+    )
+    # 0012918 was fetched again; 0000087 failed; 9999999 left the list
+    assert ine.previous_rows(p, {"0012918"}) == [["0000087", "a"]]
+    assert ine.previous_rows(tmp_path / "nada.csv", set()) == []

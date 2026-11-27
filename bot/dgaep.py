@@ -255,7 +255,7 @@ def parse_q11(book: dict[str, Rows]) -> list[dict]:
 
 def parse_q17(book: dict[str, Rows]) -> list[dict]:
     """Q1.7: jobs by career in each NUTS I region; the Azores column for
-    every career and Portugal for the total."""
+    every career, and Portugal and Madeira for the total."""
     rows = book.get("Q1.7")
     if not rows:
         return []
@@ -272,7 +272,7 @@ def parse_q17(book: dict[str, Rows]) -> list[dict]:
                 break
             cur = when(cell(dates, j))
         local = NUTS.get(text(c))
-        if cur[0] and local in ("Açores", "Portugal"):
+        if cur[0] and local in ("Açores", "Portugal", "Madeira"):
             cols[j] = (local, *cur)
     out = []
     for i in range(nuts + 1, len(rows)):
@@ -283,7 +283,7 @@ def parse_q17(book: dict[str, Rows]) -> list[dict]:
                 break
             continue
         for j, (local, d, prov) in cols.items():
-            if local == "Portugal" and lab != "Total":
+            if local != "Açores" and lab != "Total":
                 continue
             v = number(cell(r, j))
             if v is not None:
