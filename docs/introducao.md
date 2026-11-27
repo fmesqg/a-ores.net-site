@@ -360,8 +360,9 @@ das <a href="/dados/beo/">contas da Região</a>, com ligação aos textos legais
   <li><a href="/atualizacoes/">O que saiu hoje no Jornal Oficial e na Assembleia?</a></li>
 </ul>
 
-<p>Para jornalistas: o <a href="/tutorial/">guia de dados</a> tem casos
-reais, com o caminho para cada número e o que convém saber de cada fonte.</p>
+<p>Para quem já trabalha com dados (jornalistas, decisores políticos,
+investigadores): o <a href="/tutorial/">guia</a> tem cada fonte num quadro e
+casos reais, com o caminho para cada número.</p>
 
 {%- assign antigas = site.posts | where_exp: "p", "p.op != true" | sort: "date" | reverse %}
 {% if antigas.size > 0 %}
