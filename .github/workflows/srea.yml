@@ -1,0 +1,61 @@
+name: Weekly SREA update
+
+# Reads the SREA (Serviço Regional de Estatística dos Açores) Excel files
+# for the series on /dados/srea/ (bot/srea.py) into data/srea.csv and, when
+# it changed, commits it and redeploys the site. SREA publishes on most
+# working days, each series monthly or quarterly, so weekly is enough.
+#
+# The run fails, and GitHub emails, when a series' file can no longer be
+# found on its area page or read: usually a renamed file (fix its pattern
+# in srea.SERIES). The other series are still written.
+
+on:
+  schedule:
+    - cron: '17 5 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install openpyxl==3.1.5 xlrd==2.0.2
+      - name: Fetch SREA series
+        id: fetch
+        run: python3 bot/srea.py data
+        continue-on-error: true
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          if git diff --quiet -- data/srea.csv; then
+            echo "Nothing to write."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config --global user.name "fmesqg-auto"
+            git config --global user.email "fmesqg-auto@users.noreply.github.com"
+            git add data/srea.csv
+            git commit -m "SREA weekly update"
+            git pull --rebase origin main
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Fail if a series could not be read
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1
+
+  deploy-site:
+    needs: fetch
+    if: always() && needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

@@ -33,3 +33,27 @@ lei_eleitoral:
 governo:
   nome: Portal do Governo dos Açores
   url: https://portal.azores.gov.pt/
+srea:
+  nome: Serviço Regional de Estatística dos Açores (SREA)
+  url: https://srea.azores.gov.pt/
+srea_meta:
+  nome: SREA, metainformação (conceitos e métodos)
+  url: https://srea.azores.gov.pt/recursos/metainformacao/
+srea_precos:
+  nome: SREA, preços (IPC dos Açores)
+  url: https://srea.azores.gov.pt/area/precos/
+srea_conjuntura:
+  nome: SREA, conjuntura (IAE e ICP)
+  url: https://srea.azores.gov.pt/area/conjuntura/
+srea_emprego:
+  nome: SREA, mercado de trabalho (Inquérito ao Emprego)
+  url: https://srea.azores.gov.pt/area/mercado-de-trabalho/
+srea_turismo:
+  nome: SREA, turismo
+  url: https://srea.azores.gov.pt/area/turismo/
+srea_contas:
+  nome: SREA, contas regionais (PIB por ilha)
+  url: https://srea.azores.gov.pt/area/contas-regionais/
+srea_populacao:
+  nome: SREA, população (estimativas por ilha)
+  url: https://srea.azores.gov.pt/area/populacao/

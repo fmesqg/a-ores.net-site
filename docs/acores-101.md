@@ -14,6 +14,7 @@ description: Os Açores explicados a quem chega pela primeira vez aos dados - qu
 {%- assign renda = r.ine["0014698"] -%}
 {%- assign dorm = r.ine["0013210"] -%}
 {%- assign b = r.beo -%}
+{%- assign sr = r.srea -%}
 
 <p class="lead">Nunca olhou para números sobre os Açores? Comece aqui. Em dez
 minutos, sem jargão: quem vive cá, quem decide o quê, de onde vem e para onde
@@ -185,7 +186,7 @@ Região: <a href="{{ f.lfra.url }}">Lei das Finanças das Regiões Autónomas</a
 
 <h2 id="viver">4. Como se vive</h2>
 
-<p>Cinco números para começar, sempre comparados com o país. São valores da
+<p>Alguns números para começar. São valores da
 Região inteira: entre concelhos e freguesias as diferenças são grandes, e
 as ligações abrem cada indicador lugar a lugar.</p>
 
@@ -243,7 +244,31 @@ as ligações abrem cada indicador lugar a lugar.</p>
   <p class="fonte">Fonte: <a href="{{ dorm.url }}">INE, {{ dorm.periodo }}</a></p>
 </section>
 {% endif %}
+{% if sr.ipc %}
+<section class="cartao num">
+  <h3>Preços</h3>
+  <p class="grande">{{ sr.ipc.valor_t }}%<small> em um ano</small></p>
+  <p>Quanto subiram os preços nos Açores entre {{ sr.ipc.antes }} e
+  {{ sr.ipc.periodo }}: o que custava 100 € custa agora cerca de
+  {{ sr.ipc.cem | round: 2 | replace: ".", "," }} €.</p>
+  <p class="ir"><a href="/dados/srea/#precos">O que mais subiu →</a></p>
+  <p class="fonte">Fonte: <a href="{{ sr.ipc.url }}">SREA, IPC, {{ sr.ipc.periodo }}</a></p>
+</section>
+{% endif %}
+{% if sr.desemprego %}
+<section class="cartao num">
+  <h3>Desemprego</h3>
+  <p class="grande">{{ sr.desemprego.valor_t }}%<small> da população ativa</small></p>
+  <p>Desempregados em cada 100 pessoas que trabalham ou procuram trabalho,
+  no {{ sr.desemprego.periodo }}{% if sr.desemprego.antes %} (um ano antes:
+  {{ sr.desemprego.antes_t }}%){% endif %}. É uma estimativa por amostragem.</p>
+  <p class="ir"><a href="/dados/srea/#emprego">Trimestre a trimestre →</a></p>
+  <p class="fonte">Fonte: <a href="{{ sr.desemprego.url }}">SREA, Inquérito ao Emprego</a></p>
+</section>
+{% endif %}
 </div>
+<p class="ir">Preços, emprego, economia e turismo ilha a ilha, todos os meses:
+<a href="/dados/srea/">Economia →</a></p>
 
 <h2 id="palavras">5. Seis palavras para ler os números</h2>
 
@@ -284,6 +309,7 @@ das <a href="/dados/beo/">contas da Região</a>, com ligação aos textos legais
   <li><a href="/dados/ine/#ind=0012757&nivel=Freguesia">Quanto se ganha na minha freguesia?</a></li>
   <li><a href="/dados/ine/#ind=0012918">A população do meu concelho está a crescer ou a diminuir?</a></li>
   <li><a href="/dados/ine/#ind=0014698">Quanto custa arrendar casa no meu concelho?</a></li>
+  <li><a href="/dados/srea/#turismo">Quantos turistas vão à minha ilha, mês a mês?</a></li>
   <li><a href="/dados/beo/#quadro=despesa-do-gra-por-funcao">Quanto gasta a Região em saúde, este ano?</a></li>
   <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra&grafico=anos">Quanto rende o IVA, mês a mês?</a></li>
   <li><a href="/dados/#fonte=base">Que contratos fez a minha câmara, e com quem?</a></li>
