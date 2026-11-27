@@ -43,14 +43,13 @@ cd docs && bundle exec jekyll serve
 Entry point: `bot/__main__.py`
 
 ```
-fetch_web_data() → compute_delta_ids() → write_update() → write_daily_json() → append_state()
+fetch_web_data() → compute_delta_ids() → write_update() → append_state()
 ```
 
 1. **Fetch** (`fetch.py`) — Scrapes/calls APIs for all four data sources
 2. **Delta** (`state.py`, `utils.py`) — Compares fetched IDs against `state.jsonl` to find new/changed items
 3. **Export** (`export.py`, `record.py`) — Converts records to Jekyll markdown with frontmatter
-4. **JSON feed** (`daily_json.py`) — Writes structured JSON to `docs/_data/daily/YYYY-MM-DD.json`
-5. **State** (`utils.py`) — Appends current run's state to `state.jsonl` (auto-rotated at 60 lines)
+4. **State** (`utils.py`) — Appends current run's state to `state.jsonl` (auto-rotated at 60 lines)
 
 ### Open datasets (`bot/datasets.py`)
 
@@ -85,11 +84,11 @@ JORAA has failed every day since 2026-08-11: jo.azores.gov.pt answers the API wi
 
 ### Record Types (`record.py`)
 
-Abstract `Record` base class with subclasses: `Requerimento`, `Iniciativa`, `Voto`, `Diario`, `Interven`, `Peti`, `Info`, `AudiARep`, `AudiGRep`. Each implements `to_markdown()` and `to_dict()` (structured JSON serialization).
+Abstract `Record` base class with subclasses: `Requerimento`, `Iniciativa`, `Voto`, `Diario`, `Interven`, `Peti`, `Info`, `AudiARep`, `AudiGRep`. Each implements `to_markdown()`.
 
 ### Jekyll Site (`docs/`)
 
-Minima theme. Five auto-generated collections (`_alra_updates/`, `_joraa_updates/`, `_base_updates/`, `_portal_updates/` from the bot; `_ao/` from the AO scraper) plus manual blog posts in `_posts/`. Structured JSON feed in `_data/daily/` (not used by any template).
+Minima theme. Five auto-generated collections (`_alra_updates/`, `_joraa_updates/`, `_base_updates/`, `_portal_updates/` from the bot; `_ao/` from the AO scraper) plus manual blog posts in `_posts/`.
 
 ### News Scrapers (`scrapers/`)
 

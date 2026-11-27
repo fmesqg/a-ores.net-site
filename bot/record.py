@@ -8,9 +8,6 @@ class Record:
     @abstractmethod
     def to_markdown(self, **kwargs) -> None | str: ...
 
-    def to_dict(self, **kwargs) -> dict:
-        return dict(self._data)
-
 
 class Requerimento(Record):
 
@@ -34,17 +31,6 @@ class Requerimento(Record):
 
         return md
 
-    def to_dict(self, *, prev, now):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "title": x.get("Assunto", x.get("id")),
-            "state_change": ({"from": prev, "to": now} if prev else None),
-            "requesters": x.get("Requerente(s)"),
-            "date": x.get("Data entrada"),
-            "url": x.get("url"),
-        }
-
 
 class Diario(Record):
     def to_markdown(self, **kwargs):
@@ -62,15 +48,6 @@ class Diario(Record):
             md += f"\n  * [Diário (pdf)]({doc_diario})"
         return md
 
-    def to_dict(self, **kwargs):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "number": x.get("Número"),
-            "date": x.get("Data"),
-            "url": x.get("url"),
-        }
-
 
 class AudiGRep(Record):
     def to_markdown(self):
@@ -83,14 +60,6 @@ class AudiGRep(Record):
         if date := x.get("Data entrada", None):
             md += f"\n  * Data: {date}"
         return md
-
-    def to_dict(self, **kwargs):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "title": x.get("Assunto"),
-            "url": x.get("url"),
-        }
 
 
 class AudiARep(Record):
@@ -108,14 +77,6 @@ class AudiARep(Record):
             md += f"\n  * [Texto Audição (pdf)]({text_audi})"
         return md
 
-    def to_dict(self, **kwargs):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "title": x.get("Assunto"),
-            "url": x.get("url"),
-        }
-
 
 class Interven(Record):
     def to_markdown(self):
@@ -128,15 +89,6 @@ class Interven(Record):
         if date := x.get("Data", None):
             md += f"\n  * Data: {date}"
         return md
-
-    def to_dict(self, **kwargs):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "title": x.get("Assunto"),
-            "date": x.get("Data"),
-            "url": x.get("url"),
-        }
 
 
 class Peti(Record):
@@ -157,16 +109,6 @@ class Peti(Record):
             md += f"\n  * Comissão: {comi}"
         return md
 
-    def to_dict(self, **kwargs):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "title": x.get("Assunto"),
-            "author": x.get("Autor"),
-            "state": x.get("Estado"),
-            "url": x.get("url"),
-        }
-
 
 class Info(Record):
 
@@ -178,14 +120,6 @@ class Info(Record):
         if doc := x.get("Texto Informação", None):
             md += f"\n  * [pdf]({doc})"
         return md
-
-    def to_dict(self, **kwargs):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "title": x.get("Assunto"),
-            "url": x.get("url"),
-        }
 
 
 class Iniciativa(Record):
@@ -207,16 +141,6 @@ class Iniciativa(Record):
         if estado := x.get("Estado", None):
             md += f"\n  * Resultado: {estado}"
         return md
-
-    def to_dict(self, **kwargs):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "title": x.get("Assunto"),
-            "author": x.get("Autor do texto inicial"),
-            "topic": x.get("Tema"),
-            "url": x.get("url"),
-        }
 
 
 class Voto(Record):
@@ -241,13 +165,3 @@ class Voto(Record):
         if entrada := x.get("Data entrada", None):
             md += f"\n  * Dada de entrada: {entrada}"
         return md
-
-    def to_dict(self, **kwargs):
-        x = self._data
-        return {
-            "id": x.get("id"),
-            "title": x.get("Assunto"),
-            "authors": x.get("Autores"),
-            "result": x.get("Resultado"),
-            "url": x.get("url"),
-        }
