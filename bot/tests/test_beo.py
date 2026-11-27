@@ -216,7 +216,7 @@ def test_datasets_includes_beo(tmp_path):
     assert meta["beo"]["linhas"] == len(rows)
     assert meta["beo"]["ultimo"]["periodo"] == "setembro de 2026"
     assert (docs / "_data" / "beo_ultimo.json").exists()
-    con = sqlite3.connect(docs / "dados" / "acores.db")
+    con = sqlite3.connect(docs / "dados" / "financas.db")
     hits = con.execute(
         "SELECT count(*) FROM beo_fts WHERE beo_fts MATCH 'saude'"
     ).fetchone()[0]

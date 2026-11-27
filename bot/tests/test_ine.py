@@ -183,7 +183,7 @@ def test_datasets_includes_ine(tmp_path):
     )
     assert (docs / "dados" / "ine.csv").exists()
 
-    con = sqlite3.connect(docs / "dados" / "acores.db")
+    con = sqlite3.connect(docs / "dados" / "estatisticas.db")
     valor, tipo = con.execute(
         "select valor, typeof(valor) from ine join ine_fts "
         "on ine_fts.rowid = ine.rowid where ine_fts match 'garca'"

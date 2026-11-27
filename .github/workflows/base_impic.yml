@@ -4,7 +4,7 @@ name: Monthly BASE history (IMPIC open data)
 # (all BASE contracts since 2012, about 0.8 GB zipped) with
 # bot/base_impic.py, keeps the contracts executed in the Azores and rewrites
 # data/base_impic/<ano>.csv.gz. bot/datasets.py joins them with what the
-# daily bot saw, so /dados/ and acores.db cover 2012 onwards. The IMPIC
+# daily bot saw, so /dados/ and contratos.db cover 2012 onwards. The IMPIC
 # refreshes the files every few weeks; only the recent years change, so a
 # run usually commits one or two small files.
 #

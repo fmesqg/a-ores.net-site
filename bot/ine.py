@@ -32,7 +32,7 @@ category when one exists ("HM", "Total"); a dimension without a total
 INE answers 429 to parallel requests, so requests go one at a time with a
 pause. data/ine.csv is committed and refreshed weekly by
 .github/workflows/ine.yml; bot/datasets.py copies it into docs/dados/ and
-acores.db.
+estatisticas.db.
 """
 
 import csv

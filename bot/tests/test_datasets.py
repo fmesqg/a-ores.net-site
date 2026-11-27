@@ -131,15 +131,17 @@ def test_sqlite_fts(tmp_path):
         JORAA_DAY, encoding="utf-8"
     )
     datasets.main(tmp_path)
-    con = sqlite3.connect(tmp_path / "dados" / "acores.db")
+    con = sqlite3.connect(tmp_path / "dados" / "contratos.db")
     preco, tipo = con.execute(
         "select preco, typeof(preco) from base join base_fts "
         "on base_fts.rowid = base.rowid where base_fts match 'angustias'"
     ).fetchone()  # accent-insensitive: "Angústias"
     assert (preco, tipo) == (120963.33, "real")
+    con = sqlite3.connect(tmp_path / "dados" / "parlamento.db")
     assert con.execute(
         "select count(*) from alra where resposta is null"
     ).fetchone() == (2,)
+    assert not (tmp_path / "dados" / "acores.db").exists()
 
 
 def test_pt_num():
@@ -1178,11 +1180,11 @@ def test_base_merges_impic_history(tmp_path):
     assert rows["11758845"]["publicado"] == "2025-10-01"  # the bot's day
     assert rows["11758845"]["recolha"] == "açores.net"
     assert rows["11758845"]["concorrentes"] == "1"
-    assert "adjudicatario_nif" not in rows["11758845"]  # only in acores.db
+    assert "adjudicatario_nif" not in rows["11758845"]  # only in contratos.db
     old = rows["1000"]
     assert old["recolha"] == "IMPIC" and old["preco"] == "0.0"
     assert old["url"].endswith("id=1000")
-    con = sqlite3.connect(tmp_path / "docs" / "dados" / "acores.db")
+    con = sqlite3.connect(tmp_path / "docs" / "dados" / "contratos.db")
     assert con.execute(
         "select adjudicatario_nif, propostas from base where id = 11758845"
     ).fetchone() == ("512002850", 1)
@@ -1249,3 +1251,160 @@ def test_at_regioes_sums_old_districts_only_when_needed():
     assert got["Total"] == {2018: 900.0}
     taxa = datasets.at_regioes((cols, rows), "IRS", "Taxa efetiva", "%")
     assert "Açores" not in taxa and taxa["Madeira"] == {2018: 9.0}
+
+
+def test_write_dbs_one_file_per_theme(tmp_path):
+    tables = {
+        "tdc": (
+            ["conta", "tipo", "texto", "referencia", "situacao"],
+            [["2024", "reserva", "Texto", "", ""]],
+        ),
+        "bportugal": (
+            ["indicador", "regiao", "data", "valor"],
+            [["Depósitos", "Açores", "2026-10-31", "1.5"]],
+        ),
+    }
+    info = datasets.write_dbs(tmp_path, tables)
+    assert set(info) == {"financas", "empresas"}
+    assert info["empresas"]["tabelas"] == ["bportugal"]
+    con = sqlite3.connect(tmp_path / "empresas.db")
+    assert con.execute("select valor from bportugal").fetchone() == (1.5,)
+    # bportugal has no FTS index
+    names = {
+        r[0]
+        for r in con.execute(
+            "select name from sqlite_master where type='table'"
+        )
+    }
+    assert "bportugal_fts" not in names
+    tables["nova"] = (["x"], [["1"]])
+    try:
+        datasets.write_dbs(tmp_path, tables)
+    except ValueError as e:
+        assert "nova" in str(e)
+    else:
+        raise AssertionError("a table with no database must fail")
+
+
+BP_COLS = [
+    "conjunto",
+    "indicador",
+    "setor",
+    "detalhe",
+    "regiao",
+    "data",
+    "valor",
+    "unidade",
+    "serie",
+]
+
+
+def _bp(rows):
+    return (BP_COLS, [[str(x) for x in r] for r in rows])
+
+
+def test_credito_data_sums_the_country_and_works_out_its_ratios():
+    d = "2026-10-31"
+    rows = []
+    for reg, emp, venc, dev, pct, depo in (
+        ("Açores", 100, 2, 10, 5, 80),
+        ("Norte", 300, 9, 30, 10, 400),
+    ):
+        rows += [
+            [
+                "emprestimos",
+                "Empréstimos",
+                "Particulares",
+                "",
+                reg,
+                d,
+                emp,
+                "Milhões de euros",
+                1,
+            ],
+            [
+                "emprestimos",
+                "Empréstimos vencidos",
+                "Particulares",
+                "",
+                reg,
+                d,
+                venc,
+                "Milhões de euros",
+                2,
+            ],
+            [
+                "emprestimos",
+                "Devedores",
+                "Particulares",
+                "",
+                reg,
+                d,
+                dev,
+                "Milhares de devedores",
+                3,
+            ],
+            [
+                "emprestimos",
+                "Devedores com empréstimos vencidos",
+                "Particulares",
+                "",
+                reg,
+                d,
+                pct,
+                "Percentagem",
+                4,
+            ],
+            [
+                "emprestimos",
+                "Rácio de empréstimos vencidos",
+                "Particulares",
+                "",
+                reg,
+                d,
+                2.0,
+                "Percentagem",
+                5,
+            ],
+            [
+                "depositos",
+                "Depósitos",
+                "Particulares",
+                "",
+                reg,
+                d,
+                depo,
+                "Milhões de euros",
+                6,
+            ],
+        ]
+    s = datasets.bp_series(_bp(rows))
+    k = ("emprestimos", "Empréstimos", "Particulares", "", "Milhões de euros")
+    assert s[k]["Portugal"][d][0] == 400
+    # percentages are never summed
+    pk = (
+        "emprestimos",
+        "Rácio de empréstimos vencidos",
+        "Particulares",
+        "",
+        "Percentagem",
+    )
+    assert "Portugal" not in s[pk]
+    got = datasets._vencidos(s, "Particulares", "", "Portugal", d)
+    assert got["racio"] == 2.8  # 11 / 400
+    assert got["devedores"] == 8.8  # (5*10 + 10*30) / 40
+    assert (
+        datasets._vencidos(s, "Particulares", "", "Açores", d)["racio"] == 2.0
+    )
+    ine = (
+        ["varcd", "periodo", "geocod", "valor"],
+        [
+            ["0012918", "2025", "20", "250000"],
+            ["0012918", "2025", "PT", "10000000"],
+        ],
+    )
+    out = datasets.credito_data(_bp(rows), ine)
+    assert out["ultimo_mes"] == "outubro de 2026"
+    assert out["credito_depositos"]["acores"] == 125  # 100 / 80
+    assert out["credito_depositos"]["pais"] == 83  # 400 / 480
+    assert out["serie"][0]["periodo"] == "outubro de 2026"

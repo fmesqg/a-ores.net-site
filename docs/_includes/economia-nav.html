@@ -1,5 +1,5 @@
 <nav class="secao-nav" aria-label="Economia dos Açores">
-  {%- assign grupos = "|/economia/|Resumo#Setor público|/economia/setor-publico/|Emprego público;/dados/sper/|Empresas públicas;/financas/|Finanças da Região#Setor privado|/dados/maiores-empresas/|Maiores empresas (revista 100 Maiores)" | split: "#" -%}
+  {%- assign grupos = "|/economia/|Resumo#Setor público|/economia/setor-publico/|Emprego público;/dados/sper/|Empresas públicas;/financas/|Finanças da Região#Setor privado|/dados/maiores-empresas/|Maiores empresas (revista 100 Maiores);/dados/credito/|Crédito, depósitos e empresas (Banco de Portugal)" | split: "#" -%}
   {%- for g in grupos -%}
     {%- assign partes = g | split: "|" -%}
     {%- assign nome = partes[0] -%}

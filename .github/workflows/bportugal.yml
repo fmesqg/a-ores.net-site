@@ -1,0 +1,58 @@
+name: Banco de Portugal regional statistics (BPstat)
+
+# Reads the BPstat API with bot/bportugal.py and rewrites data/bportugal.csv:
+# loans and overdue loans by region (monthly), deposits by region (monthly),
+# foreign direct investment by region (yearly) and company indicators by
+# region and sector (yearly). The Banco de Portugal updates the monthly
+# series near the end of each month, so the run is weekly. A run is about
+# 80 requests to bpstat.bportugal.pt, one at a time, with exponential
+# backoff on 429 and 5xx.
+#
+# The run fails, and GitHub emails, when a dataset has no Azores row or
+# the newest month of loans is more than ~4 months old.
+
+on:
+  schedule:
+    - cron: '41 6 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Read BPstat
+        run: python3 bot/bportugal.py data
+      - name: Commit and push if changed
+        id: commit
+        run: |
+          git add -N data/bportugal.csv
+          if git diff --quiet -- data/bportugal.csv; then
+            echo "Nothing to write."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git config --global user.name "fmesqg-auto"
+            git config --global user.email "fmesqg-auto@users.noreply.github.com"
+            git add data/bportugal.csv
+            git commit -m "Banco de Portugal statistics update"
+            git pull --rebase origin main
+            git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy-site:
+    needs: fetch
+    if: needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

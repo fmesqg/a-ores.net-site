@@ -239,7 +239,7 @@ def test_datasets_includes_tdc(tmp_path):
     meta = datasets.main(docs)
     assert meta["tdc"]["linhas"] == len(rows)
     assert meta["tdc_valores"]["linhas"] == len(values)
-    con = sqlite3.connect(docs / "dados" / "acores.db")
+    con = sqlite3.connect(docs / "dados" / "financas.db")
     hits = con.execute(
         "SELECT count(*) FROM tdc_fts WHERE tdc_fts MATCH 'solidariedade'"
     ).fetchone()[0]
