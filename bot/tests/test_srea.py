@@ -167,8 +167,9 @@ def test_parse_pib_populacao_and_pib_hab():
 
 
 def test_merge_newer_wins(tmp_path):
-    old = srea.row("iae", "IAE", "Total", "Açores", "2026-08", "2026-08-01",
-                   1.0, "%")  # fmt: skip
+    old = srea.row(
+        "iae", "IAE", "Total", "Açores", "2026-08", "2026-08-01", 1.0, "%"
+    )
     new = {**old, "valor": 1.5}
     other = {**old, "periodo": "2026-09", "data": "2026-09-01", "valor": 2}
     for r in (old, new, other):

@@ -176,8 +176,9 @@ def first_text(rows: Rows) -> str:
     return ""
 
 
-def row(serie, indicador, rubrica, local, periodo, data, valor, unidade,
-        nota=""):  # fmt: skip
+def row(
+    serie, indicador, rubrica, local, periodo, data, valor, unidade, nota=""
+):
     return {
         "serie": serie,
         "indicador": indicador,
@@ -339,8 +340,11 @@ def parse_desemprego(book: dict[str, Rows]) -> list[dict]:
 def parse_dormidas(book: dict[str, Rows], rubrica: str) -> list[dict]:
     """Nights by island: a block per island, a row per year, 12 months."""
     rows = next(iter(book.values()))
-    head = next(r for r in rows if sum(month_of(c) is not None and
-                                       isinstance(c, str) for c in r) >= 12)  # fmt: skip
+    head = next(
+        r
+        for r in rows
+        if sum(month_of(c) is not None and isinstance(c, str) for c in r) >= 12
+    )
     months = {j: month_of(c) for j, c in enumerate(head) if month_of(c)}
     out, local = [], ""
     for r in rows[rows.index(head) + 1 :]:

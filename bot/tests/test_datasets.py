@@ -305,8 +305,19 @@ SREA_COLS = [
 
 
 def _srea(serie, ind, rub, local, periodo, data, valor, nota=""):
-    return [serie, ind, rub, local, periodo, data, str(valor), "%", nota,
-            "f.xlsx", "https://srea/area/x/"]  # fmt: skip
+    return [
+        serie,
+        ind,
+        rub,
+        local,
+        periodo,
+        data,
+        str(valor),
+        "%",
+        nota,
+        "f.xlsx",
+        "https://srea/area/x/",
+    ]
 
 
 def test_resumo_srea_and_json():
@@ -319,29 +330,75 @@ def test_resumo_srea_and_json():
         _srea("ipc", vh, "Saúde", "Açores", "2026-10", "2026-10-01", 1),
         _srea("ipc", vh, "Transportes", "Açores", "2026-10", "2026-10-01", 5),
         _srea("ipc", vh, "Vestuário", "Açores", "2026-10", "2026-10-01", -4),
-        _srea("iae", "Indicador de atividade económica", "Total", "Açores", "2026-09", "2026-09-01", 1.04),
-        _srea("desemprego", td, "Total", "Açores", "2025-T3", "2025-07-01",
-              4.8, "fiabilidade reduzida"),  # fmt: skip
-        _srea("desemprego", td, "Total", "Açores", "2026-T3", "2026-07-01",
-              4.3, "fiabilidade reduzida"),  # fmt: skip
+        _srea(
+            "iae",
+            "Indicador de atividade económica",
+            "Total",
+            "Açores",
+            "2026-09",
+            "2026-09-01",
+            1.04,
+        ),
+        _srea(
+            "desemprego",
+            td,
+            "Total",
+            "Açores",
+            "2025-T3",
+            "2025-07-01",
+            4.8,
+            "fiabilidade reduzida",
+        ),
+        _srea(
+            "desemprego",
+            td,
+            "Total",
+            "Açores",
+            "2026-T3",
+            "2026-07-01",
+            4.3,
+            "fiabilidade reduzida",
+        ),
     ]
     for y, v in (("2025", 10), ("2026", 9)):
         for m in ("01", "02"):
             for rub in ("Hotelaria", "Alojamento local"):
                 for local, k in (("Açores", 3), ("Pico", 1)):
                     rows.append(
-                        _srea("dormidas", "Dormidas", rub, local, f"{y}-{m}",
-                              f"{y}-{m}-01", v * k)  # fmt: skip
+                        _srea(
+                            "dormidas",
+                            "Dormidas",
+                            rub,
+                            local,
+                            f"{y}-{m}",
+                            f"{y}-{m}-01",
+                            v * k,
+                        )
                     )
     # hotels already published March 2026, alojamento local not yet
     rows.append(
-        _srea("dormidas", "Dormidas", "Hotelaria", "Açores", "2026-03",
-              "2026-03-01", 999)  # fmt: skip
+        _srea(
+            "dormidas",
+            "Dormidas",
+            "Hotelaria",
+            "Açores",
+            "2026-03",
+            "2026-03-01",
+            999,
+        )
     )
     for local, v in (("Açores", 20000), ("Corvo", 25000), ("Pico", 20000)):
         rows.append(
-            _srea("pib_hab", "PIB por habitante", "Preços correntes", local,
-                  "2024", "2024-01-01", v, "provisório")  # fmt: skip
+            _srea(
+                "pib_hab",
+                "PIB por habitante",
+                "Preços correntes",
+                local,
+                "2024",
+                "2024-01-01",
+                v,
+                "provisório",
+            )
         )
     r = datasets.resumo_srea(SREA_COLS, rows)
     assert r["ipc"]["valor"] == 2.64 and r["ipc"]["media12"] == 2.68
@@ -376,9 +433,12 @@ def test_resumo_srea_and_json():
     ]
     js = datasets.srea_json(SREA_COLS, rows)
     tot = next(
-        s for s in js if s["serie"] == "ipc" and s["rubrica"] == "Total"
+        s
+        for s in js
+        if s["serie"] == "ipc"
+        and s["rubrica"] == "Total"
         and s["indicador"] == vh
-    )  # fmt: skip
+    )
     assert tot["p"] == [["2026-09", 2.5], ["2026-10", 2.64]]
     une = next(s for s in js if s["serie"] == "desemprego")
     assert une["p"][-1] == ["2026-T3", 4.3, "fiabilidade reduzida"]
