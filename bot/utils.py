@@ -16,18 +16,89 @@ from .state import State
 logger = logging.getLogger(__name__)
 
 
-def find_monies(text: str):
-    text = text.replace("&nbsp;", " ")  # great json we get from JORAA...
-    pattern1 = r"(\b\d{1,3}(?:[\.\s]\d{3})*(?:,\d{2})?\s?€)"
-    pattern2 = r"(€\s?\d{1,3}(?:[\.\s]\d{3})*(?:,\d{2})?)"
-    return re.findall(pattern1, text) + re.findall(pattern2, text)
+# The amount shown for a JORAA act (markdown_joraa). Since 2026 the API gives
+# the text in "considerandos" (the preamble, or all of a short act) and
+# "normativos" (articles or clauses); older answers had "textoIntegral".
+# "anexos" are separate files and are not read, so an act whose amounts are
+# only in an annex (the portarias with the grants to each freguesia) shows
+# none. Adding up every amount in the text, as the bot did until November
+# 2026, counted a repeated amount twice and added the cost of a project to
+# its grant, or the old values of an amended agreement to the new ones.
+_AMOUNT = re.compile(
+    r"(?<![\d.,])(?<!n\.º )"
+    r"(\d{1,3}(?:\.\d{3})+|\d{1,3}(?:[ \xa0]\d{3}){1,2}|\d+)(,\d{2})?"
+    r"(?=[ \xa0]?(?:€|euros\b|EUR\b))",
+    re.I,
+)
+# procurement notices: the price of the whole procedure, before the lots
+_BASE_PRICE = (
+    re.compile(
+        r"preço base do procedimento \(EUR\): \(\*\)\s*([\d. ]+,\d{2})", re.I
+    ),
+    re.compile(r"preço base s/IVA \(€\): \(\*\)\s*([\d. ]+,\d{2})", re.I),
+)
+# words just before an amount that make it a part or the cost of the
+# project, not the amount granted or authorised
+_PART = re.compile(
+    r"prestaç|tranche|parcela|inclu[ií]|custo|investimento|orçamento"
+    r"|despesa elegível|deixando de",
+    re.I,
+)
+# an act that lists several grants: their amounts add up
+_LIST = re.compile(
+    r"\bseguintes:?\s+(?:apoios|comparticipaç|verbas|montantes|subsídios"
+    r"|incentivos|transferências|valores|importâncias)",
+    re.I,
+)
 
 
-def parse_currency_to_number(currency_str):
-    clean_str = currency_str.replace("€", "").strip()
-    clean_str = clean_str.replace(".", "").replace(" ", "")
-    clean_str = clean_str.replace(",", ".")
-    return float(clean_str)
+def _plain(html_text) -> str:
+    text = re.sub(r"<[^>]+>", " ", str(html_text or ""))
+    return text.replace("&nbsp;", " ").replace("\xa0", " ")
+
+
+def _amounts(text: str) -> list[tuple[float, str]]:
+    """Each amount in euros in ``text`` with the words just before it."""
+    out, prev = [], 0
+    for m in _AMOUNT.finditer(text):
+        value = float(
+            re.sub(r"[ .\xa0]", "", m[1]) + (m[2] or "").replace(",", ".")
+        )
+        out.append((value, text[max(prev, m.start() - 100) : m.start()]))
+        prev = m.end()
+    return out
+
+
+def joraa_amount(entry: dict) -> tuple[float, str] | None:
+    """The act's amount and what it is: the base price of a procurement
+    notice; the sum of the grants an act lists; otherwise the largest amount
+    of the operative text (clauses, or the whole text when there are none),
+    leaving out instalments and the cost of the project. None when the text
+    has no amount in euros."""
+    preamble = _plain(entry.get("considerandos") or entry.get("textoIntegral"))
+    clauses = " ".join(
+        _plain(n.get("normativo")) if isinstance(n, dict) else _plain(n)
+        for n in entry.get("normativos") or []
+    )
+    text = f"{entry.get('sumario', '')} {preamble} {clauses}"
+    for pattern in _BASE_PRICE:
+        if m := pattern.search(text):
+            return float(re.sub(r"[ .]", "", m[1]).replace(",", ".")), (
+                "preço base"
+            )
+    found = _amounts(clauses) or _amounts(text)
+    if not found:
+        return None
+    kept = [v for v, before in found if not _PART.search(before)]
+    if _LIST.search(text) and len(kept) > 1:
+        return sum(kept), f"soma de {len(kept)} valores"
+    values = kept or [v for v, _ in found]
+    return max(values), "valor" if len(set(values)) == 1 else "maior valor"
+
+
+def euros_pt(value: float) -> str:
+    """1234567.8 -> '1 234 567,80 €'."""
+    return f"{value:,.2f} €".replace(",", " ").replace(".", ",")
 
 
 def write_update(web_data: WebData):
@@ -131,32 +202,18 @@ def markdown_joraa(entries):
     url_entry_base = "https://jo.azores.gov.pt/#/ato/"
 
     def md(entry: dict):
-        entry_text = str(entry)
-        sum_amounts = sum(
-            parse_currency_to_number(amount)
-            for amount in find_monies(entry_text)
-        )
-        header = (
-            f"* [{entry['sumario'].strip()}]({url_entry_base}{entry['id']})"
-        )
-        human_id = f"  * {entry['humanId']}"
-        sum_str = f"  * Soma dos montantes: {sum_amounts:,.2f} €"
+        amount = joraa_amount(entry)
+        lines = [
+            f"* [{entry['sumario'].strip()}]({url_entry_base}{entry['id']})",
+            f"  * {entry['humanId']}",
+        ]
+        if amount:
+            lines.append(f"  * Montante: {euros_pt(amount[0])} ({amount[1]})")
         entidades = "\n".join(
             [f"  * {ent['nome']}" for ent in entry["entidades"]]
         )
-        return (
-            sum_amounts,
-            entidades,
-            header
-            + "\n"
-            + human_id
-            + "\n"
-            + sum_str
-            + "\n"
-            + entidades
-            + "\n  * "
-            + entry["descricaoPublicacao"],
-        )
+        lines += [entidades, f"  * {entry['descricaoPublicacao']}"]
+        return amount[0] if amount else 0, entidades, "\n".join(lines)
 
     sorted_entries = sorted(
         [md(entry) for entry in entries], key=lambda tup: (-tup[0], tup[1])

@@ -187,8 +187,8 @@ def fetch_sigica_all():
 
 @catch_requests_exceptions
 def fetch_joraa_ato(id):
-    """One act, with its full text (``textoIntegral``), where the amounts
-    that markdown_joraa adds up are."""
+    """One act, with its text (``considerandos`` and ``normativos``; until
+    2026 ``textoIntegral``), where utils.joraa_amount finds its amount."""
     gov.wait()
     response = requests.get(
         f"https://jo.azores.gov.pt/api/public/ato/{id}",
@@ -237,8 +237,8 @@ def joraa_plan(
 def fetch_joraa(days: list[date]) -> dict | FetchError:
     """Each day's acts, day by day in the order of ``days`` (joraa_plan:
     the newest days, then the backfill from its newest day down), at the
-    pace gov.wait() allows (20 s a request at night: some 15 days of acts in
-    JORAA_BUDGET). Stops at the first failure or when the budget is spent
+    pace gov.wait() allows (20 s a request at night: some 8 days of acts in
+    JORAA_BUDGET; 3 min in the Azores peak hours: about one day). Stops at the first failure or when the budget is spent
     and returns the days done so far: State.get_updated_state works out from
     them what is still missing, so a backlog is caught up over several
     nights. A failure on the first day is returned as such, so the day's

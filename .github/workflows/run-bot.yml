@@ -2,7 +2,14 @@ name: Daily `bot` run
 
 on:
   schedule:
-    - cron: '01 01 * * *'
+    # GitHub starts this run 4.5-9.5 hours late (Oct-Nov 2026), so it lands
+    # at 00:00-05:00 UTC: after midnight, so "yesterday" is the day just
+    # ended, and outside the Azores peak hours (07:00-20:00 local), when
+    # jo.azores.gov.pt allows a request every 20 s instead of every 3 min
+    # (bot/gov.py). At 01:01 it landed at 07:00-10:30 UTC, and JORAA could
+    # read about one day of acts per run. If GitHub starts running it on
+    # time, it runs before midnight and rewrites the previous day's pages.
+    - cron: '31 19 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -57,7 +64,8 @@ jobs:
         run: |
           printf '[credentials]\nemail = %s\npassword = %s\n' \
             "$AO_EMAIL" "$AO_PASSWORD" > .ao_config
-          poetry run python3 -m scrapers.ao --date "$(date +%Y-%m-%d)"
+          # the run lands after midnight UTC: the edition of the day before
+          poetry run python3 -m scrapers.ao --date "$(date -u -d yesterday +%Y-%m-%d)"
         env:
           AO_EMAIL: ${{ secrets.AO_EMAIL }}
           AO_PASSWORD: ${{ secrets.AO_PASSWORD }}

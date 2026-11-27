@@ -45,7 +45,7 @@ novembro de 2026. Se abrir as ligações mais tarde, podem ter mudado.</p>
 <tr><th scope="row"><a href="/dados/sper/">Empresas públicas</a></th><td>empresa</td><td>anual (CFP)</td><td>o site mostra o relatório mais recente</td></tr>
 <tr><th scope="row"><a href="/dados/maiores-empresas/">Maiores empresas</a></th><td>empresa com sede nos Açores</td><td>anual, publicado com um ano de atraso</td><td>ranking de uma revista, não estatística oficial</td></tr>
 <tr><th scope="row"><a href="/dados/#fonte=base">Contratos (BASE)</a></th><td>contrato</td><td>diário desde agosto de 2024; antes, desde 2012, dados abertos do IMPIC (mensal)</td><td>preço contratual, em regra sem IVA; não é despesa paga</td></tr>
-<tr><th scope="row"><a href="/dados/#fonte=joraa">Jornal Oficial</a></th><td>ato</td><td>diário, desde agosto de 2024</td><td>o montante é uma soma automática dos valores no texto{% if site.data.joraa_estado.atraso_de %}; faltam os atos de {{ site.data.joraa_estado.atraso_de }} a {{ site.data.joraa_estado.atraso_ate }}{% endif %}</td></tr>
+<tr><th scope="row"><a href="/dados/#fonte=joraa">Jornal Oficial</a></th><td>ato</td><td>diário, desde agosto de 2024</td><td>o montante é calculado pelo açores.net a partir do texto (até 27/11/2026 era a soma de todos os valores; ver as <a href="/dados/notas/">notas</a>){% if site.data.joraa_estado.atraso_de %}; faltam os atos de {{ site.data.joraa_estado.atraso_de }} a {{ site.data.joraa_estado.atraso_ate }}{% endif %}</td></tr>
 <tr><th scope="row"><a href="/dados/#fonte=alra">Assembleia</a></th><td>iniciativa, requerimento</td><td>diário, desde agosto de 2024</td><td>estado do requerimento é o último visto pelo robô</td></tr>
 </tbody>
 </table>

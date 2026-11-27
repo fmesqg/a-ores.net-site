@@ -96,14 +96,26 @@ oficial. Em cada termo está a ligação para a lei ou a fonte com a definição
 - Só entra o que o robô viu. Os dias em que uma fonte falhou ficam em falta.
 - **JORAA**: de 11 de agosto a 27 de novembro de 2026 o jo.azores.gov.pt
   bloqueou o robô. Os dias em falta estão a ser recolhidos (ver o aviso acima,
-  enquanto durar). O montante é
-  calculado pelo açores.net: a soma de todos os valores em euros que
-  aparecem no resumo e no texto do ato. Um valor repetido conta duas vezes
-  (o Despacho n.º 694/2025 autoriza 3 175 000 € e aparece com 6 350 000 €),
-  e números mal escritos no ato dão somas absurdas (a Adenda n.º 5/2025 ao
-  contrato-programa do HDES aparece com 159 864 847 000 €). Serve para
-  encontrar atos. Para citar, leia o valor no próprio ato. "0" quer dizer
-  que não se encontrou nenhum valor em euros.
+  enquanto durar). O montante é calculado pelo açores.net, e a coluna
+  `montante_tipo` diz como:
+  - **preço base**: nos anúncios de concursos, o preço base do procedimento
+    todo (não o de cada lote);
+  - **soma de N valores**: nos atos que listam vários apoios (portarias de
+    apoios a empresas, despachos da habitação), a soma dos apoios;
+  - **valor** ou **maior valor**: nos outros, o maior valor em euros das
+    cláusulas ou artigos (ou do texto todo, se não os tiver), sem contar
+    prestações nem o custo do projeto. Num acordo de cooperação é a
+    comparticipação; num aditamento, o valor novo.
+  - **soma de todos os valores (método antigo)**: até 27 de novembro de 2026
+    o robô somava todos os valores em euros do ato. Um valor repetido contava
+    duas vezes (o Despacho n.º 694/2025 autoriza 3 175 000 € e aparece com
+    6 350 000 €), o custo do projeto somava-se ao apoio, e números mal
+    escritos davam somas absurdas (a Adenda n.º 5/2025 ao contrato-programa
+    do HDES aparece com 159 864 847 000 €). Esses atos não foram relidos.
+
+  Os valores que só estão em anexos (as portarias com as verbas de cada
+  freguesia) não são lidos: esses atos ficam sem montante. Serve para
+  encontrar atos. Para citar, leia o valor no próprio ato.
 - **BASE**: a data de publicação é o dia em que o contrato apareceu no portal,
   não o da assinatura. Um contrato republicado conta uma vez só. Desde agosto
   de 2024 é o dia em que o açores.net o viu; antes, é a data que o IMPIC
