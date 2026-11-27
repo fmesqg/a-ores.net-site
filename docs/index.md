@@ -86,7 +86,8 @@ permalink: /
   <h2><a href="/dados/">Contratos, Assembleia e Jornal Oficial</a></h2>
   <p>Pesquise os contratos públicos (quem contratou o quê, a quem e por
   quanto), as perguntas dos deputados ao Governo e os atos do Jornal Oficial
-  com montantes. Desde agosto de 2024, em tabela e em CSV.</p>
+  com montantes. Contratos desde 2012; Assembleia e Jornal Oficial desde agosto
+  de 2024. Em tabela e em CSV.</p>
   <ul>
     <li><a href="/dados/#fonte=base&min=1000000">Contratos acima de um milhão de euros</a></li>
     <li><a href="/dados/#fonte=alra&tipo=Requerimentos">Perguntas dos deputados ao Governo</a></li>

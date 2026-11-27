@@ -6,7 +6,11 @@ The bot writes one markdown page per source per day (docs/_base_updates/,
 docs/_alra_updates/, docs/_joraa_updates/). This module re-reads all of them
 and writes, under docs/dados/:
 
-  base.csv   one row per BASE contract (deduplicated by id)
+  base.csv   one row per BASE contract (deduplicated by id): what the bot
+             saw since August 2024 plus, for every year since 2012, the
+             IMPIC open data (data/base_impic/, from bot/base_impic.py);
+             acores.db carries more columns (NIFs, CPV, base and final
+             price, bidders, place of execution)
   alra.csv   one row per ALRA record (requerimento, iniciativa, voto, ...),
              with the first/last day it appeared and its last known state
   joraa.csv  one row per JORAA act with an amount
@@ -38,6 +42,10 @@ and writes, under docs/dados/:
   emprego_publico.csv  jobs and pay in general government in the Azores,
              quarterly since 2011 (DGAEP, SIOE): a copy of
              data/emprego_publico.csv (bot/dgaep.py)
+  at_irs.csv IRS households, income and tax by tax bracket in the Azores,
+             Madeira and the mainland, and the additional solidarity rate,
+             yearly since 2016 (AT, Dossier Estatístico): a copy of
+             data/at_irs.csv (bot/at_irs.py)
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json,
@@ -52,6 +60,7 @@ page (docs/dados.md) reads them directly. None of these files is committed:
 
 import csv
 import datetime as dt
+import gzip
 import json
 import re
 import sqlite3
@@ -136,18 +145,72 @@ BASE_COLS = [
     "procedimento",
     "objeto",
     "url",
+    "concorrentes",
+    "recolha",
 ]
+# only in acores.db: base.csv is read whole by the search page, keep it light
+BASE_EXTRA = [
+    "preco_base",
+    "preco_efetivo",
+    "adjudicante_nif",
+    "adjudicatario_nif",
+    "tipo_contrato",
+    "cpv",
+    "propostas",
+    "local",
+    "fundamentacao",
+    "acordo_quadro",
+]
+BASE_ALL = BASE_COLS + BASE_EXTRA
+DIARIO, IMPIC = "açores.net", "IMPIC"
+BASE_URL = "https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id="
 
 
-def build_base(docs: Path) -> list[list]:
+def read_impic(data: Path) -> dict:
+    """{id: row dict} from data/base_impic/<ano>.csv.gz (bot/base_impic.py)."""
+    out = {}
+    for path in sorted((data / "base_impic").glob("*.csv.gz")):
+        with gzip.open(path, "rt", encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f):
+                out[int(r["id"])] = r
+    return out
+
+
+def _n(x: str, kind=float):
+    try:
+        return kind(x) if x not in (None, "") else ""
+    except ValueError:
+        return ""
+
+
+def _extra(r: dict | None) -> list:
+    if not r:
+        return [""] * len(BASE_EXTRA)
+    return [
+        (
+            _n(r[c], float if c.startswith("preco") else int)
+            if c in ("preco_base", "preco_efetivo", "propostas")
+            else r.get(c, "")
+        )
+        for c in BASE_EXTRA
+    ]
+
+
+def build_base(docs: Path, impic: dict | None = None) -> list[list]:
+    """The contracts the bot saw day by day, completed and extended back to
+    2012 with the IMPIC open data. When both have a contract, the bot's
+    row wins (its 'publicado' is the day it appeared on base.gov.pt) and
+    the IMPIC adds the columns the daily pages do not have."""
+    if impic is None:
+        impic = read_impic(docs.parent / "data")
     rows = {}
     for day, path in days(docs, "_base_updates"):
         for _, title, url, subs in parse_day(path):
             f = fields(subs)
             cid = re.search(r"id=(\d+)", url)
-            key = cid[1] if cid else url
+            key = int(cid[1]) if cid else url
             rows[key] = [
-                int(key) if key.isdigit() else key,
+                key,
                 day,
                 iso(f.get("data da assinatura", "")),
                 euros(f.get("preço contratual", ""), ","),
@@ -157,6 +220,26 @@ def build_base(docs: Path) -> list[list]:
                 title,
                 url,
             ]
+    for key, r in rows.items():
+        x = impic.get(key)
+        r += [_n(x["concorrentes"], int) if x else "", DIARIO, *_extra(x)]
+    for key, x in impic.items():
+        if key in rows:
+            continue
+        rows[key] = [
+            key,
+            x["publicado"],
+            x["data_assinatura"],
+            None if _n(x["preco"]) == "" else _n(x["preco"]),
+            x["adjudicante"],
+            x["adjudicatario"],
+            x["procedimento"],
+            x["objeto"],
+            BASE_URL + str(key),
+            _n(x["concorrentes"], int),
+            IMPIC,
+            *_extra(x),
+        ]
     return sorted(rows.values(), key=lambda r: (r[1], r[3] or 0), reverse=True)
 
 
@@ -279,6 +362,11 @@ def write(out: Path, name: str, cols: list[str], rows: list[list]) -> dict:
 DB_TYPES = {
     "id": "INTEGER",
     "preco": "REAL",
+    "preco_base": "REAL",
+    "preco_efetivo": "REAL",
+    "concorrentes": "INTEGER",
+    "propostas": "INTEGER",
+    "escalao": "INTEGER",
     "montante": "REAL",
     "valor": "REAL",
     "ordem": "INTEGER",
@@ -312,7 +400,14 @@ DB_TYPES = {
     },
 }
 DB_INDEX = {
-    "base": ["publicado", "data_assinatura", "adjudicante", "adjudicatario"],
+    "base": [
+        "publicado",
+        "data_assinatura",
+        "adjudicante",
+        "adjudicatario",
+        "adjudicante_nif",
+        "adjudicatario_nif",
+    ],
     "alra": ["tipo", "data", "primeiro_dia", "autores"],
     "joraa": ["publicado", "entidade"],
     "ine": ["varcd", "data", "nivel", "local", "concelho"],
@@ -326,9 +421,10 @@ DB_INDEX = {
     "maiores": ["ano", "posicao", "ilha", "setor"],
     "emprego_publico": ["quadro", "local", "data"],
     "censos2021_setores": ["ilha", "secao"],
+    "at_irs": ["quadro", "medida", "ano", "regiao"],
 }
 DB_FTS = {
-    "base": ["objeto", "adjudicante", "adjudicatario", "procedimento"],
+    "base": ["objeto", "adjudicante", "adjudicatario", "procedimento", "cpv"],
     "alra": ["titulo", "autores", "estado", "tipo"],
     "joraa": ["titulo", "ato", "entidade"],
     "ine": ["indicador", "tema", "local", "concelho", "ilha", "categoria"],
@@ -342,6 +438,7 @@ DB_FTS = {
     "maiores": ["empresa", "ilha", "setor"],
     "emprego_publico": ["indicador", "rubrica", "local"],
     "censos2021_setores": ["concelho", "ilha"],
+    "at_irs": ["quadro", "medida", "regiao", "taxa", "titularidade"],
 }
 
 
@@ -1922,13 +2019,134 @@ def _texts(node, total: float | None = None):
     return node
 
 
+def irs_data(at: tuple[list, list]) -> dict:
+    """docs/_data/irs.json for /dados/irs/: IRS by tax bracket in the
+    Azores in the latest year (AT), the top bracket year by year against
+    Madeira, and the additional solidarity rate."""
+    rows = [
+        r
+        for r in _dicts(at)
+        if r["titularidade"] == "Total"
+        and r["quadro"] == "Taxas de tributação"
+    ]
+    if not rows:
+        return {}
+    by: dict = {}
+    for r in rows:
+        by.setdefault((r["medida"], r["regiao"], int(r["ano"])), {})[
+            int(r["escalao"])
+        ] = (float(r["taxa"]), float(r["valor"]))
+    anos = sorted({k[2] for k in by})
+    ano = anos[-1]
+
+    def pct(x: float | None) -> str:
+        # rates keep every decimal (11,55 %, not 11,6 %)
+        return "" if x is None else f"{x:g} %".replace(".", ",")
+
+    def tab(medida: str, regiao: str, a: int) -> dict:
+        return by.get((medida, regiao, a), {})
+
+    agr = tab("Agregados", "Açores", ano)
+    ren = tab("Rendimento englobado", "Açores", ano)
+    irs = tab("IRS liquidado", "Açores", ano)
+    cont = tab("Agregados", "Continente", ano)
+    tot_a = sum(v for _, v in agr.values())
+    tot_r = sum(v for _, v in ren.values())
+    tot_i = sum(v for _, v in irs.values())
+    escaloes = []
+    for o in sorted(agr):
+        n = agr[o][1]
+        i = irs.get(o, (0, 0))[1]
+        escaloes.append(
+            {
+                "ordem": o,
+                "taxa_s": pct(agr[o][0]),
+                "taxa_continente_s": pct(cont.get(o, (None, None))[0]),
+                "agregados": int(n),
+                "agregados_pct": round(100 * n / tot_a, 1),
+                "rendimento_m": round(ren.get(o, (0, 0))[1] / 1e6, 1),
+                "irs_m": round(i / 1e6, 1),
+                "irs_pct": round(100 * i / tot_i, 1),
+                "irs_medio": round(i / n) if n else 0,
+            }
+        )
+    serie = []
+    for a in anos:
+        linha: dict = {"ano": a}
+        for regiao, k in (("Açores", "acores"), ("Madeira", "madeira")):
+            g = tab("Agregados", regiao, a)
+            t = tab("IRS liquidado", regiao, a)
+            if not g:
+                continue
+            topo = max(g)
+            total = sum(v for _, v in g.values())
+            linha[k] = int(g[topo][1])
+            linha[k + "_taxa_s"] = pct(g[topo][0])
+            linha[k + "_por_mil"] = round(1000 * g[topo][1] / total, 1)
+            if t:
+                linha[k + "_irs_pct"] = round(
+                    100 * t[topo][1] / sum(v for _, v in t.values()), 1
+                )
+        serie.append(linha)
+    adicional = {}
+    for r in _dicts(at):
+        if r["quadro"] != "Taxa adicional de solidariedade":
+            continue
+        if r["regiao"] != "Açores":
+            continue
+        d = adicional.setdefault(int(r["ano"]), {"ano": int(r["ano"])})
+        k = "agregados" if r["medida"] == "Agregados" else "irs"
+        d[k] = d.get(k, 0) + float(r["valor"])
+    adic = []
+    for a in sorted(adicional):
+        d = adicional[a]
+        adic.append(
+            {
+                "ano": a,
+                "agregados": int(d.get("agregados", 0)),
+                "irs_m": round(d.get("irs", 0) / 1e6, 2),
+            }
+        )
+    fonte = next(
+        r
+        for r in _dicts(at)
+        if int(r["ano"]) == ano and r["regiao"] == "Açores"
+    )
+    topo = escaloes[-1] if escaloes else {}
+    return {
+        "ano": ano,
+        "primeiro": anos[0],
+        "agregados": int(tot_a),
+        "rendimento_m": round(tot_r / 1e6, 1),
+        "irs_m": round(tot_i / 1e6, 1),
+        "taxa_media": round(100 * tot_i / tot_r, 1) if tot_r else 0,
+        "escaloes": escaloes,
+        "topo": topo,
+        "serie": serie,
+        "adicional": adic,
+        "dossie": fonte["dossie"],
+        "url": fonte["url"],
+    }
+
+
+def write_irs(docs: Path, tables: dict) -> None:
+    data = irs_data(tables["at_irs"]) if "at_irs" in tables else {}
+    (docs / "_data").mkdir(exist_ok=True)
+    (docs / "_data" / "irs.json").write_text(
+        json.dumps(_texts(data), ensure_ascii=False, indent=1),
+        encoding="utf-8",
+    )
+
+
 def write_camaras(docs: Path, tables: dict) -> None:
     """docs/_data/camaras.json for /financas/camaras/."""
-    data = (
-        camaras_data(tables["ine"], tables.get("base"))
-        if "ine" in tables
-        else {}
-    )
+    base = tables.get("base")
+    if base and "recolha" in base[0]:
+        # the per-capita contract totals cover what the bot saw day by day
+        # (since August 2024), not the IMPIC years before
+        i = base[0].index("recolha")
+        base = (base[0], [r for r in base[1] if r[i] == DIARIO])
+    data = camaras_data(tables["ine"], base) if "ine" in tables else {}
     (docs / "_data").mkdir(exist_ok=True)
     (docs / "_data" / "camaras.json").write_text(
         json.dumps(_texts(data), ensure_ascii=False, indent=1),
@@ -2000,8 +2218,15 @@ def main(docs: Path) -> dict:
     out.mkdir(exist_ok=True)
     meta = {"gerado": dt.datetime.now(dt.UTC).strftime("%Y-%m-%dT%H:%MZ")}
     tables: dict[str, tuple[list, list]] = {}
+    base = build_base(docs)
+    tables["base"] = (BASE_ALL, base)
+    info = write(out, "base", BASE_COLS, [r[: len(BASE_COLS)] for r in base])
+    datas = sorted(r[1] for r in base if r[1])
+    info["de"], info["ate"] = (datas[0], datas[-1]) if datas else ("", "")
+    diario = [d for d, _ in days(docs, "_base_updates")]
+    info["diario_de"] = diario[0] if diario else ""
+    meta["base"] = info
     for name, cols, build, coll in (
-        ("base", BASE_COLS, build_base, "_base_updates"),
         ("alra", ALRA_COLS, build_alra, "_alra_updates"),
         ("joraa", JORAA_COLS, build_joraa, "_joraa_updates"),
     ):
@@ -2027,6 +2252,7 @@ def main(docs: Path) -> dict:
         "maiores",
         "emprego_publico",
         "censos2021_setores",
+        "at_irs",
     ):
         src = docs.parent / "data" / f"{name}.csv"
         if name == "maiores" and maiores:
@@ -2068,6 +2294,7 @@ def main(docs: Path) -> dict:
     write_joraa_estado(docs)
     write_economia(docs, tables)
     write_camaras(docs, tables)
+    write_irs(docs, tables)
     write_db(out / "acores.db", tables)
     meta["acores.db"] = (out / "acores.db").stat().st_size
     (out / "meta.json").write_text(
