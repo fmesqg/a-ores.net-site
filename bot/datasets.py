@@ -20,6 +20,11 @@ and writes, under docs/dados/:
   beo.csv    the regional government's monthly budget execution (Boletim
              de Execução Orçamental): a copy of data/beo.csv, which
              bot/beo.py parses from the PDFs weekly
+  tdc.csv    the Tribunal de Contas' Parecer on the regional account:
+             verdict, reservas, ênfases and recommendations (with the
+             status the next parecer gave them), from data/tdc.csv
+  tdc_valores.csv  figures from those pareceres (consolidated account,
+             debt, revenue and expenditure left off the books)
   srea.csv   SREA series (inflation, economic activity, unemployment,
              tourism by island, GDP by island): a copy of data/srea.csv,
              which bot/srea.py fetches weekly
@@ -267,6 +272,8 @@ DB_TYPES = {
     "ordem": "INTEGER",
     "ano": "INTEGER",
     "mes": "INTEGER",
+    "conta": "INTEGER",
+    "numero": "INTEGER",
 }
 DB_INDEX = {
     "base": ["publicado", "data_assinatura", "adjudicante", "adjudicatario"],
@@ -274,6 +281,8 @@ DB_INDEX = {
     "joraa": ["publicado", "entidade"],
     "ine": ["varcd", "data", "nivel", "local", "concelho"],
     "beo": ["quadro", "data", "caminho", "dimensao"],
+    "tdc": ["conta", "tipo"],
+    "tdc_valores": ["quadro", "ano", "caminho"],
     "srea": ["serie", "data", "local"],
 }
 DB_FTS = {
@@ -282,8 +291,24 @@ DB_FTS = {
     "joraa": ["titulo", "ato", "entidade"],
     "ine": ["indicador", "tema", "local", "concelho", "ilha", "categoria"],
     "beo": ["quadro", "rubrica", "caminho", "dimensao"],
+    "tdc": ["tipo", "texto", "referencia", "situacao"],
+    "tdc_valores": ["quadro", "rubrica", "caminho"],
     "srea": ["indicador", "rubrica", "local"],
 }
+
+
+def tdc_latest(cols: list[str], rows: list[list]) -> dict:
+    """The latest parecer: its year, verdict and PDF, for the home page."""
+    c, t = cols.index("conta"), cols.index("tipo")
+    juizos = [r for r in rows if r[t] == "juízo"]
+    if not juizos:
+        return {}
+    r = max(juizos, key=lambda r: int(r[c]))
+    return {
+        "conta": r[c],
+        "juizo": r[cols.index("texto")],
+        "url": r[cols.index("parecer")],
+    }
 
 
 def beo_latest(cols: list[str], rows: list[list]) -> dict:
@@ -778,7 +803,8 @@ def main(docs: Path) -> dict:
             (all_days[0], all_days[-1]) if all_days else ("", "")
         )
         meta[name] = info
-    for name in ("ine", "beo", "srea"):  # fetched weekly by their bots
+    # fetched weekly into data/ by their bots
+    for name in ("ine", "beo", "srea", "tdc", "tdc_valores"):
         src = docs.parent / "data" / f"{name}.csv"
         if not src.exists():
             continue
@@ -787,9 +813,10 @@ def main(docs: Path) -> dict:
             cols, rows = next(reader), list(reader)
         tables[name] = (cols, rows)
         info = write(out, name, cols, rows)
-        dates = sorted(
-            r[cols.index("data")] for r in rows if r[cols.index("data")]
+        when = cols.index(
+            next(c for c in ("data", "conta", "ano") if c in cols)
         )
+        dates = sorted(r[when] for r in rows if r[when])
         info["de"], info["ate"] = (dates[0], dates[-1]) if dates else ("", "")
         if name == "ine":
             info["indicadores"] = len({r[0] for r in rows})
@@ -802,10 +829,11 @@ def main(docs: Path) -> dict:
                 json.dumps(srea_json(cols, rows), ensure_ascii=False),
                 encoding="utf-8",
             )
-        else:
-            info["ultimo"] = beo_latest(cols, rows)
+        elif name in ("beo", "tdc"):
+            latest = beo_latest if name == "beo" else tdc_latest
+            info["ultimo"] = latest(cols, rows)
             (docs / "_data").mkdir(exist_ok=True)
-            (docs / "_data" / "beo_ultimo.json").write_text(
+            (docs / "_data" / f"{name}_ultimo.json").write_text(
                 json.dumps(info["ultimo"], ensure_ascii=False),
                 encoding="utf-8",
             )

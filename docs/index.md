@@ -37,6 +37,7 @@ ligação para a fonte oficial. Primeira vez por aqui? Comece pelo
     <li><a href="/dados/beo/#quadro=sintese-global&modo=acum">Há défice ou excedente?</a></li>
     <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra&grafico=anos">Quanto rendem o IRS e o IVA, mês a mês?</a></li>
     <li><a href="/dados/beo/#quadro=despesa-do-gra-por-departamento">Quanto gasta cada secretaria?</a></li>
+    <li><a href="/dados/tdc/">O que diz o Tribunal de Contas sobre as contas da Região?</a>{% if site.data.tdc_ultimo.conta %} (último parecer: <a href="{{ site.data.tdc_ultimo.url }}">Conta de {{ site.data.tdc_ultimo.conta }}</a>){% endif %}</li>
   </ul>
 </section>
 
