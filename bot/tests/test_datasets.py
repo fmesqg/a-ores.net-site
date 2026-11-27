@@ -915,3 +915,90 @@ def test_publico_data():
     assert (w["publico_pct"], w["privado_pct"], w["um_em"]) == (20, 80, 5)
     assert w["periodo"] == "3.º trimestre de 2026" and w["setor_p_mil"] == 0.3
     assert datasets.publico_data((cols, [])) == {}
+
+
+def test_municipio_matches_spellings_and_skips_others():
+    cs = [
+        "Ribeira Grande",
+        "Calheta (R.A.A.)",
+        "Lagoa (R.A.A.)",
+        "Vila da Praia da Vitória",
+        "Santa Cruz das Flores",
+        "Santa Cruz da Graciosa",
+        "Ponta Delgada",
+    ]
+    m = datasets.municipio
+    assert m("MUNICÍPIO DA RIBEIRA GRANDE", cs) == "Ribeira Grande"
+    assert m("Municipio da  Ribeira Grande", cs) == "Ribeira Grande"
+    assert m("Município de Calheta - São Jorge", cs) == "Calheta (R.A.A.)"
+    assert m("Município de Lagoa (Açores)", cs) == "Lagoa (R.A.A.)"
+    assert m("Município da Praia da Vitória", cs) == "Vila da Praia da Vitória"
+    assert m("Município de Santa Cruz da Graciosa", cs) == (
+        "Santa Cruz da Graciosa"
+    )
+    assert m("Câmara Municipal de Ponta Delgada", cs) == "Ponta Delgada"
+    # Madeira's Calheta, the Algarve's Lagoa, SMAS and companies are not
+    assert m("Município da Calheta", cs) == ""
+    assert m("Município de Lagoa", cs) == ""
+    assert m("SMAS Câmara Municipal de Ponta Delgada", cs) == ""
+    assert m("Associação de Municípios da Ilha do Pico", cs) == ""
+    assert m("Portos dos Açores, S.A.", cs) == ""
+
+
+def test_camaras_data_per_inhabitant():
+    cols = [
+        "varcd",
+        "nivel",
+        "geocod",
+        "local",
+        "ilha",
+        "categoria",
+        "periodo",
+        "valor",
+    ]
+
+    def r(v, nivel, geo, local, periodo, valor, ilha=""):
+        return [v, nivel, geo, local, ilha, "", periodo, str(valor)]
+
+    rows = []
+    for geo, local, nivel, ilha, pop, desp in (
+        ("2004901", "Corvo", "Concelho", "Corvo", 400, 2_000_000),
+        (
+            "2004203",
+            "Ponta Delgada",
+            "Concelho",
+            "São Miguel",
+            70_000,
+            63_000_000,
+        ),
+        (
+            "20",
+            "Região Autónoma dos Açores",
+            "Região",
+            "",
+            240_000,
+            300_000_000,
+        ),
+        ("1", "Continente", "NUTS I", "", 1, 1),
+    ):
+        for ano, f in (("2021", 0.5), ("2025", 1)):
+            rows.append(r("0012918", nivel, geo, local, ano, pop, ilha))
+            rows.append(r("0013909", nivel, geo, local, ano, desp * f, ilha))
+            rows.append(r("0013908", nivel, geo, local, ano, desp * f, ilha))
+    base_cols = ["publicado", "adjudicante", "preco"]
+    base = [
+        ["2024-08-21", "Município do Corvo", "400000"],
+        ["2025-01-02", "Município do Corvo", "40000"],
+        ["2025-01-03", "Musami - Operações Municipais do Ambiente, EIM", "9"],
+    ]
+    d = datasets.camaras_data((cols, rows), (base_cols, base))
+    assert d["ano"] == "2025" and d["inicio"] == "2021"
+    corvo, pdl = d["concelhos"]
+    assert corvo["nome"] == "Corvo" and corvo["despesa_hab"] == 5000
+    assert corvo["var_pct"] == 100
+    assert corvo["contratos_n"] == 2 and corvo["contratos_hab"] == 1100
+    assert pdl["despesa_hab"] == 900 and "contratos_n" not in pdl
+    assert d["sem_contratos"] == ["Ponta Delgada"]
+    assert [x["nome"] for x in d["refs"]] == ["Açores"]
+    assert d["base_de"] == "2024-08-21"
+    assert len(d["grafico"]["pontos"]) == 2

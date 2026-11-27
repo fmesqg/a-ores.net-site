@@ -1,5 +1,5 @@
-<nav class="secao-nav" aria-label="Finanças da Região">
-  {%- assign itens = "/financas/|Resumo;/dados/beo/|Execução orçamental (mês a mês);/dados/tdc/|Tribunal de Contas (ano a ano)" | split: ";" -%}
+<nav class="secao-nav" aria-label="Finanças">
+  {%- assign itens = "/financas/|Resumo;/dados/beo/|Execução orçamental (mês a mês);/dados/tdc/|Tribunal de Contas (ano a ano);/financas/camaras/|Câmaras municipais" | split: ";" -%}
   {%- for i in itens -%}
     {%- assign p = i | split: "|" -%}
     <a href="{{ p[0] }}"{% if page.url == p[0] %} aria-current="page"{% endif %}>{{ p[1] }}</a>
