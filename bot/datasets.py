@@ -742,6 +742,73 @@ def resumo_srea(cols: list[str], rows: list[list]) -> dict:
     return out
 
 
+def resumo_tdc(tdc: tuple[list, list], valores: tuple[list, list]) -> dict:
+    """Latest Tribunal de Contas parecer for /financas/: debt, deficit,
+    money left out of the Conta, reservations and what happened to the
+    recommendations of the previous parecer."""
+    cols, rows = tdc
+    t = [dict(zip(cols, r, strict=False)) for r in rows]
+    if not t:
+        return {}
+    conta = max(r["conta"] for r in t)
+    last = [r for r in t if r["conta"] == conta]
+    out: dict = {
+        "conta": conta,
+        "url": last[0]["parecer"],
+        "juizo": next((r["texto"] for r in last if r["tipo"] == "juízo"), ""),
+        "reservas": sum(r["tipo"] == "reserva" for r in last),
+        "recomendacoes": sum(r["tipo"] == "recomendação" for r in last),
+    }
+    # Recommendations of the previous parecer, as assessed in this one.
+    prev = [
+        r
+        for r in t
+        if r["tipo"] == "recomendação" and r["situacao"].endswith(f"({conta})")
+    ]
+    if prev:
+        estados: dict[str, int] = {}
+        for r in prev:
+            k = r["situacao"].rsplit(" (", 1)[0]
+            estados[k] = estados.get(k, 0) + 1
+        out["avaliadas"] = len(prev)
+        out["estados"] = [{"nome": k, "n": n} for k, n in estados.items()]
+        desde = [int(r["desde"]) for r in prev if r["desde"].isdigit()]
+        if desde:
+            out["desde"] = min(desde)
+    vcols, vrows = valores
+    v = [dict(zip(vcols, r, strict=False)) for r in vrows]
+
+    def val(rubrica: str, ano: str, quadro: str) -> float | None:
+        for r in v:
+            if (r["rubrica"], r["ano"], r["quadro"]) == (rubrica, ano, quadro):
+                return _num(r["valor"])
+        return None
+
+    ind, conta_q = (
+        "Indicadores",
+        "Conta do sector público administrativo regional",
+    )
+    anterior = str(int(conta) - 1)
+    divida = val("Dívida total", conta, ind)
+    divida_ant = val("Dívida total", anterior, ind)
+    if divida is not None:
+        out["divida"] = divida
+        if divida_ant:
+            out["divida_var"] = round(100 * (divida / divida_ant - 1), 1)
+    saldo = val("Saldo global ou efetivo", conta, conta_q)
+    if saldo is not None:
+        out["saldo"] = round(saldo / 1e6, 1)
+        out["saldo_abs"] = abs(out["saldo"])
+    for k, rub in (
+        ("receita_fora", "Receita não registada na Conta"),
+        ("despesa_fora", "Despesa não registada na Conta"),
+    ):
+        x = val(rub, conta, ind)
+        if x is not None:
+            out[k] = x
+    return out
+
+
 def pt_num(x: float) -> str:
     """245328 -> '245 328', 39.38 -> '39,4', 5.94 -> '5,94' (pt-PT, the
     thousands separator is a no-break space)."""
@@ -776,7 +843,7 @@ def _texts(node, total: float | None = None):
 
 
 def write_resumo(docs: Path, tables: dict) -> None:
-    """docs/_data/resumo.json: the few numbers /introducao/ shows, computed
+    """docs/_data/resumo.json: the few numbers /introducao/ and /financas/ show, computed
     here so that page does not download the full CSVs."""
     out: dict = {}
     if "ine" in tables:
@@ -790,6 +857,8 @@ def write_resumo(docs: Path, tables: dict) -> None:
             )
     if "srea" in tables:
         out["srea"] = resumo_srea(*tables["srea"])
+    if "tdc" in tables and "tdc_valores" in tables:
+        out["tdc"] = resumo_tdc(tables["tdc"], tables["tdc_valores"])
     (docs / "_data").mkdir(exist_ok=True)
     (docs / "_data" / "resumo.json").write_text(
         json.dumps(_texts(out), ensure_ascii=False, indent=1), encoding="utf-8"

@@ -455,3 +455,45 @@ def test_resumo_srea_and_json():
     assert tot["p"] == [["2026-09", 2.5], ["2026-10", 2.64]]
     une = next(s for s in js if s["serie"] == "desemprego")
     assert une["p"][-1] == ["2026-T3", 4.3, "fiabilidade reduzida"]
+
+
+def test_resumo_tdc():
+    tcols = ["conta", "tipo", "numero", "texto", "referencia", "situacao"]
+    tcols += ["desde", "parecer", "sintese"]
+
+    def t(conta, tipo, situacao="", desde=""):
+        return [conta, tipo, "1", "x", "", situacao, desde, f"p{conta}", ""]
+
+    trows = [
+        t("2024", "recomendação", "Não implementada (2025)", "2013"),
+        t("2024", "recomendação", "Parcialmente implementada (2025)", "2016"),
+        t("2024", "recomendação", "Parcialmente implementada (2025)", "2006"),
+        t("2024", "recomendação"),  # new in 2024, not assessed yet
+        t("2025", "juízo"),
+        t("2025", "reserva"),
+        t("2025", "reserva"),
+        t("2025", "recomendação"),
+    ]
+    vcols = ["quadro", "ordem", "nivel", "rubrica", "caminho", "ano"]
+    vcols += ["valor", "unidade", "parecer"]
+    conta = "Conta do sector público administrativo regional"
+    vrows = [
+        ["Indicadores", "1", "1", "Dívida total", "", "2024", "3492.9", "", ""],
+        ["Indicadores", "1", "1", "Dívida total", "", "2025", "3728.8", "", ""],
+        ["Indicadores", "2", "1", "Receita não registada na Conta", "",
+         "2025", "613.0", "", ""],
+        [conta, "21", "1", "Saldo global ou efetivo", "", "2025",
+         "-199287231.59", "€", ""],
+    ]  # fmt: skip
+    r = datasets.resumo_tdc((tcols, trows), (vcols, vrows))
+    assert (r["conta"], r["url"], r["reservas"]) == ("2025", "p2025", 2)
+    assert r["recomendacoes"] == 1 and r["avaliadas"] == 3
+    assert r["estados"] == [
+        {"nome": "Não implementada", "n": 1},
+        {"nome": "Parcialmente implementada", "n": 2},
+    ]
+    assert r["desde"] == 2006
+    assert (r["divida"], r["divida_var"]) == (3728.8, 6.8)
+    assert (r["saldo"], r["saldo_abs"]) == (-199.3, 199.3)
+    assert r["receita_fora"] == 613.0 and "despesa_fora" not in r
+    assert datasets.resumo_tdc(([], []), ([], [])) == {}
