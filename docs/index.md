@@ -24,6 +24,7 @@ ligação para a fonte oficial. Primeira vez por aqui? Comece pelo
     <li><a href="/dados/ine/#ind=0012759">Como se distribui o rendimento (quintis)?</a></li>
     <li><a href="/dados/ine/#ind=0014698">Quanto custa arrendar casa?</a></li>
     <li><a href="/dados/ine/#ind=0013210">Onde há mais turistas por habitante?</a></li>
+    <li><a href="/dados/srea/">Como estão os preços, o emprego e o turismo agora?</a></li>
   </ul>
 </section>
 
