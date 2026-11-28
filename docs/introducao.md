@@ -383,18 +383,13 @@ foram escritos: para valores recentes, use as ferramentas acima.</p>
 <style>
 .lead { font-size: 1.15em; max-width: 40em; }
 .indice { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr)); gap: .4em; margin: 1em 0 1.5em; }
-.indice a { display: block; padding: .45em .7em; border: 1px solid rgba(147,161,161,.6); border-radius: 6px; background: rgba(147,161,161,.08); text-decoration: none; }
-.indice a:hover { background: rgba(38,139,210,.12); }
-.indice span { display: inline-block; min-width: 1.4em; font-weight: bold; color: #268bd2; }
 h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
 .cartoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(16em, 100%), 1fr)); gap: .9em; margin: 1em 0 1.2em; }
-.cartao { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
 .cartao h3 { font-size: 1.05em; margin: 0 0 .4em; }
-.cartao p { font-size: .95em; margin-bottom: .5em; }
 .cartao .grande { font-size: 1.7em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
 .cartao .grande small { font-size: .5em; font-weight: normal; }
 .cartao .ir { font-size: .9em; }
-.fonte { font-size: .85em; color: #586e75; }
+.fonte { font-size: .85em; color: var(--s01); }
 .cartao .fonte { margin-top: .2em; }
 .barras { margin: 1em 0 .6em; max-width: 42em; }
 .barras figcaption { font-weight: bold; margin-bottom: .5em; }
@@ -402,7 +397,7 @@ h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
 .barra .trilho { height: .8em; background: rgba(147,161,161,.15); border-radius: 4px; overflow: hidden; }
 .barra .valor { display: block; height: 100%; background: #268bd2; border-radius: 0 4px 4px 0; min-width: 2px; }
 .barra .num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; min-width: 4.5em; }
-.barra .num small { color: #586e75; margin-left: .3em; }
+.barra .num small { color: var(--s01); margin-left: .3em; }
 .duas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(22em, 100%), 1fr)); gap: 0 2em; }
 .palavras dt { font-weight: bold; margin-top: .7em; }
 .palavras dd { margin: .15em 0 0 0; max-width: 42em; }
@@ -410,9 +405,9 @@ h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
 .perguntas li { break-inside: avoid; margin-bottom: .3em; }
 .antigas { margin-top: 2em; border-top: 1px solid rgba(147,161,161,.4); padding-top: .8em; }
 .antigas summary { cursor: pointer; font-weight: bold; }
-.meta { color: #586e75; font-size: .85em; }
+.meta { color: var(--s01); font-size: .85em; }
 @media (max-width: 30em) { .barra { grid-template-columns: 1fr auto; } .barra .trilho { grid-column: 1 / -1; grid-row: 2; } }
 @media (prefers-color-scheme: dark) {
-  .fonte, .meta, .barra .num small { color: #93a1a1; }
+  .fonte, .meta, .barra .num small { color: var(--s01); }
 }
 </style>

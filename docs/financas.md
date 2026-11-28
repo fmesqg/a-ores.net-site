@@ -125,19 +125,13 @@ orçamental</a>, com ligação aos textos legais.</p>
 <style>
 .lead { font-size: 1.15em; max-width: 40em; }
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(13em, 100%), 1fr)); gap: .9em; margin: 1.2em 0 1.5em; }
-.numero { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
-.numero p { margin-bottom: .4em; font-size: .95em; }
-.numero .rotulo { font-weight: bold; margin-bottom: .2em; }
-.numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
-.numero .grande small { font-size: .5em; font-weight: normal; }
 .portas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr)); gap: 1em; margin-bottom: 1.5em; }
-.porta { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .9em 1em .4em; background: rgba(147,161,161,.08); }
 .porta h2 { font-size: 1.2em; margin: 0 0 .4em; }
 .porta p, .porta ul { font-size: .95em; }
 .porta ul { margin-left: 1.1em; }
 .ligam { max-width: 42em; }
 .ligam dt { font-weight: bold; margin-top: .7em; }
 .ligam dd { margin: .15em 0 0 0; }
-.fonte { font-size: .85em; color: #586e75; }
-@media (prefers-color-scheme: dark) { .fonte { color: #93a1a1; } }
+.fonte { font-size: .85em; color: var(--s01); }
+@media (prefers-color-scheme: dark) { .fonte { color: var(--s01); } }
 </style>

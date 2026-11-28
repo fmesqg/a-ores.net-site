@@ -37,6 +37,27 @@ permalink: /
 </section>
 </div>
 
+{%- assign compras = site.data.camaras.compras -%}
+<h2 id="casos">Casos</h2>
+<p class="casos-intro">O que se descobre quando se cruzam as fontes:</p>
+<div class="casos">
+<section class="caso">
+  <h3><a href="/casos/eda-bencom/">O fuelóleo da EDA e a BENCOM</a></h3>
+  <p>A EDA compra quase todo o fuelóleo à BENCOM, do Grupo Bensaude, que é
+  também seu acionista. Contratos por ajuste direto, Jornal Oficial,
+  Assembleia e contas das empresas, cada número com a fonte.</p>
+</section>
+{%- if compras.total_3a %}
+<section class="caso">
+  <h3><a href="/financas/camaras/#compras">Quanto das compras das câmaras aparece no BASE</a></h3>
+  <p>De {{ compras.anos | first }} a {{ compras.anos | last }}, as câmaras
+  gastaram {{ compras.total_3a.compras_m_t }} M€ em bens, serviços e
+  investimento; os contratos que publicaram no BASE somam
+  {{ compras.total_3a.pct_t }}&nbsp;% disso, e há câmaras muito abaixo.</p>
+</section>
+{%- endif %}
+</div>
+
 <div class="portas">
 
 <section class="porta">
@@ -135,14 +156,18 @@ O açores.net é mantido por
 .lead-lista { font-size: 1.05em; margin: 0 0 1.2em 1.2em; max-width: 40em; }
 .lead-lista li { margin-bottom: .15em; }
 .comecar { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr)); gap: 1em; margin-bottom: 1.5em; }
+.casos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr)); gap: 1em; margin-bottom: 1.5em; }
+.casos-intro { margin-bottom: .5em; }
+.caso { border-left: 4px solid #cb4b16; padding: .1em 0 .1em 1em; }
+.caso h3 { font-size: 1.1em; margin: 0 0 .3em; }
+.caso p { margin-bottom: .3em; }
 .via { border-left: 4px solid #268bd2; padding: .1em 0 .1em 1em; }
 .via h2 { font-size: 1.2em; margin: 0 0 .3em; }
 .via p { margin-bottom: .3em; }
 .via ul { margin: 0 0 .3em 1.1em; font-size: .95em; }
 .portas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(17em, 100%), 1fr)); gap: 1em; margin-bottom: 1.5em; }
-.porta { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .9em 1em .4em; background: rgba(147,161,161,.08); }
 .porta h2 { font-size: 1.15em; margin: 0 0 .4em; }
 .porta p { font-size: .95em; margin-bottom: .5em; }
 .porta ul { margin: 0 0 .6em 1.1em; font-size: .95em; }
-.meta { color: #586e75; font-size: .85em; white-space: nowrap; }
+.meta { color: var(--s01); font-size: .85em; white-space: nowrap; }
 </style>

@@ -233,34 +233,21 @@ do IEFP e da Direção-Geral do Ensino Superior).</p>
 <style>
 .lead { font-size: 1.15em; max-width: 40em; }
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(12em, 100%), 1fr)); gap: .9em; margin: 1em 0 .4em; }
-.numero { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
-.numero p { margin-bottom: .4em; font-size: .95em; }
-.numero .rotulo { font-weight: bold; margin-bottom: .2em; }
-.numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
-.numero .grande small { font-size: .5em; font-weight: normal; }
 .numero.construcao { border-style: dashed; }
-.selo { display: inline-block; font-size: .7em; font-weight: bold; vertical-align: middle; padding: .1em .5em; border-radius: 999px; background: #b58900; color: #fdf6e3; }
+.selo { display: inline-block; font-size: .7em; font-weight: bold; vertical-align: middle; padding: .1em .5em; border-radius: 999px; background: #b58900; color: var(--sobre-acento); }
 .aviso { border-left: 4px solid #b58900; padding: .4em .8em; background: rgba(181,137,0,.08); margin-bottom: 1em; }
 .aviso ul { margin-bottom: .4em; }
 h2[id], h3[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
-.nota, .notas { font-size: .9em; }
-.notas li { margin-bottom: .35em; }
-.tabela-scroll { overflow-x: auto; margin-bottom: 1em; }
-table.sper { border-collapse: collapse; font-size: .9em; min-width: 100%; }
-table.sper th, table.sper td { padding: .3em .5em; border-bottom: 1px solid rgba(147,161,161,.35); text-align: left; vertical-align: top; }
-table.sper thead th { font-size: .9em; vertical-align: bottom; }
 table.sper th[scope="row"] { font-weight: normal; }
-table.sper .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
-table.sper thead .n { white-space: normal; }
-table.sper tr.fora th, table.sper tr.fora td { color: #839496; }
+table.sper tr.fora th, table.sper tr.fora td { color: var(--s0); }
 table.ordenavel thead th[data-tipo] { cursor: pointer; }
 table.ordenavel thead th[aria-sort="descending"]::after { content: " ▼"; }
 table.ordenavel thead th[aria-sort="ascending"]::after { content: " ▲"; }
 .barra-col { width: 18%; min-width: 4em; }
 .barra { display: block; height: .8em; margin-top: .25em; background: #268bd2; border-radius: 0 4px 4px 0; }
-.fonte { font-size: .85em; color: #586e75; }
+.fonte { font-size: .85em; color: var(--s01); }
 @media (prefers-color-scheme: dark) {
-  .fonte { color: #93a1a1; }
+  .fonte { color: var(--s01); }
 }
 </style>
 

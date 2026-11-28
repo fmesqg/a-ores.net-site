@@ -183,25 +183,20 @@ população por concelho e freguesia (<a href="/dados/ine/">INE</a>).</p>
 .divisao figcaption { font-weight: bold; margin-bottom: .4em; }
 .barra-dupla { display: flex; gap: 2px; border-radius: 6px; overflow: hidden; font-size: .9em; }
 .barra-dupla span { padding: .45em .6em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.barra-dupla .pub { background: #268bd2; color: #fdf6e3; }
+.barra-dupla .pub { background: #268bd2; color: var(--sobre-acento); }
 .barra-dupla .priv { background: rgba(147,161,161,.25); }
 .lados { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(22em, 100%), 1fr)); gap: 1.5em; }
 .lado h2 { margin-top: .3em; }
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9.5em, 100%), 1fr)); gap: .9em; margin: .6em 0 1em; }
-.numero { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
-.numero p { margin-bottom: .4em; font-size: .95em; }
-.numero .rotulo { font-weight: bold; margin-bottom: .2em; }
-.numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
-.numero .grande small { font-size: .5em; font-weight: normal; }
 .perguntas { margin-left: 1.1em; font-size: .95em; }
 .numero .ref { font-size: .9em; }
 .tabela { overflow-x: auto; }
 .salarios { border-collapse: collapse; font-size: .95em; }
 .salarios th, .salarios td { text-align: left; vertical-align: top; padding: .4em .6em; }
-.salarios td small { display: block; font-size: .8em; color: #586e75; }
+.salarios td small { display: block; font-size: .8em; color: var(--s01); }
 .barra { display: block; width: 9em; max-width: 100%; height: 6px; margin: .3em 0 .15em; background: rgba(147,161,161,.25); border-radius: 3px; }
 .barra span { display: block; height: 6px; background: #268bd2; border-radius: 3px; }
 .notas { font-size: .9em; max-width: 42em; }
-.fonte { font-size: .85em; color: #586e75; }
-@media (prefers-color-scheme: dark) { .fonte, .salarios td small { color: #93a1a1; } .barra-dupla .pub { background: #2f7fb8; } }
+.fonte { font-size: .85em; color: var(--s01); }
+@media (prefers-color-scheme: dark) { .fonte, .salarios td small { color: var(--s01); } .barra-dupla .pub { background: #2f7fb8; } }
 </style>

@@ -1,0 +1,94 @@
+/* Styles shared by the site's pages (loaded from _includes/custom-head.html).
+   Pages keep only what is theirs in their own <style>.
+
+   Colours: the Solarized tones as variables. In dark mode the light and
+   dark tones swap (--s3 <-> --s03, --s2 <-> --s02, ...), which is how
+   Solarized is meant to be used, so a page that writes var(--s01) for grey
+   text stays readable in both. Accents (#268bd2 ...) do not change.
+   --sobre-acento is text on an accent background: light in both modes. */
+:root {
+  --s03: #002b36; --s02: #073642; --s01: #586e75; --s00: #657b83;
+  --s0: #839496; --s1: #93a1a1; --s2: #eee8d5; --s3: #fdf6e3;
+  --fundo: #fdfdfd; --texto: #111; --sobre-acento: #fdf6e3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --s03: #fdf6e3; --s02: #eee8d5; --s01: #93a1a1; --s00: #839496;
+    --s0: #657b83; --s1: #586e75; --s2: #073642; --s3: #002b36;
+    --fundo: #002b36; --texto: #e4e0d4;
+  }
+  /* the theme (minima, skin "solarized") already darkens the page itself */
+  input, select, textarea, button { background: var(--s2); color: var(--texto); border: 1px solid var(--s1); }
+  /* chart dots are drawn with a light ring (stroke="#fdf6e3" attributes) */
+  svg circle[stroke="#fdf6e3"] { stroke: var(--fundo); }
+  svg [fill="#586e75"] { fill: var(--s01); }
+  img:not([src$=".svg"]) { filter: brightness(.9); }
+}
+
+.secao-nav a { padding: .25em .7em;border: 1px solid rgba(147,161,161,.6);border-radius: 999px;text-decoration: none; }
+.secao-nav a:hover { background: rgba(38,139,210,.12); }
+.secao-nav a[aria-current] { background: #268bd2;border-color: #268bd2;color: var(--sobre-acento); }
+.dias { columns: 9em;list-style: none;margin-left: 0; }
+.dias li { margin: 0 0 .2em; }
+.ine-row { display: flex;flex-wrap: wrap;gap: .5em 1em;align-items: flex-end;margin-bottom: .75em; }
+.ine-row label { display: flex;flex-direction: column;margin: 0;min-width: 0;max-width: 100%; }
+.ine-grow { flex: 1 1 16em; }
+.ine-sub { color: var(--s01);font-size: .9em; }
+.ine-scroll { overflow-x: auto; }
+#tabela th, #tabela td { padding: .35em .6em;white-space: nowrap; }
+#tabela td.num, #tabela th.num { text-align: right;font-variant-numeric: tabular-nums; }
+#tabela th:first-child, #tabela td:first-child { position: sticky;left: 0;background: var(--s3);z-index: 1; }
+#tabela td.falta { color: var(--s1); }
+th button { all: unset;cursor: pointer;font-weight: bold; }
+th[aria-sort="ascending"] button::after { content: " ▲"; }
+th[aria-sort="descending"] button::after { content: " ▼"; }
+.ine-vista { display: inline-flex;border: 1px solid var(--s1);border-radius: 6px;overflow: hidden;margin: .25em 0 .75em; }
+.ine-vista button { font: inherit;font-size: .9em;padding: .3em .8em;border: 0;background: transparent;color: var(--s01);cursor: pointer; }
+.ine-vista button + button { border-left: 1px solid var(--s1); }
+.ine-vista button[aria-pressed="true"] { background: var(--s01);color: var(--sobre-acento); }
+.g-topo { display: flex;flex-wrap: wrap;gap: .5em 1em;align-items: center;margin-bottom: .4em; }
+.g-area { position: relative; }
+#g-svg text { font-size: 12px;fill: var(--s01);font-variant-numeric: tabular-nums; }
+#g-svg .grade { stroke: var(--s2);stroke-width: 1; }
+#g-svg .eixo { stroke: var(--s1);stroke-width: 1; }
+#g-svg .rotulo { font-size: 12px;fill: var(--s02); }
+.g-tip .p { color: var(--s01);margin-bottom: .2em; }
+.g-tip div.l { display: flex;align-items: center;gap: .4em;white-space: nowrap; }
+.g-tip b { font-variant-numeric: tabular-nums;color: var(--s02); }
+.g-tip span { color: var(--s01); }
+[hidden] { display: none !important; }
+.sr-only { position: absolute;width: 1px;height: 1px;overflow: hidden;clip: rect(0 0 0 0); }
+.numero { border: 1px solid rgba(147,161,161,.6);border-radius: 8px;padding: .8em 1em .3em;background: rgba(147,161,161,.08); }
+.numero p { margin-bottom: .4em;font-size: .95em; }
+.numero .rotulo { font-weight: bold;margin-bottom: .2em; }
+.numero .grande { font-size: 1.8em;font-weight: bold;line-height: 1.15;margin-bottom: .3em; }
+.numero .grande small { font-size: .5em;font-weight: normal; }
+.nota, .notas { font-size: .9em; }
+.notas li { margin-bottom: .35em; }
+.tabela-scroll { overflow-x: auto;margin-bottom: 1em; }
+table.sper { border-collapse: collapse;font-size: .9em;min-width: 100%; }
+table.sper th, table.sper td { padding: .3em .5em;border-bottom: 1px solid rgba(147,161,161,.35);text-align: left;vertical-align: top; }
+table.sper thead th { font-size: .9em;vertical-align: bottom; }
+table.sper th[scope="row"] small { color: var(--s0); }
+table.sper .n { text-align: right;white-space: nowrap;font-variant-numeric: tabular-nums; }
+table.sper thead .n { white-space: normal; }
+.indice a { display: block;padding: .45em .7em;border: 1px solid rgba(147,161,161,.6);border-radius: 6px;background: rgba(147,161,161,.08);text-decoration: none; }
+.indice a:hover { background: rgba(38,139,210,.12); }
+.indice span { display: inline-block;min-width: 1.4em;font-weight: bold;color: #268bd2; }
+.cartao { border: 1px solid rgba(147,161,161,.6);border-radius: 8px;padding: .8em 1em .3em;background: rgba(147,161,161,.08); }
+.cartao p { font-size: .95em;margin-bottom: .5em; }
+.porta { border: 1px solid rgba(147,161,161,.6);border-radius: 8px;padding: .9em 1em .4em;background: rgba(147,161,161,.08); }
+
+
+/* Wide tables on small screens: smaller type, and the first column stays
+   in view while the table scrolls sideways. */
+@media (max-width: 600px) {
+  table.sper { font-size: .8em; }
+  table.sper th, table.sper td { padding: .25em .35em; }
+  .tabela-scroll table.sper th:first-child, .tabela-scroll table.sper td:first-child {
+    position: sticky; left: 0; background: var(--fundo); z-index: 1;
+    box-shadow: 1px 0 0 rgba(147,161,161,.35);
+  }
+  .tabela-scroll table.sper th[scope="row"] { white-space: normal; min-width: 7em; }
+}

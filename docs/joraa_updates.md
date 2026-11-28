@@ -28,4 +28,3 @@ Cada dia tem a sua página. Para procurar em tudo o que foi recolhido, use os [d
 {% for update in full_updates offset: 30 %}<li><a href="{{ update.url }}">{{ update.date | date: "%Y-%m-%d" }}</a></li>
 {% endfor %}</ul>
 
-<style>.dias { columns: 9em; list-style: none; margin-left: 0; } .dias li { margin: 0 0 .2em; }</style>

@@ -1,0 +1,39 @@
+name: Commit data and push
+description: >
+  Stages the given paths (new, changed and deleted files) and, if anything
+  changed, commits as fmesqg-auto and pushes to main (rebasing on what other
+  runs pushed meanwhile). Output "changed" tells the caller whether to
+  redeploy the site.
+inputs:
+  paths:
+    description: Space-separated paths (files or folders) to commit
+    required: true
+  message:
+    description: Commit message
+    required: true
+outputs:
+  changed:
+    description: '"true" if a commit was pushed'
+    value: ${{ steps.commit.outputs.changed }}
+runs:
+  using: composite
+  steps:
+    - id: commit
+      shell: bash
+      env:
+        PATHS: ${{ inputs.paths }}
+        MESSAGE: ${{ inputs.message }}
+      run: |
+        # shellcheck disable=SC2086  # PATHS is a list
+        git add -A -- $PATHS
+        if git diff --cached --quiet; then
+          echo "Nothing to write."
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+        else
+          git config --global user.name "fmesqg-auto"
+          git config --global user.email "fmesqg-auto@users.noreply.github.com"
+          git commit -m "$MESSAGE"
+          git pull --rebase origin main
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+        fi
