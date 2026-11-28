@@ -4,22 +4,24 @@ nav_title: Fundos europeus
 layout: default
 permalink: /financas/fundos-europeus/
 secao: financas
-description: Quanto dinheiro europeu chega aos Açores, projeto a projeto - o PRR por concelho, componente e beneficiário, e os fundos de coesão segundo o Kohesio (em construção), com ligação às fontes.
+description: Quanto dinheiro europeu chega aos Açores - o PRR por concelho, componente e beneficiário, os pagamentos da PAC e do POSEI por medida, concelho e beneficiário, e os fundos de coesão segundo o Kohesio (em construção), com ligação às fontes.
 ---
 {%- assign f = site.data.fundos -%}
 {%- assign prr = f.prr -%}
 {%- assign k = f.kohesio -%}
+{%- assign pac = f.pac -%}
 {% include financas-nav.html %}
 
 # Fundos europeus nos Açores
 
 <p class="lead">O dinheiro europeu que chega aos Açores, projeto a projeto.
-Há duas fontes: o <strong>PRR</strong>, com os dados abertos da Recuperar
-Portugal, e os <strong>fundos de coesão</strong> (PO Açores 2020, Açores 2030
-e programas nacionais), com o Kohesio, da Comissão Europeia. A parte do
-Kohesio <strong>está em construção</strong>.</p>
+Há três fontes: o <strong>PRR</strong>, com os dados abertos da Recuperar
+Portugal; a <strong>PAC e o POSEI</strong>, com a lista anual de
+beneficiários do IFAP; e os <strong>fundos de coesão</strong> (PO Açores
+2020, Açores 2030 e programas nacionais), com o Kohesio, da Comissão
+Europeia. A parte do Kohesio <strong>está em construção</strong>.</p>
 
-{% if prr or k %}
+{% if prr or k or pac %}
 <div class="numeros">
 {%- if prr %}
 <div class="numero">
@@ -33,6 +35,13 @@ Kohesio <strong>está em construção</strong>.</p>
   <p>{{ prr.pct_pago }} % do aprovado. Dados de {{ prr.referencia }}.</p>
 </div>
 {%- endif %}
+{%- if pac %}
+<div class="numero">
+  <p class="rotulo">PAC paga em {{ pac.ultimo }}</p>
+  <p class="grande">{{ pac.total_t }} <small>M€</small></p>
+  <p>{{ pac.posei_t }} M€ do POSEI, a {{ pac.beneficiarios_t }} beneficiários com morada nos Açores.</p>
+</div>
+{%- endif %}
 {%- if k %}
 <div class="numero construcao">
   <p class="rotulo">Fundos de coesão (UE) <span class="selo">em construção</span></p>
@@ -42,9 +51,10 @@ Kohesio <strong>está em construção</strong>.</p>
 </div>
 {%- endif %}
 </div>
-<p class="fonte">Fontes: <a href="https://dados.gov.pt/datasets/dataset-estrutura-de-missao-prr-projetos-2">Recuperar Portugal (dados.gov.pt)</a>
-e <a href="https://kohesio.ec.europa.eu/">Kohesio</a>. As duas não se somam
-sem cuidado: <a href="#notas">ver notas</a>.</p>
+<p class="fonte">Fontes: <a href="https://dados.gov.pt/datasets/dataset-estrutura-de-missao-prr-projetos-2">Recuperar Portugal (dados.gov.pt)</a>,
+<a href="https://www.ifap.pt/portal/transparency">IFAP</a> e
+<a href="https://kohesio.ec.europa.eu/">Kohesio</a>. Não se somam sem
+cuidado: <a href="#notas">ver notas</a>.</p>
 
 {% if prr %}
 <h2 id="prr">PRR: Plano de Recuperação e Resiliência</h2>
@@ -204,6 +214,110 @@ do IEFP e da Direção-Geral do Ensino Superior).</p>
 <a href="/dados/kohesio_beneficiarios.csv">kohesio_beneficiarios.csv</a>.</p>
 {% endif %}
 
+{% if pac %}
+<h2 id="pac">PAC e POSEI: pagamentos aos agricultores</h2>
+
+<p>Pagamentos do FEAGA e do FEADER (com o cofinanciamento nacional e
+regional) a beneficiários com morada fiscal nos Açores, por exercício
+financeiro (o exercício de {{ pac.ultimo }} vai de 16 de outubro do ano
+anterior a 15 de outubro). O POSEI é o regime agrícola próprio das regiões
+ultraperiféricas e é a maior parte do dinheiro.</p>
+
+<h3 id="pac-anos">Por ano e programa (M€)</h3>
+<div class="tabela-scroll">
+<table class="sper">
+<thead><tr>
+  <th scope="col">Exercício</th>
+  <th scope="col" class="n">POSEI</th>
+  <th scope="col" class="n">Desenvolvimento rural</th>
+  <th scope="col" class="n">Mercados</th>
+  <th scope="col" class="n">Pagamentos diretos</th>
+  <th scope="col" class="n">Total</th>
+  <th scope="col" class="n">dos quais UE</th>
+</tr></thead>
+<tbody>
+{%- for a in pac.anos reversed %}
+<tr><th scope="row">{{ a.ano }}</th><td class="n">{{ a.posei_t }}</td><td class="n">{{ a.rural_t }}</td><td class="n">{{ a.mercados_t }}</td><td class="n">{{ a.diretos_t }}</td><td class="n"><strong>{{ a.total_t }}</strong></td><td class="n">{{ a.ue_t }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<p class="nota">O IFAP só tem online os dois últimos exercícios; os totais
+dos anos anteriores ficam aqui à medida que o site os lê (desde 2024).</p>
+
+<h3 id="pac-medidas">Por medida, {{ pac.ultimo }}</h3>
+<div class="tabela-scroll">
+<table class="sper ordenavel barras">
+<thead><tr>
+  <th scope="col">Medida</th>
+  <th scope="col">Programa</th>
+  <th scope="col" class="n" data-tipo="n">M€</th>
+  <th class="barra-col" aria-hidden="true"></th>
+  <th scope="col" class="n" data-tipo="n">%</th>
+</tr></thead>
+<tbody>
+{%- assign topo = pac.medidas | first -%}
+{%- for m in pac.medidas %}
+<tr><th scope="row"><code>{{ m.codigo }}</code> {{ m.nome }}</th><td>{{ m.programa }}</td><td class="n" data-v="{{ m.valor }}">{{ m.valor_t }}</td><td class="barra-col" aria-hidden="true">{% if m.valor > 0 %}<span class="barra" style="width: {{ m.valor | times: 100.0 | divided_by: topo.valor }}%"></span>{% endif %}</td><td class="n" data-v="{{ m.pct }}">{{ m.pct }} %</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<p class="nota">Medidas acima de 50 mil €. As que começam por V são do
+PEPAC (2023-2027) e as que começam por VI do PRORURAL+ (2014-2022), ainda a
+pagar compromissos.</p>
+
+<h3 id="pac-concelhos">Por concelho, {{ pac.ultimo }}</h3>
+<p class="nota">Pela morada do beneficiário, que pode não ser onde fica a
+exploração. Por habitante: população do INE.</p>
+<div class="tabela-scroll">
+<table class="sper ordenavel barras">
+<thead><tr>
+  <th scope="col">Concelho</th>
+  <th scope="col">Ilha</th>
+  <th scope="col" class="n" data-tipo="n">Total (M€)</th>
+  <th class="barra-col" aria-hidden="true"></th>
+  <th scope="col" class="n" data-tipo="n">POSEI (M€)</th>
+  <th scope="col" class="n" data-tipo="n">€ por habitante</th>
+</tr></thead>
+<tbody>
+{%- assign topo = pac.concelhos | first -%}
+{%- for c in pac.concelhos %}
+<tr><th scope="row">{{ c.nome }}</th><td>{{ c.ilha }}</td><td class="n" data-v="{{ c.valor }}">{{ c.valor_t }}</td><td class="barra-col" aria-hidden="true"><span class="barra" style="width: {{ c.valor | times: 100.0 | divided_by: topo.valor }}%"></span></td><td class="n" data-v="{{ c.posei }}">{{ c.posei_t }}</td><td class="n" data-v="{{ c.por_hab }}">{{ c.por_hab_t | default: "–" }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+
+<h3 id="pac-beneficiarios">Os 25 maiores beneficiários, {{ pac.ultimo }}</h3>
+<p class="nota">{{ pac.beneficiarios_t }} beneficiários; os 10 % que mais
+receberam ficaram com {{ pac.pct_top10 }} % do total. Os nomes são os que o
+IFAP publica por obrigação europeia (Regulamento (UE) 2021/2116, art. 98.º),
+e só durante dois anos: o site segue a mesma regra e guarda dos anos mais
+antigos apenas os totais por concelho e medida.</p>
+<div class="tabela-scroll">
+<table class="sper ordenavel">
+<thead><tr>
+  <th scope="col">Beneficiário</th>
+  <th scope="col">Concelho</th>
+  <th scope="col" class="n" data-tipo="n">Total (€)</th>
+  <th scope="col" class="n" data-tipo="n">dos quais POSEI (€)</th>
+</tr></thead>
+<tbody>
+{%- for b in pac.maiores %}
+<tr><th scope="row">{{ b.nome }}</th><td>{{ b.concelho }}</td><td class="n" data-v="{{ b.valor }}">{{ b.valor_t }}</td><td class="n" data-v="{{ b.posei }}">{{ b.posei_t }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+<p>Beneficiário a beneficiário e medida a medida:
+<a href="/dados/ifap_pagamentos.csv">ifap_pagamentos.csv</a> (exercícios
+{{ pac.anos_nomes | join: " e " }}); totais por concelho e medida:
+<a href="/dados/ifap_resumo.csv">ifap_resumo.csv</a>; as duas tabelas, com
+pesquisa por nome, em <a href="/dados/sql/">fundos.db</a>. A pesquisa
+oficial é a do <a href="https://apj13.ifap.pt/idigital.consultarFundos/">IFAP</a>.</p>
+{% endif %}
+
 <h2 id="notas">Notas</h2>
 <ul class="notas">
   <li><strong>PRR, parte dos Açores.</strong> O ficheiro de localizações da
@@ -219,12 +333,21 @@ do IEFP e da Direção-Geral do Ensino Superior).</p>
   o Fundo Ambiental) que passa o dinheiro ao beneficiário final. Os 25
   maiores são só beneficiários finais. As entidades todas estão em
   <code>prr_entidades.csv</code>.</li>
+  <li><strong>PAC e POSEI: o que não está.</strong> A lista do IFAP
+  arruma cada beneficiário pela morada fiscal. Ajudas do POSEI pagas a
+  operadores com sede fora dos Açores (parte do regime específico de
+  abastecimento) não contam como açorianas, e um agricultor com morada
+  noutro concelho conta nesse concelho. Os valores negativos são
+  recuperações de pagamentos indevidos.</li>
   <li><strong>PRR e fundos de coesão não se somam diretamente.</strong> Os
   valores do PRR são o apoio aprovado; os do Kohesio são o apoio da UE
   (cofinanciamento) a projetos aprovados, de 2014 em diante.</li>
-  <li><strong>Atualização.</strong> As duas fontes são relidas uma vez por
-  semana por
-  <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/fundos.py"><code>bot/fundos.py</code></a>.</li>
+  <li><strong>Atualização.</strong> O PRR e o Kohesio são relidos uma vez
+  por semana por
+  <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/fundos.py"><code>bot/fundos.py</code></a>;
+  a lista do IFAP, também semanalmente, por
+  <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/ifap.py"><code>bot/ifap.py</code></a>
+  (o IFAP publica cada exercício uma vez por ano, por volta de maio).</li>
 </ul>
 {% else %}
 <p>Os dados ainda não foram gerados.</p>

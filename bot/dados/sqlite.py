@@ -27,6 +27,8 @@ DB_TYPES = {
     "projetos": "INTEGER",
     "dias": "INTEGER",
     "ano_lucro": "INTEGER",
+    "exercicio": "INTEGER",
+    "beneficiarios": "INTEGER",
     **{
         c: "REAL"
         for c in (
@@ -63,6 +65,9 @@ DB_TYPES = {
             "contratado",
             "custo_total",
             "apoio_ue",
+            "feaga",
+            "feader",
+            "cofinanciado",
         )
     },
     **{
@@ -117,6 +122,9 @@ DB_INDEX = {
     "prr_entidades": ["projeto", "nif", "entidade", "papel"],
     "kohesio_projetos": ["programa", "periodo", "fundo", "inicio"],
     "kohesio_beneficiarios": ["beneficiario"],
+    "ifap_pagamentos": ["exercicio", "beneficiario", "geocod", "medida"],
+    "ifap_resumo": ["exercicio", "geocod", "medida"],
+    "eurostat": ["indicador", "geo", "ano"],
     "dgal_contas": ["ano", "geocod", "mapa", "codigo"],
     "dgal_divida": ["ano", "geocod"],
     "dgal_pmp": ["data", "geocod"],
@@ -147,6 +155,8 @@ DB_FTS = {
     "prr_entidades": ["entidade", "sede"],
     "kohesio_projetos": ["projeto", "programa"],
     "kohesio_beneficiarios": ["beneficiario"],
+    "ifap_pagamentos": ["beneficiario", "concelho", "medida_nome"],
+    # ifap_resumo, eurostat: numbers with a handful of labels; facets
     "dgal_contas": ["municipio", "descricao"],
     # dgal_divida, dgal_pmp: numbers per câmara; facets do the search
 }
@@ -237,7 +247,13 @@ BASES = {
         "anuario_execucao",
         "derrama_municipal",
     ],
-    "estatisticas": ["ine", "srea", "emprego_publico", "censos2021_setores"],
+    "estatisticas": [
+        "ine",
+        "srea",
+        "emprego_publico",
+        "censos2021_setores",
+        "eurostat",
+    ],
     "empresas": [
         "bportugal",
         "sper",
@@ -250,6 +266,8 @@ BASES = {
         "prr_entidades",
         "kohesio_projetos",
         "kohesio_beneficiarios",
+        "ifap_pagamentos",
+        "ifap_resumo",
     ],
 }
 
