@@ -25,6 +25,18 @@ DB_TYPES = {
     "trabalhadores": "INTEGER",
     "participacao": "REAL",
     "projetos": "INTEGER",
+    "dias": "INTEGER",
+    **{
+        c: "REAL"
+        for c in (
+            "limite",
+            "divida_total",
+            "nao_orcamental",
+            "fam",
+            "divida",
+            "pct_limite",
+        )
+    },
     **{
         c: "REAL"
         for c in (
@@ -92,6 +104,9 @@ DB_INDEX = {
     "prr_entidades": ["projeto", "nif", "entidade", "papel"],
     "kohesio_projetos": ["programa", "periodo", "fundo", "inicio"],
     "kohesio_beneficiarios": ["beneficiario"],
+    "dgal_contas": ["ano", "geocod", "mapa", "codigo"],
+    "dgal_divida": ["ano", "geocod"],
+    "dgal_pmp": ["data", "geocod"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento", "cpv"],
@@ -116,6 +131,8 @@ DB_FTS = {
     "prr_entidades": ["entidade", "sede"],
     "kohesio_projetos": ["projeto", "programa"],
     "kohesio_beneficiarios": ["beneficiario"],
+    "dgal_contas": ["municipio", "descricao"],
+    # dgal_divida, dgal_pmp: numbers per câmara; facets do the search
 }
 
 
@@ -197,6 +214,9 @@ BASES = {
         "at_irs",
         "at_irc",
         "at_distritos",
+        "dgal_contas",
+        "dgal_divida",
+        "dgal_pmp",
     ],
     "estatisticas": ["ine", "srea", "emprego_publico", "censos2021_setores"],
     "empresas": [

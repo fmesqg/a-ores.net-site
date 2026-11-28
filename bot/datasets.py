@@ -85,6 +85,7 @@ this file only runs them in order.
 
 import csv
 import datetime as dt
+import gzip
 import json
 import sys
 from pathlib import Path
@@ -184,13 +185,19 @@ def main(docs: Path) -> dict:
         "prr_entidades",
         "kohesio_projetos",
         "kohesio_beneficiarios",
+        "dgal_contas",
+        "dgal_divida",
+        "dgal_pmp",
     ):
         src = docs.parent / "data" / f"{name}.csv"
         if name == "maiores" and maiores:
             src = maiores[-1]  # the latest year entered
+        if not src.exists() and src.with_suffix(".csv.gz").exists():
+            src = src.with_suffix(".csv.gz")
         if not src.exists():
             continue
-        with open(src, encoding="utf-8-sig", newline="") as f:
+        opener = gzip.open if src.suffix == ".gz" else open
+        with opener(src, "rt", encoding="utf-8-sig", newline="") as f:
             reader = csv.reader(f)
             cols, rows = next(reader), list(reader)
         tables[name] = (cols, rows)
