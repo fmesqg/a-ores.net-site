@@ -238,10 +238,21 @@ def resumo_beo(cols: list[str], rows: list[list]) -> dict:
     }
 
 
+# srea.json keeps what the charts draw; srea.csv keeps everything
+SREA_CREG_LOCAIS = {"Açores", "Madeira", "Portugal", "Continente"}
+
+
 def srea_json(cols: list[str], rows: list[list]) -> list[dict]:
     """data/srea.csv grouped by series, for the charts on /dados/srea/:
-    one entry per (serie, indicador, rubrica, local) with its points."""
+    one entry per (serie, indicador, rubrica, local) with its points.
+    The regional accounts keep four places (``SREA_CREG_LOCAIS``), to keep
+    the file small."""
     c = {k: i for i, k in enumerate(cols)}
+    rows = [
+        r
+        for r in rows
+        if r[c["serie"]] != "creg" or r[c["local"]] in SREA_CREG_LOCAIS
+    ]
     by: dict[tuple, dict] = {}
     for r in sorted(rows, key=lambda r: r[c["data"]]):
         k = tuple(r[c[x]] for x in ("serie", "indicador", "rubrica", "local"))
@@ -413,6 +424,83 @@ def resumo_srea(cols: list[str], rows: list[list]) -> dict:
                 if r[c["local"]] != "Açores"
             ],
             "url": last[0][c["pagina"]],
+        }
+
+    def homologa(s: list) -> float | None:
+        """Change on the same period a year before, in %."""
+        by = {r[c["data"]]: v(r) for r in s}
+        d = s[-1][c["data"]]
+        antes = by.get(f"{int(d[:4]) - 1}{d[4:]}")
+        return round(100 * (v(s[-1]) / antes - 1), 1) if antes else None
+
+    reg = pts("remuneracoes", "Remuneração bruta regular média")
+    if reg:
+        real = pts(
+            "remuneracoes",
+            "Remuneração bruta regular média: variação homóloga real",
+        )
+        trab = pts("remuneracoes", "Número de trabalhadores")
+        out["remuneracoes"] = {
+            "valor": round(v(reg[-1])),
+            "real": round(v(real[-1]), 1) if real else None,
+            "trabalhadores": round(v(trab[-1]) * 1000, -2) if trab else None,
+            "periodo": _mes(reg[-1][c["data"]]),
+            "url": reg[-1][c["pagina"]],
+        }
+    av = pts("avaliacao", "Valor mediano da avaliação bancária", "Habitação")
+    if av:
+        out["avaliacao"] = {
+            "valor": round(v(av[-1])),
+            "var": homologa(av),
+            "periodo": _mes(av[-1][c["data"]]),
+            "url": av[-1][c["pagina"]],
+        }
+    tr = pts("transacoes", "Número")
+    if tr:
+        y, q = tr[-1][c["periodo"]].split("-T")
+        out["transacoes"] = {
+            "valor": round(v(tr[-1])),
+            "var": homologa(tr),
+            "periodo": f"{q}.º trimestre de {y}",
+        }
+    hab = pts(
+        "emprestimos", "Valor em fim do período", "Particulares - Habitação"
+    )
+    if hab:
+        out["emprestimos"] = {
+            "valor": round(v(hab[-1])),
+            "var": homologa(hab),
+            "periodo": _mes(hab[-1][c["data"]]),
+        }
+    creg = {}
+    for chave, ind in (
+        ("ppc", "PIBpc PPC (UE27=100)"),
+        ("pib_pt", "Produto interno bruto por habitante (PT=100)"),
+        (
+            "rdb_pt",
+            "Rendimento disponível bruto das famílias por habitante (PT=100)",
+        ),
+    ):
+        s = pts("creg", ind, "Total", "Açores")
+        if s:
+            creg[chave] = round(v(s[-1]), 1)
+            creg[chave + "_ano"] = s[-1][c["periodo"]]
+            creg["url"] = s[-1][c["pagina"]]
+    if creg:
+        out["creg"] = creg
+    saldo = pts("apr", "Receitas e despesas (contas nacionais)", "Saldo total")
+    if saldo:
+        divida = pts(
+            "apr",
+            "Receitas e despesas (contas nacionais)",
+            "Dívida bruta consolidada",
+        )
+        out["apr"] = {
+            "ano": saldo[-1][c["periodo"]],
+            "provisorio": bool(saldo[-1][c["nota"]]),
+            "saldo": round(v(saldo[-1])),
+            "divida": round(v(divida[-1])) if divida else None,
+            "url": saldo[-1][c["pagina"]],
         }
     return out
 

@@ -52,8 +52,14 @@ srea_turismo:
   nome: SREA, turismo
   url: https://srea.azores.gov.pt/area/turismo/
 srea_contas:
-  nome: SREA, contas regionais (PIB por ilha)
+  nome: SREA, contas regionais (PIB por ilha, contas regionais, contas da administração pública regional)
   url: https://srea.azores.gov.pt/area/contas-regionais/
+srea_habitacao:
+  nome: SREA, construção e habitação (avaliação bancária, transações)
+  url: https://srea.azores.gov.pt/area/construcao-e-habitacao/
+srea_financeira:
+  nome: SREA, atividade financeira (empréstimos bancários, pagamentos)
+  url: https://srea.azores.gov.pt/area/atividade-financeira/
 srea_populacao:
   nome: SREA, população (estimativas por ilha)
   url: https://srea.azores.gov.pt/area/populacao/
