@@ -312,3 +312,182 @@ def test_get_retries_then_raises_on_403(monkeypatch):
     except urllib.error.HTTPError as e:
         assert e.code == 403
     assert len(calls) == 2
+
+
+def test_parse_creg():
+    book = {
+        "Indice ": [["Índice"], ["Quadro 1", "PIB"]],
+        "Quadro 14": [
+            ["Quadro 14"],
+            ["Contas Regionais (Base 2021)"],
+            ["Produto interno bruto por habitante (PT=100)"],
+            [],
+            [None, None, "Unidade: percentagem"],
+            [
+                "Anos",
+                "Portugal",
+                "R. A. Açores",
+                "R. A. Madeira",
+                "Extra-Regio",
+            ],
+            [2023, 100, 87.5, 90, 1],
+            ["2024Po", 100, 88.1, "x", 1],
+        ],
+    }
+    rows = srea.parse_creg(book)
+    p = {(r["local"], r["periodo"]): r for r in rows}
+    assert set(p) == {
+        ("Portugal", "2023"),
+        ("Açores", "2023"),
+        ("Madeira", "2023"),
+        ("Portugal", "2024"),
+        ("Açores", "2024"),
+    }
+    r = p[("Açores", "2024")]
+    assert r["valor"] == 88.1 and r["nota"] == "provisório"
+    assert r["indicador"] == "Produto interno bruto por habitante (PT=100)"
+    assert r["unidade"] == "%" and p[("Açores", "2023")]["nota"] == ""
+
+
+def test_parse_apr():
+    book = {
+        "Q": [
+            ["Receitas e Despesas da Administração Pública Regional"],
+            ["Unidade: milhões de euros"],
+            ["Operação SEC", 2024, 2025],
+            [None, "Final", "Provisório"],
+            ["Receitas totais", 1656.262, 1877.4],
+            ["     Investimento (1)", 126.6, 188.2],
+            ["Saldo total", -281.6, -305.5],
+            ["Por Memória:"],
+            ["Produto Interno Bruto, a preços de mercado", 5753.3, "x"],
+            [
+                "Dívida Bruta consolidada da Administração Pública",
+                3394.4,
+                3797.8,
+            ],
+            ["Fonte:"],
+            ["INE/SREA", 1, 2],
+        ]
+    }
+    p = {(r["rubrica"], r["periodo"]): r for r in srea.parse_apr(book)}
+    assert len(p) == 8
+    assert p[("Investimento", "2025")]["valor"] == 188.2
+    assert p[("Saldo total", "2025")]["nota"] == "provisório"
+    assert p[("Saldo total", "2024")]["nota"] == ""
+    assert p[("Dívida bruta consolidada", "2025")]["valor"] == 3797.8
+
+
+def test_parse_remuneracoes():
+    d = dt.datetime
+    book = {
+        "RMM - RAA": [
+            [None],
+            [
+                None,
+                "Trimestre terminado no mês",
+                None,
+                "Variação homóloga nominal",
+                None,
+                "Variação homóloga real",
+            ],
+            [
+                None,
+                "Número de trabalhadores",
+                "Remuneração bruta regular média",
+                "Número de trabalhadores",
+                "Remuneração bruta regular média",
+                "Remuneração bruta regular média",
+            ],
+            [None, "milhares", "euros", "%", "%", "%"],
+            [d(2026, 9, 1), 97.76, 1405.6, 0.6, 5.0, 2.1],
+        ]
+    }
+    p = {r["indicador"]: r for r in srea.parse_remuneracoes(book)}
+    assert set(p) == {
+        "Número de trabalhadores",
+        "Remuneração bruta regular média",
+        "Remuneração bruta regular média: variação homóloga real",
+    }
+    assert p["Remuneração bruta regular média"]["unidade"] == "€"
+    assert p["Número de trabalhadores"]["periodo"] == "2026-09"
+
+
+def test_parse_avaliacao():
+    d = dt.datetime
+    book = {
+        "Indice": [["Valor mediano"]],
+        "Quadro 1": [
+            ["Quadro 1 - Valor mediano"],
+            ["Período", "1º Quartil", "Mediana", "Mediana - Apartamentos"],
+            [d(2026, 10, 1), 1100, 1613, 2355],
+        ],
+        "Quadro 2": [
+            ["Quadro 2 - Valor mediano"],
+            ["Periodo", "Mediana - Horta", "Mediana - Corvo"],
+            [d(2026, 10, 1), 1562, "..."],
+        ],
+        "Quadro 3": [["Quadro 3"], ["Período", "Mediana - Horta - X"]],
+    }
+    p = {
+        (r["rubrica"], r["local"]): r["valor"]
+        for r in srea.parse_avaliacao(book)
+    }
+    assert p == {
+        ("Habitação", "Açores"): 1613,
+        ("Apartamentos", "Açores"): 2355,
+        ("Habitação", "Horta"): 1562,
+    }
+
+
+def test_parse_transacoes():
+    head = ["Período", "Total", None, "Região Autónoma dos Açores", None]
+    book = {
+        "Q1": [
+            ["Valor"],
+            head,
+            ["", "Valor", "Nº", "Valor", "Nº"],
+            ["2T2026", 9, 9, 139857, 621],
+        ],
+        "Q2": [["Valor"], head, ["1T2026", 9, 9, 35192, 100]],
+    }
+    p = {
+        (r["indicador"], r["rubrica"], r["periodo"]): r
+        for r in srea.parse_transacoes(book)
+    }
+    assert p[("Valor", "Total", "2026-T2")]["valor"] == 139857000
+    assert p[("Número", "Total", "2026-T2")]["valor"] == 621
+    assert p[("Número", "Novos", "2026-T1")]["data"] == "2026-01-01"
+    assert len(p) == 4
+
+
+def test_parse_emprestimos():
+    d = dt.datetime
+    book = {
+        "Particulares": [
+            ["Empréstimos Bancários concedidos a particulares"],
+            [
+                "Data",
+                "Empréstimos - Particulares - Habitação ",
+                "Empréstimos - Particulares",
+                "Rácio empréstimos vencidos - Particulares - Habitação",
+            ],
+            [
+                None,
+                "Valor em fim do período",
+                "Contagem de devedores",
+                "Rácio de empréstimos vencidos",
+            ],
+            [None, "Milhões €", "Milhares", "%"],
+            [d(2026, 9, 30), 2592.6, 50.2, 0.1],
+        ]
+    }
+    p = {
+        (r["indicador"], r["rubrica"]): r for r in srea.parse_emprestimos(book)
+    }
+    assert set(p) == {
+        ("Valor em fim do período", "Particulares - Habitação"),
+        ("Rácio de empréstimos vencidos", "Particulares - Habitação"),
+    }
+    r = p[("Valor em fim do período", "Particulares - Habitação")]
+    assert r["valor"] == 2592.6 and r["periodo"] == "2026-09"

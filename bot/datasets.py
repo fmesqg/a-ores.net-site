@@ -33,7 +33,9 @@ and writes, under docs/dados/:
   tdc_valores.csv  figures from those pareceres (consolidated account,
              debt, revenue and expenditure left off the books)
   srea.csv   SREA series (inflation, economic activity, unemployment,
-             tourism by island, GDP by island): a copy of data/srea.csv,
+             pay, housing, bank loans, tourism by island, GDP by island,
+             regional accounts, the Region's SEC accounts): a copy of
+             data/srea.csv,
              which bot/srea.py fetches weekly
   srea.json  the same series, compact, for the charts on /dados/srea/
   sper.csv, sper_empresas.csv, sper_regiao.csv  the regional public

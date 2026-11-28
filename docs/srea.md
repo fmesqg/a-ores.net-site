@@ -3,7 +3,7 @@ title: Indicadores do SREA
 layout: default
 permalink: /dados/srea/
 secao: estatisticas
-description: Preços, emprego, atividade económica, turismo e PIB por ilha nos Açores, com os números mais recentes do Serviço Regional de Estatística dos Açores (SREA), explicados.
+description: Preços, emprego e salários, atividade económica, habitação, turismo, PIB por ilha, os Açores face ao país e as contas da Região, com os números mais recentes do Serviço Regional de Estatística dos Açores (SREA), explicados.
 ---
 {%- assign s = site.data.resumo.srea -%}
 {%- assign f = site.data.fontes -%}
@@ -20,11 +20,14 @@ economia (setor público e privado), a <a href="/economia/">Economia</a>. A pág
 
 <nav class="indice" aria-label="Nesta página">
   <a href="#precos"><span>1</span> Preços</a>
-  <a href="#emprego"><span>2</span> Emprego</a>
+  <a href="#emprego"><span>2</span> Emprego e salários</a>
   <a href="#atividade"><span>3</span> Atividade e consumo</a>
-  <a href="#turismo"><span>4</span> Turismo por ilha</a>
-  <a href="#ilhas"><span>5</span> O que cada ilha produz</a>
-  <a href="#palavras"><span>6</span> Palavras e dados</a>
+  <a href="#habitacao"><span>4</span> Habitação</a>
+  <a href="#turismo"><span>5</span> Turismo por ilha</a>
+  <a href="#ilhas"><span>6</span> O que cada ilha produz</a>
+  <a href="#pais"><span>7</span> Os Açores e o país</a>
+  <a href="#contas"><span>8</span> Contas da Região</a>
+  <a href="#palavras"><span>9</span> Palavras e dados</a>
 </nav>
 
 <noscript><p>Os gráficos precisam de JavaScript. Os números estão em
@@ -58,7 +61,7 @@ medida pelo índice de preços no consumidor (IPC) dos Açores.
   <p class="fonte"></p>
 </figure>
 
-<h2 id="emprego">2. Emprego</h2>
+<h2 id="emprego">2. Emprego e salários</h2>
 {% if s.desemprego %}
 <p class="grande">{{ s.desemprego.valor_t }}%<small> de desemprego</small></p>
 <p>No {{ s.desemprego.periodo }}, {{ s.desemprego.valor_t }} em cada 100
@@ -75,6 +78,28 @@ Olhe para a tendência de vários trimestres.</p>
   <div class="g-topo"><div class="g-legenda"></div></div>
   <div class="g-area"><svg role="img" tabindex="0"></svg><div class="g-tip" hidden></div></div>
   <details class="g-tabela"><summary>Ver os números</summary><div></div></details>
+  <p class="fonte"></p>
+</figure>
+
+{% if s.remuneracoes %}
+<p>Quem trabalha por conta de outrem nos Açores recebia em média
+<strong>{{ s.remuneracoes.valor_t }} € brutos por mês</strong> de remuneração
+regular nos três meses até {{ s.remuneracoes.periodo }}{% if s.remuneracoes.real %}:
+descontada a inflação, {% if s.remuneracoes.real < 0 %}menos{% else %}mais{% endif %}
+{{ s.remuneracoes.real | abs | replace: ".", "," }}% do que um ano antes{% endif %}.
+São cerca de {{ s.remuneracoes.trabalhadores_t }} trabalhadores com descontos
+para a Segurança Social ou a Caixa Geral de Aposentações.</p>
+{% endif %}
+<figure class="grafico" data-g="remuneracoes">
+  <figcaption>Remuneração bruta mensal média por trabalhador (€)</figcaption>
+  <div class="g-topo"><div class="g-legenda"></div><div class="g-vista" role="group" aria-label="O que mostrar"></div></div>
+  <div class="g-area"><svg role="img" tabindex="0"></svg><div class="g-tip" hidden></div></div>
+  <details class="g-tabela"><summary>Ver os números</summary><div></div></details>
+  <p class="nota">Média dos três meses terminados em cada mês. A remuneração
+  base é o salário do contrato; a regular junta-lhe o que se recebe todos os
+  meses (subsídio de refeição, diuturnidades…); a total inclui ainda os
+  subsídios de férias e de Natal, que a fazem subir em junho, julho e
+  dezembro. Só conta quem trabalha por conta de outrem.</p>
   <p class="fonte"></p>
 </figure>
 
@@ -122,18 +147,72 @@ Olhe para a tendência de vários trimestres.</p>
   mostram o peso do turismo.</p>
   <p class="fonte"></p>
 </figure>
-<figure class="grafico" data-g="pde">
-  <figcaption>Contas da Região na ótica de Bruxelas: saldo e dívida (M€)</figcaption>
-  <div class="g-pde"></div>
-  <p class="nota">Saldo e dívida bruta das administrações públicas regionais
-  no Procedimento dos Défices Excessivos (contas nacionais), que o SREA
-  publica em março e setembro. Um saldo negativo é um défice. O SREA só tem
-  estas notificações no site desde 2025, por isso há poucos anos.
-  <a href="/financas/">Execução orçamental e Tribunal de Contas →</a></p>
+<h2 id="habitacao">4. Habitação</h2>
+<div class="cartoes">
+{% if s.avaliacao %}
+<section class="cartao">
+  <h3>Avaliação das casas</h3>
+  <p class="grande">{{ s.avaliacao.valor_t }} €/m²<small> em {{ s.avaliacao.periodo }}</small></p>
+  <p>Valor mediano por metro quadrado das casas avaliadas pelos bancos para
+  crédito à habitação{% if s.avaliacao.var %}, {% if s.avaliacao.var < 0 %}menos{% else %}mais{% endif %}
+  {{ s.avaliacao.var | abs | replace: ".", "," }}% do que um ano antes{% endif %}.</p>
+</section>
+{% endif %}
+{% if s.transacoes %}
+<section class="cartao">
+  <h3>Casas vendidas</h3>
+  <p class="grande">{{ s.transacoes.valor_t }}<small> no {{ s.transacoes.periodo }}</small></p>
+  <p>Alojamentos familiares vendidos nos Açores{% if s.transacoes.var %},
+  {% if s.transacoes.var < 0 %}menos{% else %}mais{% endif %}
+  {{ s.transacoes.var | abs | replace: ".", "," }}% do que no mesmo trimestre do ano anterior{% endif %}.</p>
+</section>
+{% endif %}
+{% if s.emprestimos %}
+<section class="cartao">
+  <h3>Crédito à habitação</h3>
+  <p class="grande">{{ s.emprestimos.valor_t }} M€<small> em {{ s.emprestimos.periodo }}</small></p>
+  <p>O que as famílias dos Açores devem aos bancos por compra de casa{% if s.emprestimos.var %},
+  {% if s.emprestimos.var < 0 %}menos{% else %}mais{% endif %}
+  {{ s.emprestimos.var | abs | replace: ".", "," }}% do que um ano antes{% endif %}.</p>
+</section>
+{% endif %}
+</div>
+<figure class="grafico" data-g="avaliacao">
+  <figcaption>Valor mediano da avaliação bancária da habitação (€ por m²)</figcaption>
+  <div class="g-topo">
+    <label class="g-escolha">Concelho <select class="g-concelho"></select></label>
+    <div class="g-legenda"></div>
+  </div>
+  <div class="g-area"><svg role="img" tabindex="0"></svg><div class="g-tip" hidden></div></div>
+  <details class="g-tabela"><summary>Ver os números</summary><div></div></details>
+  <p class="nota">Só as casas avaliadas para um pedido de crédito, não todas as
+  vendas. Nos concelhos com poucas avaliações o INE não publica o valor: só
+  aparecem os que têm meses com dados.</p>
   <p class="fonte"></p>
 </figure>
+<figure class="grafico" data-g="transacoes">
+  <figcaption>Casas vendidas nos Açores, por trimestre</figcaption>
+  <div class="g-topo"><div class="g-legenda"></div><div class="g-vista" role="group" aria-label="O que mostrar"></div></div>
+  <div class="g-area"><svg role="img" tabindex="0"></svg><div class="g-tip" hidden></div></div>
+  <details class="g-tabela"><summary>Ver os números</summary><div></div></details>
+  <p class="nota">Alojamentos familiares (casas e apartamentos) vendidos, novos
+  ou já usados, e o valor das vendas (INE).</p>
+  <p class="fonte"></p>
+</figure>
+<figure class="grafico" data-g="emprestimos">
+  <figcaption>Empréstimos dos bancos a famílias e empresas dos Açores (M€, no fim de cada mês)</figcaption>
+  <div class="g-topo"><div class="g-legenda"></div><div class="g-vista" role="group" aria-label="O que mostrar"></div></div>
+  <div class="g-area"><svg role="img" tabindex="0"></svg><div class="g-tip" hidden></div></div>
+  <details class="g-tabela"><summary>Ver os números</summary><div></div></details>
+  <p class="nota">O que está por pagar, não o que se pediu nesse mês (Banco de
+  Portugal). Os empréstimos vencidos são as prestações em atraso, em % do
+  total emprestado.</p>
+  <p class="fonte"></p>
+</figure>
+<p class="ir">Rendas, concelho a concelho:
+<a href="/dados/ine/#ind=0014698">valor mediano das rendas (INE) →</a></p>
 
-<h2 id="turismo">4. Turismo por ilha</h2>
+<h2 id="turismo">5. Turismo por ilha</h2>
 {% if s.dormidas %}
 <p class="grande">{{ s.dormidas.valor | divided_by: 10000 | divided_by: 100.0 | round: 2 | replace: ".", "," }} milhões<small> de dormidas</small></p>
 <p>De {{ s.dormidas.periodo }}, hotéis e alojamento local dos Açores
@@ -168,7 +247,7 @@ conta uma){% if s.dormidas.var %}, {% if s.dormidas.var < 0 %}menos{% else %}mai
 <p class="ir">Mais sobre turismo, concelho a concelho:
 <a href="/dados/ine/#ind=0013210">dormidas por 100 habitantes (INE) →</a></p>
 
-<h2 id="ilhas">5. O que cada ilha produz</h2>
+<h2 id="ilhas">6. O que cada ilha produz</h2>
 {% if s.pib_hab %}
 <p>O produto interno bruto (PIB) é o valor de tudo o que se produz num ano.
 Dividido pelos residentes, dá o <strong>PIB por habitante</strong>: nos
@@ -190,7 +269,63 @@ dividido pela <a href="{{ f.srea_populacao.url }}">população residente estimad
 no mesmo ano (conta do açores.net).</p>
 {% endif %}
 
-<h2 id="palavras">6. Palavras e dados</h2>
+<h2 id="pais">7. Os Açores e o país</h2>
+{% if s.creg %}
+<div class="cartoes">
+{% if s.creg.ppc %}<section class="cartao">
+  <h3>Face à União Europeia</h3>
+  <p class="grande">{{ s.creg.ppc_t }}<small> (UE = 100), {{ s.creg.ppc_ano }}</small></p>
+  <p>PIB por habitante dos Açores, descontadas as diferenças de preços entre
+  países (paridades de poder de compra). É o número que decide os fundos
+  europeus: abaixo de 75, a Região conta como “menos desenvolvida”.</p>
+</section>{% endif %}
+{% if s.creg.pib_pt %}<section class="cartao">
+  <h3>PIB face ao país</h3>
+  <p class="grande">{{ s.creg.pib_pt_t }}<small> (Portugal = 100), {{ s.creg.pib_pt_ano }}</small></p>
+  <p>O que se produz por habitante nos Açores, em % da média nacional.</p>
+</section>{% endif %}
+{% if s.creg.rdb_pt %}<section class="cartao">
+  <h3>Rendimento das famílias</h3>
+  <p class="grande">{{ s.creg.rdb_pt_t }}<small> (Portugal = 100), {{ s.creg.rdb_pt_ano }}</small></p>
+  <p>O rendimento disponível das famílias por habitante (salários, lucros,
+  pensões e apoios, depois de impostos), em % da média nacional. Fica mais
+  perto da média nacional do que o PIB por habitante.</p>
+</section>{% endif %}
+</div>
+{% endif %}
+<figure class="grafico" data-g="creg">
+  <figcaption>Contas regionais: os Açores, a Madeira e o país, desde 1995</figcaption>
+  <div class="g-topo">
+    <label class="g-escolha">Indicador <select class="g-indicador"></select></label>
+    <div class="g-legenda"></div>
+  </div>
+  <div class="g-area"><svg role="img" tabindex="0"></svg><div class="g-tip" hidden></div></div>
+  <details class="g-tabela"><summary>Ver os números</summary><div></div></details>
+  <p class="nota">Contas regionais do INE (base 2021). Os rendimentos das
+  famílias por região só existem desde 2021. O último ano é provisório. Os
+  valores em milhões de euros e em milhares de pessoas mostram só os Açores;
+  as outras regiões estão em <a href="/dados/srea.csv">srea.csv</a>.</p>
+  <p class="fonte"></p>
+</figure>
+
+<h2 id="contas">8. Contas da Região</h2>
+{% if s.apr %}
+<p>Em {{ s.apr.ano }}{% if s.apr.provisorio %} (valores provisórios){% endif %}, as
+administrações públicas da Região (Governo Regional, institutos, hospitais e
+empresas públicas que contam como Estado) gastaram mais
+{{ s.apr.saldo | abs }} milhões de euros do que receberam, e deviam
+{{ s.apr.divida_t }} milhões. São as contas nacionais (SEC 2010), as que
+Bruxelas usa para o défice e a dívida: não coincidem com a execução
+orçamental, que conta só o que entra e sai de caixa.
+<a href="/financas/">Execução orçamental e Tribunal de Contas →</a></p>
+{% endif %}
+<figure class="grafico" data-g="apr">
+  <figcaption>Receitas e despesas das administrações públicas regionais (M€)</figcaption>
+  <div class="g-apr tabela-scroll"></div>
+  <p class="fonte"></p>
+</figure>
+
+<h2 id="palavras">9. Palavras e dados</h2>
 <p class="fonte">Explicações do açores.net, não são texto oficial. As
 definições oficiais estão na <a href="{{ f.srea_meta.url }}">metainformação
 do SREA</a> e nas fichas de cada ficheiro.</p>
@@ -219,6 +354,16 @@ do SREA</a> e nas fichas de cada ficheiro.</p>
   <dt>PIB</dt>
   <dd>O valor de tudo o que se produz num ano, descontado o que foi gasto
   para o produzir.</dd>
+  <dt>Paridades de poder de compra (PPC)</dt>
+  <dd>Uma conversão que desconta as diferenças de preços entre países, para
+  que 100 € comprem o mesmo em todo o lado.</dd>
+  <dt>Rendimento disponível das famílias</dt>
+  <dd>O que as famílias recebem (salários, rendimentos de empresas e
+  propriedades, pensões e apoios sociais) depois de pagar impostos e
+  contribuições.</dd>
+  <dt>Valor mediano</dt>
+  <dd>O valor do meio: metade das casas avaliadas vale menos, metade vale
+  mais. Não é puxado por umas poucas casas muito caras, como a média.</dd>
 </dl>
 
 <p><strong>Descarregar:</strong> todas as séries num só ficheiro,
@@ -228,6 +373,8 @@ para o ficheiro do SREA de onde veio). As séries vêm das páginas do SREA de
 <a href="{{ f.srea_conjuntura.url }}">conjuntura</a>,
 <a href="{{ f.srea_emprego.url }}">mercado de trabalho</a>,
 <a href="{{ f.srea_turismo.url }}">turismo</a>,
+<a href="{{ f.srea_habitacao.url }}">construção e habitação</a>,
+<a href="{{ f.srea_financeira.url }}">atividade financeira</a>,
 <a href="{{ f.srea_contas.url }}">contas regionais</a> e
 <a href="{{ f.srea_populacao.url }}">população</a>, recolhidas todas as
 semanas.</p>
@@ -258,6 +405,7 @@ p.grande { font-size: 1.9em; font-weight: bold; line-height: 1.15; margin-bottom
 .g-legenda i, .g-tip i { display: inline-block; width: 14px; border-top: 2px solid var(--c); border-radius: 2px; }
 .g-escolha { font-size: .9em; }
 .g-escolha select { font: inherit; padding: .15em .3em; max-width: 14em; }
+.g-escolha .g-indicador { max-width: min(30em, 100%); }
 .g-vista { display: inline-flex; border: 1px solid var(--s1); border-radius: 6px; overflow: hidden; }
 .g-vista:empty { display: none; }
 .g-vista button { font: inherit; font-size: .85em; padding: .25em .7em; border: 0; background: transparent; color: var(--s01); cursor: pointer; }
@@ -274,10 +422,11 @@ p.grande { font-size: 1.9em; font-weight: bold; line-height: 1.15; margin-bottom
 .g-tabela { margin-top: .4em; font-size: .9em; }
 .g-tabela summary { cursor: pointer; color: var(--s01); }
 .g-tabela div { max-height: 22em; overflow: auto; }
-.g-tabela table, .g-pde table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
-.g-pde { font-size: .95em; margin-bottom: .4em; }
-.g-pde th, .g-pde td { padding: .2em .8em; text-align: right; border-bottom: 1px solid rgba(147,161,161,.3); }
-.g-pde th:first-child, .g-pde td:last-child { text-align: left; }
+.g-tabela table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.g-apr { font-size: .9em; margin-bottom: .4em; }
+.g-apr td { text-align: right; font-variant-numeric: tabular-nums; }
+.g-apr tbody th { text-align: left; font-weight: normal; white-space: nowrap; }
+.g-apr tr.forte th, .g-apr tr.forte td { font-weight: bold; }
 .grafico .nota { font-size: .85em; max-width: 44em; }
 .g-tabela th, .g-tabela td { padding: .15em .6em; text-align: right; border-bottom: 1px solid rgba(147,161,161,.3); }
 .g-tabela th:first-child, .g-tabela td:first-child { text-align: left; }
@@ -570,29 +719,140 @@ p.grande { font-size: 1.9em; font-weight: bold; line-height: 1.15; margin-bottom
     redraw(); source(fig, rows.filter(function (s) { return s.local === "Açores"; }).slice(0, 1));
     return redraw;
   }
-  function pde() {
-    var fig = document.querySelector('[data-g="pde"]');
-    var saldo = one({ serie: "pde", indicador: "Saldo das administrações públicas regionais" });
-    var divida = one({ serie: "pde", indicador: "Dívida bruta consolidada" });
-    if (!saldo && !divida) return;
-    var anos = {}; [saldo, divida].forEach(function (s) { if (s) s.p.forEach(function (p) { anos[p[0]] = p[2] || ""; }); });
-    var t = h("table", "", fig.querySelector(".g-pde")), tr = h("tr", "", h("thead", "", t));
-    ["Ano", "Saldo (M€)", "Dívida bruta (M€)", ""].forEach(function (x) { h("th", x, tr); });
-    var body = h("tbody", "", t), vs = asMap(saldo), vd = asMap(divida);
-    Object.keys(anos).sort().reverse().forEach(function (a) {
-      var r = h("tr", "", body);
-      h("th", a, r);
-      h("td", vs[a] == null ? "–" : n1.format(vs[a]).replace("-", "−"), r);
-      h("td", vd[a] == null ? "–" : n1.format(vd[a]), r);
-      h("td", anos[a], r);
+  function series(q, nome, c) { var s = one(q); return s ? { nome: nome, c: c, v: asMap(s), s: s } : null; }
+  function keysOf(list) {
+    var k = {}; list.forEach(function (x) { x.s.p.forEach(function (p) { k[p[0]] = 1; }); });
+    return Object.keys(k).sort();
+  }
+  // a chart whose series are chosen with buttons: views = [[label, function () -> {series, opt}]]
+  function withViews(fig, views) {
+    var cur = 0, redraw = function (i) {
+      if (i != null) cur = i;
+      var v = views[cur][1](), list = v.series.filter(Boolean);
+      if (!list.length) return;
+      draw(fig, v.keys || keysOf(list), list, v.opt);
+      source(fig, list.map(function (x) { return x.s; }).slice(0, 1));
+    };
+    if (views.length > 1) rangeButtons(fig, views.map(function (v, i) { return [i, v[0]]; }), 0, redraw);
+    redraw();
+    return function () { redraw(); };
+  }
+  function remuneracoes() {
+    var fig = document.querySelector('[data-g="remuneracoes"]'), R = "remuneracoes";
+    if (!one({ serie: R })) return;
+    return withViews(fig, [
+      ["Salário", function () { return { series: [
+        series({ serie: R, indicador: "Remuneração bruta regular média" }, "Regular", C1),
+        series({ serie: R, indicador: "Remuneração bruta base média" }, "Base", C2),
+        series({ serie: R, indicador: "Remuneração bruta total média" }, "Total", "#859900")], opt: { unit: " €" } }; }],
+      ["Acima da inflação", function () { return { series: [
+        series({ serie: R, indicador: "Remuneração bruta regular média: variação homóloga real" }, "Regular", C1),
+        series({ serie: R, indicador: "Remuneração bruta base média: variação homóloga real" }, "Base", C2)], opt: { unit: "%" } }; }],
+      ["Trabalhadores", function () { return { series: [
+        series({ serie: R, indicador: "Número de trabalhadores" }, "Trabalhadores (milhares)", C1)], opt: { unit: " mil" } }; }]
+    ]);
+  }
+  function avaliacao() {
+    var fig = document.querySelector('[data-g="avaliacao"]');
+    var rows = find({ serie: "avaliacao" });
+    if (!rows.length) return;
+    var sel = fig.querySelector(".g-concelho");
+    var locais = ["Açores"].concat(rows.map(function (s) { return s.local; }).filter(function (x, i, a) { return x !== "Açores" && a.indexOf(x) === i; }).sort(function (x, y) { return x.localeCompare(y, "pt"); }));
+    locais.forEach(function (l) { var o = h("option", l, sel); o.value = l; });
+    var redraw = function () {
+      var l = sel.value, list = [
+        series({ serie: "avaliacao", rubrica: "Habitação", local: l }, l === "Açores" ? "Todas as casas" : l, C1)];
+      if (l === "Açores") list.push(series({ serie: "avaliacao", rubrica: "Apartamentos", local: l }, "Apartamentos", C2), series({ serie: "avaliacao", rubrica: "Moradias", local: l }, "Moradias", "#859900"));
+      else list.push(series({ serie: "avaliacao", rubrica: "Habitação", local: "Açores" }, "Açores", C2));
+      list = list.filter(Boolean);
+      draw(fig, keysOf(list), list, { unit: " €/m²" });
+    };
+    sel.onchange = redraw;
+    redraw(); source(fig, rows.slice(0, 1));
+    return redraw;
+  }
+  function transacoes() {
+    var fig = document.querySelector('[data-g="transacoes"]'), T = "transacoes";
+    if (!one({ serie: T })) return;
+    function three(ind) { return [
+      series({ serie: T, indicador: ind, rubrica: "Total" }, "Todas", C1),
+      series({ serie: T, indicador: ind, rubrica: "Existentes" }, "Usadas", C2),
+      series({ serie: T, indicador: ind, rubrica: "Novos" }, "Novas", "#859900")]; }
+    return withViews(fig, [
+      ["Número", function () { return { series: three("Número"), opt: { zero: true } }; }],
+      ["Valor (€)", function () { return { series: three("Valor"), opt: { zero: true, big: true, unit: " €" } }; }]
+    ]);
+  }
+  function emprestimos() {
+    var fig = document.querySelector('[data-g="emprestimos"]'), E = "emprestimos";
+    if (!one({ serie: E })) return;
+    function three(ind) { return [
+      series({ serie: E, indicador: ind, rubrica: "Particulares - Habitação" }, "Famílias: habitação", C1),
+      series({ serie: E, indicador: ind, rubrica: "Particulares - Consumo e outros" }, "Famílias: consumo e outros", C2),
+      series({ serie: E, indicador: ind, rubrica: "Empresas não financeiras" }, "Empresas", "#859900")]; }
+    return withViews(fig, [
+      ["Valor em dívida", function () { return { series: three("Valor em fim do período"), opt: { zero: true, unit: " M€" } }; }],
+      ["Em atraso (%)", function () { return { series: three("Rácio de empréstimos vencidos"), opt: { zero: true, unit: "%" } }; }]
+    ]);
+  }
+  var CREG = [
+    ["PIBpc PPC (UE27=100)", "PIB por habitante em paridades de poder de compra (UE = 100)", ""],
+    ["Produto interno bruto por habitante (PT=100)", "PIB por habitante (Portugal = 100)", ""],
+    ["Rendimento disponível bruto das famílias por habitante (PT=100)", "Rendimento disponível das famílias por habitante (Portugal = 100)", ""],
+    ["Rendimento disponível bruto das famílias por habitante", "Rendimento disponível das famílias por habitante (€)", " €"],
+    ["Produto interno bruto por habitante", "PIB por habitante (€)", " €"],
+    ["Evolução real PIBVol", "Crescimento real do PIB (%)", "%"],
+    ["Produtividade aparente do trabalho (PT=100)", "Produtividade do trabalho (Portugal = 100)", ""],
+    ["Emprego - indivíduos totais", "Pessoas empregadas nos Açores (milhares)", " mil", 1],
+    ["Produto interno bruto - preços correntes", "PIB dos Açores (milhões de euros)", " M€", 1],
+    ["Remunerações dos empregados", "Salários pagos nos Açores (milhões de euros)", " M€", 1],
+    ["Formação bruta de capital fixo", "Investimento nos Açores (milhões de euros)", " M€", 1]
+  ];
+  function creg() {
+    var fig = document.querySelector('[data-g="creg"]');
+    if (!one({ serie: "creg" })) return;
+    var sel = fig.querySelector(".g-indicador");
+    CREG.forEach(function (c, i) { if (one({ serie: "creg", indicador: c[0] })) { var o = h("option", c[1], sel); o.value = i; } });
+    var redraw = function () {
+      var c = CREG[+sel.value], q = function (l) { return { serie: "creg", indicador: c[0], local: l }; };
+      var list = [series(q("Açores"), "Açores", C1)];
+      if (!c[3]) list.push(series(q("Madeira"), "Madeira", C2), series(q("Portugal"), "Portugal", "#859900"));
+      list = list.filter(Boolean);
+      var nota = {}; list[0].s.p.forEach(function (p) { if (p[2]) nota[p[0]] = p[2]; }); list[0].nota = nota;
+      draw(fig, keysOf(list), list, { unit: c[2], dots: keysOf(list).length < 8 });
+      source(fig, [list[0].s]);
+    };
+    sel.onchange = redraw;
+    redraw();
+    return redraw;
+  }
+  var APR = [["Receitas totais", 0], ["Receita corrente", 1], ["Impostos sobre o rendimento e património", 2], ["Impostos sobre a produção e importação", 2], ["Contribuições sociais", 2], ["Vendas", 2], ["Outras receitas correntes", 2], ["Receitas de capital", 1],
+    ["Despesas totais", 0], ["Despesa corrente", 1], ["Prestações sociais", 2], ["Despesas com pessoal", 2], ["Juros", 2], ["Consumo intermédio", 2], ["Subsídios", 2], ["Outra despesa corrente", 2], ["Despesa de capital", 1], ["Investimento", 2], ["Outra despesa de capital", 2],
+    ["Saldo total", 0], ["Dívida bruta consolidada", 0]];
+  function apr() {
+    var fig = document.querySelector('[data-g="apr"]'), rows = find({ serie: "apr" });
+    if (!rows.length) return;
+    var anos = {}, prov = {};
+    rows.forEach(function (s) { s.p.forEach(function (p) { anos[p[0]] = 1; if (p[2]) prov[p[0]] = 1; }); });
+    anos = Object.keys(anos).sort().reverse();
+    var t = h("table", null, fig.querySelector(".g-apr")); t.className = "sper";
+    var tr = h("tr", null, h("thead", null, t)); h("th", "", tr);
+    anos.forEach(function (a) { h("th", a + (prov[a] ? "*" : ""), tr); });
+    var body = h("tbody", null, t);
+    APR.forEach(function (r) {
+      var s = rows.filter(function (x) { return x.rubrica === r[0]; })[0]; if (!s) return;
+      var v = asMap(s), row = h("tr", null, body), th = h("th", r[0], row);
+      th.style.paddingLeft = (0.3 + r[1] * 1.1) + "em"; if (!r[1]) row.className = "forte";
+      anos.forEach(function (a) { h("td", v[a] == null ? "–" : n1.format(v[a]).replace("-", "−"), row); });
     });
-    source(fig, [divida || saldo]);
+    if (Object.keys(prov).length) h("p", "* Provisório.", fig.querySelector(".g-apr")).className = "nota";
+    source(fig, rows.slice(0, 1));
   }
 
   fetch("/dados/srea.json?v=" + BUILD).then(function (r) { return r.json(); }).then(function (d) {
     DATA = d;
-    pde();
-    var redraws = [ipc(), desemprego(), atividade(), pagamentos(), turismo()].filter(Boolean);
+    apr();
+    var redraws = [ipc(), desemprego(), remuneracoes(), atividade(), pagamentos(), avaliacao(), transacoes(), emprestimos(), turismo(), creg()].filter(Boolean);
     var w = 0;
     window.addEventListener("resize", function () {
       clearTimeout(w); w = setTimeout(function () { redraws.forEach(function (f) { f(); }); }, 200);

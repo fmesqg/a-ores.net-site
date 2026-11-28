@@ -63,6 +63,7 @@ função (saúde, educação, transportes).{% if u.periodo %} Último boletim:
   <li><a href="/dados/beo/#quadro=receita-fiscal-do-gra&grafico=anos">Quanto rendem o IRS e o IVA, mês a mês?</a></li>
   <li><a href="/dados/beo/#quadro=despesa-do-gra-por-departamento">Quanto gasta cada secretaria?</a></li>
   <li><a href="/dados/beo/#quadro=despesa-do-gra-por-funcao&modo=acum&grafico=anos">Quanto vai para a saúde, ano a ano?</a></li>
+  <li><a href="/dados/srea/#contas">Défice e dívida nas contas nacionais, desde 2016</a></li>
 </ul>
 </section>
 

@@ -32,6 +32,25 @@ Series kept, chosen for people who are not data experts:
              (Procedimento dos Défices Excessivos), yearly, read from the
              lead sentence of each notification post (POSTS): its tables
              are images. The WordPress site keeps posts only from 2025
+  remuneracoes  average gross monthly pay (total, regular, base) and
+             number of employees, three-month periods, since 2015 (RMM)
+  avaliacao  median bank valuation of homes (€/m²), monthly since 2011,
+             for the Azores (all, apartments, houses) and by concelho
+  transacoes number and value of homes sold, quarterly since 2009 (all,
+             new, existing)
+  emprestimos bank loans to households (housing, consumption) and
+             companies, monthly since 2002: amount owed and share overdue
+  creg       regional accounts (INE, base 2021) since 1995 for every
+             NUTS II region: GDP, GVA, pay, investment, household income,
+             jobs, productivity, per inhabitant and against PT/EU27=100
+  apr        revenue and expenditure of the regional public
+             administration in national accounts (SEC 2010), with its
+             debt, yearly since 2016
+
+Fuel sales by island (Combustiveis_*.xlsx, industria-e-energia) are not
+read: in the file of October 2026 the Azores sheet does not match the sum
+of the islands from 2022 on (December 2025: 130 million kg of fuel oil,
+against about 10 million in other months).
 
 Rows are kept by (serie, indicador, rubrica, local, periodo); a newer file
 overwrites what an older one said, so revisions land. Excel is read with
@@ -622,6 +641,308 @@ def parse_pde(posts: list[dict]) -> list[dict]:
     return out
 
 
+def _date(v) -> dt.date | None:
+    if isinstance(v, dt.datetime):
+        return v.date()
+    if isinstance(v, dt.date):
+        return v
+    return None
+
+
+def _monthly(serie, indicador, rubrica, local, d, v, unidade, nota=""):
+    return row(
+        serie,
+        indicador,
+        rubrica,
+        local,
+        d.strftime("%Y-%m"),
+        d.strftime("%Y-%m-01"),
+        v,
+        unidade,
+        nota,
+    )
+
+
+# CREG: the region names in the header, and the units
+CREG_LOCAL = {"R. A. Açores": "Açores", "R. A. Madeira": "Madeira"}
+UNIDADES = {
+    "milhões de euros": "M€",
+    "milhares de euros": "milhares de €",
+    "milhares de indivíduos": "milhares",
+    "euros": "€",
+    "percentagem": "%",
+}
+
+
+def parse_creg(book: dict[str, Rows]) -> list[dict]:
+    """Contas regionais (INE/SREA, CREG_1995-<ano>): one sheet per
+    indicator (Quadro 1-18: GDP, GVA, real growth, pay, investment,
+    household income, jobs, productivity, per inhabitant and against
+    PT=100 or EU27=100), a row per year, a column per NUTS II region.
+    "Po" after the year marks provisional figures; Extra-Regio is left
+    out."""
+    out = []
+    for name, rows in book.items():
+        if not name.strip().startswith("Quadro"):
+            continue
+        head = next((r for r in rows if r and text(r[0]) == "Anos"), None)
+        if head is None:
+            continue
+        top = [text(c) for r in rows[: rows.index(head)] for c in r if c]
+        titulo = next(
+            (t for t in top if not re.match(r"(Quadro|Contas|Unidade)", t)),
+            "",
+        )
+        unidade = next(
+            (t.split(":", 1)[1].strip() for t in top if "Unidade" in t), ""
+        )
+        unidade = UNIDADES.get(unidade, unidade)
+        cols = {
+            j: CREG_LOCAL.get(text(c), text(c))
+            for j, c in enumerate(head)
+            if j and text(c) and text(c) != "Extra-Regio"
+        }
+        for r in rows[rows.index(head) + 1 :]:
+            m = re.fullmatch(
+                r"(\d{4})(?:\.0)?\s*(Po)?", text(r[0]) if r else ""
+            )
+            if not m:
+                continue
+            y, nota = m.group(1), "provisório" if m.group(2) else ""
+            for j, local in cols.items():
+                v = number(r[j]) if j < len(r) else None
+                if v is not None:
+                    out.append(
+                        row(
+                            "creg",
+                            titulo,
+                            "Total",
+                            local,
+                            y,
+                            f"{y}-01-01",
+                            v,
+                            unidade,
+                            nota,
+                        )
+                    )
+    return out
+
+
+def parse_apr(book: dict[str, Rows]) -> list[dict]:
+    """Receitas e despesas da administração pública regional (contas
+    nacionais, SEC 2010; Rec_Desp<ano>): a row per operation, a column
+    per year, the row under the years saying "Final" or "Provisório".
+    The labels' indentation is dropped; the page keeps the order. Of the
+    "Por memória" rows only the debt is kept (GDP is in creg)."""
+    rows = next(iter(book.values()))
+    head = next(r for r in rows if r and text(r[0]) == "Operação SEC")
+    estado = rows[rows.index(head) + 1]
+    years = {j: year_of(c) for j, c in enumerate(head) if year_of(c)}
+    out = []
+    for r in rows[rows.index(head) + 2 :]:
+        label = text(r[0]) if r else ""
+        if label.startswith(("Fonte", "Notas")):
+            break
+        if label.startswith("Produto Interno Bruto"):
+            continue
+        label = re.sub(r"\s*\(\d\)$", "", label)
+        if label.startswith("Dívida Bruta"):
+            label = "Dívida bruta consolidada"
+        for j, y in years.items():
+            v = number(r[j]) if j < len(r) else None
+            if v is None:
+                continue
+            nota = "provisório" if "Provis" in text(estado[j]) else ""
+            out.append(
+                row(
+                    "apr",
+                    "Receitas e despesas (contas nacionais)",
+                    label,
+                    "Açores",
+                    str(y),
+                    f"{y}-01-01",
+                    v,
+                    "M€",
+                    nota,
+                )
+            )
+    return out
+
+
+def parse_remuneracoes(book: dict[str, Rows]) -> list[dict]:
+    """Remuneração bruta mensal média (RMM, from Segurança Social and
+    CGA records): a row per three-month period, named by its last month.
+    Kept: workers (thousands), the three average pays (total, regular,
+    base; euros) and their real year-on-year change."""
+    rows = next(iter(book.values()))
+    i = next(
+        k
+        for k, r in enumerate(rows)
+        if any("Número de trabalhadores" in text(c) for c in r)
+    )
+    grupo, medida, unidade = rows[i - 1], rows[i], rows[i + 1]
+    cols, g = {}, ""
+    for j, c in enumerate(medida):
+        if j < len(grupo) and text(grupo[j]):
+            g = text(grupo[j])
+        if not text(c):
+            continue
+        if g.startswith("Trimestre"):
+            cols[j] = (text(c), unidade_of(text(unidade[j])))
+        elif "real" in g:
+            cols[j] = (f"{text(c)}: variação homóloga real", "%")
+    out = []
+    for r in rows[i + 2 :]:
+        d = _date(r[0]) if r else None
+        if not d:
+            d = _date(r[1]) if len(r) > 1 else None
+        if not d:
+            continue
+        for j, (ind, u) in cols.items():
+            v = number(r[j]) if j < len(r) else None
+            if v is not None:
+                out.append(
+                    _monthly("remuneracoes", ind, "Total", "Açores", d, v, u)
+                )
+    return out
+
+
+def unidade_of(s: str) -> str:
+    return {"euros": "€", "milhares": "milhares"}.get(s.lower(), s)
+
+
+AVALIACAO = {
+    "Mediana": "Habitação",
+    "Mediana - Apartamentos": "Apartamentos",
+    "Mediana - Moradias": "Moradias",
+}
+
+
+def parse_avaliacao(book: dict[str, Rows]) -> list[dict]:
+    """Valor mediano da avaliação bancária da habitação (€/m²), monthly
+    since 2011: Quadro 1 for the Azores (all homes, apartments, houses),
+    Quadro 2 for each concelho (all homes; "..." where too few
+    valuations). Quartiles are not kept."""
+    out = []
+    for name, rows in book.items():
+        quadro = name.strip()
+        if quadro not in ("Quadro 1", "Quadro 2"):
+            continue
+        head = next(
+            r for r in rows if r and text(r[0]) in ("Período", "Periodo")
+        )
+        cols = {}
+        for j, c in enumerate(head):
+            t = re.sub(r"\s+", " ", text(c))
+            if quadro == "Quadro 1" and t in AVALIACAO:
+                cols[j] = (AVALIACAO[t], "Açores")
+            elif quadro == "Quadro 2" and t.startswith("Mediana - "):
+                cols[j] = ("Habitação", t.split(" - ", 1)[1])
+        for r in rows[rows.index(head) + 1 :]:
+            d = _date(r[0]) if r else None
+            if not d:
+                continue
+            for j, (rubrica, local) in cols.items():
+                v = number(r[j]) if j < len(r) else None
+                if v is not None:
+                    out.append(
+                        _monthly(
+                            "avaliacao",
+                            "Valor mediano da avaliação bancária",
+                            rubrica,
+                            local,
+                            d,
+                            v,
+                            "€/m²",
+                        )
+                    )
+    return out
+
+
+TRANSACOES = {"Q1": "Total", "Q2": "Novos", "Q3": "Existentes"}
+
+
+def parse_transacoes(book: dict[str, Rows]) -> list[dict]:
+    """Valor e número de transações de alojamentos familiares (INE),
+    quarterly since 2009: the Azores' two columns of Q1 (all), Q2 (new)
+    and Q3 (existing homes). Values come in thousands of euros."""
+    out = []
+    for name, rubrica in TRANSACOES.items():
+        rows = book.get(name)
+        if not rows:
+            continue
+        head = next(r for r in rows if r and text(r[0]) == "Período")
+        j = next(
+            k for k, c in enumerate(head) if "Açores" in text(c)
+        )  # Valor; Nº is next to it
+        for r in rows[rows.index(head) + 1 :]:
+            m = re.fullmatch(r"(\d)T(\d{4})", text(r[0]) if r else "")
+            if not m:
+                continue
+            q, y = int(m.group(1)), int(m.group(2))
+            for ind, k, mult, u in (
+                ("Valor", j, 1000, "€"),
+                ("Número", j + 1, 1, "transações"),
+            ):
+                v = number(r[k]) if k < len(r) else None
+                if v is not None:
+                    out.append(
+                        row(
+                            "transacoes",
+                            ind,
+                            rubrica,
+                            "Açores",
+                            f"{y}-T{q}",
+                            f"{y}-{3 * q - 2:02d}-01",
+                            v * mult,
+                            u,
+                        )
+                    )
+    return out
+
+
+def parse_emprestimos(book: dict[str, Rows]) -> list[dict]:
+    """Empréstimos bancários (Banco de Portugal), monthly since 2002, one
+    sheet for households and one for companies: a row per month, newest
+    first. Kept: the amount at the end of the month (M€) and the share
+    overdue (rácio de empréstimos vencidos, %)."""
+    out = []
+    for rows in book.values():
+        i = next(
+            (k for k, r in enumerate(rows) if r and text(r[0]) == "Data"),
+            None,
+        )
+        if i is None:
+            continue
+        label, medida = rows[i], rows[i + 1]
+        cols = {}
+        for j in range(1, len(label)):
+            m, lab = text(medida[j]), text(label[j])
+            if m == "Valor em fim do período" and lab.startswith(
+                "Empréstimos -"
+            ):
+                cols[j] = ("Valor em fim do período", lab, "M€")
+            elif m.startswith("Rácio"):
+                cols[j] = ("Rácio de empréstimos vencidos", lab, "%")
+        for r in rows[i + 3 :]:
+            d = _date(r[0]) if r else None
+            if not d:
+                continue
+            d = d.replace(day=1)
+            for j, (ind, lab, u) in cols.items():
+                v = number(r[j]) if j < len(r) else None
+                if v is None:
+                    continue
+                rub = re.sub(
+                    r"^(Rácio empréstimos vencidos|Empréstimos) - ", "", lab
+                )
+                rub = rub.replace("Consumo e outros fins", "Consumo e outros")
+                out.append(
+                    _monthly("emprestimos", ind, rub, "Açores", d, v, u)
+                )
+    return out
+
+
 def pib_hab(rows: list[dict]) -> list[dict]:
     """GDP per resident by island, where both are known for the year."""
     pop = {
@@ -707,6 +1028,36 @@ SERIES = [
         lambda b: parse_pagamentos(b, "Número", "operações", concelhos=False),
         False,
     ),
+    (
+        "remuneracoes",
+        "mercado-de-trabalho",
+        r"/RMM-",
+        parse_remuneracoes,
+        False,
+    ),
+    (
+        "avaliacao",
+        "construcao-e-habitacao",
+        r"/Valor-Mediano-da-Avaliacao",
+        parse_avaliacao,
+        False,
+    ),
+    (
+        "transacoes",
+        "construcao-e-habitacao",
+        r"/Valor-e-Transacoes-de-Alojamentos",
+        parse_transacoes,
+        False,
+    ),
+    (
+        "emprestimos",
+        "atividade-financeira",
+        r"/Emprestimos_Bancarios",
+        parse_emprestimos,
+        False,
+    ),
+    ("creg", "contas-regionais", r"/CREG_\d{4}-\d{4}", parse_creg, False),
+    ("apr", "contas-regionais", r"/Rec_Desp\d{4}", parse_apr, False),
 ]
 
 # Series read from the text of SREA's posts (WordPress API) rather than from
