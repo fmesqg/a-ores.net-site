@@ -47,9 +47,9 @@ fetch_web_data() → compute_delta_ids() → write_update() → append_state()
 ```
 
 1. **Fetch** (`fetch.py`) — Scrapes/calls APIs for all four data sources
-2. **Delta** (`state.py`, `utils.py`) — Compares fetched IDs against `state.jsonl` to find new/changed items
+2. **Delta** (`state.py`, `utils.py`) — Compares fetched IDs against `state.json` to find new/changed items
 3. **Export** (`export.py`, `record.py`) — Converts records to Jekyll markdown with frontmatter
-4. **State** (`utils.py`) — Appends current run's state to `state.jsonl` (auto-rotated at 60 lines)
+4. **State** (`utils.py`) — Writes the run's state to `state.json`, replacing the previous one
 
 ### Open datasets (`bot/datasets.py`)
 
@@ -143,7 +143,7 @@ Standalone scripts, not part of the bot pipeline. Run manually or via cron.
 
 ## Key Details
 
-- **State file:** `bot/state.jsonl` is an append-only ledger (~12 MB, committed). Each line is one bot run's full state. Delta computation depends on the last entry.
+- **State file:** `bot/state.json` (~75 KB, committed) is the last run's state: ALRA IDs by type (and requerimentos by status), JORAA's last day and backfill range, BASE's last day, portal documents seen. Each run replaces it (`utils.append_state`, atomic write, lists sorted so the diff shows only what changed); git keeps the history. Until November 2026 it was `bot/state.jsonl`, one line per run: `get_prev_state` and `write_joraa_estado` still read its last line if `state.json` is missing, and the first run that writes `state.json` deletes it.
 - **Deploy:** `.github/workflows/pages.yml` builds Jekyll with `actions/jekyll-build-pages` and deploys on push to main, on manual dispatch and when called by the daily run.
 - **CI/CD:** `.github/workflows/run-bot.yml` runs daily at 00:00 UTC, commits as `fmesqg-auto` if changes exist.
 - **Code style:** black (line-length 79), isort (black profile), Python >=3.11.5. Pre-commit hooks configured (black, isort, ruff) via `.pre-commit-config.yaml` at repo root — run `pre-commit install` from root.

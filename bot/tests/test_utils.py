@@ -1,5 +1,4 @@
 import json
-import os
 from datetime import date, datetime
 from unittest.mock import patch
 
@@ -310,18 +309,23 @@ def test_markdown_portal_empty():
 # --- get_prev_state ---
 
 
+def _bot_dir(monkeypatch, tmp_path):
+    monkeypatch.setattr("bot.utils.os.path.dirname", lambda _: str(tmp_path))
+
+
 def test_get_prev_state(tmp_path, state_dict, monkeypatch):
-    state_file = tmp_path / "state.jsonl"
-    state_file.write_text(
-        json.dumps({"dummy": "first"}) + "\n" + json.dumps(state_dict)
-    )
-    monkeypatch.setattr(
-        "bot.utils.os.path.join",
-        lambda *args: (
-            str(state_file)
-            if args[-1] == "state.jsonl"
-            else os.path.join(*args)
-        ),
+    _bot_dir(monkeypatch, tmp_path)
+    (tmp_path / "state.json").write_text(json.dumps(state_dict))
+    s = get_prev_state()
+    assert s.last_joraa_update.year == 2024
+
+
+def test_get_prev_state_falls_back_to_old_ledger(
+    tmp_path, state_dict, monkeypatch
+):
+    _bot_dir(monkeypatch, tmp_path)
+    (tmp_path / "state.jsonl").write_text(
+        json.dumps({"dummy": "first"}) + "\n" + json.dumps(state_dict) + "\n"
     )
     s = get_prev_state()
     assert s.last_joraa_update.year == 2024
@@ -331,62 +335,37 @@ def test_get_prev_state(tmp_path, state_dict, monkeypatch):
 
 
 def test_append_state(tmp_path, state_dict, monkeypatch):
-    state_file = tmp_path / "state.jsonl"
-    state_file.write_text("")
-    monkeypatch.setattr(
-        "bot.utils.os.path.join",
-        lambda *args: (
-            str(state_file)
-            if args[-1] == "state.jsonl"
-            else os.path.join(*args)
-        ),
-    )
+    _bot_dir(monkeypatch, tmp_path)
+    (tmp_path / "state.jsonl").write_text(json.dumps({"seed": True}))
+    (tmp_path / "state.json").write_text(json.dumps({"old": True}))
     fixed_dt = datetime(2024, 8, 20, 12, 0, 0)
     monkeypatch.setattr("bot.utils.NOW_DATETIME", fixed_dt)
 
-    state = State(state_dict)
-    append_state(state)
+    append_state(State(state_dict))
 
-    lines = [
-        line for line in state_file.read_text().splitlines() if line.strip()
-    ]
-    assert len(lines) == 1
-    written = json.loads(lines[0])
+    written = json.loads((tmp_path / "state.json").read_text())
     assert written["datetime"] == "2024-08-20 12:00:00"
     assert written["last_joraa_update"] == "2024-08-19"
     assert written["last_base_update"] == "2024-08-18"
-    assert "boletins" in written
-    assert "sigica" in written
-    # alra keys should be present
-    assert "requerimentos" in written
-    assert "votos" in written
-
-
-def test_append_state_appends_not_overwrites(
-    tmp_path, state_dict, monkeypatch
-):
-    state_file = tmp_path / "state.jsonl"
-    seed = json.dumps({"seed": True})
-    state_file.write_text(seed)
-    monkeypatch.setattr(
-        "bot.utils.os.path.join",
-        lambda *args: (
-            str(state_file)
-            if args[-1] == "state.jsonl"
-            else os.path.join(*args)
-        ),
+    assert "boletins" in written and "sigica" in written
+    assert "requerimentos" in written and "votos" in written
+    assert "old" not in written  # replaced, not appended
+    assert not (tmp_path / "state.jsonl").exists()  # migrated
+    assert not (tmp_path / "state.json.tmp").exists()
+    # the state reads back the same
+    assert (
+        get_prev_state().last_joraa_update
+        == State(state_dict).last_joraa_update
     )
-    fixed_dt = datetime(2024, 8, 20, 12, 0, 0)
-    monkeypatch.setattr("bot.utils.NOW_DATETIME", fixed_dt)
 
-    state = State(state_dict)
-    append_state(state)
 
-    lines = [
-        line for line in state_file.read_text().splitlines() if line.strip()
-    ]
-    assert len(lines) == 2
-    assert json.loads(lines[0]) == {"seed": True}
+def test_append_state_is_stable(tmp_path, state_dict, monkeypatch):
+    _bot_dir(monkeypatch, tmp_path)
+    monkeypatch.setattr("bot.utils.NOW_DATETIME", datetime(2024, 8, 20))
+    append_state(State(state_dict))
+    first = (tmp_path / "state.json").read_text()
+    append_state(get_prev_state())
+    assert (tmp_path / "state.json").read_text() == first
 
 
 # --- write_update ---

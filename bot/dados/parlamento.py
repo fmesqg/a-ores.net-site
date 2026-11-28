@@ -210,10 +210,15 @@ def joraa_estado(line: dict) -> dict:
 def write_joraa_estado(docs: Path) -> None:
     """docs/_data/joraa_estado.json for the note on the JORAA backfill
     (_includes/joraa-atraso.html)."""
-    state = docs.parent / "bot" / "state.jsonl"
+    bot = docs.parent / "bot"
     out: dict = {}
-    if state.exists():
-        lines = state.read_text(encoding="utf-8").strip().splitlines()
+    if (bot / "state.json").exists():
+        out = joraa_estado(
+            json.loads((bot / "state.json").read_text(encoding="utf-8"))
+        )
+    elif (bot / "state.jsonl").exists():  # before the first run of 2026-11
+        lines = (bot / "state.jsonl").read_text(encoding="utf-8").split("\n")
+        lines = [x for x in lines if x.strip()]
         if lines:
             out = joraa_estado(json.loads(lines[-1]))
     (docs / "_data").mkdir(exist_ok=True)

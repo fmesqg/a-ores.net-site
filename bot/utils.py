@@ -7,6 +7,7 @@ from .classes import FetchError, WebData
 from .constants import (
     CATEGORIAS_REQUERIMENTOS,
     NOW_DATETIME,
+    OLD_STATE_FILE,
     STATE_FILE,
     YESTERDAY_DATE,
 )
@@ -260,15 +261,21 @@ def markdown_portal(delta):
     return portal
 
 
-def _rotate_state_file(path: str, keep: int = 30, threshold: int = 60):
-    with open(path) as f:
-        lines = f.readlines()
-    if len(lines) > threshold:
-        with open(path, "w") as f:
-            f.writelines(lines[-keep:])
+def _sorted(v):
+    """Lists in a stable order, so the daily diff of state.json shows only
+    what changed."""
+    if isinstance(v, dict):
+        return {k: _sorted(x) for k, x in v.items()}
+    if isinstance(v, list | set | tuple):
+        return sorted(v, key=lambda x: (type(x).__name__, x))
+    return v
 
 
 def append_state(state: State):
+    """Write the run's state to bot/state.json, replacing the previous one
+    (git keeps the history), and remove the old state.jsonl ledger. If the
+    state cannot be serialised the file is left as it was and the error is
+    raised, so the run fails instead of losing the state."""
     state_json: dict = {
         "datetime": NOW_DATETIME.strftime("%Y-%m-%d %H:%M:%S"),
         "last_joraa_update": state.last_joraa_update.strftime("%Y-%m-%d"),
@@ -278,29 +285,39 @@ def append_state(state: State):
             else None
         ),
         "last_base_update": state.last_base_update.strftime("%Y-%m-%d"),
-        "boletins": list(state.data["boletins"]),
-        "sigica": list(state.data["sigica"]),
+        "boletins": _sorted(state.data["boletins"]),
+        "sigica": _sorted(state.data["sigica"]),
     }
-    state_json.update(state.alra_state)
-    path = os.path.join(os.path.dirname(__file__), STATE_FILE)
-    with open(path, mode="a") as f:
-        try:
-            f.write("\n" + json.dumps(state_json))
-        except (TypeError, ValueError) as exc:
-            logger.error("State write failed: %s", exc)
-            f.write(
-                "\n"
-                + json.dumps({"datetime": NOW_DATETIME, "error": str(exc)})
-            )
-    _rotate_state_file(path)
+    state_json.update(_sorted(state.alra_state))
+    folder = os.path.dirname(__file__)
+    path = os.path.join(folder, STATE_FILE)
+    try:
+        text = json.dumps(state_json, ensure_ascii=False, indent=1) + "\n"
+    except (TypeError, ValueError) as exc:
+        logger.error("State write failed: %s", exc)
+        raise
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        f.write(text)
+    os.replace(tmp, path)
+    old = os.path.join(folder, OLD_STATE_FILE)
+    if os.path.exists(old):
+        os.remove(old)
 
 
 def get_prev_state() -> State:
-    path = os.path.join(os.path.dirname(__file__), STATE_FILE)
-    with open(path) as f:
+    """The last run's state: bot/state.json, or, before the first run that
+    wrote it, the last line of the old bot/state.jsonl."""
+    folder = os.path.dirname(__file__)
+    path = os.path.join(folder, STATE_FILE)
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            return State(json.load(f))
+    with open(os.path.join(folder, OLD_STATE_FILE), encoding="utf-8") as f:
         last = ""
-        for line in f.readlines():
-            last = line
+        for line in f:
+            if line.strip():
+                last = line
     return State(json.loads(last))
 
 
