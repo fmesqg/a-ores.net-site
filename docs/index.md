@@ -132,10 +132,11 @@ permalink: /
 
 ## Sobre
 
-O açores.net pretende promover uma cidadania ativa, com informação
-acessível e fidedigna. Os dados são recolhidos automaticamente das fontes
-oficiais (INE, Governo Regional, Assembleia Legislativa, Jornal Oficial,
-portal BASE) e podem ser descarregados e reutilizados. O código está no
+O objetivo do açores.net é, antes de mais, perceber o estado atual dos
+Açores, para que a discussão pública seja informada e construtiva. Os
+dados são recolhidos automaticamente das fontes oficiais (INE, Governo
+Regional, Assembleia Legislativa, Jornal Oficial, portal BASE) e podem ser
+descarregados e reutilizados. O código está no
 [GitHub](https://github.com/fmesqg/a-ores.net-site).
 
 O açores.net é mantido por
