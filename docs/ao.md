@@ -8,7 +8,7 @@ noindex: true
 
 ## [Feed RSS](/rss/ao.xml)
 
-Uma entrada por dia, com as ligações para os artigos dessa edição.
+Uma entrada por dia, com os títulos dessa edição e a ligação de cada um para o artigo no site do Açoriano Oriental (só para assinantes).
 
 <ul>
   {% assign editions = site.ao | where: "kind", "day" | sort: "date" | reverse %}

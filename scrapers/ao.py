@@ -338,9 +338,8 @@ def main():
     print(f"Wrote {md_path}")
 
     entries = ao_pages.build_entries(sections_data, target_date)
-    ao_pages.write_article_pages(entries, target_date)
     day_page = ao_pages.write_day_page(entries, target_date)
-    print(f"Wrote {len(entries)} article pages + {day_page}")
+    print(f"Wrote {day_page} ({len(entries)} titles)")
 
     total = ao_pages.write_daily_feed(entries, target_date, RSS_FEED_PATH)
     print(f"RSS: {total} day items → {RSS_FEED_PATH}")

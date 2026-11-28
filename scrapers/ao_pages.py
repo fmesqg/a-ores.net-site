@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Jekyll page + daily RSS generation for the AO print edition.
 
-The feed carries one small item per edition day; the item body is a link
-list grouped by newspaper section. Each article lives on its own page at
-``/ao/YYYYMMDD-NN/``.
+Only titles are published: the AO is a paid newspaper, so each edition day
+gets one page at ``/ao/YYYYMMDD/`` (and one feed item) listing its
+articles by section, each title linking to the article on
+acorianooriental.pt. The article text stays in the scraper's local output.
 """
 
 from __future__ import annotations
@@ -104,11 +105,10 @@ def build_entries(sections_data: dict, target_date: str) -> list[dict]:
     flipping through the paper. Ties keep the print edition's own order.
 
     Front-page teasers, and articles with neither body nor excerpt, are
-    dropped and do not consume a number. Articles with no page at all are
-    kept, sorted last: the page number is missing, not the article.
+    dropped. Articles with no page at all are kept, sorted last: the page
+    number is missing, not the article. ``url`` is the article on
+    acorianooriental.pt (empty when unknown).
     """
-    stamp = day_slug(target_date)
-
     kept: dict[str, list[tuple[str, str, dict]]] = {}
     for section, articles in sections_data.items():
         for article in articles:
@@ -132,22 +132,18 @@ def build_entries(sections_data: dict, target_date: str) -> list[dict]:
     entries: list[dict] = []
     for section in ordered:
         # Stable, so articles on the same page keep the paper's order.
-        for page, body, article in sorted(
+        for page, _, article in sorted(
             kept[section], key=lambda t: _page_key(t[0])
         ):
-            slug = f"{stamp}-{len(entries) + 1:02d}"
             entries.append(
                 {
-                    "slug": slug,
-                    "url": f"/ao/{slug}/",
+                    "url": article.get("url", ""),
                     "date": target_date,
                     "title": _xml_safe(article.get("title", "")),
                     "section": section,
                     "section_label": section_label(section),
                     "page": _xml_safe(page),
                     "author": _xml_safe(article.get("author") or ""),
-                    "body": _xml_safe(body),
-                    "source_url": article.get("url", ""),
                 }
             )
 
@@ -164,9 +160,9 @@ def _meta_suffix(entry: dict) -> str:
     return parts
 
 
-def build_link_list(entries: list[dict], absolute: bool = False) -> str:
-    """Render the entries as an HTML list grouped by section."""
-    prefix = SITE_BASE if absolute else ""
+def build_link_list(entries: list[dict]) -> str:
+    """Render the entries as an HTML list grouped by section, each title
+    linking to the article on acorianooriental.pt."""
     lines: list[str] = []
     current_section = None
 
@@ -177,9 +173,11 @@ def build_link_list(entries: list[dict], absolute: bool = False) -> str:
             current_section = entry["section"]
             lines.append(f"<h2>{_html(entry['section_label'])}</h2>")
             lines.append("<ul>")
-        href = html.escape(prefix + entry["url"])
         label = _html(entry["title"] + _meta_suffix(entry))
-        lines.append(f'<li><a href="{href}">{label}</a></li>')
+        if entry["url"]:
+            href = html.escape(entry["url"])
+            label = f'<a href="{href}">{label}</a>'
+        lines.append(f"<li>{label}</li>")
 
     if current_section is not None:
         lines.append("</ul>")
@@ -200,49 +198,13 @@ def _frontmatter(fields: dict) -> str:
     return "\n".join(lines)
 
 
-def write_article_pages(entries: list[dict], target_date: str) -> int:
-    """Write one page per article, replacing any previous run's output."""
-    stamp = day_slug(target_date)
-    PAGES_DIR.mkdir(parents=True, exist_ok=True)
-
-    for stale in PAGES_DIR.glob(f"{stamp}-*.md"):
-        stale.unlink()
-
-    for i, entry in enumerate(entries):
-        fields = {
-            "layout": "ao_article",
-            "kind": "article",
-            "title": _yaml_str(entry["title"]),
-            "date": target_date,
-            "edition": _yaml_str(target_date),
-            "section": _yaml_str(entry["section"]),
-            "section_label": _yaml_str(entry["section_label"]),
-            "page": _yaml_str(entry["page"]) if entry["page"] else "",
-            "author": _yaml_str(entry["author"]) if entry["author"] else "",
-            "source_url": (
-                _yaml_str(entry["source_url"]) if entry["source_url"] else ""
-            ),
-            "day_url": f"/ao/{stamp}/",
-            "prev_url": entries[i - 1]["url"] if i > 0 else "",
-            "next_url": (
-                entries[i + 1]["url"] if i + 1 < len(entries) else ""
-            ),
-        }
-        paragraphs = [
-            f"<p>{_html(p.strip())}</p>"
-            for p in entry["body"].split("\n\n")
-            if p.strip()
-        ]
-        page = _frontmatter(fields) + "\n\n" + "\n\n".join(paragraphs) + "\n"
-        (PAGES_DIR / f"{entry['slug']}.md").write_text(page, encoding="utf-8")
-
-    return len(entries)
-
-
 def write_day_page(entries: list[dict], target_date: str) -> Path:
     """Write the edition index page listing every article by section."""
     stamp = day_slug(target_date)
     PAGES_DIR.mkdir(parents=True, exist_ok=True)
+    # per-article pages (with the text) were published until 2026-11
+    for old in PAGES_DIR.glob(f"{stamp}-*.md"):
+        old.unlink()
 
     fields = {
         "layout": "ao_day",
@@ -272,9 +234,7 @@ def build_feed_item(entries: list[dict], target_date: str) -> ET.Element:
         f"{_DAY_GUID_PREFIX}{target_date}"
     )
     ET.SubElement(item, "pubDate").text = _rss_pubdate(target_date)
-    ET.SubElement(item, "description").text = build_link_list(
-        entries, absolute=True
-    )
+    ET.SubElement(item, "description").text = build_link_list(entries)
     return item
 
 
