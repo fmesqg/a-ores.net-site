@@ -60,6 +60,8 @@ jobs:
           poetry install
       - name: Run bot
         run: poetry run python -m bot
+      - name: Fold ALRA and JORAA pages into data/, drop pages over 90 days
+        run: python3 bot/arquivo.py
       - name: Run AO scraper
         run: |
           printf '[credentials]\nemail = %s\npassword = %s\n' \

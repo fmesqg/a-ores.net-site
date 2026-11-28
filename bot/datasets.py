@@ -3,7 +3,9 @@
 Usage: python3 bot/datasets.py [docs_dir]   (stdlib only, no poetry needed)
 
 The bot writes one markdown page per source per day (docs/_base_updates/,
-docs/_alra_updates/, docs/_joraa_updates/). This module re-reads all of them
+docs/_alra_updates/, docs/_joraa_updates/); bot/arquivo.py folds the ALRA
+and JORAA pages into data/alra.csv.gz and data/joraa.csv.gz and drops pages
+older than 90 days. This module reads those archives plus the pages left
 and writes, under docs/dados/:
 
   base.csv   one row per BASE contract since 2012, from the IMPIC open data
@@ -99,7 +101,7 @@ try:  # imported as bot.datasets (tests)
         write_base_anos,
     )
     from .dados.camaras import write_camaras
-    from .dados.comum import days, write
+    from .dados.comum import write
     from .dados.credito import write_credito
     from .dados.empresas import write_economia
     from .dados.fundos import write_fundos
@@ -109,6 +111,7 @@ try:  # imported as bot.datasets (tests)
         JORAA_COLS,
         build_alra,
         build_joraa,
+        read_archive,
         write_joraa_estado,
     )
     from .dados.resumo import srea_json, write_ine_news, write_resumo
@@ -122,7 +125,7 @@ except ImportError:  # run as python3 bot/datasets.py
         write_base_anos,
     )
     from dados.camaras import write_camaras
-    from dados.comum import days, write
+    from dados.comum import write
     from dados.credito import write_credito
     from dados.empresas import write_economia
     from dados.fundos import write_fundos
@@ -132,6 +135,7 @@ except ImportError:  # run as python3 bot/datasets.py
         JORAA_COLS,
         build_alra,
         build_joraa,
+        read_archive,
         write_joraa_estado,
     )
     from dados.resumo import srea_json, write_ine_news, write_resumo
@@ -151,17 +155,18 @@ def main(docs: Path) -> dict:
     info["de"], info["ate"] = (datas[0], datas[-1]) if datas else ("", "")
     info["anos"] = write_base_anos(out, base)
     meta["base"] = info
-    for name, cols, build, coll in (
-        ("alra", ALRA_COLS, build_alra, "_alra_updates"),
-        ("joraa", JORAA_COLS, build_joraa, "_joraa_updates"),
+    # the archive in data/ (bot/arquivo.py) plus the pages not yet in it
+    for name, cols, build, primeiro, ultimo in (
+        ("alra", ALRA_COLS, build_alra, "primeiro_dia", "ultimo_dia"),
+        ("joraa", JORAA_COLS, build_joraa, "publicado", "publicado"),
     ):
-        rows = build(docs)
+        arquivo = docs.parent / "data" / f"{name}.csv.gz"
+        rows = build(docs, read_archive(arquivo, cols))
         tables[name] = (cols, rows)
         info = write(out, name, cols, rows)
-        all_days = [d for d, _ in days(docs, coll)]
-        info["de"], info["ate"] = (
-            (all_days[0], all_days[-1]) if all_days else ("", "")
-        )
+        de = [r[cols.index(primeiro)] for r in rows if r[cols.index(primeiro)]]
+        ate = [r[cols.index(ultimo)] for r in rows if r[cols.index(ultimo)]]
+        info["de"], info["ate"] = (min(de), max(ate)) if rows else ("", "")
         meta[name] = info
     # fetched weekly into data/ by their bots
     maiores = sorted((docs.parent / "data").glob("maiores_*.csv"))
