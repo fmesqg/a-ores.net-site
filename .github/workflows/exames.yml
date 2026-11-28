@@ -1,0 +1,53 @@
+name: Weekly national exam results (Azorean schools)
+
+# Reads, with bot/exames.py, the Júri Nacional de Exames' databases for the
+# press (infoescolas.pt/bds.asp: secondary exams and 9th grade provas
+# finais, one Access file per year) into data/exames.csv (/dados/exames/).
+# A new year comes out once a year; while nothing changes the run makes
+# one request.
+#
+# The run fails, and GitHub emails, when a file cannot be read, has too
+# few Azorean schools, or the newest year is more than two years old.
+
+on:
+  schedule:
+    - cron: '17 7 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Install mdbtools (reads the Access files)
+        run: sudo apt-get update -q && sudo apt-get install -y -q mdbtools
+      - name: Read the exam databases
+        id: fetch
+        run: python3 bot/exames.py data
+        continue-on-error: true
+      - name: Commit and push if changed
+        id: commit
+        uses: ./.github/actions/commit-data
+        with:
+          paths: data/exames.csv
+          message: "National exams weekly update"
+      - name: Fail if a file could not be read
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1
+
+  deploy-site:
+    needs: fetch
+    if: always() && needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

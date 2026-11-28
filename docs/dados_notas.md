@@ -47,6 +47,12 @@ secao: dados
   <a href="https://ec.europa.eu/eurostat/web/regions/database">Eurostat</a>
   para os Açores, as outras regiões ultraperiféricas, Portugal, a UE e
   outras ilhas. Ver <a href="/dados/eurostat/">Os Açores na Europa</a>.</dd>
+  <dt>Exames nacionais</dt>
+  <dd>As bases do Júri Nacional de Exames para a comunicação social
+  (<a href="https://infoescolas.pt/bds.asp">InfoEscolas</a>, DGEEC): médias
+  de cada escola dos Açores nos exames do secundário e nas provas finais do
+  9.º ano, e das regiões. Ver
+  <a href="/dados/exames/">Exames nacionais por escola</a>.</dd>
 </dl>
 
 <details class="termos">

@@ -78,13 +78,16 @@ and writes, under docs/dados/:
   eurostat.csv  Eurostat regional indicators (NUTS 2) for the Azores, the
              other outermost regions, Portugal, the EU and other islands:
              data/eurostat.csv (bot/eurostat.py)
+  exames.csv  national exam results of each Azorean school (secondary
+             exams, 9th grade provas finais) and of the Azores, Madeira,
+             the mainland and the country: data/exames.csv (bot/exames.py)
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json,
 resumo.json (the numbers on /introducao/ and /dados/srea/), fundos.json
 (/financas/fundos-europeus/, with the CAP payments), eurostat.json (the
 table on /dados/eurostat/; the series for its chart go to
-docs/dados/eurostat.json), sper.json
+docs/dados/eurostat.json), exames.json (/dados/exames/), sper.json
 (/dados/sper/), credito.json (/dados/credito/), maiores.json (/dados/maiores-empresas/) and publico.json
 (/economia/setor-publico/ and the public/private split on /economia/).
 
@@ -93,7 +96,8 @@ page (docs/dados.md) reads them directly. None of these files is committed:
 .github/workflows/pages.yml generates them when it builds the site.
 
 The code is split by source under bot/dados/ (base, parlamento, sqlite,
-resumo, empresas, publico, camaras, impostos, credito, fundos, comum);
+resumo, empresas, publico, camaras, impostos, credito, fundos, europa,
+educacao, comum);
 this file only runs them in order.
 """
 
@@ -115,6 +119,7 @@ try:  # imported as bot.datasets (tests)
     from .dados.camaras import write_camaras
     from .dados.comum import write
     from .dados.credito import write_credito
+    from .dados.educacao import write_exames
     from .dados.empresas import write_economia
     from .dados.europa import write_eurostat
     from .dados.fundos import write_fundos
@@ -140,6 +145,7 @@ except ImportError:  # run as python3 bot/datasets.py
     from dados.camaras import write_camaras
     from dados.comum import write
     from dados.credito import write_credito
+    from dados.educacao import write_exames
     from dados.empresas import write_economia
     from dados.europa import write_eurostat
     from dados.fundos import write_fundos
@@ -207,6 +213,7 @@ def main(docs: Path) -> dict:
         "ifap_pagamentos",
         "ifap_resumo",
         "eurostat",
+        "exames",
         "dgal_contas",
         "dgal_divida",
         "dgal_pmp",
@@ -250,6 +257,8 @@ def main(docs: Path) -> dict:
             )
         elif name == "eurostat":
             write_eurostat(docs, cols, rows)
+        elif name == "exames":
+            write_exames(docs, cols, rows)
         elif name in ("beo", "tdc"):
             latest = beo_latest if name == "beo" else tdc_latest
             info["ultimo"] = latest(cols, rows)

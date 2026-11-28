@@ -29,6 +29,11 @@ DB_TYPES = {
     "ano_lucro": "INTEGER",
     "exercicio": "INTEGER",
     "beneficiarios": "INTEGER",
+    "provas": "INTEGER",
+    "n_escolas": "INTEGER",
+    "media": "REAL",
+    "media_interna": "REAL",
+    "positivas": "REAL",
     **{
         c: "REAL"
         for c in (
@@ -125,6 +130,7 @@ DB_INDEX = {
     "ifap_pagamentos": ["exercicio", "beneficiario", "geocod", "medida"],
     "ifap_resumo": ["exercicio", "geocod", "medida"],
     "eurostat": ["indicador", "geo", "ano"],
+    "exames": ["ano", "nivel", "codigo", "exame"],
     "dgal_contas": ["ano", "geocod", "mapa", "codigo"],
     "dgal_divida": ["ano", "geocod"],
     "dgal_pmp": ["data", "geocod"],
@@ -157,6 +163,7 @@ DB_FTS = {
     "kohesio_beneficiarios": ["beneficiario"],
     "ifap_pagamentos": ["beneficiario", "concelho", "medida_nome"],
     # ifap_resumo, eurostat: numbers with a handful of labels; facets
+    "exames": ["nome", "concelho", "exame_nome"],
     "dgal_contas": ["municipio", "descricao"],
     # dgal_divida, dgal_pmp: numbers per câmara; facets do the search
 }
@@ -253,6 +260,7 @@ BASES = {
         "emprego_publico",
         "censos2021_setores",
         "eurostat",
+        "exames",
     ],
     "empresas": [
         "bportugal",
