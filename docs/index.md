@@ -137,8 +137,9 @@ Açores, para que a discussão pública seja informada e construtiva. Os
 dados são recolhidos automaticamente de fontes oficiais regionais,
 nacionais e europeias (Governo Regional, Assembleia Legislativa, Jornal
 Oficial, SREA, INE, portal BASE, Autoridade Tributária, Banco de Portugal,
-DGAL, Tribunal de Contas, IFAP, Eurostat, fundos europeus, entre outras: ver
-[Fontes e métodos](/fontes)) e podem ser descarregados e reutilizados. O código está no
+DGAL, Tribunal de Contas, Conselho das Finanças Públicas, DGAEP, IFAP,
+Eurostat, fundos europeus, entre outras: ver [Fontes e métodos](/fontes))
+e podem ser descarregados e reutilizados. O código está no
 [GitHub](https://github.com/fmesqg/a-ores.net-site).
 
 O Açores.net é mantido por
