@@ -35,6 +35,7 @@ secao: dados
 | [ifap_pagamentos.csv](/dados/ifap_pagamentos.csv) | IFAP: pagamentos da PAC (FEAGA, FEADER e cofinanciamento, incluindo o POSEI) a cada beneficiário com morada nos Açores, por medida: nome, ilha, concelho, código postal, valores. Só os dois exercícios que o IFAP publica | <span data-meta="ifap_pagamentos"></span> |
 | [ifap_resumo.csv](/dados/ifap_resumo.csv) | os mesmos pagamentos por exercício, concelho e medida, com o número de beneficiários, sem nomes; guarda todos os exercícios lidos | <span data-meta="ifap_resumo"></span> |
 | [exames.csv](/dados/exames.csv) | uma linha por escola dos Açores (ou região: Açores, Madeira, continente, país), ano e exame: provas, média do exame, média interna, % de positivas e, para o total, a posição da escola no país; secundário e 9.º ano, do Júri Nacional de Exames | <span data-meta="exames"></span> |
+| [desemprego.csv](/dados/desemprego.csv) | desempregados inscritos nos serviços de emprego dos Açores no fim de cada mês (homens, mulheres, total), por ilha e concelho; pessoas nas medidas de emprego, colocações por ilha e ofertas de emprego, dos resumos mensais da Direção Regional de Qualificação Profissional e Emprego | <span data-meta="desemprego"></span> |
 | [eurostat.csv](/dados/eurostat.csv) | um valor por linha, do Eurostat (NUTS 2): os Açores, as outras regiões ultraperiféricas, Portugal, a UE e outras ilhas europeias em PIB, rendimento, emprego, educação, pobreza, população e saúde, com a marca do Eurostat (provisório, pouco fiável…) | <span data-meta="eurostat"></span> |
 | [contratos.db](/dados/contratos.db), [parlamento.db](/dados/parlamento.db), [financas.db](/dados/financas.db), [estatisticas.db](/dados/estatisticas.db), [empresas.db](/dados/empresas.db), [fundos.db](/dados/fundos.db) | as tabelas acima em SQLite, uma base por tema, com pesquisa de texto; a tabela `base` tem mais colunas (NIF, CPV, preço base e preço efetivo, propostas, local de execução, fundamentação) | ver abaixo |
 
@@ -78,6 +79,9 @@ O `exames.csv` vem das bases de exames do
 [InfoEscolas](https://infoescolas.pt/bds.asp), lidas por
 [`bot/exames.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/exames.py)
 (ver [Exames nacionais por escola](/dados/exames/)).
+O `desemprego.csv` vem dos resumos mensais do desemprego registado, lidos por
+[`bot/desemprego.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/desemprego.py)
+(ver [Desemprego registado por concelho](/dados/desemprego/)).
 Última geração: <span data-meta="gerado">{{ site.time | date: "%Y-%m-%d %H:%M %Z" }}</span>.
 <script>
 fetch("/dados/meta.json?v={{ site.time | date: '%s' }}").then(function (r) { return r.json(); }).then(function (m) {

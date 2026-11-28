@@ -53,6 +53,12 @@ secao: dados
   de cada escola dos Açores nos exames do secundário e nas provas finais do
   9.º ano, e das regiões. Ver
   <a href="/dados/exames/">Exames nacionais por escola</a>.</dd>
+  <dt>Desemprego registado</dt>
+  <dd>Os resumos mensais da Direção Regional de Qualificação Profissional e
+  Emprego (<a href="https://emprego.azores.gov.pt/">emprego.azores.gov.pt</a>):
+  desempregados inscritos por ilha e concelho, medidas de emprego e
+  colocações. Não é a taxa de desemprego do Inquérito ao Emprego. Ver
+  <a href="/dados/desemprego/">Desemprego registado por concelho</a>.</dd>
 </dl>
 
 <details class="termos">
