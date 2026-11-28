@@ -132,14 +132,28 @@ permalink: /
 
 ## Sobre
 
-O açores.net pretende promover uma cidadania ativa, com informação
-acessível e fidedigna. Os dados são recolhidos automaticamente das fontes
-oficiais (INE, Governo Regional, Assembleia Legislativa, Jornal Oficial,
-portal BASE) e podem ser descarregados e reutilizados. O código está no
+O objetivo do Açores.net é, antes de mais, perceber o estado atual dos
+Açores, para que a discussão pública seja informada e construtiva. Os
+dados são recolhidos automaticamente de fontes oficiais regionais,
+nacionais e europeias (Governo Regional, Assembleia Legislativa, Jornal
+Oficial, SREA, INE, portal BASE, Autoridade Tributária, Banco de Portugal,
+DGAL, Tribunal de Contas, Conselho das Finanças Públicas, DGAEP, IFAP,
+Eurostat, fundos europeus, entre outras: ver [Fontes e métodos](/fontes))
+e podem ser descarregados e reutilizados. O código está no
 [GitHub](https://github.com/fmesqg/a-ores.net-site).
 
-O açores.net é mantido por
-[Francisco Mesquita](https://mesquita.xyz).
+O Açores.net é mantido por
+[Francisco Mesquita](https://mesquita.xyz). Erros nos dados ou sugestões:
+[GitHub](https://github.com/fmesqg/a-ores.net-site/issues) ou
+<span id="contacto">contacto [arroba] acores.site</span>.
+
+<script>
+(function () {
+  var a = ["contacto", "acores.site"].join("@");
+  var el = document.getElementById("contacto");
+  el.innerHTML = '<a href="mailto:' + a + '">' + a + "</a>";
+})();
+</script>
 
 <style>
 .lead { font-size: 1.15em; max-width: 40em; margin-bottom: .3em; }
