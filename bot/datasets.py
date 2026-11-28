@@ -188,6 +188,9 @@ def main(docs: Path) -> dict:
         "dgal_contas",
         "dgal_divida",
         "dgal_pmp",
+        "dgal_transferencias",
+        "anuario_execucao",
+        "derrama_municipal",
     ):
         src = docs.parent / "data" / f"{name}.csv"
         if name == "maiores" and maiores:

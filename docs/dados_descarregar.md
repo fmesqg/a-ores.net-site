@@ -23,6 +23,9 @@ secao: dados
 | [dgal_divida.csv](/dados/dgal_divida.csv) | DGAL: dívida de cada câmara contra o limite legal (art.º 52.º da Lei 73/2013), por ano: limite, dívida total, dívidas não orçamentais e exceções, contribuição para o FAM, dívida que conta para o limite | <span data-meta="dgal_divida"></span> |
 | [dgal_pmp.csv](/dados/dgal_pmp.csv) | DGAL: prazo médio de pagamentos de cada câmara (dias), no fim de cada trimestre | <span data-meta="dgal_pmp"></span> |
 | [dgal_contas.csv](/dados/dgal_contas.csv) | DGAL: contas de gerência das 19 câmaras (SNC-AP), um valor por linha: receita cobrada e despesa paga por rubrica do classificador económico, balanço e demonstração de resultados | <span data-meta="dgal_contas"></span> |
+| [dgal_transferencias.csv](/dados/dgal_transferencias.csv) | DGAL: transferências do Orçamento do Estado para cada câmara (FEF, FSM, IRS, IVA, excedente do FEF), por ano, e a parte do IRS dos residentes com que a câmara fica (0 a 5 %, cálculo do açores.net) | <span data-meta="dgal_transferencias"></span> |
+| [anuario_execucao.csv](/dados/anuario_execucao.csv) | Anuário Financeiro dos Municípios Portugueses (OCC e IPCA): receita cobrada e liquidada e despesa comprometida de cada câmara, em % do orçamento corrigido | <span data-meta="anuario_execucao"></span> |
+| [derrama_municipal.csv](/dados/derrama_municipal.csv) | AT: taxa de derrama de cada câmara (geral, reduzida, isenções), pelo lucro do ano | <span data-meta="derrama_municipal"></span> |
 | [bportugal.csv](/dados/bportugal.csv) | um valor por linha, do Banco de Portugal: empréstimos a particulares (habitação, consumo) e a empresas, crédito vencido e devedores por região (mensal), depósitos por região (mensal, desde 2018), investimento direto do exterior por região (anual) e indicadores das empresas por região e setor (anual, desde 2006), com o número da série no BPstat | <span data-meta="bportugal"></span> |
 | [srea.csv](/dados/srea.csv) | um valor por linha, do SREA: inflação, atividade económica, desemprego, turismo por ilha, PIB por ilha, pagamentos com cartão por concelho e défice e dívida da Região | <span data-meta="srea"></span> |
 | [prr_projetos.csv](/dados/prr_projetos.csv) | um projeto do PRR por linha, dos que têm uma parte nos Açores: designação, componente, investimento, concelhos, valor aprovado e pago (total e parte dos Açores), datas | <span data-meta="prr_projetos"></span> |
@@ -44,6 +47,9 @@ partir dos PDF dos boletins, por
 Os `dgal_*.csv` são atualizados uma vez por semana a partir dos ficheiros do
 [Portal Autárquico](https://portalautarquico.dgal.gov.pt/pt-PT/financas-locais/dados-financeiros/contas-de-gerencia),
 por [`bot/dgal.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/dgal.py).
+O `anuario_execucao.csv` muda uma vez por ano, com cada edição do Anuário
+([`bot/anuario.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/anuario.py)),
+e o `derrama_municipal.csv` com o ofício circulado anual da AT (copiado à mão).
 Os `tdc*.csv` mudam uma vez por ano, quando sai um parecer novo, por
 [`bot/tdc.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/tdc.py).
 Os contratos (todos os anos) vêm dos ficheiros anuais do IMPIC, relidos

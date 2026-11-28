@@ -4,7 +4,7 @@ nav_title: Câmaras municipais
 layout: default
 permalink: /financas/camaras/
 secao: financas
-description: Quanto recebe e gasta cada uma das 19 câmaras municipais dos Açores por habitante, ao lado do rendimento, do turismo, do RSI e dos contratos públicos do mesmo concelho, quanto das suas compras aparece no BASE, e a dívida e o prazo de pagamento de cada uma.
+description: Quanto recebe e gasta cada uma das 19 câmaras municipais dos Açores por habitante, ao lado do rendimento, do turismo, do RSI e dos contratos públicos do mesmo concelho, quanto das suas compras aparece no BASE, a dívida e o prazo de pagamento, quanto depende de transferências, os impostos que decide e quanto do orçamento chega a cobrar.
 ---
 {%- assign c = site.data.camaras -%}
 {% include financas-nav.html %}
@@ -241,6 +241,135 @@ somava {{ v.divida_m_t }} M€ nas 19 câmaras.</p>
   por rubrica, balanço, demonstração de resultados), em
   <a href="/dados/descarregar/">descarregar dados</a>
   (<code>dgal_divida</code>, <code>dgal_pmp</code>, <code>dgal_contas</code>).</li>
+</ul>
+{% endif %}
+
+{% assign f = site.data.camaras.financas %}
+{% if f.autonomia %}
+<h2 id="autonomia">Quanto depende cada câmara de transferências</h2>
+
+{%- assign a_min = f.autonomia | last -%}
+{%- assign a_max = f.autonomia | first %}
+<p>Nas contas de {{ f.ano }}, as transferências do Estado, da Região e de
+fundos europeus pagaram entre {{ a_min.transf_t }}&nbsp;%
+(<strong>{{ a_min.nome }}</strong>) e {{ a_max.transf_t }}&nbsp;%
+(<strong>{{ a_max.nome }}</strong>) da receita
+de cada câmara. A coluna de rigidez mostra quanto da receita corrente já está
+preso a pessoal e juros antes de qualquer decisão; o investimento é a
+aquisição de bens de capital.</p>
+
+<div class="tabela-scroll">
+<table class="sper ordenavel">
+<thead><tr>
+  <th scope="col">Concelho</th>
+  <th scope="col" class="n" data-tipo="n">Receita {{ f.ano }} (M€)</th>
+  <th scope="col" class="n" data-tipo="n">Transferências, % da receita</th>
+  <th scope="col" class="n" data-tipo="n">Em {{ f.ano_ini }}</th>
+  <th scope="col" class="n" data-tipo="n">Pessoal e juros, % da receita corrente</th>
+  <th scope="col" class="n" data-tipo="n">Investimento por habitante, {{ f.ano }} (€)</th>
+  <th scope="col" class="n" data-tipo="n">Média {{ f.ano_ini }}-{{ f.ano }} (€)</th>
+</tr></thead>
+<tbody>
+{%- for d in f.autonomia %}
+<tr><th scope="row">{{ d.nome }}{% if d.ilha != d.nome %} <small>{{ d.ilha }}</small>{% endif %}</th><td class="n" data-v="{{ d.receita_m }}">{{ d.receita_m_t }}</td><td class="n" data-v="{{ d.transf }}">{{ d.transf_t }} %</td><td class="n" data-v="{{ d.transf_ini }}">{{ d.transf_ini_t }} %</td><td class="n" data-v="{{ d.rigidez }}">{{ d.rigidez_t }} %</td><td class="n" data-v="{{ d.invest_hab }}">{{ d.invest_hab_t }}</td><td class="n" data-v="{{ d.invest_hab_med }}">{{ d.invest_hab_med_t }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+
+<ul class="notas">
+  <li>Cálculos do açores.net com as contas de gerência publicadas pela
+  <a href="https://portalautarquico.dgal.gov.pt/pt-PT/financas-locais/dados-financeiros/contas-de-gerencia">DGAL</a>
+  (receita cobrada e despesa paga, SNC-AP) e a população do INE.</li>
+  <li>Receita: cobrada, sem empréstimos, venda de ativos financeiros nem o
+  saldo do ano anterior. Transferências: correntes e de capital (Fundo de
+  Equilíbrio Financeiro, Fundo Social Municipal, IRS, IVA, contratos-programa
+  com a Região, fundos europeus).</li>
+  <li>Rigidez: despesas com pessoal e juros pagos a dividir pela receita
+  corrente. A dívida por habitante está na <a href="#divida">tabela da dívida</a>.</li>
+</ul>
+{% endif %}
+
+{% if f.impostos %}
+<h2 id="impostos">Impostos que a câmara decide</h2>
+
+<p>Cada câmara escolhe se cobra derrama sobre o lucro das empresas do
+concelho (até 1,5&nbsp;%) e com que parte do IRS dos seus residentes fica
+(até 5&nbsp;% da coleta; o resto é devolvido aos contribuintes). Sobre o
+lucro de {{ f.derrama_ano }}, {{ f.cobram_derrama }} das 19 câmaras cobram
+derrama. Em {{ f.irs_ano }}, {{ f.irs_devolvem.size }} devolvem parte do IRS
+ou todo ele, cerca de {{ f.irs_devolvido_k_t }} mil euros no conjunto.</p>
+
+<div class="tabela-scroll">
+<table class="sper ordenavel">
+<thead><tr>
+  <th scope="col">Concelho</th>
+  <th scope="col" class="n" data-tipo="n">Derrama, taxa geral</th>
+  <th scope="col">Taxa reduzida e isenções</th>
+  <th scope="col" class="n" data-tipo="n">Derrama cobrada {{ f.ano }} (mil €)</th>
+  <th scope="col" class="n" data-tipo="n">Parte do IRS, {{ f.irs_ano }}</th>
+  <th scope="col" class="n" data-tipo="n">IRS devolvido (mil €)</th>
+  <th scope="col" class="n" data-tipo="n">Por habitante (€)</th>
+  <th scope="col" class="n" data-tipo="n">IMI por habitante, {{ f.ano }} (€)</th>
+</tr></thead>
+<tbody>
+{%- for d in f.impostos %}
+<tr><th scope="row">{{ d.nome }}{% if d.ilha != d.nome %} <small>{{ d.ilha }}</small>{% endif %}</th><td class="n" data-v="{{ d.derrama_taxa }}">{% if d.derrama_taxa > 0 %}{{ d.derrama_taxa_t }} %{% else %}não cobra{% endif %}</td><td><small>{% if d.derrama_reduzida != "" %}reduzida {{ d.derrama_reduzida | replace: ".", "," }} %{% if d.derrama_isencoes != "" %}; {% endif %}{% endif %}{{ d.derrama_isencoes | replace: "reduzida VN<=150k", "volume de negócios até 150 mil €" | replace: "VN<=150k", "volume de negócios até 150 mil €" | replace: "<=300k", "até 300 mil €" }}</small></td><td class="n" data-v="{{ d.derrama_k }}">{{ d.derrama_k_t }}</td><td class="n" data-v="{{ d.irs_pct }}">{{ d.irs_pct_t }} %</td><td class="n" data-v="{{ d.irs_devolvido_k }}">{{ d.irs_devolvido_k_t }}</td><td class="n" data-v="{{ d.irs_devolvido_hab }}">{{ d.irs_devolvido_hab_t }}</td><td class="n" data-v="{{ d.imi_hab }}">{{ d.imi_hab_t }}</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+
+<ul class="notas">
+  <li>Taxas de derrama: AT,
+  <a href="https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio-circulado-20293-2026.pdf">Ofício Circulado 20293/2026</a>,
+  p. 16 (lucro de {{ f.derrama_ano }}, cobrada em {{ f.derrama_ano | plus: 1 }}).
+  A derrama cobrada em {{ f.ano }} (DGAL) é a do lucro do ano anterior.</li>
+  <li>Parte do IRS: cálculo do açores.net com os mapas do Orçamento do Estado
+  para {{ f.irs_ano }} na
+  <a href="https://portalautarquico.dgal.gov.pt/pt-PT/financas-locais/transferencias/municipios">DGAL</a>:
+  a transferência de IRS de cada câmara (Mapa 12) a dividir pelo que
+  receberia com 5&nbsp;% ("Variáveis"). O IRS devolvido é a diferença.</li>
+  <li>As taxas de IMI de cada câmara só se consultam no Portal das Finanças
+  com autenticação; a coluna mostra a receita de IMI (DGAL) por
+  habitante.</li>
+</ul>
+{% endif %}
+
+{% if f.orcamento %}
+<h2 id="orcamento">Orçamento e receita cobrada</h2>
+
+<p>Quanto da receita prevista no orçamento (depois das alterações do ano)
+cada câmara chegou a cobrar. Uma execução baixa ano após ano quer dizer que
+o orçamento conta com receita que não chega, e que a despesa autorizada com
+base nela fica por fazer ou por pagar. Ordenado pela média de
+{{ f.orc_ini }} a {{ f.orc_ano }}.</p>
+
+<div class="tabela-scroll">
+<table class="sper ordenavel">
+<thead><tr>
+  <th scope="col">Concelho</th>
+  <th scope="col" class="n" data-tipo="n">Receita cobrada / prevista, {{ f.orc_ano }}</th>
+  <th scope="col" class="n" data-tipo="n">Média {{ f.orc_ini }}-{{ f.orc_ano }}</th>
+  <th scope="col" class="n" data-tipo="n">Ano mais baixo</th>
+  <th scope="col" class="n" data-tipo="n">Anos abaixo de 85 % (de {{ f.orc_anos }})</th>
+  <th scope="col" class="n" data-tipo="n">Despesa comprometida / orçada, {{ f.orc_ano }}</th>
+</tr></thead>
+<tbody>
+{%- for d in f.orcamento %}
+<tr><th scope="row">{{ d.nome }}{% if d.ilha != d.nome %} <small>{{ d.ilha }}</small>{% endif %}</th><td class="n" data-v="{{ d.cobrada }}">{{ d.cobrada_t }} %</td><td class="n" data-v="{{ d.cobrada_med }}">{{ d.cobrada_med_t }} %</td><td class="n" data-v="{{ d.cobrada_min }}">{{ d.cobrada_min_t }} % <small>{{ d.cobrada_min_ano }}</small></td><td class="n" data-v="{{ d.anos_abaixo_85 }}">{{ d.anos_abaixo_85 }}</td><td class="n" data-v="{{ d.comprometida }}">{{ d.comprometida_t }} %</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+
+<ul class="notas">
+  <li>Dados do <a href="https://www.occ.pt/sites/default/files/public/2026-11/DIG_anuario2025_capa.pdf">Anuário Financeiro dos Municípios Portugueses {{ f.orc_ano }}</a>
+  (Ordem dos Contabilistas Certificados e IPCA): Quadro 2.6 (receita cobrada
+  a dividir pela previsão corrigida) e Ranking R66 (despesa comprometida a
+  dividir pela dotação corrigida). A DGAL não publica os orçamentos.</li>
+  <li>A média e o número de anos abaixo de 85&nbsp;% são cálculos do
+  açores.net.</li>
 </ul>
 {% endif %}
 

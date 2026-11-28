@@ -4,7 +4,9 @@ name: Weekly DGAL update (câmaras: contas, dívida, prazo de pagamento)
 # bot/dgal.py and rewrites data/dgal_contas.csv.gz (SNC-AP accounts of the 19
 # Azorean câmaras since 2020), data/dgal_divida.csv (debt against the legal
 # limit since 2014) and data/dgal_pmp.csv (payment time, quarterly since
-# 2019). The DGAL posts a year's accounts and debt in October of the next
+# 2019) and data/dgal_transferencias.csv (the current State Budget's transfers
+# to each câmara and the share of IRS it keeps; older years stay in the CSV).
+# The DGAL posts a year's accounts and debt in October of the next
 # year and the PMP every quarter; when the CSVs change, the run commits them
 # and redeploys the site so /financas/camaras/ picks them up. A run costs
 # three pages and about 40 files (~25 MB) from portalautarquico.dgal.gov.pt,
@@ -39,7 +41,7 @@ jobs:
         id: commit
         uses: ./.github/actions/commit-data
         with:
-          paths: data/dgal_contas.csv.gz data/dgal_divida.csv data/dgal_pmp.csv
+          paths: data/dgal_contas.csv.gz data/dgal_divida.csv data/dgal_pmp.csv data/dgal_transferencias.csv
           message: "DGAL câmaras update"
 
   deploy-site:

@@ -26,6 +26,7 @@ DB_TYPES = {
     "participacao": "REAL",
     "projetos": "INTEGER",
     "dias": "INTEGER",
+    "ano_lucro": "INTEGER",
     **{
         c: "REAL"
         for c in (
@@ -35,6 +36,18 @@ DB_TYPES = {
             "fam",
             "divida",
             "pct_limite",
+            "fef",
+            "fsm",
+            "irs",
+            "irs_max",
+            "irs_pct",
+            "iva",
+            "excedente",
+            "receita_cobrada",
+            "receita_liquidada",
+            "despesa_comprometida",
+            "taxa_geral",
+            "taxa_reduzida",
         )
     },
     **{
@@ -107,6 +120,9 @@ DB_INDEX = {
     "dgal_contas": ["ano", "geocod", "mapa", "codigo"],
     "dgal_divida": ["ano", "geocod"],
     "dgal_pmp": ["data", "geocod"],
+    "dgal_transferencias": ["ano", "geocod"],
+    "anuario_execucao": ["ano", "geocod"],
+    "derrama_municipal": ["ano_lucro", "geocod"],
 }
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento", "cpv"],
@@ -217,6 +233,9 @@ BASES = {
         "dgal_contas",
         "dgal_divida",
         "dgal_pmp",
+        "dgal_transferencias",
+        "anuario_execucao",
+        "derrama_municipal",
     ],
     "estatisticas": ["ine", "srea", "emprego_publico", "censos2021_setores"],
     "empresas": [

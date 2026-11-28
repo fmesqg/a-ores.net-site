@@ -328,6 +328,184 @@ def divida_pmp(
     }
 
 
+# DGAL economic codes (SNC-AP) used by contas_camaras
+RECEITA_EFETIVA = [f"{c:02d}00000000" for c in (1, 2, 4, 5, 6, 7, 8, 9, 10)]
+RECEITA_CORRENTE = [f"{c:02d}00000000" for c in (1, 2, 4, 5, 6, 7, 8)]
+TRANSFERENCIAS = ["0600000000", "1000000000"]
+DERRAMA, IMI = "0102050000", "0102020000"
+PESSOAL, JUROS, INVESTIMENTO = "0100000000", "0300000000", "0700000000"
+
+
+def _pct(a: float, b: float) -> float | None:
+    return round(100 * a / b, 1) if b else None
+
+
+def contas_camaras(
+    contas: tuple[list, list] | None,
+    ine: tuple[list, list] | None = None,
+    transf: tuple[list, list] | None = None,
+    derrama: tuple[list, list] | None = None,
+    anuario: tuple[list, list] | None = None,
+) -> dict:
+    """What the DGAL accounts say about each câmara, for
+    /financas/camaras/#autonomia, #impostos and #orcamento:
+
+    - autonomia: transfers (current + capital) as a share of effective
+      revenue (without loans, sale of financial assets or the previous
+      year's balance), the first and latest year; staff + interest as a
+      share of current revenue; investment (aquisição de bens de capital)
+      per inhabitant, latest year and the average of all years;
+    - impostos: the derrama rate the câmara set (AT) and what it raised,
+      IMI per inhabitant, and the share of its residents' IRS it keeps
+      (0-5 %, OE transfers) with what it gives back;
+    - orcamento: revenue collected / final budget (Anuário), latest year,
+      average and lowest, and expenditure committed / budget."""
+    if not contas or not contas[1]:
+        return {}
+    v: dict = {}
+    nomes: dict = {}
+    for r in _dicts(contas):
+        if r["mapa"] in ("receita", "despesa"):
+            k = (r["geocod"], r["ano"], r["mapa"], r["codigo"])
+            v[k] = v.get(k, 0.0) + float(r["valor"] or 0)
+            nomes[r["geocod"]] = r["municipio"]
+    anos = sorted({k[1] for k in v})
+    ano = anos[-1]
+    ilhas, pop = {}, {}
+    for r in _dicts(ine) if ine else []:
+        if r["nivel"] == "Concelho":
+            ilhas[r["geocod"]] = r["ilha"]
+            if r["varcd"] == CAMARAS_IND["pop"] and r["valor"]:
+                pop[(r["geocod"], r["periodo"])] = float(r["valor"])
+
+    def hab(geo: str, a: str) -> float:
+        return pop.get((geo, a)) or max(
+            (p for (g, per), p in pop.items() if g == geo and per <= a),
+            default=0,
+        )
+
+    def soma(geo, a, mapa, codigos):
+        return sum(v.get((geo, a, mapa, c), 0.0) for c in codigos)
+
+    tr = {r["geocod"]: r for r in _dicts(transf)} if transf else {}
+    tr_ano = max((r["ano"] for r in tr.values()), default="")
+    tr = {g: r for g, r in tr.items() if r["ano"] == tr_ano}
+    der = {r["geocod"]: r for r in _dicts(derrama)} if derrama else {}
+    der_ano = max((r["ano_lucro"] for r in der.values()), default="")
+    exe: dict = {}
+    for r in _dicts(anuario) if anuario else []:
+        exe.setdefault(r["geocod"], {})[r["ano"]] = r
+    exe_anos = sorted({a for s in exe.values() for a in s})
+
+    autonomia, impostos, orcamento = [], [], []
+    for geo in sorted(nomes):
+        base = {"nome": nomes[geo], "ilha": ilhas.get(geo, "")}
+        serie = []
+        for a in anos:
+            ef = soma(geo, a, "receita", RECEITA_EFETIVA)
+            if ef:
+                serie.append(
+                    (a, _pct(soma(geo, a, "receita", TRANSFERENCIAS), ef))
+                )
+        if not serie or serie[-1][0] != ano:
+            continue
+        corr = soma(geo, ano, "receita", RECEITA_CORRENTE)
+        rig = soma(geo, ano, "despesa", [PESSOAL, JUROS])
+        inv = {
+            a: soma(geo, a, "despesa", [INVESTIMENTO]) / hab(geo, a)
+            for a in anos
+            if hab(geo, a) and soma(geo, a, "receita", RECEITA_EFETIVA)
+        }
+        autonomia.append(
+            base
+            | {
+                "transf": serie[-1][1],
+                "transf_ini": serie[0][1],
+                "transf_ini_ano": serie[0][0],
+                "receita_m": round(
+                    soma(geo, ano, "receita", RECEITA_EFETIVA) / 1e6, 1
+                ),
+                "rigidez": _pct(rig, corr),
+                "invest_hab": round(inv.get(ano, 0)),
+                "invest_hab_med": (
+                    round(sum(inv.values()) / len(inv)) if inv else None
+                ),
+            }
+        )
+        p = hab(geo, ano)
+        d = der.get(geo, {})
+        t = tr.get(geo)
+        imp = base | {
+            "derrama_taxa": (
+                float(d["taxa_geral"]) if d.get("taxa_geral") else 0
+            ),
+            "derrama_reduzida": d.get("taxa_reduzida", ""),
+            "derrama_isencoes": d.get("isencoes", ""),
+            "derrama_k": round(soma(geo, ano, "receita", [DERRAMA]) / 1e3),
+            "imi_hab": (
+                round(soma(geo, ano, "receita", [IMI]) / p) if p else None
+            ),
+        }
+        if t:
+            dado = float(t["irs_max"]) - float(t["irs"])
+            imp |= {
+                "irs_pct": float(t["irs_pct"]),
+                "irs_devolvido_k": round(dado / 1e3),
+                "irs_devolvido_hab": round(dado / p) if p else None,
+            }
+        impostos.append(imp)
+        e = exe.get(geo, {})
+        cob = [
+            (a, float(r["receita_cobrada"]))
+            for a, r in sorted(e.items())
+            if r["receita_cobrada"]
+        ]
+        if cob:
+            ult = e[exe_anos[-1]] if exe_anos and exe_anos[-1] in e else {}
+            mini = min(cob, key=lambda x: x[1])
+            orcamento.append(
+                base
+                | {
+                    "cobrada": (
+                        cob[-1][1] if cob[-1][0] == exe_anos[-1] else None
+                    ),
+                    "cobrada_med": round(sum(x for _, x in cob) / len(cob), 1),
+                    "cobrada_min": mini[1],
+                    "cobrada_min_ano": mini[0],
+                    "anos_abaixo_85": sum(1 for _, x in cob if x < 85),
+                    "comprometida": (
+                        float(ult["despesa_comprometida"])
+                        if ult.get("despesa_comprometida")
+                        else None
+                    ),
+                }
+            )
+    autonomia.sort(key=lambda d: -(d["transf"] or 0))
+    impostos.sort(key=lambda d: (-d["derrama_taxa"], -(d.get("irs_pct") or 0)))
+    orcamento.sort(key=lambda d: d["cobrada_med"])
+    out = {
+        "ano": ano,
+        "ano_ini": anos[0],
+        "autonomia": autonomia,
+        "impostos": impostos,
+        "derrama_ano": der_ano,
+        "irs_ano": tr_ano,
+        "cobram_derrama": sum(1 for d in impostos if d["derrama_taxa"]),
+        "irs_devolvem": [
+            d["nome"] for d in impostos if d.get("irs_pct", 5) < 5
+        ],
+        "irs_devolvido_k": sum(d.get("irs_devolvido_k", 0) for d in impostos),
+    }
+    if orcamento:
+        out |= {
+            "orcamento": orcamento,
+            "orc_ano": exe_anos[-1],
+            "orc_ini": exe_anos[0],
+            "orc_anos": len(exe_anos),
+        }
+    return out
+
+
 def _ponto(x: float, y: float, nome: str, rotulos: dict) -> dict:
     p = {"x": x, "y": y, "nome": nome, "rotulo": nome in rotulos}
     if nome in rotulos:
@@ -388,6 +566,15 @@ def write_camaras(docs: Path, tables: dict) -> None:
     )
     if d:
         data["divida"] = d
+    f = contas_camaras(
+        tables.get("dgal_contas"),
+        tables.get("ine"),
+        tables.get("dgal_transferencias"),
+        tables.get("derrama_municipal"),
+        tables.get("anuario_execucao"),
+    )
+    if f:
+        data["financas"] = f
     (docs / "_data").mkdir(exist_ok=True)
     (docs / "_data" / "camaras.json").write_text(
         json.dumps(_texts(data), ensure_ascii=False, indent=1),
