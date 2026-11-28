@@ -1,0 +1,515 @@
+exercicio,ilha,concelho,geocod,medida,medida_nome,programa,beneficiarios,feaga,feader,cofinanciado,montante
+2024,Santa Maria,Vila do Porto,2004101,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,1,1034.22,0.0,0.0,1034.22
+2024,Santa Maria,Vila do Porto,2004101,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,1,-3509.94,0.0,0.0,-3509.94
+2024,Santa Maria,Vila do Porto,2004101,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1601.51,0.0,0.0,1601.51
+2024,Santa Maria,Vila do Porto,2004101,IV.5,Medidas excecionais,Mercados agrícolas,1,12.62,0.0,0.0,12.62
+2024,Santa Maria,Vila do Porto,2004101,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,663.17,165.79,828.96
+2024,Santa Maria,Vila do Porto,2004101,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,264,0.0,610285.58,107696.98,717982.56
+2024,Santa Maria,Vila do Porto,2004101,VI.15,Agroambiente e clima,Desenvolvimento rural,78,0.0,380329.07,67116.87,447445.94
+2024,Santa Maria,Vila do Porto,2004101,VI.16,Agricultura biológica,Desenvolvimento rural,2,0.0,4765.96,841.04,5607.0
+2024,Santa Maria,Vila do Porto,2004101,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,3,0.0,1072.07,333.22,1405.29
+2024,Santa Maria,Vila do Porto,2004101,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,1,0.0,292.4,51.6,344.0
+2024,Santa Maria,Vila do Porto,2004101,VI.23,Artigo 40.º do Reg. 1305/2013 (código do IFAP),Desenvolvimento rural,1,0.0,-13832.26,-2440.99,-16273.25
+2024,Santa Maria,Vila do Porto,2004101,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,6,0.0,207487.0,36615.36,244102.36
+2024,Santa Maria,Vila do Porto,2004101,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,2,0.0,28334.39,5000.19,33334.58
+2024,Santa Maria,Vila do Porto,2004101,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,5,0.0,87188.75,15386.25,102575.0
+2024,Santa Maria,Vila do Porto,2004101,VII.1,POSEI (Reg. UE 228/2013),POSEI,273,1475819.04,0.0,0.0,1475819.04
+2024,São Miguel,Lagoa,2004201,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,2,1100.99,0.0,0.0,1100.99
+2024,São Miguel,Lagoa,2004201,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,484.5,0.0,0.0,484.5
+2024,São Miguel,Lagoa,2004201,I.4,Regimes no domínio climático e ambiental,Pagamentos diretos,1,1582.7,0.0,0.0,1582.7
+2024,São Miguel,Lagoa,2004201,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,4,-6149.29,0.0,0.0,-6149.29
+2024,São Miguel,Lagoa,2004201,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,2,2721.56,0.0,0.0,2721.56
+2024,São Miguel,Lagoa,2004201,IV.5,Medidas excecionais,Mercados agrícolas,61,42402.7,0.0,0.0,42402.7
+2024,São Miguel,Lagoa,2004201,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,549.98,137.49,687.47
+2024,São Miguel,Lagoa,2004201,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,171,0.0,227943.5,40225.13,268168.63
+2024,São Miguel,Lagoa,2004201,VI.15,Agroambiente e clima,Desenvolvimento rural,26,0.0,7378.04,1301.96,8680.0
+2024,São Miguel,Lagoa,2004201,VI.16,Agricultura biológica,Desenvolvimento rural,1,0.0,420.75,74.25,495.0
+2024,São Miguel,Lagoa,2004201,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,1,0.0,689.82,183.38,873.2
+2024,São Miguel,Lagoa,2004201,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,1,0.0,8824.71,1557.29,10382.0
+2024,São Miguel,Lagoa,2004201,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,2,0.0,317516.76,56032.37,373549.13
+2024,São Miguel,Lagoa,2004201,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,9,0.0,154972.06,22014.5,176986.56
+2024,São Miguel,Lagoa,2004201,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,3,0.0,45878.75,8096.25,53975.0
+2024,São Miguel,Lagoa,2004201,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,5,0.0,22616.96,3991.19,26608.15
+2024,São Miguel,Lagoa,2004201,VII.1,POSEI (Reg. UE 228/2013),POSEI,195,2506437.41,0.0,0.0,2506437.41
+2024,São Miguel,Nordeste,2004202,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,687.42,0.0,0.0,687.42
+2024,São Miguel,Nordeste,2004202,IV.5,Medidas excecionais,Mercados agrícolas,68,34941.84,0.0,0.0,34941.84
+2024,São Miguel,Nordeste,2004202,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,202,0.0,343091.99,60545.43,403637.42
+2024,São Miguel,Nordeste,2004202,VI.15,Agroambiente e clima,Desenvolvimento rural,5,0.0,38076.94,6719.46,44796.4
+2024,São Miguel,Nordeste,2004202,VI.16,Agricultura biológica,Desenvolvimento rural,2,0.0,12350.16,2179.44,14529.6
+2024,São Miguel,Nordeste,2004202,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,11854.19,2091.91,13946.1
+2024,São Miguel,Nordeste,2004202,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,4,0.0,111843.71,19737.12,131580.83
+2024,São Miguel,Nordeste,2004202,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,4,0.0,112582.5,19867.5,132450.0
+2024,São Miguel,Nordeste,2004202,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,5,0.0,1550.58,273.63,1824.21
+2024,São Miguel,Nordeste,2004202,VII.1,POSEI (Reg. UE 228/2013),POSEI,205,2402629.49,0.0,0.0,2402629.49
+2024,São Miguel,Ponta Delgada,2004203,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,8,23316.81,0.0,0.0,23316.81
+2024,São Miguel,Ponta Delgada,2004203,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,5,6296.46,0.0,0.0,6296.46
+2024,São Miguel,Ponta Delgada,2004203,I.4,Regimes no domínio climático e ambiental,Pagamentos diretos,2,8946.13,0.0,0.0,8946.13
+2024,São Miguel,Ponta Delgada,2004203,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,17,-11389.69,0.0,0.0,-11389.69
+2024,São Miguel,Ponta Delgada,2004203,III.3,Setor vitivinícola,Mercados agrícolas,1,253.01,0.0,0.0,253.01
+2024,São Miguel,Ponta Delgada,2004203,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,5,12767.38,0.0,0.0,12767.38
+2024,São Miguel,Ponta Delgada,2004203,IV.5,Medidas excecionais,Mercados agrícolas,441,325628.03,0.0,0.0,325628.03
+2024,São Miguel,Ponta Delgada,2004203,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,8,0.0,3500.81,879.39,4380.2
+2024,São Miguel,Ponta Delgada,2004203,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,1009,0.0,1487590.82,262515.43,1750106.25
+2024,São Miguel,Ponta Delgada,2004203,VI.15,Agroambiente e clima,Desenvolvimento rural,125,0.0,79441.66,14018.98,93460.64
+2024,São Miguel,Ponta Delgada,2004203,VI.16,Agricultura biológica,Desenvolvimento rural,14,0.0,13645.44,2407.96,16053.4
+2024,São Miguel,Ponta Delgada,2004203,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,21,0.0,10536.49,3868.06,14404.55
+2024,São Miguel,Ponta Delgada,2004203,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,17,0.0,203717.93,35950.07,239668.0
+2024,São Miguel,Ponta Delgada,2004203,VI.21,Cooperação,Desenvolvimento rural,2,0.0,57776.56,10195.87,67972.43
+2024,São Miguel,Ponta Delgada,2004203,VI.22,Gestão de riscos,Desenvolvimento rural,5,0.0,843.15,148.79,991.94
+2024,São Miguel,Ponta Delgada,2004203,VI.23,Artigo 40.º do Reg. 1305/2013 (código do IFAP),Desenvolvimento rural,2,0.0,-7808.69,-1378.03,-9186.72
+2024,São Miguel,Ponta Delgada,2004203,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,11,0.0,509291.89,89875.03,599166.92
+2024,São Miguel,Ponta Delgada,2004203,VI.25,Assistência técnica,Desenvolvimento rural,1,0.0,54145.0,0.0,54145.0
+2024,São Miguel,Ponta Delgada,2004203,VI.27,Reforma antecipada,Desenvolvimento rural,4,0.0,3107.89,548.41,3656.3
+2024,São Miguel,Ponta Delgada,2004203,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,45,0.0,3074899.71,310713.56,3385613.27
+2024,São Miguel,Ponta Delgada,2004203,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,12,0.0,230477.5,40672.5,271150.0
+2024,São Miguel,Ponta Delgada,2004203,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,31,0.0,553344.52,100675.67,654020.19
+2024,São Miguel,Ponta Delgada,2004203,VII.1,POSEI (Reg. UE 228/2013),POSEI,1229,21446657.44,0.0,0.0,21446657.44
+2024,São Miguel,Povoação,2004204,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,1,122.38,0.0,0.0,122.38
+2024,São Miguel,Povoação,2004204,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,591.6,0.0,0.0,591.6
+2024,São Miguel,Povoação,2004204,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,5,-3889.77,0.0,0.0,-3889.77
+2024,São Miguel,Povoação,2004204,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1378.83,0.0,0.0,1378.83
+2024,São Miguel,Povoação,2004204,IV.5,Medidas excecionais,Mercados agrícolas,44,28260.26,0.0,0.0,28260.26
+2024,São Miguel,Povoação,2004204,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,372.24,93.06,465.3
+2024,São Miguel,Povoação,2004204,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,131,0.0,250974.29,44289.44,295263.73
+2024,São Miguel,Povoação,2004204,VI.15,Agroambiente e clima,Desenvolvimento rural,18,0.0,142260.17,25104.73,167364.9
+2024,São Miguel,Povoação,2004204,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,2,0.0,603.48,211.89,815.37
+2024,São Miguel,Povoação,2004204,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,2,0.0,23577.33,4160.67,27738.0
+2024,São Miguel,Povoação,2004204,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,32577.36,5748.95,38326.31
+2024,São Miguel,Povoação,2004204,VI.27,Reforma antecipada,Desenvolvimento rural,1,0.0,35.91,6.33,42.24
+2024,São Miguel,Povoação,2004204,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,2,0.0,33615.83,175.99,33791.82
+2024,São Miguel,Povoação,2004204,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,3,0.0,72419.28,12779.86,85199.14
+2024,São Miguel,Povoação,2004204,VII.1,POSEI (Reg. UE 228/2013),POSEI,138,1647136.97,0.0,0.0,1647136.97
+2024,São Miguel,Ribeira Grande,2004205,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,2,2763.22,0.0,0.0,2763.22
+2024,São Miguel,Ribeira Grande,2004205,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,2,2895.78,0.0,0.0,2895.78
+2024,São Miguel,Ribeira Grande,2004205,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,6,-40521.96,0.0,0.0,-40521.96
+2024,São Miguel,Ribeira Grande,2004205,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,3,9731.04,0.0,0.0,9731.04
+2024,São Miguel,Ribeira Grande,2004205,IV.5,Medidas excecionais,Mercados agrícolas,246,163377.2,0.0,0.0,163377.2
+2024,São Miguel,Ribeira Grande,2004205,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,517.54,129.38,646.92
+2024,São Miguel,Ribeira Grande,2004205,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,549,0.0,814095.4,143663.48,957758.88
+2024,São Miguel,Ribeira Grande,2004205,VI.15,Agroambiente e clima,Desenvolvimento rural,55,0.0,70878.1,12507.8,83385.9
+2024,São Miguel,Ribeira Grande,2004205,VI.16,Agricultura biológica,Desenvolvimento rural,10,0.0,58624.02,10345.38,68969.4
+2024,São Miguel,Ribeira Grande,2004205,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,6,0.0,796.5,385.44,1181.94
+2024,São Miguel,Ribeira Grande,2004205,VI.21,Cooperação,Desenvolvimento rural,1,0.0,43458.7,7669.18,51127.88
+2024,São Miguel,Ribeira Grande,2004205,VI.22,Gestão de riscos,Desenvolvimento rural,1,0.0,151.38,26.71,178.09
+2024,São Miguel,Ribeira Grande,2004205,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,4,0.0,54539.28,9624.58,64163.86
+2024,São Miguel,Ribeira Grande,2004205,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,16,0.0,2494043.93,126473.32,2620517.25
+2024,São Miguel,Ribeira Grande,2004205,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,3,0.0,67872.5,11977.5,79850.0
+2024,São Miguel,Ribeira Grande,2004205,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,4,0.0,64074.26,11307.2,75381.46
+2024,São Miguel,Ribeira Grande,2004205,VII.1,POSEI (Reg. UE 228/2013),POSEI,588,9964340.74,0.0,0.0,9964340.74
+2024,São Miguel,Vila Franca do Campo,2004206,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,3,13056.02,0.0,0.0,13056.02
+2024,São Miguel,Vila Franca do Campo,2004206,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,2,3637.32,0.0,0.0,3637.32
+2024,São Miguel,Vila Franca do Campo,2004206,I.4,Regimes no domínio climático e ambiental,Pagamentos diretos,2,9283.99,0.0,0.0,9283.99
+2024,São Miguel,Vila Franca do Campo,2004206,I.6,Apoio associado ao rendimento,Pagamentos diretos,1,2349.6,0.0,0.0,2349.6
+2024,São Miguel,Vila Franca do Campo,2004206,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,3,-2811.26,0.0,0.0,-2811.26
+2024,São Miguel,Vila Franca do Campo,2004206,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,2,3015.03,0.0,0.0,3015.03
+2024,São Miguel,Vila Franca do Campo,2004206,IV.5,Medidas excecionais,Mercados agrícolas,93,38028.88,0.0,0.0,38028.88
+2024,São Miguel,Vila Franca do Campo,2004206,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,6614.28,1653.57,8267.85
+2024,São Miguel,Vila Franca do Campo,2004206,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,251,0.0,376763.11,66487.42,443250.53
+2024,São Miguel,Vila Franca do Campo,2004206,VI.15,Agroambiente e clima,Desenvolvimento rural,77,0.0,102968.69,18170.91,121139.6
+2024,São Miguel,Vila Franca do Campo,2004206,VI.16,Agricultura biológica,Desenvolvimento rural,5,0.0,28650.19,5103.63,33753.82
+2024,São Miguel,Vila Franca do Campo,2004206,VI.17,Natura 2000 e Diretiva-Quadro da Água,Desenvolvimento rural,1,0.0,2573.2,0.0,2573.2
+2024,São Miguel,Vila Franca do Campo,2004206,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,8,0.0,-1182.58,582.26,-600.32
+2024,São Miguel,Vila Franca do Campo,2004206,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,8,0.0,144500.04,25499.96,170000.0
+2024,São Miguel,Vila Franca do Campo,2004206,VI.22,Gestão de riscos,Desenvolvimento rural,11,0.0,4176.81,737.08,4913.89
+2024,São Miguel,Vila Franca do Campo,2004206,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,22676.93,4001.81,26678.74
+2024,São Miguel,Vila Franca do Campo,2004206,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,16,0.0,313664.77,23214.08,336878.85
+2024,São Miguel,Vila Franca do Campo,2004206,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,2,0.0,51892.5,9157.5,61050.0
+2024,São Miguel,Vila Franca do Campo,2004206,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,4,0.0,7549.03,1332.18,8881.21
+2024,São Miguel,Vila Franca do Campo,2004206,VII.1,POSEI (Reg. UE 228/2013),POSEI,309,4221206.34,0.0,0.0,4221206.34
+2024,São Miguel,Vila Franca do Campo,2004206,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,1,0.0,-4625.08,-816.19,-5441.27
+2024,Terceira,Angra do Heroísmo,2004301,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,4,17446.06,0.0,0.0,17446.06
+2024,Terceira,Angra do Heroísmo,2004301,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,1398.42,0.0,0.0,1398.42
+2024,Terceira,Angra do Heroísmo,2004301,I.4,Regimes no domínio climático e ambiental,Pagamentos diretos,1,20221.43,0.0,0.0,20221.43
+2024,Terceira,Angra do Heroísmo,2004301,I.6,Apoio associado ao rendimento,Pagamentos diretos,1,16537.25,0.0,0.0,16537.25
+2024,Terceira,Angra do Heroísmo,2004301,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,13,-7623.65,0.0,0.0,-7623.65
+2024,Terceira,Angra do Heroísmo,2004301,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,3,10401.08,0.0,0.0,10401.08
+2024,Terceira,Angra do Heroísmo,2004301,IV.5,Medidas excecionais,Mercados agrícolas,252,121913.79,0.0,0.0,121913.79
+2024,Terceira,Angra do Heroísmo,2004301,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,2,0.0,843.69,210.93,1054.62
+2024,Terceira,Angra do Heroísmo,2004301,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,1079,0.0,1551373.88,273771.39,1825145.27
+2024,Terceira,Angra do Heroísmo,2004301,V.6,Instrumentos de gestão de riscos,Desenvolvimento rural,1,0.0,18.7,3.3,22.0
+2024,Terceira,Angra do Heroísmo,2004301,VI.15,Agroambiente e clima,Desenvolvimento rural,281,0.0,759191.31,137232.93,896424.24
+2024,Terceira,Angra do Heroísmo,2004301,VI.16,Agricultura biológica,Desenvolvimento rural,50,0.0,295350.67,52120.68,347471.35
+2024,Terceira,Angra do Heroísmo,2004301,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,8,0.0,1545.72,1305.04,2850.76
+2024,Terceira,Angra do Heroísmo,2004301,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,8,0.0,63564.71,11217.29,74782.0
+2024,Terceira,Angra do Heroísmo,2004301,VI.22,Gestão de riscos,Desenvolvimento rural,50,0.0,6512.42,1149.23,7661.65
+2024,Terceira,Angra do Heroísmo,2004301,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,15,0.0,201736.89,35600.62,237337.51
+2024,Terceira,Angra do Heroísmo,2004301,VI.27,Reforma antecipada,Desenvolvimento rural,3,0.0,3239.41,571.67,3811.08
+2024,Terceira,Angra do Heroísmo,2004301,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,32,0.0,1114793.98,147290.98,1262084.96
+2024,Terceira,Angra do Heroísmo,2004301,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,19,0.0,304339.68,53707.02,358046.7
+2024,Terceira,Angra do Heroísmo,2004301,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,4,0.0,20982.2,3702.73,24684.93
+2024,Terceira,Angra do Heroísmo,2004301,VII.1,POSEI (Reg. UE 228/2013),POSEI,1111,10640069.77,0.0,0.0,10640069.77
+2024,Terceira,Angra do Heroísmo,2004301,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,5,0.0,-17909.76,-3160.49,-21070.25
+2024,Terceira,Praia da Vitória,2004302,I.6,Apoio associado ao rendimento,Pagamentos diretos,1,2456.4,0.0,0.0,2456.4
+2024,Terceira,Praia da Vitória,2004302,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,2,-181.0,0.0,0.0,-181.0
+2024,Terceira,Praia da Vitória,2004302,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,492.1,0.0,0.0,492.1
+2024,Terceira,Praia da Vitória,2004302,IV.5,Medidas excecionais,Mercados agrícolas,154,66583.58,0.0,0.0,66583.58
+2024,Terceira,Praia da Vitória,2004302,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,685,0.0,760378.71,134184.09,894562.8
+2024,Terceira,Praia da Vitória,2004302,VI.15,Agroambiente e clima,Desenvolvimento rural,154,0.0,164471.43,29285.08,193756.51
+2024,Terceira,Praia da Vitória,2004302,VI.16,Agricultura biológica,Desenvolvimento rural,19,0.0,60856.5,11640.86,72497.36
+2024,Terceira,Praia da Vitória,2004302,VI.22,Gestão de riscos,Desenvolvimento rural,20,0.0,2069.28,365.16,2434.44
+2024,Terceira,Praia da Vitória,2004302,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,15,0.0,562606.01,99283.41,661889.42
+2024,Terceira,Praia da Vitória,2004302,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,14,0.0,439310.87,59996.35,499307.22
+2024,Terceira,Praia da Vitória,2004302,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,4,0.0,63877.5,11272.5,75150.0
+2024,Terceira,Praia da Vitória,2004302,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,1,0.0,42160.41,7440.07,49600.48
+2024,Terceira,Praia da Vitória,2004302,VII.1,POSEI (Reg. UE 228/2013),POSEI,753,5774706.82,0.0,0.0,5774706.82
+2024,Terceira,Praia da Vitória,2004302,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,1,0.0,-3029.14,-534.56,-3563.7
+2024,Graciosa,Santa Cruz da Graciosa,2004401,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,2,-307.19,0.0,0.0,-307.19
+2024,Graciosa,Santa Cruz da Graciosa,2004401,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,952.08,0.0,0.0,952.08
+2024,Graciosa,Santa Cruz da Graciosa,2004401,IV.5,Medidas excecionais,Mercados agrícolas,43,19175.8,0.0,0.0,19175.8
+2024,Graciosa,Santa Cruz da Graciosa,2004401,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,263,0.0,449553.82,79332.41,528886.23
+2024,Graciosa,Santa Cruz da Graciosa,2004401,VI.15,Agroambiente e clima,Desenvolvimento rural,84,0.0,121420.09,21427.06,142847.15
+2024,Graciosa,Santa Cruz da Graciosa,2004401,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,3,0.0,56795.85,10022.8,66818.65
+2024,Graciosa,Santa Cruz da Graciosa,2004401,VI.27,Reforma antecipada,Desenvolvimento rural,2,0.0,407.71,71.95,479.66
+2024,Graciosa,Santa Cruz da Graciosa,2004401,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,3,0.0,108522.95,13152.99,121675.94
+2024,Graciosa,Santa Cruz da Graciosa,2004401,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,1,0.0,10115.0,1785.0,11900.0
+2024,Graciosa,Santa Cruz da Graciosa,2004401,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,1,0.0,552.51,97.49,650.0
+2024,Graciosa,Santa Cruz da Graciosa,2004401,VII.1,POSEI (Reg. UE 228/2013),POSEI,260,1701036.37,0.0,0.0,1701036.37
+2024,São Jorge,Calheta,2004501,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,1,-334.67,0.0,0.0,-334.67
+2024,São Jorge,Calheta,2004501,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,2,1092.48,0.0,0.0,1092.48
+2024,São Jorge,Calheta,2004501,IV.5,Medidas excecionais,Mercados agrícolas,93,12261.74,0.0,0.0,12261.74
+2024,São Jorge,Calheta,2004501,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,286,0.0,825498.41,145675.62,971174.03
+2024,São Jorge,Calheta,2004501,VI.15,Agroambiente e clima,Desenvolvimento rural,236,0.0,936359.8,165239.76,1101599.56
+2024,São Jorge,Calheta,2004501,VI.16,Agricultura biológica,Desenvolvimento rural,4,0.0,9661.11,1704.89,11366.0
+2024,São Jorge,Calheta,2004501,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,2,0.0,84611.77,14931.48,99543.25
+2024,São Jorge,Calheta,2004501,VI.27,Reforma antecipada,Desenvolvimento rural,2,0.0,2893.99,510.71,3404.7
+2024,São Jorge,Calheta,2004501,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,8,0.0,939365.44,45890.94,985256.38
+2024,São Jorge,Calheta,2004501,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,3,0.0,72845.0,12855.0,85700.0
+2024,São Jorge,Calheta,2004501,VII.1,POSEI (Reg. UE 228/2013),POSEI,317,2362940.72,0.0,0.0,2362940.72
+2024,São Jorge,Velas,2004502,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,2,-1516.71,0.0,0.0,-1516.71
+2024,São Jorge,Velas,2004502,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1024.86,0.0,0.0,1024.86
+2024,São Jorge,Velas,2004502,IV.5,Medidas excecionais,Mercados agrícolas,39,7163.57,0.0,0.0,7163.57
+2024,São Jorge,Velas,2004502,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,216,0.0,765803.59,135141.42,900945.01
+2024,São Jorge,Velas,2004502,VI.15,Agroambiente e clima,Desenvolvimento rural,187,0.0,976179.47,172593.96,1148773.43
+2024,São Jorge,Velas,2004502,VI.16,Agricultura biológica,Desenvolvimento rural,18,0.0,99297.57,17523.03,116820.6
+2024,São Jorge,Velas,2004502,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,1,0.0,159.05,28.07,187.12
+2024,São Jorge,Velas,2004502,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,2,0.0,64937.43,11459.54,76396.97
+2024,São Jorge,Velas,2004502,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,3,0.0,29898.04,5276.12,35174.16
+2024,São Jorge,Velas,2004502,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,3,0.0,91035.0,16065.0,107100.0
+2024,São Jorge,Velas,2004502,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,1,0.0,143551.83,25332.67,168884.5
+2024,São Jorge,Velas,2004502,VII.1,POSEI (Reg. UE 228/2013),POSEI,243,2099762.69,0.0,0.0,2099762.69
+2024,Pico,Lajes do Pico,2004601,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,1,1034.22,0.0,0.0,1034.22
+2024,Pico,Lajes do Pico,2004601,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,1,-212.5,0.0,0.0,-212.5
+2024,Pico,Lajes do Pico,2004601,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1059.25,0.0,0.0,1059.25
+2024,Pico,Lajes do Pico,2004601,IV.5,Medidas excecionais,Mercados agrícolas,111,16501.49,0.0,0.0,16501.49
+2024,Pico,Lajes do Pico,2004601,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,316.18,79.04,395.22
+2024,Pico,Lajes do Pico,2004601,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,265,0.0,847011.91,149472.24,996484.15
+2024,Pico,Lajes do Pico,2004601,VI.15,Agroambiente e clima,Desenvolvimento rural,224,0.0,1018211.9,179684.38,1197896.28
+2024,Pico,Lajes do Pico,2004601,VI.16,Agricultura biológica,Desenvolvimento rural,2,0.0,69841.44,12324.96,82166.4
+2024,Pico,Lajes do Pico,2004601,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,1,0.0,638.39,169.69,808.08
+2024,Pico,Lajes do Pico,2004601,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,6,0.0,7733.65,1364.63,9098.28
+2024,Pico,Lajes do Pico,2004601,VI.22,Gestão de riscos,Desenvolvimento rural,1,0.0,70.88,12.51,83.39
+2024,Pico,Lajes do Pico,2004601,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,12607.07,2224.78,14831.85
+2024,Pico,Lajes do Pico,2004601,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,14,0.0,656225.94,86458.2,742684.14
+2024,Pico,Lajes do Pico,2004601,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,5,0.0,111265.0,19635.0,130900.0
+2024,Pico,Lajes do Pico,2004601,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,9,0.0,7738.1,1365.54,9103.64
+2024,Pico,Lajes do Pico,2004601,VII.1,POSEI (Reg. UE 228/2013),POSEI,254,2100929.71,0.0,0.0,2100929.71
+2024,Pico,Madalena,2004602,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,2,5690.02,0.0,0.0,5690.02
+2024,Pico,Madalena,2004602,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,2040.0,0.0,0.0,2040.0
+2024,Pico,Madalena,2004602,I.6,Apoio associado ao rendimento,Pagamentos diretos,1,4485.6,0.0,0.0,4485.6
+2024,Pico,Madalena,2004602,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,2,-762.09,0.0,0.0,-762.09
+2024,Pico,Madalena,2004602,III.3,Setor vitivinícola,Mercados agrícolas,1,2032.75,0.0,0.0,2032.75
+2024,Pico,Madalena,2004602,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,395.01,0.0,0.0,395.01
+2024,Pico,Madalena,2004602,IV.5,Medidas excecionais,Mercados agrícolas,67,12236.46,0.0,0.0,12236.46
+2024,Pico,Madalena,2004602,IV.7,Apoio ao setor vitivinícola,Mercados agrícolas,1,-3760.2,0.0,0.0,-3760.2
+2024,Pico,Madalena,2004602,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,177.73,44.43,222.16
+2024,Pico,Madalena,2004602,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,426,0.0,1037576.73,183101.15,1220677.88
+2024,Pico,Madalena,2004602,VI.15,Agroambiente e clima,Desenvolvimento rural,443,0.0,1700201.5,300542.74,2000744.24
+2024,Pico,Madalena,2004602,VI.16,Agricultura biológica,Desenvolvimento rural,1,0.0,21373.08,3771.72,25144.8
+2024,Pico,Madalena,2004602,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,4,0.0,80.74,48.91,129.65
+2024,Pico,Madalena,2004602,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,2,0.0,6412.3,1131.57,7543.87
+2024,Pico,Madalena,2004602,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,4,0.0,56961.44,10052.02,67013.46
+2024,Pico,Madalena,2004602,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,16,0.0,418518.21,58310.59,476828.8
+2024,Pico,Madalena,2004602,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,5,0.0,115345.0,20355.0,135700.0
+2024,Pico,Madalena,2004602,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,2,0.0,4843.74,854.76,5698.5
+2024,Pico,Madalena,2004602,VII.1,POSEI (Reg. UE 228/2013),POSEI,230,2663396.7,0.0,0.0,2663396.7
+2024,Pico,Madalena,2004602,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,2,0.0,-7747.54,-1367.27,-9114.81
+2024,Pico,São Roque do Pico,2004603,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,1,837.23,0.0,0.0,837.23
+2024,Pico,São Roque do Pico,2004603,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,621.68,0.0,0.0,621.68
+2024,Pico,São Roque do Pico,2004603,IV.5,Medidas excecionais,Mercados agrícolas,59,9290.54,0.0,0.0,9290.54
+2024,Pico,São Roque do Pico,2004603,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,164.59,41.15,205.74
+2024,Pico,São Roque do Pico,2004603,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,169,0.0,484541.98,85507.17,570049.15
+2024,Pico,São Roque do Pico,2004603,VI.15,Agroambiente e clima,Desenvolvimento rural,163,0.0,642321.85,113350.91,755672.76
+2024,Pico,São Roque do Pico,2004603,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,3,0.0,391.8,148.25,540.05
+2024,Pico,São Roque do Pico,2004603,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,3,0.0,3885.45,685.65,4571.1
+2024,Pico,São Roque do Pico,2004603,VI.27,Reforma antecipada,Desenvolvimento rural,4,0.0,3018.48,532.69,3551.17
+2024,Pico,São Roque do Pico,2004603,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,4,0.0,340936.96,43427.11,384364.07
+2024,Pico,São Roque do Pico,2004603,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,3,0.0,73865.0,13035.0,86900.0
+2024,Pico,São Roque do Pico,2004603,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,7,0.0,35863.58,6328.85,42192.43
+2024,Pico,São Roque do Pico,2004603,VII.1,POSEI (Reg. UE 228/2013),POSEI,136,985780.7,0.0,0.0,985780.7
+2024,Pico,São Roque do Pico,2004603,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,1,0.0,-828.12,-146.13,-974.25
+2024,Faial,Horta,2004701,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,3,1921.79,0.0,0.0,1921.79
+2024,Faial,Horta,2004701,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,1272.96,0.0,0.0,1272.96
+2024,Faial,Horta,2004701,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,3,-2428.12,0.0,0.0,-2428.12
+2024,Faial,Horta,2004701,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,2741.7,0.0,0.0,2741.7
+2024,Faial,Horta,2004701,IV.5,Medidas excecionais,Mercados agrícolas,63,17320.59,0.0,0.0,17320.59
+2024,Faial,Horta,2004701,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,1,0.0,1194.91,298.73,1493.64
+2024,Faial,Horta,2004701,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,572,0.0,1208297.7,213227.68,1421525.38
+2024,Faial,Horta,2004701,VI.15,Agroambiente e clima,Desenvolvimento rural,182,0.0,644332.65,113928.29,758260.94
+2024,Faial,Horta,2004701,VI.16,Agricultura biológica,Desenvolvimento rural,13,0.0,21607.74,3813.06,25420.8
+2024,Faial,Horta,2004701,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,5,0.0,661.35,334.33,995.68
+2024,Faial,Horta,2004701,VI.23,Artigo 40.º do Reg. 1305/2013 (código do IFAP),Desenvolvimento rural,1,0.0,-314.83,-55.56,-370.39
+2024,Faial,Horta,2004701,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,8,0.0,386319.84,68174.1,454493.94
+2024,Faial,Horta,2004701,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,9,0.0,173579.48,19030.12,192609.6
+2024,Faial,Horta,2004701,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,8,0.0,215262.5,37987.5,253250.0
+2024,Faial,Horta,2004701,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,9,0.0,8444.38,1490.2,9934.58
+2024,Faial,Horta,2004701,VII.1,POSEI (Reg. UE 228/2013),POSEI,564,3069547.21,0.0,0.0,3069547.21
+2024,Faial,Horta,2004701,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,1,0.0,-100.78,-17.79,-118.57
+2024,Flores,Lajes das Flores,2004801,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,84,0.0,282732.41,49893.77,332626.18
+2024,Flores,Lajes das Flores,2004801,VI.15,Agroambiente e clima,Desenvolvimento rural,65,0.0,295466.21,52141.06,347607.27
+2024,Flores,Lajes das Flores,2004801,VI.16,Agricultura biológica,Desenvolvimento rural,4,0.0,45971.4,8112.6,54084.0
+2024,Flores,Lajes das Flores,2004801,VI.27,Reforma antecipada,Desenvolvimento rural,1,0.0,913.84,161.26,1075.1
+2024,Flores,Lajes das Flores,2004801,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,1,0.0,15625.57,2757.45,18383.02
+2024,Flores,Lajes das Flores,2004801,VII.1,POSEI (Reg. UE 228/2013),POSEI,90,513250.69,0.0,0.0,513250.69
+2024,Flores,Santa Cruz das Flores,2004802,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,131.58,0.0,0.0,131.58
+2024,Flores,Santa Cruz das Flores,2004802,IV.5,Medidas excecionais,Mercados agrícolas,5,650.36,0.0,0.0,650.36
+2024,Flores,Santa Cruz das Flores,2004802,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,116,0.0,305006.89,53824.38,358831.27
+2024,Flores,Santa Cruz das Flores,2004802,VI.15,Agroambiente e clima,Desenvolvimento rural,67,0.0,255017.85,45252.26,300270.11
+2024,Flores,Santa Cruz das Flores,2004802,VI.16,Agricultura biológica,Desenvolvimento rural,1,0.0,122.4,21.6,144.0
+2024,Flores,Santa Cruz das Flores,2004802,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,2,0.0,11208.11,1977.89,13186.0
+2024,Flores,Santa Cruz das Flores,2004802,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,44030.54,7770.1,51800.64
+2024,Flores,Santa Cruz das Flores,2004802,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,2,0.0,93621.89,16521.51,110143.4
+2024,Flores,Santa Cruz das Flores,2004802,VII.1,POSEI (Reg. UE 228/2013),POSEI,123,628570.37,0.0,0.0,628570.37
+2024,Corvo,Corvo,2004901,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,29,0.0,96212.82,16978.68,113191.5
+2024,Corvo,Corvo,2004901,VI.15,Agroambiente e clima,Desenvolvimento rural,24,0.0,87776.1,15601.72,103377.82
+2024,Corvo,Corvo,2004901,VI.16,Agricultura biológica,Desenvolvimento rural,1,0.0,2478.6,437.4,2916.0
+2024,Corvo,Corvo,2004901,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,49623.38,8757.07,58380.45
+2024,Corvo,Corvo,2004901,VII.1,POSEI (Reg. UE 228/2013),POSEI,32,146837.86,0.0,0.0,146837.86
+2025,Santa Maria,Vila do Porto,2004101,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,1,938.12,0.0,0.0,938.12
+2025,Santa Maria,Vila do Porto,2004101,III.2,Setor da apicultura,Mercados agrícolas,1,3617.88,0.0,0.0,3617.88
+2025,Santa Maria,Vila do Porto,2004101,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1389.66,0.0,0.0,1389.66
+2025,Santa Maria,Vila do Porto,2004101,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,70,0.0,331141.7,58569.4,389711.1
+2025,Santa Maria,Vila do Porto,2004101,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,268,0.0,606669.28,107058.73,713728.01
+2025,Santa Maria,Vila do Porto,2004101,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,2,0.0,1253.28,365.2,1618.48
+2025,Santa Maria,Vila do Porto,2004101,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,1,0.0,292.4,51.6,344.0
+2025,Santa Maria,Vila do Porto,2004101,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,6,0.0,85847.56,15149.57,100997.13
+2025,Santa Maria,Vila do Porto,2004101,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,4,0.0,123521.25,5746.86,129268.11
+2025,Santa Maria,Vila do Porto,2004101,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,2,0.0,31662.5,5587.5,37250.0
+2025,Santa Maria,Vila do Porto,2004101,VII.1,POSEI (Reg. UE 228/2013),POSEI,272,1470842.46,0.0,0.0,1470842.46
+2025,São Miguel,Lagoa,2004201,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,2,1000.79,0.0,0.0,1000.79
+2025,São Miguel,Lagoa,2004201,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,495.28,0.0,0.0,495.28
+2025,São Miguel,Lagoa,2004201,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,1,-312.64,0.0,0.0,-312.64
+2025,São Miguel,Lagoa,2004201,III.3,Setor vitivinícola,Mercados agrícolas,1,18731.13,0.0,0.0,18731.13
+2025,São Miguel,Lagoa,2004201,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,2,5878.3,0.0,0.0,5878.3
+2025,São Miguel,Lagoa,2004201,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,30,0.0,11894.0,2208.69,14102.69
+2025,São Miguel,Lagoa,2004201,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,170,0.0,219900.3,38805.79,258706.09
+2025,São Miguel,Lagoa,2004201,VI.15,Agroambiente e clima,Desenvolvimento rural,2,0.0,-351.9,-62.1,-414.0
+2025,São Miguel,Lagoa,2004201,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,1,0.0,664.11,176.53,840.64
+2025,São Miguel,Lagoa,2004201,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,1,0.0,8824.71,1557.29,10382.0
+2025,São Miguel,Lagoa,2004201,VI.23,Artigo 40.º do Reg. 1305/2013 (código do IFAP),Desenvolvimento rural,1,0.0,-3402.09,-600.37,-4002.46
+2025,São Miguel,Lagoa,2004201,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,3,0.0,541116.33,95491.12,636607.45
+2025,São Miguel,Lagoa,2004201,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,9,0.0,74940.13,8638.93,83579.06
+2025,São Miguel,Lagoa,2004201,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,3,0.0,80240.0,14160.0,94400.0
+2025,São Miguel,Lagoa,2004201,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,5,0.0,15366.99,2711.81,18078.8
+2025,São Miguel,Lagoa,2004201,VII.1,POSEI (Reg. UE 228/2013),POSEI,156,2465709.01,0.0,0.0,2465709.01
+2025,São Miguel,Nordeste,2004202,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1593.43,0.0,0.0,1593.43
+2025,São Miguel,Nordeste,2004202,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,6,0.0,22360.91,3946.04,26306.95
+2025,São Miguel,Nordeste,2004202,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,207,0.0,346041.7,61066.0,407107.7
+2025,São Miguel,Nordeste,2004202,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,3,0.0,584483.16,103144.08,687627.24
+2025,São Miguel,Nordeste,2004202,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,5,0.0,161600.97,15461.73,177062.7
+2025,São Miguel,Nordeste,2004202,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,1,0.0,10115.0,1785.0,11900.0
+2025,São Miguel,Nordeste,2004202,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,3,0.0,776.55,137.04,913.59
+2025,São Miguel,Nordeste,2004202,VII.1,POSEI (Reg. UE 228/2013),POSEI,203,2535255.78,0.0,0.0,2535255.78
+2025,São Miguel,Ponta Delgada,2004203,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,10,24249.13,0.0,0.0,24249.13
+2025,São Miguel,Ponta Delgada,2004203,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,6,8614.79,0.0,0.0,8614.79
+2025,São Miguel,Ponta Delgada,2004203,I.4,Regimes no domínio climático e ambiental,Pagamentos diretos,3,4806.99,0.0,0.0,4806.99
+2025,São Miguel,Ponta Delgada,2004203,I.6,Apoio associado ao rendimento,Pagamentos diretos,2,901.88,0.0,0.0,901.88
+2025,São Miguel,Ponta Delgada,2004203,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,9,-6124.18,0.0,0.0,-6124.18
+2025,São Miguel,Ponta Delgada,2004203,III.3,Setor vitivinícola,Mercados agrícolas,4,107124.99,0.0,0.0,107124.99
+2025,São Miguel,Ponta Delgada,2004203,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,5,19654.36,0.0,0.0,19654.36
+2025,São Miguel,Ponta Delgada,2004203,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,164,0.0,157702.34,29328.23,187030.57
+2025,São Miguel,Ponta Delgada,2004203,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,1029,0.0,1484389.71,261950.55,1746340.26
+2025,São Miguel,Ponta Delgada,2004203,VI.15,Agroambiente e clima,Desenvolvimento rural,5,0.0,-1523.78,-268.89,-1792.67
+2025,São Miguel,Ponta Delgada,2004203,VI.17,Natura 2000 e Diretiva-Quadro da Água,Desenvolvimento rural,1,0.0,327.04,140.16,467.2
+2025,São Miguel,Ponta Delgada,2004203,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,14,0.0,17767.74,5472.98,23240.72
+2025,São Miguel,Ponta Delgada,2004203,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,16,0.0,199615.83,35226.17,234842.0
+2025,São Miguel,Ponta Delgada,2004203,VI.23,Artigo 40.º do Reg. 1305/2013 (código do IFAP),Desenvolvimento rural,2,0.0,-10127.21,-1787.2,-11914.41
+2025,São Miguel,Ponta Delgada,2004203,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,22,0.0,1519036.94,268065.32,1787102.26
+2025,São Miguel,Ponta Delgada,2004203,VI.25,Assistência técnica,Desenvolvimento rural,1,0.0,62344.02,11001.89,73345.91
+2025,São Miguel,Ponta Delgada,2004203,VI.27,Reforma antecipada,Desenvolvimento rural,1,0.0,238.82,42.14,280.96
+2025,São Miguel,Ponta Delgada,2004203,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,44,0.0,1953973.98,151038.71,2105012.69
+2025,São Miguel,Ponta Delgada,2004203,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,8,0.0,147475.0,26025.0,173500.0
+2025,São Miguel,Ponta Delgada,2004203,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,31,0.0,451586.59,79758.27,531344.86
+2025,São Miguel,Ponta Delgada,2004203,VII.1,POSEI (Reg. UE 228/2013),POSEI,1138,20175389.46,0.0,0.0,20175389.46
+2025,São Miguel,Povoação,2004204,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,1,759.43,0.0,0.0,759.43
+2025,São Miguel,Povoação,2004204,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1782.39,0.0,0.0,1782.39
+2025,São Miguel,Povoação,2004204,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,26,0.0,154362.99,27319.47,181682.46
+2025,São Miguel,Povoação,2004204,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,128,0.0,242312.15,42760.93,285073.08
+2025,São Miguel,Povoação,2004204,VI.15,Agroambiente e clima,Desenvolvimento rural,1,0.0,-265.2,-46.8,-312.0
+2025,São Miguel,Povoação,2004204,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,1,0.0,1175.91,312.57,1488.48
+2025,São Miguel,Povoação,2004204,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,2,0.0,23577.33,4160.67,27738.0
+2025,São Miguel,Povoação,2004204,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,2,0.0,529274.92,93401.46,622676.38
+2025,São Miguel,Povoação,2004204,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,1,0.0,947.0,0.0,947.0
+2025,São Miguel,Povoação,2004204,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,3,0.0,63257.63,11163.1,74420.73
+2025,São Miguel,Povoação,2004204,VII.1,POSEI (Reg. UE 228/2013),POSEI,121,1657762.6,0.0,0.0,1657762.6
+2025,São Miguel,Povoação,2004204,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,1,0.0,-172.02,-30.36,-202.38
+2025,São Miguel,Ribeira Grande,2004205,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,2,2603.38,0.0,0.0,2603.38
+2025,São Miguel,Ribeira Grande,2004205,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,2,2620.31,0.0,0.0,2620.31
+2025,São Miguel,Ribeira Grande,2004205,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,6,-34659.0,0.0,0.0,-34659.0
+2025,São Miguel,Ribeira Grande,2004205,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,3,9547.5,0.0,0.0,9547.5
+2025,São Miguel,Ribeira Grande,2004205,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,73,0.0,157198.21,27849.06,185047.27
+2025,São Miguel,Ribeira Grande,2004205,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,570,0.0,810057.77,142950.89,953008.66
+2025,São Miguel,Ribeira Grande,2004205,V.6,Instrumentos de gestão de riscos,Desenvolvimento rural,1,0.0,351.82,223.8,575.62
+2025,São Miguel,Ribeira Grande,2004205,VI.15,Agroambiente e clima,Desenvolvimento rural,2,0.0,-776.38,-109.22,-885.6
+2025,São Miguel,Ribeira Grande,2004205,VI.16,Agricultura biológica,Desenvolvimento rural,1,0.0,-4415.58,-779.22,-5194.8
+2025,São Miguel,Ribeira Grande,2004205,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,4,0.0,2976.24,798.61,3774.85
+2025,São Miguel,Ribeira Grande,2004205,VI.21,Cooperação,Desenvolvimento rural,1,0.0,2716.51,479.38,3195.89
+2025,São Miguel,Ribeira Grande,2004205,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,3,0.0,66219.87,11685.86,77905.73
+2025,São Miguel,Ribeira Grande,2004205,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,24,0.0,3482291.56,187645.2,3669936.76
+2025,São Miguel,Ribeira Grande,2004205,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,3,0.0,70146.25,12378.75,82525.0
+2025,São Miguel,Ribeira Grande,2004205,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,2,0.0,36646.53,6467.04,43113.57
+2025,São Miguel,Ribeira Grande,2004205,VII.1,POSEI (Reg. UE 228/2013),POSEI,509,9772412.8,0.0,0.0,9772412.8
+2025,São Miguel,Vila Franca do Campo,2004206,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,5,14700.07,0.0,0.0,14700.07
+2025,São Miguel,Vila Franca do Campo,2004206,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,2,3718.27,0.0,0.0,3718.27
+2025,São Miguel,Vila Franca do Campo,2004206,I.4,Regimes no domínio climático e ambiental,Pagamentos diretos,2,9084.16,0.0,0.0,9084.16
+2025,São Miguel,Vila Franca do Campo,2004206,I.6,Apoio associado ao rendimento,Pagamentos diretos,1,4092.48,0.0,0.0,4092.48
+2025,São Miguel,Vila Franca do Campo,2004206,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,2,4041.84,0.0,0.0,4041.84
+2025,São Miguel,Vila Franca do Campo,2004206,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,81,0.0,124888.99,23362.06,148251.05
+2025,São Miguel,Vila Franca do Campo,2004206,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,259,0.0,377941.49,66695.44,444636.93
+2025,São Miguel,Vila Franca do Campo,2004206,VI.17,Natura 2000 e Diretiva-Quadro da Água,Desenvolvimento rural,1,0.0,2032.82,540.38,2573.2
+2025,São Miguel,Vila Franca do Campo,2004206,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,5,0.0,5282.46,1388.07,6670.53
+2025,São Miguel,Vila Franca do Campo,2004206,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,8,0.0,144500.04,25499.96,170000.0
+2025,São Miguel,Vila Franca do Campo,2004206,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,4,0.0,94976.49,16760.55,111737.04
+2025,São Miguel,Vila Franca do Campo,2004206,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,6,0.0,193868.5,11513.57,205382.07
+2025,São Miguel,Vila Franca do Campo,2004206,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,5,0.0,93535.28,16506.23,110041.51
+2025,São Miguel,Vila Franca do Campo,2004206,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,7,0.0,17969.0,3171.01,21140.01
+2025,São Miguel,Vila Franca do Campo,2004206,VII.1,POSEI (Reg. UE 228/2013),POSEI,302,4297597.3,0.0,0.0,4297597.3
+2025,Terceira,Angra do Heroísmo,2004301,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,6,20121.88,0.0,0.0,20121.88
+2025,Terceira,Angra do Heroísmo,2004301,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,1415.24,0.0,0.0,1415.24
+2025,Terceira,Angra do Heroísmo,2004301,I.4,Regimes no domínio climático e ambiental,Pagamentos diretos,1,18057.53,0.0,0.0,18057.53
+2025,Terceira,Angra do Heroísmo,2004301,I.6,Apoio associado ao rendimento,Pagamentos diretos,1,20861.54,0.0,0.0,20861.54
+2025,Terceira,Angra do Heroísmo,2004301,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,13,-7210.16,0.0,0.0,-7210.16
+2025,Terceira,Angra do Heroísmo,2004301,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,3,16672.43,0.0,0.0,16672.43
+2025,Terceira,Angra do Heroísmo,2004301,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,298,0.0,925962.72,163729.59,1089692.31
+2025,Terceira,Angra do Heroísmo,2004301,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,1057,0.0,1549828.14,273498.56,1823326.7
+2025,Terceira,Angra do Heroísmo,2004301,V.6,Instrumentos de gestão de riscos,Desenvolvimento rural,1,0.0,27.53,4.86,32.39
+2025,Terceira,Angra do Heroísmo,2004301,VI.15,Agroambiente e clima,Desenvolvimento rural,12,0.0,25073.44,8522.14,33595.58
+2025,Terceira,Angra do Heroísmo,2004301,VI.16,Agricultura biológica,Desenvolvimento rural,5,0.0,-29792.16,-5257.44,-35049.6
+2025,Terceira,Angra do Heroísmo,2004301,VI.17,Natura 2000 e Diretiva-Quadro da Água,Desenvolvimento rural,1,0.0,72.24,30.96,103.2
+2025,Terceira,Angra do Heroísmo,2004301,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,7,0.0,5286.82,1587.14,6873.96
+2025,Terceira,Angra do Heroísmo,2004301,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,8,0.0,63564.71,11217.29,74782.0
+2025,Terceira,Angra do Heroísmo,2004301,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,27,0.0,533124.48,94080.71,627205.19
+2025,Terceira,Angra do Heroísmo,2004301,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,61,0.0,6711487.14,129710.37,6841197.51
+2025,Terceira,Angra do Heroísmo,2004301,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,28,0.0,628361.6,110887.35,739248.95
+2025,Terceira,Angra do Heroísmo,2004301,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,5,0.0,36051.67,6362.07,42413.74
+2025,Terceira,Angra do Heroísmo,2004301,VII.1,POSEI (Reg. UE 228/2013),POSEI,1018,10476218.97,0.0,0.0,10476218.97
+2025,Terceira,Angra do Heroísmo,2004301,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,3,0.0,-5977.12,-1054.71,-7031.83
+2025,Terceira,Praia da Vitória,2004302,I.6,Apoio associado ao rendimento,Pagamentos diretos,1,2955.68,0.0,0.0,2955.68
+2025,Terceira,Praia da Vitória,2004302,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,8,-1599.42,0.0,0.0,-1599.42
+2025,Terceira,Praia da Vitória,2004302,III.3,Setor vitivinícola,Mercados agrícolas,1,47056.68,0.0,0.0,47056.68
+2025,Terceira,Praia da Vitória,2004302,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,2,2717.85,0.0,0.0,2717.85
+2025,Terceira,Praia da Vitória,2004302,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,168,0.0,201334.08,35529.42,236863.5
+2025,Terceira,Praia da Vitória,2004302,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,685,0.0,770370.78,135947.4,906318.18
+2025,Terceira,Praia da Vitória,2004302,VI.15,Agroambiente e clima,Desenvolvimento rural,7,0.0,-1273.26,-150.8,-1424.06
+2025,Terceira,Praia da Vitória,2004302,VI.16,Agricultura biológica,Desenvolvimento rural,2,0.0,-560.54,-98.92,-659.46
+2025,Terceira,Praia da Vitória,2004302,VI.23,Artigo 40.º do Reg. 1305/2013 (código do IFAP),Desenvolvimento rural,2,0.0,-4108.85,-725.08,-4833.93
+2025,Terceira,Praia da Vitória,2004302,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,22,0.0,717843.88,126678.25,844522.13
+2025,Terceira,Praia da Vitória,2004302,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,30,0.0,1573648.5,96891.0,1670539.5
+2025,Terceira,Praia da Vitória,2004302,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,6,0.0,130156.25,22968.75,153125.0
+2025,Terceira,Praia da Vitória,2004302,VII.1,POSEI (Reg. UE 228/2013),POSEI,694,5791116.95,0.0,0.0,5791116.95
+2025,Terceira,Praia da Vitória,2004302,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,2,0.0,-3729.71,-658.2,-4387.91
+2025,Graciosa,Santa Cruz da Graciosa,2004401,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,2786.45,0.0,0.0,2786.45
+2025,Graciosa,Santa Cruz da Graciosa,2004401,IV.7,Apoio ao setor vitivinícola,Mercados agrícolas,1,1201.83,0.0,0.0,1201.83
+2025,Graciosa,Santa Cruz da Graciosa,2004401,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,78,0.0,123431.26,21781.94,145213.2
+2025,Graciosa,Santa Cruz da Graciosa,2004401,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,265,0.0,446409.91,78777.67,525187.58
+2025,Graciosa,Santa Cruz da Graciosa,2004401,VI.15,Agroambiente e clima,Desenvolvimento rural,1,0.0,-54.4,-9.6,-64.0
+2025,Graciosa,Santa Cruz da Graciosa,2004401,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,6,0.0,178053.45,31421.19,209474.64
+2025,Graciosa,Santa Cruz da Graciosa,2004401,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,8,0.0,383536.53,16012.96,399549.49
+2025,Graciosa,Santa Cruz da Graciosa,2004401,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,2,0.0,42245.0,7455.0,49700.0
+2025,Graciosa,Santa Cruz da Graciosa,2004401,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,1,0.0,552.51,97.49,650.0
+2025,Graciosa,Santa Cruz da Graciosa,2004401,VII.1,POSEI (Reg. UE 228/2013),POSEI,243,1697872.84,0.0,0.0,1697872.84
+2025,São Jorge,Calheta,2004501,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,2,1459.82,0.0,0.0,1459.82
+2025,São Jorge,Calheta,2004501,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,230,0.0,923948.2,163049.64,1086997.84
+2025,São Jorge,Calheta,2004501,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,295,0.0,815244.41,143866.09,959110.5
+2025,São Jorge,Calheta,2004501,VI.15,Agroambiente e clima,Desenvolvimento rural,2,0.0,-1325.44,-233.89,-1559.33
+2025,São Jorge,Calheta,2004501,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,2,0.0,25255.79,4456.9,29712.69
+2025,São Jorge,Calheta,2004501,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,8,0.0,596603.59,23193.92,619797.51
+2025,São Jorge,Calheta,2004501,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,4,0.0,115302.5,20347.5,135650.0
+2025,São Jorge,Calheta,2004501,VII.1,POSEI (Reg. UE 228/2013),POSEI,324,2442647.04,0.0,0.0,2442647.04
+2025,São Jorge,Velas,2004502,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1199.28,0.0,0.0,1199.28
+2025,São Jorge,Velas,2004502,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,182,0.0,1138677.85,200942.91,1339620.76
+2025,São Jorge,Velas,2004502,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,221,0.0,765115.12,135019.67,900134.79
+2025,São Jorge,Velas,2004502,VI.15,Agroambiente e clima,Desenvolvimento rural,1,0.0,-168.84,-29.8,-198.64
+2025,São Jorge,Velas,2004502,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,6,0.0,182367.57,32182.5,214550.07
+2025,São Jorge,Velas,2004502,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,14,0.0,1237036.35,153520.73,1390557.08
+2025,São Jorge,Velas,2004502,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,12,0.0,334050.0,58950.0,393000.0
+2025,São Jorge,Velas,2004502,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,1,0.0,41608.35,7342.65,48951.0
+2025,São Jorge,Velas,2004502,VII.1,POSEI (Reg. UE 228/2013),POSEI,238,2213916.2,0.0,0.0,2213916.2
+2025,São Jorge,Velas,2004502,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,1,0.0,-167.03,-29.47,-196.5
+2025,Pico,Lajes do Pico,2004601,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,1,938.12,0.0,0.0,938.12
+2025,Pico,Lajes do Pico,2004601,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,1,-510.0,0.0,0.0,-510.0
+2025,Pico,Lajes do Pico,2004601,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1217.52,0.0,0.0,1217.52
+2025,Pico,Lajes do Pico,2004601,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,223,0.0,1165433.89,205727.86,1371161.75
+2025,Pico,Lajes do Pico,2004601,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,264,0.0,832183.83,146855.63,979039.46
+2025,Pico,Lajes do Pico,2004601,VI.15,Agroambiente e clima,Desenvolvimento rural,4,0.0,-915.42,-161.54,-1076.96
+2025,Pico,Lajes do Pico,2004601,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,1,0.0,488.71,129.93,618.64
+2025,Pico,Lajes do Pico,2004601,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,6,0.0,12365.84,2182.16,14548.0
+2025,Pico,Lajes do Pico,2004601,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,212676.3,37531.12,250207.42
+2025,Pico,Lajes do Pico,2004601,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,18,0.0,533347.96,26553.74,559901.7
+2025,Pico,Lajes do Pico,2004601,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,4,0.0,90865.0,16035.0,106900.0
+2025,Pico,Lajes do Pico,2004601,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,2,0.0,3387.68,597.82,3985.5
+2025,Pico,Lajes do Pico,2004601,VII.1,POSEI (Reg. UE 228/2013),POSEI,243,2072458.08,0.0,0.0,2072458.08
+2025,Pico,Madalena,2004602,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,2,5618.56,0.0,0.0,5618.56
+2025,Pico,Madalena,2004602,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,2085.4,0.0,0.0,2085.4
+2025,Pico,Madalena,2004602,I.6,Apoio associado ao rendimento,Pagamentos diretos,1,4547.2,0.0,0.0,4547.2
+2025,Pico,Madalena,2004602,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,3,-10319.12,0.0,0.0,-10319.12
+2025,Pico,Madalena,2004602,III.3,Setor vitivinícola,Mercados agrícolas,2,149192.47,0.0,0.0,149192.47
+2025,Pico,Madalena,2004602,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1248.3,0.0,0.0,1248.3
+2025,Pico,Madalena,2004602,IV.7,Apoio ao setor vitivinícola,Mercados agrícolas,6,22178.05,0.0,0.0,22178.05
+2025,Pico,Madalena,2004602,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,443,0.0,1724796.43,304411.22,2029207.65
+2025,Pico,Madalena,2004602,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,421,0.0,1033755.86,182426.94,1216182.8
+2025,Pico,Madalena,2004602,VI.15,Agroambiente e clima,Desenvolvimento rural,8,0.0,-9686.93,-376.95,-10063.88
+2025,Pico,Madalena,2004602,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,2,0.0,291.87,83.68,375.55
+2025,Pico,Madalena,2004602,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,3,0.0,23956.06,4227.53,28183.59
+2025,Pico,Madalena,2004602,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,4,0.0,92746.72,16367.06,109113.78
+2025,Pico,Madalena,2004602,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,25,0.0,707196.32,63493.19,770689.51
+2025,Pico,Madalena,2004602,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,5,0.0,101490.0,17910.0,119400.0
+2025,Pico,Madalena,2004602,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,1,0.0,1517.68,267.82,1785.5
+2025,Pico,Madalena,2004602,VII.1,POSEI (Reg. UE 228/2013),POSEI,221,2754840.54,0.0,0.0,2754840.54
+2025,Pico,Madalena,2004602,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,1,0.0,-4946.41,-872.93,-5819.34
+2025,Pico,São Roque do Pico,2004603,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,1,759.43,0.0,0.0,759.43
+2025,Pico,São Roque do Pico,2004603,III.3,Setor vitivinícola,Mercados agrícolas,1,3297.0,0.0,0.0,3297.0
+2025,Pico,São Roque do Pico,2004603,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,1507.08,0.0,0.0,1507.08
+2025,Pico,São Roque do Pico,2004603,IV.7,Apoio ao setor vitivinícola,Mercados agrícolas,1,2337.6,0.0,0.0,2337.6
+2025,Pico,São Roque do Pico,2004603,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,167,0.0,675649.12,119265.07,794914.19
+2025,Pico,São Roque do Pico,2004603,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,177,0.0,492684.19,86943.94,579628.13
+2025,Pico,São Roque do Pico,2004603,VI.15,Agroambiente e clima,Desenvolvimento rural,3,0.0,17099.02,3017.48,20116.5
+2025,Pico,São Roque do Pico,2004603,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,2,0.0,-23.74,87.64,63.9
+2025,Pico,São Roque do Pico,2004603,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,3,0.0,3615.91,638.09,4254.0
+2025,Pico,São Roque do Pico,2004603,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,12549.21,2214.57,14763.78
+2025,Pico,São Roque do Pico,2004603,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,12,0.0,540528.72,59463.69,599992.41
+2025,Pico,São Roque do Pico,2004603,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,1,0.0,7182.5,1267.5,8450.0
+2025,Pico,São Roque do Pico,2004603,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,5,0.0,18305.47,3230.36,21535.83
+2025,Pico,São Roque do Pico,2004603,VII.1,POSEI (Reg. UE 228/2013),POSEI,138,1066147.77,0.0,0.0,1066147.77
+2025,Pico,São Roque do Pico,2004603,X.2,Desenvolvimento rural: períodos de programação anteriores,Desenvolvimento rural,2,0.0,-1924.26,-339.53,-2263.79
+2025,Faial,Horta,2004701,I.1,Apoio ao rendimento de base para garantir a sustentabilidade,Pagamentos diretos,3,1847.86,0.0,0.0,1847.86
+2025,Faial,Horta,2004701,I.2,Apoio redistributivo complementar ao rendimento,Pagamentos diretos,1,1313.8,0.0,0.0,1313.8
+2025,Faial,Horta,2004701,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,2905.29,0.0,0.0,2905.29
+2025,Faial,Horta,2004701,IV.7,Apoio ao setor vitivinícola,Mercados agrícolas,2,13076.8,0.0,0.0,13076.8
+2025,Faial,Horta,2004701,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,187,0.0,657803.05,116316.98,774120.03
+2025,Faial,Horta,2004701,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,576,0.0,1223800.09,215963.39,1439763.48
+2025,Faial,Horta,2004701,VI.15,Agroambiente e clima,Desenvolvimento rural,2,0.0,-3622.31,-313.14,-3935.45
+2025,Faial,Horta,2004701,VI.18,Zonas sujeitas a condicionantes naturais (PRORURAL+),Desenvolvimento rural,4,0.0,1491.05,489.9,1980.95
+2025,Faial,Horta,2004701,VI.23,Artigo 40.º do Reg. 1305/2013 (código do IFAP),Desenvolvimento rural,1,0.0,-3860.27,-681.22,-4541.49
+2025,Faial,Horta,2004701,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,7,0.0,205585.82,36279.85,241865.67
+2025,Faial,Horta,2004701,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,24,0.0,853721.98,59324.54,913046.52
+2025,Faial,Horta,2004701,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,7,0.0,171105.0,30195.0,201300.0
+2025,Faial,Horta,2004701,VI.8,Investimentos em zonas florestais,Desenvolvimento rural,7,0.0,8356.73,1474.71,9831.44
+2025,Faial,Horta,2004701,VII.1,POSEI (Reg. UE 228/2013),POSEI,546,3006409.5,0.0,0.0,3006409.5
+2025,Flores,Lajes das Flores,2004801,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,66,0.0,322510.31,56913.47,379423.78
+2025,Flores,Lajes das Flores,2004801,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,82,0.0,275596.42,48634.48,324230.9
+2025,Flores,Lajes das Flores,2004801,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,1,0.0,39910.91,0.0,39910.91
+2025,Flores,Lajes das Flores,2004801,VII.1,POSEI (Reg. UE 228/2013),POSEI,83,512781.61,0.0,0.0,512781.61
+2025,Flores,Santa Cruz das Flores,2004802,II.12,"Recuperações (condicionalidade, fraude ou irregularidades)",Pagamentos diretos,1,-551.25,0.0,0.0,-551.25
+2025,Flores,Santa Cruz das Flores,2004802,IV.3,"Regime de frutos, produtos hortícolas e leite nas escolas",Mercados agrícolas,1,246.24,0.0,0.0,246.24
+2025,Flores,Santa Cruz das Flores,2004802,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,67,0.0,247602.26,43694.45,291296.71
+2025,Flores,Santa Cruz das Flores,2004802,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,113,0.0,302696.27,53416.73,356113.0
+2025,Flores,Santa Cruz das Flores,2004802,VI.20,Serviços silvoambientais e conservação das florestas,Desenvolvimento rural,2,0.0,11208.11,1977.89,13186.0
+2025,Flores,Santa Cruz das Flores,2004802,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,99309.66,17525.23,116834.89
+2025,Flores,Santa Cruz das Flores,2004802,VI.4,Investimentos em ativos físicos,Desenvolvimento rural,1,0.0,98342.5,5107.5,103450.0
+2025,Flores,Santa Cruz das Flores,2004802,VI.6,Desenvolvimento das explorações agrícolas e das empresas,Desenvolvimento rural,3,0.0,80240.0,14160.0,94400.0
+2025,Flores,Santa Cruz das Flores,2004802,VII.1,POSEI (Reg. UE 228/2013),POSEI,121,613159.54,0.0,0.0,613159.54
+2025,Corvo,Corvo,2004901,V.1,"Compromissos ambientais, climáticos e outros de gestão",Desenvolvimento rural,23,0.0,79438.9,14018.6,93457.5
+2025,Corvo,Corvo,2004901,V.2,Condicionantes naturais ou outras condicionantes específicas,Desenvolvimento rural,29,0.0,94028.73,16593.27,110622.0
+2025,Corvo,Corvo,2004901,VI.15,Agroambiente e clima,Desenvolvimento rural,1,0.0,-482.89,-85.21,-568.1
+2025,Corvo,Corvo,2004901,VI.24,LEADER (desenvolvimento local de base comunitária),Desenvolvimento rural,1,0.0,19002.71,3353.42,22356.13
+2025,Corvo,Corvo,2004901,VII.1,POSEI (Reg. UE 228/2013),POSEI,30,129611.85,0.0,0.0,129611.85

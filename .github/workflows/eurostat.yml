@@ -1,0 +1,50 @@
+name: Weekly Eurostat update (Azores and other regions)
+
+# Reads, with bot/eurostat.py, ~20 Eurostat regional tables (NUTS 2) for
+# the Azores, the other outermost regions, Portugal, the EU and other
+# islands into data/eurostat.csv (/dados/eurostat/). Eurostat updates
+# regional tables a few times a year; weekly is enough.
+#
+# The run fails, and GitHub emails, when a table cannot be read (its old
+# rows are kept and the others are still committed).
+
+on:
+  schedule:
+    - cron: '53 6 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Read the Eurostat tables
+        id: fetch
+        run: python3 bot/eurostat.py data
+        continue-on-error: true
+      - name: Commit and push if changed
+        id: commit
+        uses: ./.github/actions/commit-data
+        with:
+          paths: data/eurostat.csv
+          message: "Eurostat weekly update"
+      - name: Fail if a table could not be read
+        if: steps.fetch.outcome == 'failure'
+        run: exit 1
+
+  deploy-site:
+    needs: fetch
+    if: always() && needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

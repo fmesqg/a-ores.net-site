@@ -32,6 +32,9 @@ secao: dados
 | [prr_entidades.csv](/dados/prr_entidades.csv) | as entidades desses projetos: NIF, nome, papel (beneficiário final, beneficiário intermediário, parceiro), sede, CAE, valor contratado e pago | <span data-meta="prr_entidades"></span> |
 | [kohesio_projetos.csv](/dados/kohesio_projetos.csv) | **em construção:** os projetos dos fundos de coesão (2014-2020 e 2021-2027) que o Kohesio situa nos Açores: programa, período, fundo, custo total, apoio da UE, datas e uma nota quando a localização é duvidosa | <span data-meta="kohesio_projetos"></span> |
 | [kohesio_beneficiarios.csv](/dados/kohesio_beneficiarios.csv) | **em construção:** os beneficiários desses projetos, segundo o Kohesio, com o número de projetos e os totais (sem NIF; incluem projetos mal localizados) | <span data-meta="kohesio_beneficiarios"></span> |
+| [ifap_pagamentos.csv](/dados/ifap_pagamentos.csv) | IFAP: pagamentos da PAC (FEAGA, FEADER e cofinanciamento, incluindo o POSEI) a cada beneficiário com morada nos Açores, por medida: nome, ilha, concelho, código postal, valores. Só os dois exercícios que o IFAP publica | <span data-meta="ifap_pagamentos"></span> |
+| [ifap_resumo.csv](/dados/ifap_resumo.csv) | os mesmos pagamentos por exercício, concelho e medida, com o número de beneficiários, sem nomes; guarda todos os exercícios lidos | <span data-meta="ifap_resumo"></span> |
+| [eurostat.csv](/dados/eurostat.csv) | um valor por linha, do Eurostat (NUTS 2): os Açores, as outras regiões ultraperiféricas, Portugal, a UE e outras ilhas europeias em PIB, rendimento, emprego, educação, pobreza, população e saúde, com a marca do Eurostat (provisório, pouco fiável…) | <span data-meta="eurostat"></span> |
 | [contratos.db](/dados/contratos.db), [parlamento.db](/dados/parlamento.db), [financas.db](/dados/financas.db), [estatisticas.db](/dados/estatisticas.db), [empresas.db](/dados/empresas.db), [fundos.db](/dados/fundos.db) | as tabelas acima em SQLite, uma base por tema, com pesquisa de texto; a tabela `base` tem mais colunas (NIF, CPV, preço base e preço efetivo, propostas, local de execução, fundamentação) | ver abaixo |
 
 Os CSV estão em UTF-8 e abrem diretamente no Excel, no LibreOffice ou no
@@ -64,6 +67,12 @@ Os `prr_*.csv` e `kohesio_*.csv` são relidos uma vez por semana, dos dados
 abertos da Recuperar Portugal e da API do Kohesio, por
 [`bot/fundos.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/fundos.py)
 (ver [Fundos europeus](/financas/fundos-europeus/)).
+Os `ifap_*.csv` vêm da lista anual de beneficiários do
+[IFAP](https://www.ifap.pt/portal/transparency), relida uma vez por semana
+por [`bot/ifap.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/ifap.py).
+O `eurostat.csv` é relido uma vez por semana da API do Eurostat por
+[`bot/eurostat.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/eurostat.py)
+(ver [Os Açores na Europa](/dados/eurostat/)).
 Última geração: <span data-meta="gerado">{{ site.time | date: "%Y-%m-%d %H:%M %Z" }}</span>.
 <script>
 fetch("/dados/meta.json?v={{ site.time | date: '%s' }}").then(function (r) { return r.json(); }).then(function (m) {

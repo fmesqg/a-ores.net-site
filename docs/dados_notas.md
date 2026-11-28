@@ -36,6 +36,17 @@ secao: dados
   (2014-2020 e 2021-2027) que o <a href="https://kohesio.ec.europa.eu/">Kohesio</a>,
   da Comissão Europeia, situa nos Açores. A parte do Kohesio está em
   construção. Ver <a href="/financas/fundos-europeus/">Fundos europeus</a>.</dd>
+  <dt>PAC e POSEI (IFAP)</dt>
+  <dd>A lista anual de beneficiários da PAC que o
+  <a href="https://www.ifap.pt/portal/transparency">IFAP</a> publica por
+  obrigação europeia, só com as moradas nos Açores. Os nomes ficam online
+  dois anos, no IFAP e aqui; os totais por concelho e medida ficam para
+  sempre. Ver <a href="/financas/fundos-europeus/#pac">Fundos europeus</a>.</dd>
+  <dt>Eurostat</dt>
+  <dd>Indicadores regionais (NUTS 2) do
+  <a href="https://ec.europa.eu/eurostat/web/regions/database">Eurostat</a>
+  para os Açores, as outras regiões ultraperiféricas, Portugal, a UE e
+  outras ilhas. Ver <a href="/dados/eurostat/">Os Açores na Europa</a>.</dd>
 </dl>
 
 <details class="termos">

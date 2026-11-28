@@ -70,11 +70,21 @@ and writes, under docs/dados/:
   kohesio_projetos.csv, kohesio_beneficiarios.csv  cohesion fund projects
              that Kohesio places in the Azores, and its beneficiaries
              (work in progress, see bot/fundos.py): data/kohesio_*.csv
+  ifap_pagamentos.csv  CAP payments (FEAGA, FEADER, POSEI) to each
+             beneficiary with an Azorean address, per measure, for the
+             financial years the IFAP still publishes (two):
+             data/ifap_pagamentos.csv (bot/ifap.py)
+  ifap_resumo.csv  the same per concelho and measure, every year read
+  eurostat.csv  Eurostat regional indicators (NUTS 2) for the Azores, the
+             other outermost regions, Portugal, the EU and other islands:
+             data/eurostat.csv (bot/eurostat.py)
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json,
 resumo.json (the numbers on /introducao/ and /dados/srea/), fundos.json
-(/financas/fundos-europeus/), sper.json
+(/financas/fundos-europeus/, with the CAP payments), eurostat.json (the
+table on /dados/eurostat/; the series for its chart go to
+docs/dados/eurostat.json), sper.json
 (/dados/sper/), credito.json (/dados/credito/), maiores.json (/dados/maiores-empresas/) and publico.json
 (/economia/setor-publico/ and the public/private split on /economia/).
 
@@ -106,6 +116,7 @@ try:  # imported as bot.datasets (tests)
     from .dados.comum import write
     from .dados.credito import write_credito
     from .dados.empresas import write_economia
+    from .dados.europa import write_eurostat
     from .dados.fundos import write_fundos
     from .dados.impostos import write_irc, write_irs
     from .dados.parlamento import (
@@ -130,6 +141,7 @@ except ImportError:  # run as python3 bot/datasets.py
     from dados.comum import write
     from dados.credito import write_credito
     from dados.empresas import write_economia
+    from dados.europa import write_eurostat
     from dados.fundos import write_fundos
     from dados.impostos import write_irc, write_irs
     from dados.parlamento import (
@@ -192,6 +204,9 @@ def main(docs: Path) -> dict:
         "prr_entidades",
         "kohesio_projetos",
         "kohesio_beneficiarios",
+        "ifap_pagamentos",
+        "ifap_resumo",
+        "eurostat",
         "dgal_contas",
         "dgal_divida",
         "dgal_pmp",
@@ -215,7 +230,7 @@ def main(docs: Path) -> dict:
         when = next(
             (
                 cols.index(c)
-                for c in ("data", "conta", "ano", "inicio")
+                for c in ("data", "conta", "ano", "exercicio", "inicio")
                 if c in cols
             ),
             None,
@@ -233,6 +248,8 @@ def main(docs: Path) -> dict:
                 json.dumps(srea_json(cols, rows), ensure_ascii=False),
                 encoding="utf-8",
             )
+        elif name == "eurostat":
+            write_eurostat(docs, cols, rows)
         elif name in ("beo", "tdc"):
             latest = beo_latest if name == "beo" else tdc_latest
             info["ultimo"] = latest(cols, rows)
