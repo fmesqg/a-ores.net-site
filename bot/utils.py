@@ -102,6 +102,27 @@ def euros_pt(value: float) -> str:
     return f"{value:,.2f} €".replace(",", " ").replace(".", ",")
 
 
+def euros_curto(value: float) -> str:
+    """1234567.8 -> '1 234 568 €': the amount at the head of an item."""
+    return f"{value:,.0f} €".replace(",", " ")
+
+
+def base_price(text: str) -> float:
+    """BASE's '167.627,71 €' -> 167627.71 (0 when unreadable)."""
+    num = re.sub(r"[^\d,]", "", text or "").replace(",", ".")
+    try:
+        return float(num)
+    except ValueError:
+        return 0.0
+
+
+def item_line(title: str, url: str, value: float | None) -> str:
+    """'* 1 234 € · [title](url)': the amount first, so a day sorted by
+    amount reads down the left edge."""
+    head = f"{euros_curto(value)} · " if value else ""
+    return f"* {head}[{title}]({url})"
+
+
 def write_update(web_data: WebData):
     if not isinstance(web_data.alra, FetchError):
         write_collection(
@@ -205,7 +226,11 @@ def markdown_joraa(entries):
     def md(entry: dict):
         amount = joraa_amount(entry)
         lines = [
-            f"* [{entry['sumario'].strip()}]({url_entry_base}{entry['id']})",
+            item_line(
+                entry["sumario"].strip(),
+                f"{url_entry_base}{entry['id']}",
+                amount[0] if amount else None,
+            ),
             f"  * {entry['humanId']}",
         ]
         if amount:
@@ -232,8 +257,13 @@ def markdown_base(entries):
     )
 
     def md(entry):
-        md = f"* [{entry['objectBriefDescription'].strip()}]({url_entry_base}{entry['id']})\n"  # noqa: E501
-        md += f"  * Preço contratual: {entry['initialContractualPrice']}\n"
+        price = base_price(entry["initialContractualPrice"])
+        md = item_line(
+            entry["objectBriefDescription"].strip(),
+            f"{url_entry_base}{entry['id']}",
+            price,
+        )
+        md += f"\n  * Preço contratual: {entry['initialContractualPrice']}\n"
         md += f"  * Adjudicante: {entry['contracting']}\n"
         md += f"  * Adjudicatário: {entry['contracted']}\n"
         md += (
@@ -241,9 +271,10 @@ def markdown_base(entries):
         )
         md += f"  * Data da assinatura: {entry['signingDate']}\n"
 
-        return md
+        return price, md
 
-    if body := "".join([md(entry) for entry in entries]):
+    ordered = sorted((md(e) for e in entries), key=lambda t: -t[0])
+    if body := "".join(text for _, text in ordered):
         return start + body
 
 

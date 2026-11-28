@@ -9,6 +9,7 @@ from bot.utils import (
     compute_delta_ids,
     euros_pt,
     get_prev_state,
+    item_line,
     joraa_amount,
     markdown_base,
     markdown_joraa,
@@ -256,6 +257,8 @@ def test_markdown_joraa():
     port_pos = result.index("Portaria")
     res_pos = result.index("Resolução")
     assert port_pos < res_pos
+    # the amount leads the item line
+    assert "* 1 000 € · [Portaria sobre 1.000,00 €](" in result
 
 
 def test_markdown_joraa_empty():
@@ -279,8 +282,37 @@ def test_markdown_base():
     ]
     result = markdown_base(entries)
     assert "## Contratos publicados ontem" in result
-    assert "Serviço X" in result
+    assert "* 1 000 € · [Serviço X](" in result
     assert "Câmara" in result
+
+
+def test_markdown_base_sorted_by_price():
+    def c(i, price):
+        return {
+            "id": i,
+            "objectBriefDescription": f"C{i}",
+            "initialContractualPrice": price,
+            "contracting": "A",
+            "contracted": "B",
+            "contractingProcedureType": "Ajuste Direto",
+            "signingDate": "01-01-2026",
+        }
+
+    result = markdown_base([c(1, "999,99 €"), c(2, "1.234.567,80 €")])
+    assert "* 1 234 568 € · [C2]" in result
+    assert result.index("[C2]") < result.index("[C1]")
+
+
+def test_item_line_parsed_by_datasets():
+    from bot.dados.comum import ITEM
+
+    m = ITEM.match(item_line("Título [x] · y", "https://e.pt/1", 12.5))
+    assert (
+        m and m["title"] == "Título [x] · y" and m["url"] == "https://e.pt/1"
+    )
+    assert ITEM.match("* [Sem montante](https://e.pt/2)")["title"] == (
+        "Sem montante"
+    )
 
 
 def test_markdown_base_empty():

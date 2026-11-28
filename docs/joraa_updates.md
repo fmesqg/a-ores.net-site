@@ -9,7 +9,7 @@ permalink: /joraa_updates
 
 {% include joraa-atraso.html %}
 
-<p class="arquivo">Os últimos 90 dias. Os dias anteriores estão na <a href="/dados/#fonte=joraa">pesquisa</a> e em <a href="/dados/descarregar/">descarregar dados</a>.</p>
+<p class="arquivo">Os últimos 90 dias. Os dias anteriores estão na <a href="/dados/#fonte=joraa">pesquisa</a> e em <a href="/dados/descarregar/">descarregar dados</a>. Cada ato começa pelo montante calculado pelo açores.net ("soma" nos atos lidos até 27/11/2026, que somavam todos os valores: ver as <a href="/dados/notas/">notas</a>), do maior para o menor.</p>
 
 {% assign full_updates = site.joraa_updates | sort: "date" | reverse %}
 {% for update in full_updates limit: 30 %}  <p>

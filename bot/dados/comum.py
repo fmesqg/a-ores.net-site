@@ -5,7 +5,12 @@ import re
 import unicodedata
 from pathlib import Path
 
-ITEM = re.compile(r"^\* \[(?P<title>.*)\]\((?P<url>[^)\s]+)\)\s*$")
+# "* [title](url)", since November 2026 with the amount first on JORAA and
+# BASE pages: "* 1 234 € · [title](url)" (the exact value stays in a
+# sub-bullet, which is what the datasets read)
+ITEM = re.compile(
+    r"^\* (?:[^\[]*? · )?\[(?P<title>.*)\]\((?P<url>[^)\s]+)\)\s*$"
+)
 SUB = re.compile(r"^\s{2,}\* (?P<text>.+)$")
 LINK = re.compile(r"\[(?P<label>[^\]]*)\]\((?P<url>[^)\s]+)\)")
 DMY = re.compile(r"(\d{1,2})[/-](\d{1,2})[/-](\d{4})")

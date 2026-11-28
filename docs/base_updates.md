@@ -7,7 +7,7 @@ permalink: /base_updates
 
 ## [BASE RSS feed](/rss/base.xml)
 
-<p class="arquivo">Os últimos 90 dias. Os dias anteriores estão na <a href="/dados/#fonte=base">pesquisa</a> e em <a href="/dados/descarregar/">descarregar dados</a>.</p>
+<p class="arquivo">Os últimos 90 dias. Os dias anteriores estão na <a href="/dados/#fonte=base">pesquisa</a> e em <a href="/dados/descarregar/">descarregar dados</a>. Cada contrato começa pelo preço contratual, do maior para o menor.</p>
 
 {% assign full_updates = site.base_updates | sort: "date" | reverse %}
 {% for update in full_updates limit: 30 %}  <p>
