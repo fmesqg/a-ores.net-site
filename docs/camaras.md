@@ -4,7 +4,7 @@ nav_title: Câmaras municipais
 layout: default
 permalink: /financas/camaras/
 secao: financas
-description: Quanto recebe e gasta cada uma das 19 câmaras municipais dos Açores por habitante, ao lado do rendimento, do turismo, do RSI e dos contratos públicos do mesmo concelho, e quanto das suas compras aparece no BASE.
+description: Quanto recebe e gasta cada uma das 19 câmaras municipais dos Açores por habitante, ao lado do rendimento, do turismo, do RSI e dos contratos públicos do mesmo concelho, quanto das suas compras aparece no BASE, e a dívida e o prazo de pagamento de cada uma.
 ---
 {%- assign c = site.data.camaras -%}
 {% include financas-nav.html %}
@@ -188,6 +188,62 @@ ou contratos sem o município como entidade adjudicante.</p>
 </ul>
 {% endif %}
 
+{%- assign v = c.divida -%}
+{% if v.concelhos %}
+{%- assign v0 = v.anos | first -%}
+<h2 id="divida">Dívida e prazo de pagamento</h2>
+
+<p>A lei das finanças locais (Lei 73/2013, art.º 52.º) limita a dívida de
+cada município a 1,5 vezes a média da receita corrente dos três anos
+anteriores. Em {{ v.ano }}, {% if v.acima.size > 0 %}{{ v.acima.size }}
+{% if v.acima.size == 1 %}câmara estava{% else %}câmaras estavam{% endif %}
+acima do limite: <strong>{{ v.acima | join: " e " }}</strong>.{% else %}nenhuma
+câmara estava acima do limite.{% endif %} A dívida que conta para o limite
+somava {{ v.divida_m_t }} M€ nas 19 câmaras.</p>
+
+<div class="tabela-scroll">
+<table class="sper ordenavel">
+<thead><tr>
+  <th scope="col">Concelho</th>
+  <th scope="col" class="n" data-tipo="n">Dívida {{ v.ano }} (M€)</th>
+  <th scope="col" class="n" data-tipo="n">Limite (M€)</th>
+  <th scope="col" class="n" data-tipo="n">Dívida / limite</th>
+  <th scope="col" class="n" data-tipo="n">Por habitante (€)</th>
+  <th scope="col" class="n" data-tipo="n">Anos acima, {{ v0 }}-{{ v.ano }}</th>
+  <th scope="col" class="n" data-tipo="n">Prazo de pagamento (dias)</th>
+  <th scope="col" class="n" data-tipo="n">Prazo máximo desde 2019</th>
+</tr></thead>
+<tbody>
+{%- for d in v.concelhos %}
+<tr><th scope="row">{{ d.nome }}{% if d.ilha != d.nome %} <small>{{ d.ilha }}</small>{% endif %}</th><td class="n" data-v="{{ d.divida_m }}">{{ d.divida_m_t }}</td><td class="n" data-v="{{ d.limite_m }}">{{ d.limite_m_t }}</td><td class="n{% if d.pct > 100 %} acima{% endif %}" data-v="{{ d.pct }}">{{ d.pct_t }} %</td><td class="n" data-v="{{ d.divida_hab }}">{{ d.divida_hab_t }}</td><td class="n" data-v="{{ d.anos_acima }}">{{ d.anos_acima }}</td><td class="n" data-v="{{ d.pmp }}">{{ d.pmp }}</td><td class="n" data-v="{{ d.pmp_max }}">{{ d.pmp_max }} <small>{{ d.pmp_max_data | date: "%m/%Y" }}</small></td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+
+<ul class="notas">
+  <li>Dados da <a href="https://portalautarquico.dgal.gov.pt/pt-PT/financas-locais/endividamento/municipios/evolucao">DGAL</a>
+  (Portal Autárquico), com os números que as câmaras reportam. A dívida que
+  conta para o limite inclui a dos serviços municipalizados, das empresas
+  municipais e da parte da câmara nas associações de municípios, e exclui as
+  dívidas não orçamentais e as exceções da lei e do Orçamento do Estado.</li>
+  <li>Prazo médio de pagamentos a fornecedores no fim de
+  {{ v.pmp_data | date: "%m/%Y" }}, também da
+  <a href="https://portalautarquico.dgal.gov.pt/pt-PT/financas-locais/endividamento/municipios/prazo-medio-de-pagamentos">DGAL</a>
+  (trimestral). A DGAL publica todos os trimestres a lista dos municípios
+  com prazo acima de 60 dias.</li>
+  <li>Por habitante: cálculo do açores.net, com a população do INE.</li>
+  {%- for s in v.sem_dados %}
+  <li>{{ s.nome }}: sem contas validadas em {{ s.anos | join: " e " }}; a DGAL
+  deixou a câmara fora do apuramento {% if s.anos.size > 1 %}desses anos{% else %}desse ano{% endif %}.</li>
+  {%- endfor %}
+  <li>Todos os anos, e as contas de cada câmara desde 2020 (receita e despesa
+  por rubrica, balanço, demonstração de resultados), em
+  <a href="/dados/descarregar/">descarregar dados</a>
+  (<code>dgal_divida</code>, <code>dgal_pmp</code>, <code>dgal_contas</code>).</li>
+</ul>
+{% endif %}
+
 <h2 id="metodo">Como se calcula</h2>
 
 <dl class="metodo">
@@ -228,6 +284,7 @@ table.ordenavel thead th[aria-sort="ascending"]::after { content: " ▲"; }
 .barra-col { width: 12%; min-width: 4em; }
 .barra { display: block; height: .8em; margin-top: .25em; background: #268bd2; border-radius: 0 4px 4px 0; }
 .barra.ref { background: var(--s1); }
+table.sper td.acima { color: #dc322f; font-weight: bold; }
 .dispersao { margin: .5em 0 1em; max-width: 44em; }
 .dispersao svg { width: 100%; height: auto; overflow: visible; }
 .dispersao .grelha { stroke: rgba(147,161,161,.35); stroke-width: 1; }

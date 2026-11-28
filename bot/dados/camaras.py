@@ -247,6 +247,87 @@ def compras_base(
     }
 
 
+def divida_pmp(
+    divida: tuple[list, list] | None,
+    pmp: tuple[list, list] | None,
+    ine: tuple[list, list] | None = None,
+) -> dict:
+    """Each câmara's debt against its legal limit (DGAL, latest year and the
+    series since 2014) and its average payment time (PMP, latest quarter and
+    the highest since 2020), for /financas/camaras/#divida."""
+    if not divida or not divida[1]:
+        return {}
+    rows = _dicts(divida)
+    anos = sorted({r["ano"] for r in rows})
+    ano = anos[-1]
+    ilhas, pop = {}, {}
+    for r in _dicts(ine) if ine else []:
+        if r["nivel"] == "Concelho":
+            ilhas[r["geocod"]] = r["ilha"]
+            if r["varcd"] == CAMARAS_IND["pop"] and r["valor"]:
+                pop[(r["geocod"], r["periodo"])] = float(r["valor"])
+    tempos: dict = {}
+    for r in _dicts(pmp) if pmp else []:
+        tempos.setdefault(r["geocod"], []).append((r["data"], int(r["dias"])))
+    ult_pmp = max((d for v in tempos.values() for d, _ in v), default="")
+    por: dict = {}
+    for r in rows:
+        por.setdefault(r["geocod"], {})[r["ano"]] = r
+    lista = []
+    for geo, serie in por.items():
+        r = serie.get(ano)
+        if not r:
+            continue
+        lim, div = float(r["limite"]), float(r["divida"])
+        d = {
+            "nome": r["municipio"],
+            "ilha": ilhas.get(geo, ""),
+            "limite_m": round(lim / 1e6, 1),
+            "divida_m": round(div / 1e6, 1),
+            "pct": round(100 * div / lim) if lim else None,
+            "serie": [
+                (
+                    {"ano": a, "pct": round(float(serie[a]["pct_limite"]))}
+                    if a in serie and serie[a]["pct_limite"]
+                    else {"ano": a, "pct": None}
+                )
+                for a in anos
+            ],
+        }
+        d["anos_acima"] = sum(
+            1 for x in d["serie"] if x["pct"] is not None and x["pct"] > 100
+        )
+        p = pop.get((geo, ano)) or max(
+            (v for (g, _), v in pop.items() if g == geo), default=0
+        )
+        if p:
+            d["divida_hab"] = round(div / p)
+        t = sorted(tempos.get(geo, []))
+        if t:
+            d["pmp"] = t[-1][1] if t[-1][0] == ult_pmp else None
+            m = max(t, key=lambda x: x[1])
+            d["pmp_max"], d["pmp_max_data"] = m[1], m[0]
+        lista.append(d)
+    lista.sort(key=lambda d: -(d["pct"] or 0))
+    return {
+        "ano": ano,
+        "anos": anos,
+        "concelhos": lista,
+        "acima": [d["nome"] for d in lista if (d["pct"] or 0) > 100],
+        "divida_m": round(sum(d["divida_m"] for d in lista), 1),
+        "pmp_data": ult_pmp,
+        # years a câmara sent no validated accounts (marked ** by the DGAL)
+        "sem_dados": [
+            {
+                "nome": next(iter(por[g].values()))["municipio"],
+                "anos": [a for a in anos if a not in por[g]],
+            }
+            for g in sorted(por)
+            if len(por[g]) < len(anos)
+        ],
+    }
+
+
 def _ponto(x: float, y: float, nome: str, rotulos: dict) -> dict:
     p = {"x": x, "y": y, "nome": nome, "rotulo": nome in rotulos}
     if nome in rotulos:
@@ -302,6 +383,11 @@ def write_camaras(docs: Path, tables: dict) -> None:
     """docs/_data/camaras.json for /financas/camaras/."""
     base = tables.get("base")
     data = camaras_data(tables["ine"], base) if "ine" in tables else {}
+    d = divida_pmp(
+        tables.get("dgal_divida"), tables.get("dgal_pmp"), tables.get("ine")
+    )
+    if d:
+        data["divida"] = d
     (docs / "_data").mkdir(exist_ok=True)
     (docs / "_data" / "camaras.json").write_text(
         json.dumps(_texts(data), ensure_ascii=False, indent=1),

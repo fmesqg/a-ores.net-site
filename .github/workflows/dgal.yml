@@ -1,0 +1,52 @@
+name: Weekly DGAL update (câmaras: contas, dívida, prazo de pagamento)
+
+# Reads the Portal Autárquico of the Direção-Geral das Autarquias Locais with
+# bot/dgal.py and rewrites data/dgal_contas.csv.gz (SNC-AP accounts of the 19
+# Azorean câmaras since 2020), data/dgal_divida.csv (debt against the legal
+# limit since 2014) and data/dgal_pmp.csv (payment time, quarterly since
+# 2019). The DGAL posts a year's accounts and debt in October of the next
+# year and the PMP every quarter; when the CSVs change, the run commits them
+# and redeploys the site so /financas/camaras/ picks them up. A run costs
+# three pages and about 40 files (~25 MB) from portalautarquico.dgal.gov.pt,
+# one request per second.
+#
+# The run fails, and GitHub emails, when a page or file cannot be read, a
+# table changed layout, an Azorean câmara is missing from the newest year, or
+# the newest accounts are more than two years old (see bot/dgal.py).
+
+on:
+  schedule:
+    - cron: '47 5 * * 6'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - run: pip install openpyxl==3.1.5 pypdf==7.2.0
+      - name: Read the Portal Autárquico
+        run: python3 bot/dgal.py data
+      - name: Commit and push if changed
+        id: commit
+        uses: ./.github/actions/commit-data
+        with:
+          paths: data/dgal_contas.csv.gz data/dgal_divida.csv data/dgal_pmp.csv
+          message: "DGAL câmaras update"
+
+  deploy-site:
+    needs: fetch
+    if: needs.fetch.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

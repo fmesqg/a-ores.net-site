@@ -20,6 +20,9 @@ secao: dados
 | [at_irs.csv](/dados/at_irs.csv) | um valor por linha: IRS por escalão (agregados, rendimento englobado, IRS liquidado) nos Açores, na Madeira e no continente, a taxa adicional de solidariedade e as taxas gerais | <span data-meta="at_irs"></span> |
 | [at_irc.csv](/dados/at_irc.csv) | um valor por linha: IRC à taxa da Região, derrama estadual por escalão e taxas nominais de IRC, nos Açores, na Madeira e no continente | <span data-meta="at_irc"></span> |
 | [at_distritos.csv](/dados/at_distritos.csv) | um valor por linha: os mapas «por distrito» da AT, de IRS (agregados, rendimento, imposto, taxa efetiva, desde 2015) e de IRC (declarações, lucro, prejuízo, matéria coletável, imposto, taxa efetiva, desde 2011), com o distrito como a AT o escreve e a região | <span data-meta="at_distritos"></span> |
+| [dgal_divida.csv](/dados/dgal_divida.csv) | DGAL: dívida de cada câmara contra o limite legal (art.º 52.º da Lei 73/2013), por ano: limite, dívida total, dívidas não orçamentais e exceções, contribuição para o FAM, dívida que conta para o limite | <span data-meta="dgal_divida"></span> |
+| [dgal_pmp.csv](/dados/dgal_pmp.csv) | DGAL: prazo médio de pagamentos de cada câmara (dias), no fim de cada trimestre | <span data-meta="dgal_pmp"></span> |
+| [dgal_contas.csv](/dados/dgal_contas.csv) | DGAL: contas de gerência das 19 câmaras (SNC-AP), um valor por linha: receita cobrada e despesa paga por rubrica do classificador económico, balanço e demonstração de resultados | <span data-meta="dgal_contas"></span> |
 | [bportugal.csv](/dados/bportugal.csv) | um valor por linha, do Banco de Portugal: empréstimos a particulares (habitação, consumo) e a empresas, crédito vencido e devedores por região (mensal), depósitos por região (mensal, desde 2018), investimento direto do exterior por região (anual) e indicadores das empresas por região e setor (anual, desde 2006), com o número da série no BPstat | <span data-meta="bportugal"></span> |
 | [srea.csv](/dados/srea.csv) | um valor por linha, do SREA: inflação, atividade económica, desemprego, turismo por ilha, PIB por ilha, pagamentos com cartão por concelho e défice e dívida da Região | <span data-meta="srea"></span> |
 | [prr_projetos.csv](/dados/prr_projetos.csv) | um projeto do PRR por linha, dos que têm uma parte nos Açores: designação, componente, investimento, concelhos, valor aprovado e pago (total e parte dos Açores), datas | <span data-meta="prr_projetos"></span> |
@@ -38,6 +41,9 @@ código em [`bot/ine.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bo
 que tem a lista de indicadores. O `beo.csv` é atualizado uma vez por semana a
 partir dos PDF dos boletins, por
 [`bot/beo.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/beo.py).
+Os `dgal_*.csv` são atualizados uma vez por semana a partir dos ficheiros do
+[Portal Autárquico](https://portalautarquico.dgal.gov.pt/pt-PT/financas-locais/dados-financeiros/contas-de-gerencia),
+por [`bot/dgal.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/dgal.py).
 Os `tdc*.csv` mudam uma vez por ano, quando sai um parecer novo, por
 [`bot/tdc.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/tdc.py).
 Os contratos (todos os anos) vêm dos ficheiros anuais do IMPIC, relidos
