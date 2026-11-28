@@ -232,3 +232,117 @@ def test_divida_pmp_for_the_page():
     )
     assert d["sem_dados"] == [{"nome": "Velas", "anos": ["2024"]}]
     assert camaras.divida_pmp(None, None) == {}
+
+
+MAPA12 = """MAPA 12 - TRANSFERÊNCIAS PARA OS MUNICÍPIOS - OE/2026
+ABRANTES 12 958 810,00 1 439 868,00 1 004 631,00 1 599 350,00 2 045 305,00 2 045 306,00 278 173,00 1 079 900,00
+NORDESTE 4 074 882,00 452 765,00 148 950,00 95 601,00 1 299 815,00 1 299 815,00 38 159,00 339 573,00
+PONTA DELGADA 7 735 059,00 859 451,00 2 972 204,00 3 071 690,00 4 334 970,00 4 334 971,00 331 381,00 644 588,00
+VELAS 3 624 004,00 402 667,00 148 434,00 0,00 1 182 349,00 1 182 350,00 40 631,00 302 000,00
+"""
+VARIAVEIS = """NORDESTE 4 439 31 778 10 147 1 103 3 616 510 794 90 942 208 720 0 95 601 38 159
+PONTA DELGADA 69 038 1 542 994 23 299 873 2 425 13 636 297 1 873 873 7 997 426 0 4 388 129 331 381
+VELAS 4 949 60 373 11 738 1 053 2 416 550 181 141 505 242 145 0 166 771 40 631
+NORDESTE 76 142 224
+"""
+
+
+def test_parse_transf_irs_share():
+    rows = {
+        r["municipio"]: r for r in dgal.parse_transf(2026, MAPA12, VARIAVEIS)
+    }
+    assert sorted(rows) == ["Nordeste", "Ponta Delgada", "Velas"]
+    pd = rows["Ponta Delgada"]
+    assert (pd["irs"], pd["irs_max"], pd["irs_pct"]) == (3071690, 4388129, 3.5)
+    assert pd["fef"] == 7735059 + 859451 and pd["iva"] == 331381
+    assert rows["Nordeste"]["irs_pct"] == 5.0
+    assert rows["Velas"]["irs_pct"] == 0.0
+
+
+def test_parse_transf_missing_variaveis_fails():
+    with pytest.raises(ValueError):
+        dgal.parse_transf(2026, MAPA12, "")
+
+
+def test_transf_links():
+    page = (
+        '<a href="/ficheiros/?id=1">Variáveis - Repartição dos recursos'
+        " públicos 2026</a>"
+        '<a href="/ficheiros/?id=2">Mapa 12 - Duodécimos 2026</a>'
+        '<a href="/ficheiros/?id=3">Fundo Social Municipal_Nota 1/2018</a>'
+    )
+    got = dgal.transf_links(page)
+    assert list(got) == [2026]
+    assert got[2026]["mapa12"].endswith("id=2")
+
+
+def test_contas_camaras():
+    C = dgal.COLS_CONTAS
+    g, n = "2004202", "Nordeste"
+
+    def row(ano, mapa, cod, val):
+        return [ano, g, n, mapa, cod, "", "", str(val)]
+
+    contas = (
+        C,
+        [
+            row("2024", "receita", "0600000000", 60),
+            row("2024", "receita", "0100000000", 40),
+            row("2025", "receita", "0600000000", 80),
+            row("2025", "receita", "1000000000", 10),
+            row("2025", "receita", "0102050000", 5),
+            row("2025", "receita", "0100000000", 10),
+            row("2025", "receita", "1200000000", 500),  # loans: left out
+            row("2025", "despesa", "0100000000", 30),
+            row("2025", "despesa", "0300000000", 3),
+            row("2025", "despesa", "0700000000", 20),
+        ],
+    )
+    ine = (
+        ["varcd", "geocod", "nivel", "ilha", "periodo", "valor"],
+        [["0012918", g, "Concelho", "São Miguel", "2024", "10"]],
+    )
+    transf = (
+        dgal.COLS_TRANSF,
+        [["2026", g, n, "1", "1", "60", "100", "3.0", "1", "1"]],
+    )
+    derrama = (
+        [
+            "ano_lucro",
+            "geocod",
+            "municipio",
+            "taxa_geral",
+            "taxa_reduzida",
+            "isencoes",
+            "fonte",
+            "url",
+        ],
+        [["2025", g, n, "1.5", "", "", "", ""]],
+    )
+    anuario = (
+        [
+            "ano",
+            "geocod",
+            "municipio",
+            "receita_cobrada",
+            "receita_liquidada",
+            "despesa_comprometida",
+        ],
+        [["2024", g, n, "80.0", "", ""], ["2025", g, n, "90.0", "91", "70"]],
+    )
+    f = camaras.contas_camaras(contas, ine, transf, derrama, anuario)
+    a = f["autonomia"][0]
+    assert (a["transf"], a["transf_ini"]) == (90.0, 60.0)
+    assert a["rigidez"] == 36.7  # (30 + 3) / 90 current revenue
+    assert a["invest_hab"] == 2  # 20 € / 10 inhabitants
+    i = f["impostos"][0]
+    assert (i["derrama_taxa"], i["derrama_k"], i["irs_pct"]) == (1.5, 0, 3.0)
+    assert f["irs_devolvem"] == ["Nordeste"]
+    o = f["orcamento"][0]
+    assert (o["cobrada"], o["cobrada_med"], o["anos_abaixo_85"]) == (
+        90.0,
+        85.0,
+        1,
+    )
+    assert o["comprometida"] == 70.0
+    assert camaras.contas_camaras(None) == {}

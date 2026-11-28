@@ -52,6 +52,7 @@ PMP = (
     SITE + "/pt-PT/financas-locais/endividamento/municipios/"
     "prazo-medio-de-pagamentos"
 )
+TRANSF = SITE + "/pt-PT/financas-locais/transferencias/municipios"
 UA = "acores.net open data (github.com/fmesqg/a-ores.net-site)"
 PRIMEIRO_SNC = 2020  # first year of SNC-AP accounts
 MAX_ATRASO = 2  # years: the accounts of year N come out in October N+1
@@ -118,6 +119,18 @@ COLS_DIVIDA = [
     "nota",
 ]
 COLS_PMP = ["data", "geocod", "municipio", "dias", "ficheiro"]
+COLS_TRANSF = [
+    "ano",
+    "geocod",
+    "municipio",
+    "fef",
+    "fsm",
+    "irs",
+    "irs_max",
+    "irs_pct",
+    "iva",
+    "excedente",
+]
 
 
 def fold(s: str) -> str:
@@ -451,6 +464,103 @@ def merge_pmp(rows: list[dict]) -> list[dict]:
 # --- output ---------------------------------------------------------------
 
 
+# --- transfers from the State Budget (OE) ---------------------------------
+
+EUROS = re.compile(r"\d{1,3}(?: \d{3})*,\d{2}")
+
+
+def euros(s: str) -> int:
+    return round(float(s.replace(" ", "").replace(",", ".")))
+
+
+def transf_links(page: str) -> dict[int, dict[str, str]]:
+    """{year: {"mapa12": url, "variaveis": url}} of the OE transfers page
+    (only the current budget is posted)."""
+    out: dict = {}
+    for texto, url in links(page):
+        m = re.search(r"\b(20\d\d)\b", texto)
+        if not m or texto == "#":
+            continue
+        if re.match(r"(?i)mapa 12\b", texto):
+            out.setdefault(int(m.group(1)), {})["mapa12"] = url
+        elif re.match(r"(?i)vari[áa]veis\b", texto):
+            out.setdefault(int(m.group(1)), {})["variaveis"] = url
+    return {a: v for a, v in out.items() if len(v) == 2}
+
+
+def parse_mapa12(text_: str) -> dict[str, dict]:
+    """Mapa 12 (transfers to each município in the year's OE): FEF current
+    and capital, FSM, IRS, the FEF excedente current and capital, IVA, then
+    the same split into duodécimos. Every amount has cents, so the row
+    splits without ambiguity. {MUNICIPIOS key: amounts}."""
+    out = {}
+    for linha in text_.splitlines():
+        m = re.match(r"^(\D+?) (\d.*)$", linha.strip())
+        if not m or not (key := azorean(m.group(1))):
+            continue
+        v = [euros(x) for x in EUROS.findall(m.group(2))]
+        if len(v) < 7:
+            raise ValueError(f"Mapa 12: unreadable row {linha!r}")
+        out[key] = {
+            "fef": v[0] + v[1],
+            "fsm": v[2],
+            "irs": v[3],
+            "excedente": v[4] + v[5],
+            "iva": v[6],
+        }
+    return out
+
+
+def parse_variaveis(text_: str, mapa12: dict[str, dict]) -> dict[str, int]:
+    """The IRS share each município would get at the full 5 % (column 10 of
+    the OE "Variáveis"). Thousands are separated by spaces, so the row is
+    read from its end: the last number is the IVA share, known to the euro
+    from Mapa 12, and the column before the IRS (IVA OE/24) is a lone 0 in
+    the Azores."""
+    out = {}
+    for linha in text_.splitlines():
+        m = re.match(r"^(\D+?) (\d[\d ]*)$", linha.strip())
+        if not m or not (key := azorean(m.group(1))) or key not in mapa12:
+            continue
+        toks = m.group(2).split()
+        iva = f"{mapa12[key]['iva']:,}".replace(",", " ").split()
+        if toks[-len(iva) :] != iva:
+            continue  # another table of the same file (freguesias, areas)
+        toks = toks[: -len(iva)]
+        if "0" not in toks:
+            raise ValueError(f"Variáveis: no IVA OE/24 column in {linha!r}")
+        i = len(toks) - 1 - toks[::-1].index("0")
+        out[key] = int("".join(toks[i + 1 :]) or 0)
+    return out
+
+
+def parse_transf(ano: int, mapa12: str, variaveis: str) -> list[dict]:
+    m12 = parse_mapa12(mapa12)
+    maxi = parse_variaveis(variaveis, m12)
+    rows = []
+    for key, v in m12.items():
+        geocod, nome = MUNICIPIOS[key]
+        top = maxi.get(key)
+        if not top:
+            raise ValueError(f"Variáveis {ano}: no IRS for {key}")
+        pct = round(5 * v["irs"] / top, 1)
+        if not 0 <= pct <= 5.01:
+            raise ValueError(f"{key} {ano}: IRS share {pct} % out of 0-5")
+        rows.append(
+            {"ano": ano, "geocod": geocod, "municipio": nome}
+            | v
+            | {"irs_max": top, "irs_pct": pct}
+        )
+    return sorted(rows, key=lambda r: r["geocod"])
+
+
+def read_csv(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    with path.open(encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
 def write_csv(path: Path, cols: list[str], rows: list[dict]) -> None:
     buf = io.StringIO()
     w = csv.DictWriter(buf, fieldnames=cols, lineterminator="\n")
@@ -463,13 +573,19 @@ def write_csv(path: Path, cols: list[str], rows: list[dict]) -> None:
     path.write_bytes(data)
 
 
-def check(contas: list, divida: list, pmp: list, hoje: dt.date) -> list[str]:
+def check(
+    contas: list,
+    divida: list,
+    pmp: list,
+    hoje: dt.date,
+    transf: list | None = None,
+) -> list[str]:
     erros = []
     for nome, rows, chave in (
         ("contas", contas, "ano"),
         ("dívida", divida, "ano"),
         ("PMP", pmp, "data"),
-    ):
+    ) + ((("transferências", transf, "ano"),) if transf is not None else ()):
         if not rows:
             erros.append(f"{nome}: nothing read")
             continue
@@ -502,7 +618,22 @@ def main(out_dir: Path, cache: Path | None = None) -> int:
         data, name = get(url, cache)
         pmp += parse_pmp(pdf_text(data), name or str(ano))
     pmp = merge_pmp(pmp)
-    erros = check(contas, divida, pmp, dt.date.today())
+    # only the current OE is posted: keep the years read before
+    novos = []
+    for ano, urls in transf_links(get(TRANSF, cache)[0].decode()).items():
+        novos += parse_transf(
+            ano,
+            pdf_text(get(urls["mapa12"], cache)[0]),
+            pdf_text(get(urls["variaveis"], cache)[0]),
+        )
+    anos = {str(r["ano"]) for r in novos}
+    transf = [
+        r
+        for r in read_csv(out_dir / "dgal_transferencias.csv")
+        if r["ano"] not in anos
+    ] + novos
+    transf.sort(key=lambda r: (str(r["ano"]), r["geocod"]))
+    erros = check(contas, divida, pmp, dt.date.today(), transf)
     for e in erros:
         print("::error::" + e, file=sys.stderr)
     if erros:
@@ -513,10 +644,12 @@ def main(out_dir: Path, cache: Path | None = None) -> int:
     write_csv(out_dir / "dgal_contas.csv.gz", COLS_CONTAS, contas)
     write_csv(out_dir / "dgal_divida.csv", COLS_DIVIDA, divida)
     write_csv(out_dir / "dgal_pmp.csv", COLS_PMP, pmp)
+    write_csv(out_dir / "dgal_transferencias.csv", COLS_TRANSF, transf)
     print(
         f"contas {len(contas)} rows "
         f"({min(r['ano'] for r in contas)}-{max(r['ano'] for r in contas)}), "
-        f"dívida {len(divida)}, PMP {len(pmp)}"
+        f"dívida {len(divida)}, PMP {len(pmp)}, "
+        f"transferências {len(transf)}"
     )
     return 0
 

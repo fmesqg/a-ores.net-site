@@ -37,7 +37,6 @@ permalink: /
 </section>
 </div>
 
-{%- assign compras = site.data.camaras.compras -%}
 <h2 id="casos">Casos</h2>
 <p class="casos-intro">O que se descobre quando se cruzam as fontes:</p>
 <div class="casos">
@@ -47,15 +46,6 @@ permalink: /
   também seu acionista. Contratos por ajuste direto, Jornal Oficial,
   Assembleia e contas das empresas, cada número com a fonte.</p>
 </section>
-{%- if compras.total_3a %}
-<section class="caso">
-  <h3><a href="/financas/camaras/#compras">Quanto das compras das câmaras aparece no BASE</a></h3>
-  <p>De {{ compras.anos | first }} a {{ compras.anos | last }}, as câmaras
-  gastaram {{ compras.total_3a.compras_m_t }} M€ em bens, serviços e
-  investimento; os contratos que publicaram no BASE somam
-  {{ compras.total_3a.pct_t }}&nbsp;% disso, e há câmaras muito abaixo.</p>
-</section>
-{%- endif %}
 </div>
 
 <div class="portas">

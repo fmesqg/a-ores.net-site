@@ -1,0 +1,210 @@
+ano,geocod,municipio,receita_cobrada,receita_liquidada,despesa_comprometida
+2015,2004101,Vila do Porto,69.9,,
+2015,2004201,Lagoa (R.A.A.),93.9,,
+2015,2004202,Nordeste,99.7,,
+2015,2004203,Ponta Delgada,93.9,,
+2015,2004204,Povoação,81.1,,
+2015,2004205,Ribeira Grande,102.3,,
+2015,2004206,Vila Franca do Campo,101.1,,
+2015,2004301,Angra do Heroísmo,96.0,,
+2015,2004302,Vila da Praia da Vitória,91.7,,
+2015,2004401,Santa Cruz da Graciosa,89.6,,
+2015,2004501,Calheta (R.A.A.),101.6,,
+2015,2004502,Velas,104.8,,
+2015,2004601,Lajes do Pico,83.5,,
+2015,2004602,Madalena,78.1,,
+2015,2004603,São Roque do Pico,97.5,,
+2015,2004701,Horta,82.6,,
+2015,2004801,Lajes das Flores,85.5,,
+2015,2004802,Santa Cruz das Flores,89.5,,
+2015,2004901,Corvo,83.8,,
+2016,2004101,Vila do Porto,42.0,,
+2016,2004201,Lagoa (R.A.A.),95.6,,
+2016,2004202,Nordeste,95.1,,
+2016,2004203,Ponta Delgada,91.5,,
+2016,2004204,Povoação,94.4,,
+2016,2004205,Ribeira Grande,92.7,,
+2016,2004206,Vila Franca do Campo,98.6,,
+2016,2004301,Angra do Heroísmo,90.4,,
+2016,2004302,Vila da Praia da Vitória,86.6,,
+2016,2004401,Santa Cruz da Graciosa,83.1,,
+2016,2004501,Calheta (R.A.A.),106.1,,
+2016,2004502,Velas,96.1,,
+2016,2004601,Lajes do Pico,76.2,,
+2016,2004602,Madalena,76.4,,
+2016,2004603,São Roque do Pico,92.7,,
+2016,2004701,Horta,71.3,,
+2016,2004801,Lajes das Flores,85.4,,
+2016,2004802,Santa Cruz das Flores,83.9,,
+2016,2004901,Corvo,74.5,,
+2017,2004101,Vila do Porto,57.6,,
+2017,2004201,Lagoa (R.A.A.),94.9,,
+2017,2004202,Nordeste,79.4,,
+2017,2004203,Ponta Delgada,101.5,,
+2017,2004204,Povoação,95.0,,
+2017,2004205,Ribeira Grande,101.4,,
+2017,2004206,Vila Franca do Campo,92.9,,
+2017,2004301,Angra do Heroísmo,87.5,,
+2017,2004302,Vila da Praia da Vitória,85.6,,
+2017,2004401,Santa Cruz da Graciosa,92.5,,
+2017,2004501,Calheta (R.A.A.),87.5,,
+2017,2004502,Velas,79.9,,
+2017,2004601,Lajes do Pico,77.3,,
+2017,2004602,Madalena,62.3,,
+2017,2004603,São Roque do Pico,71.0,,
+2017,2004701,Horta,74.1,,
+2017,2004801,Lajes das Flores,89.8,,
+2017,2004802,Santa Cruz das Flores,87.6,,
+2017,2004901,Corvo,74.1,,
+2018,2004101,Vila do Porto,62.4,,
+2018,2004201,Lagoa (R.A.A.),97.8,,
+2018,2004202,Nordeste,100.1,,
+2018,2004203,Ponta Delgada,95.7,,
+2018,2004204,Povoação,88.0,,
+2018,2004205,Ribeira Grande,103.5,,
+2018,2004206,Vila Franca do Campo,98.0,,
+2018,2004301,Angra do Heroísmo,98.3,,
+2018,2004302,Vila da Praia da Vitória,80.6,,
+2018,2004401,Santa Cruz da Graciosa,88.7,,
+2018,2004501,Calheta (R.A.A.),98.5,,
+2018,2004502,Velas,99.0,,
+2018,2004601,Lajes do Pico,74.7,,
+2018,2004602,Madalena,76.3,,
+2018,2004603,São Roque do Pico,97.0,,
+2018,2004701,Horta,71.6,,
+2018,2004801,Lajes das Flores,96.2,,
+2018,2004802,Santa Cruz das Flores,90.5,,
+2018,2004901,Corvo,74.5,,
+2019,2004101,Vila do Porto,85.8,,
+2019,2004201,Lagoa (R.A.A.),93.2,,
+2019,2004202,Nordeste,101.0,,
+2019,2004203,Ponta Delgada,100.5,,
+2019,2004204,Povoação,92.3,,
+2019,2004205,Ribeira Grande,102.3,,
+2019,2004206,Vila Franca do Campo,102.9,,
+2019,2004301,Angra do Heroísmo,97.4,,
+2019,2004302,Vila da Praia da Vitória,87.9,,
+2019,2004401,Santa Cruz da Graciosa,90.2,,
+2019,2004501,Calheta (R.A.A.),92.5,,
+2019,2004502,Velas,98.1,,
+2019,2004601,Lajes do Pico,76.5,,
+2019,2004602,Madalena,72.0,,
+2019,2004603,São Roque do Pico,96.6,,
+2019,2004701,Horta,88.9,,
+2019,2004801,Lajes das Flores,90.3,,
+2019,2004802,Santa Cruz das Flores,87.6,,
+2019,2004901,Corvo,93.8,,
+2020,2004101,Vila do Porto,78.0,,
+2020,2004201,Lagoa (R.A.A.),86.6,,
+2020,2004202,Nordeste,92.5,,
+2020,2004203,Ponta Delgada,99.8,,
+2020,2004204,Povoação,82.2,,
+2020,2004205,Ribeira Grande,98.2,,
+2020,2004206,Vila Franca do Campo,98.1,,
+2020,2004301,Angra do Heroísmo,93.0,,
+2020,2004302,Vila da Praia da Vitória,86.9,,
+2020,2004401,Santa Cruz da Graciosa,88.2,,
+2020,2004501,Calheta (R.A.A.),86.3,,
+2020,2004502,Velas,95.6,,
+2020,2004601,Lajes do Pico,70.8,,
+2020,2004602,Madalena,74.4,,
+2020,2004603,São Roque do Pico,98.5,,
+2020,2004701,Horta,78.3,,
+2020,2004801,Lajes das Flores,83.2,,
+2020,2004802,Santa Cruz das Flores,90.9,,
+2020,2004901,Corvo,87.2,,
+2021,2004101,Vila do Porto,93.8,,
+2021,2004201,Lagoa (R.A.A.),98.0,,
+2021,2004202,Nordeste,74.1,,
+2021,2004203,Ponta Delgada,101.3,,
+2021,2004204,Povoação,85.4,,
+2021,2004205,Ribeira Grande,100.3,,
+2021,2004206,Vila Franca do Campo,77.3,,
+2021,2004301,Angra do Heroísmo,104.6,,
+2021,2004302,Vila da Praia da Vitória,71.1,,
+2021,2004401,Santa Cruz da Graciosa,89.8,,
+2021,2004501,Calheta (R.A.A.),90.2,,
+2021,2004502,Velas,92.6,,
+2021,2004601,Lajes do Pico,82.3,,
+2021,2004602,Madalena,73.3,,
+2021,2004603,São Roque do Pico,95.2,,
+2021,2004701,Horta,80.2,,
+2021,2004801,Lajes das Flores,83.7,,
+2021,2004802,Santa Cruz das Flores,93.8,,
+2021,2004901,Corvo,90.2,,
+2022,2004101,Vila do Porto,74.5,,
+2022,2004201,Lagoa (R.A.A.),98.0,,
+2022,2004202,Nordeste,79.1,,
+2022,2004203,Ponta Delgada,108.8,,
+2022,2004204,Povoação,91.3,,
+2022,2004205,Ribeira Grande,100.7,,
+2022,2004206,Vila Franca do Campo,86.8,,
+2022,2004301,Angra do Heroísmo,101.3,,
+2022,2004302,Vila da Praia da Vitória,64.6,,
+2022,2004401,Santa Cruz da Graciosa,98.3,,
+2022,2004501,Calheta (R.A.A.),88.5,,
+2022,2004502,Velas,95.1,,
+2022,2004601,Lajes do Pico,86.1,,
+2022,2004602,Madalena,72.4,,
+2022,2004603,São Roque do Pico,95.1,,
+2022,2004701,Horta,88.7,,
+2022,2004801,Lajes das Flores,84.0,,
+2022,2004802,Santa Cruz das Flores,87.8,,
+2022,2004901,Corvo,87.8,,
+2023,2004101,Vila do Porto,90.4,90.4,93.2
+2023,2004201,Lagoa (R.A.A.),91.9,91.6,96.5
+2023,2004202,Nordeste,86.0,86.0,87.9
+2023,2004203,Ponta Delgada,100.4,101.2,96.4
+2023,2004204,Povoação,96.5,96.2,98.8
+2023,2004205,Ribeira Grande,102.4,102.3,95.8
+2023,2004206,Vila Franca do Campo,81.6,81.9,74.9
+2023,2004301,Angra do Heroísmo,92.3,92.1,93.9
+2023,2004302,Vila da Praia da Vitória,84.7,84.7,90.4
+2023,2004401,Santa Cruz da Graciosa,88.0,88.2,83.0
+2023,2004501,Calheta (R.A.A.),96.0,96.0,93.7
+2023,2004502,Velas,106.5,106.5,86.3
+2023,2004601,Lajes do Pico,91.4,91.5,95.4
+2023,2004602,Madalena,78.2,82.3,87.0
+2023,2004603,São Roque do Pico,98.5,93.2,90.2
+2023,2004701,Horta,87.2,87.8,88.0
+2023,2004801,Lajes das Flores,92.4,96.3,82.0
+2023,2004802,Santa Cruz das Flores,97.9,99.4,61.2
+2023,2004901,Corvo,107.9,107.6,80.9
+2024,2004101,Vila do Porto,88.0,88.0,90.7
+2024,2004201,Lagoa (R.A.A.),94.8,94.5,92.4
+2024,2004202,Nordeste,96.8,96.7,82.2
+2024,2004203,Ponta Delgada,94.9,97.2,97.5
+2024,2004204,Povoação,94.8,94.6,97.5
+2024,2004205,Ribeira Grande,97.7,98.5,93.4
+2024,2004206,Vila Franca do Campo,92.3,92.4,83.1
+2024,2004301,Angra do Heroísmo,81.8,82.0,86.3
+2024,2004302,Vila da Praia da Vitória,94.8,94.8,96.2
+2024,2004401,Santa Cruz da Graciosa,103.8,103.8,82.5
+2024,2004501,Calheta (R.A.A.),87.5,87.5,82.4
+2024,2004502,Velas,107.1,107.2,67.6
+2024,2004601,Lajes do Pico,95.0,94.5,92.8
+2024,2004602,Madalena,73.4,74.4,75.3
+2024,2004603,São Roque do Pico,86.9,86.9,87.8
+2024,2004701,Horta,83.4,82.2,92.7
+2024,2004801,Lajes das Flores,99.6,95.9,80.8
+2024,2004802,Santa Cruz das Flores,94.8,94.6,56.8
+2024,2004901,Corvo,68.1,68.2,65.7
+2025,2004101,Vila do Porto,101.8,101.9,95.1
+2025,2004201,Lagoa (R.A.A.),93.8,94.1,99.2
+2025,2004202,Nordeste,71.4,71.4,62.0
+2025,2004203,Ponta Delgada,104.4,103.6,96.0
+2025,2004204,Povoação,88.5,88.5,89.1
+2025,2004205,Ribeira Grande,102.7,103.9,84.1
+2025,2004206,Vila Franca do Campo,81.2,81.5,66.0
+2025,2004301,Angra do Heroísmo,84.5,84.2,81.2
+2025,2004302,Vila da Praia da Vitória,83.9,84.0,80.7
+2025,2004401,Santa Cruz da Graciosa,98.8,99.0,71.0
+2025,2004501,Calheta (R.A.A.),87.3,87.0,83.9
+2025,2004502,Velas,87.5,87.6,59.9
+2025,2004601,Lajes do Pico,93.4,93.4,90.7
+2025,2004602,Madalena,90.6,92.6,92.6
+2025,2004603,São Roque do Pico,88.5,94.7,87.0
+2025,2004701,Horta,76.2,75.9,83.2
+2025,2004801,Lajes das Flores,97.0,97.4,79.7
+2025,2004802,Santa Cruz das Flores,85.4,85.3,64.4
+2025,2004901,Corvo,75.1,75.0,78.2
