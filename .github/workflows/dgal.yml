@@ -1,4 +1,4 @@
-name: Weekly DGAL update (câmaras: contas, dívida, prazo de pagamento)
+name: "Weekly DGAL update (câmaras: contas, dívida, prazo de pagamento, transferências)"
 
 # Reads the Portal Autárquico of the Direção-Geral das Autarquias Locais with
 # bot/dgal.py and rewrites data/dgal_contas.csv.gz (SNC-AP accounts of the 19
