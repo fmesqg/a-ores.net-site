@@ -143,7 +143,17 @@ e podem ser descarregados e reutilizados. O código está no
 [GitHub](https://github.com/fmesqg/a-ores.net-site).
 
 O Açores.net é mantido por
-[Francisco Mesquita](https://mesquita.xyz).
+[Francisco Mesquita](https://mesquita.xyz). Erros nos dados ou sugestões:
+[GitHub](https://github.com/fmesqg/a-ores.net-site/issues) ou
+<span id="contacto">contacto [arroba] acores.site</span>.
+
+<script>
+(function () {
+  var a = ["contacto", "acores.site"].join("@");
+  var el = document.getElementById("contacto");
+  el.innerHTML = '<a href="mailto:' + a + '">' + a + "</a>";
+})();
+</script>
 
 <style>
 .lead { font-size: 1.15em; max-width: 40em; margin-bottom: .3em; }
