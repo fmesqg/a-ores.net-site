@@ -134,9 +134,11 @@ permalink: /
 
 O objetivo do Açores.net é, antes de mais, perceber o estado atual dos
 Açores, para que a discussão pública seja informada e construtiva. Os
-dados são recolhidos automaticamente das fontes oficiais (INE, Governo
-Regional, Assembleia Legislativa, Jornal Oficial, portal BASE) e podem ser
-descarregados e reutilizados. O código está no
+dados são recolhidos automaticamente de fontes oficiais regionais,
+nacionais e europeias (Governo Regional, Assembleia Legislativa, Jornal
+Oficial, SREA, INE, portal BASE, Autoridade Tributária, Banco de Portugal,
+DGAL, Tribunal de Contas, IFAP, Eurostat, fundos europeus, entre outras: ver
+[Fontes e métodos](/fontes)) e podem ser descarregados e reutilizados. O código está no
 [GitHub](https://github.com/fmesqg/a-ores.net-site).
 
 O Açores.net é mantido por
