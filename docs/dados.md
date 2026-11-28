@@ -234,6 +234,12 @@ Regional, impostos e Tribunal de Contas em <a href="/financas/">Finanças</a>.</
           if (isNum) { x = parseFloat(x) || 0; y = parseFloat(y) || 0; return (x - y) * state.dir; }
           return x.localeCompare(y, "pt") * state.dir;
         });
+      } else if (v.valor) {
+        // default: newest day first, the largest amounts first within a day
+        current.sort(function (a, b) {
+          return (b[v.data] || "").localeCompare(a[v.data] || "") ||
+            (parseFloat(b[v.valor]) || 0) - (parseFloat(a[v.valor]) || 0);
+        });
       }
       render();
       writeHash();
@@ -242,7 +248,16 @@ Regional, impostos e Tribunal de Contas em <a href="/financas/">Finanças</a>.</
 
   function cell(r, c) {
     var td = document.createElement("td"), val = r[c[0]], a;
-    if (c[2] === "e") { td.className = "num"; td.textContent = val ? eur.format(parseFloat(val)) : ""; }
+    if (c[2] === "e") {
+      td.className = "num"; td.textContent = val ? eur.format(parseFloat(val)) : "";
+      // JORAA acts read before 28/11/2026: every amount of the act added up
+      if (val && r.montante_tipo) {
+        td.title = r.montante_tipo;
+        if (r.montante_tipo.indexOf("antigo") >= 0) {
+          var s = document.createElement("small"); s.textContent = " soma"; td.appendChild(s);
+        }
+      }
+    }
     else if (c[2] === "n") { td.className = "num"; td.textContent = val === "" ? "" : num.format(parseFloat(val)); if (r.unidade) td.title = r.unidade; }
     else if (c[2] === "p") { td.className = "dt"; td.textContent = r.periodo || val; }
     else if (c[2] === "d") { td.className = "dt"; td.textContent = val; }
