@@ -44,7 +44,7 @@ novembro de 2026. Se abrir as ligações mais tarde, podem ter mudado.</p>
 <tr><th scope="row"><a href="/economia/setor-publico/">Emprego público</a></th><td>Açores, Madeira, país</td><td>trimestral (DGAEP)</td><td>postos de trabalho, não pessoas; o último trimestre é provisório</td></tr>
 <tr><th scope="row"><a href="/dados/sper/">Empresas públicas</a></th><td>empresa</td><td>anual (CFP)</td><td>o site mostra o relatório mais recente</td></tr>
 <tr><th scope="row"><a href="/dados/maiores-empresas/">Maiores empresas</a></th><td>empresa com sede nos Açores</td><td>anual, publicado com um ano de atraso</td><td>ranking de uma revista, não estatística oficial</td></tr>
-<tr><th scope="row"><a href="/dados/#fonte=base">Contratos (BASE)</a></th><td>contrato</td><td>diário desde agosto de 2024; antes, desde 2012, dados abertos do IMPIC (mensal)</td><td>preço contratual, em regra sem IVA; não é despesa paga</td></tr>
+<tr><th scope="row"><a href="/dados/#fonte=base">Contratos (BASE)</a></th><td>contrato</td><td>desde 2012, dados abertos do IMPIC (atualizados de poucas em poucas semanas; os mais recentes estão na <a href="/base_updates">recolha diária</a>)</td><td>preço contratual, em regra sem IVA; não é despesa paga</td></tr>
 <tr><th scope="row"><a href="/dados/#fonte=joraa">Jornal Oficial</a></th><td>ato</td><td>diário, desde agosto de 2024</td><td>o montante é calculado pelo açores.net a partir do texto (até 27/11/2026 era a soma de todos os valores; ver as <a href="/dados/notas/">notas</a>){% if site.data.joraa_estado.atraso_de %}; faltam os atos de {{ site.data.joraa_estado.atraso_de }} a {{ site.data.joraa_estado.atraso_ate }}{% endif %}</td></tr>
 <tr><th scope="row"><a href="/dados/#fonte=alra">Assembleia</a></th><td>iniciativa, requerimento</td><td>diário, desde agosto de 2024</td><td>estado do requerimento é o último visto pelo robô</td></tr>
 </tbody>
@@ -106,9 +106,9 @@ novembro de 2026. Se abrir as ligações mais tarde, podem ter mudado.</p>
   valor que o INE publica, sem operações financeiras.</li>
   <li><strong>A despesa inclui operações financeiras</strong> (amortização
   de empréstimos), o que pesa num ano de reembolso grande.</li>
-  <li><strong>Os contratos são os que o açores.net recolheu do BASE</strong>
-  desde agosto de 2024. Os nomes das câmaras no BASE variam e são juntados
-  pelo nome do concelho. Da Câmara de Vila do Porto não aparece nenhum.</li>
+  <li><strong>Os contratos são os publicados no BASE no ano da despesa</strong>
+  (dados abertos do IMPIC). Os nomes das câmaras no BASE variam e são
+  juntados pelo nome do concelho.</li>
   <li>Noutros indicadores do INE, a página do INE tem versões "por
   habitante" ou "por 1000 habitantes" (por exemplo,
   <a href="/dados/ine/#ind=0013210">dormidas por 100 habitantes</a>) e a
@@ -245,8 +245,8 @@ Tudo o que o site mostra pode ser descarregado:
 <div class="cuidado">
 <p><strong>Limites dos dados</strong></p>
 <ul>
-  <li>Contratos, Assembleia e Jornal Oficial só desde agosto de 2024, e só
-  o que o robô viu. Se uma fonte falhou num dia, esse dia pode faltar.</li>
+  <li>Assembleia e Jornal Oficial só desde agosto de 2024, e só o que o
+  robô viu (os contratos vêm dos dados abertos do IMPIC, desde 2012). Se uma fonte falhou num dia, esse dia pode faltar.</li>
   <li>De 11 de agosto a 27 de novembro de 2026, o site do Jornal Oficial
   bloqueou o robô. Os dias em falta estão a ser recolhidos, dos mais
   recentes para os mais antigos{% if site.data.joraa_estado.atraso_de %}:
@@ -271,9 +271,6 @@ definições oficiais estão junto de cada indicador, com ligação à fonte.</p
 .fontes th, .fontes td { vertical-align: top; text-align: left; padding: .35em .5em; }
 .fontes th[scope=row] { white-space: nowrap; }
 .indice { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr)); gap: .4em; margin: 1em 0 1em; }
-.indice a { display: block; padding: .45em .7em; border: 1px solid rgba(147,161,161,.6); border-radius: 6px; background: rgba(147,161,161,.08); text-decoration: none; }
-.indice a:hover { background: rgba(38,139,210,.12); }
-.indice span { display: inline-block; min-width: 1.4em; font-weight: bold; color: #268bd2; }
 h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
 .passos { max-width: 42em; }
 .passos li { margin-bottom: .4em; }
@@ -281,10 +278,8 @@ h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
 .cuidado p { margin-bottom: .3em; }
 .cuidado li { margin-bottom: .35em; }
 .cartoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(16em, 100%), 1fr)); gap: .9em; margin: 1em 0 1.2em; }
-.cartao { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
 .cartao h3 { font-size: 1.05em; margin: 0 0 .4em; }
-.cartao p { font-size: .95em; margin-bottom: .5em; }
 .cartao .ir { font-size: .9em; }
-.fonte { font-size: .85em; color: #586e75; }
-@media (prefers-color-scheme: dark) { .fonte { color: #93a1a1; } }
+.fonte { font-size: .85em; color: var(--s01); }
+@media (prefers-color-scheme: dark) { .fonte { color: var(--s01); } }
 </style>

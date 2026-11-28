@@ -116,11 +116,16 @@ oficial. Em cada termo está a ligação para a lei ou a fonte com a definição
   Os valores que só estão em anexos (as portarias com as verbas de cada
   freguesia) não são lidos: esses atos ficam sem montante. Serve para
   encontrar atos. Para citar, leia o valor no próprio ato.
-- **BASE**: a data de publicação é o dia em que o contrato apareceu no portal,
-  não o da assinatura. Um contrato republicado conta uma vez só. Desde agosto
-  de 2024 é o dia em que o açores.net o viu; antes, é a data que o IMPIC
-  publica (coluna `recolha`). Entram os contratos com local de execução nos
-  Açores, o mesmo critério da pesquisa do BASE. As colunas extra do IMPIC
+- **BASE**: todos os anos vêm dos dados abertos do IMPIC, que gere o portal
+  e os atualiza de poucas em poucas semanas (os contratos da última semana
+  ou duas ainda não estão; a [recolha diária](/base_updates/) mostra-os).
+  A data de publicação é a do portal, não a da assinatura. Um contrato
+  republicado conta uma vez só. Entram os contratos com local de execução
+  nos Açores e todos os das entidades adjudicantes dos Açores, mesmo quando
+  o local diz só "Portugal": a pesquisa do BASE por distrito perdia, por
+  exemplo, todos os contratos da Câmara de Vila do Porto desde 2024. O NIF
+  fica vazio quando o adjudicatário não tem NIF português (o IMPIC escreve
+  "-"). As colunas extra do IMPIC
   (concorrentes, propostas, preço efetivo) são as que as entidades
   preencheram no portal e às vezes faltam.
 - **IRS (AT)**: ver as notas na página [IRS por escalão](/dados/irs/#notas).
