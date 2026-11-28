@@ -1,0 +1,932 @@
+ano,nivel,tipo,codigo,nome,geocod,concelho,publico,exame,exame_nome,provas,media,media_interna,positivas,posicao,n_escolas,ficheiro
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,501,Alemão,2,123.5,16.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,517,Francês,1,110.0,17.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,623,História A,16,93.2,15.25,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,635,Matemática A,41,117.8,14.66,70.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,639,Português,103,129.0,14.49,83.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,702,Biologia e Geologia,49,116.6,14.31,75.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,708,Geometria Descritiva A,1,125.0,17.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,712,Economia A,15,122.6,14.8,93.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,714,Filosofia,22,99.2,13.14,54.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,715,Física e Química A,17,125.8,15.29,70.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,719,Geografia A,33,116.0,13.24,87.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,734,Literatura Portuguesa,5,89.8,15.4,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,835,Matemática Aplic. às Ciências Soc.,9,81.0,15.33,33.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,839,Português Língua Não Materna,1,89.0,11.0,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,todos,Todos os exames,315,117.6,14.41,75.2,334,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,517,Francês,5,150.2,14.8,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,623,História A,47,115.2,13.26,76.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,635,Matemática A,104,110.2,15.19,61.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,639,Português,257,136.3,14.12,89.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,702,Biologia e Geologia,78,125.7,14.58,75.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,706,Desenho A,6,153.0,15.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,708,Geometria Descritiva A,14,115.1,13.64,78.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,712,Economia A,28,130.0,13.46,96.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,714,Filosofia,64,93.7,14.77,46.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,715,Física e Química A,75,124.0,14.81,74.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,719,Geografia A,52,97.5,13.58,61.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,723,História B,2,131.0,15.5,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,724,História da Cultura e das Artes,5,132.4,13.2,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,734,Literatura Portuguesa,3,150.3,17.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,835,Matemática Aplic. às Ciências Soc.,34,117.1,14.32,61.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,todos,Todos os exames,774,121.9,14.34,75.6,231,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,501,Alemão,7,85.6,13.14,42.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,517,Francês,5,110.8,14.2,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,623,História A,24,121.6,13.83,79.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,635,Matemática A,49,124.0,15.14,71.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,639,Português,167,133.2,13.88,88.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,702,Biologia e Geologia,48,126.3,13.58,79.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,706,Desenho A,36,146.0,16.08,97.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,708,Geometria Descritiva A,23,109.7,16.35,56.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,712,Economia A,15,105.0,14.87,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,714,Filosofia,64,106.1,14.16,56.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,715,Física e Química A,45,91.8,14.71,44.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,719,Geografia A,28,101.8,13.79,64.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,724,História da Cultura e das Artes,36,142.6,13.69,91.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,734,Literatura Portuguesa,5,108.0,12.4,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,735,Matemática B,3,141.3,14.33,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,835,Matemática Aplic. às Ciências Soc.,23,105.0,13.39,47.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,839,Português Língua Não Materna,1,156.0,18.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,todos,Todos os exames,579,121.3,14.27,73.7,245,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,623,História A,6,84.7,12.83,16.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,635,Matemática A,10,116.8,15.9,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,639,Português,27,125.3,13.26,85.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,702,Biologia e Geologia,12,116.6,14.75,75.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,714,Filosofia,18,94.1,14.44,38.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,715,Física e Química A,9,97.0,15.44,33.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,719,Geografia A,9,69.6,14.11,11.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,734,Literatura Portuguesa,1,167.0,17.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,835,Matemática Aplic. às Ciências Soc.,5,80.4,13.4,40.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,todos,Todos os exames,97,105.4,14.24,54.6,533,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,623,História A,1,120.0,16.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,635,Matemática A,19,125.6,14.58,78.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,639,Português,54,122.9,13.43,83.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,702,Biologia e Geologia,35,131.1,14.66,85.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,706,Desenho A,1,98.0,11.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,708,Geometria Descritiva A,5,118.0,17.0,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,712,Economia A,7,114.4,16.14,71.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,714,Filosofia,32,101.3,15.28,53.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,715,Física e Química A,18,128.6,15.33,77.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,719,Geografia A,18,106.0,13.33,61.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,724,História da Cultura e das Artes,9,161.2,13.78,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,835,Matemática Aplic. às Ciências Soc.,6,136.7,15.5,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,847,Espanhol (continuação),6,134.2,12.17,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,todos,Todos os exames,211,122.1,14.38,76.3,230,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,501,Alemão,2,108.0,17.0,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,623,História A,3,111.7,10.0,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,639,Português,25,126.6,14.08,84.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,702,Biologia e Geologia,9,126.8,15.67,88.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,706,Desenho A,7,170.4,16.71,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,712,Economia A,4,90.8,16.25,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,714,Filosofia,7,47.4,13.57,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,715,Física e Química A,4,105.8,15.25,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,719,Geografia A,6,78.3,13.5,16.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,835,Matemática Aplic. às Ciências Soc.,8,92.4,12.75,37.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,839,Português Língua Não Materna,1,169.0,17.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,todos,Todos os exames,76,112.5,14.41,63.2,443,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,623,História A,13,101.7,12.62,61.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,635,Matemática A,1,132.0,18.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,639,Português,18,112.2,12.11,77.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,702,Biologia e Geologia,4,139.5,13.5,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,714,Filosofia,6,95.3,15.0,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,715,Física e Química A,3,74.3,14.33,33.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,719,Geografia A,11,100.1,11.55,45.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,724,História da Cultura e das Artes,1,177.0,16.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,735,Matemática B,2,188.0,18.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,835,Matemática Aplic. às Ciências Soc.,6,130.5,13.67,83.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,todos,Todos os exames,65,111.8,13.05,67.7,457,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,623,História A,4,93.0,11.75,25.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,635,Matemática A,3,62.0,14.33,33.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,639,Português,29,110.6,13.66,65.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,702,Biologia e Geologia,22,115.7,16.14,81.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,708,Geometria Descritiva A,4,55.8,16.0,25.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,712,Economia A,5,101.8,16.0,40.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,714,Filosofia,10,106.7,15.1,80.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,715,Física e Química A,11,94.9,13.64,45.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,719,Geografia A,15,107.5,13.27,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,835,Matemática Aplic. às Ciências Soc.,5,65.8,12.6,40.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,todos,Todos os exames,108,102.7,14.33,62.0,548,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,517,Francês,4,105.5,13.5,75.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,623,História A,24,107.4,14.12,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,635,Matemática A,36,87.5,14.81,44.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,639,Português,86,134.4,14.08,88.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,702,Biologia e Geologia,31,114.0,14.74,74.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,714,Filosofia,6,98.2,13.0,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,715,Física e Química A,28,95.0,14.79,46.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,719,Geografia A,20,94.8,13.9,40.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,734,Literatura Portuguesa,12,87.9,12.92,41.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,835,Matemática Aplic. às Ciências Soc.,10,110.0,15.3,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,todos,Todos os exames,257,111.1,14.29,65.8,470,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,517,Francês,4,113.2,13.25,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,623,História A,24,105.0,14.25,58.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,635,Matemática A,27,110.4,14.81,59.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,639,Português,106,134.0,13.89,84.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,702,Biologia e Geologia,35,139.0,15.31,88.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,706,Desenho A,9,145.9,16.44,88.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,708,Geometria Descritiva A,7,51.1,15.57,14.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,712,Economia A,12,92.1,14.0,33.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,714,Filosofia,22,101.3,14.82,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,715,Física e Química A,18,99.5,15.94,55.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,719,Geografia A,25,106.6,13.92,72.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,734,Literatura Portuguesa,4,131.2,16.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,835,Matemática Aplic. às Ciências Soc.,12,94.9,15.67,41.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,todos,Todos os exames,305,118.5,14.56,70.8,318,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,623,História A,6,107.2,14.17,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,635,Matemática A,3,94.0,17.67,33.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,639,Português,18,95.9,13.22,38.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,702,Biologia e Geologia,11,107.7,13.64,54.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,712,Economia A,4,114.8,15.0,75.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,714,Filosofia,3,99.3,15.0,33.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,715,Física e Química A,7,70.4,14.14,14.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,719,Geografia A,2,123.5,13.5,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,835,Matemática Aplic. às Ciências Soc.,6,55.0,13.5,16.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,todos,Todos os exames,60,94.4,13.97,41.7,579,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,501,Alemão,2,142.0,18.5,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,635,Matemática A,1,175.0,19.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,639,Português,23,130.9,17.04,82.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,702,Biologia e Geologia,7,119.0,12.43,71.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,706,Desenho A,4,166.2,14.75,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,708,Geometria Descritiva A,2,57.5,14.5,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,712,Economia A,5,99.2,14.8,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,715,Física e Química A,9,68.9,12.44,22.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,735,Matemática B,3,157.0,13.33,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,todos,Todos os exames,56,119.1,15.16,69.6,303,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,517,Francês,1,106.0,12.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,623,História A,8,103.9,13.25,62.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,635,Matemática A,3,107.0,16.0,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,639,Português,18,136.3,12.28,88.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,702,Biologia e Geologia,13,94.0,15.08,53.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,714,Filosofia,5,93.0,15.0,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,715,Física e Química A,7,93.6,15.0,28.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,719,Geografia A,10,113.9,14.9,70.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,723,História B,1,126.0,17.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,835,Matemática Aplic. às Ciências Soc.,6,81.2,13.0,16.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,todos,Todos os exames,72,108.4,13.99,62.5,505,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,623,História A,7,98.0,14.29,57.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,639,Português,19,121.8,13.84,78.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,702,Biologia e Geologia,14,89.6,15.79,57.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,712,Economia A,3,85.3,15.67,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,715,Física e Química A,7,79.6,14.57,28.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,719,Geografia A,9,95.9,11.0,44.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,835,Matemática Aplic. às Ciências Soc.,7,61.1,13.29,14.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,todos,Todos os exames,66,96.4,14.02,51.5,573,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,623,História A,3,134.7,15.67,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,635,Matemática A,8,84.8,13.75,37.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,639,Português,20,137.0,13.85,85.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,702,Biologia e Geologia,13,123.5,14.92,84.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,714,Filosofia,13,117.9,15.0,92.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,715,Física e Química A,7,131.7,15.43,85.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,719,Geografia A,8,86.1,13.88,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,835,Matemática Aplic. às Ciências Soc.,5,38.8,13.4,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,todos,Todos os exames,77,113.8,14.4,71.4,417,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,623,História A,6,120.2,15.33,83.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,635,Matemática A,5,95.4,14.6,40.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,639,Português,28,121.6,13.82,78.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,702,Biologia e Geologia,12,129.2,14.92,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,706,Desenho A,4,165.5,19.25,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,712,Economia A,1,100.0,16.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,714,Filosofia,13,108.5,13.0,76.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,715,Física e Química A,10,126.4,15.8,80.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,719,Geografia A,13,117.6,13.46,76.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,835,Matemática Aplic. às Ciências Soc.,11,82.1,13.27,27.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,839,Português Língua Não Materna,1,177.0,16.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,todos,Todos os exames,104,117.3,14.31,75.0,339,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,623,História A,5,108.8,12.6,80.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,635,Matemática A,4,71.2,14.25,25.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,639,Português,24,99.3,12.38,54.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,702,Biologia e Geologia,12,117.1,13.75,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,708,Geometria Descritiva A,9,39.7,14.89,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,714,Filosofia,4,135.5,16.25,75.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,715,Física e Química A,3,101.0,14.67,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,719,Geografia A,15,92.3,13.47,53.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,724,História da Cultura e das Artes,4,135.0,13.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,732,Latim A,1,138.0,15.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,835,Matemática Aplic. às Ciências Soc.,5,138.4,14.6,80.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,todos,Todos os exames,86,99.7,13.57,55.8,561,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,517,Francês,3,97.0,16.33,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,623,História A,17,103.8,12.94,52.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,635,Matemática A,3,98.3,13.0,33.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,639,Português,73,123.7,13.47,84.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,702,Biologia e Geologia,21,131.4,15.52,90.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,712,Economia A,4,95.8,14.5,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,714,Filosofia,24,117.0,13.83,79.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,715,Física e Química A,19,141.5,15.95,78.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,719,Geografia A,20,112.4,13.4,65.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,734,Literatura Portuguesa,3,138.7,13.33,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,835,Matemática Aplic. às Ciências Soc.,8,81.1,15.5,25.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,todos,Todos os exames,195,119.6,14.06,75.4,288,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,639,Português,1,98.0,12.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,702,Biologia e Geologia,1,113.0,16.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,715,Física e Química A,2,119.5,14.5,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,719,Geografia A,3,65.0,12.33,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,835,Matemática Aplic. às Ciências Soc.,2,51.0,11.0,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,todos,Todos os exames,9,83.0,12.89,44.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,517,Francês,1,101.0,11.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,623,História A,14,124.4,14.36,78.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,635,Matemática A,9,127.7,15.44,77.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,639,Português,52,112.7,14.12,65.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,702,Biologia e Geologia,20,117.3,14.3,70.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,714,Filosofia,16,105.4,12.94,62.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,715,Física e Química A,12,134.0,15.83,75.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,719,Geografia A,11,108.5,13.64,72.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,835,Matemática Aplic. às Ciências Soc.,16,75.2,12.94,25.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,todos,Todos os exames,151,111.9,14.07,64.9,453,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,623,História A,9,111.6,13.89,77.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,635,Matemática A,18,156.5,16.5,94.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,639,Português,61,129.3,12.95,88.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,702,Biologia e Geologia,36,149.5,15.75,91.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,706,Desenho A,10,136.9,16.1,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,708,Geometria Descritiva A,14,96.0,16.64,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,714,Filosofia,8,130.4,15.38,75.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,715,Física e Química A,14,136.9,16.07,92.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,719,Geografia A,14,129.1,13.57,92.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,724,História da Cultura e das Artes,7,124.0,13.0,71.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,835,Matemática Aplic. às Ciências Soc.,8,72.9,12.38,12.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,todos,Todos os exames,199,130.8,14.58,83.4,95,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,623,História A,10,99.7,16.6,60.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,635,Matemática A,28,124.6,16.46,71.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,639,Português,48,132.2,15.58,87.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,702,Biologia e Geologia,8,135.4,15.5,87.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,708,Geometria Descritiva A,2,58.0,15.5,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,712,Economia A,9,116.9,18.11,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,714,Filosofia,7,86.1,16.29,42.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,715,Física e Química A,8,119.9,15.62,75.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,719,Geografia A,6,122.5,14.83,83.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,835,Matemática Aplic. às Ciências Soc.,4,101.8,17.0,50.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,839,Português Língua Não Materna,1,179.0,17.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,todos,Todos os exames,131,121.9,16.08,74.8,232,594,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,501,Alemão,13,103.5,15.0,61.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,517,Francês,24,116.2,14.21,83.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,623,História A,247,109.0,13.84,66.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,635,Matemática A,372,113.8,15.19,64.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,639,Português,1257,128.9,13.93,83.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,702,Biologia e Geologia,491,124.1,14.73,79.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,706,Desenho A,77,149.0,16.13,97.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,708,Geometria Descritiva A,81,90.9,15.67,45.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,712,Economia A,112,112.3,14.88,69.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,714,Filosofia,344,102.0,14.4,56.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,715,Física e Química A,333,111.5,15.02,61.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,719,Geografia A,328,103.8,13.49,62.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,723,História B,3,129.3,16.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,724,História da Cultura e das Artes,62,142.5,13.58,88.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,732,Latim A,1,138.0,15.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,734,Literatura Portuguesa,33,109.2,14.12,66.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,735,Matemática B,8,158.9,14.88,87.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,835,Matemática Aplic. às Ciências Soc.,196,94.0,13.97,41.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,839,Português Língua Não Materna,5,154.0,15.8,80.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,847,Espanhol (continuação),6,134.2,12.17,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,AZ,Açores,20,,,todos,Todos os exames,3993,117.3,14.35,71.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,138,Português Língua Segunda,9,133.0,14.33,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,501,Alemão,159,118.6,16.08,71.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,517,Francês,210,117.2,14.65,70.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,547,Espanhol (iniciação),1851,132.3,15.65,91.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,623,História A,7811,110.7,14.1,67.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,635,Matemática A,20653,118.7,15.08,68.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,639,Português,55130,133.0,14.23,87.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,702,Biologia e Geologia,15864,129.8,14.57,82.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,706,Desenho A,3311,136.5,15.97,86.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,708,Geometria Descritiva A,4017,103.3,16.19,53.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,712,Economia A,8532,123.2,15.03,76.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,714,Filosofia,12553,106.6,14.56,60.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,715,Física e Química A,15496,117.4,14.93,65.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,719,Geografia A,12075,104.6,13.57,64.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,723,História B,390,116.2,14.91,72.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,724,História da Cultura e das Artes,2834,129.8,14.26,85.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,732,Latim A,5,121.0,14.4,80.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,734,Literatura Portuguesa,662,107.9,14.14,67.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,735,Matemática B,344,142.5,15.06,88.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,835,Matemática Aplic. às Ciências Soc.,7103,101.8,14.49,54.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,839,Português Língua Não Materna,403,139.7,15.37,82.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,847,Espanhol (continuação),390,129.0,14.62,87.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,848,Mandarim (iniciação),5,53.0,17.6,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,849,Italiano (iniciação),13,135.8,14.46,92.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,CO,Continente,,,,todos,Todos os exames,169820,121.9,14.56,75.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,501,Alemão,40,102.8,15.18,45.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,517,Francês,44,102.2,14.52,68.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,623,História A,195,113.3,13.93,70.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,635,Matemática A,526,121.1,15.62,68.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,639,Português,1396,133.1,14.1,88.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,702,Biologia e Geologia,473,123.8,14.59,78.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,706,Desenho A,101,150.7,16.73,98.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,708,Geometria Descritiva A,158,108.3,15.38,58.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,712,Economia A,143,124.7,14.91,76.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,714,Filosofia,398,106.2,14.58,61.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,715,Física e Química A,455,105.5,15.22,56.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,719,Geografia A,324,102.8,13.67,61.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,723,História B,21,110.6,14.57,61.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,724,História da Cultura e das Artes,76,133.3,13.72,88.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,734,Literatura Portuguesa,20,97.0,14.2,70.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,735,Matemática B,18,152.2,15.0,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,835,Matemática Aplic. às Ciências Soc.,196,102.9,14.1,57.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,839,Português Língua Não Materna,31,147.6,16.16,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,MD,Madeira,,,,todos,Todos os exames,4615,120.1,14.59,73.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,138,Português Língua Segunda,9,133.0,14.33,100.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,501,Alemão,212,114.7,15.84,66.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,517,Francês,278,114.7,14.59,70.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,547,Espanhol (iniciação),1851,132.3,15.65,91.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,623,História A,8253,110.7,14.09,67.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,635,Matemática A,21551,118.7,15.09,68.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,639,Português,57783,132.9,14.22,87.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,702,Biologia e Geologia,16828,129.5,14.58,81.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,706,Desenho A,3489,137.2,15.99,87.5,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,708,Geometria Descritiva A,4256,103.2,16.15,53.7,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,712,Economia A,8787,123.1,15.02,76.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,714,Filosofia,13295,106.5,14.56,60.8,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,715,Física e Química A,16284,117.0,14.94,65.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,719,Geografia A,12727,104.5,13.57,64.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,723,História B,414,116.0,14.9,72.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,724,História da Cultura e das Artes,2972,130.1,14.23,85.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,732,Latim A,6,123.8,14.5,83.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,734,Literatura Portuguesa,715,107.7,14.14,67.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,735,Matemática B,370,143.4,15.05,88.9,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,835,Matemática Aplic. às Ciências Soc.,7495,101.6,14.47,54.1,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,839,Português Língua Não Materna,439,140.5,15.43,83.4,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,847,Espanhol (continuação),396,129.1,14.59,87.6,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,848,Mandarim (iniciação),5,53.0,17.6,0.0,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,849,Italiano (iniciação),13,135.8,14.46,92.3,,,enes2025_ComunicacaoSocial_v2.zip
+2025,secundario,regiao,PT,Portugal,,,,todos,Todos os exames,178428,121.8,14.55,75.2,,,enes2025_ComunicacaoSocial_v2.zip
+2025,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,91,Português,134,52.7,3.19,59.7,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,92,Matemática,135,39.1,2.96,22.2,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,todos,Português e Matemática,269,45.9,3.07,40.9,941,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,91,Português,54,52.7,3.2,53.7,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,92,Matemática,56,41.0,2.89,23.2,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,todos,Português e Matemática,110,46.7,3.05,38.2,916,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,91,Português,276,61.2,3.34,78.6,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,92,Matemática,280,51.0,3.4,46.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,todos,Português e Matemática,556,56.1,3.37,62.6,388,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,91,Português,125,54.1,3.35,61.6,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,92,Matemática,126,41.2,2.99,27.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,todos,Português e Matemática,251,47.6,3.17,44.2,886,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,91,Português,127,58.2,3.47,74.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,92,Matemática,136,50.4,3.35,48.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,todos,Português e Matemática,263,54.2,3.41,60.8,524,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,91,Português,84,54.4,3.62,63.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,92,Matemática,83,49.6,3.42,48.2,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,167,52.0,3.52,55.7,658,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,91,Português,82,57.0,3.29,73.2,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,92,Matemática,83,50.8,3.49,51.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,todos,Português e Matemática,165,53.8,3.39,62.4,549,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,91,Português,150,56.0,3.37,66.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,92,Matemática,155,43.6,2.8,31.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,todos,Português e Matemática,305,49.7,3.08,48.2,800,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,91,Português,28,50.1,3.68,53.6,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,92,Matemática,28,38.1,3.29,10.7,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,todos,Português e Matemática,56,44.1,3.48,32.1,982,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,91,Português,56,51.8,3.02,58.9,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,92,Matemática,58,39.2,3.12,24.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,todos,Português e Matemática,114,45.4,3.07,41.2,952,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,91,Português,42,51.9,3.36,52.4,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,92,Matemática,41,41.6,2.85,29.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,todos,Português e Matemática,83,46.8,3.11,41.0,914,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,91,Português,37,61.7,3.32,83.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,92,Matemática,37,47.7,3.19,35.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,todos,Português e Matemática,74,54.7,3.26,59.5,487,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,91,Português,90,43.4,3.04,33.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,92,Matemática,96,31.4,3.16,5.2,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,todos,Português e Matemática,186,37.2,3.1,18.8,1030,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,91,Português,89,53.4,3.44,59.6,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,92,Matemática,90,41.6,3.14,30.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,todos,Português e Matemática,179,47.5,3.29,44.7,895,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,91,Português,55,60.2,3.35,78.2,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,92,Matemática,55,56.1,3.47,54.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,todos,Português e Matemática,110,58.2,3.41,66.4,268,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,91,Português,46,63.4,4.09,78.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,92,Matemática,48,71.5,3.75,87.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,todos,Português e Matemática,94,67.5,3.91,83.0,88,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,91,Português,40,47.0,3.1,47.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,92,Matemática,40,43.7,2.88,27.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,todos,Português e Matemática,80,45.4,2.99,37.5,953,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,91,Português,33,56.5,3.45,84.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,92,Matemática,34,45.1,3.53,44.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,67,50.7,3.49,64.2,724,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,91,Português,41,52.9,3.07,58.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,92,Matemática,41,47.0,3.41,43.9,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,todos,Português e Matemática,82,49.9,3.24,51.2,782,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,91,Português,34,54.5,3.21,67.6,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,92,Matemática,35,45.8,2.89,34.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,69,50.1,3.04,50.7,771,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,91,Português,15,60.1,3.33,80.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,92,Matemática,15,49.9,3.27,53.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,todos,Português e Matemática,30,55.0,3.3,66.7,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,91,Português,83,60.3,3.25,78.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,92,Matemática,84,56.4,3.36,53.6,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,167,58.3,3.31,65.9,263,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,91,Português,6,61.7,3.17,66.7,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,92,Matemática,6,67.7,4.0,83.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,todos,Português e Matemática,12,64.7,3.58,75.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,91,Português,3,57.7,3.33,100.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,92,Matemática,3,38.3,3.33,33.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,todos,Português e Matemática,6,48.0,3.33,66.7,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,91,Português,41,52.4,3.02,58.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,92,Matemática,41,43.3,2.83,29.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,todos,Português e Matemática,82,47.8,2.93,43.9,883,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,91,Português,39,49.6,3.31,53.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,92,Matemática,39,42.8,3.1,23.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,todos,Português e Matemática,78,46.2,3.21,38.5,931,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,91,Português,26,57.8,3.46,80.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,92,Matemática,26,41.3,2.88,23.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,todos,Português e Matemática,52,49.6,3.17,51.9,803,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,91,Português,38,55.9,3.29,73.7,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,92,Matemática,40,40.6,3.08,27.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,todos,Português e Matemática,78,48.0,3.18,50.0,876,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,91,Português,47,45.8,3.28,40.4,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,92,Matemática,47,40.2,3.11,21.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,todos,Português e Matemática,94,43.0,3.19,30.9,996,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,91,Português,43,59.9,3.6,79.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,92,Matemática,43,49.1,3.0,41.9,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,todos,Português e Matemática,86,54.5,3.3,60.5,498,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,91,Português,24,59.5,3.38,79.2,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,92,Matemática,24,47.7,2.96,37.5,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,todos,Português e Matemática,48,53.6,3.17,58.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,91,Português,32,51.7,3.16,50.0,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,92,Matemática,32,42.5,2.97,34.4,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,todos,Português e Matemática,64,47.1,3.06,42.2,906,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,91,Português,35,59.5,3.54,71.4,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,92,Matemática,35,51.2,3.49,51.4,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,todos,Português e Matemática,70,55.3,3.51,61.4,434,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,91,Português,55,54.8,3.22,58.2,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,92,Matemática,57,46.3,2.7,42.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,todos,Português e Matemática,112,50.5,2.96,50.0,743,1042,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,AZ,Açores,20,,,91,Português,2110,55.5,3.33,65.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,AZ,Açores,20,,,92,Matemática,2149,46.1,3.17,36.9,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,AZ,Açores,20,,,todos,Português e Matemática,4259,50.7,3.25,51.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,CO,Continente,,,,91,Português,88317,58.3,3.47,70.7,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,CO,Continente,,,,92,Matemática,90656,52.2,3.24,50.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,CO,Continente,,,,todos,Português e Matemática,178973,55.2,3.36,60.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,MD,Madeira,,,,91,Português,2224,58.2,3.5,70.1,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,MD,Madeira,,,,92,Matemática,2303,52.4,3.35,50.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,MD,Madeira,,,,todos,Português e Matemática,4527,55.3,3.42,60.3,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,PT,Portugal,,,,91,Português,92651,58.2,3.47,70.6,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,PT,Portugal,,,,92,Matemática,95108,52.1,3.24,49.8,,,eneb2025_ComunicacaoSocial.zip
+2025,basico,regiao,PT,Portugal,,,,todos,Português e Matemática,187759,55.1,3.35,60.1,,,eneb2025_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,702,Biologia e Geologia,51,98.0,14.88,52.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,708,Geometria Descritiva A,2,169.5,17.5,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,712,Economia A,15,125.9,14.27,73.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,714,Filosofia,23,111.3,15.09,73.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,715,Física e Química A,25,102.8,15.08,64.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,719,Geografia A,18,117.7,13.61,94.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,734,Literatura Portuguesa,3,154.0,16.67,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,835,Matemática Aplic. às Ciências Soc.,7,109.1,14.29,85.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1500,Escola Secundária Jerónimo Emiliano Andrade,2004301,Angra do Heroísmo,PUB,todos,Todos os exames,144,109.0,14.77,68.8,288,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,501,Alemão,1,120.0,17.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,517,Francês,13,119.2,13.54,69.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,702,Biologia e Geologia,76,112.6,13.7,72.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,708,Geometria Descritiva A,12,114.0,16.58,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,712,Economia A,24,123.7,13.5,79.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,714,Filosofia,47,107.7,15.4,63.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,715,Física e Química A,65,127.0,15.92,81.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,719,Geografia A,63,102.3,13.05,65.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,723,História B,2,107.0,15.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,724,História da Cultura e das Artes,5,132.8,14.0,80.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,734,Literatura Portuguesa,9,107.1,13.33,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,835,Matemática Aplic. às Ciências Soc.,44,123.6,13.23,90.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1501,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,todos,Todos os exames,361,115.2,14.24,73.7,181,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,501,Alemão,3,170.3,18.67,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,517,Francês,2,161.5,15.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,702,Biologia e Geologia,34,108.0,14.24,64.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,708,Geometria Descritiva A,19,139.5,16.53,84.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,712,Economia A,11,120.8,15.27,90.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,714,Filosofia,48,99.1,13.83,54.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,715,Física e Química A,31,133.1,15.23,77.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,719,Geografia A,25,120.7,14.12,80.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,723,História B,1,81.0,14.0,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,724,História da Cultura e das Artes,28,142.8,12.75,96.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,732,Latim A,1,142.0,20.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,734,Literatura Portuguesa,3,108.7,15.0,33.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,735,Matemática B,8,98.6,13.38,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,835,Matemática Aplic. às Ciências Soc.,15,119.3,12.47,86.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1502,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,todos,Todos os exames,229,120.1,14.28,73.8,117,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,501,Alemão,4,69.5,14.25,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,702,Biologia e Geologia,12,98.9,13.67,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,714,Filosofia,4,82.5,13.25,25.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,715,Física e Química A,3,114.0,13.67,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,719,Geografia A,11,87.1,13.82,18.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1503,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,todos,Todos os exames,34,91.0,13.74,32.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,702,Biologia e Geologia,28,120.4,13.43,78.6,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,708,Geometria Descritiva A,1,113.0,15.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,712,Economia A,5,102.6,15.8,80.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,714,Filosofia,18,106.1,13.78,61.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,715,Física e Química A,6,131.7,14.33,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,719,Geografia A,21,87.4,13.9,23.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,724,História da Cultura e das Artes,3,129.3,14.33,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,835,Matemática Aplic. às Ciências Soc.,9,131.1,13.33,88.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,847,Espanhol (continuação),6,128.8,14.83,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1504,"Escola Secundária Manuel de Arriaga, Horta",2004701,Horta,PUB,todos,Todos os exames,97,112.1,13.9,68.0,239,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,702,Biologia e Geologia,9,106.0,14.78,88.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,708,Geometria Descritiva A,2,95.5,15.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,712,Economia A,2,143.0,17.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,714,Filosofia,3,107.3,15.33,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,715,Física e Química A,5,100.4,16.6,60.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,719,Geografia A,7,126.1,13.71,85.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,724,História da Cultura e das Artes,3,96.0,14.67,33.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,735,Matemática B,2,167.0,19.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,835,Matemática Aplic. às Ciências Soc.,7,114.7,14.0,71.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1505,Escola Básica e Secundária de Lajes do Pico,2004601,Lajes do Pico,PUB,todos,Todos os exames,40,114.1,15.05,77.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,702,Biologia e Geologia,5,51.2,12.2,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,714,Filosofia,4,69.8,12.5,25.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,715,Física e Química A,2,91.5,15.0,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,719,Geografia A,6,119.8,13.67,83.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,835,Matemática Aplic. às Ciências Soc.,2,99.5,15.5,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1506,Escola Básica e Secundária de São Roque do Pico,2004603,São Roque do Pico,PUB,todos,Todos os exames,19,86.1,13.37,42.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,702,Biologia e Geologia,20,81.3,14.2,35.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,714,Filosofia,11,90.1,14.73,45.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,715,Física e Química A,13,86.2,16.77,23.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,719,Geografia A,6,119.2,11.67,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,835,Matemática Aplic. às Ciências Soc.,1,95.0,13.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1507,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,todos,Todos os exames,51,89.2,14.65,43.1,446,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,517,Francês,7,120.6,12.57,85.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,702,Biologia e Geologia,30,82.6,15.33,30.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,712,Economia A,10,147.4,15.9,90.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,714,Filosofia,7,102.7,14.86,57.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,715,Física e Química A,18,114.1,15.0,77.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,719,Geografia A,29,93.9,14.1,37.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,734,Literatura Portuguesa,2,90.5,11.0,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,835,Matemática Aplic. às Ciências Soc.,20,115.3,14.4,85.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1508,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,todos,Todos os exames,123,103.9,14.63,57.7,363,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,517,Francês,5,130.2,14.4,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,702,Biologia e Geologia,39,104.4,14.36,59.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,708,Geometria Descritiva A,5,124.4,19.4,60.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,712,Economia A,8,135.4,14.62,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,714,Filosofia,7,98.3,16.14,42.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,715,Física e Química A,18,113.8,15.61,72.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,719,Geografia A,25,101.9,14.32,64.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,724,História da Cultura e das Artes,7,129.9,14.86,85.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,734,Literatura Portuguesa,9,118.7,14.22,77.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,735,Matemática B,4,131.5,16.75,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,835,Matemática Aplic. às Ciências Soc.,26,115.3,13.88,76.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1509,"Escola Secundária Vitorino Nemésio, Praia da Vitória",2004302,Praia da Vitória,PUB,todos,Todos os exames,153,112.5,14.76,70.6,227,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,702,Biologia e Geologia,8,81.2,14.88,37.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,712,Economia A,1,132.0,15.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,714,Filosofia,4,51.8,13.25,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,715,Física e Química A,2,111.5,14.5,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,719,Geografia A,3,110.7,14.0,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,835,Matemática Aplic. às Ciências Soc.,5,126.8,13.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1510,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,todos,Todos os exames,23,94.7,14.04,56.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,501,Alemão,2,131.5,19.5,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,702,Biologia e Geologia,7,119.3,14.43,71.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,708,Geometria Descritiva A,3,145.7,16.67,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,712,Economia A,8,127.6,15.12,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,714,Filosofia,2,107.0,16.0,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,715,Física e Química A,7,128.9,15.57,85.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,719,Geografia A,8,122.5,14.88,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,724,História da Cultura e das Artes,5,130.0,13.2,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1511,Escola Básica e Secundária de Velas,2004502,Velas,PUB,todos,Todos os exames,42,126.2,15.17,88.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,517,Francês,1,146.0,14.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,702,Biologia e Geologia,8,102.0,12.88,62.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,714,Filosofia,2,80.5,11.5,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,715,Física e Química A,6,110.8,14.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,719,Geografia A,4,95.0,12.0,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,835,Matemática Aplic. às Ciências Soc.,6,123.7,15.17,83.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1512,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,todos,Todos os exames,27,107.8,13.44,74.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,702,Biologia e Geologia,8,82.4,12.75,25.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,715,Física e Química A,4,95.8,13.75,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,719,Geografia A,11,120.3,13.27,90.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,835,Matemática Aplic. às Ciências Soc.,8,127.6,13.75,87.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1513,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,todos,Todos os exames,31,109.2,13.32,67.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,702,Biologia e Geologia,7,77.0,12.29,14.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,714,Filosofia,12,101.5,14.5,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,715,Física e Química A,2,148.5,17.5,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,719,Geografia A,4,115.5,13.5,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,835,Matemática Aplic. às Ciências Soc.,5,112.2,13.8,60.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1514,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,todos,Todos os exames,30,102.6,13.93,53.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,702,Biologia e Geologia,11,93.0,13.27,36.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,714,Filosofia,6,129.7,14.67,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,715,Física e Química A,11,86.6,12.82,27.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,719,Geografia A,5,114.6,13.2,80.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,724,História da Cultura e das Artes,4,111.8,15.75,75.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,835,Matemática Aplic. às Ciências Soc.,4,113.8,13.25,75.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1517,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,todos,Todos os exames,41,103.1,13.59,56.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,702,Biologia e Geologia,10,84.7,14.3,30.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,714,Filosofia,7,56.1,11.57,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,715,Física e Química A,3,140.0,15.67,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,719,Geografia A,17,81.9,12.94,47.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,732,Latim A,1,106.0,13.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,835,Matemática Aplic. às Ciências Soc.,1,72.0,12.0,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1518,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,todos,Todos os exames,39,82.8,13.23,38.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,702,Biologia e Geologia,43,86.3,13.44,41.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,712,Economia A,4,101.0,14.25,75.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,714,Filosofia,8,126.9,14.25,87.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,715,Física e Química A,28,76.4,14.25,25.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,719,Geografia A,29,90.4,14.66,55.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,835,Matemática Aplic. às Ciências Soc.,8,119.0,11.38,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1519,Escola Secundária da Lagoa,2004201,Lagoa,PUB,todos,Todos os exames,120,90.4,13.87,49.2,442,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,719,Geografia A,1,78.0,14.0,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,835,Matemática Aplic. às Ciências Soc.,1,75.0,14.0,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1520,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,todos,Todos os exames,2,76.5,14.0,0.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,702,Biologia e Geologia,25,77.0,14.04,36.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,714,Filosofia,18,95.7,14.06,61.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,715,Física e Química A,9,86.9,13.56,33.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,719,Geografia A,19,110.0,14.58,68.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,835,Matemática Aplic. às Ciências Soc.,11,117.9,14.45,90.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1521,Escola Básica e Secundária Armando Côrtes Rodrigues,2004206,Vila Franca do Campo,PUB,todos,Todos os exames,82,95.3,14.17,56.1,428,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,702,Biologia e Geologia,28,108.2,14.79,60.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,708,Geometria Descritiva A,12,68.2,14.67,8.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,714,Filosofia,6,80.5,14.5,33.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,715,Física e Química A,10,133.6,16.4,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,719,Geografia A,10,133.0,13.4,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,724,História da Cultura e das Artes,6,98.7,11.83,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,734,Literatura Portuguesa,2,152.5,11.5,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,835,Matemática Aplic. às Ciências Soc.,11,118.0,13.91,81.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,1522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,todos,Todos os exames,85,108.1,14.38,63.5,304,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,702,Biologia e Geologia,11,108.3,14.27,63.6,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,708,Geometria Descritiva A,3,154.7,18.67,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,712,Economia A,2,131.0,15.5,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,714,Filosofia,16,104.6,17.56,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,715,Física e Química A,14,126.9,17.0,85.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,719,Geografia A,7,117.7,15.43,57.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,835,Matemática Aplic. às Ciências Soc.,4,134.5,17.0,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,escola,2927,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,todos,Todos os exames,57,118.1,16.47,68.4,143,456,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,501,Alemão,10,117.2,16.9,60.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,517,Francês,28,125.5,13.57,82.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,702,Biologia e Geologia,470,98.7,14.09,53.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,708,Geometria Descritiva A,59,118.7,16.47,59.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,712,Economia A,90,126.2,14.66,85.6,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,714,Filosofia,253,100.7,14.61,56.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,715,Física e Química A,282,113.0,15.3,67.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,719,Geografia A,329,104.4,13.78,63.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,723,História B,3,98.3,14.67,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,724,História da Cultura e das Artes,61,130.1,13.41,85.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,732,Latim A,2,124.0,16.5,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,734,Literatura Portuguesa,28,118.1,13.86,71.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,735,Matemática B,14,117.8,15.14,71.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,835,Matemática Aplic. às Ciências Soc.,195,119.1,13.67,84.6,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,847,Espanhol (continuação),6,128.8,14.83,100.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,AZ,Açores,20,,,todos,Todos os exames,1830,108.5,14.35,65.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,501,Alemão,179,113.4,15.97,65.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,517,Francês,281,129.7,15.01,80.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,547,Espanhol (iniciação),1688,144.5,15.69,96.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,702,Biologia e Geologia,16119,106.1,14.64,61.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,708,Geometria Descritiva A,4405,115.3,16.04,63.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,712,Economia A,7287,134.4,14.94,84.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,714,Filosofia,9658,105.3,14.63,58.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,715,Física e Química A,15274,119.1,14.97,73.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,719,Geografia A,11476,103.1,13.49,62.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,723,História B,313,125.9,15.03,82.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,724,História da Cultura e das Artes,2999,121.4,14.27,77.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,732,Latim A,6,94.7,14.67,50.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,734,Literatura Portuguesa,699,116.1,14.21,74.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,735,Matemática B,412,135.6,15.21,82.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,835,Matemática Aplic. às Ciências Soc.,6645,123.1,14.45,81.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,847,Espanhol (continuação),291,128.8,14.77,89.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,849,Italiano (iniciação),9,103.2,15.89,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,CO,Continente,,,,todos,Todos os exames,77741,114.7,14.64,69.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,501,Alemão,43,101.5,15.79,60.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,517,Francês,19,115.9,14.21,73.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,702,Biologia e Geologia,465,101.3,14.86,56.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,708,Geometria Descritiva A,144,132.5,15.95,75.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,712,Economia A,179,133.2,15.09,78.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,714,Filosofia,393,107.7,14.5,58.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,715,Física e Química A,425,116.2,15.39,69.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,719,Geografia A,342,106.6,13.42,68.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,723,História B,18,108.2,13.67,61.1,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,724,História da Cultura e das Artes,81,135.0,14.74,85.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,734,Literatura Portuguesa,15,130.1,14.33,80.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,735,Matemática B,28,140.0,14.25,92.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,835,Matemática Aplic. às Ciências Soc.,169,129.0,14.18,89.3,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,MD,Madeira,,,,todos,Todos os exames,2321,114.3,14.71,68.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,501,Alemão,232,111.4,15.98,64.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,517,Francês,328,128.6,14.84,80.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,547,Espanhol (iniciação),1688,144.5,15.69,96.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,702,Biologia e Geologia,17054,105.8,14.63,61.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,708,Geometria Descritiva A,4608,115.9,16.05,64.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,712,Economia A,7556,134.3,14.94,84.6,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,714,Filosofia,10304,105.3,14.63,58.8,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,715,Física e Química A,15981,119.0,14.99,73.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,719,Geografia A,12147,103.2,13.49,63.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,723,História B,334,124.7,14.95,81.4,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,724,História da Cultura e das Artes,3141,121.9,14.26,78.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,732,Latim A,8,102.0,15.12,62.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,734,Literatura Portuguesa,742,116.5,14.2,74.5,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,735,Matemática B,454,135.4,15.15,83.0,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,835,Matemática Aplic. às Ciências Soc.,7009,123.1,14.43,82.2,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,847,Espanhol (continuação),297,128.8,14.77,89.9,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,849,Italiano (iniciação),9,103.2,15.89,66.7,,,enes2024_ComunicacaoSocial.zip
+2024,secundario,regiao,PT,Portugal,,,,todos,Todos os exames,81892,114.5,14.63,69.6,,,enes2024_ComunicacaoSocial.zip
+2024,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,91,Português,133,54.3,3.19,67.7,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,92,Matemática,131,34.7,2.86,29.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,todos,Português e Matemática,264,44.6,3.03,48.5,906,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,91,Português,73,51.8,3.38,56.2,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,92,Matemática,73,34.1,2.93,21.9,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,todos,Português e Matemática,146,42.9,3.16,39.0,945,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,91,Português,231,57.7,3.45,77.9,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,92,Matemática,230,50.4,3.53,51.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,todos,Português e Matemática,461,54.1,3.49,64.6,489,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,91,Português,130,53.7,3.33,67.7,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,92,Matemática,129,34.9,3.26,27.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,todos,Português e Matemática,259,44.3,3.3,47.5,912,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,91,Português,168,60.3,3.43,83.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,92,Matemática,169,51.2,3.44,55.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,todos,Português e Matemática,337,55.7,3.44,69.4,397,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,91,Português,85,63.2,3.54,88.2,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,92,Matemática,86,53.8,3.36,57.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,171,58.5,3.45,72.5,262,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,91,Português,66,53.2,3.61,60.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,92,Matemática,67,51.5,3.57,49.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,todos,Português e Matemática,133,52.3,3.59,54.9,581,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,91,Português,120,58.4,3.12,81.7,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,92,Matemática,123,35.6,3.0,26.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,todos,Português e Matemática,243,46.9,3.06,53.5,847,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,91,Português,24,48.2,3.21,50.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,92,Matemática,25,23.7,3.2,4.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,todos,Português e Matemática,49,35.7,3.2,26.5,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,91,Português,78,48.7,3.1,55.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,92,Matemática,78,36.9,3.18,30.8,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,todos,Português e Matemática,156,42.8,3.14,42.9,950,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,91,Português,44,53.0,3.2,65.9,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,92,Matemática,44,40.5,3.05,34.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,todos,Português e Matemática,88,46.7,3.12,50.0,853,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,91,Português,58,52.2,3.43,63.8,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,92,Matemática,58,39.1,2.9,29.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,todos,Português e Matemática,116,45.6,3.16,46.6,881,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,91,Português,115,42.2,3.16,24.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,92,Matemática,120,19.7,3.35,5.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,todos,Português e Matemática,235,30.7,3.26,14.5,1038,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,91,Português,69,54.6,3.16,65.2,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,92,Matemática,70,45.8,3.23,44.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,todos,Português e Matemática,139,50.1,3.19,54.7,697,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,91,Português,70,59.7,3.5,78.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,92,Matemática,71,52.0,3.21,47.9,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,todos,Português e Matemática,141,55.8,3.35,63.1,389,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,91,Português,31,62.4,4.26,87.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,92,Matemática,33,59.9,3.94,63.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,todos,Português e Matemática,64,61.1,4.09,75.0,185,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,91,Português,38,44.4,3.0,36.8,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,92,Matemática,40,28.7,2.98,12.5,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,todos,Português e Matemática,78,36.3,2.99,24.4,1021,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,91,Português,44,55.0,3.45,65.9,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,92,Matemática,44,52.4,3.59,59.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,88,53.7,3.52,62.5,505,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,91,Português,41,57.1,3.44,80.5,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,92,Matemática,40,37.9,3.3,25.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,todos,Português e Matemática,81,47.6,3.37,53.1,824,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,91,Português,44,54.9,3.25,63.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,92,Matemática,44,44.1,3.25,40.9,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,88,49.5,3.25,52.3,737,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,91,Português,15,66.0,3.6,100.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,92,Matemática,15,62.6,3.8,66.7,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,todos,Português e Matemática,30,64.3,3.7,83.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,91,Português,85,58.7,3.32,81.2,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,92,Matemática,87,57.2,3.43,59.8,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,172,57.9,3.37,70.3,291,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,91,Português,9,51.3,2.78,55.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,92,Matemática,9,44.2,3.89,33.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,todos,Português e Matemática,18,47.8,3.33,44.4,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,91,Português,3,66.0,3.67,100.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,92,Matemática,3,49.0,3.67,33.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,todos,Português e Matemática,6,57.5,3.67,66.7,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,91,Português,50,58.1,3.84,78.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,92,Matemática,50,42.1,3.38,44.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,todos,Português e Matemática,100,50.1,3.61,61.0,699,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,91,Português,36,52.9,3.39,61.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,92,Matemática,36,51.8,3.11,50.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,todos,Português e Matemática,72,52.4,3.25,55.6,578,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,91,Português,32,52.0,3.38,59.4,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,92,Matemática,34,37.5,2.76,35.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,todos,Português e Matemática,66,44.5,3.06,47.0,909,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,91,Português,43,49.7,3.3,53.5,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,92,Matemática,43,29.0,3.37,18.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,todos,Português e Matemática,86,39.3,3.34,36.0,1004,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,91,Português,64,54.8,3.19,65.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,92,Matemática,64,41.6,3.11,35.9,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,todos,Português e Matemática,128,48.2,3.15,50.8,795,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,91,Português,37,53.6,3.22,54.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,92,Matemática,37,48.6,3.03,51.4,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,todos,Português e Matemática,74,51.1,3.12,52.7,638,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,91,Português,18,61.6,3.33,83.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,92,Matemática,18,39.7,3.28,27.8,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,todos,Português e Matemática,36,50.6,3.31,55.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,91,Português,17,51.2,3.24,52.9,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,92,Matemática,17,34.0,3.06,17.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,todos,Português e Matemática,34,42.6,3.15,35.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,91,Português,40,51.0,3.65,52.5,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,92,Matemática,40,31.6,3.4,20.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,todos,Português e Matemática,80,41.3,3.52,36.2,974,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,91,Português,41,61.8,3.15,73.2,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,92,Matemática,43,48.2,3.51,53.5,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,todos,Português e Matemática,84,54.8,3.33,63.1,430,1042,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,AZ,Açores,20,,,91,Português,2152,55.1,3.35,68.0,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,AZ,Açores,20,,,92,Matemática,2171,42.4,3.27,38.2,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,AZ,Açores,20,,,todos,Português e Matemática,4323,48.7,3.31,53.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,CO,Continente,,,,91,Português,87043,58.9,3.47,76.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,CO,Continente,,,,92,Matemática,88937,50.8,3.23,50.5,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,CO,Continente,,,,todos,Português e Matemática,175980,54.8,3.35,63.3,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,MD,Madeira,,,,91,Português,2155,58.0,3.56,74.8,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,MD,Madeira,,,,92,Matemática,2237,50.0,3.37,50.6,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,MD,Madeira,,,,todos,Português e Matemática,4392,54.0,3.47,62.5,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,PT,Portugal,,,,91,Português,91350,58.8,3.47,76.1,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,PT,Portugal,,,,92,Matemática,93345,50.6,3.24,50.2,,,eneb2024_ComunicacaoSocial.zip
+2024,basico,regiao,PT,Portugal,,,,todos,Português e Matemática,184695,54.7,3.35,63.0,,,eneb2024_ComunicacaoSocial.zip
+2023,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,91,Português,117,57.4,3.36,66.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,92,Matemática,117,30.0,3.16,20.5,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,290630,Escola Secundária da Ribeira Grande,2004205,Ribeira Grande,PUB,todos,Português e Matemática,234,43.7,3.26,43.6,843,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,91,Português,69,54.6,3.38,65.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,92,Matemática,69,31.5,3.28,23.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390109,Escola Secundária das Laranjeiras,2004203,Ponta Delgada,PUB,todos,Português e Matemática,138,43.0,3.33,44.2,869,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,91,Português,260,64.5,3.55,84.6,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,92,Matemática,259,44.5,3.39,45.6,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390111,Escola Secundária Domingos Rebelo,2004203,Ponta Delgada,PUB,todos,Português e Matemática,519,54.5,3.47,65.1,321,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,91,Português,129,55.6,3.5,63.6,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,92,Matemática,133,28.9,3.32,21.1,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390112,Escola Secundária da Lagoa,2004201,Lagoa,PUB,todos,Português e Matemática,262,42.0,3.41,42.0,903,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,91,Português,174,60.3,3.79,78.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,92,Matemática,176,39.4,3.28,38.1,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390113,Escola Secundária Antero de Quental,2004203,Ponta Delgada,PUB,todos,Português e Matemática,350,49.8,3.53,58.0,567,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,91,Português,96,58.6,3.44,76.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,92,Matemática,97,46.6,3.52,49.5,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390141,Escola Secundária Jerónimo Emiliano de Andrade,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,193,52.5,3.48,62.7,421,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,91,Português,77,60.0,3.69,83.1,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,92,Matemática,80,41.9,3.51,43.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390148,Escola Secundária Vitorino Nemésio,2004302,Praia da Vitória,PUB,todos,Português e Matemática,157,50.8,3.6,63.1,526,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,91,Português,136,59.1,3.37,77.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,92,Matemática,136,41.1,3.24,36.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,390165,Escola Secundária Manuel de Arriaga,2004701,Horta,PUB,todos,Português e Matemática,272,50.1,3.31,57.0,553,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,91,Português,18,52.6,3.5,66.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,92,Matemática,20,30.3,3.05,20.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912501,Escola Básica Integrada Ponta Garça,2004206,Vila Franca do Campo,PUB,todos,Português e Matemática,38,40.8,3.26,42.1,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,91,Português,57,53.7,2.98,63.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,92,Matemática,58,30.0,3.14,19.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912506,Escola Básica Integrada de Arrifes,2004203,Ponta Delgada,PUB,todos,Português e Matemática,115,41.7,3.06,40.9,912,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,91,Português,22,53.1,3.23,50.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,92,Matemática,22,33.6,3.23,31.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912507,Escola Básica Integrada de Ginetes,2004203,Ponta Delgada,PUB,todos,Português e Matemática,44,43.4,3.23,40.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,91,Português,56,50.9,2.93,58.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,92,Matemática,56,25.5,2.98,8.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912508,Escola Básica Integrada de Maia,2004205,Ribeira Grande,PUB,todos,Português e Matemática,112,38.2,2.96,33.9,992,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,91,Português,107,42.3,3.32,32.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,92,Matemática,109,23.6,3.41,14.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912509,Escola Básica Integrada de Rabo de Peixe,2004205,Ribeira Grande,PUB,todos,Português e Matemática,216,32.9,3.37,23.6,1035,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,91,Português,61,56.7,3.0,78.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,92,Matemática,62,27.8,2.95,16.1,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912510,Escola Básica Integrada de Vila de Capelas,2004203,Ponta Delgada,PUB,todos,Português e Matemática,123,42.1,2.98,47.2,897,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,91,Português,76,59.0,3.43,81.6,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,92,Matemática,76,37.8,3.07,36.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912512,Escola Básica e Secundária Armando Côrtes-Rodrigues,2004206,Vila Franca do Campo,PUB,todos,Português e Matemática,152,48.4,3.25,59.2,638,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,91,Português,31,67.3,4.13,93.5,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,92,Matemática,31,57.9,4.06,74.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912513,Colégio do Castanheiro,2004203,Ponta Delgada,PRI,todos,Português e Matemática,62,62.6,4.1,83.9,112,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,91,Português,21,40.4,3.33,19.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,92,Matemática,21,16.4,2.81,4.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912515,Escola Básica Integrada Água de Pau,2004201,Lagoa,PUB,todos,Português e Matemática,42,28.4,3.07,11.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,91,Português,35,56.3,3.17,68.6,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,92,Matemática,35,35.4,3.29,22.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912518,Escola Básica Integrada Francisco Ferreira Drummond,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,70,45.8,3.23,45.7,766,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,91,Português,64,56.1,3.38,67.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,92,Matemática,65,42.5,3.68,41.5,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912519,Escola Básica Integrada da Praia da Vitória,2004302,Praia da Vitória,PUB,todos,Português e Matemática,129,49.2,3.53,54.3,591,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,91,Português,59,52.4,3.1,67.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,92,Matemática,58,29.7,2.71,20.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912520,Escola Básica Integrada de Angra do Heroísmo,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,117,41.2,2.91,44.4,933,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,91,Português,19,60.2,3.63,78.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,92,Matemática,19,50.7,3.58,57.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912521,Escola Básica Integrada dos Biscoitos,2004302,Praia da Vitória,PUB,todos,Português e Matemática,38,55.4,3.61,68.4,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,91,Português,96,60.2,3.56,75.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,92,Matemática,99,43.2,3.68,35.4,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912522,Escola Básica e Secundária Tomás de Borba,2004301,Angra do Heroísmo,PUB,todos,Português e Matemática,195,51.6,3.62,54.9,470,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,91,Português,13,47.5,3.54,76.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,92,Matemática,13,56.5,3.85,69.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912524,Escola Básica Integrada de Vila do Topo,2004501,Calheta,PUB,todos,Português e Matemática,26,52.0,3.69,73.1,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,91,Português,6,48.2,3.5,50.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,92,Matemática,6,22.2,3.17,0.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912526,Escola Básica Integrada Mouzinho da Silveira,2004901,Corvo,PUB,todos,Português e Matemática,12,35.2,3.33,25.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,91,Português,56,60.7,3.89,87.5,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,92,Matemática,56,43.0,3.27,41.1,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912527,Escola Básica e Secundária de Santa Maria,2004101,Vila do Porto,PUB,todos,Português e Matemática,112,51.8,3.58,64.3,456,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,91,Português,37,54.8,3.3,62.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,92,Matemática,37,41.0,3.3,32.4,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912528,Escola Básica e Secundária da Graciosa,2004401,Santa Cruz da Graciosa,PUB,todos,Português e Matemática,74,47.9,3.3,47.3,664,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,91,Português,22,56.8,3.5,63.6,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,92,Matemática,22,39.4,3.59,31.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912529,Escola Básica e Secundária de S. Roque do Pico,2004603,São Roque do Pico,PUB,todos,Português e Matemática,44,48.1,3.55,47.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,91,Português,49,58.8,3.39,77.6,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,92,Matemática,48,35.3,3.52,31.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912530,Escola Básica e Secundária de Nordeste,2004202,Nordeste,PUB,todos,Português e Matemática,97,47.2,3.45,54.6,702,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,91,Português,54,55.5,3.24,66.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,92,Matemática,53,40.1,3.32,37.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912531,Escola Básica e Secundária da Povoação,2004204,Povoação,PUB,todos,Português e Matemática,107,47.8,3.28,52.3,667,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,91,Português,37,52.9,3.54,56.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,92,Matemática,35,51.8,3.43,54.3,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912532,Escola Básica e Secundária de Velas,2004502,Velas,PUB,todos,Português e Matemática,72,52.4,3.49,55.6,434,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,91,Português,22,62.7,3.45,81.8,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,92,Matemática,22,43.9,3.18,50.0,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912533,Escola Básica e Secundária da Calheta,2004501,Calheta,PUB,todos,Português e Matemática,44,53.3,3.32,65.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,91,Português,37,51.3,3.7,62.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,92,Matemática,37,39.1,3.41,29.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912534,Escola Básica e Secundária das Flores,2004802,Santa Cruz das Flores,PUB,todos,Português e Matemática,74,45.2,3.55,45.9,792,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,91,Português,39,57.4,3.38,84.6,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,92,Matemática,39,39.4,3.59,33.3,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912535,Escola Básica e Secundária das Lajes do Pico,2004601,Lajes do Pico,PUB,todos,Português e Matemática,78,48.4,3.49,59.0,640,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,91,Português,44,64.3,3.59,90.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,92,Matemática,43,44.9,3.21,34.9,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,escola,912536,Escola Básica e Secundária da Madalena,2004602,Madalena,PUB,todos,Português e Matemática,87,54.7,3.4,63.2,311,1052,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,AZ,Açores,20,,,91,Português,2196,57.4,3.45,71.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,AZ,Açores,20,,,92,Matemática,2209,37.8,3.32,33.5,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,AZ,Açores,20,,,todos,Português e Matemática,4405,47.5,3.39,52.5,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,CO,Continente,,,,91,Português,87457,60.6,3.47,78.4,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,CO,Continente,,,,92,Matemática,89036,43.5,3.3,42.5,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,CO,Continente,,,,todos,Português e Matemática,176493,52.0,3.38,60.3,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,MD,Madeira,,,,91,Português,2383,60.5,3.51,78.2,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,MD,Madeira,,,,92,Matemática,2447,41.6,3.38,39.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,MD,Madeira,,,,todos,Português e Matemática,4830,50.9,3.44,58.7,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,PT,Portugal,,,,91,Português,92036,60.5,3.47,78.3,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,PT,Portugal,,,,92,Matemática,93692,43.3,3.3,42.3,,,eneb2023_ComunicacaoSocial_24.zip
+2023,basico,regiao,PT,Portugal,,,,todos,Português e Matemática,185728,51.8,3.39,60.1,,,eneb2023_ComunicacaoSocial_24.zip
