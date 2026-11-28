@@ -49,6 +49,7 @@ ficheiro: [Descarregar](/dados/descarregar/).
 </form>
 
 <p id="estado" role="status" aria-live="polite">A carregar…</p>
+<p><button type="button" id="todos" hidden>Pesquisar em todos os anos (desde 2012)</button></p>
 <p><a id="exportar" href="#" download>Descarregar estes resultados (CSV)</a></p>
 
 <div class="dados-scroll">
@@ -83,17 +84,12 @@ Regional, impostos e Tribunal de Contas em <a href="/financas/">Finanças</a>.</
 .glossario { max-width: 52em; }
 .glossario dt { font-weight: bold; margin-top: .5em; }
 .glossario dd { margin: 0 0 .2em; }
-.glossario dd.fonte, .termos p.fonte { font-size: .85em; color: #586e75; margin-bottom: .5em; }
+.glossario dd.fonte, .termos p.fonte { font-size: .85em; color: var(--s01); margin-bottom: .5em; }
 .termos { margin: .5em 0 1.5em; max-width: 52em; }
 .termos summary { cursor: pointer; }
 #tabela td { vertical-align: top; }
 #tabela td.num { text-align: right; white-space: nowrap; }
 #tabela td.dt { white-space: nowrap; }
-th button { all: unset; cursor: pointer; font-weight: bold; }
-th[aria-sort="ascending"] button::after { content: " ▲"; }
-th[aria-sort="descending"] button::after { content: " ▼"; }
-[hidden] { display: none !important; }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 </style>
 
 <script>
@@ -146,13 +142,44 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     });
   }
 
-  function load(fonte) {
-    if (!cache[fonte]) {
-      cache[fonte] = fetch("/dados/" + fonte + ".csv?v=" + BUILD)
+  function loadFile(path) {
+    if (!cache[path]) {
+      cache[path] = fetch("/dados/" + path + ".csv?v=" + BUILD)
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
         .then(parseCSV);
     }
-    return cache[fonte];
+    return cache[path];
+  }
+
+  // BASE is split by year (base/<ano>.csv, 16 MB in all): load the RECENT
+  // newest years, the years the dates ask for, or all of them on request.
+  var RECENT = 3, meta = null;
+  function baseYears() {
+    meta = meta || fetch("/dados/meta.json?v=" + BUILD)
+      .then(function (r) { return r.json(); })
+      .catch(function () { return {}; });
+    return meta.then(function (m) {
+      var all = Object.keys((m.base || {}).anos || {}).sort().reverse();
+      if (!all.length) return null;
+      var de = $("de").value.slice(0, 4), ate = $("ate").value.slice(0, 4);
+      var sel = all.filter(function (a, i) {
+        if (a === "sem_data") return state.todos;
+        if (ate && a > ate) return false;
+        if (de) return a >= de;
+        return state.todos || i < RECENT;
+      });
+      return { sel: sel, all: all };
+    });
+  }
+
+  function load(fonte) {
+    if (fonte !== "base") return loadFile(fonte);
+    return baseYears().then(function (y) {
+      state.anos = y;
+      if (!y) return loadFile("base");
+      return Promise.all(y.sel.map(function (a) { return loadFile("base/" + a); }))
+        .then(function (parts) { return [].concat.apply([], parts); });
+    });
   }
 
   function readHash() {
@@ -160,6 +187,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     if (VIEW[p.get("fonte")]) state.fonte = p.get("fonte");
     document.querySelector('input[name=fonte][value="' + state.fonte + '"]').checked = true;
     $("q").value = p.get("q") || ""; $("de").value = p.get("de") || ""; $("ate").value = p.get("ate") || "";
+    state.todos = p.get("todos") === "1";
     $("min").value = p.get("min") || ""; state.tipo = p.get("tipo") || "";
     state.sort = p.get("ord") || null; state.dir = p.get("dir") === "asc" ? 1 : -1;
   }
@@ -168,7 +196,7 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     var p = new URLSearchParams();
     p.set("fonte", state.fonte);
     [["q", $("q").value.trim()], ["tipo", $("tipo").value], ["de", $("de").value], ["ate", $("ate").value],
-     ["min", $("min").value], ["ord", state.sort || ""], ["dir", state.sort ? (state.dir > 0 ? "asc" : "desc") : ""]]
+     ["min", $("min").value], ["todos", state.todos && state.fonte === "base" ? "1" : ""], ["ord", state.sort || ""], ["dir", state.sort ? (state.dir > 0 ? "asc" : "desc") : ""]]
       .forEach(function (kv) { if (kv[1]) p.set(kv[0], kv[1]); });
     history.replaceState(null, "", "#" + p.toString());
   }
@@ -258,9 +286,18 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
       msg += ", total " + eur.format(total);
     }
     if (current.length > state.shown) msg += " (a mostrar " + state.shown + ")";
+    // only the RECENT years loaded, and no dates that already set the range
+    var y = state.fonte === "base" && state.anos;
+    var parcial = y && !$("de").value && y.sel.length < y.all.length;
+    if (parcial) {
+      var anos = y.sel.filter(function (a) { return a !== "sem_data"; });
+      var de = anos[anos.length - 1], ate = anos[0];
+      msg += " em contratos publicados " + (de === ate ? "em " + de : "de " + de + " a " + ate);
+    }
     $("estado").textContent = msg + ".";
     $("tabela").caption.textContent = msg;
     $("mais").hidden = current.length <= state.shown;
+    $("todos").hidden = !parcial;
   }
 
   function exportCSV(e) {
@@ -290,6 +327,9 @@ th[aria-sort="descending"] button::after { content: " ▼"; }
     state.sort = null; state.shown = PAGE; apply();
   });
   $("mais").addEventListener("click", function () { state.shown += PAGE * 5; render(); });
+  $("todos").addEventListener("click", function () {
+    state.todos = true; $("estado").textContent = "A carregar os contratos desde 2012…"; apply();
+  });
   $("exportar").addEventListener("click", exportCSV);
 
   readHash();

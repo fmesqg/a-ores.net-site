@@ -2,6 +2,7 @@ import csv
 import sqlite3
 
 from bot import datasets, ine
+from bot.dados import resumo
 
 META = {
     "IndicadorNome": "Valor mediano do rendimento bruto declarado deduzido do "
@@ -260,7 +261,7 @@ def test_ine_news_newest_first():
         row("2", "2026-09-29", "2025"),
         row("2", "2026-09-29", "2024"),
     ]
-    news = datasets.ine_news(cols, rows)
+    news = resumo.ine_news(cols, rows)
     assert [n["varcd"] for n in news] == ["2", "1"]
     assert news[0]["periodo"] == "2025"
 

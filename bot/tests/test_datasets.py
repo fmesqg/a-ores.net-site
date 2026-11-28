@@ -2,8 +2,21 @@ import csv
 import gzip
 import json
 import sqlite3
+from pathlib import Path
 
 from bot import datasets
+from bot.dados import (
+    base,
+    camaras,
+    comum,
+    credito,
+    empresas,
+    impostos,
+    parlamento,
+    publico,
+    resumo,
+    sqlite,
+)
 
 BASE_DAY = """---
 date: 2026-11-25
@@ -60,31 +73,64 @@ date: 2024-08-21
 
 
 def test_joraa_montante_old_and_new_lines():
-    assert datasets.joraa_montante(
+    assert parlamento.joraa_montante(
         ["Despacho", "Soma dos montantes: 1,500.00 €"]
-    ) == (1500.0, datasets.JORAA_SOMA_ANTIGA)
-    assert datasets.joraa_montante(
+    ) == (1500.0, parlamento.JORAA_SOMA_ANTIGA)
+    assert parlamento.joraa_montante(
         ["Despacho", "Montante: 25 010,49 € (soma de 8 valores)"]
     ) == (25010.49, "soma de 8 valores")
-    assert datasets.joraa_montante(["Despacho", "Entidade"]) == (None, "")
+    assert parlamento.joraa_montante(["Despacho", "Entidade"]) == (None, "")
 
 
 def test_euros_both_conventions():
-    assert datasets.euros("120.963,33 €", ",") == 120963.33
-    assert datasets.euros("12,987,000.00 €", ".") == 12987000.0
-    assert datasets.euros("", ",") is None
+    assert comum.euros("120.963,33 €", ",") == 120963.33
+    assert comum.euros("12,987,000.00 €", ".") == 12987000.0
+    assert comum.euros("", ",") is None
 
 
 def test_iso_dates():
-    assert datasets.iso("14-10-2026") == "2026-10-14"
-    assert datasets.iso("( data entrada: 1/2/2026)") == "2026-02-01"
-    assert datasets.iso("sem data") == ""
+    assert comum.iso("14-10-2026") == "2026-10-14"
+    assert comum.iso("( data entrada: 1/2/2026)") == "2026-02-01"
+    assert comum.iso("sem data") == ""
+
+
+def impic_row(**kw):
+    """One data/base_impic/ row, for tests (only the columns given)."""
+    from bot import base_impic
+
+    d = dict.fromkeys(base_impic.COLS, "")
+    d.update(kw)
+    return [d[c] for c in base_impic.COLS]
+
+
+def write_impic(data: Path, rows: list, name: str = "2026.csv.gz") -> None:
+    from bot import base_impic
+
+    (data / "base_impic").mkdir(parents=True, exist_ok=True)
+    with gzip.open(data / "base_impic" / name, "wt", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(base_impic.COLS)
+        w.writerows(rows)
+
+
+ANGUSTIAS = impic_row(
+    id="15998022",
+    publicado="2026-11-26",
+    data_assinatura="2026-10-14",
+    preco="120963.33",
+    adjudicante="Junta Freguesia de Angústias",
+    adjudicatario="Biquadrada II - Açores, Lda",
+    procedimento="Concurso público",
+    objeto="Empreitada X",
+)
 
 
 def test_build_all(tmp_path):
+    write_impic(tmp_path / "data", [ANGUSTIAS])
+    tmp_path = tmp_path / "docs"
+    tmp_path.mkdir()
     for coll, name, text in (
-        ("_base_updates", "2026-11-25", BASE_DAY),
-        ("_base_updates", "2026-11-26", BASE_DAY),  # republished: one row
+        ("_base_updates", "2026-11-25", BASE_DAY),  # not read for base.csv
         ("_alra_updates", "2026-11-25", ALRA_DAY),
         ("_joraa_updates", "2024-08-21", JORAA_DAY),
     ):
@@ -119,7 +165,7 @@ def test_build_all(tmp_path):
 
     (j,) = rows("joraa")
     assert j["montante"] == "993164.4"
-    assert j["montante_tipo"] == datasets.JORAA_SOMA_ANTIGA
+    assert j["montante_tipo"] == parlamento.JORAA_SOMA_ANTIGA
     assert j["entidade"].startswith("Secretaria Regional da Educação")
 
     assert meta["base"]["linhas"] == 1
@@ -129,10 +175,9 @@ def test_build_all(tmp_path):
 
 
 def test_sqlite_fts(tmp_path):
-    (tmp_path / "_base_updates").mkdir()
-    (tmp_path / "_base_updates" / "2026-11-25.md").write_text(
-        BASE_DAY, encoding="utf-8"
-    )
+    write_impic(tmp_path / "data", [ANGUSTIAS])
+    tmp_path = tmp_path / "docs"
+    tmp_path.mkdir()
     for coll in ("_alra_updates", "_joraa_updates"):
         (tmp_path / coll).mkdir()
     (tmp_path / "_alra_updates" / "2026-11-25.md").write_text(
@@ -156,11 +201,11 @@ def test_sqlite_fts(tmp_path):
 
 
 def test_pt_num():
-    assert datasets.pt_num(245328) == "245 328"
-    assert datasets.pt_num(39.38) == "39,4"
-    assert datasets.pt_num(5.94) == "5,94"
-    assert datasets.pt_num(75.0) == "75"
-    assert datasets.pt_num(-198.5) == "-198"
+    assert comum.pt_num(245328) == "245 328"
+    assert comum.pt_num(39.38) == "39,4"
+    assert comum.pt_num(5.94) == "5,94"
+    assert comum.pt_num(75.0) == "75"
+    assert comum.pt_num(-198.5) == "-198"
 
 
 INE_COLS = [
@@ -272,7 +317,7 @@ def test_resumo(tmp_path):
             "Despesa do GRA por função", "Saúde n.e.", 400e6, nivel="1", dim=""
         ),
     ]
-    datasets.write_resumo(
+    resumo.write_resumo(
         tmp_path, {"ine": (INE_COLS, ine), "beo": (BEO_COLS, beo)}
     )
     r = json.loads((tmp_path / "_data" / "resumo.json").read_text())
@@ -426,7 +471,7 @@ def test_resumo_srea_and_json():
             "provisório",
         )
     )
-    r = datasets.resumo_srea(SREA_COLS, rows)
+    r = resumo.resumo_srea(SREA_COLS, rows)
     assert r["ipc"]["valor"] == 2.64 and r["ipc"]["media12"] == 2.68
     assert r["ipc"]["periodo"] == "outubro de 2026"
     assert r["ipc"]["antes"] == "outubro de 2025"
@@ -458,7 +503,7 @@ def test_resumo_srea_and_json():
         ("Corvo", 100),
         ("Pico", 80),
     ]
-    js = datasets.srea_json(SREA_COLS, rows)
+    js = resumo.srea_json(SREA_COLS, rows)
     tot = next(
         s
         for s in js
@@ -499,7 +544,7 @@ def test_resumo_tdc():
         [conta, "21", "1", "Saldo global ou efetivo", "", "2025",
          "-199287231.59", "€", ""],
     ]  # fmt: skip
-    r = datasets.resumo_tdc((tcols, trows), (vcols, vrows))
+    r = resumo.resumo_tdc((tcols, trows), (vcols, vrows))
     assert (r["conta"], r["url"], r["reservas"]) == ("2025", "p2025", 2)
     assert r["recomendacoes"] == 1 and r["avaliadas"] == 3
     assert r["estados"] == [
@@ -510,7 +555,7 @@ def test_resumo_tdc():
     assert (r["divida"], r["divida_var"]) == (3728.8, 6.8)
     assert (r["saldo"], r["saldo_abs"]) == (-199.3, 199.3)
     assert r["receita_fora"] == 613.0 and "despesa_fora" not in r
-    assert datasets.resumo_tdc(([], []), ([], [])) == {}
+    assert resumo.resumo_tdc(([], []), ([], [])) == {}
 
 
 def test_sper_and_maiores():
@@ -570,7 +615,7 @@ def test_sper_and_maiores():
         "nota",
         "url",
     ]
-    empresas = (
+    lista_empresas = (
         ecols,
         [
             [
@@ -657,7 +702,7 @@ def test_sper_and_maiores():
             ],
         ],
     )
-    s = datasets.sper_data(sper, empresas, regiao)
+    s = empresas.sper_data(sper, lista_empresas, regiao)
     assert s["relatorio"] == "9/2025" and s["ano"] == 2024
     assert [e["sigla"] for e in s["empresas"]] == [
         "EDA",
@@ -736,8 +781,8 @@ def test_sper_and_maiores():
             ],
         ],
     )
-    lista = [dict(zip(ecols, r, strict=True)) for r in empresas[1]]
-    m = datasets.maiores_data(maiores, lista)
+    lista = [dict(zip(ecols, r, strict=True)) for r in lista_empresas[1]]
+    m = empresas.maiores_data(maiores, lista)
     assert [e["publica"] for e in m["empresas"]] == ["EDA", "SATA", ""]
     assert m["vn"] == 326.2 and m["prejuizo"] == 1 and m["publicas"] == 2
     assert m["ilhas"][0] == {
@@ -752,7 +797,7 @@ def test_sper_and_maiores():
 def test_publico_data():
     cols = ["quadro", "indicador", "ordem", "rubrica", "local", "data"]
     cols += ["valor", "unidade", "provisorio", "ficheiro", "pagina"]
-    ar = datasets.AR_ACORES
+    ar = publico.AR_ACORES
     pt = "Postos de trabalho"
     q17 = "Postos de trabalho nas administrações públicas, por carreira"
     rows = []
@@ -795,7 +840,7 @@ def test_publico_data():
             50,
             prov,
         )
-        add("Q1.1", pt, 57, datasets.AR_SER, "Açores", data, 100, prov)
+        add("Q1.1", pt, 57, publico.AR_SER, "Açores", data, 100, prov)
         add(
             "Q1.1",
             pt,
@@ -901,7 +946,7 @@ def test_publico_data():
             {"nome": "Sem ficha", "ap": False},
         ],
     }
-    d = datasets.publico_data((cols, rows), (scols, srows), sper)
+    d = publico.publico_data((cols, rows), (scols, srows), sper)
     assert d["data"] == "2026-09-30" and d["provisorio"]
     assert d["periodo"] == "30 de setembro de 2026"
     assert (d["ap"], d["ap_var"], d["ar"], d["ar_var"]) == (420, 20, 310, 10)
@@ -928,7 +973,7 @@ def test_publico_data():
     assert (w["ap"], w["mercado"], w["publico"]) == (420, 80, 500)
     assert (w["publico_pct"], w["privado_pct"], w["um_em"]) == (20, 80, 5)
     assert w["periodo"] == "3.º trimestre de 2026" and w["setor_p_mil"] == 0.3
-    assert datasets.publico_data((cols, [])) == {}
+    assert publico.publico_data((cols, [])) == {}
 
 
 def test_municipio_matches_spellings_and_skips_others():
@@ -941,7 +986,7 @@ def test_municipio_matches_spellings_and_skips_others():
         "Santa Cruz da Graciosa",
         "Ponta Delgada",
     ]
-    m = datasets.municipio
+    m = camaras.municipio
     assert m("MUNICÍPIO DA RIBEIRA GRANDE", cs) == "Ribeira Grande"
     assert m("Municipio da  Ribeira Grande", cs) == "Ribeira Grande"
     assert m("Município de Calheta - São Jorge", cs) == "Calheta (R.A.A.)"
@@ -1005,16 +1050,46 @@ def test_camaras_data_per_inhabitant():
         ["2025-01-02", "Município do Corvo", "40000"],
         ["2025-01-03", "Musami - Operações Municipais do Ambiente, EIM", "9"],
     ]
-    d = datasets.camaras_data((cols, rows), (base_cols, base))
+    # purchases by economic classifier (categoria) for Corvo, 2025
+    for cat, v in (
+        ("Aquisição de bens e serviços", 60_000),
+        ("Aquisição de bens de capital", 20_000),
+        ("Despesas com pessoal", 900_000),
+    ):
+        rows.append(
+            [
+                "0013909",
+                "Concelho",
+                "2004901",
+                "Corvo",
+                "Corvo",
+                cat,
+                "2025",
+                str(v),
+            ]
+        )
+    d = camaras.camaras_data((cols, rows), (base_cols, base))
     assert d["ano"] == "2025" and d["inicio"] == "2021"
     corvo, pdl = d["concelhos"]
     assert corvo["nome"] == "Corvo" and corvo["despesa_hab"] == 5000
     assert corvo["var_pct"] == 100
-    assert corvo["contratos_n"] == 2 and corvo["contratos_hab"] == 1100
+    # only the contracts published in the year of the spending (2025)
+    assert corvo["contratos_n"] == 1 and corvo["contratos_hab"] == 100
     assert pdl["despesa_hab"] == 900 and "contratos_n" not in pdl
     assert d["sem_contratos"] == ["Ponta Delgada"]
     assert [x["nome"] for x in d["refs"]] == ["Açores"]
-    assert d["base_de"] == "2024-08-21"
+    assert d["base_de"] == "2025-01-02"
+    k = d["compras"]
+    assert k["anos"] == ["2021", "2025"]
+    corvo_k = next(x for x in k["concelhos"] if x["nome"] == "Corvo")
+    assert corvo_k["compras_m"] == 0.1 and corvo_k["pct"] == 50  # 40k / 80k
+    assert corvo_k["pct_3a"] == 50  # the 2024 contract is outside the years
+    assert (
+        next(x for x in k["concelhos"] if x["nome"] == "Ponta Delgada")[
+            "pct_3a"
+        ]
+        is None
+    )
     assert len(d["grafico"]["pontos"]) == 2
 
 
@@ -1023,9 +1098,9 @@ def test_joraa_estado_backfill_note():
         "datetime": "2026-11-28 01:30:00",
         "last_joraa_update": "2026-11-27",
     }
-    assert datasets.joraa_estado(line) == {}
+    assert parlamento.joraa_estado(line) == {}
     line["joraa_backfill"] = ["2026-08-12", "2026-11-05"]
-    assert datasets.joraa_estado(line) == {
+    assert parlamento.joraa_estado(line) == {
         "atraso_de": "12/08/2026",
         "atraso_ate": "05/11/2026",
         "dias": 86,
@@ -1035,8 +1110,8 @@ def test_joraa_estado_backfill_note():
         "datetime": "2026-11-27 09:26:17",
         "last_joraa_update": "2026-08-11",
     }
-    assert datasets.joraa_estado(old)["atraso_de"] == "12/08/2026"
-    assert datasets.joraa_estado(old)["atraso_ate"] == "26/11/2026"
+    assert parlamento.joraa_estado(old)["atraso_de"] == "12/08/2026"
+    assert parlamento.joraa_estado(old)["atraso_ate"] == "26/11/2026"
 
 
 def test_comparacao_acores_madeira_pais():
@@ -1063,7 +1138,7 @@ def test_comparacao_acores_madeira_pais():
         ["0012118", "PT", "", "5391000", *q3],
         ["0012118", "20", "", "119600", "2025-10-01", "4.º Trimestre de 2025"],
     ]
-    k = datasets._comparacao(
+    k = publico._comparacao(
         [dict(zip(cols, r, strict=True)) for r in rows], (icols, ine)
     )
     assert k["data"] == "2026-09-30" and k["provisorio"]
@@ -1073,7 +1148,7 @@ def test_comparacao_acores_madeira_pais():
     assert p["ap_pct"] == 14.2
     # INE without the quarter: no comparison rather than a mismatched one
     assert (
-        datasets._comparacao(
+        publico._comparacao(
             [dict(zip(cols, r, strict=True)) for r in rows], (icols, ine[3:])
         )
         == {}
@@ -1093,7 +1168,7 @@ def test_ilhas_censos_sums_concelhos():
         ["Santa Cruz das Flores", "Flores", "O", "281", u],
         ["Santa Cruz das Flores", "Flores", "Total", "891", u],
     ]
-    il = datasets._ilhas_censos((cols, rows))
+    il = publico._ilhas_censos((cols, rows))
     flores, corvo = il["lista"]  # in the islands' order, west last
     assert flores["empregados"] == 1691 and flores["o_pct"] == 28.4
     assert corvo["opq_pct"] == 49.8
@@ -1119,22 +1194,24 @@ def test_salario_pib_latest_common_year():
         for g, x in d.items()
     ]
     rows.append(["0014103", "2025", "20", "", "21000", "u"])  # alone
-    out = datasets.salario_pib(cols, rows)
+    out = resumo.salario_pib(cols, rows)
     assert out["ano"] == "2024"
     a = out["locais"][0]
     assert a["local"] == "Açores" and a["mediana_pct"] == 55
     assert a["ganho_ano"] == 14000 and a["ganho_pct"] == 70
-    assert datasets.salario_pib(cols, rows[:3]) == {}
+    assert resumo.salario_pib(cols, rows[:3]) == {}
 
 
-def test_base_merges_impic_history(tmp_path):
+def test_base_comes_from_impic_only(tmp_path):
     (tmp_path / "docs" / "_base_updates").mkdir(parents=True)
     (tmp_path / "docs" / "_base_updates" / "2025-10-01.md").write_text(
         "# BASE\n\n"
         "* [Fuelóleo](https://www.base.gov.pt/Base4/pt/detalhe/"
         "?type=contratos&id=11758845)\n"
         "  * Adjudicante: EDA\n  * Adjudicatário: BENCOM\n"
-        "  * Preço contratual: 64.500.000,00 €\n",
+        "  * Preço contratual: 64.500.000,00 €\n"
+        "* [Só no robô](https://www.base.gov.pt/Base4/pt/detalhe/"
+        "?type=contratos&id=99)\n",
         encoding="utf-8",
     )
     folder = tmp_path / "data" / "base_impic"
@@ -1162,6 +1239,7 @@ def test_base_merges_impic_history(tmp_path):
                 publicado="2025-09-30",
                 preco="64500000.0",
                 adjudicatario_nif="512002850",
+                adjudicante_nif="512001306",
                 concorrentes="1",
                 propostas="1",
             )
@@ -1176,6 +1254,7 @@ def test_base_merges_impic_history(tmp_path):
                 preco="0.0",
                 adjudicante="EDA",
                 adjudicatario="BENCOM",
+                adjudicatario_nif="-",
                 procedimento="Ajuste Direto",
             )
         ],
@@ -1183,22 +1262,29 @@ def test_base_merges_impic_history(tmp_path):
     meta = datasets.main(tmp_path / "docs")
     assert meta["base"]["linhas"] == 2
     assert meta["base"]["de"] == "2014-03-02"
-    assert meta["base"]["diario_de"] == "2025-10-01"
+    assert "diario_de" not in meta["base"]
+    assert meta["base"]["anos"] == {"2025": 1, "2014": 1}  # newest first
+    assert list(meta["base"]["anos"]) == ["2025", "2014"]
+    assert (tmp_path / "docs" / "dados" / "base" / "2014.csv").exists()
     with open(
         tmp_path / "docs" / "dados" / "base.csv", encoding="utf-8-sig"
     ) as f:
         rows = {x["id"]: x for x in csv.DictReader(f)}
-    assert rows["11758845"]["publicado"] == "2025-10-01"  # the bot's day
-    assert rows["11758845"]["recolha"] == "açores.net"
+    assert "99" not in rows  # the daily pages are not read
+    assert rows["11758845"]["publicado"] == "2025-09-30"
+    assert "recolha" not in rows["11758845"]
     assert rows["11758845"]["concorrentes"] == "1"
     assert "adjudicatario_nif" not in rows["11758845"]  # only in contratos.db
     old = rows["1000"]
-    assert old["recolha"] == "IMPIC" and old["preco"] == "0.0"
+    assert old["preco"] == "0.0"
     assert old["url"].endswith("id=1000")
     con = sqlite3.connect(tmp_path / "docs" / "dados" / "contratos.db")
     assert con.execute(
         "select adjudicatario_nif, propostas from base where id = 11758845"
     ).fetchone() == ("512002850", 1)
+    assert con.execute(
+        "select adjudicatario_nif from base where id = 1000"
+    ).fetchone()[0] in ("", None)
 
 
 def test_at_regioes_sums_old_districts_only_when_needed():
@@ -1256,11 +1342,11 @@ def test_at_regioes_sums_old_districts_only_when_needed():
         ["IRS", "Taxa efetiva", "%", "2018", "PONTA DELGADA", "Açores", "8"],
         ["IRS", "Taxa efetiva", "%", "2018", "FUNCHAL", "Madeira", "9"],
     ]
-    got = datasets.at_regioes((cols, rows), "IRS", "Agregados", "agregados")
+    got = impostos.at_regioes((cols, rows), "IRS", "Agregados", "agregados")
     assert got["Açores"] == {2019: 100.0, 2018: 59.0}
     assert got["Madeira"] == {2018: 70.0}
     assert got["Total"] == {2018: 900.0}
-    taxa = datasets.at_regioes((cols, rows), "IRS", "Taxa efetiva", "%")
+    taxa = impostos.at_regioes((cols, rows), "IRS", "Taxa efetiva", "%")
     assert "Açores" not in taxa and taxa["Madeira"] == {2018: 9.0}
 
 
@@ -1275,7 +1361,7 @@ def test_write_dbs_one_file_per_theme(tmp_path):
             [["Depósitos", "Açores", "2026-10-31", "1.5"]],
         ),
     }
-    info = datasets.write_dbs(tmp_path, tables)
+    info = sqlite.write_dbs(tmp_path, tables)
     assert set(info) == {"financas", "empresas"}
     assert info["empresas"]["tabelas"] == ["bportugal"]
     con = sqlite3.connect(tmp_path / "empresas.db")
@@ -1290,7 +1376,7 @@ def test_write_dbs_one_file_per_theme(tmp_path):
     assert "bportugal_fts" not in names
     tables["nova"] = (["x"], [["1"]])
     try:
-        datasets.write_dbs(tmp_path, tables)
+        sqlite.write_dbs(tmp_path, tables)
     except ValueError as e:
         assert "nova" in str(e)
     else:
@@ -1389,7 +1475,7 @@ def test_credito_data_sums_the_country_and_works_out_its_ratios():
                 6,
             ],
         ]
-    s = datasets.bp_series(_bp(rows))
+    s = credito.bp_series(_bp(rows))
     k = ("emprestimos", "Empréstimos", "Particulares", "", "Milhões de euros")
     assert s[k]["Portugal"][d][0] == 400
     # percentages are never summed
@@ -1401,11 +1487,11 @@ def test_credito_data_sums_the_country_and_works_out_its_ratios():
         "Percentagem",
     )
     assert "Portugal" not in s[pk]
-    got = datasets._vencidos(s, "Particulares", "", "Portugal", d)
+    got = credito._vencidos(s, "Particulares", "", "Portugal", d)
     assert got["racio"] == 2.8  # 11 / 400
     assert got["devedores"] == 8.8  # (5*10 + 10*30) / 40
     assert (
-        datasets._vencidos(s, "Particulares", "", "Açores", d)["racio"] == 2.0
+        credito._vencidos(s, "Particulares", "", "Açores", d)["racio"] == 2.0
     )
     ine = (
         ["varcd", "periodo", "geocod", "valor"],
@@ -1414,8 +1500,39 @@ def test_credito_data_sums_the_country_and_works_out_its_ratios():
             ["0012918", "2025", "PT", "10000000"],
         ],
     )
-    out = datasets.credito_data(_bp(rows), ine)
+    out = credito.credito_data(_bp(rows), ine)
     assert out["ultimo_mes"] == "outubro de 2026"
     assert out["credito_depositos"]["acores"] == 125  # 100 / 80
     assert out["credito_depositos"]["pais"] == 83  # 400 / 480
     assert out["serie"][0]["periodo"] == "outubro de 2026"
+
+
+def test_check_base_nif_errors_and_missing_entity():
+    import datetime as dt
+
+    def row(publicado, adj_nif="512063770", nif="512002850"):
+        r = dict.fromkeys(base.BASE_ALL, "")
+        r.update(
+            publicado=publicado,
+            adjudicante="Município de Vila do Porto",
+            adjudicante_nif=adj_nif,
+            adjudicatario_nif=nif,
+        )
+        return [r[c] for c in base.BASE_ALL]
+
+    old = [
+        row(f"{y}-{m:02d}-01")
+        for y in (2022, 2023, 2024)
+        for m in range(1, 13)
+        if f"{y}-{m:02d}" < "2024-10"
+    ]  # 12 a year until September 2024, then one in a year
+    old += [row("2025-06-01", adj_nif="600000000")] * 12
+    ok = base.check_base(
+        old + [row("2025-10-01", nif="512002850 | ")], dt.date(2025, 10, 5)
+    )
+    assert ok["erros"] == []
+    assert any("Município de Vila do Porto" in a for a in ok["avisos"])
+    bad = base.check_base([row("2025-10-01", nif="-")], dt.date(2025, 10, 5))
+    assert "adjudicatario_nif '-'" in bad["erros"][0]
+    stale = base.check_base([row("2025-01-01")], dt.date(2025, 10, 5))
+    assert stale["avisos"] == ["o contrato mais recente é de 2025-01-01"]

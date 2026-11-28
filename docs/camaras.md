@@ -4,7 +4,7 @@ nav_title: Câmaras municipais
 layout: default
 permalink: /financas/camaras/
 secao: financas
-description: Quanto recebe e gasta cada uma das 19 câmaras municipais dos Açores por habitante, ao lado do rendimento, do turismo, do RSI e dos contratos públicos do mesmo concelho, com ligação às fontes.
+description: Quanto recebe e gasta cada uma das 19 câmaras municipais dos Açores por habitante, ao lado do rendimento, do turismo, do RSI e dos contratos públicos do mesmo concelho, e quanto das suas compras aparece no BASE.
 ---
 {%- assign c = site.data.camaras -%}
 {% include financas-nav.html %}
@@ -130,8 +130,9 @@ ano publicado; o ano está no cabeçalho.</p>
   <li><strong>x</strong>: o INE não publica o rendimento destes concelhos
   (segredo estatístico, poucos contribuintes).</li>
   <li><strong>Contratos</strong>: contratos publicados no BASE em que a câmara
-  é a entidade adjudicante, recolhidos pelo açores.net entre
-  {{ c.base_de | date: "%d/%m/%Y" }} e {{ c.base_ate | date: "%d/%m/%Y" }}.
+  é a entidade adjudicante, publicados entre
+  {{ c.base_de | date: "%d/%m/%Y" }} e {{ c.base_ate | date: "%d/%m/%Y" }}
+  (o ano da despesa; dados abertos do IMPIC).
   É o preço contratual, não despesa paga, e pode ser pago em vários anos. Não
   inclui serviços municipalizados, empresas municipais nem associações de
   municípios.{% if c.sem_contratos.size > 0 %} Não encontrámos contratos de:
@@ -142,6 +143,50 @@ ano publicado; o ano está no cabeçalho.</p>
   <a href="https://github.com/fmesqg/a-ores.net-site/blob/main/bot/datasets.py">bot/datasets.py</a>
   (<code>municipio</code>).</li>
 </ul>
+
+{%- assign k = c.compras -%}
+{% if k.concelhos %}
+{%- assign k0 = k.anos | first -%}{%- assign k1 = k.anos | last -%}
+<h2 id="compras">Quanto das compras aparece no BASE</h2>
+
+<p>De {{ k0 }} a {{ k1 }}, as 19 câmaras gastaram {{ k.total_3a.compras_m_t }} M€ em
+bens e serviços e bens de capital e publicaram no BASE contratos de
+{{ k.total_3a.contratos_m_t }} M€: <strong>{{ k.total_3a.pct_t }} %</strong>. Uma
+percentagem baixa quer dizer compras que não se veem no portal: contratos
+que não foram publicados, compras pequenas que a lei não obriga a publicar,
+ou contratos sem o município como entidade adjudicante.</p>
+
+<div class="tabela-scroll">
+<table class="sper ordenavel">
+<thead><tr>
+  <th scope="col">Concelho</th>
+  <th scope="col" class="n" data-tipo="n">Compras {{ k0 }}-{{ k1 }} (M€)</th>
+  <th scope="col" class="n" data-tipo="n">Contratos no BASE {{ k0 }}-{{ k1 }} (M€)</th>
+  <th scope="col" class="n" data-tipo="n">No BASE, {{ k0 }}-{{ k1 }}</th>
+  <th scope="col" class="n" data-tipo="n">No BASE, {{ k1 }}</th>
+</tr></thead>
+<tbody>
+{%- for d in k.concelhos %}
+<tr><th scope="row">{{ d.nome }}{% if d.ilha != d.nome %} <small>{{ d.ilha }}</small>{% endif %}</th><td class="n" data-v="{{ d.compras_3a_m }}">{{ d.compras_3a_m_t }}</td><td class="n" data-v="{{ d.contratos_3a_m }}">{{ d.contratos_3a_m_t }}</td><td class="n" data-v="{{ d.pct_3a }}">{{ d.pct_3a_t }} %</td><td class="n" data-v="{{ d.pct }}">{{ d.pct_t }} %</td></tr>
+{%- endfor %}
+</tbody>
+</table>
+</div>
+
+<p class="nota">Ano a ano, todas as câmaras:
+{% for a in k.serie %}{{ a.ano }}: {{ a.pct_t }} %{% unless forloop.last %} · {% endunless %}{% endfor %}.</p>
+
+<ul class="notas">
+  <li><strong>Cálculo do açores.net.</strong> Compras: as rubricas
+  "Aquisição de bens e serviços" e "Aquisição de bens de capital" das
+  <a href="/dados/ine/#ind=0013909&nivel=Concelho">despesas das câmaras</a>
+  (INE, classificador económico). Contratos: o preço contratual dos contratos
+  publicados no BASE nesse ano em que a câmara é a adjudicante.</li>
+  <li>Um contrato plurianual conta todo no ano em que é publicado, por isso um
+  ano isolado pode passar de 100 %; a soma de três anos é mais justa. Não
+  inclui serviços municipalizados nem empresas municipais.</li>
+</ul>
+{% endif %}
 
 <h2 id="metodo">Como se calcula</h2>
 
@@ -174,44 +219,30 @@ contratos na <a href="/dados/#fonte=base">pesquisa do BASE</a>.</p>
 <style>
 .lead { font-size: 1.15em; max-width: 40em; }
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(12em, 100%), 1fr)); gap: .9em; margin: 1em 0 .4em; }
-.numero { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
-.numero p { margin-bottom: .4em; font-size: .95em; }
-.numero .rotulo { font-weight: bold; margin-bottom: .2em; }
-.numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
-.numero .grande small { font-size: .5em; font-weight: normal; }
 h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
-.nota, .notas { font-size: .9em; }
-.notas li { margin-bottom: .35em; }
-.tabela-scroll { overflow-x: auto; margin-bottom: 1em; }
-table.sper { border-collapse: collapse; font-size: .9em; min-width: 100%; }
-table.sper th, table.sper td { padding: .3em .5em; border-bottom: 1px solid rgba(147,161,161,.35); text-align: left; vertical-align: top; }
-table.sper thead th { font-size: .9em; vertical-align: bottom; }
 table.sper th[scope="row"] { font-weight: normal; white-space: nowrap; }
-table.sper th[scope="row"] small { color: #839496; }
-table.sper .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
-table.sper thead .n { white-space: normal; }
 table.sper tbody.refs th, table.sper tbody.refs td { font-weight: bold; background: rgba(147,161,161,.08); }
 table.ordenavel thead th[data-tipo] { cursor: pointer; }
 table.ordenavel thead th[aria-sort="descending"]::after { content: " ▼"; }
 table.ordenavel thead th[aria-sort="ascending"]::after { content: " ▲"; }
 .barra-col { width: 12%; min-width: 4em; }
 .barra { display: block; height: .8em; margin-top: .25em; background: #268bd2; border-radius: 0 4px 4px 0; }
-.barra.ref { background: #93a1a1; }
+.barra.ref { background: var(--s1); }
 .dispersao { margin: .5em 0 1em; max-width: 44em; }
 .dispersao svg { width: 100%; height: auto; overflow: visible; }
 .dispersao .grelha { stroke: rgba(147,161,161,.35); stroke-width: 1; }
-.dispersao .eixo { font-size: 11px; fill: #657b83; }
-.dispersao circle { fill: #268bd2; stroke: #fdf6e3; stroke-width: 2; }
+.dispersao .eixo { font-size: 11px; fill: var(--s00); }
+.dispersao circle { fill: #268bd2; stroke: var(--s3); stroke-width: 2; }
 .dispersao .ponto text { font-size: 12px; fill: currentColor; }
 .dispersao .ponto:hover circle, .dispersao .ponto:focus circle { fill: #cb4b16; }
 .dispersao .ponto:focus { outline: none; }
 .metodo dt { font-weight: bold; margin-top: .6em; }
 .metodo dd { margin-left: 0; max-width: 42em; }
-.fonte { font-size: .85em; color: #586e75; }
+.fonte { font-size: .85em; color: var(--s01); }
 @media (prefers-color-scheme: dark) {
-  .fonte { color: #93a1a1; }
-  .dispersao .eixo { fill: #93a1a1; }
-  .dispersao circle { stroke: #002b36; }
+  .fonte { color: var(--s01); }
+  .dispersao .eixo { fill: var(--s01); }
+  .dispersao circle { stroke: var(--s3); }
 }
 </style>
 
