@@ -34,6 +34,9 @@ DB_TYPES = {
     "media": "REAL",
     "media_interna": "REAL",
     "positivas": "REAL",
+    "homens": "INTEGER",
+    "mulheres": "INTEGER",
+    "total": "INTEGER",
     **{
         c: "REAL"
         for c in (
@@ -131,6 +134,7 @@ DB_INDEX = {
     "ifap_resumo": ["exercicio", "geocod", "medida"],
     "eurostat": ["indicador", "geo", "ano"],
     "exames": ["ano", "nivel", "codigo", "exame"],
+    "desemprego": ["periodo", "tabela", "geocod"],
     "dgal_contas": ["ano", "geocod", "mapa", "codigo"],
     "dgal_divida": ["ano", "geocod"],
     "dgal_pmp": ["data", "geocod"],
@@ -261,6 +265,7 @@ BASES = {
         "censos2021_setores",
         "eurostat",
         "exames",
+        "desemprego",
     ],
     "empresas": [
         "bportugal",

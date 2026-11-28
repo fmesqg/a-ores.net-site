@@ -81,13 +81,17 @@ and writes, under docs/dados/:
   exames.csv  national exam results of each Azorean school (secondary
              exams, 9th grade provas finais) and of the Azores, Madeira,
              the mainland and the country: data/exames.csv (bot/exames.py)
+  desemprego.csv  registered unemployment by island and concelho, month by
+             month, with employability measures and placements, from the
+             regional employment directorate: data/desemprego.csv
+             (bot/desemprego.py)
   meta.json  row counts, date coverage, build time
 
 and, under docs/_data/ (read by Jekyll): ine_novidades.json, beo_ultimo.json,
 resumo.json (the numbers on /introducao/ and /dados/srea/), fundos.json
 (/financas/fundos-europeus/, with the CAP payments), eurostat.json (the
 table on /dados/eurostat/; the series for its chart go to
-docs/dados/eurostat.json), exames.json (/dados/exames/), sper.json
+docs/dados/eurostat.json), exames.json (/dados/exames/), desemprego.json (/dados/desemprego/), sper.json
 (/dados/sper/), credito.json (/dados/credito/), maiores.json (/dados/maiores-empresas/) and publico.json
 (/economia/setor-publico/ and the public/private split on /economia/).
 
@@ -97,7 +101,7 @@ page (docs/dados.md) reads them directly. None of these files is committed:
 
 The code is split by source under bot/dados/ (base, parlamento, sqlite,
 resumo, empresas, publico, camaras, impostos, credito, fundos, europa,
-educacao, comum);
+educacao, emprego, comum);
 this file only runs them in order.
 """
 
@@ -120,6 +124,7 @@ try:  # imported as bot.datasets (tests)
     from .dados.comum import write
     from .dados.credito import write_credito
     from .dados.educacao import write_exames
+    from .dados.emprego import write_desemprego
     from .dados.empresas import write_economia
     from .dados.europa import write_eurostat
     from .dados.fundos import write_fundos
@@ -146,6 +151,7 @@ except ImportError:  # run as python3 bot/datasets.py
     from dados.comum import write
     from dados.credito import write_credito
     from dados.educacao import write_exames
+    from dados.emprego import write_desemprego
     from dados.empresas import write_economia
     from dados.europa import write_eurostat
     from dados.fundos import write_fundos
@@ -214,6 +220,7 @@ def main(docs: Path) -> dict:
         "ifap_resumo",
         "eurostat",
         "exames",
+        "desemprego",
         "dgal_contas",
         "dgal_divida",
         "dgal_pmp",
@@ -237,7 +244,14 @@ def main(docs: Path) -> dict:
         when = next(
             (
                 cols.index(c)
-                for c in ("data", "conta", "ano", "exercicio", "inicio")
+                for c in (
+                    "data",
+                    "conta",
+                    "ano",
+                    "exercicio",
+                    "inicio",
+                    "periodo",
+                )
                 if c in cols
             ),
             None,
@@ -276,6 +290,7 @@ def main(docs: Path) -> dict:
     write_irc(docs, tables)
     write_credito(docs, tables)
     write_fundos(docs, tables)
+    write_desemprego(docs, tables)
     meta["bases"] = write_dbs(out, tables)
     (out / "meta.json").write_text(
         json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8"

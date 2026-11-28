@@ -16,6 +16,11 @@ tracked apart from the others, so the SREA bot does not wait on the
 JORAA one. If SREA starts answering 403 or 429, bot/srea.py stops or
 backs off.
 
+emprego.azores.gov.pt (bot/desemprego.py) is like the portal: its pages
+and WordPress API get the challenge, its /wp-content/uploads/ files answer
+200 (checked 28/11/2026). It is not in ``LIGHT``: it shares the strict
+clock.
+
 Every request to those hosts must send ``UA`` and call ``wait(host)``
 first. Stdlib only: bot/beo.py and bot/srea.py also run as plain scripts.
 """
