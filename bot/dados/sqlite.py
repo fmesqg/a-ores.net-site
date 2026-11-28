@@ -127,7 +127,7 @@ DB_INDEX = {
 DB_FTS = {
     "base": ["objeto", "adjudicante", "adjudicatario", "procedimento", "cpv"],
     "alra": ["titulo", "autores", "estado", "tipo"],
-    "joraa": ["titulo", "ato", "entidade"],
+    "joraa": ["titulo", "ato", "entidade", "outros"],
     "ine": ["indicador", "tema", "local", "concelho", "ilha", "categoria"],
     "beo": ["quadro", "rubrica", "caminho", "dimensao"],
     "tdc": ["tipo", "texto", "referencia", "situacao"],

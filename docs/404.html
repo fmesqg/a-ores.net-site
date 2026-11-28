@@ -2,6 +2,24 @@
 layout: default
 ---
 
+<script>
+// Day pages over 90 days old are no longer in the site (bot/arquivo.py):
+// send /joraa_updates/2025-03-14/ to the search page filtered by that day.
+(function () {
+  var m = location.pathname.match(/^\/(alra|joraa|base|portal)_updates\/(\d{4}-\d{2}-\d{2})\/?$/);
+  if (!m) return;
+  var dia = m[2];
+  if (m[1] === "base") {  // a BASE page lists the contracts of the day before
+    var d = new Date(dia + "T12:00:00Z");
+    d.setUTCDate(d.getUTCDate() - 1);
+    dia = d.toISOString().slice(0, 10);
+  }
+  var to = m[1] === "portal" ? "/portal_updates/"
+    : "/dados/#fonte=" + m[1] + "&de=" + dia + "&ate=" + dia;
+  location.replace(to);
+})();
+</script>
+
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -19,6 +37,6 @@ layout: default
 <div class="container">
   <h1>404</h1>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <p><strong>Página não encontrada.</strong></p>
+  <p>As atualizações diárias com mais de 90 dias estão na <a href="/dados/">pesquisa</a>.</p>
 </div>
