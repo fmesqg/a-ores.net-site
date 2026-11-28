@@ -1,10 +1,10 @@
-name: Monthly BASE history (IMPIC open data)
+name: Weekly BASE contracts (IMPIC open data)
 
 # Reads every contratos<ano>.zip that the IMPIC publishes on dados.gov.pt
 # (all BASE contracts since 2012, about 0.8 GB zipped) with
 # bot/base_impic.py, keeps the contracts executed in the Azores and rewrites
-# data/base_impic/<ano>.csv.gz. bot/datasets.py joins them with what the
-# daily bot saw, so /dados/ and contratos.db cover 2012 onwards. The IMPIC
+# data/base_impic/<ano>.csv.gz. bot/datasets.py builds /dados/ and
+# contratos.db from them alone (2012 onwards). The IMPIC
 # refreshes the files every few weeks; only the recent years change, so a
 # run usually commits one or two small files.
 #
@@ -14,7 +14,7 @@ name: Monthly BASE history (IMPIC open data)
 
 on:
   schedule:
-    - cron: '41 3 9 * *'
+    - cron: '41 3 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -36,19 +36,10 @@ jobs:
         run: python3 -u bot/base_impic.py data
       - name: Commit and push if changed
         id: commit
-        run: |
-          git add -A data/base_impic
-          if git diff --cached --quiet; then
-            echo "Nothing to write."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            git config --global user.name "fmesqg-auto"
-            git config --global user.email "fmesqg-auto@users.noreply.github.com"
-            git commit -m "BASE history (IMPIC) monthly update"
-            git pull --rebase origin main
-            git push origin main
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
+        uses: ./.github/actions/commit-data
+        with:
+          paths: data/base_impic
+          message: "BASE contracts (IMPIC) weekly update"
 
   deploy-site:
     needs: fetch

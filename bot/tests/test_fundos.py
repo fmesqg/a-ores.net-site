@@ -4,8 +4,8 @@ import urllib.parse
 
 import pytest
 
-from bot import datasets
 from bot import fundos as f
+from bot.dados import fundos
 
 
 def test_prr_locations_keeps_azores_and_sums_shares():
@@ -209,7 +209,7 @@ def test_fundos_data_totals():
              "2000000", "", f.NOTA_FORA, ""],
         ],
     )  # fmt: skip
-    d = datasets.fundos_data(
+    d = fundos.fundos_data(
         {"prr_projetos": prr, "prr_entidades": ent, "kohesio_projetos": koh}
     )
     assert d["prr"]["projetos"] == 2 and d["prr"]["beneficiarios"] == 1

@@ -3,8 +3,8 @@
 Usage:
   python3 bot/base_impic.py [data_dir] [--cache DIR] [--anos 2012-2026]
 
-The daily bot (bot/fetch.py) has seen every new contract on base.gov.pt
-since August 2024. For the years before, the IMPIC (Instituto dos Mercados
+bot/datasets.py builds the BASE dataset from this alone (the daily bot's
+pages are the daily feed). The IMPIC (Instituto dos Mercados
 Públicos, do Imobiliário e da Construção), which runs the BASE portal,
 publishes every contract on dados.gov.pt, one file per year, in the public
 domain:
@@ -14,8 +14,12 @@ domain:
 Each contratos<ano>.zip holds one JSON array (0.2-0.5 GB unzipped, about
 200 000 contracts a year for the whole country), read here as a stream with
 ijson. A contract is kept when one of its places of execution
-(localExecucao) is in the Azores: the same rule as the BASE search the daily
-bot uses (distrito 20), which picks the same contracts (checked on 2025).
+(localExecucao) is in the Azores (the rule of the BASE search the daily bot
+uses, distrito 20), or when the contracting entity is Azorean (azorean():
+a first pass over all the files counts where each entity's contracts are).
+The second rule matters: some entities give only "Portugal" as the place,
+and the search missed all of Vila do Porto's contracts since 2024 and most
+of Velas' (checked against base.gov.pt by NIF, November 2026).
 The IMPIC id is the base.gov.pt id, so bot/datasets.py joins both sources
 by id.
 
@@ -24,10 +28,10 @@ contracts published the year before or after), so all of them are read and
 a contract that appears twice keeps the newest file's version.
 
 data/base_impic/<ano>.csv.gz (one file per year of publication, so a
-monthly run only changes the recent years) is rewritten from scratch;
-.github/workflows/base_impic.yml runs this monthly. main() fails, so the workflow emails, when
+weekly run only changes the recent years) is rewritten from scratch;
+.github/workflows/base_impic.yml runs this weekly. main() fails, so the workflow emails, when
 a year cannot be read, a year has no Azores contracts, or the newest
-contract is more than ~90 days old.
+contract is more than MAX_IDADE days old.
 """
 
 import csv
@@ -51,7 +55,8 @@ DATASET = (
 UA = "acores.net open data (github.com/fmesqg/a-ores.net-site)"
 ZIP_RE = re.compile(r"contratos(\d{4})\.zip$", re.I)
 OUT = "base_impic"  # one <ano>.csv.gz per year of publication
-MAX_IDADE = 90  # days
+MAX_IDADE = 30  # days: the IMPIC refreshes the files every week or two
+MIN_AZ, AZ_SHARE = 5, 0.9  # see azorean()
 
 COLS = [
     "id",
@@ -140,12 +145,51 @@ def money(x) -> float | str:
 def entities(lst) -> tuple[str, str]:
     lst = lst or []
     names = " | ".join(text(e.get("descEntContrato")) for e in lst)
-    nifs = " | ".join(text(e.get("nifEntContrato")) for e in lst)
+    # "-" = no Portuguese NIF (foreign company, person): leave it empty
+    nifs = [text(e.get("nifEntContrato")) for e in lst]
+    nifs = " | ".join("" if n == "-" else n for n in nifs)
     return names, nifs
 
 
 def in_azores(r: dict) -> bool:
     return any("Açores" in (loc or "") for loc in r.get("localExecucao") or [])
+
+
+def elsewhere(r: dict) -> bool:
+    """A place of execution is given and none is in the Azores. "Portugal"
+    alone says nothing: some Azorean entities fill in only the country
+    (Município de Vila do Porto in every contract since 2024)."""
+    locs = [text(loc) for loc in r.get("localExecucao") or []]
+    return not in_azores(r) and any(x not in ("", "Portugal") for x in locs)
+
+
+def adjudicante_nifs(r: dict) -> list[str]:
+    return [
+        n
+        for e in r.get("adjudicante") or []
+        if (n := text(e.get("nifEntContrato"))) not in ("", "-")
+    ]
+
+
+def count_places(records, counts: dict) -> None:
+    """counts[nif] = [contracts in the Azores, contracts elsewhere]."""
+    for r in records:
+        az, out = in_azores(r), elsewhere(r)
+        if az or out:
+            for n in adjudicante_nifs(r):
+                c = counts.setdefault(n, [0, 0])
+                c[0 if az else 1] += 1
+
+
+def azorean(counts: dict) -> frozenset[str]:
+    """Contracting entities based in the Azores: at least MIN_AZ contracts
+    with a place of execution, AZ_SHARE of them in the Azores. Their
+    contracts are kept wherever (or whether) the place is given."""
+    return frozenset(
+        n
+        for n, (az, out) in counts.items()
+        if az >= MIN_AZ and az >= AZ_SHARE * (az + out)
+    )
 
 
 def row(r: dict) -> list:
@@ -188,17 +232,23 @@ def row(r: dict) -> list:
     ]
 
 
-def read_zip(path: Path) -> list[list]:
+def records(path: Path):
     import ijson  # only this script needs it (pip install ijson)
 
     with zipfile.ZipFile(path) as z:
         (name,) = [n for n in z.namelist() if n.lower().endswith(".json")]
         with z.open(name) as f:
-            return [
-                row(r)
-                for r in ijson.items(f, "item", use_float=True)
-                if in_azores(r) and r.get("idcontrato")
-            ]
+            yield from ijson.items(f, "item", use_float=True)
+
+
+def keep(r: dict, entidades: frozenset = frozenset()) -> bool:
+    return bool(r.get("idcontrato")) and (
+        in_azores(r) or not entidades.isdisjoint(adjudicante_nifs(r))
+    )
+
+
+def read_zip(path: Path, entidades: frozenset = frozenset()) -> list[list]:
+    return [row(r) for r in records(path) if keep(r, entidades)]
 
 
 def anos(spec: str) -> range:
@@ -221,19 +271,22 @@ def main(
         return 1
     rows: dict[int, list] = {}
     with tempfile.TemporaryDirectory() as tmp:
+        paths = {y: (cache or Path(tmp)) / f"contratos{y}.zip" for y in urls}
+        counts: dict = {}
+        for year in sorted(urls):  # 1st pass: which entities are Azorean
+            if not paths[year].exists():
+                download(urls[year], paths[year])
+            count_places(records(paths[year]), counts)
+        entidades = azorean(counts)
+        print(f"{len(entidades)} entidades adjudicantes dos Açores")
         for year in sorted(urls):
-            path = (cache or Path(tmp)) / f"contratos{year}.zip"
-            if not path.exists():
-                download(urls[year], path)
-            got = read_zip(path)
+            got = read_zip(paths[year], entidades)
             print(f"{year}: {len(got)} contratos nos Açores")
             if not got:
                 print(f"{year}: nenhum contrato dos Açores", file=sys.stderr)
                 return 1
             for r in got:
                 rows[r[0]] = r
-            if not cache:
-                path.unlink()
     out = sorted(rows.values(), key=lambda r: (r[1], r[0]), reverse=True)
     newest = max((r[1] for r in out if r[1]), default="")
     if not years and (

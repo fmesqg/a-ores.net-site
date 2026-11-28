@@ -120,14 +120,14 @@ diretas.</p>
   válidas, um concurso internacional tem vencedor: a BENCOM, com
   <strong>168 331 700 €</strong>, por até três anos. A Galp foi excluída por
   propor um preço acima do máximo.
-  <span class="onde">TED: <a href="https://ted.europa.eu/pt/notice/-/detail/524899-2026">anúncio de adjudicação</a> (ainda não aparece no BASE, nem na recolha diária nem nos dados abertos do IMPIC)</span></li>
+  <span class="onde">No açores.net: <a href="/dados/#fonte=base&q=bencom">contratos</a> · <a href="https://www.base.gov.pt/Base4/pt/detalhe/?type=contratos&id=15377619">ficha no BASE</a> (publicada a 28/07/2026) · TED: <a href="https://ted.europa.eu/pt/notice/-/detail/524899-2026">anúncio de adjudicação</a></span></li>
   <li><b>set 2026.</b> O Relatório e Contas da EDA de 2025 regista perdas de
   8,9 M€ (95 % de 9,4 M€) por custos de fuelóleo que a ERSE não aceita.
-  <span class="onde">No açores.net: <a href="/ao/20260915-11/">Açoriano Oriental, 15/09</a> · <a href="https://files.eda.pt/edasharepointfiles/Files/GaleriaDocumentos/132/RG_EDA_2025.pdf#page=30">R&amp;C, p. 30</a></span></li>
+  <span class="onde">No açores.net: <a href="https://www.acorianooriental.pt/pagina/edicao-impressa/2026-09-15?seccao=politica&amp;artigo=393226">Açoriano Oriental, 15/09</a> · <a href="https://files.eda.pt/edasharepointfiles/Files/GaleriaDocumentos/132/RG_EDA_2025.pdf#page=30">R&amp;C, p. 30</a></span></li>
   <li><b>1 out e 3 nov 2026.</b> Audições do presidente da ERSE e do
   presidente da EDA na Assembleia. A ERSE estuda com a AdC se há barreiras
   à entrada de outros fornecedores.
-  <span class="onde">No açores.net: <a href="/ao/20261002-09/">AO, 02/10</a> · <a href="/ao/20261104-08/">AO, 04/11</a> · vídeos: <a href="https://video.alra.pt/Asset/Details/dd318b44-2262-4f7b-a81b-853922d6c3c5">ERSE</a>, <a href="https://video.alra.pt/Asset/Details/37709ce5-73fa-48fd-9369-227f2e32c46d">EDA</a></span></li>
+  <span class="onde">No açores.net: <a href="https://www.acorianooriental.pt/pagina/edicao-impressa/2026-10-02?seccao=economia&amp;artigo=393939">AO, 02/10</a> · <a href="https://www.acorianooriental.pt/pagina/edicao-impressa/2026-11-04?seccao=economia&amp;artigo=395357">AO, 04/11</a> · vídeos: <a href="https://video.alra.pt/Asset/Details/dd318b44-2262-4f7b-a81b-853922d6c3c5">ERSE</a>, <a href="https://video.alra.pt/Asset/Details/37709ce5-73fa-48fd-9369-227f2e32c46d">EDA</a></span></li>
   <li><b>dez 2026 (por decidir).</b> A ERSE decide se os 95&nbsp;% da perda ficam
   na EDA ou passam para as tarifas.</li>
 </ol>
@@ -137,9 +137,10 @@ diretas.</p>
 <div class="cartoes">
 <div class="cartao">
 <h3>Peso da BENCOM nos contratos da EDA</h3>
-<p class="grande">39,5&nbsp;%</p>
-<p>Dos 291,4 M€ em 79 contratos da EDA publicados no BASE desde agosto de
-2024, 115,1 M€ foram para a BENCOM, em três contratos.</p>
+<p class="grande">68,5&nbsp;%</p>
+<p>Dos 413,9 M€ em 156 contratos da EDA publicados no BASE desde agosto de
+2024, 283,4 M€ foram para a BENCOM, em quatro contratos: os três de
+fuelóleo e um de recolha de resíduos industriais (0,6 M€).</p>
 <p class="ir">Cálculo do açores.net · <a href="/dados/#fonte=base&q=EDA%20Electricidade">contratos da EDA</a></p>
 </div>
 <div class="cartao">
@@ -189,8 +190,11 @@ encontrámos publicados.</p>
   <li><strong>Decisões da ERSE e compensação tarifária.</strong> As
   transferências do Estado para a EDA (mais de 100 M€ por ano) estão nos
   relatórios da EDA e da ERSE, não nos dados do site.</li>
-  <li><strong>Concursos europeus (TED).</strong> O contrato de 168 M€ só
-  aparece no TED. Um contrato pode demorar meses a chegar ao BASE.</li>
+  <li><strong>Local de execução.</strong> O contrato de 168 M€ está no BASE
+  desde 28/07/2026, mas com o local de execução "Portugal", sem região. A
+  pesquisa do BASE por distrito não o encontra e o açores.net só o tem desde
+  27/11/2026, quando passou a incluir todos os contratos das entidades dos
+  Açores, com ou sem local.</li>
   <li><strong>A Assembleia antes de 2024.</strong> Os dados da ALRA no site
   começam em 2024. Requerimentos mais antigos, como o 176/XII, estão na
   <a href="http://base.alra.pt:82/">base da ALRA</a>.</li>
@@ -230,7 +234,7 @@ São opinião, não fazem parte dos dados.</p>
 <ul>
   <li>Francisco Mesquita, <a href="https://mesquita.xyz/bencom">"Reféns da BENCOM até quando?"</a>, janeiro de 2025</li>
   <li>Francisco Mesquita, <a href="https://mesquita.xyz/eletricidade">"Eletricidade dos Açores"</a>, agosto de 2025</li>
-  <li>Fernando Mesquita, <a href="/ao/20260903-23/">"Dos bolsos dos açorianos para os cofres do Grupo Bensaude"</a>, Açoriano Oriental, setembro de 2026</li>
+  <li>Fernando Mesquita, <a href="https://www.acorianooriental.pt/pagina/edicao-impressa/2026-09-03?seccao=pontos-de-vista&amp;artigo=392765">"Dos bolsos dos açorianos para os cofres do Grupo Bensaude"</a>, Açoriano Oriental, setembro de 2026</li>
   <li>Francisco Mesquita, <a href="https://mesquita.xyz/machado">"Bom para quem, Joaquim Machado?"</a>, novembro de 2026</li>
 </ul>
 
@@ -238,29 +242,24 @@ São opinião, não fazem parte dos dados.</p>
 .lead { font-size: 1.15em; max-width: 40em; margin-bottom: .3em; }
 .lead-lista { margin: 0 0 1em 1.2em; max-width: 40em; }
 .indice { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr)); gap: .4em; margin: 1em 0 1em; }
-.indice a { display: block; padding: .45em .7em; border: 1px solid rgba(147,161,161,.6); border-radius: 6px; background: rgba(147,161,161,.08); text-decoration: none; }
-.indice a:hover { background: rgba(38,139,210,.12); }
-.indice span { display: inline-block; min-width: 1.4em; font-weight: bold; color: #268bd2; }
 h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
 .tabela { overflow-x: auto; margin-bottom: .6em; }
 .fontes { font-size: .95em; border-collapse: collapse; }
 .fontes th, .fontes td { vertical-align: top; text-align: left; padding: .35em .6em; }
 .fontes tbody td { font-variant-numeric: tabular-nums; }
-.notas { font-size: .88em; color: #586e75; max-width: 44em; margin-left: 1.1em; }
+.notas { font-size: .88em; color: var(--s01); max-width: 44em; margin-left: 1.1em; }
 .cronologia { max-width: 46em; padding-left: 0; margin-left: 0; list-style: none; border-left: 3px solid #268bd2; }
 .cronologia li { position: relative; padding: 0 0 .9em 1.1em; }
 .cronologia li::before { content: ""; position: absolute; left: -.45em; top: .45em; width: .6em; height: .6em; border-radius: 50%; background: #268bd2; }
-.cronologia .onde { display: block; font-size: .85em; color: #586e75; margin-top: .15em; }
+.cronologia .onde { display: block; font-size: .85em; color: var(--s01); margin-top: .15em; }
 .passos { max-width: 42em; }
 .passos li { margin-bottom: .4em; }
 .cuidado { border-left: 4px solid #b58900; background: rgba(181,137,0,.08); padding: .6em 1em .1em; margin: 1em 0 1.4em; max-width: 44em; border-radius: 0 6px 6px 0; }
 .cuidado li { margin-bottom: .35em; }
 .cartoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15em, 100%), 1fr)); gap: .9em; margin: 1em 0 1.2em; }
-.cartao { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
 .cartao h3 { font-size: 1.05em; margin: 0 0 .3em; }
-.cartao p { font-size: .95em; margin-bottom: .5em; }
 .cartao .grande { font-size: 1.7em; font-weight: bold; line-height: 1.15; margin-bottom: .2em; }
-.cartao .ir { font-size: .85em; color: #586e75; }
-.fonte { font-size: .85em; color: #586e75; }
-@media (prefers-color-scheme: dark) { .fonte, .notas, .cronologia .onde, .cartao .ir { color: #93a1a1; } }
+.cartao .ir { font-size: .85em; color: var(--s01); }
+.fonte { font-size: .85em; color: var(--s01); }
+@media (prefers-color-scheme: dark) { .fonte, .notas, .cronologia .onde, .cartao .ir { color: var(--s01); } }
 </style>

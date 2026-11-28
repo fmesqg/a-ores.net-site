@@ -333,31 +333,20 @@ do <a href="/dados/sper/">Conselho das Finanças Públicas</a>.</p>
 <style>
 .lead { font-size: 1.15em; max-width: 40em; }
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9.5em, 100%), 1fr)); gap: .9em; margin: 1.2em 0 1.5em; }
-.numero { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
-.numero p { margin-bottom: .4em; font-size: .95em; }
-.numero .rotulo { font-weight: bold; margin-bottom: .2em; }
-.numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
-.numero .grande small { font-size: .5em; font-weight: normal; }
 .indice { display: flex; flex-wrap: wrap; gap: .3em 1em; margin: 0 0 1em; font-size: .95em; }
-.tabela-scroll { overflow-x: auto; margin-bottom: 1em; }
-table.sper { border-collapse: collapse; font-size: .9em; min-width: 100%; }
-table.sper th, table.sper td { padding: .3em .5em; border-bottom: 1px solid rgba(147,161,161,.35); text-align: left; vertical-align: top; }
 table.sper th[scope="row"] { font-weight: normal; white-space: nowrap; }
 .concelhos { margin: .5em 0 1em; }
 .concelhos summary { cursor: pointer; margin-bottom: .5em; }
-table.sper th[scope="row"] small { color: #839496; }
-table.sper .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 table.sper thead th, table.sper thead th.n { white-space: normal; }
 table.sper tfoot th, table.sper tfoot td, table.sper tr.total th, table.sper tr.total td { font-weight: bold; }
 table.sper tr.sep th, table.sper tr.sep td { border-top: 2px solid rgba(147,161,161,.6); }
 table.barras .barra-col { width: 28%; min-width: 4em; vertical-align: middle; }
 table.barras .barra { display: block; height: .7em; max-width: 100%; background: #268bd2; border-radius: 0 4px 4px 0; }
 .portas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(18em, 100%), 1fr)); gap: 1em; margin-bottom: 1.5em; }
-.porta { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .9em 1em .4em; background: rgba(147,161,161,.08); }
 .porta h3 { font-size: 1.1em; margin: 0 0 .4em; }
 .porta p { font-size: .95em; }
-.nota, .fonte { font-size: .85em; color: #586e75; }
+.nota, .fonte { font-size: .85em; color: var(--s01); }
 ul.nota { margin-top: -.6em; }
 .aviso { border-left: 4px solid #b58900; padding: .4em .8em; background: rgba(181,137,0,.08); }
-@media (prefers-color-scheme: dark) { .nota, .fonte { color: #93a1a1; } table.barras .barra { background: #4aa3df; } }
+@media (prefers-color-scheme: dark) { .nota, .fonte { color: var(--s01); } table.barras .barra { background: #4aa3df; } }
 </style>

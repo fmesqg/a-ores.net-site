@@ -194,24 +194,14 @@ Estado. Não some nem compare números dos dois relatórios.</p>
 <style>
 .lead { font-size: 1.15em; max-width: 40em; }
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9.5em, 100%), 1fr)); gap: .9em; margin: 1.2em 0 1.5em; }
-.numero { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
-.numero p { margin-bottom: .4em; font-size: .95em; }
-.numero .rotulo { font-weight: bold; margin-bottom: .2em; }
-.numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
-.numero .grande small { font-size: .5em; font-weight: normal; }
 .indice { display: flex; flex-wrap: wrap; gap: .3em 1em; margin: 0 0 1em; font-size: .95em; }
-.tabela-scroll { overflow-x: auto; margin-bottom: 1em; }
-table.sper { border-collapse: collapse; font-size: .9em; min-width: 100%; }
-table.sper th, table.sper td { padding: .3em .5em; border-bottom: 1px solid rgba(147,161,161,.35); text-align: left; vertical-align: top; }
 table.sper th[scope="row"] { font-weight: normal; }
-table.sper th[scope="row"] small { color: #839496; }
-table.sper .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 table.sper thead th, table.sper thead th.n, table.sper .n small { white-space: normal; }
 table.sper .neg { color: #b5442c; }
 table.sper tfoot th, table.sper tfoot td, table.sper tr.total th, table.sper tr.total td { font-weight: bold; }
 table.sper abbr { text-decoration: none; }
-.tag { font-size: .7em; border: 1px solid #93a1a1; border-radius: 4px; padding: 0 .25em; vertical-align: middle; }
-.nota, .fonte { font-size: .85em; color: #586e75; }
+.tag { font-size: .7em; border: 1px solid var(--s1); border-radius: 4px; padding: 0 .25em; vertical-align: middle; }
+.nota, .fonte { font-size: .85em; color: var(--s01); }
 .aviso { border-left: 4px solid #b58900; padding: .4em .8em; background: rgba(181,137,0,.08); }
-@media (prefers-color-scheme: dark) { .nota, .fonte { color: #93a1a1; } table.sper .neg { color: #e0805f; } }
+@media (prefers-color-scheme: dark) { .nota, .fonte { color: var(--s01); } table.sper .neg { color: #e0805f; } }
 </style>

@@ -70,6 +70,33 @@ def test_row_and_filter():
     assert got["preco_efetivo"] == ""
 
 
+def test_azorean_entities_keep_contracts_placed_only_in_portugal():
+    vp = [{"nifEntContrato": "512063770", "descEntContrato": "Município"}]
+    lx = [{"nifEntContrato": "500000000", "descEntContrato": "Lisboa"}]
+    az = ["Portugal, Região Autónoma dos Açores, Vila do Porto"]
+    only_pt = contrato(adjudicante=vp, localExecucao=["Portugal"])
+    recs = [contrato(adjudicante=vp, localExecucao=az)] * 5 + [only_pt]
+    recs += [contrato(adjudicante=lx, localExecucao=az)] * 5
+    recs += [contrato(adjudicante=lx, localExecucao=["Portugal, Lisboa"])] * 5
+    counts: dict = {}
+    base_impic.count_places(recs, counts)
+    assert counts["512063770"] == [5, 0]  # "Portugal" alone counts nowhere
+    entidades = base_impic.azorean(counts)
+    assert entidades == {"512063770"}
+    assert base_impic.keep(only_pt, entidades)
+    assert not base_impic.keep(only_pt)
+    lx_pt = contrato(adjudicante=lx, localExecucao=["Portugal"])
+    assert not base_impic.keep(lx_pt, entidades)
+
+
+def test_no_nif_is_empty():
+    r = contrato(
+        adjudicatarios=[{"nifEntContrato": "-", "descEntContrato": "X"}]
+    )
+    got = dict(zip(base_impic.COLS, base_impic.row(r), strict=True))
+    assert got["adjudicatario_nif"] == ""
+
+
 def test_zips_and_years():
     ds = {
         "resources": [
@@ -122,7 +149,7 @@ def test_main_writes_one_file_per_year(tmp_path, monkeypatch):
     (out / "base_impic" / "2019.csv.gz").write_bytes(b"stale")
     assert (
         base_impic.main(
-            out, cache, today=__import__("datetime").date(2025, 11, 1)
+            out, cache, today=__import__("datetime").date(2025, 10, 20)
         )
         == 0
     )

@@ -242,23 +242,10 @@ açores.net.</p>
 <style>
 .lead { font-size: 1.15em; max-width: 40em; }
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(12em, 100%), 1fr)); gap: .9em; margin: 1em 0 .4em; }
-.numero { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
-.numero p { margin-bottom: .4em; font-size: .95em; }
-.numero .rotulo { font-weight: bold; margin-bottom: .2em; }
-.numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
-.numero .grande small { font-size: .5em; font-weight: normal; }
 h2[id] { scroll-margin-top: 1em; margin-top: 1.4em; }
-.nota, .notas { font-size: .9em; }
-.notas li { margin-bottom: .35em; }
-.tabela-scroll { overflow-x: auto; margin-bottom: 1em; }
-table.sper { border-collapse: collapse; font-size: .9em; min-width: 100%; }
-table.sper th, table.sper td { padding: .3em .5em; border-bottom: 1px solid rgba(147,161,161,.35); text-align: left; vertical-align: top; }
-table.sper thead th { font-size: .9em; vertical-align: bottom; }
 table.sper th[scope="row"] { font-weight: normal; }
-table.sper .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
-table.sper thead .n { white-space: normal; }
-.fonte { font-size: .85em; color: #586e75; }
+.fonte { font-size: .85em; color: var(--s01); }
 @media (prefers-color-scheme: dark) {
-  .fonte { color: #93a1a1; }
+  .fonte { color: var(--s01); }
 }
 </style>

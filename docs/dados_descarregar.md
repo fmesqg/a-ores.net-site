@@ -10,7 +10,7 @@ secao: dados
 
 | Ficheiro | Conteúdo | Cobertura |
 |---|---|---|
-| [base.csv](/dados/base.csv) | um contrato por linha: adjudicante, adjudicatário, preço, procedimento, data de assinatura, número de concorrentes e origem da linha (`açores.net` ou `IMPIC`) | <span data-meta="base"></span> |
+| [base.csv](/dados/base.csv) | um contrato por linha: adjudicante, adjudicatário, preço, procedimento, data de assinatura e número de concorrentes | <span data-meta="base"></span> |
 | [alra.csv](/dados/alra.csv) | requerimentos (com estado e resposta), iniciativas, votos, petições, intervenções, diários, audições, notas de imprensa | <span data-meta="alra"></span> |
 | [joraa.csv](/dados/joraa.csv) | atos do Jornal Oficial com montantes (portarias, despachos, resoluções) | <span data-meta="joraa"></span> |
 | [ine.csv](/dados/ine.csv) | um valor por linha: indicador, período, local (região, concelho ou freguesia), concelho, ilha, categoria, valor, unidade | <span data-meta="ine"></span> |
@@ -40,8 +40,8 @@ partir dos PDF dos boletins, por
 [`bot/beo.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/beo.py).
 Os `tdc*.csv` mudam uma vez por ano, quando sai um parecer novo, por
 [`bot/tdc.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/tdc.py).
-Os contratos anteriores a agosto de 2024 vêm dos ficheiros anuais do IMPIC,
-relidos uma vez por mês por
+Os contratos (todos os anos) vêm dos ficheiros anuais do IMPIC, relidos
+uma vez por semana por
 [`bot/base_impic.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/base_impic.py).
 Os `at_*.csv` mudam uma vez por ano, quando a AT publica os dossiês
 estatísticos de IRS e de IRC, por
@@ -52,7 +52,7 @@ Os `prr_*.csv` e `kohesio_*.csv` são relidos uma vez por semana, dos dados
 abertos da Recuperar Portugal e da API do Kohesio, por
 [`bot/fundos.py`](https://github.com/fmesqg/a-ores.net-site/blob/main/bot/fundos.py)
 (ver [Fundos europeus](/financas/fundos-europeus/)).
-Última geração: <span data-meta="gerado"></span>.
+Última geração: <span data-meta="gerado">{{ site.time | date: "%Y-%m-%d %H:%M %Z" }}</span>.
 <script>
 fetch("/dados/meta.json?v={{ site.time | date: '%s' }}").then(function (r) { return r.json(); }).then(function (m) {
   document.querySelectorAll("[data-meta]").forEach(function (el) {

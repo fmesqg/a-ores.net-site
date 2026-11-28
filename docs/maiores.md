@@ -122,28 +122,19 @@ Clique num cabeçalho para ordenar.</p>
 <style>
 .lead { font-size: 1.15em; max-width: 40em; }
 .numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(9.5em, 100%), 1fr)); gap: .9em; margin: 1.2em 0 1.5em; }
-.numero { border: 1px solid rgba(147,161,161,.6); border-radius: 8px; padding: .8em 1em .3em; background: rgba(147,161,161,.08); }
-.numero p { margin-bottom: .4em; font-size: .95em; }
-.numero .rotulo { font-weight: bold; margin-bottom: .2em; }
-.numero .grande { font-size: 1.8em; font-weight: bold; line-height: 1.15; margin-bottom: .3em; }
-.numero .grande small { font-size: .5em; font-weight: normal; }
 .duas { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr)); gap: 1.5em; }
-.tabela-scroll { overflow-x: auto; margin-bottom: 1em; }
-table.sper { border-collapse: collapse; font-size: .9em; min-width: 100%; }
-table.sper th, table.sper td { padding: .3em .5em; border-bottom: 1px solid rgba(147,161,161,.35); text-align: left; vertical-align: top; }
 table.sper th[scope="row"] { font-weight: normal; }
-table.sper .n { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
 table.sper thead th, table.sper thead th.n, table.sper .n small { white-space: normal; }
 table.sper .neg { color: #b5442c; }
 #lista-tabela thead th { cursor: pointer; }
-#lista-tabela td small { color: #839496; }
+#lista-tabela td small { color: var(--s0); }
 #lista-tabela thead th[aria-sort]::after { content: " ↓"; }
 #lista-tabela thead th[aria-sort="ascending"]::after { content: " ↑"; }
-.tag { font-size: .75em; border: 1px solid #93a1a1; border-radius: 4px; padding: 0 .3em; text-decoration: none; white-space: nowrap; }
+.tag { font-size: .75em; border: 1px solid var(--s1); border-radius: 4px; padding: 0 .3em; text-decoration: none; white-space: nowrap; }
 .fonte-topo { font-size: .9em; border-left: 4px solid #268bd2; padding: .3em .8em; background: rgba(38,139,210,.08); }
 .filtro { display: flex; flex-wrap: wrap; gap: .5em 1.2em; align-items: center; margin-bottom: .5em; }
-.nota { font-size: .85em; color: #586e75; }
-@media (prefers-color-scheme: dark) { .nota { color: #93a1a1; } table.sper .neg { color: #e0805f; } }
+.nota { font-size: .85em; color: var(--s01); }
+@media (prefers-color-scheme: dark) { .nota { color: var(--s01); } table.sper .neg { color: #e0805f; } }
 </style>
 
 <script>

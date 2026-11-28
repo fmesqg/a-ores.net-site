@@ -28,6 +28,8 @@ fetched whole and filtered to codes 41xx-49xx, then renamed to NUTS codes.
 Other dimensions (sex, age group, type...) are reduced to their total
 category when one exists ("HM", "Total"); a dimension without a total
 (quintiles, for instance) is kept and described in the "categoria" column.
+DETALHE lists the indicators kept with every category (the total with an
+empty "categoria").
 
 INE answers 429 to parallel requests, so requests go one at a time with a
 pause. data/ine.csv is committed and refreshed weekly by
@@ -156,6 +158,11 @@ ILHAS = {
     "9": "Corvo",
 }
 TOTALS = {"hm", "todos", "todas"}
+# Indicators whose other dimension is kept in full: every category in
+# "categoria", the total as categoria "" (so code reading the total is
+# unchanged). The câmaras' receitas/despesas by economic classifier: their
+# purchases (bens e serviços + bens de capital) are compared with BASE.
+DETALHE = {"0013908", "0013909"}
 
 
 def is_total(cat: str) -> bool:
@@ -286,7 +293,9 @@ def rows_from(varcd: str, data: dict, meta: dict) -> list[list]:
     for periodo, g, o in obs:
         if g == "200" and has_region:
             continue  # NUTS III = NUTS II for the Azores
-        if any(o.get(k) != v for k, v in total.items()):
+        if varcd not in DETALHE and any(
+            o.get(k) != v for k, v in total.items()
+        ):
             continue
         valor = o.get("valor")
         if valor in (None, ""):
@@ -298,7 +307,9 @@ def rows_from(varcd: str, data: dict, meta: dict) -> list[list]:
         cat = " · ".join(
             o[k]
             for k in sorted(dims, key=lambda k: int(k.split("_")[1]))
-            if k not in total and o.get(k)
+            if (k not in total or varcd in DETALHE)
+            and o.get(k)
+            and not (varcd in DETALHE and is_total(o[k]))
         )
         nivel = level(g)
         out.append(
@@ -320,7 +331,29 @@ def rows_from(varcd: str, data: dict, meta: dict) -> list[list]:
                 url,
             ]
         )
+    if varcd in DETALHE:
+        dupes(out)
     return out
+
+
+def dupes(rows: list[list]) -> None:
+    """INE lists some receitas categories twice, under current and under
+    capital revenue ("Fundos municipais", "Fundo de Financiamento da
+    Descentralização"), current first: label them."""
+    seen: dict[tuple, int] = {}
+    for r in rows:
+        k = (r[3], r[6], r[10])
+        seen[k] = seen.get(k, 0) + 1
+        if r[10] and seen[k] == 2:
+            r[10] += " (capital)"
+    twice = {
+        (r[3], r[6], r[10].removesuffix(" (capital)"))
+        for r in rows
+        if r[10].endswith(" (capital)")
+    }
+    for r in rows:
+        if (r[3], r[6], r[10]) in twice:
+            r[10] += " (corrente)"
 
 
 # Concepts every indicator repeats; not worth showing each time.

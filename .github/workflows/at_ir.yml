@@ -37,20 +37,10 @@ jobs:
         run: python3 bot/at_ir.py data
       - name: Commit and push if changed
         id: commit
-        run: |
-          git add -N data/at_irs.csv data/at_irc.csv data/at_distritos.csv
-          if git diff --quiet -- data/at_irs.csv data/at_irc.csv data/at_distritos.csv; then
-            echo "Nothing to write."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            git config --global user.name "fmesqg-auto"
-            git config --global user.email "fmesqg-auto@users.noreply.github.com"
-            git add data/at_irs.csv data/at_irc.csv data/at_distritos.csv
-            git commit -m "AT IRS/IRC statistics update"
-            git pull --rebase origin main
-            git push origin main
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
+        uses: ./.github/actions/commit-data
+        with:
+          paths: data/at_distritos.csv data/at_irc.csv data/at_irs.csv
+          message: "AT IRS/IRC statistics update"
 
   deploy-site:
     needs: fetch

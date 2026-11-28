@@ -35,19 +35,10 @@ jobs:
         run: python3 bot/dgaep.py data
       - name: Commit and push if changed
         id: commit
-        run: |
-          if git diff --quiet -- data/emprego_publico.csv; then
-            echo "Nothing to write."
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            git config --global user.name "fmesqg-auto"
-            git config --global user.email "fmesqg-auto@users.noreply.github.com"
-            git add data/emprego_publico.csv
-            git commit -m "DGAEP public employment update"
-            git pull --rebase origin main
-            git push origin main
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
+        uses: ./.github/actions/commit-data
+        with:
+          paths: data/emprego_publico.csv
+          message: "DGAEP public employment update"
 
   deploy-site:
     needs: fetch

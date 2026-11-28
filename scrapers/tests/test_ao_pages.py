@@ -14,10 +14,11 @@ from scrapers.ao_pages import (
     build_link_list,
     day_slug,
     section_label,
-    write_article_pages,
     write_daily_feed,
     write_day_page,
 )
+
+URL = "https://www.acorianooriental.pt/x?seccao="
 
 
 def _article(title="Título", section="politica", body="Corpo.", **kw):
@@ -29,7 +30,7 @@ def _article(title="Título", section="politica", body="Corpo.", **kw):
         "excerpt": "Resumo.",
         "author": "Autor",
         "body": body,
-        "url": f"https://www.acorianooriental.pt/x?seccao={section}",
+        "url": f"{URL}{section}",
     }
     article.update(kw)
     return article
@@ -76,29 +77,27 @@ def test_day_slug():
 # --- build_entries ---
 
 
-def test_numbering_is_contiguous_across_sections():
+def test_entries_keep_order_and_link_to_the_original():
     sections_data = {
         "primeira-hora": [_article(title="A"), _article(title="B")],
         "sociedade": [_article(title="C")],
     }
     entries = build_entries(sections_data, "2026-08-25")
-    assert [e["slug"] for e in entries] == [
-        "20260825-01",
-        "20260825-02",
-        "20260825-03",
-    ]
     # Newspaper section order is preserved
     assert [e["title"] for e in entries] == ["A", "B", "C"]
-    assert entries[0]["url"] == "/ao/20260825-01/"
+    assert (
+        entries[0]["url"]
+        == "https://www.acorianooriental.pt/x?seccao=politica"
+    )
+    assert "body" not in entries[0]
 
 
-def test_entries_skip_articles_without_text_and_keep_numbering_tight():
+def test_entries_skip_articles_without_text():
     empty = _article(title="Vazio", body="", excerpt="")
     sections_data = {
         "politica": [_article(title="A"), empty, _article(title="C")]
     }
     entries = build_entries(sections_data, "2026-08-25")
-    assert [e["slug"] for e in entries] == ["20260825-01", "20260825-02"]
     assert [e["title"] for e in entries] == ["A", "C"]
 
 
@@ -113,7 +112,6 @@ def test_sections_ordered_by_first_page():
     }
     entries = build_entries(sections_data, "2026-08-25")
     assert [e["title"] for e in entries] == ["P1", "S1", "S2", "I1"]
-    assert [e["slug"] for e in entries][0] == "20260825-01"
 
 
 def test_articles_sorted_by_page_within_section():
@@ -180,7 +178,6 @@ def test_entries_skip_front_page_teasers():
     }
     entries = build_entries(sections_data, "2026-08-25")
     assert [e["title"] for e in entries] == ["Real"]
-    assert entries[0]["slug"] == "20260825-01"
 
 
 def test_entries_keep_articles_without_a_page():
@@ -205,7 +202,7 @@ def test_entries_keep_page_ten_and_eleven():
 def test_entries_fall_back_to_excerpt():
     sections_data = {"politica": [_article(body="", excerpt="Só o resumo.")]}
     entries = build_entries(sections_data, "2026-08-25")
-    assert entries[0]["body"] == "Só o resumo."
+    assert len(entries) == 1
 
 
 # --- link list ---
@@ -217,93 +214,18 @@ def test_link_list_groups_by_section_with_page_and_author():
     }
     html = build_link_list(build_entries(sections_data, "2026-08-25"))
     assert "<h2>Sociedade</h2>" in html
-    assert '<a href="/ao/20260825-01/">A (p.6) — Nuno</a>' in html
+    assert f'<a href="{URL}politica">A (p.6) — Nuno</a>' in html
 
 
 def test_link_list_omits_missing_page_and_author():
     sections_data = {"sociedade": [_article(title="A", page="", author="")]}
     html = build_link_list(build_entries(sections_data, "2026-08-25"))
-    assert '<a href="/ao/20260825-01/">A</a>' in html
+    assert f'<a href="{URL}politica">A</a>' in html
     assert "(p.)" not in html
     assert "—" not in html
 
 
-def test_link_list_absolute_urls():
-    sections_data = {"sociedade": [_article(title="A")]}
-    html = build_link_list(
-        build_entries(sections_data, "2026-08-25"), absolute=True
-    )
-    assert f'href="{ao_pages.SITE_BASE}/ao/20260825-01/"' in html
-
-
 # --- pages ---
-
-
-def test_write_article_pages_frontmatter_and_navigation(pages_dir):
-    sections_data = {
-        "sociedade": [_article(title='Ele disse: "olá"'), _article(title="B")]
-    }
-    entries = build_entries(sections_data, "2026-08-25")
-    write_article_pages(entries, "2026-08-25")
-
-    first = (pages_dir / "20260825-01.md").read_text(encoding="utf-8")
-    assert 'title: "Ele disse: \\"olá\\""' in first
-    assert "layout: ao_article" in first
-    assert "kind: article" in first
-    assert "day_url: /ao/20260825/" in first
-    assert "prev_url" not in first
-    assert "next_url: /ao/20260825-02/" in first
-    assert "<p>Corpo.</p>" in first
-
-    second = (pages_dir / "20260825-02.md").read_text(encoding="utf-8")
-    assert "prev_url: /ao/20260825-01/" in second
-    assert "next_url" not in second
-
-
-def test_write_article_pages_escapes_body_html(pages_dir):
-    sections_data = {"politica": [_article(body="a < b & <script>")]}
-    write_article_pages(
-        build_entries(sections_data, "2026-08-25"), "2026-08-25"
-    )
-    page = (pages_dir / "20260825-01.md").read_text(encoding="utf-8")
-    assert "<p>a &lt; b &amp; &lt;script&gt;</p>" in page
-
-
-def test_pages_neutralise_liquid(pages_dir):
-    # Jekyll runs Liquid on these pages: "{{" in an article must not run.
-    sections_data = {"politica": [_article(title="{% x %}", body="{{ y }}")]}
-    entries = build_entries(sections_data, "2026-08-25")
-    write_article_pages(entries, "2026-08-25")
-    page = (pages_dir / "20260825-01.md").read_text(encoding="utf-8")
-    assert "<p>&#123;&#123; y &#125;&#125;</p>" in page
-    assert "&#123;% x %&#125;" in build_link_list(entries)
-
-
-def test_write_article_pages_splits_paragraphs(pages_dir):
-    sections_data = {"politica": [_article(body="Um.\n\nDois.\n\nTrês.")]}
-    write_article_pages(
-        build_entries(sections_data, "2026-08-25"), "2026-08-25"
-    )
-    page = (pages_dir / "20260825-01.md").read_text(encoding="utf-8")
-    assert page.count("<p>") == 3
-
-
-def test_rerun_removes_stale_article_pages(pages_dir):
-    many = {"politica": [_article(title=str(i)) for i in range(4)]}
-    write_article_pages(build_entries(many, "2026-08-25"), "2026-08-25")
-    assert len(list(pages_dir.glob("20260825-*.md"))) == 4
-
-    fewer = {"politica": [_article(title="só um")]}
-    write_article_pages(build_entries(fewer, "2026-08-25"), "2026-08-25")
-    assert len(list(pages_dir.glob("20260825-*.md"))) == 1
-
-
-def test_rerun_leaves_other_dates_alone(pages_dir):
-    data = {"politica": [_article()]}
-    write_article_pages(build_entries(data, "2026-08-24"), "2026-08-24")
-    write_article_pages(build_entries(data, "2026-08-25"), "2026-08-25")
-    assert (pages_dir / "20260824-01.md").exists()
-    assert (pages_dir / "20260825-01.md").exists()
 
 
 def test_write_day_page(pages_dir):
@@ -317,7 +239,30 @@ def test_write_day_page(pages_dir):
     assert "kind: day" in text
     assert "article_count: 2" in text
     assert "<h2>Sociedade</h2>" in text
-    assert '<a href="/ao/20260825-01/">' in text
+    assert f'<a href="{URL}politica">' in text
+
+
+def test_link_list_without_url_is_plain_text():
+    sections_data = {"sociedade": [_article(title="A", url="")]}
+    html = build_link_list(build_entries(sections_data, "2026-08-25"))
+    assert "<li>A (p.3) — Autor</li>" in html
+
+
+def test_day_page_neutralises_liquid(pages_dir):
+    sections_data = {"politica": [_article(title="{% x %}")]}
+    path = write_day_page(
+        build_entries(sections_data, "2026-08-25"), "2026-08-25"
+    )
+    assert "&#123;% x %&#125;" in path.read_text(encoding="utf-8")
+
+
+def test_day_page_removes_old_article_pages(pages_dir):
+    pages_dir.mkdir(parents=True)
+    (pages_dir / "20260825-01.md").write_text("texto")
+    (pages_dir / "20260824-01.md").write_text("texto")
+    write_day_page(_feed_entries("2026-08-25"), "2026-08-25")
+    assert not (pages_dir / "20260825-01.md").exists()
+    assert (pages_dir / "20260824-01.md").exists()
 
 
 def test_write_day_page_handles_empty_edition(pages_dir):
@@ -362,7 +307,7 @@ def test_feed_item_fields(tmp_path):
     assert item.findtext("link") == f"{ao_pages.SITE_BASE}/ao/20260825/"
     assert item.find("guid").get("isPermaLink") == "false"
     assert item.findtext("pubDate") == "Tue, 25 Aug 2026 00:00:00 +0000"
-    assert "/ao/20260825-01/" in item.findtext("description")
+    assert f"{URL}politica" in item.findtext("description")
 
 
 def test_feed_rerun_replaces_the_day(tmp_path):
